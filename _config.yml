@@ -4,7 +4,7 @@
 
 url: http://TracksApp.github.com
 title: Tracks
-subtitle: Open Source software for Getting Things Done
+subtitle: Doing Things Properly
 author: TracksApp
 simple_search: http://google.com/search
 
@@ -50,7 +50,7 @@ default_asides: [asides/recent_posts.html, asides/github.html]
 
 # Github repositories
 github_user: TracksApp
-github_repo_count: 1
+github_repo_count: 0
 github_show_profile_link: true
 github_skip_forks: true
 
