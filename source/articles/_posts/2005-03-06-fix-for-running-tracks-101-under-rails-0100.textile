@@ -1,0 +1,47 @@
+---
+layout: post
+date: 2005-03-06 
+author: bsag 
+title: "Fix for running Tracks 1.01 under Rails 0.10.0" 
+categories: [articles] 
+comments: true
+sharing: true
+footer: true
+---
+
+Rails 0.10.0 introduced a new &mdash; and very simple &mdash; method of "re-writing URLs":http://weblog.rubyonrails.com/archives/2005/02/24/rails-0100-routing-web-services-components-oracle/, which works with a variety of different servers, and means that the Rails app itself can be hold the re-writing rules, without having to mess about with .htaccess and the like.
+
+However, it does require some changes to be made to Rails apps, and these *aren't* present in Tracks 1.01. Needless to say, I've made the requisite changes to the next version which is in development (and they work really well!), but if you've got Rails 0.10.0 installed and want to use Tracks 1.01, you'll have to make the following fix.
+ 
+
+You need to force Tracks to use the previous versions of the gems before the Rails 0.10.0 update. If you've only installed one version of Rails, then you might have to uninstall it and install an earlier version.
+
+<pre>
+<code>gem install Rails -v 0.9.5</code>
+</pre>
+
+Otherwise, run gem list at the command line and take a look at the versions of all the required components prior to Rails 0.10.0. Then in tracks/config/environment.rb replace these lines:
+
+<pre>
+<code>
+require 'rubygems'
+require_gem 'activerecord'
+require_gem 'actionpack'
+require_gem 'actionmailer'
+require_gem 'rails'
+</code>
+</pre>
+
+with these:
+
+<pre>
+<code>
+require 'rubygems'
+require_gem 'activerecord', '<= 1.6.0'
+require_gem 'actionpack', '<= 1.4.0'
+require_gem 'actionmailer', '<= 0.6.1'
+require_gem 'rails', '<= 0.9.5'
+</code>
+</pre>
+
+substituting the actual version numbers you found from gem list. 

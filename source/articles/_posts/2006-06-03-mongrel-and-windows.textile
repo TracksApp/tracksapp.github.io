@@ -1,0 +1,43 @@
+---
+layout: post
+date: 2006-06-03 
+author: bsag 
+title: "Mongrel and Windows" 
+categories: [articles] 
+comments: true
+sharing: true
+footer: true
+---
+
+mk sent me the following tip for people wanting to running Tracks on Windows using Mongrel as the webserver, rather than WEBrick, Apache or lighttpd:
+
+Installing mongrel (this would work for Linux and MacOS X users too):
+
+<pre>
+<code>
+sudo gem install mongrel
+cd tracks_directory
+mongrel_rails start -d
+</code>
+</pre>
+
+Running the service:
+
+<pre>
+<code>
+mongrel_rails_service install -n tracks -r c:\path\to\tracks -p 4000 -e production
+mongrel_rails_service start -n tracks
+</code>
+</pre>
+
+Now hit the port and poof, it works (or should). The application will stop if you use:
+
+<pre>
+<code>
+mongrel_rails_service stop -n tracks
+</code>
+</pre>
+
+Off course, you can control service at services in the control panel. I have it set to start on boot, and that's it. Read more about <a href="http://mongrel.rubyforge.org/">Mongrel</a> or more about <a href="http://mongrel.rubyforge.org/docs/win32.html">Mongrel on Windows</a>. 
+
+ 

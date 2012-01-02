@@ -1,8 +1,0 @@
----
-title: "December"
-layout: post
----
-
-From December.
-
-And some more stuff.

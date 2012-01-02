@@ -1,0 +1,18 @@
+---
+layout: post
+date: 2005-02-22 
+author: bsag 
+title: "Installing Tracks on Dreamhost" 
+categories: [articles] 
+comments: true
+sharing: true
+footer: true
+---
+
+qDot wrote up a really "nice tutorial":http://www.numberporn.com/archives/000118.php on how to install Ruby, Rails and Tracks on Dreamhost. It would probably also be a good guide for anyone else who is hosted on a server where Ruby isn't already installed. However &mdash; and I feel a bit like a kids TV presenter saying that you should get an adult to help you with the cutting out &mdash; do ask your host first if they would mind you doing this. I don't want to be responsible for anyone being booted off their server!
+
+Note also that step 1 of installing Tracks isn't necessary as of Tracks 1.01; Redcloth is distributed with the application.
+
+Thanks, qDot! 
+
+ 

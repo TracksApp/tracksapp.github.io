@@ -1,0 +1,18 @@
+---
+layout: post
+date: 2005-05-26 
+author: bsag 
+title: "Tracks on Windows XP tutorial" 
+categories: [articles] 
+comments: true
+sharing: true
+footer: true
+---
+
+John Leonard has written up a "fantastic tutorial":http://www.jjleonard.co.uk/?p=102 for getting Tracks running on Windows XP, including using a package called "Uniform Server":http://www.uniformserver.com/ which provides  a web server and MySQL among other things. There's also a full "video tutorial":http://www.jjleonard.co.uk/tracks/tracksinstall.html with notes to make the whole process crystal clear.
+
+Yay John! I love it when users help other users out.
+
+*Updated 25/10/2005* to link to John's new and updated version of the tutorial that works with Tracks 1.03. 
+
+ 

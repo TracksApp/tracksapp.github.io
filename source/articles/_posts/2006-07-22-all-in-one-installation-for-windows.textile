@@ -1,0 +1,16 @@
+---
+layout: post
+date: 2006-07-22 
+author: bsag 
+title: "All-in-one installation for Windows" 
+categories: [articles] 
+comments: true
+sharing: true
+footer: true
+---
+
+For those of you on Windows who have been struggling with getting Tracks installed, Jim Strupp has kindly "packaged up an installation":http://www.4shared.com/dir/950576/3127bee6/Tracks4Win.html of Tracks which uses Uniform Server. Everything you need (except Ruby) is included, and it's a simple double click on a batch file to start Tracks running. Give it a go! And many thanks to Jim for creating and hosting the package.
+
+*Updated 29-09-2006*: Fixed the link to the installation. 
+
+ 

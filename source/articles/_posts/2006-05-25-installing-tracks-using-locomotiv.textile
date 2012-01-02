@@ -1,0 +1,14 @@
+---
+layout: post
+date: 2006-05-25 
+author: bsag 
+title: "Installing Tracks Using Locomotive" 
+categories: [articles] 
+comments: true
+sharing: true
+footer: true
+---
+
+Jacken has a great and very simple tutorial for <a href="http://www.jackenhack.com/blog/archives/2006/05/25/gtd-ruby-on-rails-and-the-mac/">installing Tracks using Locomotive</a> for those of you on MacOS X. It's a great (nearly) one-click install. Thanks, Jacken! 
+
+ 
