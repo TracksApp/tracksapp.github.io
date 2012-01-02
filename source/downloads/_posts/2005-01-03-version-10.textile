@@ -1,0 +1,50 @@
+---
+layout: post
+date: 2005-01-03 
+author: bsag 
+title: "Version 1.0" 
+categories: [downloads] 
+comments: true
+sharing: true
+footer: true
+---
+
+Version: 1.0
+
+I've just uploaded a new version of the application which I'm now calling Tracks.
+
+The changenotes and readme included in the package  (in tracks/doc) give the full details, but the important points to note are as follows:
+
+* You need to have Ruby 1.8 or greater, MySQL and Rails 0.9.x or greater installed. There have been some brilliant improvements in Rails in the 0.9 branch, so it's well worth upgrading. I won't be continuing development on the old 0.8.x version, but you can still download it "here":http://www.rousette.org.uk/blog/projects/gtd_app.zip.
+* There's rudimentary password protection now, so when you first load the application, you need to visit <code>http://127.0.0.1:3000/login/signup</code> to choose a username and password.
+* I've provided a MySQL dump file for the tables and some sample contents in the package. If you have been using the previous version and want to import your data, set up the new database (called tracks), import the sample dump, then export the contents only from your previous database and import that. Theres a typo in README.txt, and the database dump is located in tracks/db/tracks_dump 03.01.2005.sql, not tracks/app/db/tracks_dump 03.01.2005.sql as it claims.
+
+Have fun!
+
+*Update 05/01/2005*: If you have Rails 0.9.3 installed, you need to modify some files in tracks/config/environments as follows:
+
+In the config/environments/production.rb and config/environments/test.rb, you need to change:
+
+<pre>
+<code>
+ActionController::Base.reload_dependencies = false
+ActiveRecord::Base.reload_associations = false
+</code>
+</pre>
+
+...to:
+
+<code>Dependencies.mechanism = :require</code>
+
+And in config/environments/development.rb, you need to change:
+
+<pre>
+<code>
+ActionController::Base.reload_dependencies = true
+  ActiveRecord::Base.reload_associations = true
+</code>
+</pre>
+
+...to:
+
+<code>Dependencies.mechanism = :load</code> 

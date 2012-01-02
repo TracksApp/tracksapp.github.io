@@ -1,0 +1,14 @@
+---
+layout: post
+date: 2006-02-26 
+author: bsag 
+title: "Tracks 1.04" 
+categories: [downloads] 
+comments: true
+sharing: true
+footer: true
+---
+
+Version: 1.04
+
+Tracks 1.04 is now available for download. The installation instructions are in a file called 'installation.html' in the root of the distribution. Installing from a new database is pretty easy, but if you're upgrading from a version 1.03 database you need to read the upgrade instructions carefully. 

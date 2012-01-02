@@ -1,0 +1,21 @@
+---
+layout: post
+date: 2011-03-15 
+author: bsag 
+title: "Tracks 1.7.3" 
+categories: [downloads] 
+comments: true
+sharing: true
+footer: true
+---
+
+Version: 1.7.3
+
+"Git URL":https://github.com/TracksApp/tracks/zipball/v1.7.3
+
+
+An XSS vulnerability has been reported and is present in 1.7.2, which is also present in the development 2.0 branches (2.0RC2 and 2.0devel).
+
+A new release of 1.7.3 is available from the file link. Users of 1.7x are strongly advised to upgrade to 1.7.3. If you are running 2.0RC2 or 2.0devel for production, please upgrade to the latest 2.0 tree on GitHub.
+
+The manual has also been updated with upgrade instructions. 

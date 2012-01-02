@@ -1,0 +1,14 @@
+---
+layout: post
+date: 2005-03-10 
+author: bsag 
+title: "Tracks 1.02a" 
+categories: [downloads] 
+comments: true
+sharing: true
+footer: true
+---
+
+Version: 1.02a
+
+There are quite a few improvements to this version, with more on the way. Note that Rails 0.10.0 is a *requirement* for this version, as is Ruby 1.8.2 or above. The full installation and upgrading instructions are in the zipped directory in doc/README.txt. Please read those instructions carefully, along with README_FIRST.txt 

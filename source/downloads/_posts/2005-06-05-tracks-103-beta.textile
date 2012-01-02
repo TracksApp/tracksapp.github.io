@@ -1,0 +1,26 @@
+---
+layout: post
+date: 2005-06-05 
+author: bsag 
+title: "Tracks 1.03 beta" 
+categories: [downloads] 
+comments: true
+sharing: true
+footer: true
+---
+
+Version: 1.03 beta
+
+I think we're at a point now where I'm happy to release Tracks 1.03 beta, especially as we're at the auspicious revision 100! You can either download the zip file, or use Subversion to check out the tag.
+
+Please note that this *shouldn't* be used for your precious data -- this is a beta release to bash out the remaining bugs and glitches on different systems. I would put it in a different directory to your own version of Tracks (if you have one), and make a new database to hold the test data. When people have had a chance to report any remaining bugs, I'll clear everything up and make a proper production release.
+
+I haven't updated the installation instructions yet, but it's similar to the previous version. There are, however, a few things to bear in mind:
+
+1. Don't forget to copy config/database.yml.tmpl and config/settings.yml.tmpl to config/database.yml and config/settings.yml.
+1. There's a new option in config/settings.yml, so don't forget to edit that, or you'll get an error involving <code><%= staleness(item.created) %></code>
+1. I really do recommend making a new database to test this, so use the appropriate tracks_1.0.3_[databaseformat].sql file for your chosen database (mysql, sqlite or postgresql) to set up the tables, and then, if you want, use the tracks_1.0.3_content.sql to add some test content.
+
+I'm looking forward to getting your feedback (see doc/CHANGENOTES.txt for all the new goodies). I'm particularly interested in how it fares on other platforms (not MacOSX), and other databases (i.e. SQLite and PostgreSQL), and how you find the speed. I've taken out caching for now, so let me know if you find it annoyingly slow. If you have any issues, check on "Trac":http://dev.rousette.org.uk/report/6 to see if anyone has already reported it, and if not, open a new ticket "here":http://dev.rousette.org.uk/newticket.
+
+Thanks! 

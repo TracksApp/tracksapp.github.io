@@ -1,0 +1,42 @@
+---
+layout: post
+date: 2010-04-13 
+author: bsag 
+title: "Tracks 1.7.1" 
+categories: [downloads] 
+comments: true
+sharing: true
+footer: true
+---
+
+Version: 1.7.1
+
+"Git URL":https://github.com/TracksApp/tracks/tree/1.7.1
+
+
+<p>A message from Reinier Balt:</p>
+
+<p>I'm pleased to announce that Tracks 1.7.1 has been released. This is a bug fix release. This will be the last release for 1.7. We are working towards the release of Tracks 2.0 which will include new functionality.</p>
+
+<p>You can download this new stable version of Tracks <a href="http://github.com/bsag/tracks/zipball/1.7.1">directly from Github</a> and a manual can be found <a href="http://github.com/bsag/tracks_manual">also on Github</a> as well as on the <a href="http://getontracks.org/doc/index.html">Tracks</a> website.</p>
+
+<p>What is new in 1.7.1:</p>
+
+<ul>
+<li>You can now add a new todo from the calendar view</li>
+<li>User names can now contain dots (.)</li>
+<li>Support for OneNote urls (hyperlinks to Microsoft OneNote elements)</li>
+</ul>
+
+<p>Under the hood:</p>
+
+<ul>
+<li>Several fixes for timezone support</li>
+<li>Export to xml works again</li>
+<li>Tracks works on current rubygems</li>
+<li>Notes are styled better</li>
+</ul>
+
+<p>And lots of other fixes...</p>
+
+<p>This release of 1.7 includes contributions made by several contributors (JPenny,Henrik Bohre, ecognito, Steven Aerts and Eric Allen of course; I hope I didn't forget anyone.) and of course all the people who helped reporting issues on Assembla. Thank you all for helping Tracks getting better every release.</p> 

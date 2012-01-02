@@ -1,0 +1,17 @@
+---
+layout: post
+date: 2006-08-28 
+author: bsag 
+title: "Tracks 1.043" 
+categories: [downloads] 
+comments: true
+sharing: true
+footer: true
+---
+
+Version: Tracks 1.043
+
+Security fix. Closes the hole reported in "ticket 372":http://dev.rousette.org.uk/ticket/372 for the 1.04x release. This release is recommended for anyone running Tracks on a publicly-accessible server.
+
+There are no other changes from 1.041 or 1.042, so if you're running 1.041 or 1.042, upgrading is simple. Change the name of your old Tracks directory to (for example) tracks-1041-old. Unzip Tracks 1.043 to a new directory, then copy over config/database.yml, config/environment.rb, and the log directory from tracks-1041-old to the correct locations in your new Tracks directory. If you're using sqlite or sqlite3, you'll also need to copy over your sqlite database from the old db directory to the new one. Once you've got the new copy of Tracks working, you can delete the old directory.
+ 

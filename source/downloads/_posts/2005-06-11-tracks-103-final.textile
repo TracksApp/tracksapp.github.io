@@ -1,0 +1,20 @@
+---
+layout: post
+date: 2005-06-11 
+author: bsag 
+title: "Tracks 1.03 final" 
+categories: [downloads] 
+comments: true
+sharing: true
+footer: true
+---
+
+Version: 1.03 final
+
+Tracks 1.03 final version is now ready for download.
+
+You need Rails 0.13.1 for this release, and you might as well update Redcloth while you're at it. Make sure that you read README_FIRST.txt first, then the main documentation for installation and upgrading is in doc/README_FOR_APP and doc/CHANGELOG. If you're upgrading, I'm afraid that you'll have to do a bit of manual work to reimport your old database contents. This is discussed in more detail in the Readme files, but let me know if you need any more guidance. The main thing to remember is to <strong>back everything up first</strong>!
+
+The major new features are the new Ajax methods for creating, updating and deleting actions and for marking them done, and arbitrary sorting of contexts on the front page. There are quite a few other fixes and improvements, but you can read the CHANGELOG for the full details.
+
+Have fun with it, and let me know what you think. 

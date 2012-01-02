@@ -1,0 +1,39 @@
+---
+layout: post
+date: 2008-12-14 
+author: bsag 
+title: "Tracks 1.7RC" 
+categories: [downloads] 
+comments: true
+sharing: true
+footer: true
+---
+
+Version: Tracks 1.7RC
+
+"Git URL":https://github.com/TracksApp/tracks/tree/1.7_branch
+
+
+I'm pleased to announce that Tracks 1.7RC has been released. This is a pre-release of version 1.7. Please help out to test this pre-release to find any bugs before we release 1.7 in a few weeks
+
+What's new:
+
+* The included Rails version is updated to 2.2.2
+* Tracks now supports recurring/repeating todos
+* Cleanup of feed page and add feed for starred actions
+* Initial importer of yaml files (still very EXPERIMENTAL; please send
+feedback on whether to include this; make backups while testing it)
+* New interface to import an email / sms messages into Tracks (needs an
+email server on the same server as Tracks)
+* New buttons to quickly defer an action 1 or 7 days
+* Calendar view to review upcoming due actions, includes iCal feed to
+use in your calendar app (tested with Google Calendar, Evolution, Outlook
+2007)
+* You can now sort projects on number of active todos
+* Support for OpenSearch. This means you can add a Tracks as a search
+provider in your webbrowser (tested on FF3 and IE7)
+* Bugfixes, including fixing OpenID
+
+There are changes to the database, and a few changes to config/environment.rb.tmpl, so please migrate your database and copy the template file and merge your personalisations with it. More upgrade instructions are in the manual in the /doc directory.
+
+This release of 1.7 will include enhancements made by a lot new contributers (Jakub, Hans, Piotr, MHarris and Simon). Thank you all for helping Tracks getting better every release. As ever particular thanks to Luke (for updating Tracks to 2.2.2) and to Reinier for masses of work on a lot of fronts, not least in making it extremely easy for me to announce and distribute this release! 

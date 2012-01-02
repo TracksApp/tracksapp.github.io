@@ -1,0 +1,39 @@
+---
+layout: post
+date: 2008-03-06 
+author: bsag 
+title: "Tracks 1.5RC1" 
+categories: [downloads] 
+comments: true
+sharing: true
+footer: true
+---
+
+Version: Tracks 1.5RC1
+
+It's nearly here!
+
+This is the first release candidate for the Tracks 1.5 release. If you are currently using Tracks 1.043, you'll find heaps of brilliant new features, bug fixes and improvements in this version. The manual is included in the /doc directory of the download and the subversion version, but you can dowload it separately <a href="http://www.rousette.org.uk/projects/files/manual_1.5.pdf">here</a> if you like. There are also a few screenshots to whet your appetite on the <a href="http://www.rousette.org.uk/projects/wiki/Tracks1.5rc1/">wiki</a>.
+
+Some highlights of this release:
+
+<ol>
+<li>Show from date allows you to postpone the appearance of actions in the list until you can do something about them (like a 'tickler')</li>
+<li>Tagging of actions</li>
+<li>Simple management of users (deleting users through the web interface)</li>
+<li>Import and export of data in various formats</li>
+<li>Fantastic RESTful API to provide access to actions via scripts</li>
+<li>Mobile interface designed for use on mobile phone browsers</li>
+<li>Improved ease-of-use for installation and upgrading</li>
+<li>Optional support for authentication via OpenID or LDAP</li>
+<li>Update to Rails 1.2.3</li>
+<li>Per-user time zone preference</li>
+<li>Use autocomplete fields for Project and Context specification to support on-the-fly adding of each</li>
+<li>Add a "Hidden" status to projects</li>
+<li>Add optional Default Context for a Project</li>
+<li>Add ability to sort projects alphabetically</li>
+<li>Add "starring" of actions</li>
+<li>Statistics page with graphs</li>
+<li>Rake task to set password. Usage: rake tracks:password USER=username</li>
+</ol>
+ 
