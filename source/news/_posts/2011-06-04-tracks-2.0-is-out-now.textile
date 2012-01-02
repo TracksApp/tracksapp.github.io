@@ -1,0 +1,14 @@
+---
+layout: post
+date: 2011-06-04 
+author: bsag 
+title: "Tracks 2.0 is out now!" 
+categories: [news] 
+comments: true
+sharing: true
+footer: true
+---
+
+Tracks 2.0 is out now, and is a big release with a lot of great new features. Check out the full release notes <a href="http://www.getontracks.org/downloads/comments/tracks-20">here</a>. 
+
+ 

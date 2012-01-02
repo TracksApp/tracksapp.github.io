@@ -1,0 +1,18 @@
+---
+layout: post
+date: 2006-07-02 
+author: bsag 
+title: "New wiki" 
+categories: [news] 
+comments: true
+sharing: true
+footer: true
+---
+
+"ExpressionEngine Personal":http://pmachine.com also comes with a wiki module, which I've just set up. Previously, I was using a dokuwiki installation, which was difficult to maintain and had got rather outdated. Then I moved to the wiki included with "Trac":http://dev.rousette.org.uk/wiki, which was much better, but because of the rather difficult way in which you have to manage users in Trac, it was a pain to set up users to allow them to edit the wiki, without leaving it open to all, which was just a spam magnet.
+
+"The new wiki":http://www.rousette.org.uk/projects/wiki/ is very nice and simple, and the great thing about it is that it shares user credentials with the "forum":http://www.rousette.org.uk/projects/forums/. So if you're already registered with the forum, you can log in to the wiki and edit pages there too.
+
+I've just started porting some of the information over from the Trac wiki, but any help would be much appreciated as I'm chronically short of time at the moment. Eventually, I'll reduce the information in the Trac wiki to the bare minimum for people wanting to check out the development trunk. It would be great if the new wiki could become a repository for the collected genius and experience of Tracks users, and could form a collaboratively written manual for it. The wiki uses "Textile":http://textism.com/tools/textile/ syntax, but you can also use plain 'ole HTML markup. Have fun and get creative, and let's see what we can come up with. 
+
+ 

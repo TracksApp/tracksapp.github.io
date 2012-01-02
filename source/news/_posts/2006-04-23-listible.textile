@@ -1,0 +1,16 @@
+---
+layout: post
+date: 2006-04-23 
+author: bsag 
+title: "Listible" 
+categories: [news] 
+comments: true
+sharing: true
+footer: true
+---
+
+Somebody called Fipps added Tracks to "Listible":http://www.listible.com/list/gtd-software with other GTD&trade; software resources. The idea of Listible is that people submit resources, and people vote for their favourites, moving items up and down the list as an outcome of the voting process. It's quite an interesting idea, and at one point, Tracks was sitting at number 3. As I write this, it's at number 5, but in some very good company with applications like "GTD TiddlyWiki":http://shared.snapgrid.com/gtd_tiddlywiki.html and "Kinkless GTD":http://www.kinkless.com/.
+
+Listible gets a lot of traffic, and referrals from it pushed my stats up into a massive spike. Personally, I don't worry much about stats, though I find it interesting to follow the trends. I'm much happier, for example, if fewer people are regular visitors than if I get huge numbers of temporary visitors. Still, if a even a few of those temporary visitors discover Tracks and enjoy using it, I'm pretty happy with that. 
+
+ 

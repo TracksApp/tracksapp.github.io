@@ -1,0 +1,14 @@
+---
+layout: post
+date: 2004-12-23 
+author: bsag 
+title: "New wiki" 
+categories: [news] 
+comments: true
+sharing: true
+footer: true
+---
+
+I've set up a wiki "here":http://www.rousette.org.uk/projects/wiki/ - feel free to edit it and add your own tips, bug reports and so forth. 
+
+ 
