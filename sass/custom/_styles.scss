@@ -9,3 +9,10 @@ body {
     height: 250px;
   }
 }
+
+div#archive-link {
+  margin: 0px auto;
+  text-align: center;
+  a { text-decoration: none;
+    &:hover { text-decoration: underline; } }
+}

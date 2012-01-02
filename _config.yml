@@ -25,12 +25,13 @@ source: source
 destination: public
 plugins: plugins
 code_dir: downloads/code
-category_dir: categories/archives
+category_dir: archives
+category_title_prefix: "All posts in: "
 markdown: rdiscount
 pygments: false # default python pygments have been replaced by pygments.rb
 
-paginate: 10          # Posts per page on the blog index
-pagination_dir: blog  # Directory base for pagination URLs eg. /blog/page/2/
+# paginate: 10          # Posts per page on the blog index
+# pagination_dir: blog  # Directory base for pagination URLs eg. /blog/page/2/
 recent_posts: 5       # Posts in the sidebar Recent Posts section
 excerpt_link: "Read on &rarr;"  # "Continue reading" link text at the bottom of excerpted articles
 
@@ -50,9 +51,9 @@ default_asides: [asides/recent_posts.html, asides/github.html]
 
 # Github repositories
 github_user: TracksApp
-github_repo_count: 0
+github_repo_count: 5
 github_show_profile_link: true
-github_skip_forks: true
+github_skip_forks: false
 
 # Twitter
 twitter_user:
