@@ -16,3 +16,10 @@ div#archive-link {
   a { text-decoration: none;
     &:hover { text-decoration: underline; } }
 }
+
+/* This removes the background styling from buttons in the asides */
+a.button img {
+  background: none;
+  border: none;
+  box-shadow: none;
+}
