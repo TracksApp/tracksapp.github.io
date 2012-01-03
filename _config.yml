@@ -12,7 +12,7 @@ simple_search: http://google.com/search
 subscribe_rss: /tracks/atom.xml
 subscribe_email:
 # RSS feeds can list your email address if you like
-email: "info@getontracks.org"
+email: "tracks@getontracks.org"
 
 # ----------------------- #
 #    Jekyll & Plugins     #
