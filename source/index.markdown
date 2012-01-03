@@ -62,7 +62,7 @@ Tracks now has a great <span class="caps">API</span>, so if you're handy with a 
 
 ## Getting Tracks
 
-You can download a zipped file containing the latest stable version of Tracks by using the 'Download Tracks' button in the sidebar on the right of this page. If you'd like to get a development version, or contribute to the project, all the information you need is on the <a href="http://www.getontracks.org/development/">Development page</a>.
+You can download a zipped file containing the latest stable version of Tracks by using the 'Get Tracks' button in the sidebar on the right of this page. If you'd like to get a development version, or contribute to the project, all the information you need is on the <a href="/development">Development page</a>.
 
 ## History
 
