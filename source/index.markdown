@@ -68,4 +68,4 @@ You can download a zipped file containing the latest stable version of Tracks by
 
 The origins of this application are <a href="http://www.rousette.org.uk/blog/archives/rails-gtd-application/">here</a> and <a href="http://www.rousette.org.uk/blog/archives/2004/11/07/gtd-on-rails/">here</a>. The name Tracks was suggested by Timothy Martens, and the tag-line &#8216;Doing Things Properly' came from a comment by Pete <a href="http://www.rousette.org.uk/blog/archives/2004/12/07/do-it-now-by-steve-pavlina/#comment-2976">here</a>. I rather liked it.
 
-Tracks is now developed by maintained by a team of <a href="http://www.getontracks.org/wiki/Contributors/">contributors</a>. Why not <a href="http://www.rousette.org.uk/projects/tracks/contribute">join us</a>?
+Tracks is now developed by maintained by a team of <a href="https://github.com/TracksApp/tracks/wiki/Contributors">contributors</a>. Why not <a href="/development">join us</a>?

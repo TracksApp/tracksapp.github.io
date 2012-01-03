@@ -1,0 +1,10 @@
+<section>
+  <h1>Latest News</h1>
+  <ul id="recent_posts">
+    {% for post in site.categories.news limit: site.recent_posts %}
+      <li class="post">
+        <a href="{{ root_url }}{{ post.url }}">{{ post.title }}</a>
+      </li>
+    {% endfor %}
+  </ul>
+</section>
