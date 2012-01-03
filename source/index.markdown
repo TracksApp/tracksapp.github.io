@@ -1,11 +1,12 @@
 ---
 layout: page
-title: "Tracks 2.0"
 date: 2011-10-09 19:22
 comments: false
 sharing: false
 footer: false
 ---
+
+## Tracks {{ site.version }}
 
 {% img left /images/screens/tracks_home_thumb.png 'Full screen screenshot of Tracks' %}
 

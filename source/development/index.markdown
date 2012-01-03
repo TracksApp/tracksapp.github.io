@@ -1,6 +1,6 @@
 ---
 layout: page
-title: "Tracks development"
+title: "Development"
 date: 2012-01-03 10:15
 comments: false
 sharing: false
