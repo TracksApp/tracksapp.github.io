@@ -9,10 +9,10 @@ author: TracksApp
 simple_search: http://google.com/search
 
 # RSS / Email (optional) subscription links (change if using something like Feedburner)
-subscribe_rss: /atom.xml
+subscribe_rss: /tracks/atom.xml
 subscribe_email:
 # RSS feeds can list your email address if you like
-email:
+email: "info@getontracks.org"
 
 # ----------------------- #
 #    Jekyll & Plugins     #
