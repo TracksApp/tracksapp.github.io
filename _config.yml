@@ -2,7 +2,7 @@
 #      Main Configs       #
 # ----------------------- #
 
-url: http://TracksApp.github.com
+url: http://www.getontracks.org
 title: Tracks
 subtitle: Doing Things Properly
 author: TracksApp
@@ -77,8 +77,8 @@ delicious_user:
 delicious_count: 3
 
 # Disqus Comments
-disqus_short_name:
-disqus_show_comment_count: false
+disqus_short_name: "tracks"
+disqus_show_comment_count: true
 
 # Google Analytics
 google_analytics_tracking_id:
