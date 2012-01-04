@@ -1,0 +1,2445 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<title>Tracks | Stats doesn&#146;t work, everything else does</title>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<meta name='MSSmartTagsPreventParsing' content='TRUE' />
+<meta http-equiv='expires' content='-1' />
+<meta http-equiv= 'pragma' content='no-cache' />
+<meta name='robots' content='all' />
+
+<link rel="alternate" type="application/atom+xml" title="Atom Feed" href="http://www.getontracks.org/forums/atom/11/" />
+<link rel="alternate" type="application/rss+xml" title="RSS 2.0" href="http://www.getontracks.org/forums/rss/11/" />
+
+<script type="text/javascript"> 
+<!--
+
+function navHover(which)
+{					
+	if (document.getElementById(which.id))
+	{
+		cur = document.getElementById(which.id).className;
+		
+		if (cur == 'buttonLarge')
+		{
+			document.getElementById(which.id).className = 'buttonLargeHover'
+		}
+		else if (cur == 'buttonSmall')
+		{
+			document.getElementById(which.id).className = 'buttonSmallHover'
+		}
+	}
+}
+
+function navReset(which)
+{					
+	if (document.getElementById(which.id))
+	{
+		cur = document.getElementById(which.id).className;
+		
+		if (cur == 'buttonLargeHover')
+		{
+			document.getElementById(which.id).className = 'buttonLarge'
+		}
+		else if (cur == 'buttonSmallHover')
+		{
+			document.getElementById(which.id).className = 'buttonSmall'
+		}
+	}
+}
+
+
+function navJump(where)
+{
+	window.location=where;
+}
+-->
+</script>
+
+
+<style type='text/css'>
+
+
+* {
+	margin: 0;
+	padding: 0;
+	}
+body {
+	font: 78% Helvetica, Arial, sans-serif;
+	text-align: center;
+	color: #036;
+	background: #344;
+    line-height:1.4em;
+	}
+#wrapper {
+	text-align: left;
+	min-width: 760px;
+	margin: .5em 2em;
+	color: #fff;
+	background: #036 url(http://www.getontracks.org/themes/forum_themes/blue/images/background.gif) 50% 0% repeat-y;
+	border: 6px solid #233;
+	}
+#content {
+	padding: .5em 1.5% 0 1.5%;
+	border-right: 3px solid #047;
+	border-left: 3px solid #047;
+	}
+#content ul {
+	list-style: none;
+	line-height: 1.5em;
+	margin: .25em 0;
+}
+p {
+	margin: 0 10px;
+	line-height:1.4em;
+	}
+a:link {
+	color: #adf;
+	border: none;
+    }
+a:visited {
+	color: #ccc;
+	}
+a:hover, a:active {
+	text-decoration: none;
+	}
+#topbar a, #footer a, #subhead a {
+	text-decoration: none;
+	padding: .25em .5em;
+	}
+#topbar a:hover, #footer a:hover, #subhead a:hover {
+	background: #047;
+	}
+h1, h2, h3, h4, h5, h6 {
+	font-weight: bold;
+	}
+h2 {
+	font-size: 2em;
+	}
+hr.clear {
+	clear: both;
+	margin: 0;
+	padding: 0;
+	visibility: hidden;
+	border: none;
+	}
+img {
+	border: none;
+	}
+#address_book, #address_book td, #emoticons
+	{
+		background: #3cf;
+	}
+#emoticons a, #address_book a
+	{
+		color: #00f;
+		padding: 3px;
+	}
+div#topbar {
+	padding: .5em 1.5%;
+	border-top: 3px solid #047;
+	border-right: 3px solid #047;
+	border-left: 3px solid #047;
+	background: #025 url(http://www.getontracks.org/themes/forum_themes/blue/images/background-dk.gif) 50% 0% repeat-y;
+	}
+#topbar ul {
+	float: left;
+	display: inline;
+	text-align: left;
+	list-style: none;
+	line-height: 1em;
+	font-size: 1em;
+	display: inline;
+	}
+#topbar ul li {
+	display: inline;
+	margin-right: .5em;
+	}
+#topbar form {	
+	text-align: right;
+	}
+#topbar form fieldset {
+	padding-bottom: .5em;
+	}
+#topbar form input {
+	margin: 0 .25em;
+	}
+#topbar form div {
+	display: none;
+	}
+#header {  
+	clear: both;
+	padding: .5em 1.5% 0 1.5%;
+	border-right: 3px solid #047;
+	border-bottom: 1px solid #047;
+	border-left: 3px solid #047;
+	background: #025 url(http://www.getontracks.org/themes/forum_themes/blue/images/background-dk.gif) 50% 0% repeat-y;
+	}
+#header h1 {
+	float: left;
+ 	display: inline;
+ 	text-transform: uppercase;
+	font-weight: normal;
+	font-size: 2.5em;
+	line-height: 1em;
+	}
+#header h1 a {
+	color: #69c;
+	text-decoration: none;
+	}
+#header h1 a:hover {
+	color:#adf;			
+    }
+#header form {
+	text-align: right;
+	padding: .25em;
+	}
+#header form input {
+	width: 8em;
+	}
+#header form .submit {
+	width: 5em;
+	margin: 0 .5em;
+	}
+#header form div {
+	display: none;
+	}
+#subhead {  
+	clear: both;
+	padding: .5em 1.5%;
+	border-right: 3px solid #047;
+	border-left: 3px solid #047;	
+	background: #025 url(http://www.getontracks.org/themes/forum_themes/blue/images/background-dk.gif) 50% 0% repeat-y;
+	}
+div.breadcrumb {
+	display: inline;
+	}
+.currentcrumb {
+	font-weight: bold;
+	}
+ul.forumnav {
+	list-style: none;
+	margin-bottom: 1em;
+	}
+ul.forumnav li {
+	display: inline;
+	margin-right: 1em;
+	}
+ul.forumnav li a {
+	padding: .25em .5em;
+	text-decoration: none;
+	}
+ul.forumnav li a:hover {
+	background: #025;
+	}
+#footer {
+	clear: both;
+	padding: 1.5%;
+	text-align: center;
+	font-size: .9em;
+	color: #69c;
+	border-top: 1px solid #047;
+	border-right: 3px solid #047;
+	border-bottom: 3px solid #047;
+	border-left: 3px solid #047;
+	background: #025 url(http://www.getontracks.org/themes/forum_themes/blue/images/background-dk.gif) 50% 0% repeat-y;
+	}
+#footer a {
+	font-weight: bold;
+	}
+#footer ul {
+	list-style: none;
+	line-height: 1.5em;
+	margin: .25em 0;
+	}
+#footer ul li {
+	display: inline;
+	padding: .5em;
+	}
+#footer select {
+	margin: .5em;
+	}
+.forumName {
+	letter-spacing:    .1em;
+	}
+.forumDescription {
+	padding:           3px 0 0 0;
+	}
+.forumLightLinks {
+	padding:           4px 0 2px 0;
+	}
+.topicTitle {
+	letter-spacing:    .1em;
+	}
+.userBlock {
+	padding:	2px 0 2px 0;
+	}
+.spacer {
+	height: .5em;
+	margin-bottom: 1em;
+	}
+.itempad {
+	padding: 2px 0 2px 0;
+	}
+.itempadbig {
+	padding: 5px 0 5px 0;
+	}
+.bottompad {
+	padding: 0 0 2px 0;
+	}
+.marginpad {
+	margin: 12px 0 10px 3px;
+	}
+.leftpad {
+ 	padding: 0 0 0 4px;
+	}
+table {
+	border-collapse: collapse;
+	}
+.legend {
+	margin-top: 1em;
+	padding: .5em 0;
+	background: #036;
+	}
+.tableBorder {
+	padding: 0;
+	margin-top: 1px;
+	margin-bottom: 3px;
+	}
+.tablePad {
+	padding:  0 2px 4px 2px;
+	}
+.tableHeading {
+	letter-spacing: .1em;
+	font-size: 1.1em;
+	font-weight: bold;
+	text-transform: uppercase;
+	color: #69c;
+	white-space: nowrap;
+	margin: 1em 0 0 0;
+	}
+.tableHeadingSmall {
+	font-size: .9em;
+	color: #69c;
+	white-space: nowrap;
+	margin: 0 0 .5em 0;
+	}
+.tableHeadingBG {
+	background: #036;
+	border-top: 1px solid #025;
+	font-size: 1em;
+	padding: 1em .5em 0 .5em;
+	}
+.tableRowHeading, .tableRowHeadingBold {
+	padding: .25em .5em;
+	border-bottom: 1px solid #025;
+	background: #047;
+	color: #69c;
+	font-size: .8em;
+	text-transform: uppercase;
+	letter-spacing: .2em;
+	}
+.tableRowSpacer {
+	}
+.threadBorder {
+	border: 1px solid #025;
+	margin: 1em 0;
+	padding: .25em 0;
+	}
+.tableCellOne {
+	padding:           3px 6px 3px 6px;
+	}
+.tableCellTwo {
+	padding:           3px 6px 3px 6px;
+	}
+.tablePostInfo {
+	margin-bottom: .75em;
+	}
+.ignored {
+	border: 1px solid #69c;
+	padding: 0;
+	margin-top: 1px;
+	margin-bottom: 3px;
+	}
+.button {
+	width: 80px;
+	background-color: transparent;
+	}
+.button40 {
+	width: 40px;
+	background-color: transparent;
+	}
+.button80 {
+	width: 80px;
+	background-color: transparent;
+	}
+.button100 {
+	width: 100px;
+	background-color: transparent;
+	}
+.button150 {
+	width: 150px;
+	background-color: transparent;
+	}
+.button210 {
+	width: 210px;
+	background-color: transparent;
+	}
+.buttonSpacer{
+	margin:	0 0 0 6px;
+	}
+.buttonLarge {
+	background: #025 url(http://www.getontracks.org/themes/forum_themes/blue/images/background-dk.gif) 50% 50% repeat-y;
+	border: 1px solid #69c;
+	text-transform: uppercase;
+	text-align: center;
+	color: #fff;
+	font-weight: bold;
+	padding: 2px 4px 2px 4px;
+	margin: .25em 0 .25em 0;
+	white-space: nowrap;
+	cursor: pointer;
+	}
+.buttonLargeHover {
+	background: #047 url(http://www.getontracks.org/themes/forum_themes/blue/images/background-lt.gif) 50% 50% repeat-y;
+	border: 1px solid #69c;
+	text-transform: uppercase;
+	text-align: center;
+	color: #fff;
+	font-weight: bold;
+	padding: 2px 4px 2px 4px;
+	margin: .25em 0 .25em 0;
+	white-space: nowrap;
+	cursor: pointer;
+	}
+.buttonSmall {
+	border: 1px solid #69c;
+	font-size: .9em;
+	text-transform: uppercase;
+	text-align:	center;
+	color: #69c;
+	padding: 0px 1px 0px 1px;
+	margin: 0 2px 0 2px;
+	white-space: nowrap;
+	cursor: pointer;
+	}
+.buttonSmallHover {
+	background: #047 url(http://www.getontracks.org/themes/forum_themes/blue/images/background-lt.gif) 50% 50% repeat-y;
+	border: 1px solid #69c;
+	font-size: .9em;
+	text-transform: uppercase;
+	text-align:	center;
+	color: #fff;
+	padding: 0px 1px 0px 1px;
+	margin: 0 2px 0 2px;
+	white-space: nowrap;
+	cursor: pointer;
+	}
+.rankAdmin, .rankModerator, .rankMember {
+	font-weight: bold;
+	color: #69c;
+	padding: 2px 0 3px 0;
+	}
+.rankImage {
+	margin: 0;
+	padding: 0;
+	border:  0;
+	}
+.userBlock {
+	color: #69c;
+	}
+.post {
+	margin: 1em 0;
+	line-height: 1.5em;
+	}
+.edited {
+	font-size:		9px;
+	color:			#69c;
+}
+code {
+	white-space: normal;
+	}
+pre {
+	background: #def;
+	border: 1px solid #69c;
+	color: #69c;
+	margin: 8px 2px 10px 6px;
+	padding: 10px 10px 10px 6px;
+	white-space: normal;
+	}
+.codeblock {
+	background: #def;
+	border: 1px solid #69c;
+	color: #69c;
+	margin: 8px 4px 10px 3px;
+	padding: 10px 10px 10px 6px;
+	}
+blockquote {
+	background: #036;
+	border:	1px solid #69c;
+	color: #69c;
+	margin: 8px 2px 10px 6px;
+	padding: 5px 10px 10px 6px;
+	}
+.quote_author {
+	font-weight: bold;
+	color: #69c;
+	margin:	0 0 4px 0;
+	background-color: transparent;
+	}
+.signature {
+	margin: 1em .5em .5em .5em;
+	padding: .25em;
+	border: 1px solid #69c;
+	}
+.signatureTitle {
+	color: #69c;
+	}
+.buttonMode {
+	white-space: 		nowrap;
+	}
+.htmlButtonOuter, .htmlButtonOuterL {
+	padding:           0;
+	border-top:        #025 1px solid;
+	border-right:      #025 1px solid;
+	border-bottom:     #025 1px solid;
+	}
+.htmlButtonOuterL  {
+	border-left:       #025 1px solid;
+	}
+.htmlButtonInner {
+	background-color:  transparent; 
+	text-align:		center;
+	padding:			0 3px 0 3px;
+	}
+.htmlButtonOff {
+	padding:           1px 2px 2px 2px;
+	white-space:       nowrap;
+	}
+.htmlButtonOff a:link { 
+	color:             #69c;
+	text-decoration:   none;
+	white-space:       nowrap;
+	}
+.htmlButtonOff  a:visited { 
+	text-decoration:   none;
+	}
+.htmlButtonOff a:active { 
+	text-decoration:   none;
+	color:             #fff;
+	}
+.htmlButtonOff a:hover { 
+	text-decoration:   none;
+	background:        #047;
+	color:             #fff;
+	}
+.htmlButtonOn {
+	background:        #047;
+	padding:           1px 2px 2px 2px;
+	white-space:       nowrap;
+	}
+.htmlButtonOn a:link { 
+	color:             #990000;
+	text-decoration:   none;
+	white-space:       nowrap;
+	}
+.htmlButtonOn  a:visited { 
+	text-decoration:   none;
+	}
+.htmlButtonOn a:active { 
+	text-decoration:   none;
+	color:             #999;
+	}
+.htmlButtonOn a:hover { 
+	color:             #999;
+	text-decoration:   none;
+	}
+.attachTitle {
+	font-weight:		bold;
+	color:             #fff;
+	padding:           4px;
+	margin:			10px 0 1px 0;
+	}
+.attachBody {
+	padding:           4px;
+	margin-bottom:		10px;
+	}
+.attachThumb {
+	margin: 3px 6px 3px 3px;
+	border: 1px solid 	#025;
+	}
+.preview {
+	padding:           10px;
+	margin:			0 0 12px 0;
+	border:       		1px solid #025;
+	}
+.previewheading {
+	font-weight:		bold;
+	color: #69c;
+	text-transform: uppercase;
+	padding:           5px 0 5px 10px;
+	border-top:     	1px solid #025;
+	border-right:     	1px solid #025;
+	border-left:     	1px solid #025;
+	}
+.activeModerator {
+	font-weight: bold;
+	}
+form {
+	margin:            0;
+	padding:           0;
+	border:            0;
+	}
+fieldset {
+	border: none;
+	}
+.hidden {
+	margin:            0;
+	padding:           0;
+	border:            0;
+	}
+.input {
+	border:        1px solid #69c;
+	color:             #69c;
+	height:            1.5em;
+	padding:           0;
+	margin:        	0;
+	}
+.textarea {
+	border:        1px solid #69c;
+	color:             #333;
+	font-size:         11px;
+	padding:           0;
+	margin:        	0;
+	}
+.select {
+	background-color:  #fff;
+	font-weight:       normal;
+	letter-spacing:    .1em;
+	color:             #333;
+	margin-top:        2px;
+	margin-bottom:     2px;
+	}
+.multiselect {
+	border:        1px solid #69c;
+	background-color:  #fff;
+	color:             #333;
+	font-size:         11px;
+	margin-top:        2px;
+	margin-top:        2px;
+	}
+.radio {
+	background-color:  transparent;
+	margin-top:        4px;
+	margin-bottom:     4px;
+	padding:           0;
+	border:            0;
+	}
+.checkbox {
+	background-color:  transparent;
+	padding:           0;
+	border:            0;
+	}
+.buttons {
+	font-weight:       bold;
+	border:        1px solid #69c;
+	letter-spacing:    .1em;
+	margin:        	0;
+	padding:			1px 6px 3px 6px;
+	color:             #69c;
+	background: #025;
+	cursor: pointer;
+	}
+.submit {
+	font-weight:       normal;
+	border:        1px solid #69c;
+	letter-spacing:    .1em;
+	margin:        	0;
+	padding:			1px 4px 1px 4px;
+	color:             #69c;
+	background: #025;
+	cursor: pointer;
+	}
+.errorHeading {
+	background: 		#025;
+	color:             #fff;
+	padding:           6px 6px 6px 6px;
+	border-bottom:     1px solid #fff;
+	letter-spacing:    .1em;
+	font-weight:		bold;
+	}
+.errorMessage {
+	color:             #f00;
+	padding:           10px 0 10px 0;
+	}
+.errorBox {
+	color: #f00;
+	padding: 10px;
+	margin: 0 0 12px 0;
+	border: 1px solid #f00;
+	background: #fcc;
+	}
+.alert {
+	color:             #f00;
+	font-weight:		bold;
+	}
+.highlight {
+	color:             #f00;
+	}
+.profileTitle {
+	font-size: 1.5em;
+	font-weight: bold;
+	margin: .5em 0;
+	}
+.memberlistHead {
+	padding: .25em .5em;
+	border-bottom: 1px solid #025;
+ 	background: #047;
+	color: #69c;
+	font-size: .8em;
+	text-transform: uppercase;
+	}
+.memberlistRowOne {
+	padding: .5em;
+	background: #047;
+	}
+.memberlistRowTwo {
+	padding: .5em;
+	}
+.memberlistFooter {
+	padding: 1em .5em;
+	}
+.profileHeadingBG {
+	background: #036;
+	padding:           6px 6px 6px 6px;
+	border-bottom:     #025 1px solid;
+	}
+.profileTopBox {
+	margin:		0;
+	padding:		7px 5px 5px 5px;
+	}
+.profileTitle {
+	font-weight:		bold;
+	padding: 			3px 5px 3px 0;
+	margin:			0;
+	background-color: transparent;  
+	}
+.profileItem {
+	background:		transparent;
+	margin: 			2px 0 2px 0;
+	background-color: transparent;  
+	}
+.profilePhoto {
+	padding:			1px 1px 1px 20px;
+	margin-top:        1px;
+	margin-bottom:     3px;
+	}
+.avatar {
+	background:	transparent;
+	margin:		3px 14px 0 3px;
+	}
+.photo {
+	background:	transparent;
+	margin:		6px 14px 0 3px;
+	}
+.profileHead {
+	font-weight:		bold;
+	text-transform:	uppercase;
+	padding:			3px 4px 3px 10px;  
+	margin:			0 0 0 0;
+	}
+.menuHeadingBG {
+	background: #036;
+	padding:           6px 6px 6px 6px;
+	}
+.profileMenu {
+	background: 		#036;
+	border:            1px solid #025;
+	padding:			1px;
+	margin-top:        1px;
+	margin-bottom:     3px;
+	}
+.profileMenuInner {
+	padding-left:		10px;
+	padding-right:		8px;
+	margin-bottom:		4px;
+	margin-top:		4px;
+	}
+.menuItem {
+	padding:			3px 0 3px 0;
+	background-color:	transparent;  
+	}
+.borderTopBot {
+	border-top:	1px solid #025;
+	border-bottom:	1px solid #025;
+	}
+.borderBot {
+	border-bottom:	1px solid #025;
+	}
+.success {
+	font-weight:		bold;
+	padding:			3px 0 3px 0;
+	background-color:	transparent; 
+	}
+.innerShade {
+	background-color:	#036;
+	margin:			0;
+	padding:			10px;
+	}
+.searchBox {
+	background: transparent;
+	margin: 16px 0 0 0;
+	padding: 8px 5px 5px 5px;
+	}
+.searchBoxTitle {
+	font-weight: bold;
+	background-color: transparent;  
+	}
+.searchpad {
+	padding: 6px 0 8px 0;
+	}
+.searchspacer {
+	margin-bottom: 6px;
+	}
+.iframe {
+	border:1px solid #025;
+	background: #def;
+	color: #036;
+	}
+.wordSuggestion {
+	border: 1px solid #036; 
+	padding: 4px; 
+	background: #def;
+	color: #036;
+	}
+.wordSuggestion a, .wordSuggestion a:active {
+	color: #036;
+	cursor: pointer;
+	}
+.spellchecked_word {
+	cursor: pointer;
+	background-color: #def;
+	color:#036;
+	border-bottom: 1px dashed #036;
+	}
+.spellchecked_word_selected {
+	cursor: pointer;
+	background-color: #69c;
+	}
+</style>
+
+</head>
+
+<body >
+<div id="wrapper">
+<div id='topbar'>
+	<ul>
+		
+		<li class="welcome">Welcome Guest</li>
+		<li><a href="http://www.getontracks.org/forums/member/login/">Login</a></li>
+		<li>REGISTRATION CLOSED: please use <a href="http://lists.rousette.org.uk/mailman/listinfo/tracks-discuss">mailing list</a></li>
+		
+		
+	</ul>
+     
+     <form method="post" action="http://www.getontracks.org/"  >
+<div class='hiddenFields'>
+<input type="hidden" name="XID" value="84e50a7a538b0ea187eefe8b7568b20b74f5aa79" />
+<input type="hidden" name="ACT" value="9" />
+<input type="hidden" name="FROM" value="forum" />
+<input type="hidden" name="mbase" value="http://www.getontracks.org/forums/member/" />
+<input type="hidden" name="board_id" value="1" />
+<input type="hidden" name="anon" value="1" />
+<input type="hidden" name="RET" value="http://www.getontracks.org/forums/viewthread/427/" />
+<input type="hidden" name="site_id" value="1" />
+</div>
+
+
+	<fieldset>	
+		<label class="field-username">Username<input type="text" class="textbox" name="username" value="" /></label>
+		<label class="field-password">Password<input type="password" class="textbox" name="password" /></label>
+		<input type="submit" class="submit" value="Login" />
+	</fieldset>	
+	<fieldset>
+		<label class="field-remember">Remember Me?<input type="checkbox" class="checkbox" name="auto_login" value="1" checked="checked" /></label>
+		<a href="http://www.getontracks.org/forums/member/forgot_password/">forgot password?</a>
+	</fieldset> 
+</form>
+     
+<hr class="clear" />
+</div><!--topbar-->
+<div id='header'>
+     <h1><a href="http://www.getontracks.org/forums/" title="Tracks">Tracks</a></h1>
+     <form method="post" action="http://www.getontracks.org/forums/do_search/"  >
+<div class='hiddenFields'>
+<input type="hidden" name="XID" value="4fd33d372f71c308fc198bc195ab2aafaec2a8a7" />
+<input type="hidden" name="board_id" value="1" />
+<input type="hidden" name="site_id" value="1" />
+</div>
+
+
+
+<label class="searchbox"><input type="text" class="input" name="keywords" value="Search" maxlength="80" /></label>
+<input type="submit" class="submit" value="Search" />
+<a href="http://www.getontracks.org/forums/search/">Advanced Search</a>
+
+</form>
+    <hr class="clear" />
+</div><!--header-->
+<div id="subhead">
+		<div class="breadcrumb"><a href="http://www.getontracks.org/forums/">Forum Home</a><span class="breadcrumbspacer"> &gt; </span><a href="http://www.getontracks.org/forums/viewcategory/4/">Usage</a><span class="breadcrumbspacer"> &gt; </span><a href="http://www.getontracks.org/forums/viewforum/11/">Troubleshooting</a><span class="breadcrumbspacer"> &gt; </span><span class="currentcrumb">Thread</span></div>
+<hr class="clear" />
+</div><!--subhead-->
+<div id="content">
+<script type="text/javascript">
+<!--
+
+function showimage(loc, width, height)
+{
+	window.open(loc,'Image','width='+width+',height='+height+',screenX=0,screenY=0,top=0,left=0,toolbar=0,status=0,scrollbars=0,location=0,menubar=1,resizable=1');
+	return false;
+}
+
+function showfastreply()
+{
+    if (document.getElementById('fastreply').style.display == "block")
+    {
+        document.getElementById('fastreply').style.display = "none";
+    }
+    else
+    {
+        document.getElementById('fastreply').style.display = "block";
+    }
+}
+
+function showHideRow(el)
+{
+    if (document.getElementById(el).style.display == "")
+    {
+        document.getElementById(el).style.display = "none";
+    }
+    else
+    {
+        document.getElementById(el).style.display = "";
+    }	
+}
+//-->
+</script>
+
+<table cellpadding="0" cellspacing="0" border="0" style="width:100%;">
+<tr>
+<td valign="middle" style="width:80%;">
+
+<table cellpadding="0" cellspacing="0" border="0" class="paginateBorder">
+<tr>
+<td><div class="paginateStat">1 of 2</div></td>
+<td><div class="paginateCur">1</div></td><td><div class="paginate"><a href="http://www.getontracks.org/forums/viewthread/427/P15">2</a></div></td><td><div class="paginate"><a href="http://www.getontracks.org/forums/viewthread/427/P15">Next</a></div></td>
+</tr>
+</table>
+
+</td>
+&nbsp;
+
+&nbsp;
+
+</tr>
+</table>
+
+
+
+<table cellpadding="0" cellspacing="0" border="0" style="width:100%;" >
+<tr>
+<td class="tableHeadingBG" colspan="2"><div class="tableHeading">Stats doesn&#8217;t work, everything else does</div></td>
+<td class="tableHeadingBG" colspan="1" align="right"><div class="altLinks">&nbsp;</div></td>
+
+</tr>
+
+
+
+<tr id="a9" >
+ <td colspan="3">
+
+
+ <table class="threadBorder" cellpadding="0" cellspacing="0" border="0" style="width:100%;">
+  <tr>
+   <td class="tableRowHeadingBold" style="width:130px;"><div class="largeLinks"><a href="http://www.getontracks.org/forums/member/1618/">bjones</a></div></td>
+   <td class="tableRowHeading">
+
+	<table cellpadding="0" cellspacing="0" border="0" style="width:99%;">
+	<tr>
+	<td>Posted: 10 June 2009 01:19 AM</td>
+	<td align="right">
+	
+		
+	
+	    
+	
+	
+
+	
+	
+	&nbsp;&nbsp;<span class="smallLinks">[ <a href="http://www.getontracks.org/forums/ignore_member/1618/" title="Ignore">Ignore</a> ]</span>
+	
+	
+
+	&nbsp;
+	</td>
+	</tr>
+	</table>
+
+   </td>
+  </tr>
+<tr>
+ <td class="tableCellOne" style="width:130px;" valign="top">
+	<div class="rankMember">Newbie</div>
+	
+	<div class="itempad"><img src="http://www.getontracks.org/themes/forum_themes/blue/images/rank.gif" alt="Rank" class="rankImage" /></div>
+	<div class="userBlock">Total Posts:&nbsp; 13</div>
+	<div class="userBlock">Joined&nbsp; 2009-06-10</div>
+</td>
+<td class="tableCellOne" valign="top" colspan="2"><div class="post"><p>Love the program, just digging into it. I installed it to a subdomain on Dreamhost, and it works great, except for Stats. I get a 404 error when I try to view them.</p>
+
+<p>I&#8217;m using version 1.7 on Dreamhost, as I said. I really know very, very little about how this all works, so it&#8217;s likely something I simply overlooked or something I inadvertently broke.</p>
+
+<p>Thanks in advance for any help anyone can give me.</p>
+
+<p>Here&#8217;s the log:</p><div class="codeblock"><code><span style="color: #000000">
+<span style="color: #0000BB">Processing&nbsp;ApplicationController</span><span style="color: #FF8000">#index&nbsp;(for&nbsp;75.28.95.133&nbsp;at&nbsp;2009-06-09&nbsp;18:11:04)&nbsp;&#91;GET&#93;<br />&nbsp;&nbsp;</span><span style="color: #0000BB">Session&nbsp;ID</span><span style="color: #007700">:&nbsp;</span><span style="color: #0000BB">5affaa1f6bdf64576a2287922f0a101c<br /><br /><br />ActionController</span><span style="color: #007700">::</span><span style="color: #0000BB">RoutingError&nbsp;</span><span style="color: #007700">(</span><span style="color: #0000BB">No&nbsp;route&nbsp;matches&nbsp;</span><span style="color: #DD0000">"/failed_auth.html"&nbsp;</span><span style="color: #0000BB">with&nbsp;&#123;</span><span style="color: #007700">:</span><span style="color: #0000BB">method</span><span style="color: #007700">=&gt;:</span><span style="color: #0000BB">get&#125;</span><span style="color: #007700">):<br />&nbsp;&nbsp;&nbsp;&nbsp;/</span><span style="color: #0000BB">vendor</span><span style="color: #007700">/</span><span style="color: #0000BB">rails</span><span style="color: #007700">/</span><span style="color: #0000BB">actionpack</span><span style="color: #007700">/</span><span style="color: #0000BB">lib</span><span style="color: #007700">/</span><span style="color: #0000BB">action_controller</span><span style="color: #007700">/</span><span style="color: #0000BB">routing</span><span style="color: #007700">/</span><span style="color: #0000BB">recognition_optimisation</span><span style="color: #007700">.</span><span style="color: #0000BB">rb</span><span style="color: #007700">:</span><span style="color: #0000BB">66</span><span style="color: #007700">:</span><span style="color: #0000BB">in&nbsp;</span><span style="color: #007700">`</span><span style="color: #DD0000">recognize_path'<br />&nbsp;&nbsp;&nbsp;&nbsp;/vendor/rails/actionpack/lib/action_controller/routing/route_set.rb:386:in&nbsp;</span><span style="color: #007700">`</span><span style="color: #0000BB">recognize</span><span style="color: #DD0000">'<br />&nbsp;&nbsp;&nbsp;&nbsp;/vendor/rails/actionpack/lib/action_controller/dispatcher.rb:182:in&nbsp;`handle_request'<br />&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #007700">/</span><span style="color: #0000BB">vendor</span><span style="color: #007700">/</span><span style="color: #0000BB">rails</span><span style="color: #007700">/</span><span style="color: #0000BB">actionpack</span><span style="color: #007700">/</span><span style="color: #0000BB">lib</span><span style="color: #007700">/</span><span style="color: #0000BB">action_controller</span><span style="color: #007700">/</span><span style="color: #0000BB">dispatcher</span><span style="color: #007700">.</span><span style="color: #0000BB">rb</span><span style="color: #007700">:</span><span style="color: #0000BB">110</span><span style="color: #007700">:</span><span style="color: #0000BB">in&nbsp;</span><span style="color: #007700">`</span><span style="color: #DD0000">dispatch_unlocked'<br />&nbsp;&nbsp;&nbsp;&nbsp;/vendor/rails/actionpack/lib/action_controller/dispatcher.rb:123:in&nbsp;</span><span style="color: #007700">`</span><span style="color: #0000BB">dispatch</span><span style="color: #DD0000">'<br />&nbsp;&nbsp;&nbsp;&nbsp;/vendor/rails/actionpack/lib/action_controller/dispatcher.rb:122:in&nbsp;`synchronize'<br />&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #007700">/</span><span style="color: #0000BB">vendor</span><span style="color: #007700">/</span><span style="color: #0000BB">rails</span><span style="color: #007700">/</span><span style="color: #0000BB">actionpack</span><span style="color: #007700">/</span><span style="color: #0000BB">lib</span><span style="color: #007700">/</span><span style="color: #0000BB">action_controller</span><span style="color: #007700">/</span><span style="color: #0000BB">dispatcher</span><span style="color: #007700">.</span><span style="color: #0000BB">rb</span><span style="color: #007700">:</span><span style="color: #0000BB">122</span><span style="color: #007700">:</span><span style="color: #0000BB">in&nbsp;</span><span style="color: #007700">`</span><span style="color: #DD0000">dispatch'<br />&nbsp;&nbsp;&nbsp;&nbsp;/vendor/rails/actionpack/lib/action_controller/dispatcher.rb:132:in&nbsp;</span><span style="color: #007700">`</span><span style="color: #0000BB">dispatch_cgi</span><span style="color: #DD0000">'<br />&nbsp;&nbsp;&nbsp;&nbsp;/vendor/rails/actionpack/lib/action_controller/dispatcher.rb:39:in&nbsp;`dispatch'<br />&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #007700">/</span><span style="color: #0000BB">dh</span><span style="color: #007700">/</span><span style="color: #0000BB">passenger</span><span style="color: #007700">/</span><span style="color: #0000BB">lib</span><span style="color: #007700">/</span><span style="color: #0000BB">phusion_passenger</span><span style="color: #007700">/</span><span style="color: #0000BB">railz</span><span style="color: #007700">/</span><span style="color: #0000BB">request_handler</span><span style="color: #007700">.</span><span style="color: #0000BB">rb</span><span style="color: #007700">:</span><span style="color: #0000BB">38</span><span style="color: #007700">:</span><span style="color: #0000BB">in&nbsp;</span><span style="color: #007700">`</span><span style="color: #DD0000">process_request'<br />&nbsp;&nbsp;&nbsp;&nbsp;/dh/passenger/lib/phusion_passenger/abstract_request_handler.rb:197:in&nbsp;</span><span style="color: #007700">`</span><span style="color: #0000BB">main_loop</span><span style="color: #DD0000">'<br />&nbsp;&nbsp;&nbsp;&nbsp;/dh/passenger/lib/phusion_passenger/railz/application_spawner.rb:340:in&nbsp;`start_request_handler'<br />&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #007700">/</span><span style="color: #0000BB">dh</span><span style="color: #007700">/</span><span style="color: #0000BB">passenger</span><span style="color: #007700">/</span><span style="color: #0000BB">lib</span><span style="color: #007700">/</span><span style="color: #0000BB">phusion_passenger</span><span style="color: #007700">/</span><span style="color: #0000BB">railz</span><span style="color: #007700">/</span><span style="color: #0000BB">application_spawner</span><span style="color: #007700">.</span><span style="color: #0000BB">rb</span><span style="color: #007700">:</span><span style="color: #0000BB">298</span><span style="color: #007700">:</span><span style="color: #0000BB">in&nbsp;</span><span style="color: #007700">`</span><span style="color: #DD0000">handle_spawn_application'<br />&nbsp;&nbsp;&nbsp;&nbsp;/dh/passenger/lib/phusion_passenger/utils.rb:176:in&nbsp;</span><span style="color: #007700">`</span><span style="color: #0000BB">safe_fork</span><span style="color: #DD0000">'<br />&nbsp;&nbsp;&nbsp;&nbsp;/dh/passenger/lib/phusion_passenger/railz/application_spawner.rb:296:in&nbsp;`handle_spawn_application'<br />&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #007700">/</span><span style="color: #0000BB">dh</span><span style="color: #007700">/</span><span style="color: #0000BB">passenger</span><span style="color: #007700">/</span><span style="color: #0000BB">lib</span><span style="color: #007700">/</span><span style="color: #0000BB">phusion_passenger</span><span style="color: #007700">/</span><span style="color: #0000BB">abstract_server</span><span style="color: #007700">.</span><span style="color: #0000BB">rb</span><span style="color: #007700">:</span><span style="color: #0000BB">332</span><span style="color: #007700">:</span><span style="color: #0000BB">in&nbsp;</span><span style="color: #007700">`</span><span style="color: #DD0000">__send__'<br />&nbsp;&nbsp;&nbsp;&nbsp;/dh/passenger/lib/phusion_passenger/abstract_server.rb:332:in&nbsp;</span><span style="color: #007700">`</span><span style="color: #0000BB">main_loop</span><span style="color: #DD0000">'<br />&nbsp;&nbsp;&nbsp;&nbsp;/dh/passenger/lib/phusion_passenger/abstract_server.rb:182:in&nbsp;`start_synchronously'<br />&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #007700">/</span><span style="color: #0000BB">dh</span><span style="color: #007700">/</span><span style="color: #0000BB">passenger</span><span style="color: #007700">/</span><span style="color: #0000BB">lib</span><span style="color: #007700">/</span><span style="color: #0000BB">phusion_passenger</span><span style="color: #007700">/</span><span style="color: #0000BB">abstract_server</span><span style="color: #007700">.</span><span style="color: #0000BB">rb</span><span style="color: #007700">:</span><span style="color: #0000BB">149</span><span style="color: #007700">:</span><span style="color: #0000BB">in&nbsp;</span><span style="color: #007700">`</span><span style="color: #DD0000">start'<br />&nbsp;&nbsp;&nbsp;&nbsp;/dh/passenger/lib/phusion_passenger/railz/application_spawner.rb:192:in&nbsp;</span><span style="color: #007700">`</span><span style="color: #0000BB">start</span><span style="color: #DD0000">'<br />&nbsp;&nbsp;&nbsp;&nbsp;/dh/passenger/lib/phusion_passenger/spawn_manager.rb:260:in&nbsp;`spawn_rails_application'<br />&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #007700">/</span><span style="color: #0000BB">dh</span><span style="color: #007700">/</span><span style="color: #0000BB">passenger</span><span style="color: #007700">/</span><span style="color: #0000BB">lib</span><span style="color: #007700">/</span><span style="color: #0000BB">phusion_passenger</span><span style="color: #007700">/</span><span style="color: #0000BB">abstract_server_collection</span><span style="color: #007700">.</span><span style="color: #0000BB">rb</span><span style="color: #007700">:</span><span style="color: #0000BB">121</span><span style="color: #007700">:</span><span style="color: #0000BB">in&nbsp;</span><span style="color: #007700">`</span><span style="color: #DD0000">lookup_or_add'<br />&nbsp;&nbsp;&nbsp;&nbsp;/dh/passenger/lib/phusion_passenger/spawn_manager.rb:254:in&nbsp;</span><span style="color: #007700">`</span><span style="color: #0000BB">spawn_rails_application</span><span style="color: #DD0000">'<br />&nbsp;&nbsp;&nbsp;&nbsp;/dh/passenger/lib/phusion_passenger/abstract_server_collection.rb:75:in&nbsp;`synchronize'<br />&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #007700">/</span><span style="color: #0000BB">dh</span><span style="color: #007700">/</span><span style="color: #0000BB">passenger</span><span style="color: #007700">/</span><span style="color: #0000BB">lib</span><span style="color: #007700">/</span><span style="color: #0000BB">phusion_passenger</span><span style="color: #007700">/</span><span style="color: #0000BB">abstract_server_collection</span><span style="color: #007700">.</span><span style="color: #0000BB">rb</span><span style="color: #007700">:</span><span style="color: #0000BB">74</span><span style="color: #007700">:</span><span style="color: #0000BB">in&nbsp;</span><span style="color: #007700">`</span><span style="color: #DD0000">synchronize'<br />&nbsp;&nbsp;&nbsp;&nbsp;/dh/passenger/lib/phusion_passenger/spawn_manager.rb:253:in&nbsp;</span><span style="color: #007700">`</span><span style="color: #0000BB">spawn_rails_application</span><span style="color: #DD0000">'<br />&nbsp;&nbsp;&nbsp;&nbsp;/dh/passenger/lib/phusion_passenger/spawn_manager.rb:148:in&nbsp;`spawn_application'<br />&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #007700">/</span><span style="color: #0000BB">dh</span><span style="color: #007700">/</span><span style="color: #0000BB">passenger</span><span style="color: #007700">/</span><span style="color: #0000BB">lib</span><span style="color: #007700">/</span><span style="color: #0000BB">phusion_passenger</span><span style="color: #007700">/</span><span style="color: #0000BB">spawn_manager</span><span style="color: #007700">.</span><span style="color: #0000BB">rb</span><span style="color: #007700">:</span><span style="color: #0000BB">285</span><span style="color: #007700">:</span><span style="color: #0000BB">in&nbsp;</span><span style="color: #007700">`</span><span style="color: #DD0000">handle_spawn_application'<br />&nbsp;&nbsp;&nbsp;&nbsp;/dh/passenger/lib/phusion_passenger/abstract_server.rb:332:in&nbsp;</span><span style="color: #007700">`</span><span style="color: #0000BB">__send__</span><span style="color: #DD0000">'<br />&nbsp;&nbsp;&nbsp;&nbsp;/dh/passenger/lib/phusion_passenger/abstract_server.rb:332:in&nbsp;`main_loop'<br />&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #007700">/</span><span style="color: #0000BB">dh</span><span style="color: #007700">/</span><span style="color: #0000BB">passenger</span><span style="color: #007700">/</span><span style="color: #0000BB">lib</span><span style="color: #007700">/</span><span style="color: #0000BB">phusion_passenger</span><span style="color: #007700">/</span><span style="color: #0000BB">abstract_server</span><span style="color: #007700">.</span><span style="color: #0000BB">rb</span><span style="color: #007700">:</span><span style="color: #0000BB">182</span><span style="color: #007700">:</span><span style="color: #0000BB">in&nbsp;</span><span style="color: #007700">`</span><span style="color: #DD0000">start_synchronously'<br />&nbsp;&nbsp;&nbsp;&nbsp;/dh/passenger/bin/passenger-spawn-server:50<br /><br />Rendering&nbsp;/home/...redacted.../tracks/public/404.html&nbsp;(404&nbsp;Not&nbsp;Found)&nbsp;</span>
+</span>
+</code></div></div>
+	
+	
+	
+</td>
+
+</tr><tr>
+
+<td class="tableCellTwo"  style="width:130px;">
+	<table cellpadding="0" cellspacing="0" border="0" width="100%">
+	<tr>
+	<td align="center"><div class="button"><div class="buttonSmall" id="a1" onclick="navJump('http://www.getontracks.org/forums/member/1618/')" onmouseover="navHover(this);" onmouseout="navReset(this);">Profile</div></div></td>
+	
+	
+
+	</tr>
+	</table>
+</td>
+
+<td class="tableCellTwo" colspan="2">
+	<table cellpadding="0" cellspacing="0" border="0">
+	<tr>
+	
+	
+	
+	
+		
+		
+				
+	
+	
+	
+	
+	&nbsp;
+	
+	<td>&nbsp;</td>	
+	</tr>
+	</table>
+  </td>
+ </tr>
+</table>
+
+</td>
+</tr>
+
+<tr id="b9" >
+ <td colspan="3">
+
+
+ <table class="threadBorder" cellpadding="0" cellspacing="0" border="0" style="width:100%;">
+  <tr>
+   <td class="tableRowHeadingBold" style="width:130px;"><div class="largeLinks"><a href="http://www.getontracks.org/forums/member/100/">Reinier Balt</a></div></td>
+   <td class="tableRowHeading">
+
+	<table cellpadding="0" cellspacing="0" border="0" style="width:99%;">
+	<tr>
+	<td>Posted: 10 June 2009 07:19 AM</td>
+	<td align="right">
+	
+		
+	
+	
+
+	
+	
+	&nbsp;&nbsp;<span class="smallLinks">[ <a href="http://www.getontracks.org/forums/ignore_member/100/" title="Ignore">Ignore</a> ]</span>
+	
+	&nbsp;&nbsp;<span class="smallLinks">[ <a name="1454" href="http://www.getontracks.org/forums/viewreply/1454/" title="Permalink to this post"># 1</a> ]</span>
+
+	&nbsp;
+	</td>
+	</tr>
+	</table>
+
+   </td>
+  </tr>
+<tr>
+ <td class="tableCellOne" style="width:130px;" valign="top">
+	<div class="rankMember">Sr. Member</div>
+	
+	<div class="itempad"><img src="http://www.getontracks.org/themes/forum_themes/blue/images/rank.gif" alt="Rank" class="rankImage" /><img src="http://www.getontracks.org/themes/forum_themes/blue/images/rank.gif" alt="Rank" class="rankImage" /><img src="http://www.getontracks.org/themes/forum_themes/blue/images/rank.gif" alt="Rank" class="rankImage" /><img src="http://www.getontracks.org/themes/forum_themes/blue/images/rank.gif" alt="Rank" class="rankImage" /></div>
+	<div class="userBlock">Total Posts:&nbsp; 882</div>
+	<div class="userBlock">Joined&nbsp; 2006-10-05</div>
+</td>
+<td class="tableCellOne" valign="top" colspan="2"><div class="post"><p>It&#8217;s a longshot, but could you try to add the following line to your /config/routes.rb file at line 69 (before the map.resources :recurring_todos line)</p>
+
+<p>map.stats &#8216;stats&#8217;, :controller =&gt; &#8216;stats&#8217;, :action =&gt; &#8216;index&#8217;</p></div>
+	
+	
+	
+</td>
+
+</tr><tr>
+
+<td class="tableCellTwo"  style="width:130px;">
+	<table cellpadding="0" cellspacing="0" border="0" width="100%">
+	<tr>
+	<td align="center"><div class="button"><div class="buttonSmall" id="b1" onclick="navJump('http://www.getontracks.org/forums/member/100/')" onmouseover="navHover(this);" onmouseout="navReset(this);">Profile</div></div></td>
+	
+	
+
+	</tr>
+	</table>
+</td>
+
+<td class="tableCellTwo" colspan="2">
+	<table cellpadding="0" cellspacing="0" border="0">
+	<tr>
+	
+	
+	
+	
+	
+	
+		
+	
+	
+	&nbsp;
+	
+	<td>&nbsp;</td>	
+	</tr>
+	</table>
+  </td>
+ </tr>
+</table>
+
+</td>
+</tr>
+
+<tr id="c9" >
+ <td colspan="3">
+
+
+ <table class="threadBorder" cellpadding="0" cellspacing="0" border="0" style="width:100%;">
+  <tr>
+   <td class="tableRowHeadingBold" style="width:130px;"><div class="largeLinks"><a href="http://www.getontracks.org/forums/member/1618/">bjones</a></div></td>
+   <td class="tableRowHeading">
+
+	<table cellpadding="0" cellspacing="0" border="0" style="width:99%;">
+	<tr>
+	<td>Posted: 10 June 2009 02:41 PM</td>
+	<td align="right">
+	
+		
+	
+	
+
+	
+	
+	&nbsp;&nbsp;<span class="smallLinks">[ <a href="http://www.getontracks.org/forums/ignore_member/1618/" title="Ignore">Ignore</a> ]</span>
+	
+	&nbsp;&nbsp;<span class="smallLinks">[ <a name="1460" href="http://www.getontracks.org/forums/viewreply/1460/" title="Permalink to this post"># 2</a> ]</span>
+
+	&nbsp;
+	</td>
+	</tr>
+	</table>
+
+   </td>
+  </tr>
+<tr>
+ <td class="tableCellOne" style="width:130px;" valign="top">
+	<div class="rankMember">Newbie</div>
+	
+	<div class="itempad"><img src="http://www.getontracks.org/themes/forum_themes/blue/images/rank.gif" alt="Rank" class="rankImage" /></div>
+	<div class="userBlock">Total Posts:&nbsp; 13</div>
+	<div class="userBlock">Joined&nbsp; 2009-06-10</div>
+</td>
+<td class="tableCellOne" valign="top" colspan="2"><div class="post"><blockquote><div class="quote_author">Reinier Balt - 10 June 2009 07:19 AM</div><p>It&#8217;s a longshot, but could you try to add the following line to your /config/routes.rb file at line 69 (before the map.resources :recurring_todos line)</p>
+
+<p>map.stats &#8216;stats&#8217;, :controller =&gt; &#8216;stats&#8217;, :action =&gt; &#8216;index&#8217;</p>
+</blockquote>
+<p>Thanks for the suggestion. Unfortunately, it appears to be unresolved. Log message is the same.</p>
+
+<p>I also noticed that the XML export option isn&#8217;t working either. I don&#8217;t know how they&#8217;d be related, but in the interests of full information for anyone trying to help, I&#8217;ll throw it out there just in case. Everything else that I&#8217;ve tried works perfectly, and I think I&#8217;ve tried at least all the basic functions.</p></div>
+	
+	
+	
+</td>
+
+</tr><tr>
+
+<td class="tableCellTwo"  style="width:130px;">
+	<table cellpadding="0" cellspacing="0" border="0" width="100%">
+	<tr>
+	<td align="center"><div class="button"><div class="buttonSmall" id="c1" onclick="navJump('http://www.getontracks.org/forums/member/1618/')" onmouseover="navHover(this);" onmouseout="navReset(this);">Profile</div></div></td>
+	
+	
+
+	</tr>
+	</table>
+</td>
+
+<td class="tableCellTwo" colspan="2">
+	<table cellpadding="0" cellspacing="0" border="0">
+	<tr>
+	
+	
+	
+	
+	
+	
+		
+	
+	
+	&nbsp;
+	
+	<td>&nbsp;</td>	
+	</tr>
+	</table>
+  </td>
+ </tr>
+</table>
+
+</td>
+</tr>
+
+<tr id="d9" >
+ <td colspan="3">
+
+
+ <table class="threadBorder" cellpadding="0" cellspacing="0" border="0" style="width:100%;">
+  <tr>
+   <td class="tableRowHeadingBold" style="width:130px;"><div class="largeLinks"><a href="http://www.getontracks.org/forums/member/100/">Reinier Balt</a></div></td>
+   <td class="tableRowHeading">
+
+	<table cellpadding="0" cellspacing="0" border="0" style="width:99%;">
+	<tr>
+	<td>Posted: 10 June 2009 02:46 PM</td>
+	<td align="right">
+	
+		
+	
+	
+
+	
+	
+	&nbsp;&nbsp;<span class="smallLinks">[ <a href="http://www.getontracks.org/forums/ignore_member/100/" title="Ignore">Ignore</a> ]</span>
+	
+	&nbsp;&nbsp;<span class="smallLinks">[ <a name="1461" href="http://www.getontracks.org/forums/viewreply/1461/" title="Permalink to this post"># 3</a> ]</span>
+
+	&nbsp;
+	</td>
+	</tr>
+	</table>
+
+   </td>
+  </tr>
+<tr>
+ <td class="tableCellOne" style="width:130px;" valign="top">
+	<div class="rankMember">Sr. Member</div>
+	
+	<div class="itempad"><img src="http://www.getontracks.org/themes/forum_themes/blue/images/rank.gif" alt="Rank" class="rankImage" /><img src="http://www.getontracks.org/themes/forum_themes/blue/images/rank.gif" alt="Rank" class="rankImage" /><img src="http://www.getontracks.org/themes/forum_themes/blue/images/rank.gif" alt="Rank" class="rankImage" /><img src="http://www.getontracks.org/themes/forum_themes/blue/images/rank.gif" alt="Rank" class="rankImage" /></div>
+	<div class="userBlock">Total Posts:&nbsp; 882</div>
+	<div class="userBlock">Joined&nbsp; 2006-10-05</div>
+</td>
+<td class="tableCellOne" valign="top" colspan="2"><div class="post"><p>I assume you restarted Tracks.</p>
+
+<p>Is there more in the log above the message you copied which belongs to the getting of stats?</p></div>
+	
+	
+	
+</td>
+
+</tr><tr>
+
+<td class="tableCellTwo"  style="width:130px;">
+	<table cellpadding="0" cellspacing="0" border="0" width="100%">
+	<tr>
+	<td align="center"><div class="button"><div class="buttonSmall" id="d1" onclick="navJump('http://www.getontracks.org/forums/member/100/')" onmouseover="navHover(this);" onmouseout="navReset(this);">Profile</div></div></td>
+	
+	
+
+	</tr>
+	</table>
+</td>
+
+<td class="tableCellTwo" colspan="2">
+	<table cellpadding="0" cellspacing="0" border="0">
+	<tr>
+	
+	
+	
+	
+	
+	
+		
+	
+	
+	&nbsp;
+	
+	<td>&nbsp;</td>	
+	</tr>
+	</table>
+  </td>
+ </tr>
+</table>
+
+</td>
+</tr>
+
+<tr id="e9" >
+ <td colspan="3">
+
+
+ <table class="threadBorder" cellpadding="0" cellspacing="0" border="0" style="width:100%;">
+  <tr>
+   <td class="tableRowHeadingBold" style="width:130px;"><div class="largeLinks"><a href="http://www.getontracks.org/forums/member/1618/">bjones</a></div></td>
+   <td class="tableRowHeading">
+
+	<table cellpadding="0" cellspacing="0" border="0" style="width:99%;">
+	<tr>
+	<td>Posted: 10 June 2009 02:59 PM</td>
+	<td align="right">
+	
+		
+	
+	
+
+	
+	
+	&nbsp;&nbsp;<span class="smallLinks">[ <a href="http://www.getontracks.org/forums/ignore_member/1618/" title="Ignore">Ignore</a> ]</span>
+	
+	&nbsp;&nbsp;<span class="smallLinks">[ <a name="1462" href="http://www.getontracks.org/forums/viewreply/1462/" title="Permalink to this post"># 4</a> ]</span>
+
+	&nbsp;
+	</td>
+	</tr>
+	</table>
+
+   </td>
+  </tr>
+<tr>
+ <td class="tableCellOne" style="width:130px;" valign="top">
+	<div class="rankMember">Newbie</div>
+	
+	<div class="itempad"><img src="http://www.getontracks.org/themes/forum_themes/blue/images/rank.gif" alt="Rank" class="rankImage" /></div>
+	<div class="userBlock">Total Posts:&nbsp; 13</div>
+	<div class="userBlock">Joined&nbsp; 2009-06-10</div>
+</td>
+<td class="tableCellOne" valign="top" colspan="2"><div class="post"><blockquote><div class="quote_author">Reinier Balt - 10 June 2009 02:46 PM</div><p>I assume you restarted Tracks.</p>
+
+<p>Is there more in the log above the message you copied which belongs to the getting of stats?</p>
+</blockquote>
+
+<p>How would I go about restarting it? I logged out and logged back in, and cleared the cache, but I&#8217;m guessing there&#8217;s more to it than that. It&#8217;s hosted on Dreamhost.</p></div>
+	
+	
+	
+</td>
+
+</tr><tr>
+
+<td class="tableCellTwo"  style="width:130px;">
+	<table cellpadding="0" cellspacing="0" border="0" width="100%">
+	<tr>
+	<td align="center"><div class="button"><div class="buttonSmall" id="e1" onclick="navJump('http://www.getontracks.org/forums/member/1618/')" onmouseover="navHover(this);" onmouseout="navReset(this);">Profile</div></div></td>
+	
+	
+
+	</tr>
+	</table>
+</td>
+
+<td class="tableCellTwo" colspan="2">
+	<table cellpadding="0" cellspacing="0" border="0">
+	<tr>
+	
+	
+	
+	
+	
+	
+		
+	
+	
+	&nbsp;
+	
+	<td>&nbsp;</td>	
+	</tr>
+	</table>
+  </td>
+ </tr>
+</table>
+
+</td>
+</tr>
+
+<tr id="f9" >
+ <td colspan="3">
+
+
+ <table class="threadBorder" cellpadding="0" cellspacing="0" border="0" style="width:100%;">
+  <tr>
+   <td class="tableRowHeadingBold" style="width:130px;"><div class="largeLinks"><a href="http://www.getontracks.org/forums/member/1618/">bjones</a></div></td>
+   <td class="tableRowHeading">
+
+	<table cellpadding="0" cellspacing="0" border="0" style="width:99%;">
+	<tr>
+	<td>Posted: 10 June 2009 03:41 PM</td>
+	<td align="right">
+	
+		
+	
+	
+
+	
+	
+	&nbsp;&nbsp;<span class="smallLinks">[ <a href="http://www.getontracks.org/forums/ignore_member/1618/" title="Ignore">Ignore</a> ]</span>
+	
+	&nbsp;&nbsp;<span class="smallLinks">[ <a name="1463" href="http://www.getontracks.org/forums/viewreply/1463/" title="Permalink to this post"># 5</a> ]</span>
+
+	&nbsp;
+	</td>
+	</tr>
+	</table>
+
+   </td>
+  </tr>
+<tr>
+ <td class="tableCellOne" style="width:130px;" valign="top">
+	<div class="rankMember">Newbie</div>
+	
+	<div class="itempad"><img src="http://www.getontracks.org/themes/forum_themes/blue/images/rank.gif" alt="Rank" class="rankImage" /></div>
+	<div class="userBlock">Total Posts:&nbsp; 13</div>
+	<div class="userBlock">Joined&nbsp; 2009-06-10</div>
+</td>
+<td class="tableCellOne" valign="top" colspan="2"><div class="post"><p>Actually I&#8217;m just going to go ahead and try to reinstall. I discovered some other things that I overlooked during the first installation. Frankly, I don&#8217;t know how in the world the thing is running in the first place&#8212;I never updated the config/database or /environment files, and it wasn&#8217;t using the mysql database I set up for it (it&#8217;s blank, no tables). But all my todos were saving, I accessed them from multiple computers, multiple internet connections and my iPhone.</p>
+
+<p>I followed the instructions from the wiki (I thought I did, anyway&#8230;must have missed something). I really like this program, save a few improvements that I&#8217;ve seen mentioned elsewhere in the forums, I think it&#8217;s exactly what I need&#8212;if I can get it working. It does what it needs to do, and since I don&#8217;t know the programming language (yet, anyway), I&#8217;m not tempted to fiddle with it.</p>
+
+<p>It would still be useful for me to know how to restart it (as well as any other basic commands I&#8217;ll likely need to know), so if anyone wants to walk me through those, I&#8217;d very much appreciate it. Thanks again.</p></div>
+	
+	
+	
+</td>
+
+</tr><tr>
+
+<td class="tableCellTwo"  style="width:130px;">
+	<table cellpadding="0" cellspacing="0" border="0" width="100%">
+	<tr>
+	<td align="center"><div class="button"><div class="buttonSmall" id="f1" onclick="navJump('http://www.getontracks.org/forums/member/1618/')" onmouseover="navHover(this);" onmouseout="navReset(this);">Profile</div></div></td>
+	
+	
+
+	</tr>
+	</table>
+</td>
+
+<td class="tableCellTwo" colspan="2">
+	<table cellpadding="0" cellspacing="0" border="0">
+	<tr>
+	
+	
+	
+	
+	
+	
+		
+	
+	
+	&nbsp;
+	
+	<td>&nbsp;</td>	
+	</tr>
+	</table>
+  </td>
+ </tr>
+</table>
+
+</td>
+</tr>
+
+<tr id="g9" >
+ <td colspan="3">
+
+
+ <table class="threadBorder" cellpadding="0" cellspacing="0" border="0" style="width:100%;">
+  <tr>
+   <td class="tableRowHeadingBold" style="width:130px;"><div class="largeLinks"><a href="http://www.getontracks.org/forums/member/1618/">bjones</a></div></td>
+   <td class="tableRowHeading">
+
+	<table cellpadding="0" cellspacing="0" border="0" style="width:99%;">
+	<tr>
+	<td>Posted: 10 June 2009 04:51 PM</td>
+	<td align="right">
+	
+		
+	
+	
+
+	
+	
+	&nbsp;&nbsp;<span class="smallLinks">[ <a href="http://www.getontracks.org/forums/ignore_member/1618/" title="Ignore">Ignore</a> ]</span>
+	
+	&nbsp;&nbsp;<span class="smallLinks">[ <a name="1464" href="http://www.getontracks.org/forums/viewreply/1464/" title="Permalink to this post"># 6</a> ]</span>
+
+	&nbsp;
+	</td>
+	</tr>
+	</table>
+
+   </td>
+  </tr>
+<tr>
+ <td class="tableCellOne" style="width:130px;" valign="top">
+	<div class="rankMember">Newbie</div>
+	
+	<div class="itempad"><img src="http://www.getontracks.org/themes/forum_themes/blue/images/rank.gif" alt="Rank" class="rankImage" /></div>
+	<div class="userBlock">Total Posts:&nbsp; 13</div>
+	<div class="userBlock">Joined&nbsp; 2009-06-10</div>
+</td>
+<td class="tableCellOne" valign="top" colspan="2"><div class="post"><p>Ok, reinstalled, and now it&#8217;s actually using the mysql database, so that&#8217;s good.</p>
+
+<p>I tried stats, didn&#8217;t work. Tried modifying the suggested file, didn&#8217;t work. The error and the log file are still the same.</p>
+
+<p>I discovered this blog post (<a href="http://www.getontracks.org/?URL=http%3A%2F%2Falexbrie.net%2F1960%2Fdreamhost-and-mod_rails-for-your-tiny-rails-application%2F">http://alexbrie.net/1960/dreamhost-and-mod_rails-for-your-tiny-rails-application/</a>) that says how to restart (it says to touch tmp/restart.txt from ssh), and tried that, but no dice.</p></div>
+	
+	
+	
+</td>
+
+</tr><tr>
+
+<td class="tableCellTwo"  style="width:130px;">
+	<table cellpadding="0" cellspacing="0" border="0" width="100%">
+	<tr>
+	<td align="center"><div class="button"><div class="buttonSmall" id="g1" onclick="navJump('http://www.getontracks.org/forums/member/1618/')" onmouseover="navHover(this);" onmouseout="navReset(this);">Profile</div></div></td>
+	
+	
+
+	</tr>
+	</table>
+</td>
+
+<td class="tableCellTwo" colspan="2">
+	<table cellpadding="0" cellspacing="0" border="0">
+	<tr>
+	
+	
+	
+	
+	
+	
+		
+	
+	
+	&nbsp;
+	
+	<td>&nbsp;</td>	
+	</tr>
+	</table>
+  </td>
+ </tr>
+</table>
+
+</td>
+</tr>
+
+<tr id="h9" >
+ <td colspan="3">
+
+
+ <table class="threadBorder" cellpadding="0" cellspacing="0" border="0" style="width:100%;">
+  <tr>
+   <td class="tableRowHeadingBold" style="width:130px;"><div class="largeLinks"><a href="http://www.getontracks.org/forums/member/1618/">bjones</a></div></td>
+   <td class="tableRowHeading">
+
+	<table cellpadding="0" cellspacing="0" border="0" style="width:99%;">
+	<tr>
+	<td>Posted: 10 June 2009 05:07 PM</td>
+	<td align="right">
+	
+		
+	
+	
+
+	
+	
+	&nbsp;&nbsp;<span class="smallLinks">[ <a href="http://www.getontracks.org/forums/ignore_member/1618/" title="Ignore">Ignore</a> ]</span>
+	
+	&nbsp;&nbsp;<span class="smallLinks">[ <a name="1465" href="http://www.getontracks.org/forums/viewreply/1465/" title="Permalink to this post"># 7</a> ]</span>
+
+	&nbsp;
+	</td>
+	</tr>
+	</table>
+
+   </td>
+  </tr>
+<tr>
+ <td class="tableCellOne" style="width:130px;" valign="top">
+	<div class="rankMember">Newbie</div>
+	
+	<div class="itempad"><img src="http://www.getontracks.org/themes/forum_themes/blue/images/rank.gif" alt="Rank" class="rankImage" /></div>
+	<div class="userBlock">Total Posts:&nbsp; 13</div>
+	<div class="userBlock">Joined&nbsp; 2009-06-10</div>
+</td>
+<td class="tableCellOne" valign="top" colspan="2"><div class="post"><p>More clues:</p>
+
+<p>Running it at MY.TRACKS.DOMAIN, stats doesn&#8217;t work.</p>
+
+<p>But if I run the server from ssh (script/server -e production), and then go to MY.TRACKS.DOMAIN:3000, stats DOES work.</p>
+
+<p>Thoughts?</p></div>
+	
+	
+	
+</td>
+
+</tr><tr>
+
+<td class="tableCellTwo"  style="width:130px;">
+	<table cellpadding="0" cellspacing="0" border="0" width="100%">
+	<tr>
+	<td align="center"><div class="button"><div class="buttonSmall" id="h1" onclick="navJump('http://www.getontracks.org/forums/member/1618/')" onmouseover="navHover(this);" onmouseout="navReset(this);">Profile</div></div></td>
+	
+	
+
+	</tr>
+	</table>
+</td>
+
+<td class="tableCellTwo" colspan="2">
+	<table cellpadding="0" cellspacing="0" border="0">
+	<tr>
+	
+	
+	
+	
+	
+	
+		
+	
+	
+	&nbsp;
+	
+	<td>&nbsp;</td>	
+	</tr>
+	</table>
+  </td>
+ </tr>
+</table>
+
+</td>
+</tr>
+
+<tr id="i9" >
+ <td colspan="3">
+
+
+ <table class="threadBorder" cellpadding="0" cellspacing="0" border="0" style="width:100%;">
+  <tr>
+   <td class="tableRowHeadingBold" style="width:130px;"><div class="largeLinks"><a href="http://www.getontracks.org/forums/member/100/">Reinier Balt</a></div></td>
+   <td class="tableRowHeading">
+
+	<table cellpadding="0" cellspacing="0" border="0" style="width:99%;">
+	<tr>
+	<td>Posted: 11 June 2009 02:23 PM</td>
+	<td align="right">
+	
+		
+	
+	
+
+	
+	
+	&nbsp;&nbsp;<span class="smallLinks">[ <a href="http://www.getontracks.org/forums/ignore_member/100/" title="Ignore">Ignore</a> ]</span>
+	
+	&nbsp;&nbsp;<span class="smallLinks">[ <a name="1466" href="http://www.getontracks.org/forums/viewreply/1466/" title="Permalink to this post"># 8</a> ]</span>
+
+	&nbsp;
+	</td>
+	</tr>
+	</table>
+
+   </td>
+  </tr>
+<tr>
+ <td class="tableCellOne" style="width:130px;" valign="top">
+	<div class="rankMember">Sr. Member</div>
+	
+	<div class="itempad"><img src="http://www.getontracks.org/themes/forum_themes/blue/images/rank.gif" alt="Rank" class="rankImage" /><img src="http://www.getontracks.org/themes/forum_themes/blue/images/rank.gif" alt="Rank" class="rankImage" /><img src="http://www.getontracks.org/themes/forum_themes/blue/images/rank.gif" alt="Rank" class="rankImage" /><img src="http://www.getontracks.org/themes/forum_themes/blue/images/rank.gif" alt="Rank" class="rankImage" /></div>
+	<div class="userBlock">Total Posts:&nbsp; 882</div>
+	<div class="userBlock">Joined&nbsp; 2006-10-05</div>
+</td>
+<td class="tableCellOne" valign="top" colspan="2"><div class="post"><p>If everything works from :3000 then the issue has something to do with the setup of Tracks on Dreamhost. Are you running from a subdir, i.e. my.tracks.domain/tracks or from a subdomain, i.e. tracks.my.tracks.domain</p>
+
+<p>Since you are useing passenger on dreamhost, could you delete (rename) the .htaccess file in /public</p>
+
+<p>And could you copy-and-past some of the log above the entry you already posted?</p></div>
+	
+	
+	
+</td>
+
+</tr><tr>
+
+<td class="tableCellTwo"  style="width:130px;">
+	<table cellpadding="0" cellspacing="0" border="0" width="100%">
+	<tr>
+	<td align="center"><div class="button"><div class="buttonSmall" id="i1" onclick="navJump('http://www.getontracks.org/forums/member/100/')" onmouseover="navHover(this);" onmouseout="navReset(this);">Profile</div></div></td>
+	
+	
+
+	</tr>
+	</table>
+</td>
+
+<td class="tableCellTwo" colspan="2">
+	<table cellpadding="0" cellspacing="0" border="0">
+	<tr>
+	
+	
+	
+	
+	
+	
+		
+	
+	
+	&nbsp;
+	
+	<td>&nbsp;</td>	
+	</tr>
+	</table>
+  </td>
+ </tr>
+</table>
+
+</td>
+</tr>
+
+<tr id="j9" >
+ <td colspan="3">
+
+
+ <table class="threadBorder" cellpadding="0" cellspacing="0" border="0" style="width:100%;">
+  <tr>
+   <td class="tableRowHeadingBold" style="width:130px;"><div class="largeLinks"><a href="http://www.getontracks.org/forums/member/1618/">bjones</a></div></td>
+   <td class="tableRowHeading">
+
+	<table cellpadding="0" cellspacing="0" border="0" style="width:99%;">
+	<tr>
+	<td>Posted: 11 June 2009 03:57 PM</td>
+	<td align="right">
+	
+		
+	
+	
+
+	
+	
+	&nbsp;&nbsp;<span class="smallLinks">[ <a href="http://www.getontracks.org/forums/ignore_member/1618/" title="Ignore">Ignore</a> ]</span>
+	
+	&nbsp;&nbsp;<span class="smallLinks">[ <a name="1467" href="http://www.getontracks.org/forums/viewreply/1467/" title="Permalink to this post"># 9</a> ]</span>
+
+	&nbsp;
+	</td>
+	</tr>
+	</table>
+
+   </td>
+  </tr>
+<tr>
+ <td class="tableCellOne" style="width:130px;" valign="top">
+	<div class="rankMember">Newbie</div>
+	
+	<div class="itempad"><img src="http://www.getontracks.org/themes/forum_themes/blue/images/rank.gif" alt="Rank" class="rankImage" /></div>
+	<div class="userBlock">Total Posts:&nbsp; 13</div>
+	<div class="userBlock">Joined&nbsp; 2009-06-10</div>
+</td>
+<td class="tableCellOne" valign="top" colspan="2"><div class="post"><blockquote><div class="quote_author">Reinier Balt - 11 June 2009 02:23 PM</div><p>If everything works from :3000 then the issue has something to do with the setup of Tracks on Dreamhost. Are you running from a subdir, i.e. my.tracks.domain/tracks or from a subdomain, i.e. tracks.my.tracks.domain</p>
+
+<p>Since you are useing passenger on dreamhost, could you delete (rename) the .htaccess file in /public</p>
+
+<p>And could you copy-and-past some of the log above the entry you already posted?</p>
+</blockquote>
+<p>It&#8217;s running from a subdomain: I visit tracks.my.tracks.domain to access it. The folder containing everything (the app and config folders, etc.) is tracks.my.tracks.domain/tracks . When setting up the subdomain, dreamhost asks for a &#8220;Web directory&#8221;, which the wiki entry (<a href="http://www.getontracks.org/?URL=http%3A%2F%2Fwww.getontracks.org%2Fwiki%2FDreamhost%2F">http://www.getontracks.org/wiki/Dreamhost/</a>) said to set to my.domain.name/tracks/public, which I did.</p>
+
+<p>I have access to the .htaccess file in /public, renaming it didn&#8217;t help.</p>
+
+<p>Here&#8217;s a longer log: I logged in, clicked the context menu, then clicked stats.</p>
+
+<p><code>Processing LoginController#login (for 70.130.190.74 at 2009-06-11 08:47:37) [POST]<br />
+&nbsp; Session ID: 48147bfa1fccbbd25165d031970a8ab6<br />
+&nbsp; Parameters: &#123;&#8220;user_login&#8221;=&gt;&#8220;bjones&#8221;, &#8220;action&#8221;=&gt;&#8220;login&#8221;, <br />
+&#8220;authenticity_token&#8221;=&gt;&#8220;a9ada249a0bffab199cd0dc0d36fe31845944723&#8221;, &#8220;controller&#8221;=&gt;&#8220;login&#8221;, &#8220;user_password&#8221;=&gt;&#8221;[FILTERED]&#8221;, &#8220;user_noexpiry&#8221;=&gt;&#8220;on&#8221;, &#8220;login&#8221;=&gt;&#8220;Sign In</p></div>
+	
+	
+	
+</td>
+
+</tr><tr>
+
+<td class="tableCellTwo"  style="width:130px;">
+	<table cellpadding="0" cellspacing="0" border="0" width="100%">
+	<tr>
+	<td align="center"><div class="button"><div class="buttonSmall" id="j1" onclick="navJump('http://www.getontracks.org/forums/member/1618/')" onmouseover="navHover(this);" onmouseout="navReset(this);">Profile</div></div></td>
+	
+	
+
+	</tr>
+	</table>
+</td>
+
+<td class="tableCellTwo" colspan="2">
+	<table cellpadding="0" cellspacing="0" border="0">
+	<tr>
+	
+	
+	
+	
+	
+	
+		
+	
+	
+	&nbsp;
+	
+	<td>&nbsp;</td>	
+	</tr>
+	</table>
+  </td>
+ </tr>
+</table>
+
+</td>
+</tr>
+
+<tr id="k9" >
+ <td colspan="3">
+
+
+ <table class="threadBorder" cellpadding="0" cellspacing="0" border="0" style="width:100%;">
+  <tr>
+   <td class="tableRowHeadingBold" style="width:130px;"><div class="largeLinks"><a href="http://www.getontracks.org/forums/member/100/">Reinier Balt</a></div></td>
+   <td class="tableRowHeading">
+
+	<table cellpadding="0" cellspacing="0" border="0" style="width:99%;">
+	<tr>
+	<td>Posted: 11 June 2009 06:38 PM</td>
+	<td align="right">
+	
+		
+	
+	
+
+	
+	
+	&nbsp;&nbsp;<span class="smallLinks">[ <a href="http://www.getontracks.org/forums/ignore_member/100/" title="Ignore">Ignore</a> ]</span>
+	
+	&nbsp;&nbsp;<span class="smallLinks">[ <a name="1468" href="http://www.getontracks.org/forums/viewreply/1468/" title="Permalink to this post"># 10</a> ]</span>
+
+	&nbsp;
+	</td>
+	</tr>
+	</table>
+
+   </td>
+  </tr>
+<tr>
+ <td class="tableCellOne" style="width:130px;" valign="top">
+	<div class="rankMember">Sr. Member</div>
+	
+	<div class="itempad"><img src="http://www.getontracks.org/themes/forum_themes/blue/images/rank.gif" alt="Rank" class="rankImage" /><img src="http://www.getontracks.org/themes/forum_themes/blue/images/rank.gif" alt="Rank" class="rankImage" /><img src="http://www.getontracks.org/themes/forum_themes/blue/images/rank.gif" alt="Rank" class="rankImage" /><img src="http://www.getontracks.org/themes/forum_themes/blue/images/rank.gif" alt="Rank" class="rankImage" /></div>
+	<div class="userBlock">Total Posts:&nbsp; 882</div>
+	<div class="userBlock">Joined&nbsp; 2006-10-05</div>
+</td>
+<td class="tableCellOne" valign="top" colspan="2"><div class="post"><p>I&#8217;m out of options. I suspect that the routing is not ok. But the change you made did not work.</p>
+
+<p>Do you have access to the apache logs? Is there something in the error_log ?</p></div>
+	
+	
+	
+</td>
+
+</tr><tr>
+
+<td class="tableCellTwo"  style="width:130px;">
+	<table cellpadding="0" cellspacing="0" border="0" width="100%">
+	<tr>
+	<td align="center"><div class="button"><div class="buttonSmall" id="k1" onclick="navJump('http://www.getontracks.org/forums/member/100/')" onmouseover="navHover(this);" onmouseout="navReset(this);">Profile</div></div></td>
+	
+	
+
+	</tr>
+	</table>
+</td>
+
+<td class="tableCellTwo" colspan="2">
+	<table cellpadding="0" cellspacing="0" border="0">
+	<tr>
+	
+	
+	
+	
+	
+	
+		
+	
+	
+	&nbsp;
+	
+	<td>&nbsp;</td>	
+	</tr>
+	</table>
+  </td>
+ </tr>
+</table>
+
+</td>
+</tr>
+
+<tr id="l9" >
+ <td colspan="3">
+
+
+ <table class="threadBorder" cellpadding="0" cellspacing="0" border="0" style="width:100%;">
+  <tr>
+   <td class="tableRowHeadingBold" style="width:130px;"><div class="largeLinks"><a href="http://www.getontracks.org/forums/member/1618/">bjones</a></div></td>
+   <td class="tableRowHeading">
+
+	<table cellpadding="0" cellspacing="0" border="0" style="width:99%;">
+	<tr>
+	<td>Posted: 11 June 2009 06:55 PM</td>
+	<td align="right">
+	
+		
+	
+	
+
+	
+	
+	&nbsp;&nbsp;<span class="smallLinks">[ <a href="http://www.getontracks.org/forums/ignore_member/1618/" title="Ignore">Ignore</a> ]</span>
+	
+	&nbsp;&nbsp;<span class="smallLinks">[ <a name="1469" href="http://www.getontracks.org/forums/viewreply/1469/" title="Permalink to this post"># 11</a> ]</span>
+
+	&nbsp;
+	</td>
+	</tr>
+	</table>
+
+   </td>
+  </tr>
+<tr>
+ <td class="tableCellOne" style="width:130px;" valign="top">
+	<div class="rankMember">Newbie</div>
+	
+	<div class="itempad"><img src="http://www.getontracks.org/themes/forum_themes/blue/images/rank.gif" alt="Rank" class="rankImage" /></div>
+	<div class="userBlock">Total Posts:&nbsp; 13</div>
+	<div class="userBlock">Joined&nbsp; 2009-06-10</div>
+</td>
+<td class="tableCellOne" valign="top" colspan="2"><div class="post"><p>The apache log file within the tracks installation doesn&#8217;t say anything, but I have a separate log folder, which has an error log. It says:</p>
+
+<div class="codeblock"><code><span style="color: #000000">
+<span style="color: #0000BB">&#91;Thu&nbsp;Jun&nbsp;11&nbsp;08</span><span style="color: #007700">:</span><span style="color: #0000BB">43</span><span style="color: #007700">:</span><span style="color: #0000BB">57&nbsp;2009&#93;&nbsp;&#91;error&#93;&nbsp;&#91;client&nbsp;75.28.95.133&#93;&nbsp;File&nbsp;does&nbsp;not&nbsp;exist</span><span style="color: #007700">:&nbsp;/</span><span style="color: #0000BB">home</span><span style="color: #007700">/</span><span style="color: #0000BB">bjones26</span><span style="color: #007700">/</span><span style="color: #0000BB">gtd</span><span style="color: #007700">.</span><span style="color: #0000BB">bjones</span><span style="color: #007700">.</span><span style="color: #0000BB">net</span><span style="color: #007700">/</span><span style="color: #0000BB">tracks</span><span style="color: #007700">/public,&nbsp;</span><span style="color: #0000BB">referer</span><span style="color: #007700">:&nbsp;</span><span style="color: #0000BB">http</span><span style="color: #007700">:</span><span style="color: #FF8000">//gtd.bjones.net/users<br /></span><span style="color: #0000BB">&#91;Thu&nbsp;Jun&nbsp;11&nbsp;08</span><span style="color: #007700">:</span><span style="color: #0000BB">43</span><span style="color: #007700">:</span><span style="color: #0000BB">57&nbsp;2009&#93;&nbsp;&#91;error&#93;&nbsp;&#91;client&nbsp;75.28.95.133&#93;&nbsp;File&nbsp;does&nbsp;not&nbsp;exist</span><span style="color: #007700">:&nbsp;/</span><span style="color: #0000BB">home</span><span style="color: #007700">/</span><span style="color: #0000BB">bjones26</span><span style="color: #007700">/</span><span style="color: #0000BB">gtd</span><span style="color: #007700">.</span><span style="color: #0000BB">bjones</span><span style="color: #007700">.</span><span style="color: #0000BB">net</span><span style="color: #007700">/</span><span style="color: #0000BB">tracks</span><span style="color: #007700">/public,&nbsp;</span><span style="color: #0000BB">referer</span><span style="color: #007700">:&nbsp;</span><span style="color: #0000BB">http</span><span style="color: #007700">:</span><span style="color: #FF8000">//gtd.bjones.net/users<br /></span><span style="color: #0000BB">&#91;Thu&nbsp;Jun&nbsp;11&nbsp;08</span><span style="color: #007700">:</span><span style="color: #0000BB">43</span><span style="color: #007700">:</span><span style="color: #0000BB">59&nbsp;2009&#93;&nbsp;&#91;error&#93;&nbsp;&#91;client&nbsp;70.130.190.74&#93;&nbsp;File&nbsp;does&nbsp;not&nbsp;exist</span><span style="color: #007700">:&nbsp;/</span><span style="color: #0000BB">home</span><span style="color: #007700">/</span><span style="color: #0000BB">bjones26</span><span style="color: #007700">/</span><span style="color: #0000BB">gtd</span><span style="color: #007700">.</span><span style="color: #0000BB">bjones</span><span style="color: #007700">.</span><span style="color: #0000BB">net</span><span style="color: #007700">/</span><span style="color: #0000BB">tracks</span><span style="color: #007700">/public<br /></span><span style="color: #0000BB">&#91;Thu&nbsp;Jun&nbsp;11&nbsp;08</span><span style="color: #007700">:</span><span style="color: #0000BB">43</span><span style="color: #007700">:</span><span style="color: #0000BB">59&nbsp;2009&#93;&nbsp;&#91;error&#93;&nbsp;&#91;client&nbsp;70.130.190.74&#93;&nbsp;File&nbsp;does&nbsp;not&nbsp;exist</span><span style="color: #007700">:&nbsp;/</span><span style="color: #0000BB">home</span><span style="color: #007700">/</span><span style="color: #0000BB">bjones26</span><span style="color: #007700">/</span><span style="color: #0000BB">gtd</span><span style="color: #007700">.</span><span style="color: #0000BB">bjones</span><span style="color: #007700">.</span><span style="color: #0000BB">net</span><span style="color: #007700">/</span><span style="color: #0000BB">tracks</span><span style="color: #007700">/public<br /></span><span style="color: #0000BB">&#91;Thu&nbsp;Jun&nbsp;11&nbsp;08</span><span style="color: #007700">:</span><span style="color: #0000BB">44</span><span style="color: #007700">:</span><span style="color: #0000BB">12&nbsp;2009&#93;&nbsp;&#91;error&#93;&nbsp;&#91;client&nbsp;70.130.190.74&#93;&nbsp;File&nbsp;does&nbsp;not&nbsp;exist</span><span style="color: #007700">:&nbsp;/</span><span style="color: #0000BB">home</span><span style="color: #007700">/</span><span style="color: #0000BB">bjones26</span><span style="color: #007700">/</span><span style="color: #0000BB">gtd</span><span style="color: #007700">.</span><span style="color: #0000BB">bjones</span><span style="color: #007700">.</span><span style="color: #0000BB">net</span><span style="color: #007700">/</span><span style="color: #0000BB">tracks</span><span style="color: #007700">/public,&nbsp;</span><span style="color: #0000BB">referer</span><span style="color: #007700">:&nbsp;</span><span style="color: #0000BB">http</span><span style="color: #007700">:</span><span style="color: #FF8000">//gtd.bjones.net/<br /></span><span style="color: #0000BB">&#91;Thu&nbsp;Jun&nbsp;11&nbsp;08</span><span style="color: #007700">:</span><span style="color: #0000BB">44</span><span style="color: #007700">:</span><span style="color: #0000BB">12&nbsp;2009&#93;&nbsp;&#91;error&#93;&nbsp;&#91;client&nbsp;70.130.190.74&#93;&nbsp;File&nbsp;does&nbsp;not&nbsp;exist</span><span style="color: #007700">:&nbsp;/</span><span style="color: #0000BB">home</span><span style="color: #007700">/</span><span style="color: #0000BB">bjones26</span><span style="color: #007700">/</span><span style="color: #0000BB">gtd</span><span style="color: #007700">.</span><span style="color: #0000BB">bjones</span><span style="color: #007700">.</span><span style="color: #0000BB">net</span><span style="color: #007700">/</span><span style="color: #0000BB">tracks</span><span style="color: #007700">/public,&nbsp;</span><span style="color: #0000BB">referer</span><span style="color: #007700">:&nbsp;</span><span style="color: #0000BB">http</span><span style="color: #007700">:</span><span style="color: #FF8000">//gtd.bjones.net/<br /></span><span style="color: #0000BB">&#91;Thu&nbsp;Jun&nbsp;11&nbsp;08</span><span style="color: #007700">:</span><span style="color: #0000BB">44</span><span style="color: #007700">:</span><span style="color: #0000BB">14&nbsp;2009&#93;&nbsp;&#91;error&#93;&nbsp;&#91;client&nbsp;70.130.190.74&#93;&nbsp;File&nbsp;does&nbsp;not&nbsp;exist</span><span style="color: #007700">:&nbsp;/</span><span style="color: #0000BB">home</span><span style="color: #007700">/</span><span style="color: #0000BB">bjones26</span><span style="color: #007700">/</span><span style="color: #0000BB">gtd</span><span style="color: #007700">.</span><span style="color: #0000BB">bjones</span><span style="color: #007700">.</span><span style="color: #0000BB">net</span><span style="color: #007700">/</span><span style="color: #0000BB">tracks</span><span style="color: #007700">/public,&nbsp;</span><span style="color: #0000BB">referer</span><span style="color: #007700">:&nbsp;</span><span style="color: #0000BB">http</span><span style="color: #007700">:</span><span style="color: #FF8000">//gtd.bjones.net/<br /></span><span style="color: #0000BB">&#91;Thu&nbsp;Jun&nbsp;11&nbsp;08</span><span style="color: #007700">:</span><span style="color: #0000BB">44</span><span style="color: #007700">:</span><span style="color: #0000BB">14&nbsp;2009&#93;&nbsp;&#91;error&#93;&nbsp;&#91;client&nbsp;70.130.190.74&#93;&nbsp;File&nbsp;does&nbsp;not&nbsp;exist</span><span style="color: #007700">:&nbsp;/</span><span style="color: #0000BB">home</span><span style="color: #007700">/</span><span style="color: #0000BB">bjones26</span><span style="color: #007700">/</span><span style="color: #0000BB">gtd</span><span style="color: #007700">.</span><span style="color: #0000BB">bjones</span><span style="color: #007700">.</span><span style="color: #0000BB">net</span><span style="color: #007700">/</span><span style="color: #0000BB">tracks</span><span style="color: #007700">/public,&nbsp;</span><span style="color: #0000BB">referer</span><span style="color: #007700">:&nbsp;</span><span style="color: #0000BB">http</span><span style="color: #007700">:</span><span style="color: #FF8000">//gtd.bjones.net/&nbsp;</span>
+</span>
+</code></div>
+
+<p>I don&#8217;t suspect this helps a whole lot. I&#8217;ll fiddle with it some more, and if I stumble across the answer, I&#8217;ll post the resolution.</p>
+
+<p>Once again, thank you for taking the time to look into this.</p></div>
+	
+	
+	
+</td>
+
+</tr><tr>
+
+<td class="tableCellTwo"  style="width:130px;">
+	<table cellpadding="0" cellspacing="0" border="0" width="100%">
+	<tr>
+	<td align="center"><div class="button"><div class="buttonSmall" id="l1" onclick="navJump('http://www.getontracks.org/forums/member/1618/')" onmouseover="navHover(this);" onmouseout="navReset(this);">Profile</div></div></td>
+	
+	
+
+	</tr>
+	</table>
+</td>
+
+<td class="tableCellTwo" colspan="2">
+	<table cellpadding="0" cellspacing="0" border="0">
+	<tr>
+	
+	
+	
+	
+	
+	
+		
+	
+	
+	&nbsp;
+	
+	<td>&nbsp;</td>	
+	</tr>
+	</table>
+  </td>
+ </tr>
+</table>
+
+</td>
+</tr>
+
+<tr id="m9" >
+ <td colspan="3">
+
+
+ <table class="threadBorder" cellpadding="0" cellspacing="0" border="0" style="width:100%;">
+  <tr>
+   <td class="tableRowHeadingBold" style="width:130px;"><div class="largeLinks"><a href="http://www.getontracks.org/forums/member/100/">Reinier Balt</a></div></td>
+   <td class="tableRowHeading">
+
+	<table cellpadding="0" cellspacing="0" border="0" style="width:99%;">
+	<tr>
+	<td>Posted: 11 June 2009 07:04 PM</td>
+	<td align="right">
+	
+		
+	
+	
+
+	
+	
+	&nbsp;&nbsp;<span class="smallLinks">[ <a href="http://www.getontracks.org/forums/ignore_member/100/" title="Ignore">Ignore</a> ]</span>
+	
+	&nbsp;&nbsp;<span class="smallLinks">[ <a name="1470" href="http://www.getontracks.org/forums/viewreply/1470/" title="Permalink to this post"># 12</a> ]</span>
+
+	&nbsp;
+	</td>
+	</tr>
+	</table>
+
+   </td>
+  </tr>
+<tr>
+ <td class="tableCellOne" style="width:130px;" valign="top">
+	<div class="rankMember">Sr. Member</div>
+	
+	<div class="itempad"><img src="http://www.getontracks.org/themes/forum_themes/blue/images/rank.gif" alt="Rank" class="rankImage" /><img src="http://www.getontracks.org/themes/forum_themes/blue/images/rank.gif" alt="Rank" class="rankImage" /><img src="http://www.getontracks.org/themes/forum_themes/blue/images/rank.gif" alt="Rank" class="rankImage" /><img src="http://www.getontracks.org/themes/forum_themes/blue/images/rank.gif" alt="Rank" class="rankImage" /></div>
+	<div class="userBlock">Total Posts:&nbsp; 882</div>
+	<div class="userBlock">Joined&nbsp; 2006-10-05</div>
+</td>
+<td class="tableCellOne" valign="top" colspan="2"><div class="post"><p>hmm, this could be a permission problem. The file does not exist error should not happen. Is the path correct?</p>
+
+<p>Furthermore, could you check that all files are chmod 755</p>
+
+<p>Also you could try to disable fastcgi support so that only passenger is enabled. Perhaps the both are conflicting?</p></div>
+	
+	
+	
+</td>
+
+</tr><tr>
+
+<td class="tableCellTwo"  style="width:130px;">
+	<table cellpadding="0" cellspacing="0" border="0" width="100%">
+	<tr>
+	<td align="center"><div class="button"><div class="buttonSmall" id="m1" onclick="navJump('http://www.getontracks.org/forums/member/100/')" onmouseover="navHover(this);" onmouseout="navReset(this);">Profile</div></div></td>
+	
+	
+
+	</tr>
+	</table>
+</td>
+
+<td class="tableCellTwo" colspan="2">
+	<table cellpadding="0" cellspacing="0" border="0">
+	<tr>
+	
+	
+	
+	
+	
+	
+		
+	
+	
+	&nbsp;
+	
+	<td>&nbsp;</td>	
+	</tr>
+	</table>
+  </td>
+ </tr>
+</table>
+
+</td>
+</tr>
+
+<tr id="n9" >
+ <td colspan="3">
+
+
+ <table class="threadBorder" cellpadding="0" cellspacing="0" border="0" style="width:100%;">
+  <tr>
+   <td class="tableRowHeadingBold" style="width:130px;"><div class="largeLinks"><a href="http://www.getontracks.org/forums/member/1618/">bjones</a></div></td>
+   <td class="tableRowHeading">
+
+	<table cellpadding="0" cellspacing="0" border="0" style="width:99%;">
+	<tr>
+	<td>Posted: 11 June 2009 11:58 PM</td>
+	<td align="right">
+	
+		
+	
+	
+
+	
+	
+	&nbsp;&nbsp;<span class="smallLinks">[ <a href="http://www.getontracks.org/forums/ignore_member/1618/" title="Ignore">Ignore</a> ]</span>
+	
+	&nbsp;&nbsp;<span class="smallLinks">[ <a name="1471" href="http://www.getontracks.org/forums/viewreply/1471/" title="Permalink to this post"># 13</a> ]</span>
+
+	&nbsp;
+	</td>
+	</tr>
+	</table>
+
+   </td>
+  </tr>
+<tr>
+ <td class="tableCellOne" style="width:130px;" valign="top">
+	<div class="rankMember">Newbie</div>
+	
+	<div class="itempad"><img src="http://www.getontracks.org/themes/forum_themes/blue/images/rank.gif" alt="Rank" class="rankImage" /></div>
+	<div class="userBlock">Total Posts:&nbsp; 13</div>
+	<div class="userBlock">Joined&nbsp; 2009-06-10</div>
+</td>
+<td class="tableCellOne" valign="top" colspan="2"><div class="post"><blockquote><div class="quote_author">Reinier Balt - 11 June 2009 07:04 PM</div><p>hmm, this could be a permission problem. The file does not exist error should not happen. Is the path correct?</p>
+
+<p>Furthermore, could you check that all files are chmod 755</p>
+
+<p>Also you could try to disable fastcgi support so that only passenger is enabled. Perhaps the both are conflicting?</p>
+</blockquote><p>None of those helped. Path is correct, everything is 755 and I tried disabling fastcgi support.</p></div>
+	
+	
+	
+</td>
+
+</tr><tr>
+
+<td class="tableCellTwo"  style="width:130px;">
+	<table cellpadding="0" cellspacing="0" border="0" width="100%">
+	<tr>
+	<td align="center"><div class="button"><div class="buttonSmall" id="n1" onclick="navJump('http://www.getontracks.org/forums/member/1618/')" onmouseover="navHover(this);" onmouseout="navReset(this);">Profile</div></div></td>
+	
+	
+
+	</tr>
+	</table>
+</td>
+
+<td class="tableCellTwo" colspan="2">
+	<table cellpadding="0" cellspacing="0" border="0">
+	<tr>
+	
+	
+	
+	
+	
+	
+		
+	
+	
+	&nbsp;
+	
+	<td>&nbsp;</td>	
+	</tr>
+	</table>
+  </td>
+ </tr>
+</table>
+
+</td>
+</tr>
+
+<tr id="o9" >
+ <td colspan="3">
+
+
+ <table class="threadBorder" cellpadding="0" cellspacing="0" border="0" style="width:100%;">
+  <tr>
+   <td class="tableRowHeadingBold" style="width:130px;"><div class="largeLinks"><a href="http://www.getontracks.org/forums/member/1618/">bjones</a></div></td>
+   <td class="tableRowHeading">
+
+	<table cellpadding="0" cellspacing="0" border="0" style="width:99%;">
+	<tr>
+	<td>Posted: 12 June 2009 07:19 AM</td>
+	<td align="right">
+	
+		
+	
+	
+
+	
+	
+	&nbsp;&nbsp;<span class="smallLinks">[ <a href="http://www.getontracks.org/forums/ignore_member/1618/" title="Ignore">Ignore</a> ]</span>
+	
+	&nbsp;&nbsp;<span class="smallLinks">[ <a name="1472" href="http://www.getontracks.org/forums/viewreply/1472/" title="Permalink to this post"># 14</a> ]</span>
+
+	&nbsp;
+	</td>
+	</tr>
+	</table>
+
+   </td>
+  </tr>
+<tr>
+ <td class="tableCellOne" style="width:130px;" valign="top">
+	<div class="rankMember">Newbie</div>
+	
+	<div class="itempad"><img src="http://www.getontracks.org/themes/forum_themes/blue/images/rank.gif" alt="Rank" class="rankImage" /></div>
+	<div class="userBlock">Total Posts:&nbsp; 13</div>
+	<div class="userBlock">Joined&nbsp; 2009-06-10</div>
+</td>
+<td class="tableCellOne" valign="top" colspan="2"><div class="post"><p>I guess one of the main questions, coming at this from a non-programmer point of view, is why is the stats page different?</p>
+
+<p>I mean, you click any of the other menu items and you get my.tracks.domain/contexts, /projects, /tickler or what have you. But stats is the only one that returns a 404. So how is that page generated, and what makes it different than all of the others? Is that a helpful trail to follow at all?</p></div>
+	
+	
+	
+</td>
+
+</tr><tr>
+
+<td class="tableCellTwo"  style="width:130px;">
+	<table cellpadding="0" cellspacing="0" border="0" width="100%">
+	<tr>
+	<td align="center"><div class="button"><div class="buttonSmall" id="o1" onclick="navJump('http://www.getontracks.org/forums/member/1618/')" onmouseover="navHover(this);" onmouseout="navReset(this);">Profile</div></div></td>
+	
+	
+
+	</tr>
+	</table>
+</td>
+
+<td class="tableCellTwo" colspan="2">
+	<table cellpadding="0" cellspacing="0" border="0">
+	<tr>
+	
+	
+	
+	
+	
+	
+		
+	
+	
+	&nbsp;
+	
+	<td>&nbsp;</td>	
+	</tr>
+	</table>
+  </td>
+ </tr>
+</table>
+
+</td>
+</tr>
+
+<tr id="p9" >
+ <td colspan="3">
+
+
+ <table class="threadBorder" cellpadding="0" cellspacing="0" border="0" style="width:100%;">
+  <tr>
+   <td class="tableRowHeadingBold" style="width:130px;"><div class="largeLinks"><a href="http://www.getontracks.org/forums/member/1618/">bjones</a></div></td>
+   <td class="tableRowHeading">
+
+	<table cellpadding="0" cellspacing="0" border="0" style="width:99%;">
+	<tr>
+	<td>Posted: 12 June 2009 10:04 PM</td>
+	<td align="right">
+	
+		
+	
+	
+
+	
+	
+	&nbsp;&nbsp;<span class="smallLinks">[ <a href="http://www.getontracks.org/forums/ignore_member/1618/" title="Ignore">Ignore</a> ]</span>
+	
+	&nbsp;&nbsp;<span class="smallLinks">[ <a name="1474" href="http://www.getontracks.org/forums/viewreply/1474/" title="Permalink to this post"># 15</a> ]</span>
+
+	&nbsp;
+	</td>
+	</tr>
+	</table>
+
+   </td>
+  </tr>
+<tr>
+ <td class="tableCellOne" style="width:130px;" valign="top">
+	<div class="rankMember">Newbie</div>
+	
+	<div class="itempad"><img src="http://www.getontracks.org/themes/forum_themes/blue/images/rank.gif" alt="Rank" class="rankImage" /></div>
+	<div class="userBlock">Total Posts:&nbsp; 13</div>
+	<div class="userBlock">Joined&nbsp; 2009-06-10</div>
+</td>
+<td class="tableCellOne" valign="top" colspan="2"><div class="post"><p>Ok, I put a support request in with Dreamhost and they got back to me:</p>
+
+<blockquote><p>The problem you&#8217;re running into here is related to our site statistics<br />
+page we keep and make available for all domains. You usually access this<br />
+by browsing to /stats on the domain. This is causing a routing error with<br />
+your rails application.</p>
+
+<p>failed_auth.html is the file it attempts to load when you fail the<br />
+authentication for the /stats page. Unfortunately, our system isn&#8217;t set<br />
+up to allow you ignore this by default. You might be able to set up some<br />
+kind of custom htaccess rules to get around this, but we can&#8217;t support<br />
+those. Sorry about that! You might try seeing if you can map the /stats<br />
+action or controller to a different route so you can access it.</p>
+</blockquote>
+
+<p>So, it seems it&#8217;s not a permissions thing. The solution that comes to mind is to make the Tracks stats output to /statistics or whatever, but I have no idea how difficult that would be to accomplish. I know nothing about the custom .htaccess rules the tech suggests. Perhaps someone could tell me how to do either of those, or maybe there&#8217;s a better solution?</p>
+
+<p>Once we figure this out, I (or someone) should update the Dreamhost entry on the wiki.</p></div>
+	
+	
+	
+</td>
+
+</tr><tr>
+
+<td class="tableCellTwo"  style="width:130px;">
+	<table cellpadding="0" cellspacing="0" border="0" width="100%">
+	<tr>
+	<td align="center"><div class="button"><div class="buttonSmall" id="p1" onclick="navJump('http://www.getontracks.org/forums/member/1618/')" onmouseover="navHover(this);" onmouseout="navReset(this);">Profile</div></div></td>
+	
+	
+
+	</tr>
+	</table>
+</td>
+
+<td class="tableCellTwo" colspan="2">
+	<table cellpadding="0" cellspacing="0" border="0">
+	<tr>
+	
+	
+	
+	
+	
+	
+		
+	
+	
+	&nbsp;
+	
+	<td>&nbsp;</td>	
+	</tr>
+	</table>
+  </td>
+ </tr>
+</table>
+
+</td>
+</tr>
+
+</table>
+
+<table cellpadding="0" cellspacing="0" border="0" style="width:100%;">
+<tr>
+<td valign="middle" style="width:70%;">
+
+
+<table cellpadding="0" cellspacing="0" border="0" class="paginateBorder">
+<tr>
+<td><div class="paginateStat">1 of 2</div></td>
+<td><div class="paginateCur">1</div></td><td><div class="paginate"><a href="http://www.getontracks.org/forums/viewthread/427/P15">2</a></div></td><td><div class="paginate"><a href="http://www.getontracks.org/forums/viewthread/427/P15">Next</a></div></td>
+</tr>
+</table>
+
+
+</td>
+&nbsp;
+
+&nbsp;
+
+</tr>
+</table>
+
+&nbsp;
+
+
+<div class="defaultCenter">
+<div class="marginpad">
+
+
+&lsaquo;&lsaquo; <a href="http://www.getontracks.org/forums/viewthread/423/">NoMethodError in Recurring_todos#index</a> 
+
+
+
+&nbsp;&nbsp;&nbsp;&nbsp; <a href="http://www.getontracks.org/forums/viewthread/430/">Printing tasks</a> &rsaquo;&rsaquo;
+
+
+</div>
+</div>
+</div>
+<div id="footer">
+
+	
+	<div id="switcher">Select A Theme 
+		<select name="theme_switcher" class="select" onchange="if (this.value != '') location.href=this.value">
+			<option value="http://www.getontracks.org/?ACT=42&amp;board_id=1&amp;theme=grey">Grey</option>
+<option value="http://www.getontracks.org/?ACT=42&amp;board_id=1&amp;theme=developer">Developer</option>
+<option value="http://www.getontracks.org/?ACT=42&amp;board_id=1&amp;theme=shares">Shares</option>
+<option value="http://www.getontracks.org/?ACT=42&amp;board_id=1&amp;theme=blue" selected="selected">Blue</option>
+<option value="http://www.getontracks.org/?ACT=42&amp;board_id=1&amp;theme=default">Default</option>
+
+		</select>
+	</div><!--switcher-->
+	
+
+	<ul class="credits">
+		<li>Powered By <a href="http://expressionengine.com/">ExpressionEngine</a></li>
+		<li>Template Design By <a href="http://artificialmemory.com/" title="Nathaniel Davis">Artificial Memory</a></li>
+        </ul>
+        <ul class="stats">
+		<li>ExpressionEngine Discussion Forum - version 3.1.5 (20110630)</li>
+		<li>Script Executed in 0.2063 seconds</li>
+	</ul>
+	
+	
+	<ul class="feeds">
+		<li><a href="http://www.getontracks.org/forums/rss/11/"><img src="http://www.getontracks.org/themes/forum_themes/blue/images/feed_rss.jpg" alt="RSS 2.0" title="RSS 2.0" /></a></li>
+		<li><a href="http://www.getontracks.org/forums/atom/11/"><img src="http://www.getontracks.org/themes/forum_themes/blue/images/feed_atom.jpg" alt="Atom Feed" title="Atom Feed" /></a></li>
+	</ul>
+	
+
+</div><!--footer-->
+</div><!--wrapper-->
+</body>
+</html>

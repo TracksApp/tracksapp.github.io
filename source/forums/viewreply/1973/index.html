@@ -1,0 +1,1813 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<title>Tracks | Error when changing context of a recurring task</title>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<meta name='MSSmartTagsPreventParsing' content='TRUE' />
+<meta http-equiv='expires' content='-1' />
+<meta http-equiv= 'pragma' content='no-cache' />
+<meta name='robots' content='all' />
+
+<link rel="alternate" type="application/atom+xml" title="Atom Feed" href="http://www.getontracks.org/forums/atom/11/" />
+<link rel="alternate" type="application/rss+xml" title="RSS 2.0" href="http://www.getontracks.org/forums/rss/11/" />
+
+<script type="text/javascript"> 
+<!--
+
+function navHover(which)
+{					
+	if (document.getElementById(which.id))
+	{
+		cur = document.getElementById(which.id).className;
+		
+		if (cur == 'buttonLarge')
+		{
+			document.getElementById(which.id).className = 'buttonLargeHover'
+		}
+		else if (cur == 'buttonSmall')
+		{
+			document.getElementById(which.id).className = 'buttonSmallHover'
+		}
+	}
+}
+
+function navReset(which)
+{					
+	if (document.getElementById(which.id))
+	{
+		cur = document.getElementById(which.id).className;
+		
+		if (cur == 'buttonLargeHover')
+		{
+			document.getElementById(which.id).className = 'buttonLarge'
+		}
+		else if (cur == 'buttonSmallHover')
+		{
+			document.getElementById(which.id).className = 'buttonSmall'
+		}
+	}
+}
+
+
+function navJump(where)
+{
+	window.location=where;
+}
+-->
+</script>
+
+
+<style type='text/css'>
+
+
+* {
+	margin: 0;
+	padding: 0;
+	}
+body {
+	font: 78% Helvetica, Arial, sans-serif;
+	text-align: center;
+	color: #036;
+	background: #344;
+    line-height:1.4em;
+	}
+#wrapper {
+	text-align: left;
+	min-width: 760px;
+	margin: .5em 2em;
+	color: #fff;
+	background: #036 url(http://www.getontracks.org/themes/forum_themes/blue/images/background.gif) 50% 0% repeat-y;
+	border: 6px solid #233;
+	}
+#content {
+	padding: .5em 1.5% 0 1.5%;
+	border-right: 3px solid #047;
+	border-left: 3px solid #047;
+	}
+#content ul {
+	list-style: none;
+	line-height: 1.5em;
+	margin: .25em 0;
+}
+p {
+	margin: 0 10px;
+	line-height:1.4em;
+	}
+a:link {
+	color: #adf;
+	border: none;
+    }
+a:visited {
+	color: #ccc;
+	}
+a:hover, a:active {
+	text-decoration: none;
+	}
+#topbar a, #footer a, #subhead a {
+	text-decoration: none;
+	padding: .25em .5em;
+	}
+#topbar a:hover, #footer a:hover, #subhead a:hover {
+	background: #047;
+	}
+h1, h2, h3, h4, h5, h6 {
+	font-weight: bold;
+	}
+h2 {
+	font-size: 2em;
+	}
+hr.clear {
+	clear: both;
+	margin: 0;
+	padding: 0;
+	visibility: hidden;
+	border: none;
+	}
+img {
+	border: none;
+	}
+#address_book, #address_book td, #emoticons
+	{
+		background: #3cf;
+	}
+#emoticons a, #address_book a
+	{
+		color: #00f;
+		padding: 3px;
+	}
+div#topbar {
+	padding: .5em 1.5%;
+	border-top: 3px solid #047;
+	border-right: 3px solid #047;
+	border-left: 3px solid #047;
+	background: #025 url(http://www.getontracks.org/themes/forum_themes/blue/images/background-dk.gif) 50% 0% repeat-y;
+	}
+#topbar ul {
+	float: left;
+	display: inline;
+	text-align: left;
+	list-style: none;
+	line-height: 1em;
+	font-size: 1em;
+	display: inline;
+	}
+#topbar ul li {
+	display: inline;
+	margin-right: .5em;
+	}
+#topbar form {	
+	text-align: right;
+	}
+#topbar form fieldset {
+	padding-bottom: .5em;
+	}
+#topbar form input {
+	margin: 0 .25em;
+	}
+#topbar form div {
+	display: none;
+	}
+#header {  
+	clear: both;
+	padding: .5em 1.5% 0 1.5%;
+	border-right: 3px solid #047;
+	border-bottom: 1px solid #047;
+	border-left: 3px solid #047;
+	background: #025 url(http://www.getontracks.org/themes/forum_themes/blue/images/background-dk.gif) 50% 0% repeat-y;
+	}
+#header h1 {
+	float: left;
+ 	display: inline;
+ 	text-transform: uppercase;
+	font-weight: normal;
+	font-size: 2.5em;
+	line-height: 1em;
+	}
+#header h1 a {
+	color: #69c;
+	text-decoration: none;
+	}
+#header h1 a:hover {
+	color:#adf;			
+    }
+#header form {
+	text-align: right;
+	padding: .25em;
+	}
+#header form input {
+	width: 8em;
+	}
+#header form .submit {
+	width: 5em;
+	margin: 0 .5em;
+	}
+#header form div {
+	display: none;
+	}
+#subhead {  
+	clear: both;
+	padding: .5em 1.5%;
+	border-right: 3px solid #047;
+	border-left: 3px solid #047;	
+	background: #025 url(http://www.getontracks.org/themes/forum_themes/blue/images/background-dk.gif) 50% 0% repeat-y;
+	}
+div.breadcrumb {
+	display: inline;
+	}
+.currentcrumb {
+	font-weight: bold;
+	}
+ul.forumnav {
+	list-style: none;
+	margin-bottom: 1em;
+	}
+ul.forumnav li {
+	display: inline;
+	margin-right: 1em;
+	}
+ul.forumnav li a {
+	padding: .25em .5em;
+	text-decoration: none;
+	}
+ul.forumnav li a:hover {
+	background: #025;
+	}
+#footer {
+	clear: both;
+	padding: 1.5%;
+	text-align: center;
+	font-size: .9em;
+	color: #69c;
+	border-top: 1px solid #047;
+	border-right: 3px solid #047;
+	border-bottom: 3px solid #047;
+	border-left: 3px solid #047;
+	background: #025 url(http://www.getontracks.org/themes/forum_themes/blue/images/background-dk.gif) 50% 0% repeat-y;
+	}
+#footer a {
+	font-weight: bold;
+	}
+#footer ul {
+	list-style: none;
+	line-height: 1.5em;
+	margin: .25em 0;
+	}
+#footer ul li {
+	display: inline;
+	padding: .5em;
+	}
+#footer select {
+	margin: .5em;
+	}
+.forumName {
+	letter-spacing:    .1em;
+	}
+.forumDescription {
+	padding:           3px 0 0 0;
+	}
+.forumLightLinks {
+	padding:           4px 0 2px 0;
+	}
+.topicTitle {
+	letter-spacing:    .1em;
+	}
+.userBlock {
+	padding:	2px 0 2px 0;
+	}
+.spacer {
+	height: .5em;
+	margin-bottom: 1em;
+	}
+.itempad {
+	padding: 2px 0 2px 0;
+	}
+.itempadbig {
+	padding: 5px 0 5px 0;
+	}
+.bottompad {
+	padding: 0 0 2px 0;
+	}
+.marginpad {
+	margin: 12px 0 10px 3px;
+	}
+.leftpad {
+ 	padding: 0 0 0 4px;
+	}
+table {
+	border-collapse: collapse;
+	}
+.legend {
+	margin-top: 1em;
+	padding: .5em 0;
+	background: #036;
+	}
+.tableBorder {
+	padding: 0;
+	margin-top: 1px;
+	margin-bottom: 3px;
+	}
+.tablePad {
+	padding:  0 2px 4px 2px;
+	}
+.tableHeading {
+	letter-spacing: .1em;
+	font-size: 1.1em;
+	font-weight: bold;
+	text-transform: uppercase;
+	color: #69c;
+	white-space: nowrap;
+	margin: 1em 0 0 0;
+	}
+.tableHeadingSmall {
+	font-size: .9em;
+	color: #69c;
+	white-space: nowrap;
+	margin: 0 0 .5em 0;
+	}
+.tableHeadingBG {
+	background: #036;
+	border-top: 1px solid #025;
+	font-size: 1em;
+	padding: 1em .5em 0 .5em;
+	}
+.tableRowHeading, .tableRowHeadingBold {
+	padding: .25em .5em;
+	border-bottom: 1px solid #025;
+	background: #047;
+	color: #69c;
+	font-size: .8em;
+	text-transform: uppercase;
+	letter-spacing: .2em;
+	}
+.tableRowSpacer {
+	}
+.threadBorder {
+	border: 1px solid #025;
+	margin: 1em 0;
+	padding: .25em 0;
+	}
+.tableCellOne {
+	padding:           3px 6px 3px 6px;
+	}
+.tableCellTwo {
+	padding:           3px 6px 3px 6px;
+	}
+.tablePostInfo {
+	margin-bottom: .75em;
+	}
+.ignored {
+	border: 1px solid #69c;
+	padding: 0;
+	margin-top: 1px;
+	margin-bottom: 3px;
+	}
+.button {
+	width: 80px;
+	background-color: transparent;
+	}
+.button40 {
+	width: 40px;
+	background-color: transparent;
+	}
+.button80 {
+	width: 80px;
+	background-color: transparent;
+	}
+.button100 {
+	width: 100px;
+	background-color: transparent;
+	}
+.button150 {
+	width: 150px;
+	background-color: transparent;
+	}
+.button210 {
+	width: 210px;
+	background-color: transparent;
+	}
+.buttonSpacer{
+	margin:	0 0 0 6px;
+	}
+.buttonLarge {
+	background: #025 url(http://www.getontracks.org/themes/forum_themes/blue/images/background-dk.gif) 50% 50% repeat-y;
+	border: 1px solid #69c;
+	text-transform: uppercase;
+	text-align: center;
+	color: #fff;
+	font-weight: bold;
+	padding: 2px 4px 2px 4px;
+	margin: .25em 0 .25em 0;
+	white-space: nowrap;
+	cursor: pointer;
+	}
+.buttonLargeHover {
+	background: #047 url(http://www.getontracks.org/themes/forum_themes/blue/images/background-lt.gif) 50% 50% repeat-y;
+	border: 1px solid #69c;
+	text-transform: uppercase;
+	text-align: center;
+	color: #fff;
+	font-weight: bold;
+	padding: 2px 4px 2px 4px;
+	margin: .25em 0 .25em 0;
+	white-space: nowrap;
+	cursor: pointer;
+	}
+.buttonSmall {
+	border: 1px solid #69c;
+	font-size: .9em;
+	text-transform: uppercase;
+	text-align:	center;
+	color: #69c;
+	padding: 0px 1px 0px 1px;
+	margin: 0 2px 0 2px;
+	white-space: nowrap;
+	cursor: pointer;
+	}
+.buttonSmallHover {
+	background: #047 url(http://www.getontracks.org/themes/forum_themes/blue/images/background-lt.gif) 50% 50% repeat-y;
+	border: 1px solid #69c;
+	font-size: .9em;
+	text-transform: uppercase;
+	text-align:	center;
+	color: #fff;
+	padding: 0px 1px 0px 1px;
+	margin: 0 2px 0 2px;
+	white-space: nowrap;
+	cursor: pointer;
+	}
+.rankAdmin, .rankModerator, .rankMember {
+	font-weight: bold;
+	color: #69c;
+	padding: 2px 0 3px 0;
+	}
+.rankImage {
+	margin: 0;
+	padding: 0;
+	border:  0;
+	}
+.userBlock {
+	color: #69c;
+	}
+.post {
+	margin: 1em 0;
+	line-height: 1.5em;
+	}
+.edited {
+	font-size:		9px;
+	color:			#69c;
+}
+code {
+	white-space: normal;
+	}
+pre {
+	background: #def;
+	border: 1px solid #69c;
+	color: #69c;
+	margin: 8px 2px 10px 6px;
+	padding: 10px 10px 10px 6px;
+	white-space: normal;
+	}
+.codeblock {
+	background: #def;
+	border: 1px solid #69c;
+	color: #69c;
+	margin: 8px 4px 10px 3px;
+	padding: 10px 10px 10px 6px;
+	}
+blockquote {
+	background: #036;
+	border:	1px solid #69c;
+	color: #69c;
+	margin: 8px 2px 10px 6px;
+	padding: 5px 10px 10px 6px;
+	}
+.quote_author {
+	font-weight: bold;
+	color: #69c;
+	margin:	0 0 4px 0;
+	background-color: transparent;
+	}
+.signature {
+	margin: 1em .5em .5em .5em;
+	padding: .25em;
+	border: 1px solid #69c;
+	}
+.signatureTitle {
+	color: #69c;
+	}
+.buttonMode {
+	white-space: 		nowrap;
+	}
+.htmlButtonOuter, .htmlButtonOuterL {
+	padding:           0;
+	border-top:        #025 1px solid;
+	border-right:      #025 1px solid;
+	border-bottom:     #025 1px solid;
+	}
+.htmlButtonOuterL  {
+	border-left:       #025 1px solid;
+	}
+.htmlButtonInner {
+	background-color:  transparent; 
+	text-align:		center;
+	padding:			0 3px 0 3px;
+	}
+.htmlButtonOff {
+	padding:           1px 2px 2px 2px;
+	white-space:       nowrap;
+	}
+.htmlButtonOff a:link { 
+	color:             #69c;
+	text-decoration:   none;
+	white-space:       nowrap;
+	}
+.htmlButtonOff  a:visited { 
+	text-decoration:   none;
+	}
+.htmlButtonOff a:active { 
+	text-decoration:   none;
+	color:             #fff;
+	}
+.htmlButtonOff a:hover { 
+	text-decoration:   none;
+	background:        #047;
+	color:             #fff;
+	}
+.htmlButtonOn {
+	background:        #047;
+	padding:           1px 2px 2px 2px;
+	white-space:       nowrap;
+	}
+.htmlButtonOn a:link { 
+	color:             #990000;
+	text-decoration:   none;
+	white-space:       nowrap;
+	}
+.htmlButtonOn  a:visited { 
+	text-decoration:   none;
+	}
+.htmlButtonOn a:active { 
+	text-decoration:   none;
+	color:             #999;
+	}
+.htmlButtonOn a:hover { 
+	color:             #999;
+	text-decoration:   none;
+	}
+.attachTitle {
+	font-weight:		bold;
+	color:             #fff;
+	padding:           4px;
+	margin:			10px 0 1px 0;
+	}
+.attachBody {
+	padding:           4px;
+	margin-bottom:		10px;
+	}
+.attachThumb {
+	margin: 3px 6px 3px 3px;
+	border: 1px solid 	#025;
+	}
+.preview {
+	padding:           10px;
+	margin:			0 0 12px 0;
+	border:       		1px solid #025;
+	}
+.previewheading {
+	font-weight:		bold;
+	color: #69c;
+	text-transform: uppercase;
+	padding:           5px 0 5px 10px;
+	border-top:     	1px solid #025;
+	border-right:     	1px solid #025;
+	border-left:     	1px solid #025;
+	}
+.activeModerator {
+	font-weight: bold;
+	}
+form {
+	margin:            0;
+	padding:           0;
+	border:            0;
+	}
+fieldset {
+	border: none;
+	}
+.hidden {
+	margin:            0;
+	padding:           0;
+	border:            0;
+	}
+.input {
+	border:        1px solid #69c;
+	color:             #69c;
+	height:            1.5em;
+	padding:           0;
+	margin:        	0;
+	}
+.textarea {
+	border:        1px solid #69c;
+	color:             #333;
+	font-size:         11px;
+	padding:           0;
+	margin:        	0;
+	}
+.select {
+	background-color:  #fff;
+	font-weight:       normal;
+	letter-spacing:    .1em;
+	color:             #333;
+	margin-top:        2px;
+	margin-bottom:     2px;
+	}
+.multiselect {
+	border:        1px solid #69c;
+	background-color:  #fff;
+	color:             #333;
+	font-size:         11px;
+	margin-top:        2px;
+	margin-top:        2px;
+	}
+.radio {
+	background-color:  transparent;
+	margin-top:        4px;
+	margin-bottom:     4px;
+	padding:           0;
+	border:            0;
+	}
+.checkbox {
+	background-color:  transparent;
+	padding:           0;
+	border:            0;
+	}
+.buttons {
+	font-weight:       bold;
+	border:        1px solid #69c;
+	letter-spacing:    .1em;
+	margin:        	0;
+	padding:			1px 6px 3px 6px;
+	color:             #69c;
+	background: #025;
+	cursor: pointer;
+	}
+.submit {
+	font-weight:       normal;
+	border:        1px solid #69c;
+	letter-spacing:    .1em;
+	margin:        	0;
+	padding:			1px 4px 1px 4px;
+	color:             #69c;
+	background: #025;
+	cursor: pointer;
+	}
+.errorHeading {
+	background: 		#025;
+	color:             #fff;
+	padding:           6px 6px 6px 6px;
+	border-bottom:     1px solid #fff;
+	letter-spacing:    .1em;
+	font-weight:		bold;
+	}
+.errorMessage {
+	color:             #f00;
+	padding:           10px 0 10px 0;
+	}
+.errorBox {
+	color: #f00;
+	padding: 10px;
+	margin: 0 0 12px 0;
+	border: 1px solid #f00;
+	background: #fcc;
+	}
+.alert {
+	color:             #f00;
+	font-weight:		bold;
+	}
+.highlight {
+	color:             #f00;
+	}
+.profileTitle {
+	font-size: 1.5em;
+	font-weight: bold;
+	margin: .5em 0;
+	}
+.memberlistHead {
+	padding: .25em .5em;
+	border-bottom: 1px solid #025;
+ 	background: #047;
+	color: #69c;
+	font-size: .8em;
+	text-transform: uppercase;
+	}
+.memberlistRowOne {
+	padding: .5em;
+	background: #047;
+	}
+.memberlistRowTwo {
+	padding: .5em;
+	}
+.memberlistFooter {
+	padding: 1em .5em;
+	}
+.profileHeadingBG {
+	background: #036;
+	padding:           6px 6px 6px 6px;
+	border-bottom:     #025 1px solid;
+	}
+.profileTopBox {
+	margin:		0;
+	padding:		7px 5px 5px 5px;
+	}
+.profileTitle {
+	font-weight:		bold;
+	padding: 			3px 5px 3px 0;
+	margin:			0;
+	background-color: transparent;  
+	}
+.profileItem {
+	background:		transparent;
+	margin: 			2px 0 2px 0;
+	background-color: transparent;  
+	}
+.profilePhoto {
+	padding:			1px 1px 1px 20px;
+	margin-top:        1px;
+	margin-bottom:     3px;
+	}
+.avatar {
+	background:	transparent;
+	margin:		3px 14px 0 3px;
+	}
+.photo {
+	background:	transparent;
+	margin:		6px 14px 0 3px;
+	}
+.profileHead {
+	font-weight:		bold;
+	text-transform:	uppercase;
+	padding:			3px 4px 3px 10px;  
+	margin:			0 0 0 0;
+	}
+.menuHeadingBG {
+	background: #036;
+	padding:           6px 6px 6px 6px;
+	}
+.profileMenu {
+	background: 		#036;
+	border:            1px solid #025;
+	padding:			1px;
+	margin-top:        1px;
+	margin-bottom:     3px;
+	}
+.profileMenuInner {
+	padding-left:		10px;
+	padding-right:		8px;
+	margin-bottom:		4px;
+	margin-top:		4px;
+	}
+.menuItem {
+	padding:			3px 0 3px 0;
+	background-color:	transparent;  
+	}
+.borderTopBot {
+	border-top:	1px solid #025;
+	border-bottom:	1px solid #025;
+	}
+.borderBot {
+	border-bottom:	1px solid #025;
+	}
+.success {
+	font-weight:		bold;
+	padding:			3px 0 3px 0;
+	background-color:	transparent; 
+	}
+.innerShade {
+	background-color:	#036;
+	margin:			0;
+	padding:			10px;
+	}
+.searchBox {
+	background: transparent;
+	margin: 16px 0 0 0;
+	padding: 8px 5px 5px 5px;
+	}
+.searchBoxTitle {
+	font-weight: bold;
+	background-color: transparent;  
+	}
+.searchpad {
+	padding: 6px 0 8px 0;
+	}
+.searchspacer {
+	margin-bottom: 6px;
+	}
+.iframe {
+	border:1px solid #025;
+	background: #def;
+	color: #036;
+	}
+.wordSuggestion {
+	border: 1px solid #036; 
+	padding: 4px; 
+	background: #def;
+	color: #036;
+	}
+.wordSuggestion a, .wordSuggestion a:active {
+	color: #036;
+	cursor: pointer;
+	}
+.spellchecked_word {
+	cursor: pointer;
+	background-color: #def;
+	color:#036;
+	border-bottom: 1px dashed #036;
+	}
+.spellchecked_word_selected {
+	cursor: pointer;
+	background-color: #69c;
+	}
+</style>
+
+</head>
+
+<body >
+<div id="wrapper">
+<div id='topbar'>
+	<ul>
+		
+		<li class="welcome">Welcome Guest</li>
+		<li><a href="http://www.getontracks.org/forums/member/login/">Login</a></li>
+		<li>REGISTRATION CLOSED: please use <a href="http://lists.rousette.org.uk/mailman/listinfo/tracks-discuss">mailing list</a></li>
+		
+		
+	</ul>
+     
+     <form method="post" action="http://www.getontracks.org/"  >
+<div class='hiddenFields'>
+<input type="hidden" name="XID" value="21d712b6cd7f060f559796f6a26e8501558c2e5a" />
+<input type="hidden" name="ACT" value="9" />
+<input type="hidden" name="FROM" value="forum" />
+<input type="hidden" name="mbase" value="http://www.getontracks.org/forums/member/" />
+<input type="hidden" name="board_id" value="1" />
+<input type="hidden" name="anon" value="1" />
+<input type="hidden" name="RET" value="http://www.getontracks.org/forums/viewthread/549/" />
+<input type="hidden" name="site_id" value="1" />
+</div>
+
+
+	<fieldset>	
+		<label class="field-username">Username<input type="text" class="textbox" name="username" value="" /></label>
+		<label class="field-password">Password<input type="password" class="textbox" name="password" /></label>
+		<input type="submit" class="submit" value="Login" />
+	</fieldset>	
+	<fieldset>
+		<label class="field-remember">Remember Me?<input type="checkbox" class="checkbox" name="auto_login" value="1" checked="checked" /></label>
+		<a href="http://www.getontracks.org/forums/member/forgot_password/">forgot password?</a>
+	</fieldset> 
+</form>
+     
+<hr class="clear" />
+</div><!--topbar-->
+<div id='header'>
+     <h1><a href="http://www.getontracks.org/forums/" title="Tracks">Tracks</a></h1>
+     <form method="post" action="http://www.getontracks.org/forums/do_search/"  >
+<div class='hiddenFields'>
+<input type="hidden" name="XID" value="933b47dbe8da1ce458a3045f43e8e67520cf30e3" />
+<input type="hidden" name="board_id" value="1" />
+<input type="hidden" name="site_id" value="1" />
+</div>
+
+
+
+<label class="searchbox"><input type="text" class="input" name="keywords" value="Search" maxlength="80" /></label>
+<input type="submit" class="submit" value="Search" />
+<a href="http://www.getontracks.org/forums/search/">Advanced Search</a>
+
+</form>
+    <hr class="clear" />
+</div><!--header-->
+<div id="subhead">
+		<div class="breadcrumb"><a href="http://www.getontracks.org/forums/">Forum Home</a><span class="breadcrumbspacer"> &gt; </span><a href="http://www.getontracks.org/forums/viewcategory/4/">Usage</a><span class="breadcrumbspacer"> &gt; </span><a href="http://www.getontracks.org/forums/viewforum/11/">Troubleshooting</a><span class="breadcrumbspacer"> &gt; </span><span class="currentcrumb">Thread</span></div>
+<hr class="clear" />
+</div><!--subhead-->
+<div id="content">
+<script type="text/javascript">
+<!--
+
+function showimage(loc, width, height)
+{
+	window.open(loc,'Image','width='+width+',height='+height+',screenX=0,screenY=0,top=0,left=0,toolbar=0,status=0,scrollbars=0,location=0,menubar=1,resizable=1');
+	return false;
+}
+
+function showfastreply()
+{
+    if (document.getElementById('fastreply').style.display == "block")
+    {
+        document.getElementById('fastreply').style.display = "none";
+    }
+    else
+    {
+        document.getElementById('fastreply').style.display = "block";
+    }
+}
+
+function showHideRow(el)
+{
+    if (document.getElementById(el).style.display == "")
+    {
+        document.getElementById(el).style.display = "none";
+    }
+    else
+    {
+        document.getElementById(el).style.display = "";
+    }	
+}
+//-->
+</script>
+
+<table cellpadding="0" cellspacing="0" border="0" style="width:100%;">
+<tr>
+<td valign="middle" style="width:80%;">
+&nbsp;
+</td>
+&nbsp;
+
+&nbsp;
+
+</tr>
+</table>
+
+
+
+<table cellpadding="0" cellspacing="0" border="0" style="width:100%;" >
+<tr>
+<td class="tableHeadingBG" colspan="2"><div class="tableHeading">Error when changing context of a recurring task</div></td>
+<td class="tableHeadingBG" colspan="1" align="right"><div class="altLinks">&nbsp;</div></td>
+
+</tr>
+
+
+
+<tr id="a9" >
+ <td colspan="3">
+
+
+ <table class="threadBorder" cellpadding="0" cellspacing="0" border="0" style="width:100%;">
+  <tr>
+   <td class="tableRowHeadingBold" style="width:130px;"><div class="largeLinks"><a href="http://www.getontracks.org/forums/member/10217/">benvdh</a></div></td>
+   <td class="tableRowHeading">
+
+	<table cellpadding="0" cellspacing="0" border="0" style="width:99%;">
+	<tr>
+	<td>Posted: 13 April 2010 11:03 AM</td>
+	<td align="right">
+	
+		
+	
+	    
+	
+	
+
+	
+	
+	&nbsp;&nbsp;<span class="smallLinks">[ <a href="http://www.getontracks.org/forums/ignore_member/10217/" title="Ignore">Ignore</a> ]</span>
+	
+	
+
+	&nbsp;
+	</td>
+	</tr>
+	</table>
+
+   </td>
+  </tr>
+<tr>
+ <td class="tableCellOne" style="width:130px;" valign="top">
+	<div class="rankMember">Newbie</div>
+	
+	<div class="itempad"><img src="http://www.getontracks.org/themes/forum_themes/blue/images/rank.gif" alt="Rank" class="rankImage" /></div>
+	<div class="userBlock">Total Posts:&nbsp; 5</div>
+	<div class="userBlock">Joined&nbsp; 2010-04-13</div>
+</td>
+<td class="tableCellOne" valign="top" colspan="2"><div class="post"><p>Hey,</p>
+
+<p>This morning I installed the latest git version of tracks on my laptop. It seemed to work quite stable, untill I accidentally changed the context of a recurring task. Suddenly tracks stopped working and on login it now displays the error and full trace that is attached. Since I ran tracks from a terminal I have also provided the output of the builtin webserver of tracks. </p>
+
+<p>1. I basically have two questions. I know this forum is not a bug tracker, so should I also report this as a bug in the bugtracker ?<br />
+2. Is there an easy way to temporarily work around the problem, so I can use tracks again (for example, change or delete something in the database so that I can use tracks again.</p>
+
+<p>btw. the 2.0 version looks great already. It has a lot of the features I missed in 1.7.</p>
+
+<p>Kind regards,</p>
+
+<p>Ben</p>
+
+<p>ps. If more information is needed please contact me. To view the attachements remove the .png part from the filename and open the zip file. It was necessary to change the filename a little bit else the forum did not allow me to upload the txt files.</p></div>
+	
+	
+	
+
+	<div class="attachTitle">Image Attachments</div>
+	<div class="attachBody"><div class="itempadbig"><img src="http://www.getontracks.org/?ACT=37&amp;fid=11&amp;aid=57_faN9E1jTONUhCTc7nCHJ&amp;board_id=1" width="0"  height="0" border="0" title="terminal_output_as_far_as_possible.txt.zip.png" alt="terminal_output_as_far_as_possible.txt.zip.png" /></div></div>
+
+
+	
+	
+</td>
+
+</tr><tr>
+
+<td class="tableCellTwo"  style="width:130px;">
+	<table cellpadding="0" cellspacing="0" border="0" width="100%">
+	<tr>
+	<td align="center"><div class="button"><div class="buttonSmall" id="a1" onclick="navJump('http://www.getontracks.org/forums/member/10217/')" onmouseover="navHover(this);" onmouseout="navReset(this);">Profile</div></div></td>
+	
+	
+
+	</tr>
+	</table>
+</td>
+
+<td class="tableCellTwo" colspan="2">
+	<table cellpadding="0" cellspacing="0" border="0">
+	<tr>
+	
+	
+	
+	
+		
+		
+				
+	
+	
+	
+	
+	&nbsp;
+	
+	<td>&nbsp;</td>	
+	</tr>
+	</table>
+  </td>
+ </tr>
+</table>
+
+</td>
+</tr>
+
+<tr id="b9" >
+ <td colspan="3">
+
+
+ <table class="threadBorder" cellpadding="0" cellspacing="0" border="0" style="width:100%;">
+  <tr>
+   <td class="tableRowHeadingBold" style="width:130px;"><div class="largeLinks"><a href="http://www.getontracks.org/forums/member/10217/">benvdh</a></div></td>
+   <td class="tableRowHeading">
+
+	<table cellpadding="0" cellspacing="0" border="0" style="width:99%;">
+	<tr>
+	<td>Posted: 13 April 2010 11:27 AM</td>
+	<td align="right">
+	
+		
+	
+	
+
+	
+	
+	&nbsp;&nbsp;<span class="smallLinks">[ <a href="http://www.getontracks.org/forums/ignore_member/10217/" title="Ignore">Ignore</a> ]</span>
+	
+	&nbsp;&nbsp;<span class="smallLinks">[ <a name="1965" href="http://www.getontracks.org/forums/viewreply/1965/" title="Permalink to this post"># 1</a> ]</span>
+
+	&nbsp;
+	</td>
+	</tr>
+	</table>
+
+   </td>
+  </tr>
+<tr>
+ <td class="tableCellOne" style="width:130px;" valign="top">
+	<div class="rankMember">Newbie</div>
+	
+	<div class="itempad"><img src="http://www.getontracks.org/themes/forum_themes/blue/images/rank.gif" alt="Rank" class="rankImage" /></div>
+	<div class="userBlock">Total Posts:&nbsp; 5</div>
+	<div class="userBlock">Joined&nbsp; 2010-04-13</div>
+</td>
+<td class="tableCellOne" valign="top" colspan="2"><div class="post"><p>It seems the attachement is not really the way to go. So here&#8217;s a copy paste from the txt files:</p>
+
+<div class="codeblock"><code><span style="color: #000000">
+<span style="color: #0000BB">NoMethodError&nbsp;in&nbsp;Todos</span><span style="color: #FF8000">#index&nbsp;<br /><br />&nbsp;</span><span style="color: #0000BB">Showing&nbsp;app</span><span style="color: #007700">/</span><span style="color: #0000BB">views</span><span style="color: #007700">/</span><span style="color: #0000BB">todos</span><span style="color: #007700">/</span><span style="color: #0000BB">_todo</span><span style="color: #007700">.</span><span style="color: #0000BB">html</span><span style="color: #007700">.</span><span style="color: #0000BB">erb&nbsp;where&nbsp;line&nbsp;</span><span style="color: #FF8000">#34&nbsp;raised:&nbsp;<br /><br /></span><span style="color: #0000BB">undefined&nbsp;method&nbsp;</span><span style="color: #007700">`</span><span style="color: #DD0000">recurring_target_as_text'&nbsp;for&nbsp;nil:NilClass<br />Extracted&nbsp;source&nbsp;(around&nbsp;line&nbsp;#34):&nbsp;<br />31:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;%=&nbsp;date_span&nbsp;-%&gt;<br />32:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;span&nbsp;class="todo.descr"&gt;&lt;%=&nbsp;h&nbsp;todo.description&nbsp;%&gt;&lt;/span&gt;<br />33:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;%&nbsp;#=&nbsp;successors_span&nbsp;%&gt;<br />34:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;%=&nbsp;image_tag_for_recurring_todo(todo)&nbsp;if&nbsp;@todo.from_recurring_todo?&nbsp;%&gt;<br />35:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;%=&nbsp;tag_list&nbsp;%&gt;<br />36:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;%=&nbsp;deferred_due_date&nbsp;%&gt;<br />37:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;%=&nbsp;project_and_context_links(&nbsp;parent_container_type,&nbsp;:suppress_context&nbsp;=&gt;&nbsp;suppress_context,&nbsp;:suppress_project&nbsp;=&gt;&nbsp;suppress_project&nbsp;)&nbsp;%&gt;<br /><br />Trace&nbsp;of&nbsp;template&nbsp;inclusion:&nbsp;app/views/contexts/_context.rhtml,&nbsp;app/views/todos/index.html.erb<br />RAILS_ROOT:&nbsp;/home/ben/tracks<br />Application&nbsp;Trace&nbsp;|&nbsp;Framework&nbsp;Trace&nbsp;|&nbsp;Full&nbsp;Trace&nbsp;<br />/home/ben/tracks/app/helpers/application_helper.rb:159:in&nbsp;</span><span style="color: #007700">`</span><span style="color: #0000BB">recurrence_pattern_as_text</span><span style="color: #DD0000">'<br />/home/ben/tracks/app/helpers/todos_helper.rb:90:in&nbsp;`image_tag_for_recurring_todo'<br /></span><span style="color: #007700">/</span><span style="color: #0000BB">home</span><span style="color: #007700">/</span><span style="color: #0000BB">ben</span><span style="color: #007700">/</span><span style="color: #0000BB">tracks</span><span style="color: #007700">/</span><span style="color: #0000BB">app</span><span style="color: #007700">/</span><span style="color: #0000BB">views</span><span style="color: #007700">/</span><span style="color: #0000BB">todos</span><span style="color: #007700">/</span><span style="color: #0000BB">_todo</span><span style="color: #007700">.</span><span style="color: #0000BB">html</span><span style="color: #007700">.</span><span style="color: #0000BB">erb</span><span style="color: #007700">:</span><span style="color: #0000BB">34</span><span style="color: #007700">:</span><span style="color: #0000BB">in&nbsp;</span><span style="color: #007700">`</span><span style="color: #DD0000">_run_erb_app47views47todos47_todo46html46erb_locals_object_parent_container_type_todo_todo_counter'<br />/home/ben/tracks/vendor/rails/actionpack/lib/action_view/renderable.rb:34:in&nbsp;</span><span style="color: #007700">`</span><span style="color: #0000BB">send</span><span style="color: #DD0000">'<br />/home/ben/tracks/vendor/rails/actionpack/lib/action_view/renderable.rb:34:in&nbsp;`render'<br /></span><span style="color: #007700">/</span><span style="color: #0000BB">home</span><span style="color: #007700">/</span><span style="color: #0000BB">ben</span><span style="color: #007700">/</span><span style="color: #0000BB">tracks</span><span style="color: #007700">/</span><span style="color: #0000BB">vendor</span><span style="color: #007700">/</span><span style="color: #0000BB">rails</span><span style="color: #007700">/</span><span style="color: #0000BB">actionpack</span><span style="color: #007700">/</span><span style="color: #0000BB">lib</span><span style="color: #007700">/</span><span style="color: #0000BB">action_view</span><span style="color: #007700">/</span><span style="color: #0000BB">base</span><span style="color: #007700">.</span><span style="color: #0000BB">rb</span><span style="color: #007700">:</span><span style="color: #0000BB">306</span><span style="color: #007700">:</span><span style="color: #0000BB">in&nbsp;</span><span style="color: #007700">`</span><span style="color: #DD0000">with_template'<br />/home/ben/tracks/vendor/rails/actionpack/lib/action_view/renderable.rb:30:in&nbsp;</span><span style="color: #007700">`</span><span style="color: #0000BB">render</span><span style="color: #DD0000">'<br />/home/ben/tracks/vendor/rails/actionpack/lib/action_view/renderable_partial.rb:20:in&nbsp;`render'<br /></span><span style="color: #007700">/</span><span style="color: #0000BB">home</span><span style="color: #007700">/</span><span style="color: #0000BB">ben</span><span style="color: #007700">/</span><span style="color: #0000BB">tracks</span><span style="color: #007700">/</span><span style="color: #0000BB">vendor</span><span style="color: #007700">/</span><span style="color: #0000BB">rails</span><span style="color: #007700">/</span><span style="color: #0000BB">actionpack</span><span style="color: #007700">/</span><span style="color: #0000BB">lib</span><span style="color: #007700">/</span><span style="color: #0000BB">action_controller</span><span style="color: #007700">/</span><span style="color: #0000BB">benchmarking</span><span style="color: #007700">.</span><span style="color: #0000BB">rb</span><span style="color: #007700">:</span><span style="color: #0000BB">30</span><span style="color: #007700">:</span><span style="color: #0000BB">in&nbsp;</span><span style="color: #007700">`</span><span style="color: #DD0000">benchmark'<br />/home/ben/tracks/vendor/rails/actionpack/lib/action_view/renderable_partial.rb:19:in&nbsp;</span><span style="color: #007700">`</span><span style="color: #0000BB">render</span><span style="color: #DD0000">'<br />/home/ben/tracks/vendor/rails/actionpack/lib/action_view/template.rb:205:in&nbsp;`render_template'<br /></span><span style="color: #007700">/</span><span style="color: #0000BB">home</span><span style="color: #007700">/</span><span style="color: #0000BB">ben</span><span style="color: #007700">/</span><span style="color: #0000BB">tracks</span><span style="color: #007700">/</span><span style="color: #0000BB">vendor</span><span style="color: #007700">/</span><span style="color: #0000BB">rails</span><span style="color: #007700">/</span><span style="color: #0000BB">actionpack</span><span style="color: #007700">/</span><span style="color: #0000BB">lib</span><span style="color: #007700">/</span><span style="color: #0000BB">action_view</span><span style="color: #007700">/</span><span style="color: #0000BB">renderable_partial</span><span style="color: #007700">.</span><span style="color: #0000BB">rb</span><span style="color: #007700">:</span><span style="color: #0000BB">44</span><span style="color: #007700">:</span><span style="color: #0000BB">in&nbsp;</span><span style="color: #007700">`</span><span style="color: #DD0000">render_partial'<br />/home/ben/tracks/vendor/rails/actionpack/lib/action_view/partials.rb:221:in&nbsp;</span><span style="color: #007700">`</span><span style="color: #0000BB">render_partial_collection</span><span style="color: #DD0000">'<br />/home/ben/tracks/vendor/rails/actionpack/lib/action_view/partials.rb:216:in&nbsp;`map'<br /></span><span style="color: #007700">/</span><span style="color: #0000BB">home</span><span style="color: #007700">/</span><span style="color: #0000BB">ben</span><span style="color: #007700">/</span><span style="color: #0000BB">tracks</span><span style="color: #007700">/</span><span style="color: #0000BB">vendor</span><span style="color: #007700">/</span><span style="color: #0000BB">rails</span><span style="color: #007700">/</span><span style="color: #0000BB">actionpack</span><span style="color: #007700">/</span><span style="color: #0000BB">lib</span><span style="color: #007700">/</span><span style="color: #0000BB">action_view</span><span style="color: #007700">/</span><span style="color: #0000BB">partials</span><span style="color: #007700">.</span><span style="color: #0000BB">rb</span><span style="color: #007700">:</span><span style="color: #0000BB">216</span><span style="color: #007700">:</span><span style="color: #0000BB">in&nbsp;</span><span style="color: #007700">`</span><span style="color: #DD0000">render_partial_collection'<br />/home/ben/tracks/vendor/rails/actionpack/lib/action_view/partials.rb:182:in&nbsp;</span><span style="color: #007700">`</span><span style="color: #0000BB">render_partial</span><span style="color: #DD0000">'<br />/home/ben/tracks/vendor/rails/actionpack/lib/action_view/base.rb:267:in&nbsp;`render'<br /></span><span style="color: #007700">/</span><span style="color: #0000BB">home</span><span style="color: #007700">/</span><span style="color: #0000BB">ben</span><span style="color: #007700">/</span><span style="color: #0000BB">tracks</span><span style="color: #007700">/</span><span style="color: #0000BB">app</span><span style="color: #007700">/</span><span style="color: #0000BB">views</span><span style="color: #007700">/</span><span style="color: #0000BB">contexts</span><span style="color: #007700">/</span><span style="color: #0000BB">_context</span><span style="color: #007700">.</span><span style="color: #0000BB">rhtml</span><span style="color: #007700">:</span><span style="color: #0000BB">17</span><span style="color: #007700">:</span><span style="color: #0000BB">in&nbsp;</span><span style="color: #007700">`</span><span style="color: #DD0000">_run_rhtml_app47views47contexts47_context46rhtml_locals_collapsible_context_context_counter_object'<br />/home/ben/tracks/vendor/rails/actionpack/lib/action_view/renderable.rb:34:in&nbsp;</span><span style="color: #007700">`</span><span style="color: #0000BB">send</span><span style="color: #DD0000">'<br />/home/ben/tracks/vendor/rails/actionpack/lib/action_view/renderable.rb:34:in&nbsp;`render'<br /></span><span style="color: #007700">/</span><span style="color: #0000BB">home</span><span style="color: #007700">/</span><span style="color: #0000BB">ben</span><span style="color: #007700">/</span><span style="color: #0000BB">tracks</span><span style="color: #007700">/</span><span style="color: #0000BB">vendor</span><span style="color: #007700">/</span><span style="color: #0000BB">rails</span><span style="color: #007700">/</span><span style="color: #0000BB">actionpack</span><span style="color: #007700">/</span><span style="color: #0000BB">lib</span><span style="color: #007700">/</span><span style="color: #0000BB">action_view</span><span style="color: #007700">/</span><span style="color: #0000BB">base</span><span style="color: #007700">.</span><span style="color: #0000BB">rb</span><span style="color: #007700">:</span><span style="color: #0000BB">306</span><span style="color: #007700">:</span><span style="color: #0000BB">in&nbsp;</span><span style="color: #007700">`</span><span style="color: #DD0000">with_template'<br />/home/ben/tracks/vendor/rails/actionpack/lib/action_view/renderable.rb:30:in&nbsp;</span><span style="color: #007700">`</span><span style="color: #0000BB">render</span><span style="color: #DD0000">'<br />/home/ben/tracks/vendor/rails/actionpack/lib/action_view/renderable_partial.rb:20:in&nbsp;`render'<br /></span><span style="color: #007700">/</span><span style="color: #0000BB">home</span><span style="color: #007700">/</span><span style="color: #0000BB">ben</span><span style="color: #007700">/</span><span style="color: #0000BB">tracks</span><span style="color: #007700">/</span><span style="color: #0000BB">vendor</span><span style="color: #007700">/</span><span style="color: #0000BB">rails</span><span style="color: #007700">/</span><span style="color: #0000BB">actionpack</span><span style="color: #007700">/</span><span style="color: #0000BB">lib</span><span style="color: #007700">/</span><span style="color: #0000BB">action_controller</span><span style="color: #007700">/</span><span style="color: #0000BB">benchmarking</span><span style="color: #007700">.</span><span style="color: #0000BB">rb</span><span style="color: #007700">:</span><span style="color: #0000BB">30</span><span style="color: #007700">:</span><span style="color: #0000BB">in&nbsp;</span><span style="color: #007700">`</span><span style="color: #DD0000">benchmark'<br />/home/ben/tracks/vendor/rails/actionpack/lib/action_view/renderable_partial.rb:19:in&nbsp;</span><span style="color: #007700">`</span><span style="color: #0000BB">render</span><span style="color: #DD0000">'<br />/home/ben/tracks/vendor/rails/actionpack/lib/action_view/template.rb:205:in&nbsp;`render_template'<br /></span><span style="color: #007700">/</span><span style="color: #0000BB">home</span><span style="color: #007700">/</span><span style="color: #0000BB">ben</span><span style="color: #007700">/</span><span style="color: #0000BB">tracks</span><span style="color: #007700">/</span><span style="color: #0000BB">vendor</span><span style="color: #007700">/</span><span style="color: #0000BB">rails</span><span style="color: #007700">/</span><span style="color: #0000BB">actionpack</span><span style="color: #007700">/</span><span style="color: #0000BB">lib</span><span style="color: #007700">/</span><span style="color: #0000BB">action_view</span><span style="color: #007700">/</span><span style="color: #0000BB">renderable_partial</span><span style="color: #007700">.</span><span style="color: #0000BB">rb</span><span style="color: #007700">:</span><span style="color: #0000BB">44</span><span style="color: #007700">:</span><span style="color: #0000BB">in&nbsp;</span><span style="color: #007700">`</span><span style="color: #DD0000">render_partial'<br />/home/ben/tracks/vendor/rails/actionpack/lib/action_view/partials.rb:221:in&nbsp;</span><span style="color: #007700">`</span><span style="color: #0000BB">render_partial_collection</span><span style="color: #DD0000">'<br />/home/ben/tracks/vendor/rails/activerecord/lib/active_record/named_scope.rb:109:in&nbsp;`map'<br /></span><span style="color: #007700">/</span><span style="color: #0000BB">home</span><span style="color: #007700">/</span><span style="color: #0000BB">ben</span><span style="color: #007700">/</span><span style="color: #0000BB">tracks</span><span style="color: #007700">/</span><span style="color: #0000BB">vendor</span><span style="color: #007700">/</span><span style="color: #0000BB">rails</span><span style="color: #007700">/</span><span style="color: #0000BB">activerecord</span><span style="color: #007700">/</span><span style="color: #0000BB">lib</span><span style="color: #007700">/</span><span style="color: #0000BB">active_record</span><span style="color: #007700">/</span><span style="color: #0000BB">named_scope</span><span style="color: #007700">.</span><span style="color: #0000BB">rb</span><span style="color: #007700">:</span><span style="color: #0000BB">109</span><span style="color: #007700">:</span><span style="color: #0000BB">in&nbsp;</span><span style="color: #007700">`</span><span style="color: #DD0000">__send__'<br />/home/ben/tracks/vendor/rails/activerecord/lib/active_record/named_scope.rb:109:in&nbsp;</span><span style="color: #007700">`</span><span style="color: #0000BB">map</span><span style="color: #DD0000">'<br />/home/ben/tracks/vendor/rails/actionpack/lib/action_view/partials.rb:216:in&nbsp;`render_partial_collection'<br /></span><span style="color: #007700">/</span><span style="color: #0000BB">home</span><span style="color: #007700">/</span><span style="color: #0000BB">ben</span><span style="color: #007700">/</span><span style="color: #0000BB">tracks</span><span style="color: #007700">/</span><span style="color: #0000BB">vendor</span><span style="color: #007700">/</span><span style="color: #0000BB">rails</span><span style="color: #007700">/</span><span style="color: #0000BB">actionpack</span><span style="color: #007700">/</span><span style="color: #0000BB">lib</span><span style="color: #007700">/</span><span style="color: #0000BB">action_view</span><span style="color: #007700">/</span><span style="color: #0000BB">partials</span><span style="color: #007700">.</span><span style="color: #0000BB">rb</span><span style="color: #007700">:</span><span style="color: #0000BB">182</span><span style="color: #007700">:</span><span style="color: #0000BB">in&nbsp;</span><span style="color: #007700">`</span><span style="color: #DD0000">render_partial'<br />/home/ben/tracks/vendor/rails/actionpack/lib/action_view/base.rb:267:in&nbsp;</span><span style="color: #007700">`</span><span style="color: #0000BB">render</span><span style="color: #DD0000">'<br />/home/ben/tracks/app/views/todos/index.html.erb:4:in&nbsp;`_run_erb_app47views47todos47index46html46erb'<br /></span><span style="color: #007700">/</span><span style="color: #0000BB">home</span><span style="color: #007700">/</span><span style="color: #0000BB">ben</span><span style="color: #007700">/</span><span style="color: #0000BB">tracks</span><span style="color: #007700">/</span><span style="color: #0000BB">vendor</span><span style="color: #007700">/</span><span style="color: #0000BB">rails</span><span style="color: #007700">/</span><span style="color: #0000BB">actionpack</span><span style="color: #007700">/</span><span style="color: #0000BB">lib</span><span style="color: #007700">/</span><span style="color: #0000BB">action_view</span><span style="color: #007700">/</span><span style="color: #0000BB">renderable</span><span style="color: #007700">.</span><span style="color: #0000BB">rb</span><span style="color: #007700">:</span><span style="color: #0000BB">34</span><span style="color: #007700">:</span><span style="color: #0000BB">in&nbsp;</span><span style="color: #007700">`</span><span style="color: #DD0000">send'<br />/home/ben/tracks/vendor/rails/actionpack/lib/action_view/renderable.rb:34:in&nbsp;</span><span style="color: #007700">`</span><span style="color: #0000BB">render</span><span style="color: #DD0000">'<br />/home/ben/tracks/vendor/rails/actionpack/lib/action_view/base.rb:306:in&nbsp;`with_template'<br /></span><span style="color: #007700">/</span><span style="color: #0000BB">home</span><span style="color: #007700">/</span><span style="color: #0000BB">ben</span><span style="color: #007700">/</span><span style="color: #0000BB">tracks</span><span style="color: #007700">/</span><span style="color: #0000BB">vendor</span><span style="color: #007700">/</span><span style="color: #0000BB">rails</span><span style="color: #007700">/</span><span style="color: #0000BB">actionpack</span><span style="color: #007700">/</span><span style="color: #0000BB">lib</span><span style="color: #007700">/</span><span style="color: #0000BB">action_view</span><span style="color: #007700">/</span><span style="color: #0000BB">renderable</span><span style="color: #007700">.</span><span style="color: #0000BB">rb</span><span style="color: #007700">:</span><span style="color: #0000BB">30</span><span style="color: #007700">:</span><span style="color: #0000BB">in&nbsp;</span><span style="color: #007700">`</span><span style="color: #DD0000">render'<br />/home/ben/tracks/vendor/rails/actionpack/lib/action_view/template.rb:205:in&nbsp;</span><span style="color: #007700">`</span><span style="color: #0000BB">render_template</span><span style="color: #DD0000">'<br />/home/ben/tracks/vendor/rails/actionpack/lib/action_view/base.rb:265:in&nbsp;`render'<br /></span><span style="color: #007700">/</span><span style="color: #0000BB">home</span><span style="color: #007700">/</span><span style="color: #0000BB">ben</span><span style="color: #007700">/</span><span style="color: #0000BB">tracks</span><span style="color: #007700">/</span><span style="color: #0000BB">vendor</span><span style="color: #007700">/</span><span style="color: #0000BB">rails</span><span style="color: #007700">/</span><span style="color: #0000BB">actionpack</span><span style="color: #007700">/</span><span style="color: #0000BB">lib</span><span style="color: #007700">/</span><span style="color: #0000BB">action_view</span><span style="color: #007700">/</span><span style="color: #0000BB">base</span><span style="color: #007700">.</span><span style="color: #0000BB">rb</span><span style="color: #007700">:</span><span style="color: #0000BB">348</span><span style="color: #007700">:</span><span style="color: #0000BB">in&nbsp;</span><span style="color: #007700">`</span><span style="color: #DD0000">_render_with_layout'<br />/home/ben/tracks/vendor/rails/actionpack/lib/action_view/base.rb:262:in&nbsp;</span><span style="color: #007700">`</span><span style="color: #0000BB">render</span><span style="color: #DD0000">'<br />/home/ben/tracks/vendor/rails/actionpack/lib/action_controller/base.rb:1250:in&nbsp;`render_for_file'<br /></span><span style="color: #007700">/</span><span style="color: #0000BB">home</span><span style="color: #007700">/</span><span style="color: #0000BB">ben</span><span style="color: #007700">/</span><span style="color: #0000BB">tracks</span><span style="color: #007700">/</span><span style="color: #0000BB">vendor</span><span style="color: #007700">/</span><span style="color: #0000BB">rails</span><span style="color: #007700">/</span><span style="color: #0000BB">actionpack</span><span style="color: #007700">/</span><span style="color: #0000BB">lib</span><span style="color: #007700">/</span><span style="color: #0000BB">action_controller</span><span style="color: #007700">/</span><span style="color: #0000BB">base</span><span style="color: #007700">.</span><span style="color: #0000BB">rb</span><span style="color: #007700">:</span><span style="color: #0000BB">945</span><span style="color: #007700">:</span><span style="color: #0000BB">in&nbsp;</span><span style="color: #007700">`</span><span style="color: #DD0000">render_without_benchmark'<br />/home/ben/tracks/vendor/rails/actionpack/lib/action_controller/benchmarking.rb:51:in&nbsp;</span><span style="color: #007700">`</span><span style="color: #0000BB">render</span><span style="color: #DD0000">'<br />/home/ben/tracks/vendor/rails/activesupport/lib/active_support/core_ext/benchmark.rb:17:in&nbsp;`ms'<br /></span><span style="color: #007700">/</span><span style="color: #0000BB">usr</span><span style="color: #007700">/</span><span style="color: #0000BB">lib</span><span style="color: #007700">/</span><span style="color: #0000BB">ruby</span><span style="color: #007700">/</span><span style="color: #0000BB">1.8</span><span style="color: #007700">/</span><span style="color: #0000BB">benchmark</span><span style="color: #007700">.</span><span style="color: #0000BB">rb</span><span style="color: #007700">:</span><span style="color: #0000BB">308</span><span style="color: #007700">:</span><span style="color: #0000BB">in&nbsp;</span><span style="color: #007700">`</span><span style="color: #DD0000">realtime'<br />/home/ben/tracks/vendor/rails/activesupport/lib/active_support/core_ext/benchmark.rb:17:in&nbsp;</span><span style="color: #007700">`</span><span style="color: #0000BB">ms</span><span style="color: #DD0000">'<br />/home/ben/tracks/vendor/rails/actionpack/lib/action_controller/benchmarking.rb:51:in&nbsp;`render'<br /></span><span style="color: #007700">/</span><span style="color: #0000BB">home</span><span style="color: #007700">/</span><span style="color: #0000BB">ben</span><span style="color: #007700">/</span><span style="color: #0000BB">tracks</span><span style="color: #007700">/</span><span style="color: #0000BB">app</span><span style="color: #007700">/</span><span style="color: #0000BB">controllers</span><span style="color: #007700">/</span><span style="color: #0000BB">todos_controller</span><span style="color: #007700">.</span><span style="color: #0000BB">rb</span><span style="color: #007700">:</span><span style="color: #0000BB">889</span><span style="color: #007700">:</span><span style="color: #0000BB">in&nbsp;</span><span style="color: #007700">`</span><span style="color: #DD0000">render_todos_html'<br />/home/ben/tracks/vendor/rails/actionpack/lib/action_controller/mime_responds.rb:135:in&nbsp;</span><span style="color: #007700">`</span><span style="color: #0000BB">call</span><span style="color: #DD0000">'<br />/home/ben/tracks/vendor/rails/actionpack/lib/action_controller/mime_responds.rb:135:in&nbsp;`custom'<br /></span><span style="color: #007700">/</span><span style="color: #0000BB">home</span><span style="color: #007700">/</span><span style="color: #0000BB">ben</span><span style="color: #007700">/</span><span style="color: #0000BB">tracks</span><span style="color: #007700">/</span><span style="color: #0000BB">vendor</span><span style="color: #007700">/</span><span style="color: #0000BB">rails</span><span style="color: #007700">/</span><span style="color: #0000BB">actionpack</span><span style="color: #007700">/</span><span style="color: #0000BB">lib</span><span style="color: #007700">/</span><span style="color: #0000BB">action_controller</span><span style="color: #007700">/</span><span style="color: #0000BB">mime_responds</span><span style="color: #007700">.</span><span style="color: #0000BB">rb</span><span style="color: #007700">:</span><span style="color: #0000BB">179</span><span style="color: #007700">:</span><span style="color: #0000BB">in&nbsp;</span><span style="color: #007700">`</span><span style="color: #DD0000">call'&nbsp;</span>
+</span>
+</code></div></div>
+	
+	
+	
+</td>
+
+</tr><tr>
+
+<td class="tableCellTwo"  style="width:130px;">
+	<table cellpadding="0" cellspacing="0" border="0" width="100%">
+	<tr>
+	<td align="center"><div class="button"><div class="buttonSmall" id="b1" onclick="navJump('http://www.getontracks.org/forums/member/10217/')" onmouseover="navHover(this);" onmouseout="navReset(this);">Profile</div></div></td>
+	
+	
+
+	</tr>
+	</table>
+</td>
+
+<td class="tableCellTwo" colspan="2">
+	<table cellpadding="0" cellspacing="0" border="0">
+	<tr>
+	
+	
+	
+	
+	
+	
+		
+	
+	
+	&nbsp;
+	
+	<td>&nbsp;</td>	
+	</tr>
+	</table>
+  </td>
+ </tr>
+</table>
+
+</td>
+</tr>
+
+<tr id="c9" >
+ <td colspan="3">
+
+
+ <table class="threadBorder" cellpadding="0" cellspacing="0" border="0" style="width:100%;">
+  <tr>
+   <td class="tableRowHeadingBold" style="width:130px;"><div class="largeLinks"><a href="http://www.getontracks.org/forums/member/10217/">benvdh</a></div></td>
+   <td class="tableRowHeading">
+
+	<table cellpadding="0" cellspacing="0" border="0" style="width:99%;">
+	<tr>
+	<td>Posted: 13 April 2010 11:28 AM</td>
+	<td align="right">
+	
+		
+	
+	
+
+	
+	
+	&nbsp;&nbsp;<span class="smallLinks">[ <a href="http://www.getontracks.org/forums/ignore_member/10217/" title="Ignore">Ignore</a> ]</span>
+	
+	&nbsp;&nbsp;<span class="smallLinks">[ <a name="1966" href="http://www.getontracks.org/forums/viewreply/1966/" title="Permalink to this post"># 2</a> ]</span>
+
+	&nbsp;
+	</td>
+	</tr>
+	</table>
+
+   </td>
+  </tr>
+<tr>
+ <td class="tableCellOne" style="width:130px;" valign="top">
+	<div class="rankMember">Newbie</div>
+	
+	<div class="itempad"><img src="http://www.getontracks.org/themes/forum_themes/blue/images/rank.gif" alt="Rank" class="rankImage" /></div>
+	<div class="userBlock">Total Posts:&nbsp; 5</div>
+	<div class="userBlock">Joined&nbsp; 2010-04-13</div>
+</td>
+<td class="tableCellOne" valign="top" colspan="2"><div class="post"><div class="codeblock"><code><span style="color: #000000">
+<span style="color: #007700">/</span><span style="color: #0000BB">home</span><span style="color: #007700">/</span><span style="color: #0000BB">ben</span><span style="color: #007700">/</span><span style="color: #0000BB">tracks</span><span style="color: #007700">/</span><span style="color: #0000BB">vendor</span><span style="color: #007700">/</span><span style="color: #0000BB">rails</span><span style="color: #007700">/</span><span style="color: #0000BB">actionpack</span><span style="color: #007700">/</span><span style="color: #0000BB">lib</span><span style="color: #007700">/</span><span style="color: #0000BB">action_controller</span><span style="color: #007700">/</span><span style="color: #0000BB">mime_responds</span><span style="color: #007700">.</span><span style="color: #0000BB">rb</span><span style="color: #007700">:</span><span style="color: #0000BB">179</span><span style="color: #007700">:</span><span style="color: #0000BB">in&nbsp;</span><span style="color: #007700">`</span><span style="color: #DD0000">respond'<br />/home/ben/tracks/vendor/rails/actionpack/lib/action_controller/mime_responds.rb:173:in&nbsp;</span><span style="color: #007700">`</span><span style="color: #0000BB">each</span><span style="color: #DD0000">'<br />/home/ben/tracks/vendor/rails/actionpack/lib/action_controller/mime_responds.rb:173:in&nbsp;`respond'<br /></span><span style="color: #007700">/</span><span style="color: #0000BB">home</span><span style="color: #007700">/</span><span style="color: #0000BB">ben</span><span style="color: #007700">/</span><span style="color: #0000BB">tracks</span><span style="color: #007700">/</span><span style="color: #0000BB">vendor</span><span style="color: #007700">/</span><span style="color: #0000BB">rails</span><span style="color: #007700">/</span><span style="color: #0000BB">actionpack</span><span style="color: #007700">/</span><span style="color: #0000BB">lib</span><span style="color: #007700">/</span><span style="color: #0000BB">action_controller</span><span style="color: #007700">/</span><span style="color: #0000BB">mime_responds</span><span style="color: #007700">.</span><span style="color: #0000BB">rb</span><span style="color: #007700">:</span><span style="color: #0000BB">107</span><span style="color: #007700">:</span><span style="color: #0000BB">in&nbsp;</span><span style="color: #007700">`</span><span style="color: #DD0000">respond_to'<br />/home/ben/tracks/app/controllers/todos_controller.rb:20:in&nbsp;</span><span style="color: #007700">`</span><span style="color: #0000BB">index</span><span style="color: #DD0000">'<br />/home/ben/tracks/vendor/rails/actionpack/lib/action_controller/base.rb:1331:in&nbsp;`send'<br /></span><span style="color: #007700">/</span><span style="color: #0000BB">home</span><span style="color: #007700">/</span><span style="color: #0000BB">ben</span><span style="color: #007700">/</span><span style="color: #0000BB">tracks</span><span style="color: #007700">/</span><span style="color: #0000BB">vendor</span><span style="color: #007700">/</span><span style="color: #0000BB">rails</span><span style="color: #007700">/</span><span style="color: #0000BB">actionpack</span><span style="color: #007700">/</span><span style="color: #0000BB">lib</span><span style="color: #007700">/</span><span style="color: #0000BB">action_controller</span><span style="color: #007700">/</span><span style="color: #0000BB">base</span><span style="color: #007700">.</span><span style="color: #0000BB">rb</span><span style="color: #007700">:</span><span style="color: #0000BB">1331</span><span style="color: #007700">:</span><span style="color: #0000BB">in&nbsp;</span><span style="color: #007700">`</span><span style="color: #DD0000">perform_action_without_filters'<br />/home/ben/tracks/vendor/rails/actionpack/lib/action_controller/filters.rb:617:in&nbsp;</span><span style="color: #007700">`</span><span style="color: #0000BB">call_filters</span><span style="color: #DD0000">'<br />/home/ben/tracks/vendor/rails/actionpack/lib/action_controller/filters.rb:610:in&nbsp;`perform_action_without_benchmark'<br /></span><span style="color: #007700">/</span><span style="color: #0000BB">home</span><span style="color: #007700">/</span><span style="color: #0000BB">ben</span><span style="color: #007700">/</span><span style="color: #0000BB">tracks</span><span style="color: #007700">/</span><span style="color: #0000BB">vendor</span><span style="color: #007700">/</span><span style="color: #0000BB">rails</span><span style="color: #007700">/</span><span style="color: #0000BB">actionpack</span><span style="color: #007700">/</span><span style="color: #0000BB">lib</span><span style="color: #007700">/</span><span style="color: #0000BB">action_controller</span><span style="color: #007700">/</span><span style="color: #0000BB">benchmarking</span><span style="color: #007700">.</span><span style="color: #0000BB">rb</span><span style="color: #007700">:</span><span style="color: #0000BB">68</span><span style="color: #007700">:</span><span style="color: #0000BB">in&nbsp;</span><span style="color: #007700">`</span><span style="color: #DD0000">perform_action_without_rescue'<br />/home/ben/tracks/vendor/rails/activesupport/lib/active_support/core_ext/benchmark.rb:17:in&nbsp;</span><span style="color: #007700">`</span><span style="color: #0000BB">ms</span><span style="color: #DD0000">'<br />/usr/lib/ruby/1.8/benchmark.rb:308:in&nbsp;`realtime'<br /></span><span style="color: #007700">/</span><span style="color: #0000BB">home</span><span style="color: #007700">/</span><span style="color: #0000BB">ben</span><span style="color: #007700">/</span><span style="color: #0000BB">tracks</span><span style="color: #007700">/</span><span style="color: #0000BB">vendor</span><span style="color: #007700">/</span><span style="color: #0000BB">rails</span><span style="color: #007700">/</span><span style="color: #0000BB">activesupport</span><span style="color: #007700">/</span><span style="color: #0000BB">lib</span><span style="color: #007700">/</span><span style="color: #0000BB">active_support</span><span style="color: #007700">/</span><span style="color: #0000BB">core_ext</span><span style="color: #007700">/</span><span style="color: #0000BB">benchmark</span><span style="color: #007700">.</span><span style="color: #0000BB">rb</span><span style="color: #007700">:</span><span style="color: #0000BB">17</span><span style="color: #007700">:</span><span style="color: #0000BB">in&nbsp;</span><span style="color: #007700">`</span><span style="color: #DD0000">ms'<br />/home/ben/tracks/vendor/rails/actionpack/lib/action_controller/benchmarking.rb:68:in&nbsp;</span><span style="color: #007700">`</span><span style="color: #0000BB">perform_action_without_rescue</span><span style="color: #DD0000">'<br />/home/ben/tracks/vendor/rails/actionpack/lib/action_controller/rescue.rb:160:in&nbsp;`perform_action_without_flash'<br /></span><span style="color: #007700">/</span><span style="color: #0000BB">home</span><span style="color: #007700">/</span><span style="color: #0000BB">ben</span><span style="color: #007700">/</span><span style="color: #0000BB">tracks</span><span style="color: #007700">/</span><span style="color: #0000BB">vendor</span><span style="color: #007700">/</span><span style="color: #0000BB">rails</span><span style="color: #007700">/</span><span style="color: #0000BB">actionpack</span><span style="color: #007700">/</span><span style="color: #0000BB">lib</span><span style="color: #007700">/</span><span style="color: #0000BB">action_controller</span><span style="color: #007700">/</span><span style="color: #0000BB">flash</span><span style="color: #007700">.</span><span style="color: #0000BB">rb</span><span style="color: #007700">:</span><span style="color: #0000BB">146</span><span style="color: #007700">:</span><span style="color: #0000BB">in&nbsp;</span><span style="color: #007700">`</span><span style="color: #DD0000">perform_action'<br />/home/ben/tracks/vendor/rails/actionpack/lib/action_controller/base.rb:532:in&nbsp;</span><span style="color: #007700">`</span><span style="color: #0000BB">send</span><span style="color: #DD0000">'<br />/home/ben/tracks/vendor/rails/actionpack/lib/action_controller/base.rb:532:in&nbsp;`process_without_filters'<br /></span><span style="color: #007700">/</span><span style="color: #0000BB">home</span><span style="color: #007700">/</span><span style="color: #0000BB">ben</span><span style="color: #007700">/</span><span style="color: #0000BB">tracks</span><span style="color: #007700">/</span><span style="color: #0000BB">vendor</span><span style="color: #007700">/</span><span style="color: #0000BB">rails</span><span style="color: #007700">/</span><span style="color: #0000BB">actionpack</span><span style="color: #007700">/</span><span style="color: #0000BB">lib</span><span style="color: #007700">/</span><span style="color: #0000BB">action_controller</span><span style="color: #007700">/</span><span style="color: #0000BB">filters</span><span style="color: #007700">.</span><span style="color: #0000BB">rb</span><span style="color: #007700">:</span><span style="color: #0000BB">606</span><span style="color: #007700">:</span><span style="color: #0000BB">in&nbsp;</span><span style="color: #007700">`</span><span style="color: #DD0000">process'<br />/home/ben/tracks/vendor/rails/actionpack/lib/action_controller/base.rb:391:in&nbsp;</span><span style="color: #007700">`</span><span style="color: #0000BB">process</span><span style="color: #DD0000">'<br />/home/ben/tracks/vendor/rails/actionpack/lib/action_controller/base.rb:386:in&nbsp;`call'<br /></span><span style="color: #007700">/</span><span style="color: #0000BB">home</span><span style="color: #007700">/</span><span style="color: #0000BB">ben</span><span style="color: #007700">/</span><span style="color: #0000BB">tracks</span><span style="color: #007700">/</span><span style="color: #0000BB">vendor</span><span style="color: #007700">/</span><span style="color: #0000BB">rails</span><span style="color: #007700">/</span><span style="color: #0000BB">actionpack</span><span style="color: #007700">/</span><span style="color: #0000BB">lib</span><span style="color: #007700">/</span><span style="color: #0000BB">action_controller</span><span style="color: #007700">/</span><span style="color: #0000BB">routing</span><span style="color: #007700">/</span><span style="color: #0000BB">route_set</span><span style="color: #007700">.</span><span style="color: #0000BB">rb</span><span style="color: #007700">:</span><span style="color: #0000BB">437</span><span style="color: #007700">:</span><span style="color: #0000BB">in&nbsp;</span><span style="color: #007700">`</span><span style="color: #DD0000">call'<br />/home/ben/tracks/vendor/rails/actionpack/lib/action_controller/dispatcher.rb:87:in&nbsp;</span><span style="color: #007700">`</span><span style="color: #0000BB">dispatch</span><span style="color: #DD0000">'<br />/home/ben/tracks/vendor/rails/actionpack/lib/action_controller/dispatcher.rb:121:in&nbsp;`_call'<br /></span><span style="color: #007700">/</span><span style="color: #0000BB">home</span><span style="color: #007700">/</span><span style="color: #0000BB">ben</span><span style="color: #007700">/</span><span style="color: #0000BB">tracks</span><span style="color: #007700">/</span><span style="color: #0000BB">vendor</span><span style="color: #007700">/</span><span style="color: #0000BB">rails</span><span style="color: #007700">/</span><span style="color: #0000BB">actionpack</span><span style="color: #007700">/</span><span style="color: #0000BB">lib</span><span style="color: #007700">/</span><span style="color: #0000BB">action_controller</span><span style="color: #007700">/</span><span style="color: #0000BB">dispatcher</span><span style="color: #007700">.</span><span style="color: #0000BB">rb</span><span style="color: #007700">:</span><span style="color: #0000BB">130</span><span style="color: #007700">:</span><span style="color: #0000BB">in&nbsp;</span><span style="color: #007700">`</span><span style="color: #DD0000">build_middleware_stack'<br />/home/ben/tracks/vendor/rails/actionpack/lib/action_controller/string_coercion.rb:25:in&nbsp;</span><span style="color: #007700">`</span><span style="color: #0000BB">call</span><span style="color: #DD0000">'<br />/home/ben/tracks/vendor/rails/actionpack/lib/action_controller/string_coercion.rb:25:in&nbsp;`call'<br /></span><span style="color: #007700">/</span><span style="color: #0000BB">home</span><span style="color: #007700">/</span><span style="color: #0000BB">ben</span><span style="color: #007700">/</span><span style="color: #0000BB">tracks</span><span style="color: #007700">/</span><span style="color: #0000BB">vendor</span><span style="color: #007700">/</span><span style="color: #0000BB">gems</span><span style="color: #007700">/</span><span style="color: #0000BB">rack</span><span style="color: #007700">-</span><span style="color: #0000BB">1.0.1</span><span style="color: #007700">/</span><span style="color: #0000BB">lib</span><span style="color: #007700">/</span><span style="color: #0000BB">rack</span><span style="color: #007700">/</span><span style="color: #0000BB">head</span><span style="color: #007700">.</span><span style="color: #0000BB">rb</span><span style="color: #007700">:</span><span style="color: #0000BB">9</span><span style="color: #007700">:</span><span style="color: #0000BB">in&nbsp;</span><span style="color: #007700">`</span><span style="color: #DD0000">call'<br />/home/ben/tracks/vendor/gems/rack-1.0.1/lib/rack/methodoverride.rb:24:in&nbsp;</span><span style="color: #007700">`</span><span style="color: #0000BB">call</span><span style="color: #DD0000">'<br />/home/ben/tracks/vendor/rails/actionpack/lib/action_controller/params_parser.rb:15:in&nbsp;`call'<br /></span><span style="color: #007700">/</span><span style="color: #0000BB">home</span><span style="color: #007700">/</span><span style="color: #0000BB">ben</span><span style="color: #007700">/</span><span style="color: #0000BB">tracks</span><span style="color: #007700">/</span><span style="color: #0000BB">vendor</span><span style="color: #007700">/</span><span style="color: #0000BB">rails</span><span style="color: #007700">/</span><span style="color: #0000BB">actionpack</span><span style="color: #007700">/</span><span style="color: #0000BB">lib</span><span style="color: #007700">/</span><span style="color: #0000BB">action_controller</span><span style="color: #007700">/</span><span style="color: #0000BB">session</span><span style="color: #007700">/</span><span style="color: #0000BB">abstract_store</span><span style="color: #007700">.</span><span style="color: #0000BB">rb</span><span style="color: #007700">:</span><span style="color: #0000BB">122</span><span style="color: #007700">:</span><span style="color: #0000BB">in&nbsp;</span><span style="color: #007700">`</span><span style="color: #DD0000">call'<br />/home/ben/tracks/vendor/rails/activerecord/lib/active_record/query_cache.rb:29:in&nbsp;</span><span style="color: #007700">`</span><span style="color: #0000BB">call</span><span style="color: #DD0000">'<br />/home/ben/tracks/vendor/rails/activerecord/lib/active_record/connection_adapters/abstract/query_cache.rb:34:in&nbsp;`cache'<br /></span><span style="color: #007700">/</span><span style="color: #0000BB">home</span><span style="color: #007700">/</span><span style="color: #0000BB">ben</span><span style="color: #007700">/</span><span style="color: #0000BB">tracks</span><span style="color: #007700">/</span><span style="color: #0000BB">vendor</span><span style="color: #007700">/</span><span style="color: #0000BB">rails</span><span style="color: #007700">/</span><span style="color: #0000BB">activerecord</span><span style="color: #007700">/</span><span style="color: #0000BB">lib</span><span style="color: #007700">/</span><span style="color: #0000BB">active_record</span><span style="color: #007700">/</span><span style="color: #0000BB">query_cache</span><span style="color: #007700">.</span><span style="color: #0000BB">rb</span><span style="color: #007700">:</span><span style="color: #0000BB">9</span><span style="color: #007700">:</span><span style="color: #0000BB">in&nbsp;</span><span style="color: #007700">`</span><span style="color: #DD0000">cache'<br />/home/ben/tracks/vendor/rails/activerecord/lib/active_record/query_cache.rb:28:in&nbsp;</span><span style="color: #007700">`</span><span style="color: #0000BB">call</span><span style="color: #DD0000">'<br />/home/ben/tracks/vendor/rails/activerecord/lib/active_record/connection_adapters/abstract/connection_pool.rb:361:in&nbsp;`call'<br /></span><span style="color: #007700">/</span><span style="color: #0000BB">home</span><span style="color: #007700">/</span><span style="color: #0000BB">ben</span><span style="color: #007700">/</span><span style="color: #0000BB">tracks</span><span style="color: #007700">/</span><span style="color: #0000BB">vendor</span><span style="color: #007700">/</span><span style="color: #0000BB">rails</span><span style="color: #007700">/</span><span style="color: #0000BB">actionpack</span><span style="color: #007700">/</span><span style="color: #0000BB">lib</span><span style="color: #007700">/</span><span style="color: #0000BB">action_controller</span><span style="color: #007700">/</span><span style="color: #0000BB">failsafe</span><span style="color: #007700">.</span><span style="color: #0000BB">rb</span><span style="color: #007700">:</span><span style="color: #0000BB">26</span><span style="color: #007700">:</span><span style="color: #0000BB">in&nbsp;</span><span style="color: #007700">`</span><span style="color: #DD0000">call'<br />/home/ben/tracks/vendor/gems/rack-1.0.1/lib/rack/lock.rb:11:in&nbsp;</span><span style="color: #007700">`</span><span style="color: #0000BB">call</span><span style="color: #DD0000">'<br />/home/ben/tracks/vendor/gems/rack-1.0.1/lib/rack/lock.rb:11:in&nbsp;`synchronize'<br /></span><span style="color: #007700">/</span><span style="color: #0000BB">home</span><span style="color: #007700">/</span><span style="color: #0000BB">ben</span><span style="color: #007700">/</span><span style="color: #0000BB">tracks</span><span style="color: #007700">/</span><span style="color: #0000BB">vendor</span><span style="color: #007700">/</span><span style="color: #0000BB">gems</span><span style="color: #007700">/</span><span style="color: #0000BB">rack</span><span style="color: #007700">-</span><span style="color: #0000BB">1.0.1</span><span style="color: #007700">/</span><span style="color: #0000BB">lib</span><span style="color: #007700">/</span><span style="color: #0000BB">rack</span><span style="color: #007700">/</span><span style="color: #0000BB">lock</span><span style="color: #007700">.</span><span style="color: #0000BB">rb</span><span style="color: #007700">:</span><span style="color: #0000BB">11</span><span style="color: #007700">:</span><span style="color: #0000BB">in&nbsp;</span><span style="color: #007700">`</span><span style="color: #DD0000">call'<br />/home/ben/tracks/vendor/rails/actionpack/lib/action_controller/dispatcher.rb:106:in&nbsp;</span><span style="color: #007700">`</span><span style="color: #0000BB">call</span><span style="color: #DD0000">'<br />/home/ben/tracks/vendor/rails/railties/lib/rails/rack/static.rb:31:in&nbsp;`call'<br /></span><span style="color: #007700">/</span><span style="color: #0000BB">home</span><span style="color: #007700">/</span><span style="color: #0000BB">ben</span><span style="color: #007700">/</span><span style="color: #0000BB">tracks</span><span style="color: #007700">/</span><span style="color: #0000BB">vendor</span><span style="color: #007700">/</span><span style="color: #0000BB">gems</span><span style="color: #007700">/</span><span style="color: #0000BB">rack</span><span style="color: #007700">-</span><span style="color: #0000BB">1.0.1</span><span style="color: #007700">/</span><span style="color: #0000BB">lib</span><span style="color: #007700">/</span><span style="color: #0000BB">rack</span><span style="color: #007700">/</span><span style="color: #0000BB">urlmap</span><span style="color: #007700">.</span><span style="color: #0000BB">rb</span><span style="color: #007700">:</span><span style="color: #0000BB">46</span><span style="color: #007700">:</span><span style="color: #0000BB">in&nbsp;</span><span style="color: #007700">`</span><span style="color: #DD0000">call'<br />/home/ben/tracks/vendor/gems/rack-1.0.1/lib/rack/urlmap.rb:40:in&nbsp;</span><span style="color: #007700">`</span><span style="color: #0000BB">each</span><span style="color: #DD0000">'<br />/home/ben/tracks/vendor/gems/rack-1.0.1/lib/rack/urlmap.rb:40:in&nbsp;`call'<br /></span><span style="color: #007700">/</span><span style="color: #0000BB">home</span><span style="color: #007700">/</span><span style="color: #0000BB">ben</span><span style="color: #007700">/</span><span style="color: #0000BB">tracks</span><span style="color: #007700">/</span><span style="color: #0000BB">vendor</span><span style="color: #007700">/</span><span style="color: #0000BB">rails</span><span style="color: #007700">/</span><span style="color: #0000BB">railties</span><span style="color: #007700">/</span><span style="color: #0000BB">lib</span><span style="color: #007700">/</span><span style="color: #0000BB">rails</span><span style="color: #007700">/</span><span style="color: #0000BB">rack</span><span style="color: #007700">/</span><span style="color: #0000BB">log_tailer</span><span style="color: #007700">.</span><span style="color: #0000BB">rb</span><span style="color: #007700">:</span><span style="color: #0000BB">17</span><span style="color: #007700">:</span><span style="color: #0000BB">in&nbsp;</span><span style="color: #007700">`</span><span style="color: #DD0000">call'<br />/home/ben/tracks/vendor/gems/rack-1.0.1/lib/rack/content_length.rb:13:in&nbsp;</span><span style="color: #007700">`</span><span style="color: #0000BB">call</span><span style="color: #DD0000">'<br />/home/ben/tracks/vendor/gems/rack-1.0.1/lib/rack/handler/webrick.rb:50:in&nbsp;`service'<br /></span><span style="color: #007700">/</span><span style="color: #0000BB">usr</span><span style="color: #007700">/</span><span style="color: #0000BB">lib</span><span style="color: #007700">/</span><span style="color: #0000BB">ruby</span><span style="color: #007700">/</span><span style="color: #0000BB">1.8</span><span style="color: #007700">/</span><span style="color: #0000BB">webrick</span><span style="color: #007700">/</span><span style="color: #0000BB">httpserver</span><span style="color: #007700">.</span><span style="color: #0000BB">rb</span><span style="color: #007700">:</span><span style="color: #0000BB">104</span><span style="color: #007700">:</span><span style="color: #0000BB">in&nbsp;</span><span style="color: #007700">`</span><span style="color: #DD0000">service'<br />/usr/lib/ruby/1.8/webrick/httpserver.rb:65:in&nbsp;</span><span style="color: #007700">`</span><span style="color: #0000BB">run</span><span style="color: #DD0000">'<br />/usr/lib/ruby/1.8/webrick/server.rb:173:in&nbsp;`start_thread'<br /></span><span style="color: #007700">/</span><span style="color: #0000BB">usr</span><span style="color: #007700">/</span><span style="color: #0000BB">lib</span><span style="color: #007700">/</span><span style="color: #0000BB">ruby</span><span style="color: #007700">/</span><span style="color: #0000BB">1.8</span><span style="color: #007700">/</span><span style="color: #0000BB">webrick</span><span style="color: #007700">/</span><span style="color: #0000BB">server</span><span style="color: #007700">.</span><span style="color: #0000BB">rb</span><span style="color: #007700">:</span><span style="color: #0000BB">162</span><span style="color: #007700">:</span><span style="color: #0000BB">in&nbsp;</span><span style="color: #007700">`</span><span style="color: #DD0000">start'<br />/usr/lib/ruby/1.8/webrick/server.rb:162:in&nbsp;</span><span style="color: #007700">`</span><span style="color: #0000BB">start_thread</span><span style="color: #DD0000">'<br />/usr/lib/ruby/1.8/webrick/server.rb:95:in&nbsp;`start'<br /></span><span style="color: #007700">/</span><span style="color: #0000BB">usr</span><span style="color: #007700">/</span><span style="color: #0000BB">lib</span><span style="color: #007700">/</span><span style="color: #0000BB">ruby</span><span style="color: #007700">/</span><span style="color: #0000BB">1.8</span><span style="color: #007700">/</span><span style="color: #0000BB">webrick</span><span style="color: #007700">/</span><span style="color: #0000BB">server</span><span style="color: #007700">.</span><span style="color: #0000BB">rb</span><span style="color: #007700">:</span><span style="color: #0000BB">92</span><span style="color: #007700">:</span><span style="color: #0000BB">in&nbsp;</span><span style="color: #007700">`</span><span style="color: #DD0000">each'<br />/usr/lib/ruby/1.8/webrick/server.rb:92:in&nbsp;</span><span style="color: #007700">`</span><span style="color: #0000BB">start</span><span style="color: #DD0000">'<br />/usr/lib/ruby/1.8/webrick/server.rb:23:in&nbsp;`start'<br /></span><span style="color: #007700">/</span><span style="color: #0000BB">usr</span><span style="color: #007700">/</span><span style="color: #0000BB">lib</span><span style="color: #007700">/</span><span style="color: #0000BB">ruby</span><span style="color: #007700">/</span><span style="color: #0000BB">1.8</span><span style="color: #007700">/</span><span style="color: #0000BB">webrick</span><span style="color: #007700">/</span><span style="color: #0000BB">server</span><span style="color: #007700">.</span><span style="color: #0000BB">rb</span><span style="color: #007700">:</span><span style="color: #0000BB">82</span><span style="color: #007700">:</span><span style="color: #0000BB">in&nbsp;</span><span style="color: #007700">`</span><span style="color: #DD0000">start'<br />/home/ben/tracks/vendor/gems/rack-1.0.1/lib/rack/handler/webrick.rb:14:in&nbsp;</span><span style="color: #007700">`</span><span style="color: #0000BB">run</span><span style="color: #DD0000">'<br />/home/ben/tracks/vendor/rails/railties/lib/commands/server.rb:111<br />/usr/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:31:in&nbsp;`gem_original_require'<br /></span><span style="color: #007700">/</span><span style="color: #0000BB">usr</span><span style="color: #007700">/</span><span style="color: #0000BB">lib</span><span style="color: #007700">/</span><span style="color: #0000BB">ruby</span><span style="color: #007700">/</span><span style="color: #0000BB">site_ruby</span><span style="color: #007700">/</span><span style="color: #0000BB">1.8</span><span style="color: #007700">/</span><span style="color: #0000BB">rubygems</span><span style="color: #007700">/</span><span style="color: #0000BB">custom_require</span><span style="color: #007700">.</span><span style="color: #0000BB">rb</span><span style="color: #007700">:</span><span style="color: #0000BB">31</span><span style="color: #007700">:</span><span style="color: #0000BB">in&nbsp;</span><span style="color: #007700">`</span><span style="color: #DD0000">require'<br />script/server:3<br />Request<br />Parameters:&nbsp;<br />None<br />Show&nbsp;session&nbsp;dump<br />---&nbsp;<br /><br />Response<br />Headers:&nbsp;<br />&#123;"Content-Type"=&gt;"text/html",<br />&nbsp;"Cache-Control"=&gt;"no-cache"&#125;&nbsp;</span>
+</span>
+</code></div></div>
+	
+	
+	
+</td>
+
+</tr><tr>
+
+<td class="tableCellTwo"  style="width:130px;">
+	<table cellpadding="0" cellspacing="0" border="0" width="100%">
+	<tr>
+	<td align="center"><div class="button"><div class="buttonSmall" id="c1" onclick="navJump('http://www.getontracks.org/forums/member/10217/')" onmouseover="navHover(this);" onmouseout="navReset(this);">Profile</div></div></td>
+	
+	
+
+	</tr>
+	</table>
+</td>
+
+<td class="tableCellTwo" colspan="2">
+	<table cellpadding="0" cellspacing="0" border="0">
+	<tr>
+	
+	
+	
+	
+	
+	
+		
+	
+	
+	&nbsp;
+	
+	<td>&nbsp;</td>	
+	</tr>
+	</table>
+  </td>
+ </tr>
+</table>
+
+</td>
+</tr>
+
+<tr id="d9" >
+ <td colspan="3">
+
+
+ <table class="threadBorder" cellpadding="0" cellspacing="0" border="0" style="width:100%;">
+  <tr>
+   <td class="tableRowHeadingBold" style="width:130px;"><div class="largeLinks"><a href="http://www.getontracks.org/forums/member/10217/">benvdh</a></div></td>
+   <td class="tableRowHeading">
+
+	<table cellpadding="0" cellspacing="0" border="0" style="width:99%;">
+	<tr>
+	<td>Posted: 13 April 2010 11:32 AM</td>
+	<td align="right">
+	
+		
+	
+	
+
+	
+	
+	&nbsp;&nbsp;<span class="smallLinks">[ <a href="http://www.getontracks.org/forums/ignore_member/10217/" title="Ignore">Ignore</a> ]</span>
+	
+	&nbsp;&nbsp;<span class="smallLinks">[ <a name="1967" href="http://www.getontracks.org/forums/viewreply/1967/" title="Permalink to this post"># 3</a> ]</span>
+
+	&nbsp;
+	</td>
+	</tr>
+	</table>
+
+   </td>
+  </tr>
+<tr>
+ <td class="tableCellOne" style="width:130px;" valign="top">
+	<div class="rankMember">Newbie</div>
+	
+	<div class="itempad"><img src="http://www.getontracks.org/themes/forum_themes/blue/images/rank.gif" alt="Rank" class="rankImage" /></div>
+	<div class="userBlock">Total Posts:&nbsp; 5</div>
+	<div class="userBlock">Joined&nbsp; 2010-04-13</div>
+</td>
+<td class="tableCellOne" valign="top" colspan="2"><div class="post"><p>And the relevant part from the terminal output:</p><div class="codeblock"><code><span style="color: #000000">
+<span style="color: #0000BB">Processing&nbsp;ApplicationController</span><span style="color: #FF8000">#index&nbsp;(for&nbsp;127.0.0.1&nbsp;at&nbsp;2010-04-13&nbsp;12:02:54)&nbsp;&#91;GET&#93;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br /><br /></span><span style="color: #0000BB">ActionController</span><span style="color: #007700">::</span><span style="color: #0000BB">RoutingError&nbsp;</span><span style="color: #007700">(</span><span style="color: #0000BB">No&nbsp;route&nbsp;matches&nbsp;</span><span style="color: #DD0000">"/stylesheets/indicator.gif"&nbsp;</span><span style="color: #0000BB">with&nbsp;&#123;</span><span style="color: #007700">:</span><span style="color: #0000BB">method</span><span style="color: #007700">=&gt;:</span><span style="color: #0000BB">get&#125;</span><span style="color: #007700">):&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br />&nbsp;&nbsp;/</span><span style="color: #0000BB">usr</span><span style="color: #007700">/</span><span style="color: #0000BB">lib</span><span style="color: #007700">/</span><span style="color: #0000BB">ruby</span><span style="color: #007700">/</span><span style="color: #0000BB">1.8</span><span style="color: #007700">/</span><span style="color: #0000BB">webrick</span><span style="color: #007700">/</span><span style="color: #0000BB">httpserver</span><span style="color: #007700">.</span><span style="color: #0000BB">rb</span><span style="color: #007700">:</span><span style="color: #0000BB">104</span><span style="color: #007700">:</span><span style="color: #0000BB">in&nbsp;</span><span style="color: #007700">`</span><span style="color: #DD0000">service'&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br />&nbsp;&nbsp;/usr/lib/ruby/1.8/webrick/httpserver.rb:65:in&nbsp;</span><span style="color: #007700">`</span><span style="color: #0000BB">run</span><span style="color: #DD0000">'&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br />&nbsp;&nbsp;/usr/lib/ruby/1.8/webrick/server.rb:173:in&nbsp;`start_thread'&nbsp;&nbsp;&nbsp;&nbsp;<br />&nbsp;&nbsp;</span><span style="color: #007700">/</span><span style="color: #0000BB">usr</span><span style="color: #007700">/</span><span style="color: #0000BB">lib</span><span style="color: #007700">/</span><span style="color: #0000BB">ruby</span><span style="color: #007700">/</span><span style="color: #0000BB">1.8</span><span style="color: #007700">/</span><span style="color: #0000BB">webrick</span><span style="color: #007700">/</span><span style="color: #0000BB">server</span><span style="color: #007700">.</span><span style="color: #0000BB">rb</span><span style="color: #007700">:</span><span style="color: #0000BB">162</span><span style="color: #007700">:</span><span style="color: #0000BB">in&nbsp;</span><span style="color: #007700">`</span><span style="color: #DD0000">start'&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br />&nbsp;&nbsp;/usr/lib/ruby/1.8/webrick/server.rb:162:in&nbsp;</span><span style="color: #007700">`</span><span style="color: #0000BB">start_thread</span><span style="color: #DD0000">'&nbsp;&nbsp;&nbsp;&nbsp;<br />&nbsp;&nbsp;/usr/lib/ruby/1.8/webrick/server.rb:95:in&nbsp;`start'&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br />&nbsp;&nbsp;</span><span style="color: #007700">/</span><span style="color: #0000BB">usr</span><span style="color: #007700">/</span><span style="color: #0000BB">lib</span><span style="color: #007700">/</span><span style="color: #0000BB">ruby</span><span style="color: #007700">/</span><span style="color: #0000BB">1.8</span><span style="color: #007700">/</span><span style="color: #0000BB">webrick</span><span style="color: #007700">/</span><span style="color: #0000BB">server</span><span style="color: #007700">.</span><span style="color: #0000BB">rb</span><span style="color: #007700">:</span><span style="color: #0000BB">92</span><span style="color: #007700">:</span><span style="color: #0000BB">in&nbsp;</span><span style="color: #007700">`</span><span style="color: #DD0000">each'&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br />&nbsp;&nbsp;/usr/lib/ruby/1.8/webrick/server.rb:92:in&nbsp;</span><span style="color: #007700">`</span><span style="color: #0000BB">start</span><span style="color: #DD0000">'&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br />&nbsp;&nbsp;/usr/lib/ruby/1.8/webrick/server.rb:23:in&nbsp;`start'&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br />&nbsp;&nbsp;</span><span style="color: #007700">/</span><span style="color: #0000BB">usr</span><span style="color: #007700">/</span><span style="color: #0000BB">lib</span><span style="color: #007700">/</span><span style="color: #0000BB">ruby</span><span style="color: #007700">/</span><span style="color: #0000BB">1.8</span><span style="color: #007700">/</span><span style="color: #0000BB">webrick</span><span style="color: #007700">/</span><span style="color: #0000BB">server</span><span style="color: #007700">.</span><span style="color: #0000BB">rb</span><span style="color: #007700">:</span><span style="color: #0000BB">82</span><span style="color: #007700">:</span><span style="color: #0000BB">in&nbsp;</span><span style="color: #007700">`</span><span style="color: #DD0000">start'&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br /><br />Rendering&nbsp;rescues/layout&nbsp;(not_found)<br /><br /><br />Processing&nbsp;TodosController#update&nbsp;(for&nbsp;127.0.0.1&nbsp;at&nbsp;2010-04-13&nbsp;12:02:58)&nbsp;&#91;PUT&#93;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br />&nbsp;&nbsp;Parameters:&nbsp;&#123;"predecessor_list"=&gt;"",&nbsp;"_source_view"=&gt;"todo",&nbsp;"authenticity_token"=&gt;"pKDVDXaAkBUoQZk6qDDCJFYdgY9Ptc2dUHA/9tbXaJ8=",&nbsp;"id"=&gt;"14",&nbsp;"context_name"=&gt;"Afspraken",&nbsp;"tag_list"=&gt;"",&nbsp;"todo"=&gt;&#123;"show_from"=&gt;"",&nbsp;"notes"=&gt;"Iedere&nbsp;zondag&nbsp;om&nbsp;10:00&nbsp;aan&nbsp;de&nbsp;Gerard&nbsp;Terborghstraat&nbsp;1",&nbsp;"id"=&gt;"14",&nbsp;"description"=&gt;"Kerkdienst",&nbsp;"due"=&gt;"18/04/2010"&#125;,&nbsp;"project_name"=&gt;"None"&#125;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br />Rendering&nbsp;todos/update&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br />Completed&nbsp;in&nbsp;286ms&nbsp;(View:&nbsp;43,&nbsp;DB:&nbsp;12)&nbsp;|&nbsp;200&nbsp;OK&nbsp;&#91;http://localhost/todos/14&#93;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br /><br /><br />Processing&nbsp;ContextsController#index&nbsp;(for&nbsp;127.0.0.1&nbsp;at&nbsp;2010-04-13&nbsp;12:03:06)&nbsp;&#91;GET&#93;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br />Rendering&nbsp;template&nbsp;within&nbsp;layouts/standard&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br />Rendering&nbsp;contexts/index&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br />Completed&nbsp;in&nbsp;150ms&nbsp;(View:&nbsp;123,&nbsp;DB:&nbsp;8)&nbsp;|&nbsp;200&nbsp;OK&nbsp;&#91;http://localhost/contexts&#93;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br /><br /><br />Processing&nbsp;ContextsController#destroy&nbsp;(for&nbsp;127.0.0.1&nbsp;at&nbsp;2010-04-13&nbsp;12:03:14)&nbsp;&#91;DELETE&#93;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br />&nbsp;&nbsp;Parameters:&nbsp;&#123;"_source_view"=&gt;"",&nbsp;"authenticity_token"=&gt;"pKDVDXaAkBUoQZk6qDDCJFYdgY9Ptc2dUHA/9tbXaJ8=",&nbsp;"id"=&gt;"16"&#125;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br />Rendering&nbsp;contexts/destroy&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br />Completed&nbsp;in&nbsp;16ms&nbsp;(View:&nbsp;1,&nbsp;DB:&nbsp;4)&nbsp;|&nbsp;200&nbsp;OK&nbsp;&#91;http://localhost/contexts/16&#93;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br /><br /><br />Processing&nbsp;TodosController#index&nbsp;(for&nbsp;127.0.0.1&nbsp;at&nbsp;2010-04-13&nbsp;12:03:18)&nbsp;&#91;GET&#93;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br />Rendering&nbsp;template&nbsp;within&nbsp;layouts/standard&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br />Rendering&nbsp;todos/index&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br /><br />ActionView::TemplateError&nbsp;(undefined&nbsp;method&nbsp;</span><span style="color: #007700">`</span><span style="color: #0000BB">recurring_target_as_text</span><span style="color: #DD0000">'&nbsp;for&nbsp;nil:NilClass)&nbsp;on&nbsp;line&nbsp;#34&nbsp;of&nbsp;app/views/todos/_todo.html.erb:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br />31:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;%=&nbsp;date_span&nbsp;-%&gt;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br />32:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;span&nbsp;class="todo.descr"&gt;&lt;%=&nbsp;h&nbsp;todo.description&nbsp;%&gt;&lt;/span&gt;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br />33:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;%&nbsp;#=&nbsp;successors_span&nbsp;%&gt;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br />34:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;%=&nbsp;image_tag_for_recurring_todo(todo)&nbsp;if&nbsp;@todo.from_recurring_todo?&nbsp;%&gt;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br />35:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;%=&nbsp;tag_list&nbsp;%&gt;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br />36:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;%=&nbsp;deferred_due_date&nbsp;%&gt;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br />37:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;%=&nbsp;project_and_context_links(&nbsp;parent_container_type,&nbsp;:suppress_context&nbsp;=&gt;&nbsp;suppress_context,&nbsp;:suppress_project&nbsp;=&gt;&nbsp;suppress_project&nbsp;)&nbsp;%&gt;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br /><br />&nbsp;&nbsp;&nbsp;&nbsp;app/helpers/application_helper.rb:159:in&nbsp;`recurrence_pattern_as_text'&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br />&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #0000BB">app</span><span style="color: #007700">/</span><span style="color: #0000BB">helpers</span><span style="color: #007700">/</span><span style="color: #0000BB">todos_helper</span><span style="color: #007700">.</span><span style="color: #0000BB">rb</span><span style="color: #007700">:</span><span style="color: #0000BB">90</span><span style="color: #007700">:</span><span style="color: #0000BB">in&nbsp;</span><span style="color: #007700">`</span><span style="color: #DD0000">image_tag_for_recurring_todo'&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br />&nbsp;&nbsp;&nbsp;&nbsp;app/views/todos/_todo.html.erb:34&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br />&nbsp;&nbsp;&nbsp;&nbsp;app/views/contexts/_context.rhtml:17:in&nbsp;</span><span style="color: #007700">`</span><span style="color: #0000BB">_run_rhtml_app47views47contexts47_context46rhtml_locals_collapsible_context_context_counter_object</span><span style="color: #DD0000">'&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br />&nbsp;&nbsp;&nbsp;&nbsp;app/views/todos/index.html.erb:4&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br />&nbsp;&nbsp;&nbsp;&nbsp;app/controllers/todos_controller.rb:889:in&nbsp;`render_todos_html'&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br />&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #0000BB">app</span><span style="color: #007700">/</span><span style="color: #0000BB">controllers</span><span style="color: #007700">/</span><span style="color: #0000BB">todos_controller</span><span style="color: #007700">.</span><span style="color: #0000BB">rb</span><span style="color: #007700">:</span><span style="color: #0000BB">20</span><span style="color: #007700">:</span><span style="color: #0000BB">in&nbsp;</span><span style="color: #007700">`</span><span style="color: #DD0000">index'&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br />&nbsp;&nbsp;&nbsp;&nbsp;/usr/lib/ruby/1.8/webrick/httpserver.rb:104:in&nbsp;</span><span style="color: #007700">`</span><span style="color: #0000BB">service</span><span style="color: #DD0000">'&nbsp;&nbsp;&nbsp;<br />&nbsp;&nbsp;&nbsp;&nbsp;/usr/lib/ruby/1.8/webrick/httpserver.rb:65:in&nbsp;`run'&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br />&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #007700">/</span><span style="color: #0000BB">usr</span><span style="color: #007700">/</span><span style="color: #0000BB">lib</span><span style="color: #007700">/</span><span style="color: #0000BB">ruby</span><span style="color: #007700">/</span><span style="color: #0000BB">1.8</span><span style="color: #007700">/</span><span style="color: #0000BB">webrick</span><span style="color: #007700">/</span><span style="color: #0000BB">server</span><span style="color: #007700">.</span><span style="color: #0000BB">rb</span><span style="color: #007700">:</span><span style="color: #0000BB">173</span><span style="color: #007700">:</span><span style="color: #0000BB">in&nbsp;</span><span style="color: #007700">`</span><span style="color: #DD0000">start_thread'&nbsp;&nbsp;<br />&nbsp;&nbsp;&nbsp;&nbsp;/usr/lib/ruby/1.8/webrick/server.rb:162:in&nbsp;</span><span style="color: #007700">`</span><span style="color: #0000BB">start</span><span style="color: #DD0000">'&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br />&nbsp;&nbsp;&nbsp;&nbsp;/usr/lib/ruby/1.8/webrick/server.rb:162:in&nbsp;`start_thread'&nbsp;&nbsp;<br />&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #007700">/</span><span style="color: #0000BB">usr</span><span style="color: #007700">/</span><span style="color: #0000BB">lib</span><span style="color: #007700">/</span><span style="color: #0000BB">ruby</span><span style="color: #007700">/</span><span style="color: #0000BB">1.8</span><span style="color: #007700">/</span><span style="color: #0000BB">webrick</span><span style="color: #007700">/</span><span style="color: #0000BB">server</span><span style="color: #007700">.</span><span style="color: #0000BB">rb</span><span style="color: #007700">:</span><span style="color: #0000BB">95</span><span style="color: #007700">:</span><span style="color: #0000BB">in&nbsp;</span><span style="color: #007700">`</span><span style="color: #DD0000">start'&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br />&nbsp;&nbsp;&nbsp;&nbsp;/usr/lib/ruby/1.8/webrick/server.rb:92:in&nbsp;</span><span style="color: #007700">`</span><span style="color: #0000BB">each</span><span style="color: #DD0000">'&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br />&nbsp;&nbsp;&nbsp;&nbsp;/usr/lib/ruby/1.8/webrick/server.rb:92:in&nbsp;`start'&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br />&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #007700">/</span><span style="color: #0000BB">usr</span><span style="color: #007700">/</span><span style="color: #0000BB">lib</span><span style="color: #007700">/</span><span style="color: #0000BB">ruby</span><span style="color: #007700">/</span><span style="color: #0000BB">1.8</span><span style="color: #007700">/</span><span style="color: #0000BB">webrick</span><span style="color: #007700">/</span><span style="color: #0000BB">server</span><span style="color: #007700">.</span><span style="color: #0000BB">rb</span><span style="color: #007700">:</span><span style="color: #0000BB">23</span><span style="color: #007700">:</span><span style="color: #0000BB">in&nbsp;</span><span style="color: #007700">`</span><span style="color: #DD0000">start'&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br />&nbsp;&nbsp;&nbsp;&nbsp;/usr/lib/ruby/1.8/webrick/server.rb:82:in&nbsp;</span><span style="color: #007700">`</span><span style="color: #0000BB">start</span><span style="color: #DD0000">'&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br /><br />Rendering&nbsp;rescues/layout&nbsp;(internal_server_error)&nbsp;</span>
+</span>
+</code></div></div>
+	
+	
+	
+</td>
+
+</tr><tr>
+
+<td class="tableCellTwo"  style="width:130px;">
+	<table cellpadding="0" cellspacing="0" border="0" width="100%">
+	<tr>
+	<td align="center"><div class="button"><div class="buttonSmall" id="d1" onclick="navJump('http://www.getontracks.org/forums/member/10217/')" onmouseover="navHover(this);" onmouseout="navReset(this);">Profile</div></div></td>
+	
+	
+
+	</tr>
+	</table>
+</td>
+
+<td class="tableCellTwo" colspan="2">
+	<table cellpadding="0" cellspacing="0" border="0">
+	<tr>
+	
+	
+	
+	
+	
+	
+		
+	
+	
+	&nbsp;
+	
+	<td>&nbsp;</td>	
+	</tr>
+	</table>
+  </td>
+ </tr>
+</table>
+
+</td>
+</tr>
+
+<tr id="e9" >
+ <td colspan="3">
+
+
+ <table class="threadBorder" cellpadding="0" cellspacing="0" border="0" style="width:100%;">
+  <tr>
+   <td class="tableRowHeadingBold" style="width:130px;"><div class="largeLinks"><a href="http://www.getontracks.org/forums/member/100/">Reinier Balt</a></div></td>
+   <td class="tableRowHeading">
+
+	<table cellpadding="0" cellspacing="0" border="0" style="width:99%;">
+	<tr>
+	<td>Posted: 14 April 2010 06:43 AM</td>
+	<td align="right">
+	
+		
+	
+	
+
+	
+	
+	&nbsp;&nbsp;<span class="smallLinks">[ <a href="http://www.getontracks.org/forums/ignore_member/100/" title="Ignore">Ignore</a> ]</span>
+	
+	&nbsp;&nbsp;<span class="smallLinks">[ <a name="1971" href="http://www.getontracks.org/forums/viewreply/1971/" title="Permalink to this post"># 4</a> ]</span>
+
+	&nbsp;
+	</td>
+	</tr>
+	</table>
+
+   </td>
+  </tr>
+<tr>
+ <td class="tableCellOne" style="width:130px;" valign="top">
+	<div class="rankMember">Sr. Member</div>
+	
+	<div class="itempad"><img src="http://www.getontracks.org/themes/forum_themes/blue/images/rank.gif" alt="Rank" class="rankImage" /><img src="http://www.getontracks.org/themes/forum_themes/blue/images/rank.gif" alt="Rank" class="rankImage" /><img src="http://www.getontracks.org/themes/forum_themes/blue/images/rank.gif" alt="Rank" class="rankImage" /><img src="http://www.getontracks.org/themes/forum_themes/blue/images/rank.gif" alt="Rank" class="rankImage" /></div>
+	<div class="userBlock">Total Posts:&nbsp; 882</div>
+	<div class="userBlock">Joined&nbsp; 2006-10-05</div>
+</td>
+<td class="tableCellOne" valign="top" colspan="2"><div class="post"><p>you are right, this is not the right place <img src="http://www.getontracks.org/images/smileys/grin.gif" width="19" height="19" alt="grin" style="border:0;" /></p>
+
+<p>Please post it to Assembla. I&#8217;ll pick up your report there. I forget to keep track on reports here.</p>
+
+<p><a href="http://www.getontracks.org/?URL=http%3A%2F%2Fwww.assembla.com%2Fspaces%2Ftracks-tickets%2Ftickets%2Fnew">http://www.assembla.com/spaces/tracks-tickets/tickets/new</a></p>
+
+<p><br />
+btw, I&#8217;m running the latest 2.0 tree myself day to day and I find it quite stable too. It&#8217;s the best way to get reports <img src="http://www.getontracks.org/images/smileys/grin.gif" width="19" height="19" alt="grin" style="border:0;" /></p></div>
+	
+	
+	
+</td>
+
+</tr><tr>
+
+<td class="tableCellTwo"  style="width:130px;">
+	<table cellpadding="0" cellspacing="0" border="0" width="100%">
+	<tr>
+	<td align="center"><div class="button"><div class="buttonSmall" id="e1" onclick="navJump('http://www.getontracks.org/forums/member/100/')" onmouseover="navHover(this);" onmouseout="navReset(this);">Profile</div></div></td>
+	
+	
+
+	</tr>
+	</table>
+</td>
+
+<td class="tableCellTwo" colspan="2">
+	<table cellpadding="0" cellspacing="0" border="0">
+	<tr>
+	
+	
+	
+	
+	
+	
+		
+	
+	
+	&nbsp;
+	
+	<td>&nbsp;</td>	
+	</tr>
+	</table>
+  </td>
+ </tr>
+</table>
+
+</td>
+</tr>
+
+<tr id="f9" >
+ <td colspan="3">
+
+
+ <table class="threadBorder" cellpadding="0" cellspacing="0" border="0" style="width:100%;">
+  <tr>
+   <td class="tableRowHeadingBold" style="width:130px;"><div class="largeLinks"><a href="http://www.getontracks.org/forums/member/100/">Reinier Balt</a></div></td>
+   <td class="tableRowHeading">
+
+	<table cellpadding="0" cellspacing="0" border="0" style="width:99%;">
+	<tr>
+	<td>Posted: 14 April 2010 07:24 AM</td>
+	<td align="right">
+	
+		
+	
+	
+
+	
+	
+	&nbsp;&nbsp;<span class="smallLinks">[ <a href="http://www.getontracks.org/forums/ignore_member/100/" title="Ignore">Ignore</a> ]</span>
+	
+	&nbsp;&nbsp;<span class="smallLinks">[ <a name="1972" href="http://www.getontracks.org/forums/viewreply/1972/" title="Permalink to this post"># 5</a> ]</span>
+
+	&nbsp;
+	</td>
+	</tr>
+	</table>
+
+   </td>
+  </tr>
+<tr>
+ <td class="tableCellOne" style="width:130px;" valign="top">
+	<div class="rankMember">Sr. Member</div>
+	
+	<div class="itempad"><img src="http://www.getontracks.org/themes/forum_themes/blue/images/rank.gif" alt="Rank" class="rankImage" /><img src="http://www.getontracks.org/themes/forum_themes/blue/images/rank.gif" alt="Rank" class="rankImage" /><img src="http://www.getontracks.org/themes/forum_themes/blue/images/rank.gif" alt="Rank" class="rankImage" /><img src="http://www.getontracks.org/themes/forum_themes/blue/images/rank.gif" alt="Rank" class="rankImage" /></div>
+	<div class="userBlock">Total Posts:&nbsp; 882</div>
+	<div class="userBlock">Joined&nbsp; 2006-10-05</div>
+</td>
+<td class="tableCellOne" valign="top" colspan="2"><div class="post"><p>I found you probably hit a javascript error when editing the recurring todo. This caused invalid data to be posted to Tracks. The invalid data causes the error you pasted above. I think you&#8217;ll see the error to if you go to your recurring todos page&#8230;</p>
+
+<p>I fixed the last bug where your invalid data causes tracks to crash. I hope Eric will fix the javascript error.</p>
+
+<p>So, update to the latest tracks and try to edit the recurring todo. Just check all fields before submitting the form.</p>
+
+<p>Sorry for the inconvenience. And sorry for the last line of my previous post. It is not correct <img src="http://www.getontracks.org/images/smileys/grin.gif" width="19" height="19" alt="grin" style="border:0;" /></p></div>
+	
+	
+	
+</td>
+
+</tr><tr>
+
+<td class="tableCellTwo"  style="width:130px;">
+	<table cellpadding="0" cellspacing="0" border="0" width="100%">
+	<tr>
+	<td align="center"><div class="button"><div class="buttonSmall" id="f1" onclick="navJump('http://www.getontracks.org/forums/member/100/')" onmouseover="navHover(this);" onmouseout="navReset(this);">Profile</div></div></td>
+	
+	
+
+	</tr>
+	</table>
+</td>
+
+<td class="tableCellTwo" colspan="2">
+	<table cellpadding="0" cellspacing="0" border="0">
+	<tr>
+	
+	
+	
+	
+	
+	
+		
+	
+	
+	&nbsp;
+	
+	<td>&nbsp;</td>	
+	</tr>
+	</table>
+  </td>
+ </tr>
+</table>
+
+</td>
+</tr>
+
+<tr id="g9" >
+ <td colspan="3">
+
+
+ <table class="threadBorder" cellpadding="0" cellspacing="0" border="0" style="width:100%;">
+  <tr>
+   <td class="tableRowHeadingBold" style="width:130px;"><div class="largeLinks"><a href="http://www.getontracks.org/forums/member/100/">Reinier Balt</a></div></td>
+   <td class="tableRowHeading">
+
+	<table cellpadding="0" cellspacing="0" border="0" style="width:99%;">
+	<tr>
+	<td>Posted: 14 April 2010 07:25 AM</td>
+	<td align="right">
+	
+		
+	
+	
+
+	
+	
+	&nbsp;&nbsp;<span class="smallLinks">[ <a href="http://www.getontracks.org/forums/ignore_member/100/" title="Ignore">Ignore</a> ]</span>
+	
+	&nbsp;&nbsp;<span class="smallLinks">[ <a name="1973" href="http://www.getontracks.org/forums/viewreply/1973/" title="Permalink to this post"># 6</a> ]</span>
+
+	&nbsp;
+	</td>
+	</tr>
+	</table>
+
+   </td>
+  </tr>
+<tr>
+ <td class="tableCellOne" style="width:130px;" valign="top">
+	<div class="rankMember">Sr. Member</div>
+	
+	<div class="itempad"><img src="http://www.getontracks.org/themes/forum_themes/blue/images/rank.gif" alt="Rank" class="rankImage" /><img src="http://www.getontracks.org/themes/forum_themes/blue/images/rank.gif" alt="Rank" class="rankImage" /><img src="http://www.getontracks.org/themes/forum_themes/blue/images/rank.gif" alt="Rank" class="rankImage" /><img src="http://www.getontracks.org/themes/forum_themes/blue/images/rank.gif" alt="Rank" class="rankImage" /></div>
+	<div class="userBlock">Total Posts:&nbsp; 882</div>
+	<div class="userBlock">Joined&nbsp; 2006-10-05</div>
+</td>
+<td class="tableCellOne" valign="top" colspan="2"><div class="post"><p>Oh, you don&#8217;t have to post your bug to assembla since this part is fixed. I put a ticket in assembla for that.</p></div>
+	
+	
+	
+</td>
+
+</tr><tr>
+
+<td class="tableCellTwo"  style="width:130px;">
+	<table cellpadding="0" cellspacing="0" border="0" width="100%">
+	<tr>
+	<td align="center"><div class="button"><div class="buttonSmall" id="g1" onclick="navJump('http://www.getontracks.org/forums/member/100/')" onmouseover="navHover(this);" onmouseout="navReset(this);">Profile</div></div></td>
+	
+	
+
+	</tr>
+	</table>
+</td>
+
+<td class="tableCellTwo" colspan="2">
+	<table cellpadding="0" cellspacing="0" border="0">
+	<tr>
+	
+	
+	
+	
+	
+	
+		
+	
+	
+	&nbsp;
+	
+	<td>&nbsp;</td>	
+	</tr>
+	</table>
+  </td>
+ </tr>
+</table>
+
+</td>
+</tr>
+
+<tr id="h9" >
+ <td colspan="3">
+
+
+ <table class="threadBorder" cellpadding="0" cellspacing="0" border="0" style="width:100%;">
+  <tr>
+   <td class="tableRowHeadingBold" style="width:130px;"><div class="largeLinks"><a href="http://www.getontracks.org/forums/member/10217/">benvdh</a></div></td>
+   <td class="tableRowHeading">
+
+	<table cellpadding="0" cellspacing="0" border="0" style="width:99%;">
+	<tr>
+	<td>Posted: 14 April 2010 07:50 AM</td>
+	<td align="right">
+	
+		
+	
+	
+
+	
+	
+	&nbsp;&nbsp;<span class="smallLinks">[ <a href="http://www.getontracks.org/forums/ignore_member/10217/" title="Ignore">Ignore</a> ]</span>
+	
+	&nbsp;&nbsp;<span class="smallLinks">[ <a name="1974" href="http://www.getontracks.org/forums/viewreply/1974/" title="Permalink to this post"># 7</a> ]</span>
+
+	&nbsp;
+	</td>
+	</tr>
+	</table>
+
+   </td>
+  </tr>
+<tr>
+ <td class="tableCellOne" style="width:130px;" valign="top">
+	<div class="rankMember">Newbie</div>
+	
+	<div class="itempad"><img src="http://www.getontracks.org/themes/forum_themes/blue/images/rank.gif" alt="Rank" class="rankImage" /></div>
+	<div class="userBlock">Total Posts:&nbsp; 5</div>
+	<div class="userBlock">Joined&nbsp; 2010-04-13</div>
+</td>
+<td class="tableCellOne" valign="top" colspan="2"><div class="post"><p>Hey,</p>
+
+<p>I just upgraded but it didn&#8217;t directly fixed the problem. So I decided to have a look in the database and found that my todo was in the todos table and that it referred to the recurring_todos table, but when I looked in that table there was no entry for the recurring todo there. I don&#8217;t know if that is a seperate bug, but when I deleted the entry from the todo table suddenly tracks started working again.</p>
+
+<p>Thanks for helping me out btw.</p>
+
+<p>Kind regards,</p>
+
+<p>Ben</p></div>
+	
+	
+	
+</td>
+
+</tr><tr>
+
+<td class="tableCellTwo"  style="width:130px;">
+	<table cellpadding="0" cellspacing="0" border="0" width="100%">
+	<tr>
+	<td align="center"><div class="button"><div class="buttonSmall" id="h1" onclick="navJump('http://www.getontracks.org/forums/member/10217/')" onmouseover="navHover(this);" onmouseout="navReset(this);">Profile</div></div></td>
+	
+	
+
+	</tr>
+	</table>
+</td>
+
+<td class="tableCellTwo" colspan="2">
+	<table cellpadding="0" cellspacing="0" border="0">
+	<tr>
+	
+	
+	
+	
+	
+	
+		
+	
+	
+	&nbsp;
+	
+	<td>&nbsp;</td>	
+	</tr>
+	</table>
+  </td>
+ </tr>
+</table>
+
+</td>
+</tr>
+
+<tr id="i9" >
+ <td colspan="3">
+
+
+ <table class="threadBorder" cellpadding="0" cellspacing="0" border="0" style="width:100%;">
+  <tr>
+   <td class="tableRowHeadingBold" style="width:130px;"><div class="largeLinks"><a href="http://www.getontracks.org/forums/member/100/">Reinier Balt</a></div></td>
+   <td class="tableRowHeading">
+
+	<table cellpadding="0" cellspacing="0" border="0" style="width:99%;">
+	<tr>
+	<td>Posted: 14 April 2010 03:26 PM</td>
+	<td align="right">
+	
+		
+	
+	
+
+	
+	
+	&nbsp;&nbsp;<span class="smallLinks">[ <a href="http://www.getontracks.org/forums/ignore_member/100/" title="Ignore">Ignore</a> ]</span>
+	
+	&nbsp;&nbsp;<span class="smallLinks">[ <a name="1975" href="http://www.getontracks.org/forums/viewreply/1975/" title="Permalink to this post"># 8</a> ]</span>
+
+	&nbsp;
+	</td>
+	</tr>
+	</table>
+
+   </td>
+  </tr>
+<tr>
+ <td class="tableCellOne" style="width:130px;" valign="top">
+	<div class="rankMember">Sr. Member</div>
+	
+	<div class="itempad"><img src="http://www.getontracks.org/themes/forum_themes/blue/images/rank.gif" alt="Rank" class="rankImage" /><img src="http://www.getontracks.org/themes/forum_themes/blue/images/rank.gif" alt="Rank" class="rankImage" /><img src="http://www.getontracks.org/themes/forum_themes/blue/images/rank.gif" alt="Rank" class="rankImage" /><img src="http://www.getontracks.org/themes/forum_themes/blue/images/rank.gif" alt="Rank" class="rankImage" /></div>
+	<div class="userBlock">Total Posts:&nbsp; 882</div>
+	<div class="userBlock">Joined&nbsp; 2006-10-05</div>
+</td>
+<td class="tableCellOne" valign="top" colspan="2"><div class="post"><p>hmm, something went definitely wrong there <img src="http://www.getontracks.org/images/smileys/grin.gif" width="19" height="19" alt="grin" style="border:0;" /> I think if we fix the javascript issue, this won&#8217;t happen again, but please report it if it does.</p></div>
+	
+	
+	
+</td>
+
+</tr><tr>
+
+<td class="tableCellTwo"  style="width:130px;">
+	<table cellpadding="0" cellspacing="0" border="0" width="100%">
+	<tr>
+	<td align="center"><div class="button"><div class="buttonSmall" id="i1" onclick="navJump('http://www.getontracks.org/forums/member/100/')" onmouseover="navHover(this);" onmouseout="navReset(this);">Profile</div></div></td>
+	
+	
+
+	</tr>
+	</table>
+</td>
+
+<td class="tableCellTwo" colspan="2">
+	<table cellpadding="0" cellspacing="0" border="0">
+	<tr>
+	
+	
+	
+	
+	
+	
+		
+	
+	
+	&nbsp;
+	
+	<td>&nbsp;</td>	
+	</tr>
+	</table>
+  </td>
+ </tr>
+</table>
+
+</td>
+</tr>
+
+</table>
+
+<table cellpadding="0" cellspacing="0" border="0" style="width:100%;">
+<tr>
+<td valign="middle" style="width:70%;">
+
+&nbsp;
+
+</td>
+&nbsp;
+
+&nbsp;
+
+</tr>
+</table>
+
+&nbsp;
+
+
+<div class="defaultCenter">
+<div class="marginpad">
+
+
+&lsaquo;&lsaquo; <a href="http://www.getontracks.org/forums/viewthread/545/">password error/missing</a> 
+
+
+
+&nbsp;&nbsp;&nbsp;&nbsp; <a href="http://www.getontracks.org/forums/viewthread/551/">Error while creating user with ldap backend</a> &rsaquo;&rsaquo;
+
+
+</div>
+</div>
+</div>
+<div id="footer">
+
+	
+	<div id="switcher">Select A Theme 
+		<select name="theme_switcher" class="select" onchange="if (this.value != '') location.href=this.value">
+			<option value="http://www.getontracks.org/?ACT=42&amp;board_id=1&amp;theme=grey">Grey</option>
+<option value="http://www.getontracks.org/?ACT=42&amp;board_id=1&amp;theme=developer">Developer</option>
+<option value="http://www.getontracks.org/?ACT=42&amp;board_id=1&amp;theme=shares">Shares</option>
+<option value="http://www.getontracks.org/?ACT=42&amp;board_id=1&amp;theme=blue" selected="selected">Blue</option>
+<option value="http://www.getontracks.org/?ACT=42&amp;board_id=1&amp;theme=default">Default</option>
+
+		</select>
+	</div><!--switcher-->
+	
+
+	<ul class="credits">
+		<li>Powered By <a href="http://expressionengine.com/">ExpressionEngine</a></li>
+		<li>Template Design By <a href="http://artificialmemory.com/" title="Nathaniel Davis">Artificial Memory</a></li>
+        </ul>
+        <ul class="stats">
+		<li>ExpressionEngine Discussion Forum - version 3.1.5 (20110630)</li>
+		<li>Script Executed in 0.1556 seconds</li>
+	</ul>
+	
+	
+	<ul class="feeds">
+		<li><a href="http://www.getontracks.org/forums/rss/11/"><img src="http://www.getontracks.org/themes/forum_themes/blue/images/feed_rss.jpg" alt="RSS 2.0" title="RSS 2.0" /></a></li>
+		<li><a href="http://www.getontracks.org/forums/atom/11/"><img src="http://www.getontracks.org/themes/forum_themes/blue/images/feed_atom.jpg" alt="Atom Feed" title="Atom Feed" /></a></li>
+	</ul>
+	
+
+</div><!--footer-->
+</div><!--wrapper-->
+</body>
+</html>

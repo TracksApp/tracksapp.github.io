@@ -1,0 +1,2581 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<title>Tracks | Where Tracks is failing to implement GTD</title>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<meta name='MSSmartTagsPreventParsing' content='TRUE' />
+<meta http-equiv='expires' content='-1' />
+<meta http-equiv= 'pragma' content='no-cache' />
+<meta name='robots' content='all' />
+
+<link rel="alternate" type="application/atom+xml" title="Atom Feed" href="http://www.getontracks.org/forums/atom/12/" />
+<link rel="alternate" type="application/rss+xml" title="RSS 2.0" href="http://www.getontracks.org/forums/rss/12/" />
+
+<script type="text/javascript"> 
+<!--
+
+function navHover(which)
+{					
+	if (document.getElementById(which.id))
+	{
+		cur = document.getElementById(which.id).className;
+		
+		if (cur == 'buttonLarge')
+		{
+			document.getElementById(which.id).className = 'buttonLargeHover'
+		}
+		else if (cur == 'buttonSmall')
+		{
+			document.getElementById(which.id).className = 'buttonSmallHover'
+		}
+	}
+}
+
+function navReset(which)
+{					
+	if (document.getElementById(which.id))
+	{
+		cur = document.getElementById(which.id).className;
+		
+		if (cur == 'buttonLargeHover')
+		{
+			document.getElementById(which.id).className = 'buttonLarge'
+		}
+		else if (cur == 'buttonSmallHover')
+		{
+			document.getElementById(which.id).className = 'buttonSmall'
+		}
+	}
+}
+
+
+function navJump(where)
+{
+	window.location=where;
+}
+-->
+</script>
+
+
+<style type='text/css'>
+
+
+* {
+	margin: 0;
+	padding: 0;
+	}
+body {
+	font: 78% Helvetica, Arial, sans-serif;
+	text-align: center;
+	color: #036;
+	background: #344;
+    line-height:1.4em;
+	}
+#wrapper {
+	text-align: left;
+	min-width: 760px;
+	margin: .5em 2em;
+	color: #fff;
+	background: #036 url(http://www.getontracks.org/themes/forum_themes/blue/images/background.gif) 50% 0% repeat-y;
+	border: 6px solid #233;
+	}
+#content {
+	padding: .5em 1.5% 0 1.5%;
+	border-right: 3px solid #047;
+	border-left: 3px solid #047;
+	}
+#content ul {
+	list-style: none;
+	line-height: 1.5em;
+	margin: .25em 0;
+}
+p {
+	margin: 0 10px;
+	line-height:1.4em;
+	}
+a:link {
+	color: #adf;
+	border: none;
+    }
+a:visited {
+	color: #ccc;
+	}
+a:hover, a:active {
+	text-decoration: none;
+	}
+#topbar a, #footer a, #subhead a {
+	text-decoration: none;
+	padding: .25em .5em;
+	}
+#topbar a:hover, #footer a:hover, #subhead a:hover {
+	background: #047;
+	}
+h1, h2, h3, h4, h5, h6 {
+	font-weight: bold;
+	}
+h2 {
+	font-size: 2em;
+	}
+hr.clear {
+	clear: both;
+	margin: 0;
+	padding: 0;
+	visibility: hidden;
+	border: none;
+	}
+img {
+	border: none;
+	}
+#address_book, #address_book td, #emoticons
+	{
+		background: #3cf;
+	}
+#emoticons a, #address_book a
+	{
+		color: #00f;
+		padding: 3px;
+	}
+div#topbar {
+	padding: .5em 1.5%;
+	border-top: 3px solid #047;
+	border-right: 3px solid #047;
+	border-left: 3px solid #047;
+	background: #025 url(http://www.getontracks.org/themes/forum_themes/blue/images/background-dk.gif) 50% 0% repeat-y;
+	}
+#topbar ul {
+	float: left;
+	display: inline;
+	text-align: left;
+	list-style: none;
+	line-height: 1em;
+	font-size: 1em;
+	display: inline;
+	}
+#topbar ul li {
+	display: inline;
+	margin-right: .5em;
+	}
+#topbar form {	
+	text-align: right;
+	}
+#topbar form fieldset {
+	padding-bottom: .5em;
+	}
+#topbar form input {
+	margin: 0 .25em;
+	}
+#topbar form div {
+	display: none;
+	}
+#header {  
+	clear: both;
+	padding: .5em 1.5% 0 1.5%;
+	border-right: 3px solid #047;
+	border-bottom: 1px solid #047;
+	border-left: 3px solid #047;
+	background: #025 url(http://www.getontracks.org/themes/forum_themes/blue/images/background-dk.gif) 50% 0% repeat-y;
+	}
+#header h1 {
+	float: left;
+ 	display: inline;
+ 	text-transform: uppercase;
+	font-weight: normal;
+	font-size: 2.5em;
+	line-height: 1em;
+	}
+#header h1 a {
+	color: #69c;
+	text-decoration: none;
+	}
+#header h1 a:hover {
+	color:#adf;			
+    }
+#header form {
+	text-align: right;
+	padding: .25em;
+	}
+#header form input {
+	width: 8em;
+	}
+#header form .submit {
+	width: 5em;
+	margin: 0 .5em;
+	}
+#header form div {
+	display: none;
+	}
+#subhead {  
+	clear: both;
+	padding: .5em 1.5%;
+	border-right: 3px solid #047;
+	border-left: 3px solid #047;	
+	background: #025 url(http://www.getontracks.org/themes/forum_themes/blue/images/background-dk.gif) 50% 0% repeat-y;
+	}
+div.breadcrumb {
+	display: inline;
+	}
+.currentcrumb {
+	font-weight: bold;
+	}
+ul.forumnav {
+	list-style: none;
+	margin-bottom: 1em;
+	}
+ul.forumnav li {
+	display: inline;
+	margin-right: 1em;
+	}
+ul.forumnav li a {
+	padding: .25em .5em;
+	text-decoration: none;
+	}
+ul.forumnav li a:hover {
+	background: #025;
+	}
+#footer {
+	clear: both;
+	padding: 1.5%;
+	text-align: center;
+	font-size: .9em;
+	color: #69c;
+	border-top: 1px solid #047;
+	border-right: 3px solid #047;
+	border-bottom: 3px solid #047;
+	border-left: 3px solid #047;
+	background: #025 url(http://www.getontracks.org/themes/forum_themes/blue/images/background-dk.gif) 50% 0% repeat-y;
+	}
+#footer a {
+	font-weight: bold;
+	}
+#footer ul {
+	list-style: none;
+	line-height: 1.5em;
+	margin: .25em 0;
+	}
+#footer ul li {
+	display: inline;
+	padding: .5em;
+	}
+#footer select {
+	margin: .5em;
+	}
+.forumName {
+	letter-spacing:    .1em;
+	}
+.forumDescription {
+	padding:           3px 0 0 0;
+	}
+.forumLightLinks {
+	padding:           4px 0 2px 0;
+	}
+.topicTitle {
+	letter-spacing:    .1em;
+	}
+.userBlock {
+	padding:	2px 0 2px 0;
+	}
+.spacer {
+	height: .5em;
+	margin-bottom: 1em;
+	}
+.itempad {
+	padding: 2px 0 2px 0;
+	}
+.itempadbig {
+	padding: 5px 0 5px 0;
+	}
+.bottompad {
+	padding: 0 0 2px 0;
+	}
+.marginpad {
+	margin: 12px 0 10px 3px;
+	}
+.leftpad {
+ 	padding: 0 0 0 4px;
+	}
+table {
+	border-collapse: collapse;
+	}
+.legend {
+	margin-top: 1em;
+	padding: .5em 0;
+	background: #036;
+	}
+.tableBorder {
+	padding: 0;
+	margin-top: 1px;
+	margin-bottom: 3px;
+	}
+.tablePad {
+	padding:  0 2px 4px 2px;
+	}
+.tableHeading {
+	letter-spacing: .1em;
+	font-size: 1.1em;
+	font-weight: bold;
+	text-transform: uppercase;
+	color: #69c;
+	white-space: nowrap;
+	margin: 1em 0 0 0;
+	}
+.tableHeadingSmall {
+	font-size: .9em;
+	color: #69c;
+	white-space: nowrap;
+	margin: 0 0 .5em 0;
+	}
+.tableHeadingBG {
+	background: #036;
+	border-top: 1px solid #025;
+	font-size: 1em;
+	padding: 1em .5em 0 .5em;
+	}
+.tableRowHeading, .tableRowHeadingBold {
+	padding: .25em .5em;
+	border-bottom: 1px solid #025;
+	background: #047;
+	color: #69c;
+	font-size: .8em;
+	text-transform: uppercase;
+	letter-spacing: .2em;
+	}
+.tableRowSpacer {
+	}
+.threadBorder {
+	border: 1px solid #025;
+	margin: 1em 0;
+	padding: .25em 0;
+	}
+.tableCellOne {
+	padding:           3px 6px 3px 6px;
+	}
+.tableCellTwo {
+	padding:           3px 6px 3px 6px;
+	}
+.tablePostInfo {
+	margin-bottom: .75em;
+	}
+.ignored {
+	border: 1px solid #69c;
+	padding: 0;
+	margin-top: 1px;
+	margin-bottom: 3px;
+	}
+.button {
+	width: 80px;
+	background-color: transparent;
+	}
+.button40 {
+	width: 40px;
+	background-color: transparent;
+	}
+.button80 {
+	width: 80px;
+	background-color: transparent;
+	}
+.button100 {
+	width: 100px;
+	background-color: transparent;
+	}
+.button150 {
+	width: 150px;
+	background-color: transparent;
+	}
+.button210 {
+	width: 210px;
+	background-color: transparent;
+	}
+.buttonSpacer{
+	margin:	0 0 0 6px;
+	}
+.buttonLarge {
+	background: #025 url(http://www.getontracks.org/themes/forum_themes/blue/images/background-dk.gif) 50% 50% repeat-y;
+	border: 1px solid #69c;
+	text-transform: uppercase;
+	text-align: center;
+	color: #fff;
+	font-weight: bold;
+	padding: 2px 4px 2px 4px;
+	margin: .25em 0 .25em 0;
+	white-space: nowrap;
+	cursor: pointer;
+	}
+.buttonLargeHover {
+	background: #047 url(http://www.getontracks.org/themes/forum_themes/blue/images/background-lt.gif) 50% 50% repeat-y;
+	border: 1px solid #69c;
+	text-transform: uppercase;
+	text-align: center;
+	color: #fff;
+	font-weight: bold;
+	padding: 2px 4px 2px 4px;
+	margin: .25em 0 .25em 0;
+	white-space: nowrap;
+	cursor: pointer;
+	}
+.buttonSmall {
+	border: 1px solid #69c;
+	font-size: .9em;
+	text-transform: uppercase;
+	text-align:	center;
+	color: #69c;
+	padding: 0px 1px 0px 1px;
+	margin: 0 2px 0 2px;
+	white-space: nowrap;
+	cursor: pointer;
+	}
+.buttonSmallHover {
+	background: #047 url(http://www.getontracks.org/themes/forum_themes/blue/images/background-lt.gif) 50% 50% repeat-y;
+	border: 1px solid #69c;
+	font-size: .9em;
+	text-transform: uppercase;
+	text-align:	center;
+	color: #fff;
+	padding: 0px 1px 0px 1px;
+	margin: 0 2px 0 2px;
+	white-space: nowrap;
+	cursor: pointer;
+	}
+.rankAdmin, .rankModerator, .rankMember {
+	font-weight: bold;
+	color: #69c;
+	padding: 2px 0 3px 0;
+	}
+.rankImage {
+	margin: 0;
+	padding: 0;
+	border:  0;
+	}
+.userBlock {
+	color: #69c;
+	}
+.post {
+	margin: 1em 0;
+	line-height: 1.5em;
+	}
+.edited {
+	font-size:		9px;
+	color:			#69c;
+}
+code {
+	white-space: normal;
+	}
+pre {
+	background: #def;
+	border: 1px solid #69c;
+	color: #69c;
+	margin: 8px 2px 10px 6px;
+	padding: 10px 10px 10px 6px;
+	white-space: normal;
+	}
+.codeblock {
+	background: #def;
+	border: 1px solid #69c;
+	color: #69c;
+	margin: 8px 4px 10px 3px;
+	padding: 10px 10px 10px 6px;
+	}
+blockquote {
+	background: #036;
+	border:	1px solid #69c;
+	color: #69c;
+	margin: 8px 2px 10px 6px;
+	padding: 5px 10px 10px 6px;
+	}
+.quote_author {
+	font-weight: bold;
+	color: #69c;
+	margin:	0 0 4px 0;
+	background-color: transparent;
+	}
+.signature {
+	margin: 1em .5em .5em .5em;
+	padding: .25em;
+	border: 1px solid #69c;
+	}
+.signatureTitle {
+	color: #69c;
+	}
+.buttonMode {
+	white-space: 		nowrap;
+	}
+.htmlButtonOuter, .htmlButtonOuterL {
+	padding:           0;
+	border-top:        #025 1px solid;
+	border-right:      #025 1px solid;
+	border-bottom:     #025 1px solid;
+	}
+.htmlButtonOuterL  {
+	border-left:       #025 1px solid;
+	}
+.htmlButtonInner {
+	background-color:  transparent; 
+	text-align:		center;
+	padding:			0 3px 0 3px;
+	}
+.htmlButtonOff {
+	padding:           1px 2px 2px 2px;
+	white-space:       nowrap;
+	}
+.htmlButtonOff a:link { 
+	color:             #69c;
+	text-decoration:   none;
+	white-space:       nowrap;
+	}
+.htmlButtonOff  a:visited { 
+	text-decoration:   none;
+	}
+.htmlButtonOff a:active { 
+	text-decoration:   none;
+	color:             #fff;
+	}
+.htmlButtonOff a:hover { 
+	text-decoration:   none;
+	background:        #047;
+	color:             #fff;
+	}
+.htmlButtonOn {
+	background:        #047;
+	padding:           1px 2px 2px 2px;
+	white-space:       nowrap;
+	}
+.htmlButtonOn a:link { 
+	color:             #990000;
+	text-decoration:   none;
+	white-space:       nowrap;
+	}
+.htmlButtonOn  a:visited { 
+	text-decoration:   none;
+	}
+.htmlButtonOn a:active { 
+	text-decoration:   none;
+	color:             #999;
+	}
+.htmlButtonOn a:hover { 
+	color:             #999;
+	text-decoration:   none;
+	}
+.attachTitle {
+	font-weight:		bold;
+	color:             #fff;
+	padding:           4px;
+	margin:			10px 0 1px 0;
+	}
+.attachBody {
+	padding:           4px;
+	margin-bottom:		10px;
+	}
+.attachThumb {
+	margin: 3px 6px 3px 3px;
+	border: 1px solid 	#025;
+	}
+.preview {
+	padding:           10px;
+	margin:			0 0 12px 0;
+	border:       		1px solid #025;
+	}
+.previewheading {
+	font-weight:		bold;
+	color: #69c;
+	text-transform: uppercase;
+	padding:           5px 0 5px 10px;
+	border-top:     	1px solid #025;
+	border-right:     	1px solid #025;
+	border-left:     	1px solid #025;
+	}
+.activeModerator {
+	font-weight: bold;
+	}
+form {
+	margin:            0;
+	padding:           0;
+	border:            0;
+	}
+fieldset {
+	border: none;
+	}
+.hidden {
+	margin:            0;
+	padding:           0;
+	border:            0;
+	}
+.input {
+	border:        1px solid #69c;
+	color:             #69c;
+	height:            1.5em;
+	padding:           0;
+	margin:        	0;
+	}
+.textarea {
+	border:        1px solid #69c;
+	color:             #333;
+	font-size:         11px;
+	padding:           0;
+	margin:        	0;
+	}
+.select {
+	background-color:  #fff;
+	font-weight:       normal;
+	letter-spacing:    .1em;
+	color:             #333;
+	margin-top:        2px;
+	margin-bottom:     2px;
+	}
+.multiselect {
+	border:        1px solid #69c;
+	background-color:  #fff;
+	color:             #333;
+	font-size:         11px;
+	margin-top:        2px;
+	margin-top:        2px;
+	}
+.radio {
+	background-color:  transparent;
+	margin-top:        4px;
+	margin-bottom:     4px;
+	padding:           0;
+	border:            0;
+	}
+.checkbox {
+	background-color:  transparent;
+	padding:           0;
+	border:            0;
+	}
+.buttons {
+	font-weight:       bold;
+	border:        1px solid #69c;
+	letter-spacing:    .1em;
+	margin:        	0;
+	padding:			1px 6px 3px 6px;
+	color:             #69c;
+	background: #025;
+	cursor: pointer;
+	}
+.submit {
+	font-weight:       normal;
+	border:        1px solid #69c;
+	letter-spacing:    .1em;
+	margin:        	0;
+	padding:			1px 4px 1px 4px;
+	color:             #69c;
+	background: #025;
+	cursor: pointer;
+	}
+.errorHeading {
+	background: 		#025;
+	color:             #fff;
+	padding:           6px 6px 6px 6px;
+	border-bottom:     1px solid #fff;
+	letter-spacing:    .1em;
+	font-weight:		bold;
+	}
+.errorMessage {
+	color:             #f00;
+	padding:           10px 0 10px 0;
+	}
+.errorBox {
+	color: #f00;
+	padding: 10px;
+	margin: 0 0 12px 0;
+	border: 1px solid #f00;
+	background: #fcc;
+	}
+.alert {
+	color:             #f00;
+	font-weight:		bold;
+	}
+.highlight {
+	color:             #f00;
+	}
+.profileTitle {
+	font-size: 1.5em;
+	font-weight: bold;
+	margin: .5em 0;
+	}
+.memberlistHead {
+	padding: .25em .5em;
+	border-bottom: 1px solid #025;
+ 	background: #047;
+	color: #69c;
+	font-size: .8em;
+	text-transform: uppercase;
+	}
+.memberlistRowOne {
+	padding: .5em;
+	background: #047;
+	}
+.memberlistRowTwo {
+	padding: .5em;
+	}
+.memberlistFooter {
+	padding: 1em .5em;
+	}
+.profileHeadingBG {
+	background: #036;
+	padding:           6px 6px 6px 6px;
+	border-bottom:     #025 1px solid;
+	}
+.profileTopBox {
+	margin:		0;
+	padding:		7px 5px 5px 5px;
+	}
+.profileTitle {
+	font-weight:		bold;
+	padding: 			3px 5px 3px 0;
+	margin:			0;
+	background-color: transparent;  
+	}
+.profileItem {
+	background:		transparent;
+	margin: 			2px 0 2px 0;
+	background-color: transparent;  
+	}
+.profilePhoto {
+	padding:			1px 1px 1px 20px;
+	margin-top:        1px;
+	margin-bottom:     3px;
+	}
+.avatar {
+	background:	transparent;
+	margin:		3px 14px 0 3px;
+	}
+.photo {
+	background:	transparent;
+	margin:		6px 14px 0 3px;
+	}
+.profileHead {
+	font-weight:		bold;
+	text-transform:	uppercase;
+	padding:			3px 4px 3px 10px;  
+	margin:			0 0 0 0;
+	}
+.menuHeadingBG {
+	background: #036;
+	padding:           6px 6px 6px 6px;
+	}
+.profileMenu {
+	background: 		#036;
+	border:            1px solid #025;
+	padding:			1px;
+	margin-top:        1px;
+	margin-bottom:     3px;
+	}
+.profileMenuInner {
+	padding-left:		10px;
+	padding-right:		8px;
+	margin-bottom:		4px;
+	margin-top:		4px;
+	}
+.menuItem {
+	padding:			3px 0 3px 0;
+	background-color:	transparent;  
+	}
+.borderTopBot {
+	border-top:	1px solid #025;
+	border-bottom:	1px solid #025;
+	}
+.borderBot {
+	border-bottom:	1px solid #025;
+	}
+.success {
+	font-weight:		bold;
+	padding:			3px 0 3px 0;
+	background-color:	transparent; 
+	}
+.innerShade {
+	background-color:	#036;
+	margin:			0;
+	padding:			10px;
+	}
+.searchBox {
+	background: transparent;
+	margin: 16px 0 0 0;
+	padding: 8px 5px 5px 5px;
+	}
+.searchBoxTitle {
+	font-weight: bold;
+	background-color: transparent;  
+	}
+.searchpad {
+	padding: 6px 0 8px 0;
+	}
+.searchspacer {
+	margin-bottom: 6px;
+	}
+.iframe {
+	border:1px solid #025;
+	background: #def;
+	color: #036;
+	}
+.wordSuggestion {
+	border: 1px solid #036; 
+	padding: 4px; 
+	background: #def;
+	color: #036;
+	}
+.wordSuggestion a, .wordSuggestion a:active {
+	color: #036;
+	cursor: pointer;
+	}
+.spellchecked_word {
+	cursor: pointer;
+	background-color: #def;
+	color:#036;
+	border-bottom: 1px dashed #036;
+	}
+.spellchecked_word_selected {
+	cursor: pointer;
+	background-color: #69c;
+	}
+</style>
+
+</head>
+
+<body >
+<div id="wrapper">
+<div id='topbar'>
+	<ul>
+		
+		<li class="welcome">Welcome Guest</li>
+		<li><a href="http://www.getontracks.org/forums/member/login/">Login</a></li>
+		<li>REGISTRATION CLOSED: please use <a href="http://lists.rousette.org.uk/mailman/listinfo/tracks-discuss">mailing list</a></li>
+		
+		
+	</ul>
+     
+     <form method="post" action="http://www.getontracks.org/"  >
+<div class='hiddenFields'>
+<input type="hidden" name="XID" value="3536637fd30a5eeca041c63c7824df23498603ab" />
+<input type="hidden" name="ACT" value="9" />
+<input type="hidden" name="FROM" value="forum" />
+<input type="hidden" name="mbase" value="http://www.getontracks.org/forums/member/" />
+<input type="hidden" name="board_id" value="1" />
+<input type="hidden" name="anon" value="1" />
+<input type="hidden" name="RET" value="http://www.getontracks.org/forums/viewthread/258/" />
+<input type="hidden" name="site_id" value="1" />
+</div>
+
+
+	<fieldset>	
+		<label class="field-username">Username<input type="text" class="textbox" name="username" value="" /></label>
+		<label class="field-password">Password<input type="password" class="textbox" name="password" /></label>
+		<input type="submit" class="submit" value="Login" />
+	</fieldset>	
+	<fieldset>
+		<label class="field-remember">Remember Me?<input type="checkbox" class="checkbox" name="auto_login" value="1" checked="checked" /></label>
+		<a href="http://www.getontracks.org/forums/member/forgot_password/">forgot password?</a>
+	</fieldset> 
+</form>
+     
+<hr class="clear" />
+</div><!--topbar-->
+<div id='header'>
+     <h1><a href="http://www.getontracks.org/forums/" title="Tracks">Tracks</a></h1>
+     <form method="post" action="http://www.getontracks.org/forums/do_search/"  >
+<div class='hiddenFields'>
+<input type="hidden" name="XID" value="0648725999c6babaaa16f7b9683f8c3af15220a2" />
+<input type="hidden" name="board_id" value="1" />
+<input type="hidden" name="site_id" value="1" />
+</div>
+
+
+
+<label class="searchbox"><input type="text" class="input" name="keywords" value="Search" maxlength="80" /></label>
+<input type="submit" class="submit" value="Search" />
+<a href="http://www.getontracks.org/forums/search/">Advanced Search</a>
+
+</form>
+    <hr class="clear" />
+</div><!--header-->
+<div id="subhead">
+		<div class="breadcrumb"><a href="http://www.getontracks.org/forums/">Forum Home</a><span class="breadcrumbspacer"> &gt; </span><a href="http://www.getontracks.org/forums/viewcategory/5/">GTD&reg;</a><span class="breadcrumbspacer"> &gt; </span><a href="http://www.getontracks.org/forums/viewforum/12/">Coffee bar</a><span class="breadcrumbspacer"> &gt; </span><span class="currentcrumb">Thread</span></div>
+<hr class="clear" />
+</div><!--subhead-->
+<div id="content">
+<script type="text/javascript">
+<!--
+
+function showimage(loc, width, height)
+{
+	window.open(loc,'Image','width='+width+',height='+height+',screenX=0,screenY=0,top=0,left=0,toolbar=0,status=0,scrollbars=0,location=0,menubar=1,resizable=1');
+	return false;
+}
+
+function showfastreply()
+{
+    if (document.getElementById('fastreply').style.display == "block")
+    {
+        document.getElementById('fastreply').style.display = "none";
+    }
+    else
+    {
+        document.getElementById('fastreply').style.display = "block";
+    }
+}
+
+function showHideRow(el)
+{
+    if (document.getElementById(el).style.display == "")
+    {
+        document.getElementById(el).style.display = "none";
+    }
+    else
+    {
+        document.getElementById(el).style.display = "";
+    }	
+}
+//-->
+</script>
+
+<table cellpadding="0" cellspacing="0" border="0" style="width:100%;">
+<tr>
+<td valign="middle" style="width:80%;">
+&nbsp;
+</td>
+&nbsp;
+
+&nbsp;
+
+</tr>
+</table>
+
+<table class="tableBorderLeft" cellpadding="0" cellspacing="0" border="0" style="width:100%;" >
+<tr>
+<td class="tableHeadingBG" colspan="3">
+<div class="tableHeading">Poll</div>
+</td>
+
+</tr><tr>
+<td class="tableRowHeadingBold" colspan="3">Do you thing that problems in the post exist?</td>
+</tr>
+
+<tr>
+<td class="tableCellOne">Yes, I have myslef been confused how to implement GTD by Tracks.</td>
+<td class="tableCellOne">11</td>
+<td class="tableCellOne"><img src="http://www.getontracks.org/themes/forum_themes/blue/images/poll_graph_left.gif" width="3" height="10" border="0" alt="" /><img src="http://www.getontracks.org/themes/forum_themes/blue/images/poll_graph_middle.gif" width="8" height="10" border="0" alt="" /><img src="http://www.getontracks.org/themes/forum_themes/blue/images/poll_graph_middle.gif" width="8" height="10" border="0" alt="" /><img src="http://www.getontracks.org/themes/forum_themes/blue/images/poll_graph_middle.gif" width="8" height="10" border="0" alt="" /><img src="http://www.getontracks.org/themes/forum_themes/blue/images/poll_graph_middle.gif" width="8" height="10" border="0" alt="" /><img src="http://www.getontracks.org/themes/forum_themes/blue/images/poll_graph_middle.gif" width="8" height="10" border="0" alt="" /><img src="http://www.getontracks.org/themes/forum_themes/blue/images/poll_graph_middle.gif" width="8" height="10" border="0" alt="" /><img src="http://www.getontracks.org/themes/forum_themes/blue/images/poll_graph_middle.gif" width="8" height="10" border="0" alt="" /><img src="http://www.getontracks.org/themes/forum_themes/blue/images/poll_graph_middle.gif" width="8" height="10" border="0" alt="" /><img src="http://www.getontracks.org/themes/forum_themes/blue/images/poll_graph_middle.gif" width="8" height="10" border="0" alt="" /><img src="http://www.getontracks.org/themes/forum_themes/blue/images/poll_graph_middle.gif" width="8" height="10" border="0" alt="" /><img src="http://www.getontracks.org/themes/forum_themes/blue/images/poll_graph_middle.gif" width="8" height="10" border="0" alt="" /><img src="http://www.getontracks.org/themes/forum_themes/blue/images/poll_graph_middle.gif" width="8" height="10" border="0" alt="" /><img src="http://www.getontracks.org/themes/forum_themes/blue/images/poll_graph_middle.gif" width="8" height="10" border="0" alt="" /><img src="http://www.getontracks.org/themes/forum_themes/blue/images/poll_graph_middle.gif" width="8" height="10" border="0" alt="" /><img src="http://www.getontracks.org/themes/forum_themes/blue/images/poll_graph_middle.gif" width="8" height="10" border="0" alt="" /><img src="http://www.getontracks.org/themes/forum_themes/blue/images/poll_graph_middle.gif" width="8" height="10" border="0" alt="" /><img src="http://www.getontracks.org/themes/forum_themes/blue/images/poll_graph_middle.gif" width="8" height="10" border="0" alt="" /><img src="http://www.getontracks.org/themes/forum_themes/blue/images/poll_graph_middle.gif" width="8" height="10" border="0" alt="" /><img src="http://www.getontracks.org/themes/forum_themes/blue/images/poll_graph_middle.gif" width="8" height="10" border="0" alt="" /><img src="http://www.getontracks.org/themes/forum_themes/blue/images/poll_graph_middle.gif" width="8" height="10" border="0" alt="" /><img src="http://www.getontracks.org/themes/forum_themes/blue/images/poll_graph_middle.gif" width="8" height="10" border="0" alt="" /><img src="http://www.getontracks.org/themes/forum_themes/blue/images/poll_graph_middle.gif" width="8" height="10" border="0" alt="" /><img src="http://www.getontracks.org/themes/forum_themes/blue/images/poll_graph_middle.gif" width="8" height="10" border="0" alt="" /><img src="http://www.getontracks.org/themes/forum_themes/blue/images/poll_graph_middle.gif" width="8" height="10" border="0" alt="" /><img src="http://www.getontracks.org/themes/forum_themes/blue/images/poll_graph_middle.gif" width="8" height="10" border="0" alt="" /><img src="http://www.getontracks.org/themes/forum_themes/blue/images/poll_graph_middle.gif" width="8" height="10" border="0" alt="" /><img src="http://www.getontracks.org/themes/forum_themes/blue/images/poll_graph_middle.gif" width="8" height="10" border="0" alt="" /><img src="http://www.getontracks.org/themes/forum_themes/blue/images/poll_graph_middle.gif" width="8" height="10" border="0" alt="" /><img src="http://www.getontracks.org/themes/forum_themes/blue/images/poll_graph_right.gif" width="3" height="10" border="0" alt="" /></td>
+</tr><tr>
+<td class="tableCellOne">Yes, I can imagine that osme people might get confused.</td>
+<td class="tableCellOne">1</td>
+<td class="tableCellOne"><img src="http://www.getontracks.org/themes/forum_themes/blue/images/poll_graph_left.gif" width="3" height="10" border="0" alt="" /><img src="http://www.getontracks.org/themes/forum_themes/blue/images/poll_graph_middle.gif" width="8" height="10" border="0" alt="" /><img src="http://www.getontracks.org/themes/forum_themes/blue/images/poll_graph_middle.gif" width="8" height="10" border="0" alt="" /><img src="http://www.getontracks.org/themes/forum_themes/blue/images/poll_graph_middle.gif" width="8" height="10" border="0" alt="" /><img src="http://www.getontracks.org/themes/forum_themes/blue/images/poll_graph_right.gif" width="3" height="10" border="0" alt="" /></td>
+</tr><tr>
+<td class="tableCellOne">I do not think anybody can get confused.</td>
+<td class="tableCellOne">1</td>
+<td class="tableCellOne"><img src="http://www.getontracks.org/themes/forum_themes/blue/images/poll_graph_left.gif" width="3" height="10" border="0" alt="" /><img src="http://www.getontracks.org/themes/forum_themes/blue/images/poll_graph_middle.gif" width="8" height="10" border="0" alt="" /><img src="http://www.getontracks.org/themes/forum_themes/blue/images/poll_graph_middle.gif" width="8" height="10" border="0" alt="" /><img src="http://www.getontracks.org/themes/forum_themes/blue/images/poll_graph_middle.gif" width="8" height="10" border="0" alt="" /><img src="http://www.getontracks.org/themes/forum_themes/blue/images/poll_graph_right.gif" width="3" height="10" border="0" alt="" /></td>
+</tr>
+
+
+<tr>
+<td class="tableCellOne" colspan="1"><b>Total Votes: 13</b></td>
+<td class="tableCellOne" colspan="2"><div class="lighttext">You must be a logged-in member to vote</div></td>
+</tr>
+</table>
+<div class="spacer"></div>
+
+<table cellpadding="0" cellspacing="0" border="0" style="width:100%;" >
+<tr>
+<td class="tableHeadingBG" colspan="2"><div class="tableHeading">Where Tracks is failing to implement GTD</div></td>
+<td class="tableHeadingBG" colspan="1" align="right"><div class="altLinks">&nbsp;</div></td>
+
+</tr>
+
+
+
+<tr id="a9" >
+ <td colspan="3">
+
+
+ <table class="threadBorder" cellpadding="0" cellspacing="0" border="0" style="width:100%;">
+  <tr>
+   <td class="tableRowHeadingBold" style="width:130px;"><div class="largeLinks"><a href="http://www.getontracks.org/forums/member/403/">gorn</a></div></td>
+   <td class="tableRowHeading">
+
+	<table cellpadding="0" cellspacing="0" border="0" style="width:99%;">
+	<tr>
+	<td>Posted: 31 July 2008 04:59 PM</td>
+	<td align="right">
+	
+		
+	
+	    
+	
+	
+
+	
+	
+	&nbsp;&nbsp;<span class="smallLinks">[ <a href="http://www.getontracks.org/forums/ignore_member/403/" title="Ignore">Ignore</a> ]</span>
+	
+	
+
+	&nbsp;
+	</td>
+	</tr>
+	</table>
+
+   </td>
+  </tr>
+<tr>
+ <td class="tableCellOne" style="width:130px;" valign="top">
+	<div class="rankMember">Newbie</div>
+	
+	<div class="itempad"><img src="http://www.getontracks.org/themes/forum_themes/blue/images/rank.gif" alt="Rank" class="rankImage" /></div>
+	<div class="userBlock">Total Posts:&nbsp; 10</div>
+	<div class="userBlock">Joined&nbsp; 2008-07-31</div>
+</td>
+<td class="tableCellOne" valign="top" colspan="2"><div class="post"><p>First of all, I would like to say that I ABSOLUTELY appreciate your work and I find it AMAZING. Otherwise I would not decide to invest my time to (consturctively) criticize it. What follows is some criticism to make it even better. </p>
+
+<p><b>Short summary: I think that Tracks fails to implement some basic GTD things and that to change it does not need too much technical effort at all, it needs some thinking and sublte touches thought.</b></p>
+
+<p>David Allen in his book advocates some basic practices which together make the whole GTD system. Tracks system does not intentionally implement the suggested workflow in a rigid way (you back it up by allowing flexibility in <a href="http://www.getontracks.org/?URL=http%3A%2F%2Fwww.rousette.org.uk%2Fprojects%2Fforums%2Fviewreply%2F151%2F">your post</a>&nbsp; ) but it rather offers framework which can be used by users in various ways. I - as a programmer myself -&nbsp; appreciate this flexibility, but I think it is confusing for people which do not see the underlaying &#8220;database/code&#8221; structure. </p>
+
+<p>There are lot of small things which can back what I am saying as an example I start with the <b>main menu. </b>Nonprogrammer coming from GTD would expect to see something like:</p>
+
+<p>&nbsp; * Inbox<br />
+&nbsp; * Next actions<br />
+&nbsp; * Projects<br />
+&nbsp; * Someday/Maybe<br />
+&nbsp; * Waiting for<br />
+&nbsp; * Ticker file<br />
+&nbsp; * Calendar<br />
+&nbsp; * Reference</p>
+
+<p>instead she sees:<br />
+&nbsp;   * Home<br />
+&nbsp;   * Contexts<br />
+&nbsp;   * Projects<br />
+&nbsp;   * Tickler<br />
+&nbsp;   * Done<br />
+&nbsp;   * Notes<br />
+&nbsp;   * Preferences<br />
+&nbsp;   * Export</p>
+
+<p>which is <b>very different</b>. Ok, let&#8217;s give it a &#8220;try&#8221;. Let us start with the &#8220;Collection&#8221; phase to &#8220;Inbox&#8221;. </p>
+
+<p>The button in the right form says &#8220;Add action&#8221; which by itself is confusing. Does it insert Actions? Or stuff in Inbox? Who knows. Ok ...She tries to enter something in inbox - fills in descriptions and hits &#8220;Add action&#8221;.&nbsp; </p>
+
+<p>Whoops. 1 error prohibited this action from being saved There were problems with the following fields: Context can&#8217;t be blank ...</p>
+
+<p>Why the context could not be empty? Inbox items have NO context, they are just list of the open loops in your life, no actions, just collection. What to do? There might be many possible ideas. Maybe adding new context &#8220;no context&#8221;, maybe adding context &#8220;inbox&#8221; ... which itself is wierd, because inbox is <b>NOT context at all</b>.</p>
+
+<p>Ok, so I have 50 items in inbox and I proceed according to David Allens book with &#8220;Process&#8221; phase and I expect Tracs to help me with it, which is the role of any such software - to facilite COllection and Processing.</p>
+
+<p>I go through items and decide what to do with them, there are these options:</p>
+
+<p>1. <em>Trash them</em> ... there is a nice X at each item. Perfect, this works as expected.<br />
+2. <em>Put them to someday/</em> ... well, that is not so obvious? The programmers solution would be to put it to some hidden something (context, project), but this is absolutely unintuitive for a normal person.<br />
+3. <em>Put them to reference</em> ... it is not obvious how to do that either, but let us say that the reference as such is not implemented ... could elaborate on that later if you want.<br />
+4. <em>It is under 2 mins action</em> -&gt; do it and delete it. Perfect, we already know how to do that.<br />
+5. <em>It is single action longer thatn 2 mins</em> -&gt; we want to put it to some mext action list and optionally attach context to it. Again we struggle when there is no context, so probably we introduce some artificial &#8220;no context&#8221; context. At this moment the &#8220;context&#8221; attribute is used to at least three very different purposes - collecting inbox stuff, hiding maybes, and serving as a real context. This is not good.<br />
+6. <em>Delegate it</em> - the is no delegation in tracs, so probably we reuse contexts fourth time? At this time it is clear that the &#8220;context&#8221; has only partially to do something with real context, so it is misnamed at least.<br />
+7. <em>Make a project</em> - jupiii, we have this one clearly here. Shame that it is not easy to convert item from inbox to project easily, so we put the text to cllipboard, if there are notes, we cut paste them to newly opened text editor window and create new project, pasting everything back (ok, I do not want to underestimate non programmers, but I thing that even this may make some &#8220;normal&#8221; people feel uncomfortable at least). We have new project and we can even nicely put new nenxt actions to it and attach contexts to it. Here - again - we came across the &#8220;context mess&#8221; because next action from a project put in the inbox context really makes no sense.</p>
+
+<p>That is it. I could elaborate on other thigs as well, and I will if you are interested, but I hope you get the idea for the moment.</p>
+
+<p>I thing something should be done with it. I feel that these issues do not need too much rewriting of the code, rather they would need some serious thinking and some touches to interface. Or maybe a tutorial on tracks? Who knows? If we want to follow David Allens &#8220;Natural planning&#8221; approach it is too early to offer solutions now anyway, it is time to define the problem and set up the goal to solve it once it is identified. Only after that we can talk about solutions. </p>
+
+<p>So my only questions  to end up my post is: Do you understand what I mean and do you agree that there might be a problem? </p>
+
+<p>Regards<br />
+Jakub</p></div>
+	
+	
+	
+</td>
+
+</tr><tr>
+
+<td class="tableCellTwo"  style="width:130px;">
+	<table cellpadding="0" cellspacing="0" border="0" width="100%">
+	<tr>
+	<td align="center"><div class="button"><div class="buttonSmall" id="a1" onclick="navJump('http://www.getontracks.org/forums/member/403/')" onmouseover="navHover(this);" onmouseout="navReset(this);">Profile</div></div></td>
+	
+	
+
+	</tr>
+	</table>
+</td>
+
+<td class="tableCellTwo" colspan="2">
+	<table cellpadding="0" cellspacing="0" border="0">
+	<tr>
+	
+	
+	
+	
+		
+		
+				
+	
+	
+	
+	
+	&nbsp;
+	
+	<td>&nbsp;</td>	
+	</tr>
+	</table>
+  </td>
+ </tr>
+</table>
+
+</td>
+</tr>
+
+<tr id="b9" >
+ <td colspan="3">
+
+
+ <table class="threadBorder" cellpadding="0" cellspacing="0" border="0" style="width:100%;">
+  <tr>
+   <td class="tableRowHeadingBold" style="width:130px;"><div class="largeLinks"><a href="http://www.getontracks.org/forums/member/100/">Reinier Balt</a></div></td>
+   <td class="tableRowHeading">
+
+	<table cellpadding="0" cellspacing="0" border="0" style="width:99%;">
+	<tr>
+	<td>Posted: 01 August 2008 09:46 AM</td>
+	<td align="right">
+	
+		
+	
+	
+
+	
+	
+	&nbsp;&nbsp;<span class="smallLinks">[ <a href="http://www.getontracks.org/forums/ignore_member/100/" title="Ignore">Ignore</a> ]</span>
+	
+	&nbsp;&nbsp;<span class="smallLinks">[ <a name="746" href="http://www.getontracks.org/forums/viewreply/746/" title="Permalink to this post"># 1</a> ]</span>
+
+	&nbsp;
+	</td>
+	</tr>
+	</table>
+
+   </td>
+  </tr>
+<tr>
+ <td class="tableCellOne" style="width:130px;" valign="top">
+	<div class="rankMember">Sr. Member</div>
+	
+	<div class="itempad"><img src="http://www.getontracks.org/themes/forum_themes/blue/images/rank.gif" alt="Rank" class="rankImage" /><img src="http://www.getontracks.org/themes/forum_themes/blue/images/rank.gif" alt="Rank" class="rankImage" /><img src="http://www.getontracks.org/themes/forum_themes/blue/images/rank.gif" alt="Rank" class="rankImage" /><img src="http://www.getontracks.org/themes/forum_themes/blue/images/rank.gif" alt="Rank" class="rankImage" /></div>
+	<div class="userBlock">Total Posts:&nbsp; 882</div>
+	<div class="userBlock">Joined&nbsp; 2006-10-05</div>
+</td>
+<td class="tableCellOne" valign="top" colspan="2"><div class="post"><p>I see you have put a lot of thought in your post. You also reference the post of bsag where she explains the rationale behind the design choices.</p>
+
+<p>I think that a lot of what you are saying has to do with the role of a tool like Tracks in your GTD workflow. Should the tool encompass and reflect all of a GTD workflow or is it a tool you can use for parts your workflow, i.e. not necessarily a tool that supports every step of the workflow. Furthermore not everyone is adhering to the workflow, i.e. you do little reviews of your todos constantly, get your mind empty constantly not only weekly. I personally want an interface/tool that helps me do this from one page and not explicitly force me to switch pages which I sometimes see in other GTD tools. Tracks does this well with the homepage.</p>
+
+<p>Also, I personally think there is no perfect tool to support the complete workflow and we should not aim to make Tracks one. This is why Tracks does not shine as a tool for reference (your point 3) for example. People are using various specialized tools for that. I&#8217;m personally using OneNote which works perfectly for me.</p>
+
+<p>I have a context @inbox which is the first in my context list. Because it is the first, it is automatically the default context in the new-todo form. So in my collection phase I can quickly enter a new todo and not think about context/project at that time. I think this is the way many users of Tracks have organized this. </p>
+
+<p>2. Someday/maybe can be easily supported by Tracks right now, although you&#8217;re right that its not very clear from the start. There is a request to make it a bit smarter (i.e. remember the context it belongs to if you want to commit to the todo)</p>
+
+<p>6. I think David Allen also refers to Waiting for as a context&#8230;</p>
+
+<p>7. Also, converting a todo to a project is an enhancement request too. This is a good idea.</p>
+
+<p>So, while I understand your issues of the &#8216;flexible&#8217; use of contexts, I do not agree that its a &#8220;mess&#8221;. I do think we could use some sort of a use guide to help people &#8216;configure&#8217; Tracks to suit their needs of their implementation of GTD.</p></div>
+	
+	
+	
+</td>
+
+</tr><tr>
+
+<td class="tableCellTwo"  style="width:130px;">
+	<table cellpadding="0" cellspacing="0" border="0" width="100%">
+	<tr>
+	<td align="center"><div class="button"><div class="buttonSmall" id="b1" onclick="navJump('http://www.getontracks.org/forums/member/100/')" onmouseover="navHover(this);" onmouseout="navReset(this);">Profile</div></div></td>
+	
+	
+
+	</tr>
+	</table>
+</td>
+
+<td class="tableCellTwo" colspan="2">
+	<table cellpadding="0" cellspacing="0" border="0">
+	<tr>
+	
+	
+	
+	
+	
+	
+		
+	
+	
+	&nbsp;
+	
+	<td>&nbsp;</td>	
+	</tr>
+	</table>
+  </td>
+ </tr>
+</table>
+
+</td>
+</tr>
+
+<tr id="c9" >
+ <td colspan="3">
+
+
+ <table class="threadBorder" cellpadding="0" cellspacing="0" border="0" style="width:100%;">
+  <tr>
+   <td class="tableRowHeadingBold" style="width:130px;"><div class="largeLinks"><a href="http://www.getontracks.org/forums/member/403/">gorn</a></div></td>
+   <td class="tableRowHeading">
+
+	<table cellpadding="0" cellspacing="0" border="0" style="width:99%;">
+	<tr>
+	<td>Posted: 01 August 2008 11:02 AM</td>
+	<td align="right">
+	
+		
+	
+	
+
+	
+	
+	&nbsp;&nbsp;<span class="smallLinks">[ <a href="http://www.getontracks.org/forums/ignore_member/403/" title="Ignore">Ignore</a> ]</span>
+	
+	&nbsp;&nbsp;<span class="smallLinks">[ <a name="747" href="http://www.getontracks.org/forums/viewreply/747/" title="Permalink to this post"># 2</a> ]</span>
+
+	&nbsp;
+	</td>
+	</tr>
+	</table>
+
+   </td>
+  </tr>
+<tr>
+ <td class="tableCellOne" style="width:130px;" valign="top">
+	<div class="rankMember">Newbie</div>
+	
+	<div class="itempad"><img src="http://www.getontracks.org/themes/forum_themes/blue/images/rank.gif" alt="Rank" class="rankImage" /></div>
+	<div class="userBlock">Total Posts:&nbsp; 10</div>
+	<div class="userBlock">Joined&nbsp; 2008-07-31</div>
+</td>
+<td class="tableCellOne" valign="top" colspan="2"><div class="post"><p>Thank you for your thoughts,</p>
+
+<p>I agree with you that Tracks should not aim to be full implementing GTD (and yes, I understand that the reference feature is better handled in other tools) and stay open to various approaches.<b> But I expect that one such non-marginal approach will be to implement GTD methodology</b> (meaning the part of it for which tracks is aimed) and if you want to fulfill your mission, which is to stay &#8220;open to different approaches&#8221;, it should facilitate this approach as well.</p>
+
+<p>I also advocate to carefully consider people who as non-programmers can get easily confused by small things which are obvious to programmers. Every software project is developed by programmers and it unfortunately causes some bias to how many of them wind up. I have already seen quite a few good projects which stayed closed to smaller community than it could reach only because of the lack of effort to reach the wide public.</p>
+
+<p>Also I am not necessarily talking about new very complicated features here. One of the directions in which solution can be found is certainly what you have suggested: some kind of tutorial to help people ‘configure’ Tracks to implement GTD. I think it would be very helpful even if we take some &#8220;typical implementation&#8221; free of specific personal &#8220;tricks&#8221; everybody invents for themselves. Than <b>write a really simple and slow tutorial which guides user step by step through the &#8220;configuration&#8221;</b>.</p>
+
+<p>To address your other comments:</p>
+
+<p>ad) <em>reference</em><br />
+I use personal wiki to hold reference, because than everything is online. To me it would help if there can be some special markup configured so <b>it creates links to predefined url</b>. Example: If i write in the task &#8220;Review [[committee meeting notes]]&#8221; and configure in my preferences the url pattern like &#8220;http://wiki.personalurl.com/wiki/page_id=%u&#8221; which can be than replaced - in this particular example - to link to <a href="http://www.getontracks.org/?URL=http%3A%2F%2Fwiki.personalurl.com%2Fwiki%2Fpage_id%3Dcommittee_meeting_notes">http://wiki.personalurl.com/wiki/page_id=committee_meeting_notes</a></p>
+
+<p>ad) <em>@inbox</em><br />
+Here I think that the problem simply is that <b>we put open loops not actions in inbox</b>. It is during the processing when it gets into good shape and is converted to action of project with defined outcome. I know that many people put immediately actions there and also that some people prefer to skip inbox altogether and put the things directly where they belong to. Although it is good practice it has its dangers as well. D.A. in his book has the whole part of the book consacred to &#8220;processing&#8221; which in fact is exactly the conversion of inbox vague list to actions, projects, references, etc. and he also describes what can happen if the process is not done correctly. So although I understand that some people do not even need inbox, I would like to see the possibility to implement it as in GTD and to facilitate the process of &#8220;processing inbox&#8221; as I have described in my previous post.</p>
+
+<p>ad) <em>2. someday/maybe</em>: Sprry, I am not sure which &#8220;easy support&#8221; you mean. </p>
+
+<p>ad) 6. I do not think so, he rather suggest to set up the system so it is easy to switch between waiting for and next actions list as it may happen quite often during course of one project. I like very much the idea of tracks that contexts, projects and tags are completely &#8220;orthogonal&#8221; or &#8220;independent&#8221; so one can use whatever combination she wants. <b>However &#8220;Waiting for&#8221; vs &#8220;Next action&#8221; should be orthogonal as well</b>. I can have context &#8220;telephone&#8221; and task &#8220;call Andy about the proposal&#8221; which I want to put on &#8220;Waiting for&#8221; list with note &#8220;WF: Maria to deliver the proposal&#8221;. How it is implemented now, it can not be done, because implementing &#8220;Waiting for&#8221; can be only done by context, so we should be throwing out the real context &#8220;telephone&#8221; and replace it by some artificial context &#8220;@Waiting for&#8221;. This is exactly one of these small things which can make feel it uncomfortable to use the system.</p>
+
+<p>ad) 7. <em>inbox -&gt; project</em>. I am glad to hear that this is going to be facilitated. I, however, think that than the inappropriateness of implementing inbox as context will be even more evident.</p>
+
+<p>To finish, I would like to say that the &#8220;context overloading&#8221; is not the only thing I am advocating against. My aim would be to <b>start serious discussion/brainstorming about all the Tracks aspects which might be counterintuitive to normal person</b>. And as usual in the brainstorming phase I am not judging which of these &#8220;small inconveniences&#8221; is really important and which is not. As an other example I have mentioned the main menu, which I think should be changed or at least configurable so it can suit even these who happen to want it more GTD way.</p>
+
+<p>Thank you for you reactions and have a nice weekend</p></div>
+	
+	
+	
+</td>
+
+</tr><tr>
+
+<td class="tableCellTwo"  style="width:130px;">
+	<table cellpadding="0" cellspacing="0" border="0" width="100%">
+	<tr>
+	<td align="center"><div class="button"><div class="buttonSmall" id="c1" onclick="navJump('http://www.getontracks.org/forums/member/403/')" onmouseover="navHover(this);" onmouseout="navReset(this);">Profile</div></div></td>
+	
+	
+
+	</tr>
+	</table>
+</td>
+
+<td class="tableCellTwo" colspan="2">
+	<table cellpadding="0" cellspacing="0" border="0">
+	<tr>
+	
+	
+	
+	
+	
+	
+		
+	
+	
+	&nbsp;
+	
+	<td>&nbsp;</td>	
+	</tr>
+	</table>
+  </td>
+ </tr>
+</table>
+
+</td>
+</tr>
+
+<tr id="d9" >
+ <td colspan="3">
+
+
+ <table class="threadBorder" cellpadding="0" cellspacing="0" border="0" style="width:100%;">
+  <tr>
+   <td class="tableRowHeadingBold" style="width:130px;"><div class="largeLinks"><a href="http://www.getontracks.org/forums/member/100/">Reinier Balt</a></div></td>
+   <td class="tableRowHeading">
+
+	<table cellpadding="0" cellspacing="0" border="0" style="width:99%;">
+	<tr>
+	<td>Posted: 01 August 2008 12:03 PM</td>
+	<td align="right">
+	
+		
+	
+	
+
+	
+	
+	&nbsp;&nbsp;<span class="smallLinks">[ <a href="http://www.getontracks.org/forums/ignore_member/100/" title="Ignore">Ignore</a> ]</span>
+	
+	&nbsp;&nbsp;<span class="smallLinks">[ <a name="748" href="http://www.getontracks.org/forums/viewreply/748/" title="Permalink to this post"># 3</a> ]</span>
+
+	&nbsp;
+	</td>
+	</tr>
+	</table>
+
+   </td>
+  </tr>
+<tr>
+ <td class="tableCellOne" style="width:130px;" valign="top">
+	<div class="rankMember">Sr. Member</div>
+	
+	<div class="itempad"><img src="http://www.getontracks.org/themes/forum_themes/blue/images/rank.gif" alt="Rank" class="rankImage" /><img src="http://www.getontracks.org/themes/forum_themes/blue/images/rank.gif" alt="Rank" class="rankImage" /><img src="http://www.getontracks.org/themes/forum_themes/blue/images/rank.gif" alt="Rank" class="rankImage" /><img src="http://www.getontracks.org/themes/forum_themes/blue/images/rank.gif" alt="Rank" class="rankImage" /></div>
+	<div class="userBlock">Total Posts:&nbsp; 882</div>
+	<div class="userBlock">Joined&nbsp; 2006-10-05</div>
+</td>
+<td class="tableCellOne" valign="top" colspan="2"><div class="post"><p>I understand that Tracks could add a lot of functions/pages to support parts of the workflow even better than in the current solution. Inbox, someday/maybe, waiting-for are all candidates. There are enhancement requests for all of them. I&#8217;d suggest you add a bit of detail to those tickets to give people some insight as to what you mean. </p>
+
+<p>The arguments you give in this thread are all clear. I&#8217;d like to know what you for example mean with an inbox. What use cases are you thinking of?</p>
+
+<p>ad reference - this is a nice idea, please make an enhancement ticket<br />
+ad 2 - I mean a hidden context<br />
+ad 6 - I like the use case. I think of waiting-for for delegated todos. There have been requests for a dependent-on relation between todos to just do what you describe: a todo depends on the completion of an other todo. That way you don&#8217;t have to add a note, but use a seperate todo for it.<br />
+ad 7 - now only to find a comtributer to create a patch <img src="http://www.getontracks.org/images/smileys/grin.gif" width="19" height="19" alt="grin" style="border:0;" /></p>
+
+<p>As to your aim: your aiming for something very subjective here. What is counter intuitive to one person is intuitive for an other. (Let&#8217;s not touch the issue of defining a normal person here). I&#8217;m not trying to discourage you here or push you away, but lets start this discussion from your point of view and not from the point of view of a not-existing normal person.</p></div>
+	
+	
+	
+</td>
+
+</tr><tr>
+
+<td class="tableCellTwo"  style="width:130px;">
+	<table cellpadding="0" cellspacing="0" border="0" width="100%">
+	<tr>
+	<td align="center"><div class="button"><div class="buttonSmall" id="d1" onclick="navJump('http://www.getontracks.org/forums/member/100/')" onmouseover="navHover(this);" onmouseout="navReset(this);">Profile</div></div></td>
+	
+	
+
+	</tr>
+	</table>
+</td>
+
+<td class="tableCellTwo" colspan="2">
+	<table cellpadding="0" cellspacing="0" border="0">
+	<tr>
+	
+	
+	
+	
+	
+	
+		
+	
+	
+	&nbsp;
+	
+	<td>&nbsp;</td>	
+	</tr>
+	</table>
+  </td>
+ </tr>
+</table>
+
+</td>
+</tr>
+
+<tr id="e9" >
+ <td colspan="3">
+
+
+ <table class="threadBorder" cellpadding="0" cellspacing="0" border="0" style="width:100%;">
+  <tr>
+   <td class="tableRowHeadingBold" style="width:130px;"><div class="largeLinks"><a href="http://www.getontracks.org/forums/member/403/">gorn</a></div></td>
+   <td class="tableRowHeading">
+
+	<table cellpadding="0" cellspacing="0" border="0" style="width:99%;">
+	<tr>
+	<td>Posted: 01 August 2008 02:00 PM</td>
+	<td align="right">
+	
+		
+	
+	
+
+	
+	
+	&nbsp;&nbsp;<span class="smallLinks">[ <a href="http://www.getontracks.org/forums/ignore_member/403/" title="Ignore">Ignore</a> ]</span>
+	
+	&nbsp;&nbsp;<span class="smallLinks">[ <a name="749" href="http://www.getontracks.org/forums/viewreply/749/" title="Permalink to this post"># 4</a> ]</span>
+
+	&nbsp;
+	</td>
+	</tr>
+	</table>
+
+   </td>
+  </tr>
+<tr>
+ <td class="tableCellOne" style="width:130px;" valign="top">
+	<div class="rankMember">Newbie</div>
+	
+	<div class="itempad"><img src="http://www.getontracks.org/themes/forum_themes/blue/images/rank.gif" alt="Rank" class="rankImage" /></div>
+	<div class="userBlock">Total Posts:&nbsp; 10</div>
+	<div class="userBlock">Joined&nbsp; 2008-07-31</div>
+</td>
+<td class="tableCellOne" valign="top" colspan="2"><div class="post"><p>Thanks understanding. I will try formulate some use cases and submit them as enhancement ticket.</p>
+
+<p>Short comment to your last paragraph only. I agree with you that it is not good to speak of any &#8220;normal person&#8221;, and it is possible that I have been little bit subjective in previous posts. What I meant by &#8220;non-programmer&#8221; were the people with no expirience with programming have sometimes quite different approach and are not so used to &#8220;tweak&#8221; tools when they do not work the way then want them to. But it is complicated discussion I agree. </p>
+
+<p>To remain as &#8220;objective&#8221; as possible  I would like to consider the standpoint of someone wanting to implement the GTD methodology as it is in the Allen&#8217;s book. If we have tutorial which implement if fully (of course with obvious intended exeptions like reference, calendar, etc) than people who want to start with Tracks have something to begin with and even if they do not want to implement full GTD, they can benefit from the tutorial. At the same time it can serve to point out the places where the GTD implementation is still somewhat shaky.</p></div>
+	
+	
+	
+</td>
+
+</tr><tr>
+
+<td class="tableCellTwo"  style="width:130px;">
+	<table cellpadding="0" cellspacing="0" border="0" width="100%">
+	<tr>
+	<td align="center"><div class="button"><div class="buttonSmall" id="e1" onclick="navJump('http://www.getontracks.org/forums/member/403/')" onmouseover="navHover(this);" onmouseout="navReset(this);">Profile</div></div></td>
+	
+	
+
+	</tr>
+	</table>
+</td>
+
+<td class="tableCellTwo" colspan="2">
+	<table cellpadding="0" cellspacing="0" border="0">
+	<tr>
+	
+	
+	
+	
+	
+	
+		
+	
+	
+	&nbsp;
+	
+	<td>&nbsp;</td>	
+	</tr>
+	</table>
+  </td>
+ </tr>
+</table>
+
+</td>
+</tr>
+
+<tr id="f9" >
+ <td colspan="3">
+
+
+ <table class="threadBorder" cellpadding="0" cellspacing="0" border="0" style="width:100%;">
+  <tr>
+   <td class="tableRowHeadingBold" style="width:130px;"><div class="largeLinks"><a href="http://www.getontracks.org/forums/member/370/">thomasn</a></div></td>
+   <td class="tableRowHeading">
+
+	<table cellpadding="0" cellspacing="0" border="0" style="width:99%;">
+	<tr>
+	<td>Posted: 02 August 2008 02:46 PM</td>
+	<td align="right">
+	
+		
+	
+	
+
+	
+	
+	&nbsp;&nbsp;<span class="smallLinks">[ <a href="http://www.getontracks.org/forums/ignore_member/370/" title="Ignore">Ignore</a> ]</span>
+	
+	&nbsp;&nbsp;<span class="smallLinks">[ <a name="750" href="http://www.getontracks.org/forums/viewreply/750/" title="Permalink to this post"># 5</a> ]</span>
+
+	&nbsp;
+	</td>
+	</tr>
+	</table>
+
+   </td>
+  </tr>
+<tr>
+ <td class="tableCellOne" style="width:130px;" valign="top">
+	<div class="rankMember">Newbie</div>
+	
+	<div class="itempad"><img src="http://www.getontracks.org/themes/forum_themes/blue/images/rank.gif" alt="Rank" class="rankImage" /></div>
+	<div class="userBlock">Total Posts:&nbsp; 10</div>
+	<div class="userBlock">Joined&nbsp; 2008-05-27</div>
+</td>
+<td class="tableCellOne" valign="top" colspan="2"><div class="post"><p>Who here would like Tracks to be a &#8220;GTD implementation&#8221; that is immediately usable without config? This is certainly what I want; the best implementation I have found to date is <a href="http://www.getontracks.org/?URL=http%3A%2F%2Fwww.hipsterpda.com%2F">Hipster PDA</a>, which presents significant challenges with automation <img src="http://www.getontracks.org/images/smileys/wink.gif" width="19" height="19" alt="wink" style="border:0;" /></p>
+
+<p>Whilst &#8220;configuration advice&#8221; for using Tracks with a GTD workflow would be good, much better from my POV would be a tool which empraces the (now widely known) terminology and workflow from David Allen and needs no configuration at all for a &#8220;by-the-book&#8221; GTDer, so that using it is obvious and intuitive. Jakub&#8217;s concerns with overloading context and with menu structure are part of this, and whilst they could be incrementally tackled with enh requests that&#8217;s probably most useful if there&#8217;s an initial agreement on principles.</p>
+
+<p>The &#8220;rationale behind Tracks&#8221; post from bsag explains her thinking from Aug 2006&#8212;bsag, anything you&#8217;d add to this now? In particular, do you think there&#8217;s a place for restructuring menus along the lines that Jakub suggests, adding top-level Waiting For and Someday/Maybe (not the same as &#8220;deferred actions&#8221; imho) lists, and maybe adding an unstructured Inbox with a [______] (send-to-inbox) input field on each page?</p>
+
+<p>I&#8217;ve found that there&#8217;s &#8220;aerodynamic drag&#8221; from the mismatch (as I perceive it) between the Tracks UI <br />
+and what I expect to be thinking about as I GTD my way through the day&#8212;and this may explain why I don&#8217;t use Tracks nearly as much as I thought I would.</p>
+
+<p>Whilst I wholly agree that much in the GTD book is left open to interpretation, the menu structure Jakub suggests is immediately recognisable as &#8220;vanilla GTD&#8221;. If we add some dynamic menus, tags and &#8220;focus&#8221; views in the style of the wonderful <br />
+ <a href="http://www.getontracks.org/?URL=http%3A%2F%2Fwww.culturedcode.com%2Fthings%2F">Things</a> (<a href="http://www.getontracks.org/?URL=http%3A%2F%2Ftagamac.com%2Fscreencasts%2Fthings_preview%2FThingsPreview_full.mov">screencast</a>) then I humbly suggest that Tracks might be rather more widely useful.</p>
+
+<p>Does anyone else have enthusiasm for taking Tracks in this direction? bsag, does this fit with your vision?</p>
+
+<p>&#8220;Be excellent to each other!&#8221;</p>
+
+<p>&#8212;Thomas.</p></div>
+	
+	
+	
+</td>
+
+</tr><tr>
+
+<td class="tableCellTwo"  style="width:130px;">
+	<table cellpadding="0" cellspacing="0" border="0" width="100%">
+	<tr>
+	<td align="center"><div class="button"><div class="buttonSmall" id="f1" onclick="navJump('http://www.getontracks.org/forums/member/370/')" onmouseover="navHover(this);" onmouseout="navReset(this);">Profile</div></div></td>
+	
+	
+
+	</tr>
+	</table>
+</td>
+
+<td class="tableCellTwo" colspan="2">
+	<table cellpadding="0" cellspacing="0" border="0">
+	<tr>
+	
+	
+	
+	
+	
+	
+		
+	
+	
+	&nbsp;
+	
+	<td>&nbsp;</td>	
+	</tr>
+	</table>
+  </td>
+ </tr>
+</table>
+
+</td>
+</tr>
+
+<tr id="g9" >
+ <td colspan="3">
+
+
+ <table class="threadBorder" cellpadding="0" cellspacing="0" border="0" style="width:100%;">
+  <tr>
+   <td class="tableRowHeadingBold" style="width:130px;"><div class="largeLinks"><a href="http://www.getontracks.org/forums/member/407/">Dieter_be</a></div></td>
+   <td class="tableRowHeading">
+
+	<table cellpadding="0" cellspacing="0" border="0" style="width:99%;">
+	<tr>
+	<td>Posted: 10 August 2008 07:47 PM</td>
+	<td align="right">
+	
+		
+	
+	
+
+	
+	
+	&nbsp;&nbsp;<span class="smallLinks">[ <a href="http://www.getontracks.org/forums/ignore_member/407/" title="Ignore">Ignore</a> ]</span>
+	
+	&nbsp;&nbsp;<span class="smallLinks">[ <a name="757" href="http://www.getontracks.org/forums/viewreply/757/" title="Permalink to this post"># 6</a> ]</span>
+
+	&nbsp;
+	</td>
+	</tr>
+	</table>
+
+   </td>
+  </tr>
+<tr>
+ <td class="tableCellOne" style="width:130px;" valign="top">
+	<div class="rankMember">Newbie</div>
+	
+	<div class="itempad"><img src="http://www.getontracks.org/themes/forum_themes/blue/images/rank.gif" alt="Rank" class="rankImage" /></div>
+	<div class="userBlock">Total Posts:&nbsp; 7</div>
+	<div class="userBlock">Joined&nbsp; 2008-08-10</div>
+</td>
+<td class="tableCellOne" valign="top" colspan="2"><div class="post"><blockquote><div class="quote_author">Reinier Balt - 01 August 2008 12:03 PM</div>
+<p>I&#8217;d like to know what you for example mean with an inbox. What use cases are you thinking of?</p>
+</blockquote>
+
+<p>Suppose you are working on something, you&#8217;re busy doing a task.&nbsp; All of a sudden some random idea pops into your head (Think of something like. &#8216;this reminds me, i should check &lt;foo&gt;&#8217; or &#8216;would i be able to do &lt;bar&gt;?, i should research into that&#8217;).</p>
+
+<p>The last thing you want (and should do) at that moment is stop doing what you&#8217;re doing and start thinking &#8216;is this an action?&#8217;, &#8216;is this a project?&#8217;, &#8216;how should i file this&#8217;, &#8216;what are all the attributes (contexts,projects,tags, due dates,....&#8217;)</p>
+
+<p>At that moment you should be able to open your program, type &lt;foo&gt; or &lt;bar&gt; in it and <b>that&#8217;s it</b>.&nbsp; You need to get it out of your head as quickly as possible because you&#8217;re busy with something and you should not loose your focus.</p>
+
+<p>That&#8217;s the concept of the inbox.&nbsp; You collect several things like this and when you have the time you process them one by one and carefully enter the right things in your GTD program.<br />
+When you&#8217;re not behind a pc you would usually write it down somewhere, but when you&#8217;re on a pc it makes sense to input in software on the pc.</p>
+
+<p>If the software you use for action management (tracks) is also capable of handling the inbox task, it&#8217;s a win win.&nbsp; If it doesn&#8217;t you must use an external note-taking program and when in processing mode you end up copy-pasting stuff into tracks.</p>
+
+<p>So even if you want to allow people to skip the collection/process phases (not always recommended but in some situations it can work), it should be possible for other people to do use tracks for collecting *and* processing.</p></div>
+	
+	
+	
+</td>
+
+</tr><tr>
+
+<td class="tableCellTwo"  style="width:130px;">
+	<table cellpadding="0" cellspacing="0" border="0" width="100%">
+	<tr>
+	<td align="center"><div class="button"><div class="buttonSmall" id="g1" onclick="navJump('http://www.getontracks.org/forums/member/407/')" onmouseover="navHover(this);" onmouseout="navReset(this);">Profile</div></div></td>
+	
+	
+
+	</tr>
+	</table>
+</td>
+
+<td class="tableCellTwo" colspan="2">
+	<table cellpadding="0" cellspacing="0" border="0">
+	<tr>
+	
+	
+	
+	
+	
+	
+		
+	
+	
+	&nbsp;
+	
+	<td>&nbsp;</td>	
+	</tr>
+	</table>
+  </td>
+ </tr>
+</table>
+
+</td>
+</tr>
+
+<tr id="h9" >
+ <td colspan="3">
+
+
+ <table class="threadBorder" cellpadding="0" cellspacing="0" border="0" style="width:100%;">
+  <tr>
+   <td class="tableRowHeadingBold" style="width:130px;"><div class="largeLinks"><a href="http://www.getontracks.org/forums/member/403/">gorn</a></div></td>
+   <td class="tableRowHeading">
+
+	<table cellpadding="0" cellspacing="0" border="0" style="width:99%;">
+	<tr>
+	<td>Posted: 12 August 2008 12:45 PM</td>
+	<td align="right">
+	
+		
+	
+	
+
+	
+	
+	&nbsp;&nbsp;<span class="smallLinks">[ <a href="http://www.getontracks.org/forums/ignore_member/403/" title="Ignore">Ignore</a> ]</span>
+	
+	&nbsp;&nbsp;<span class="smallLinks">[ <a name="759" href="http://www.getontracks.org/forums/viewreply/759/" title="Permalink to this post"># 7</a> ]</span>
+
+	&nbsp;
+	</td>
+	</tr>
+	</table>
+
+   </td>
+  </tr>
+<tr>
+ <td class="tableCellOne" style="width:130px;" valign="top">
+	<div class="rankMember">Newbie</div>
+	
+	<div class="itempad"><img src="http://www.getontracks.org/themes/forum_themes/blue/images/rank.gif" alt="Rank" class="rankImage" /></div>
+	<div class="userBlock">Total Posts:&nbsp; 10</div>
+	<div class="userBlock">Joined&nbsp; 2008-07-31</div>
+</td>
+<td class="tableCellOne" valign="top" colspan="2"><div class="post"><p>Thanks Dieter_be and Thomas,</p>
+
+<p>everything you have written fits exactly to my way of thinking and adds many details to it. I also think that before we start to push in any direction being it  coding and/or making request for enhancement, we should agree whether this fits into the project at all. We also need to collect ideas and use-cases so we can prioritize in what is more and what is less important in GTDization of tracks. </p>
+
+<p>Let me just add to Dieters excellent reasoning for inbox one detail: there are really many hidden dangers in putting the things directly to the system avoiding the inbox idea. The process stage of GTD is mechanism which is aimed to avoiding them. Many people for example tend to put very vague informations to &#8220;Next Actions&#8221; list which than leads to items which stay long time, because they are rather vague aims than real physical actions. etc.</p></div>
+	
+	
+	
+</td>
+
+</tr><tr>
+
+<td class="tableCellTwo"  style="width:130px;">
+	<table cellpadding="0" cellspacing="0" border="0" width="100%">
+	<tr>
+	<td align="center"><div class="button"><div class="buttonSmall" id="h1" onclick="navJump('http://www.getontracks.org/forums/member/403/')" onmouseover="navHover(this);" onmouseout="navReset(this);">Profile</div></div></td>
+	
+	
+
+	</tr>
+	</table>
+</td>
+
+<td class="tableCellTwo" colspan="2">
+	<table cellpadding="0" cellspacing="0" border="0">
+	<tr>
+	
+	
+	
+	
+	
+	
+		
+	
+	
+	&nbsp;
+	
+	<td>&nbsp;</td>	
+	</tr>
+	</table>
+  </td>
+ </tr>
+</table>
+
+</td>
+</tr>
+
+<tr id="i9" >
+ <td colspan="3">
+
+
+ <table class="threadBorder" cellpadding="0" cellspacing="0" border="0" style="width:100%;">
+  <tr>
+   <td class="tableRowHeadingBold" style="width:130px;"><div class="largeLinks"><a href="http://www.getontracks.org/forums/member/407/">Dieter_be</a></div></td>
+   <td class="tableRowHeading">
+
+	<table cellpadding="0" cellspacing="0" border="0" style="width:99%;">
+	<tr>
+	<td>Posted: 13 August 2008 08:22 PM</td>
+	<td align="right">
+	
+		
+	
+	
+
+	
+	
+	&nbsp;&nbsp;<span class="smallLinks">[ <a href="http://www.getontracks.org/forums/ignore_member/407/" title="Ignore">Ignore</a> ]</span>
+	
+	&nbsp;&nbsp;<span class="smallLinks">[ <a name="760" href="http://www.getontracks.org/forums/viewreply/760/" title="Permalink to this post"># 8</a> ]</span>
+
+	&nbsp;
+	</td>
+	</tr>
+	</table>
+
+   </td>
+  </tr>
+<tr>
+ <td class="tableCellOne" style="width:130px;" valign="top">
+	<div class="rankMember">Newbie</div>
+	
+	<div class="itempad"><img src="http://www.getontracks.org/themes/forum_themes/blue/images/rank.gif" alt="Rank" class="rankImage" /></div>
+	<div class="userBlock">Total Posts:&nbsp; 7</div>
+	<div class="userBlock">Joined&nbsp; 2008-08-10</div>
+</td>
+<td class="tableCellOne" valign="top" colspan="2"><div class="post"><p>I would like to nuance my previous post.</p>
+
+<p>Seeing the need for the collection/processing phase of GTD is one thing, knowing where to implement it is much more difficult.&nbsp; Anyone <b>can</b> implement the full gtd system, as long as you see tracks as one element of the bigger system.&nbsp; There are several different ways to implement collection &amp; processing by using other programs or even simple scripts.</p>
+
+<p>The question comes imho basically down to : <i>what practical advantages could it give to add the collection and processing parts into tracks versus doing it somewhere else and use tracks for the action managemnt only?</i><br />
+In fact even collection and processing should not necessarily be in 1 program.&nbsp; You could for example collect into some text file/database with 1 script/program and use another (or tracks, maybe) to load that data, and process it.</p>
+
+<p>To answer the question from above, I&#8217;m thinking about three things:<br />
+1) context switching (change of focus, visibility of windows) between 2 programs vs 1 program that has 1 dedicated page:&nbsp; even with good window managers and/or big/dual screen setups it&#8217;s easier for the eye to look on one page imo.<br />
+2) the need of copy-pasting when making a note (from inbox) into an action.&nbsp; First of all:&nbsp; the shorter your notes the better they are.&nbsp; (as long as you know afterwards what they are about <img src="http://www.getontracks.org/images/smileys/wink.gif" width="19" height="19" alt="wink" style="border:0;" />)&nbsp; So they should contain just a few words.&nbsp; I&#8217;m imagining that the processing-phase-page of tracks could handle note by note and when handling each note, it could by default already show a new action form filled in with as action description the contents of the note.&nbsp; If you want to convert the note into an action you need to type less in the action description field, and it also doesn&#8217;t do any harm in case you would like to drop the note or do something else with it.&nbsp;  This is something you cannot do if not implemented in tracks.<br />
+On the other hand, we/I could write a desktop tool that iterates over all your notes and presents a form as described above, and uses the tracks rest api to submit the actions to tracks.&nbsp; It would be as fast as using tracks itself + you can scratch argument 1 because by using the api you don&#8217;t need the tracks interface at all. <br />
+3) key combos:&nbsp; on most systems you can assign keyboard shortcuts to open programs (making it really fast if you want to get something out of your head quick). You can&#8217;t do that with web apps.&nbsp;  But on the other hand you could also keep a browser with tracks open in another virtual desktop and use a keycombo to switch to it, so it&#8217;s sort off equally fast I guess.</p>
+
+<p>For now i wrote a small shellscript that i can trigger with a key combo.&nbsp; It pops up an input dialog and appends my text to a textfile that forms my gtd inbox.&nbsp; A very fast way to collect stuff.<br />
+See: <a href="http://www.getontracks.org/?URL=http%3A%2F%2Fdieter.plaetinck.be%2Fa_fast_way_to_get_stuff_out_of_your_head_and_into_your_gtd_inbox">http://dieter.plaetinck.be/a_fast_way_to_get_stuff_out_of_your_head_and_into_your_gtd_inbox</a></p>
+
+<p>After thinking for a while and coming up with 2 real and arguments and 1 semi argument, I conclude that by writing a little desktop app as described in &#8216;2)&#8217; , all arguments are taken care of.&nbsp; So I think that tracks does not really <i>need</i> to implement collecting/processing.&nbsp; It would be nice, but offer no practical advantages if we write a little desktop tool to handle the processing (we already have a script for the collecting <img src="http://www.getontracks.org/images/smileys/wink.gif" width="19" height="19" alt="wink" style="border:0;" /> )</p>
+
+<p>I will think a bit more about this and if I come up with more ideas/remarks I&#8217;ll let you guys know.<br />
+I&#8217;m also very curious to what you guys have to say about this.</p></div>
+	
+	
+	
+</td>
+
+</tr><tr>
+
+<td class="tableCellTwo"  style="width:130px;">
+	<table cellpadding="0" cellspacing="0" border="0" width="100%">
+	<tr>
+	<td align="center"><div class="button"><div class="buttonSmall" id="i1" onclick="navJump('http://www.getontracks.org/forums/member/407/')" onmouseover="navHover(this);" onmouseout="navReset(this);">Profile</div></div></td>
+	
+	
+
+	</tr>
+	</table>
+</td>
+
+<td class="tableCellTwo" colspan="2">
+	<table cellpadding="0" cellspacing="0" border="0">
+	<tr>
+	
+	
+	
+	
+	
+	
+		
+	
+	
+	&nbsp;
+	
+	<td>&nbsp;</td>	
+	</tr>
+	</table>
+  </td>
+ </tr>
+</table>
+
+</td>
+</tr>
+
+<tr id="j9" >
+ <td colspan="3">
+
+
+ <table class="threadBorder" cellpadding="0" cellspacing="0" border="0" style="width:100%;">
+  <tr>
+   <td class="tableRowHeadingBold" style="width:130px;"><div class="largeLinks"><a href="http://www.getontracks.org/forums/member/403/">gorn</a></div></td>
+   <td class="tableRowHeading">
+
+	<table cellpadding="0" cellspacing="0" border="0" style="width:99%;">
+	<tr>
+	<td>Posted: 14 August 2008 10:38 AM</td>
+	<td align="right">
+	
+		
+	
+	
+
+	
+	
+	&nbsp;&nbsp;<span class="smallLinks">[ <a href="http://www.getontracks.org/forums/ignore_member/403/" title="Ignore">Ignore</a> ]</span>
+	
+	&nbsp;&nbsp;<span class="smallLinks">[ <a name="761" href="http://www.getontracks.org/forums/viewreply/761/" title="Permalink to this post"># 9</a> ]</span>
+
+	&nbsp;
+	</td>
+	</tr>
+	</table>
+
+   </td>
+  </tr>
+<tr>
+ <td class="tableCellOne" style="width:130px;" valign="top">
+	<div class="rankMember">Newbie</div>
+	
+	<div class="itempad"><img src="http://www.getontracks.org/themes/forum_themes/blue/images/rank.gif" alt="Rank" class="rankImage" /></div>
+	<div class="userBlock">Total Posts:&nbsp; 10</div>
+	<div class="userBlock">Joined&nbsp; 2008-07-31</div>
+</td>
+<td class="tableCellOne" valign="top" colspan="2"><div class="post"><p>I agree that in your particular case your solution is perfect. On the other hand to make it universal solution could be very difficult. The beauty of tracks (and any web application) is it&#8217;s accessibility by all OS&#8217;es, mobile phones, palms, anything with reasonable browser can do it. However when you start to develop desktop application/shell whatever, you are always cofined to one platform - it is enourmously hard to make it portable. In fact the portability and accessibility from anywhere seems to me the main reason to implement anything as web application, which tends to be always less UI ideal than any desktop appplication.</p></div>
+	
+	
+	
+</td>
+
+</tr><tr>
+
+<td class="tableCellTwo"  style="width:130px;">
+	<table cellpadding="0" cellspacing="0" border="0" width="100%">
+	<tr>
+	<td align="center"><div class="button"><div class="buttonSmall" id="j1" onclick="navJump('http://www.getontracks.org/forums/member/403/')" onmouseover="navHover(this);" onmouseout="navReset(this);">Profile</div></div></td>
+	
+	
+
+	</tr>
+	</table>
+</td>
+
+<td class="tableCellTwo" colspan="2">
+	<table cellpadding="0" cellspacing="0" border="0">
+	<tr>
+	
+	
+	
+	
+	
+	
+		
+	
+	
+	&nbsp;
+	
+	<td>&nbsp;</td>	
+	</tr>
+	</table>
+  </td>
+ </tr>
+</table>
+
+</td>
+</tr>
+
+<tr id="k9" >
+ <td colspan="3">
+
+
+ <table class="threadBorder" cellpadding="0" cellspacing="0" border="0" style="width:100%;">
+  <tr>
+   <td class="tableRowHeadingBold" style="width:130px;"><div class="largeLinks"><a href="http://www.getontracks.org/forums/member/407/">Dieter_be</a></div></td>
+   <td class="tableRowHeading">
+
+	<table cellpadding="0" cellspacing="0" border="0" style="width:99%;">
+	<tr>
+	<td>Posted: 15 August 2008 10:29 AM</td>
+	<td align="right">
+	
+		
+	
+	
+
+	
+	
+	&nbsp;&nbsp;<span class="smallLinks">[ <a href="http://www.getontracks.org/forums/ignore_member/407/" title="Ignore">Ignore</a> ]</span>
+	
+	&nbsp;&nbsp;<span class="smallLinks">[ <a name="764" href="http://www.getontracks.org/forums/viewreply/764/" title="Permalink to this post"># 10</a> ]</span>
+
+	&nbsp;
+	</td>
+	</tr>
+	</table>
+
+   </td>
+  </tr>
+<tr>
+ <td class="tableCellOne" style="width:130px;" valign="top">
+	<div class="rankMember">Newbie</div>
+	
+	<div class="itempad"><img src="http://www.getontracks.org/themes/forum_themes/blue/images/rank.gif" alt="Rank" class="rankImage" /></div>
+	<div class="userBlock">Total Posts:&nbsp; 7</div>
+	<div class="userBlock">Joined&nbsp; 2008-08-10</div>
+</td>
+<td class="tableCellOne" valign="top" colspan="2"><div class="post"><p>Good point.&nbsp;  Portability is point to be added to my list, and a key argument to promote the &#8216;tracks should implement the &#8216;collecting/processing&#8217; processes.</p>
+
+<p>And btw, if some users don&#8217;t like to do the collecting/processing steps, these steps can be on totally separate pages, as they don&#8217;t need tight integration - UI wise - into the other parts of tracks.&nbsp; So these pages could even be configured to be not shown, if the authors of tracks want to allow this.</p>
+
+<p>The portability argument also counts for the missing &#8216;reference system&#8217; implementation, and UI-wise it can also be a totally different page in tracks.&nbsp; One could argue that we could use a 2nd web application (a wiki or something) for the general reference system, but then you miss out on some possibilities / some points where integration could be possible.</p>
+
+<p>I&#8217;m thinking of:<br />
+1) 1 application/interface is easier to navigate then 2<br />
+2) in processing phase-&gt; add to general reference<br />
+3) integration of &#8216;notes&#8217; into general reference<br />
+etc </p>
+
+<p>A general reference system is probably pretty hard to implement because it needs several features (tagging, categorisation, links between documentation/notes to each other, ...) , but there is probably already much ROR-based code out there that can be re-used for this&#8230;</p></div>
+	
+	
+	
+</td>
+
+</tr><tr>
+
+<td class="tableCellTwo"  style="width:130px;">
+	<table cellpadding="0" cellspacing="0" border="0" width="100%">
+	<tr>
+	<td align="center"><div class="button"><div class="buttonSmall" id="k1" onclick="navJump('http://www.getontracks.org/forums/member/407/')" onmouseover="navHover(this);" onmouseout="navReset(this);">Profile</div></div></td>
+	
+	
+
+	</tr>
+	</table>
+</td>
+
+<td class="tableCellTwo" colspan="2">
+	<table cellpadding="0" cellspacing="0" border="0">
+	<tr>
+	
+	
+	
+	
+	
+	
+		
+	
+	
+	&nbsp;
+	
+	<td>&nbsp;</td>	
+	</tr>
+	</table>
+  </td>
+ </tr>
+</table>
+
+</td>
+</tr>
+
+<tr id="l9" >
+ <td colspan="3">
+
+
+ <table class="threadBorder" cellpadding="0" cellspacing="0" border="0" style="width:100%;">
+  <tr>
+   <td class="tableRowHeadingBold" style="width:130px;"><div class="largeLinks"><a href="http://www.getontracks.org/forums/member/407/">Dieter_be</a></div></td>
+   <td class="tableRowHeading">
+
+	<table cellpadding="0" cellspacing="0" border="0" style="width:99%;">
+	<tr>
+	<td>Posted: 18 August 2008 06:42 PM</td>
+	<td align="right">
+	
+		
+	
+	
+
+	
+	
+	&nbsp;&nbsp;<span class="smallLinks">[ <a href="http://www.getontracks.org/forums/ignore_member/407/" title="Ignore">Ignore</a> ]</span>
+	
+	&nbsp;&nbsp;<span class="smallLinks">[ <a name="780" href="http://www.getontracks.org/forums/viewreply/780/" title="Permalink to this post"># 11</a> ]</span>
+
+	&nbsp;
+	</td>
+	</tr>
+	</table>
+
+   </td>
+  </tr>
+<tr>
+ <td class="tableCellOne" style="width:130px;" valign="top">
+	<div class="rankMember">Newbie</div>
+	
+	<div class="itempad"><img src="http://www.getontracks.org/themes/forum_themes/blue/images/rank.gif" alt="Rank" class="rankImage" /></div>
+	<div class="userBlock">Total Posts:&nbsp; 7</div>
+	<div class="userBlock">Joined&nbsp; 2008-08-10</div>
+</td>
+<td class="tableCellOne" valign="top" colspan="2"><div class="post"><p>i&#8217;m working on adding (or trying to add) an implementation for the gtd collecting&processing;steps to tracks 1.7-dev<br />
+<a href="http://www.getontracks.org/?URL=http%3A%2F%2Fgithub.com%2FDieterbe%2Ftracks%2Ftree%2Fmaster">http://github.com/Dieterbe/tracks/tree/master</a><br />
+I&#8217;m new to git, ruby and RoR so I&#8217;m going slowly, but steady (and I&#8217;m having fun)</p></div>
+	
+	
+	
+</td>
+
+</tr><tr>
+
+<td class="tableCellTwo"  style="width:130px;">
+	<table cellpadding="0" cellspacing="0" border="0" width="100%">
+	<tr>
+	<td align="center"><div class="button"><div class="buttonSmall" id="l1" onclick="navJump('http://www.getontracks.org/forums/member/407/')" onmouseover="navHover(this);" onmouseout="navReset(this);">Profile</div></div></td>
+	
+	
+
+	</tr>
+	</table>
+</td>
+
+<td class="tableCellTwo" colspan="2">
+	<table cellpadding="0" cellspacing="0" border="0">
+	<tr>
+	
+	
+	
+	
+	
+	
+		
+	
+	
+	&nbsp;
+	
+	<td>&nbsp;</td>	
+	</tr>
+	</table>
+  </td>
+ </tr>
+</table>
+
+</td>
+</tr>
+
+<tr id="m9" >
+ <td colspan="3">
+
+
+ <table class="threadBorder" cellpadding="0" cellspacing="0" border="0" style="width:100%;">
+  <tr>
+   <td class="tableRowHeadingBold" style="width:130px;"><div class="largeLinks"><a href="http://www.getontracks.org/forums/member/1/">bsag</a></div></td>
+   <td class="tableRowHeading">
+
+	<table cellpadding="0" cellspacing="0" border="0" style="width:99%;">
+	<tr>
+	<td>Posted: 21 September 2008 02:07 PM</td>
+	<td align="right">
+	
+		
+	
+	
+
+	
+	
+	&nbsp;&nbsp;<span class="smallLinks">[ <a href="http://www.getontracks.org/forums/ignore_member/1/" title="Ignore">Ignore</a> ]</span>
+	
+	&nbsp;&nbsp;<span class="smallLinks">[ <a name="831" href="http://www.getontracks.org/forums/viewreply/831/" title="Permalink to this post"># 12</a> ]</span>
+
+	&nbsp;
+	</td>
+	</tr>
+	</table>
+
+   </td>
+  </tr>
+<tr>
+ <td class="tableCellOne" style="width:130px;" valign="top">
+	<div class="rankAdmin">Administrator</div>
+	<div class="itempad"><img src="http://www.getontracks.org/images/avatars/uploads/avatar_1.png" width="80" height="80" border="0" alt="Avatar" /></div>
+	<div class="itempad"><img src="http://www.getontracks.org/themes/forum_themes/blue/images/rank.gif" alt="Rank" class="rankImage" /><img src="http://www.getontracks.org/themes/forum_themes/blue/images/rank.gif" alt="Rank" class="rankImage" /><img src="http://www.getontracks.org/themes/forum_themes/blue/images/rank.gif" alt="Rank" class="rankImage" /><img src="http://www.getontracks.org/themes/forum_themes/blue/images/rank.gif" alt="Rank" class="rankImage" /></div>
+	<div class="userBlock">Total Posts:&nbsp; 223</div>
+	<div class="userBlock">Joined&nbsp; 2006-03-05</div>
+</td>
+<td class="tableCellOne" valign="top" colspan="2"><div class="post"><p>Sorry for the delayed reply&#8212;I seem to have spent most of this summer either away or catching up from various absences! First for a little history. I read David Allen&#8217;s Getting Things Done, and immediately felt that the workflow he described would help me keep on top of my life. At the time, there were very few (perhaps none, I don&#8217;t remember exactly) desktop applications for the Mac. I had coincidentally just started learning Ruby and Rails, and since I didn&#8217;t then know anything about Cocoa programming for Mac OS X (I do know a little about it now), I decided I&#8217;d try to write something in Rails. It would be a good practical project for improving my coding skills, and I would hopefully produce something useful at the end. Once I&#8217;d produced something which more or less worked, I Open Sourced it, in case anyone else might find it useful. </p>
+
+<p>Along the way, I learned that &#8216;canonical GTD&#8217; as described by David Allen wasn&#8217;t the best way of doing things for me. These things are very personal and different for every person, but I didn&#8217;t really need an Inbox (it was so easy and quick to add new actions that I just did it, rather than making yet another loop to go through&#8212;sorting stuff out in the Inbox), and I didn&#8217;t need dependencies. In fact, I have very few projects in the traditional sense of finite pieces of work which can be completed. The vast majority of my work as an academic is a never-ending cycle of stuff which needs to be done. On good days, this feels like a natural cycle, like the seasons or the agricultural year. On a bad day, I feel like <a href="http://www.getontracks.org/?URL=http%3A%2F%2Fen.wikipedia.org%2Fwiki%2FSisyphus">Sisyphus</a>, rolling rocks uphill <img src="http://www.getontracks.org/images/smileys/grin.gif" width="19" height="19" alt="grin" style="border:0;" />. I&#8217;ve found that I like to be able to see everything easily (even if that is an overwhelming amount of stuff), because I find it reassuring to know that nothing is getting &#8216;lost&#8217;. I like flexible ways of categorising and sorting things, because I find I have a lot of overlap between my odd kinds of projects.</p>
+
+<p>I&#8217;m well aware that a lot of these things conflict with what The David advises, but all I can say is that it works for me. Reading GTD was invaluable for me in actually making me think about what I need in an organisational system. Also note that I&#8217;m not saying this the THE RIGHT WAY for anyone else. It works for me, and that&#8217;s all I can say.</p>
+
+<p>Anyway, fast-forward to today: Tracks has gathered a truly wonderful community of users, contributors and passionate advocates. Others have added terrific new features which have improved Tracks beyond all recognition from its very simple and humble origins, and which I would never have been able to code myself. Tracks is as good as it is today almost entirely due to the hard work and effort of the other developers, and I am extremely grateful for that.</p>
+
+<p>However. Tracks is now a product of its community, and as such it must be useful for a diverse group of people. Consequently, it now has some features that I don&#8217;t personally need or use. This is absolutely a good thing, because it isn&#8217;t just me using it, but it makes it much more difficult for me to say what my &#8216;vision&#8217; for Tracks is, because most of you won&#8217;t like it, and it would be a backwards step. There are also now literally hundreds of GTD applications for all platforms, online versions, iPhone/iPod touch etc., etc., which means that people do have a choice.</p>
+
+<p>So, for what it&#8217;s worth (and bearing in mind everything I&#8217;ve said above), here&#8217;s my opinion on the discussion:</p>
+
+<p>1. Personally, I would make Tracks even *less* structured than it currently is. It&#8217;s interesting that thomasn mentioned <a href="http://www.getontracks.org/?URL=http%3A%2F%2Fwww.culturedcode.com%2Fthings%2F">Things</a> on the forum. I actually think that Things also doesn&#8217;t conform to GTD, and is much the better for it. It does have an inbox (which you aren&#8217;t obliged to use), but it doesn&#8217;t have contexts at all, and splits projects into projects (more traditional-type projects) and areas (like my Sisyphean tasks above). It has no dependency mechanism. All the other organisation (apart from Someday and Scheduled) is done using tags, which you can filter on to slice your actions anyway you like. I think this works very well, and supports all kinds of systems, with very  minimal &#8216;futzing&#8217;. Actually, if Things had been around when I was first thinking of Tracks, I wouldn&#8217;t have bothered writing it <img src="http://www.getontracks.org/images/smileys/grin.gif" width="19" height="19" alt="grin" style="border:0;" />. So one very radical suggestion would be to just get rid of contexts in Tracks, use the excellent existing tagging system to organise things, and improve the filtering. Though we don&#8217;t want to just slavishly copy Things <img src="http://www.getontracks.org/images/smileys/grin.gif" width="19" height="19" alt="grin" style="border:0;" />.<br />
+2. Education and expectations. This is a very valid point. Some features could be changed, and some might be fine as they are, but we need much better tutorials and documentation to show users how they can bend Tracks to their will. It&#8217;s worth saying (see my point 3 below) that Tracks users are probably more likely to be tinkerers than not, because Tracks isn&#8217;t trivial (despite all our best efforts) to install. It&#8217;s not a desktop app, so you need to jump through a few hoops to install, unless you&#8217;re using one of the hosted versions. However, that shouldn&#8217;t be an excuse for not documenting things properly.<br />
+3. Tracks is multi-platform and can be used on a server or a personal computer. This is its great strength, but it also constrains what we can do, because it has to be platform-portable. My opinion is that the best way to deal with that is to behave like a good *nix command line utility: do one thing very well, but offer wide-open pipes in and out to allow integration with other tools, and to allow users to customise their own workflow. We&#8217;ve now got a great API thanks to Luke and others, but we could take it even further.</p></div>
+	
+	
+	
+</td>
+
+</tr><tr>
+
+<td class="tableCellTwo"  style="width:130px;">
+	<table cellpadding="0" cellspacing="0" border="0" width="100%">
+	<tr>
+	<td align="center"><div class="button"><div class="buttonSmall" id="m1" onclick="navJump('http://www.getontracks.org/forums/member/1/')" onmouseover="navHover(this);" onmouseout="navReset(this);">Profile</div></div></td>
+	
+	
+
+	</tr>
+	</table>
+</td>
+
+<td class="tableCellTwo" colspan="2">
+	<table cellpadding="0" cellspacing="0" border="0">
+	<tr>
+	
+	
+	
+	
+	
+	
+		
+	
+	
+	&nbsp;
+	
+	<td>&nbsp;</td>	
+	</tr>
+	</table>
+  </td>
+ </tr>
+</table>
+
+</td>
+</tr>
+
+<tr id="n9" >
+ <td colspan="3">
+
+
+ <table class="threadBorder" cellpadding="0" cellspacing="0" border="0" style="width:100%;">
+  <tr>
+   <td class="tableRowHeadingBold" style="width:130px;"><div class="largeLinks"><a href="http://www.getontracks.org/forums/member/407/">Dieter_be</a></div></td>
+   <td class="tableRowHeading">
+
+	<table cellpadding="0" cellspacing="0" border="0" style="width:99%;">
+	<tr>
+	<td>Posted: 22 September 2008 04:20 PM</td>
+	<td align="right">
+	
+		
+	
+	
+
+	
+	
+	&nbsp;&nbsp;<span class="smallLinks">[ <a href="http://www.getontracks.org/forums/ignore_member/407/" title="Ignore">Ignore</a> ]</span>
+	
+	&nbsp;&nbsp;<span class="smallLinks">[ <a name="838" href="http://www.getontracks.org/forums/viewreply/838/" title="Permalink to this post"># 13</a> ]</span>
+
+	&nbsp;
+	</td>
+	</tr>
+	</table>
+
+   </td>
+  </tr>
+<tr>
+ <td class="tableCellOne" style="width:130px;" valign="top">
+	<div class="rankMember">Newbie</div>
+	
+	<div class="itempad"><img src="http://www.getontracks.org/themes/forum_themes/blue/images/rank.gif" alt="Rank" class="rankImage" /></div>
+	<div class="userBlock">Total Posts:&nbsp; 7</div>
+	<div class="userBlock">Joined&nbsp; 2008-08-10</div>
+</td>
+<td class="tableCellOne" valign="top" colspan="2"><div class="post"><p>Thanks for getting back to us <img src="http://www.getontracks.org/images/smileys/smile.gif" width="19" height="19" alt="smile" style="border:0;" />&nbsp; It was worth the delay</p>
+
+<p>I disagree with you on some of your opinions, but I&#8217;m very happy we agree that the most important considerations when designing/implementing tracks features is general usability/&#8216;wishes fulfilment&#8217;.&nbsp; Eg: increasing the quality of the tracks experience for the <i>average</i> user and not for any contributor him/herself personally.</p>
+
+<p>This basically opens the door for many new contributions (collect/process, general reference system,...) as long as those patches are reasonably stable/maintained and provide more use for those who want it then it bugs those who don&#8217;t need it. </p>
+
+<p>I agree with you on the recurring tasks thing.&nbsp; This is in fact something the gtd book doesn&#8217;t say much about.&nbsp; But Reinier is implementing recurring tasks, and I&#8217;m sure something usable will be coming out of those efforts.<br />
+Also, many actions just never get &#8216;done&#8217;, period.&nbsp; Things like grocery shopping etc, where the most natural thing is maintaining lists with items.&nbsp; Items are added/removed continuously, but &#8216;grocery shopping&#8217; will never be &#8220;done&#8221;.&nbsp; (You could make &#8216;grocery shopping&#8217; a project but that wouldn&#8217;t solve the situation)&nbsp; For stuff like this, we should imho have some wiki-like features in tracks.&nbsp; (in fact, I think we should have a full general reference system in tracks, but that&#8217;s another story)</p>
+
+<p><br />
+Your last point is very tricky.&nbsp; Generally I agree with the &#8216;do one thing and do it well&#8217;, &#8216;offer input/output methods so different tools can be chained together&#8217; , but I think webapps like tracks are an exception to that rule:<br />
+1) On some platforms, your environment is limited.&nbsp; Eg on some smartphones you can only have one application open at the same time, or switching between applications/webpages is a heavy/cumbersome operation.&nbsp; Also, communication methods between applications can be more limited on phones than on pc&#8217;s.&nbsp; (see also gorn&#8217;s last post)<br />
+2) Doing many things inside one application allows you interaction between those &#8216;things&#8217; that sometimes are not possible - or much harder - when doing it with multiple applications.&nbsp; eg having notes for each action/project show up in your reference system, I&#8217;m sure you can up with more examples.</p></div>
+	
+	
+	
+</td>
+
+</tr><tr>
+
+<td class="tableCellTwo"  style="width:130px;">
+	<table cellpadding="0" cellspacing="0" border="0" width="100%">
+	<tr>
+	<td align="center"><div class="button"><div class="buttonSmall" id="n1" onclick="navJump('http://www.getontracks.org/forums/member/407/')" onmouseover="navHover(this);" onmouseout="navReset(this);">Profile</div></div></td>
+	
+	
+
+	</tr>
+	</table>
+</td>
+
+<td class="tableCellTwo" colspan="2">
+	<table cellpadding="0" cellspacing="0" border="0">
+	<tr>
+	
+	
+	
+	
+	
+	
+		
+	
+	
+	&nbsp;
+	
+	<td>&nbsp;</td>	
+	</tr>
+	</table>
+  </td>
+ </tr>
+</table>
+
+</td>
+</tr>
+
+<tr id="o9" >
+ <td colspan="3">
+
+
+ <table class="threadBorder" cellpadding="0" cellspacing="0" border="0" style="width:100%;">
+  <tr>
+   <td class="tableRowHeadingBold" style="width:130px;"><div class="largeLinks"><a href="http://www.getontracks.org/forums/member/370/">thomasn</a></div></td>
+   <td class="tableRowHeading">
+
+	<table cellpadding="0" cellspacing="0" border="0" style="width:99%;">
+	<tr>
+	<td>Posted: 22 September 2008 05:36 PM</td>
+	<td align="right">
+	
+		
+	
+	
+
+	
+	
+	&nbsp;&nbsp;<span class="smallLinks">[ <a href="http://www.getontracks.org/forums/ignore_member/370/" title="Ignore">Ignore</a> ]</span>
+	
+	&nbsp;&nbsp;<span class="smallLinks">[ <a name="839" href="http://www.getontracks.org/forums/viewreply/839/" title="Permalink to this post"># 14</a> ]</span>
+
+	&nbsp;
+	</td>
+	</tr>
+	</table>
+
+   </td>
+  </tr>
+<tr>
+ <td class="tableCellOne" style="width:130px;" valign="top">
+	<div class="rankMember">Newbie</div>
+	
+	<div class="itempad"><img src="http://www.getontracks.org/themes/forum_themes/blue/images/rank.gif" alt="Rank" class="rankImage" /></div>
+	<div class="userBlock">Total Posts:&nbsp; 10</div>
+	<div class="userBlock">Joined&nbsp; 2008-05-27</div>
+</td>
+<td class="tableCellOne" valign="top" colspan="2"><div class="post"><blockquote><p>So one very radical suggestion would be to just get rid of contexts in Tracks, use the excellent existing tagging system to organise things, and improve the filtering. Though we don’t want to just slavishly copy Things <img src="http://www.getontracks.org/images/smileys/wink.gif" width="19" height="19" alt="wink" style="border:0;" /></p>
+</blockquote>
+
+<p>Slavish copying, with due regard to intellectual property, is <i>exactly</i> what I had in mind <img src="http://www.getontracks.org/images/smileys/wink.gif" width="19" height="19" alt="wink" style="border:0;" /></p>
+
+<p>One of the UI niceties of Things is that selecting multiple &#8220;tag&#8221; buttons at once applies a filter which ANDs these tags; this, together with tag hierarchies, a quick-input Inbox, some Waiting For logic and a menu layout in &#8220;Classic GTD&#8221; style, would give me much of what I&#8217;m after.</p>
+
+<p>That said, I&#8217;ve actually stopped using Tracks for now, and gone back to a <a href="http://www.getontracks.org/?URL=http%3A%2F%2Fhipsterpda.com%2F">HipsterPDA</a> until I have another PDA I&#8217;m happy with&#8212;perhaps an <a href="http://www.getontracks.org/?URL=http%3A%2F%2Fopenmoko.org%2F">OpenMoko </a> with a longer battery life. It&#8217;ll take some interesting technology before the battery life can match the Hipster, though&#8230;</p>
+
+<p>@bsag: thanks for the explanations; with a bit of thought, maybe Tracks can still give you what you want while becoming easier to use OOTB as a &#8220;vanilla GTD&#8221; tool? As a common vocabulary, GTD is pretty rich and well-documented; I&#8217;m guessing that implementing your workflow in a tool using that vocabulary might be easier than implenting a more orthodox GTD flow with the current Tracks. We probably won&#8217;t really know how this would work out, though,&nbsp; until someone has a go at implementing it.</p>
+
+<p><br />&#8212;Thomas</p></div>
+	
+	
+	
+</td>
+
+</tr><tr>
+
+<td class="tableCellTwo"  style="width:130px;">
+	<table cellpadding="0" cellspacing="0" border="0" width="100%">
+	<tr>
+	<td align="center"><div class="button"><div class="buttonSmall" id="o1" onclick="navJump('http://www.getontracks.org/forums/member/370/')" onmouseover="navHover(this);" onmouseout="navReset(this);">Profile</div></div></td>
+	
+	
+
+	</tr>
+	</table>
+</td>
+
+<td class="tableCellTwo" colspan="2">
+	<table cellpadding="0" cellspacing="0" border="0">
+	<tr>
+	
+	
+	
+	
+	
+	
+		
+	
+	
+	&nbsp;
+	
+	<td>&nbsp;</td>	
+	</tr>
+	</table>
+  </td>
+ </tr>
+</table>
+
+</td>
+</tr>
+
+<tr id="p9" >
+ <td colspan="3">
+
+
+ <table class="threadBorder" cellpadding="0" cellspacing="0" border="0" style="width:100%;">
+  <tr>
+   <td class="tableRowHeadingBold" style="width:130px;"><div class="largeLinks"><a href="http://www.getontracks.org/forums/member/1/">bsag</a></div></td>
+   <td class="tableRowHeading">
+
+	<table cellpadding="0" cellspacing="0" border="0" style="width:99%;">
+	<tr>
+	<td>Posted: 22 September 2008 05:42 PM</td>
+	<td align="right">
+	
+		
+	
+	
+
+	
+	
+	&nbsp;&nbsp;<span class="smallLinks">[ <a href="http://www.getontracks.org/forums/ignore_member/1/" title="Ignore">Ignore</a> ]</span>
+	
+	&nbsp;&nbsp;<span class="smallLinks">[ <a name="840" href="http://www.getontracks.org/forums/viewreply/840/" title="Permalink to this post"># 15</a> ]</span>
+
+	&nbsp;
+	</td>
+	</tr>
+	</table>
+
+   </td>
+  </tr>
+<tr>
+ <td class="tableCellOne" style="width:130px;" valign="top">
+	<div class="rankAdmin">Administrator</div>
+	<div class="itempad"><img src="http://www.getontracks.org/images/avatars/uploads/avatar_1.png" width="80" height="80" border="0" alt="Avatar" /></div>
+	<div class="itempad"><img src="http://www.getontracks.org/themes/forum_themes/blue/images/rank.gif" alt="Rank" class="rankImage" /><img src="http://www.getontracks.org/themes/forum_themes/blue/images/rank.gif" alt="Rank" class="rankImage" /><img src="http://www.getontracks.org/themes/forum_themes/blue/images/rank.gif" alt="Rank" class="rankImage" /><img src="http://www.getontracks.org/themes/forum_themes/blue/images/rank.gif" alt="Rank" class="rankImage" /></div>
+	<div class="userBlock">Total Posts:&nbsp; 223</div>
+	<div class="userBlock">Joined&nbsp; 2006-03-05</div>
+</td>
+<td class="tableCellOne" valign="top" colspan="2"><div class="post"><blockquote><div class="quote_author">Dieter_be - 22 September 2008 04:20 PM</div>
+<p>I agree with you on the recurring tasks thing.&nbsp; This is in fact something the gtd book doesn&#8217;t say much about.&nbsp; But Reinier is implementing recurring tasks, and I&#8217;m sure something usable will be coming out of those efforts.</p>
+</blockquote>
+
+<p>Just to clarify, I <b>do</b> find recurring tasks useful - I was talking about task dependencies, such as making &#8220;Paint room&#8221; dependent on &#8220;Buy paint&#8221;, so that the latter must be completed before &#8220;Paint room&#8221; is actually activated and available.</p>
+
+<p>I would also really strongly warn against &#8216;bloat&#8217;. Particularly with a web app, every feature added (even with really careful optimisation) can make everything much slower to load to the point where it&#8217;s painful. So I wouldn&#8217;t recommend adding a reference system &#40;beyond the notes we have already&#41; or a wiki. I think those things are the prime examples of features which should be piped into and out of Tracks, despite your points 1 and 2, which are perfectly valid.</p></div>
+	
+	
+	
+</td>
+
+</tr><tr>
+
+<td class="tableCellTwo"  style="width:130px;">
+	<table cellpadding="0" cellspacing="0" border="0" width="100%">
+	<tr>
+	<td align="center"><div class="button"><div class="buttonSmall" id="p1" onclick="navJump('http://www.getontracks.org/forums/member/1/')" onmouseover="navHover(this);" onmouseout="navReset(this);">Profile</div></div></td>
+	
+	
+
+	</tr>
+	</table>
+</td>
+
+<td class="tableCellTwo" colspan="2">
+	<table cellpadding="0" cellspacing="0" border="0">
+	<tr>
+	
+	
+	
+	
+	
+	
+		
+	
+	
+	&nbsp;
+	
+	<td>&nbsp;</td>	
+	</tr>
+	</table>
+  </td>
+ </tr>
+</table>
+
+</td>
+</tr>
+
+</table>
+
+<table cellpadding="0" cellspacing="0" border="0" style="width:100%;">
+<tr>
+<td valign="middle" style="width:70%;">
+
+&nbsp;
+
+</td>
+&nbsp;
+
+&nbsp;
+
+</tr>
+</table>
+
+&nbsp;
+
+
+<div class="defaultCenter">
+<div class="marginpad">
+
+
+&lsaquo;&lsaquo; <a href="http://www.getontracks.org/forums/viewthread/232/">Thank you for Tracks</a> 
+
+
+
+&nbsp;&nbsp;&nbsp;&nbsp; <a href="http://www.getontracks.org/forums/viewthread/269/">Copy Projects</a> &rsaquo;&rsaquo;
+
+
+</div>
+</div>
+</div>
+<div id="footer">
+
+	
+	<div id="switcher">Select A Theme 
+		<select name="theme_switcher" class="select" onchange="if (this.value != '') location.href=this.value">
+			<option value="http://www.getontracks.org/?ACT=42&amp;board_id=1&amp;theme=grey">Grey</option>
+<option value="http://www.getontracks.org/?ACT=42&amp;board_id=1&amp;theme=developer">Developer</option>
+<option value="http://www.getontracks.org/?ACT=42&amp;board_id=1&amp;theme=shares">Shares</option>
+<option value="http://www.getontracks.org/?ACT=42&amp;board_id=1&amp;theme=blue" selected="selected">Blue</option>
+<option value="http://www.getontracks.org/?ACT=42&amp;board_id=1&amp;theme=default">Default</option>
+
+		</select>
+	</div><!--switcher-->
+	
+
+	<ul class="credits">
+		<li>Powered By <a href="http://expressionengine.com/">ExpressionEngine</a></li>
+		<li>Template Design By <a href="http://artificialmemory.com/" title="Nathaniel Davis">Artificial Memory</a></li>
+        </ul>
+        <ul class="stats">
+		<li>ExpressionEngine Discussion Forum - version 3.1.5 (20110630)</li>
+		<li>Script Executed in 0.2324 seconds</li>
+	</ul>
+	
+	
+	<ul class="feeds">
+		<li><a href="http://www.getontracks.org/forums/rss/12/"><img src="http://www.getontracks.org/themes/forum_themes/blue/images/feed_rss.jpg" alt="RSS 2.0" title="RSS 2.0" /></a></li>
+		<li><a href="http://www.getontracks.org/forums/atom/12/"><img src="http://www.getontracks.org/themes/forum_themes/blue/images/feed_atom.jpg" alt="Atom Feed" title="Atom Feed" /></a></li>
+	</ul>
+	
+
+</div><!--footer-->
+</div><!--wrapper-->
+</body>
+</html>

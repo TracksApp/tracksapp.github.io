@@ -1,0 +1,1760 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<title>Tracks | actionpack version error&#63;</title>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<meta name='MSSmartTagsPreventParsing' content='TRUE' />
+<meta http-equiv='expires' content='-1' />
+<meta http-equiv= 'pragma' content='no-cache' />
+<meta name='robots' content='all' />
+
+<link rel="alternate" type="application/atom+xml" title="Atom Feed" href="http://www.getontracks.org/forums/atom/9/" />
+<link rel="alternate" type="application/rss+xml" title="RSS 2.0" href="http://www.getontracks.org/forums/rss/9/" />
+
+<script type="text/javascript"> 
+<!--
+
+function navHover(which)
+{					
+	if (document.getElementById(which.id))
+	{
+		cur = document.getElementById(which.id).className;
+		
+		if (cur == 'buttonLarge')
+		{
+			document.getElementById(which.id).className = 'buttonLargeHover'
+		}
+		else if (cur == 'buttonSmall')
+		{
+			document.getElementById(which.id).className = 'buttonSmallHover'
+		}
+	}
+}
+
+function navReset(which)
+{					
+	if (document.getElementById(which.id))
+	{
+		cur = document.getElementById(which.id).className;
+		
+		if (cur == 'buttonLargeHover')
+		{
+			document.getElementById(which.id).className = 'buttonLarge'
+		}
+		else if (cur == 'buttonSmallHover')
+		{
+			document.getElementById(which.id).className = 'buttonSmall'
+		}
+	}
+}
+
+
+function navJump(where)
+{
+	window.location=where;
+}
+-->
+</script>
+
+
+<style type='text/css'>
+
+
+* {
+	margin: 0;
+	padding: 0;
+	}
+body {
+	font: 78% Helvetica, Arial, sans-serif;
+	text-align: center;
+	color: #036;
+	background: #344;
+    line-height:1.4em;
+	}
+#wrapper {
+	text-align: left;
+	min-width: 760px;
+	margin: .5em 2em;
+	color: #fff;
+	background: #036 url(http://www.getontracks.org/themes/forum_themes/blue/images/background.gif) 50% 0% repeat-y;
+	border: 6px solid #233;
+	}
+#content {
+	padding: .5em 1.5% 0 1.5%;
+	border-right: 3px solid #047;
+	border-left: 3px solid #047;
+	}
+#content ul {
+	list-style: none;
+	line-height: 1.5em;
+	margin: .25em 0;
+}
+p {
+	margin: 0 10px;
+	line-height:1.4em;
+	}
+a:link {
+	color: #adf;
+	border: none;
+    }
+a:visited {
+	color: #ccc;
+	}
+a:hover, a:active {
+	text-decoration: none;
+	}
+#topbar a, #footer a, #subhead a {
+	text-decoration: none;
+	padding: .25em .5em;
+	}
+#topbar a:hover, #footer a:hover, #subhead a:hover {
+	background: #047;
+	}
+h1, h2, h3, h4, h5, h6 {
+	font-weight: bold;
+	}
+h2 {
+	font-size: 2em;
+	}
+hr.clear {
+	clear: both;
+	margin: 0;
+	padding: 0;
+	visibility: hidden;
+	border: none;
+	}
+img {
+	border: none;
+	}
+#address_book, #address_book td, #emoticons
+	{
+		background: #3cf;
+	}
+#emoticons a, #address_book a
+	{
+		color: #00f;
+		padding: 3px;
+	}
+div#topbar {
+	padding: .5em 1.5%;
+	border-top: 3px solid #047;
+	border-right: 3px solid #047;
+	border-left: 3px solid #047;
+	background: #025 url(http://www.getontracks.org/themes/forum_themes/blue/images/background-dk.gif) 50% 0% repeat-y;
+	}
+#topbar ul {
+	float: left;
+	display: inline;
+	text-align: left;
+	list-style: none;
+	line-height: 1em;
+	font-size: 1em;
+	display: inline;
+	}
+#topbar ul li {
+	display: inline;
+	margin-right: .5em;
+	}
+#topbar form {	
+	text-align: right;
+	}
+#topbar form fieldset {
+	padding-bottom: .5em;
+	}
+#topbar form input {
+	margin: 0 .25em;
+	}
+#topbar form div {
+	display: none;
+	}
+#header {  
+	clear: both;
+	padding: .5em 1.5% 0 1.5%;
+	border-right: 3px solid #047;
+	border-bottom: 1px solid #047;
+	border-left: 3px solid #047;
+	background: #025 url(http://www.getontracks.org/themes/forum_themes/blue/images/background-dk.gif) 50% 0% repeat-y;
+	}
+#header h1 {
+	float: left;
+ 	display: inline;
+ 	text-transform: uppercase;
+	font-weight: normal;
+	font-size: 2.5em;
+	line-height: 1em;
+	}
+#header h1 a {
+	color: #69c;
+	text-decoration: none;
+	}
+#header h1 a:hover {
+	color:#adf;			
+    }
+#header form {
+	text-align: right;
+	padding: .25em;
+	}
+#header form input {
+	width: 8em;
+	}
+#header form .submit {
+	width: 5em;
+	margin: 0 .5em;
+	}
+#header form div {
+	display: none;
+	}
+#subhead {  
+	clear: both;
+	padding: .5em 1.5%;
+	border-right: 3px solid #047;
+	border-left: 3px solid #047;	
+	background: #025 url(http://www.getontracks.org/themes/forum_themes/blue/images/background-dk.gif) 50% 0% repeat-y;
+	}
+div.breadcrumb {
+	display: inline;
+	}
+.currentcrumb {
+	font-weight: bold;
+	}
+ul.forumnav {
+	list-style: none;
+	margin-bottom: 1em;
+	}
+ul.forumnav li {
+	display: inline;
+	margin-right: 1em;
+	}
+ul.forumnav li a {
+	padding: .25em .5em;
+	text-decoration: none;
+	}
+ul.forumnav li a:hover {
+	background: #025;
+	}
+#footer {
+	clear: both;
+	padding: 1.5%;
+	text-align: center;
+	font-size: .9em;
+	color: #69c;
+	border-top: 1px solid #047;
+	border-right: 3px solid #047;
+	border-bottom: 3px solid #047;
+	border-left: 3px solid #047;
+	background: #025 url(http://www.getontracks.org/themes/forum_themes/blue/images/background-dk.gif) 50% 0% repeat-y;
+	}
+#footer a {
+	font-weight: bold;
+	}
+#footer ul {
+	list-style: none;
+	line-height: 1.5em;
+	margin: .25em 0;
+	}
+#footer ul li {
+	display: inline;
+	padding: .5em;
+	}
+#footer select {
+	margin: .5em;
+	}
+.forumName {
+	letter-spacing:    .1em;
+	}
+.forumDescription {
+	padding:           3px 0 0 0;
+	}
+.forumLightLinks {
+	padding:           4px 0 2px 0;
+	}
+.topicTitle {
+	letter-spacing:    .1em;
+	}
+.userBlock {
+	padding:	2px 0 2px 0;
+	}
+.spacer {
+	height: .5em;
+	margin-bottom: 1em;
+	}
+.itempad {
+	padding: 2px 0 2px 0;
+	}
+.itempadbig {
+	padding: 5px 0 5px 0;
+	}
+.bottompad {
+	padding: 0 0 2px 0;
+	}
+.marginpad {
+	margin: 12px 0 10px 3px;
+	}
+.leftpad {
+ 	padding: 0 0 0 4px;
+	}
+table {
+	border-collapse: collapse;
+	}
+.legend {
+	margin-top: 1em;
+	padding: .5em 0;
+	background: #036;
+	}
+.tableBorder {
+	padding: 0;
+	margin-top: 1px;
+	margin-bottom: 3px;
+	}
+.tablePad {
+	padding:  0 2px 4px 2px;
+	}
+.tableHeading {
+	letter-spacing: .1em;
+	font-size: 1.1em;
+	font-weight: bold;
+	text-transform: uppercase;
+	color: #69c;
+	white-space: nowrap;
+	margin: 1em 0 0 0;
+	}
+.tableHeadingSmall {
+	font-size: .9em;
+	color: #69c;
+	white-space: nowrap;
+	margin: 0 0 .5em 0;
+	}
+.tableHeadingBG {
+	background: #036;
+	border-top: 1px solid #025;
+	font-size: 1em;
+	padding: 1em .5em 0 .5em;
+	}
+.tableRowHeading, .tableRowHeadingBold {
+	padding: .25em .5em;
+	border-bottom: 1px solid #025;
+	background: #047;
+	color: #69c;
+	font-size: .8em;
+	text-transform: uppercase;
+	letter-spacing: .2em;
+	}
+.tableRowSpacer {
+	}
+.threadBorder {
+	border: 1px solid #025;
+	margin: 1em 0;
+	padding: .25em 0;
+	}
+.tableCellOne {
+	padding:           3px 6px 3px 6px;
+	}
+.tableCellTwo {
+	padding:           3px 6px 3px 6px;
+	}
+.tablePostInfo {
+	margin-bottom: .75em;
+	}
+.ignored {
+	border: 1px solid #69c;
+	padding: 0;
+	margin-top: 1px;
+	margin-bottom: 3px;
+	}
+.button {
+	width: 80px;
+	background-color: transparent;
+	}
+.button40 {
+	width: 40px;
+	background-color: transparent;
+	}
+.button80 {
+	width: 80px;
+	background-color: transparent;
+	}
+.button100 {
+	width: 100px;
+	background-color: transparent;
+	}
+.button150 {
+	width: 150px;
+	background-color: transparent;
+	}
+.button210 {
+	width: 210px;
+	background-color: transparent;
+	}
+.buttonSpacer{
+	margin:	0 0 0 6px;
+	}
+.buttonLarge {
+	background: #025 url(http://www.getontracks.org/themes/forum_themes/blue/images/background-dk.gif) 50% 50% repeat-y;
+	border: 1px solid #69c;
+	text-transform: uppercase;
+	text-align: center;
+	color: #fff;
+	font-weight: bold;
+	padding: 2px 4px 2px 4px;
+	margin: .25em 0 .25em 0;
+	white-space: nowrap;
+	cursor: pointer;
+	}
+.buttonLargeHover {
+	background: #047 url(http://www.getontracks.org/themes/forum_themes/blue/images/background-lt.gif) 50% 50% repeat-y;
+	border: 1px solid #69c;
+	text-transform: uppercase;
+	text-align: center;
+	color: #fff;
+	font-weight: bold;
+	padding: 2px 4px 2px 4px;
+	margin: .25em 0 .25em 0;
+	white-space: nowrap;
+	cursor: pointer;
+	}
+.buttonSmall {
+	border: 1px solid #69c;
+	font-size: .9em;
+	text-transform: uppercase;
+	text-align:	center;
+	color: #69c;
+	padding: 0px 1px 0px 1px;
+	margin: 0 2px 0 2px;
+	white-space: nowrap;
+	cursor: pointer;
+	}
+.buttonSmallHover {
+	background: #047 url(http://www.getontracks.org/themes/forum_themes/blue/images/background-lt.gif) 50% 50% repeat-y;
+	border: 1px solid #69c;
+	font-size: .9em;
+	text-transform: uppercase;
+	text-align:	center;
+	color: #fff;
+	padding: 0px 1px 0px 1px;
+	margin: 0 2px 0 2px;
+	white-space: nowrap;
+	cursor: pointer;
+	}
+.rankAdmin, .rankModerator, .rankMember {
+	font-weight: bold;
+	color: #69c;
+	padding: 2px 0 3px 0;
+	}
+.rankImage {
+	margin: 0;
+	padding: 0;
+	border:  0;
+	}
+.userBlock {
+	color: #69c;
+	}
+.post {
+	margin: 1em 0;
+	line-height: 1.5em;
+	}
+.edited {
+	font-size:		9px;
+	color:			#69c;
+}
+code {
+	white-space: normal;
+	}
+pre {
+	background: #def;
+	border: 1px solid #69c;
+	color: #69c;
+	margin: 8px 2px 10px 6px;
+	padding: 10px 10px 10px 6px;
+	white-space: normal;
+	}
+.codeblock {
+	background: #def;
+	border: 1px solid #69c;
+	color: #69c;
+	margin: 8px 4px 10px 3px;
+	padding: 10px 10px 10px 6px;
+	}
+blockquote {
+	background: #036;
+	border:	1px solid #69c;
+	color: #69c;
+	margin: 8px 2px 10px 6px;
+	padding: 5px 10px 10px 6px;
+	}
+.quote_author {
+	font-weight: bold;
+	color: #69c;
+	margin:	0 0 4px 0;
+	background-color: transparent;
+	}
+.signature {
+	margin: 1em .5em .5em .5em;
+	padding: .25em;
+	border: 1px solid #69c;
+	}
+.signatureTitle {
+	color: #69c;
+	}
+.buttonMode {
+	white-space: 		nowrap;
+	}
+.htmlButtonOuter, .htmlButtonOuterL {
+	padding:           0;
+	border-top:        #025 1px solid;
+	border-right:      #025 1px solid;
+	border-bottom:     #025 1px solid;
+	}
+.htmlButtonOuterL  {
+	border-left:       #025 1px solid;
+	}
+.htmlButtonInner {
+	background-color:  transparent; 
+	text-align:		center;
+	padding:			0 3px 0 3px;
+	}
+.htmlButtonOff {
+	padding:           1px 2px 2px 2px;
+	white-space:       nowrap;
+	}
+.htmlButtonOff a:link { 
+	color:             #69c;
+	text-decoration:   none;
+	white-space:       nowrap;
+	}
+.htmlButtonOff  a:visited { 
+	text-decoration:   none;
+	}
+.htmlButtonOff a:active { 
+	text-decoration:   none;
+	color:             #fff;
+	}
+.htmlButtonOff a:hover { 
+	text-decoration:   none;
+	background:        #047;
+	color:             #fff;
+	}
+.htmlButtonOn {
+	background:        #047;
+	padding:           1px 2px 2px 2px;
+	white-space:       nowrap;
+	}
+.htmlButtonOn a:link { 
+	color:             #990000;
+	text-decoration:   none;
+	white-space:       nowrap;
+	}
+.htmlButtonOn  a:visited { 
+	text-decoration:   none;
+	}
+.htmlButtonOn a:active { 
+	text-decoration:   none;
+	color:             #999;
+	}
+.htmlButtonOn a:hover { 
+	color:             #999;
+	text-decoration:   none;
+	}
+.attachTitle {
+	font-weight:		bold;
+	color:             #fff;
+	padding:           4px;
+	margin:			10px 0 1px 0;
+	}
+.attachBody {
+	padding:           4px;
+	margin-bottom:		10px;
+	}
+.attachThumb {
+	margin: 3px 6px 3px 3px;
+	border: 1px solid 	#025;
+	}
+.preview {
+	padding:           10px;
+	margin:			0 0 12px 0;
+	border:       		1px solid #025;
+	}
+.previewheading {
+	font-weight:		bold;
+	color: #69c;
+	text-transform: uppercase;
+	padding:           5px 0 5px 10px;
+	border-top:     	1px solid #025;
+	border-right:     	1px solid #025;
+	border-left:     	1px solid #025;
+	}
+.activeModerator {
+	font-weight: bold;
+	}
+form {
+	margin:            0;
+	padding:           0;
+	border:            0;
+	}
+fieldset {
+	border: none;
+	}
+.hidden {
+	margin:            0;
+	padding:           0;
+	border:            0;
+	}
+.input {
+	border:        1px solid #69c;
+	color:             #69c;
+	height:            1.5em;
+	padding:           0;
+	margin:        	0;
+	}
+.textarea {
+	border:        1px solid #69c;
+	color:             #333;
+	font-size:         11px;
+	padding:           0;
+	margin:        	0;
+	}
+.select {
+	background-color:  #fff;
+	font-weight:       normal;
+	letter-spacing:    .1em;
+	color:             #333;
+	margin-top:        2px;
+	margin-bottom:     2px;
+	}
+.multiselect {
+	border:        1px solid #69c;
+	background-color:  #fff;
+	color:             #333;
+	font-size:         11px;
+	margin-top:        2px;
+	margin-top:        2px;
+	}
+.radio {
+	background-color:  transparent;
+	margin-top:        4px;
+	margin-bottom:     4px;
+	padding:           0;
+	border:            0;
+	}
+.checkbox {
+	background-color:  transparent;
+	padding:           0;
+	border:            0;
+	}
+.buttons {
+	font-weight:       bold;
+	border:        1px solid #69c;
+	letter-spacing:    .1em;
+	margin:        	0;
+	padding:			1px 6px 3px 6px;
+	color:             #69c;
+	background: #025;
+	cursor: pointer;
+	}
+.submit {
+	font-weight:       normal;
+	border:        1px solid #69c;
+	letter-spacing:    .1em;
+	margin:        	0;
+	padding:			1px 4px 1px 4px;
+	color:             #69c;
+	background: #025;
+	cursor: pointer;
+	}
+.errorHeading {
+	background: 		#025;
+	color:             #fff;
+	padding:           6px 6px 6px 6px;
+	border-bottom:     1px solid #fff;
+	letter-spacing:    .1em;
+	font-weight:		bold;
+	}
+.errorMessage {
+	color:             #f00;
+	padding:           10px 0 10px 0;
+	}
+.errorBox {
+	color: #f00;
+	padding: 10px;
+	margin: 0 0 12px 0;
+	border: 1px solid #f00;
+	background: #fcc;
+	}
+.alert {
+	color:             #f00;
+	font-weight:		bold;
+	}
+.highlight {
+	color:             #f00;
+	}
+.profileTitle {
+	font-size: 1.5em;
+	font-weight: bold;
+	margin: .5em 0;
+	}
+.memberlistHead {
+	padding: .25em .5em;
+	border-bottom: 1px solid #025;
+ 	background: #047;
+	color: #69c;
+	font-size: .8em;
+	text-transform: uppercase;
+	}
+.memberlistRowOne {
+	padding: .5em;
+	background: #047;
+	}
+.memberlistRowTwo {
+	padding: .5em;
+	}
+.memberlistFooter {
+	padding: 1em .5em;
+	}
+.profileHeadingBG {
+	background: #036;
+	padding:           6px 6px 6px 6px;
+	border-bottom:     #025 1px solid;
+	}
+.profileTopBox {
+	margin:		0;
+	padding:		7px 5px 5px 5px;
+	}
+.profileTitle {
+	font-weight:		bold;
+	padding: 			3px 5px 3px 0;
+	margin:			0;
+	background-color: transparent;  
+	}
+.profileItem {
+	background:		transparent;
+	margin: 			2px 0 2px 0;
+	background-color: transparent;  
+	}
+.profilePhoto {
+	padding:			1px 1px 1px 20px;
+	margin-top:        1px;
+	margin-bottom:     3px;
+	}
+.avatar {
+	background:	transparent;
+	margin:		3px 14px 0 3px;
+	}
+.photo {
+	background:	transparent;
+	margin:		6px 14px 0 3px;
+	}
+.profileHead {
+	font-weight:		bold;
+	text-transform:	uppercase;
+	padding:			3px 4px 3px 10px;  
+	margin:			0 0 0 0;
+	}
+.menuHeadingBG {
+	background: #036;
+	padding:           6px 6px 6px 6px;
+	}
+.profileMenu {
+	background: 		#036;
+	border:            1px solid #025;
+	padding:			1px;
+	margin-top:        1px;
+	margin-bottom:     3px;
+	}
+.profileMenuInner {
+	padding-left:		10px;
+	padding-right:		8px;
+	margin-bottom:		4px;
+	margin-top:		4px;
+	}
+.menuItem {
+	padding:			3px 0 3px 0;
+	background-color:	transparent;  
+	}
+.borderTopBot {
+	border-top:	1px solid #025;
+	border-bottom:	1px solid #025;
+	}
+.borderBot {
+	border-bottom:	1px solid #025;
+	}
+.success {
+	font-weight:		bold;
+	padding:			3px 0 3px 0;
+	background-color:	transparent; 
+	}
+.innerShade {
+	background-color:	#036;
+	margin:			0;
+	padding:			10px;
+	}
+.searchBox {
+	background: transparent;
+	margin: 16px 0 0 0;
+	padding: 8px 5px 5px 5px;
+	}
+.searchBoxTitle {
+	font-weight: bold;
+	background-color: transparent;  
+	}
+.searchpad {
+	padding: 6px 0 8px 0;
+	}
+.searchspacer {
+	margin-bottom: 6px;
+	}
+.iframe {
+	border:1px solid #025;
+	background: #def;
+	color: #036;
+	}
+.wordSuggestion {
+	border: 1px solid #036; 
+	padding: 4px; 
+	background: #def;
+	color: #036;
+	}
+.wordSuggestion a, .wordSuggestion a:active {
+	color: #036;
+	cursor: pointer;
+	}
+.spellchecked_word {
+	cursor: pointer;
+	background-color: #def;
+	color:#036;
+	border-bottom: 1px dashed #036;
+	}
+.spellchecked_word_selected {
+	cursor: pointer;
+	background-color: #69c;
+	}
+</style>
+
+</head>
+
+<body >
+<div id="wrapper">
+<div id='topbar'>
+	<ul>
+		
+		<li class="welcome">Welcome Guest</li>
+		<li><a href="http://www.getontracks.org/forums/member/login/">Login</a></li>
+		<li>REGISTRATION CLOSED: please use <a href="http://lists.rousette.org.uk/mailman/listinfo/tracks-discuss">mailing list</a></li>
+		
+		
+	</ul>
+     
+     <form method="post" action="http://www.getontracks.org/"  >
+<div class='hiddenFields'>
+<input type="hidden" name="XID" value="683e87a61b6a6ea64c82f200cc396fac35e14a4f" />
+<input type="hidden" name="ACT" value="9" />
+<input type="hidden" name="FROM" value="forum" />
+<input type="hidden" name="mbase" value="http://www.getontracks.org/forums/member/" />
+<input type="hidden" name="board_id" value="1" />
+<input type="hidden" name="anon" value="1" />
+<input type="hidden" name="RET" value="http://www.getontracks.org/forums/viewthread/406/" />
+<input type="hidden" name="site_id" value="1" />
+</div>
+
+
+	<fieldset>	
+		<label class="field-username">Username<input type="text" class="textbox" name="username" value="" /></label>
+		<label class="field-password">Password<input type="password" class="textbox" name="password" /></label>
+		<input type="submit" class="submit" value="Login" />
+	</fieldset>	
+	<fieldset>
+		<label class="field-remember">Remember Me?<input type="checkbox" class="checkbox" name="auto_login" value="1" checked="checked" /></label>
+		<a href="http://www.getontracks.org/forums/member/forgot_password/">forgot password?</a>
+	</fieldset> 
+</form>
+     
+<hr class="clear" />
+</div><!--topbar-->
+<div id='header'>
+     <h1><a href="http://www.getontracks.org/forums/" title="Tracks">Tracks</a></h1>
+     <form method="post" action="http://www.getontracks.org/forums/do_search/"  >
+<div class='hiddenFields'>
+<input type="hidden" name="XID" value="62a1461abc2ec795e47206c62aa4c83f31ec6019" />
+<input type="hidden" name="board_id" value="1" />
+<input type="hidden" name="site_id" value="1" />
+</div>
+
+
+
+<label class="searchbox"><input type="text" class="input" name="keywords" value="Search" maxlength="80" /></label>
+<input type="submit" class="submit" value="Search" />
+<a href="http://www.getontracks.org/forums/search/">Advanced Search</a>
+
+</form>
+    <hr class="clear" />
+</div><!--header-->
+<div id="subhead">
+		<div class="breadcrumb"><a href="http://www.getontracks.org/forums/">Forum Home</a><span class="breadcrumbspacer"> &gt; </span><a href="http://www.getontracks.org/forums/viewcategory/3/">Installation</a><span class="breadcrumbspacer"> &gt; </span><a href="http://www.getontracks.org/forums/viewforum/9/">Tracks on a web host</a><span class="breadcrumbspacer"> &gt; </span><span class="currentcrumb">Thread</span></div>
+<hr class="clear" />
+</div><!--subhead-->
+<div id="content">
+<script type="text/javascript">
+<!--
+
+function showimage(loc, width, height)
+{
+	window.open(loc,'Image','width='+width+',height='+height+',screenX=0,screenY=0,top=0,left=0,toolbar=0,status=0,scrollbars=0,location=0,menubar=1,resizable=1');
+	return false;
+}
+
+function showfastreply()
+{
+    if (document.getElementById('fastreply').style.display == "block")
+    {
+        document.getElementById('fastreply').style.display = "none";
+    }
+    else
+    {
+        document.getElementById('fastreply').style.display = "block";
+    }
+}
+
+function showHideRow(el)
+{
+    if (document.getElementById(el).style.display == "")
+    {
+        document.getElementById(el).style.display = "none";
+    }
+    else
+    {
+        document.getElementById(el).style.display = "";
+    }	
+}
+//-->
+</script>
+
+<table cellpadding="0" cellspacing="0" border="0" style="width:100%;">
+<tr>
+<td valign="middle" style="width:80%;">
+&nbsp;
+</td>
+&nbsp;
+
+&nbsp;
+
+</tr>
+</table>
+
+
+
+<table cellpadding="0" cellspacing="0" border="0" style="width:100%;" >
+<tr>
+<td class="tableHeadingBG" colspan="2"><div class="tableHeading">actionpack version error&#63;</div></td>
+<td class="tableHeadingBG" colspan="1" align="right"><div class="altLinks">&nbsp;</div></td>
+
+</tr>
+
+
+
+<tr id="a9" >
+ <td colspan="3">
+
+
+ <table class="threadBorder" cellpadding="0" cellspacing="0" border="0" style="width:100%;">
+  <tr>
+   <td class="tableRowHeadingBold" style="width:130px;"><div class="largeLinks"><a href="http://www.getontracks.org/forums/member/1487/">Beetle B.</a></div></td>
+   <td class="tableRowHeading">
+
+	<table cellpadding="0" cellspacing="0" border="0" style="width:99%;">
+	<tr>
+	<td>Posted: 18 May 2009 12:29 AM</td>
+	<td align="right">
+	
+		
+	
+	    
+	
+	
+
+	
+	
+	&nbsp;&nbsp;<span class="smallLinks">[ <a href="http://www.getontracks.org/forums/ignore_member/1487/" title="Ignore">Ignore</a> ]</span>
+	
+	
+
+	&nbsp;
+	</td>
+	</tr>
+	</table>
+
+   </td>
+  </tr>
+<tr>
+ <td class="tableCellOne" style="width:130px;" valign="top">
+	<div class="rankMember">Newbie</div>
+	
+	<div class="itempad"><img src="http://www.getontracks.org/themes/forum_themes/blue/images/rank.gif" alt="Rank" class="rankImage" /></div>
+	<div class="userBlock">Total Posts:&nbsp; 4</div>
+	<div class="userBlock">Joined&nbsp; 2009-05-18</div>
+</td>
+<td class="tableCellOne" valign="top" colspan="2"><div class="post"><p>I&#8217;ve been using Tracks v 1.6 on Dreamhost for a while now. Today I tried upgrading to 1.7. I followed the instructions, but when it comes time to update the database, I get:</p>
+
+<p>username@yoda ~/tracks $ rake db:migrate RAILS_ENV=production&#8212;trace<br />
+(in /home/.hammacher/beetle_b/tracks)<br />
+** Invoke db:migrate (first_time)<br />
+** Invoke environment (first_time)<br />
+** Execute environment<br />
+rake aborted!<br />
+RubyGem version error: actionpack(2.1.0 not = 1.13.6)<br />
+/usr/lib/ruby/gems/1.8/gems/rails-2.2.2/lib/initializer.rb:259:in `require_frameworks&#8217;<br />
+/usr/lib/ruby/gems/1.8/gems/rails-2.2.2/lib/initializer.rb:133:in `process&#8217;<br />
+/usr/lib/ruby/gems/1.8/gems/rails-2.2.2/lib/initializer.rb:112:in `send&#8217;<br />
+/usr/lib/ruby/gems/1.8/gems/rails-2.2.2/lib/initializer.rb:112:in `run&#8217;<br />
+/home/username/tracks/config/environment.rb:20<br />
+/usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require&#8217;<br />
+/usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:31:in `require&#8217;<br />
+/usr/lib/ruby/gems/1.8/gems/activesupport-2.2.2/lib/active_support/dependencies.rb:153:in `require&#8217;<br />
+/usr/lib/ruby/gems/1.8/gems/activesupport-2.2.2/lib/active_support/dependencies.rb:521:in `new_constants_in&#8217;<br />
+/usr/lib/ruby/gems/1.8/gems/activesupport-2.2.2/lib/active_support/dependencies.rb:153:in `require&#8217;<br />
+/usr/lib/ruby/gems/1.8/gems/rails-2.2.2/lib/tasks/misc.rake:3<br />
+/usr/lib/ruby/gems/1.8/gems/rake-0.8.3/lib/rake.rb:617:in `call&#8217;<br />
+/usr/lib/ruby/gems/1.8/gems/rake-0.8.3/lib/rake.rb:617:in `execute&#8217;<br />
+/usr/lib/ruby/gems/1.8/gems/rake-0.8.3/lib/rake.rb:612:in `each&#8217;<br />
+/usr/lib/ruby/gems/1.8/gems/rake-0.8.3/lib/rake.rb:612:in `execute&#8217;<br />
+/usr/lib/ruby/gems/1.8/gems/rake-0.8.3/lib/rake.rb:578:in `invoke_with_call_chain&#8217;<br />
+/usr/lib/ruby/1.8/monitor.rb:238:in `synchronize&#8217;<br />
+/usr/lib/ruby/gems/1.8/gems/rake-0.8.3/lib/rake.rb:571:in `invoke_with_call_chain&#8217;<br />
+/usr/lib/ruby/gems/1.8/gems/rake-0.8.3/lib/rake.rb:588:in `invoke_prerequisites&#8217;<br />
+/usr/lib/ruby/gems/1.8/gems/rake-0.8.3/lib/rake.rb:585:in `each&#8217;<br />
+/usr/lib/ruby/gems/1.8/gems/rake-0.8.3/lib/rake.rb:585:in `invoke_prerequisites&#8217;<br />
+/usr/lib/ruby/gems/1.8/gems/rake-0.8.3/lib/rake.rb:577:in `invoke_with_call_chain&#8217;<br />
+/usr/lib/ruby/1.8/monitor.rb:238:in `synchronize&#8217;<br />
+/usr/lib/ruby/gems/1.8/gems/rake-0.8.3/lib/rake.rb:571:in `invoke_with_call_chain&#8217;<br />
+/usr/lib/ruby/gems/1.8/gems/rake-0.8.3/lib/rake.rb:564:in `invoke&#8217;<br />
+/usr/lib/ruby/gems/1.8/gems/rake-0.8.3/lib/rake.rb:2019:in `invoke_task&#8217;<br />
+/usr/lib/ruby/gems/1.8/gems/rake-0.8.3/lib/rake.rb:1997:in `top_level&#8217;<br />
+/usr/lib/ruby/gems/1.8/gems/rake-0.8.3/lib/rake.rb:1997:in `each&#8217;<br />
+/usr/lib/ruby/gems/1.8/gems/rake-0.8.3/lib/rake.rb:1997:in `top_level&#8217;<br />
+/usr/lib/ruby/gems/1.8/gems/rake-0.8.3/lib/rake.rb:2036:in `standard_exception_handling&#8217;<br />
+/usr/lib/ruby/gems/1.8/gems/rake-0.8.3/lib/rake.rb:1991:in `top_level&#8217;<br />
+/usr/lib/ruby/gems/1.8/gems/rake-0.8.3/lib/rake.rb:1970:in `run&#8217;<br />
+/usr/lib/ruby/gems/1.8/gems/rake-0.8.3/lib/rake.rb:2036:in `standard_exception_handling&#8217;<br />
+/usr/lib/ruby/gems/1.8/gems/rake-0.8.3/lib/rake.rb:1967:in `run&#8217;<br />
+/usr/lib/ruby/gems/1.8/gems/rake-0.8.3/bin/rake:31<br />
+/usr/bin/rake:19:in `load&#8217;<br />
+/usr/bin/rake:19</p>
+
+<p>I&#8217;m not a Rails person. Any ideas?</p>
+
+<p>(At the moment, I may try to install 1.6 on a local machine, copy the DB over. Upgrade locally. And then re-install from scratch on server and just move local DB over to host. But that&#8217;s a pain and I&#8217;m sure I&#8217;ll screw up&#8230;).</p></div>
+	
+	
+	
+</td>
+
+</tr><tr>
+
+<td class="tableCellTwo"  style="width:130px;">
+	<table cellpadding="0" cellspacing="0" border="0" width="100%">
+	<tr>
+	<td align="center"><div class="button"><div class="buttonSmall" id="a1" onclick="navJump('http://www.getontracks.org/forums/member/1487/')" onmouseover="navHover(this);" onmouseout="navReset(this);">Profile</div></div></td>
+	
+	
+
+	</tr>
+	</table>
+</td>
+
+<td class="tableCellTwo" colspan="2">
+	<table cellpadding="0" cellspacing="0" border="0">
+	<tr>
+	
+	
+	
+	
+		
+		
+				
+	
+	
+	
+	
+	&nbsp;
+	
+	<td>&nbsp;</td>	
+	</tr>
+	</table>
+  </td>
+ </tr>
+</table>
+
+</td>
+</tr>
+
+<tr id="b9" >
+ <td colspan="3">
+
+
+ <table class="threadBorder" cellpadding="0" cellspacing="0" border="0" style="width:100%;">
+  <tr>
+   <td class="tableRowHeadingBold" style="width:130px;"><div class="largeLinks"><a href="http://www.getontracks.org/forums/member/100/">Reinier Balt</a></div></td>
+   <td class="tableRowHeading">
+
+	<table cellpadding="0" cellspacing="0" border="0" style="width:99%;">
+	<tr>
+	<td>Posted: 19 May 2009 06:53 AM</td>
+	<td align="right">
+	
+		
+	
+	
+
+	
+	
+	&nbsp;&nbsp;<span class="smallLinks">[ <a href="http://www.getontracks.org/forums/ignore_member/100/" title="Ignore">Ignore</a> ]</span>
+	
+	&nbsp;&nbsp;<span class="smallLinks">[ <a name="1383" href="http://www.getontracks.org/forums/viewreply/1383/" title="Permalink to this post"># 1</a> ]</span>
+
+	&nbsp;
+	</td>
+	</tr>
+	</table>
+
+   </td>
+  </tr>
+<tr>
+ <td class="tableCellOne" style="width:130px;" valign="top">
+	<div class="rankMember">Sr. Member</div>
+	
+	<div class="itempad"><img src="http://www.getontracks.org/themes/forum_themes/blue/images/rank.gif" alt="Rank" class="rankImage" /><img src="http://www.getontracks.org/themes/forum_themes/blue/images/rank.gif" alt="Rank" class="rankImage" /><img src="http://www.getontracks.org/themes/forum_themes/blue/images/rank.gif" alt="Rank" class="rankImage" /><img src="http://www.getontracks.org/themes/forum_themes/blue/images/rank.gif" alt="Rank" class="rankImage" /></div>
+	<div class="userBlock">Total Posts:&nbsp; 882</div>
+	<div class="userBlock">Joined&nbsp; 2006-10-05</div>
+</td>
+<td class="tableCellOne" valign="top" colspan="2"><div class="post"><p>I think you need to upgrade RubyGems to 1.3.1 or later.</p></div>
+	
+	
+	
+</td>
+
+</tr><tr>
+
+<td class="tableCellTwo"  style="width:130px;">
+	<table cellpadding="0" cellspacing="0" border="0" width="100%">
+	<tr>
+	<td align="center"><div class="button"><div class="buttonSmall" id="b1" onclick="navJump('http://www.getontracks.org/forums/member/100/')" onmouseover="navHover(this);" onmouseout="navReset(this);">Profile</div></div></td>
+	
+	
+
+	</tr>
+	</table>
+</td>
+
+<td class="tableCellTwo" colspan="2">
+	<table cellpadding="0" cellspacing="0" border="0">
+	<tr>
+	
+	
+	
+	
+	
+	
+		
+	
+	
+	&nbsp;
+	
+	<td>&nbsp;</td>	
+	</tr>
+	</table>
+  </td>
+ </tr>
+</table>
+
+</td>
+</tr>
+
+<tr id="c9" >
+ <td colspan="3">
+
+
+ <table class="threadBorder" cellpadding="0" cellspacing="0" border="0" style="width:100%;">
+  <tr>
+   <td class="tableRowHeadingBold" style="width:130px;"><div class="largeLinks"><a href="http://www.getontracks.org/forums/member/1487/">Beetle B.</a></div></td>
+   <td class="tableRowHeading">
+
+	<table cellpadding="0" cellspacing="0" border="0" style="width:99%;">
+	<tr>
+	<td>Posted: 19 May 2009 02:12 PM</td>
+	<td align="right">
+	
+		
+	
+	
+
+	
+	
+	&nbsp;&nbsp;<span class="smallLinks">[ <a href="http://www.getontracks.org/forums/ignore_member/1487/" title="Ignore">Ignore</a> ]</span>
+	
+	&nbsp;&nbsp;<span class="smallLinks">[ <a name="1384" href="http://www.getontracks.org/forums/viewreply/1384/" title="Permalink to this post"># 2</a> ]</span>
+
+	&nbsp;
+	</td>
+	</tr>
+	</table>
+
+   </td>
+  </tr>
+<tr>
+ <td class="tableCellOne" style="width:130px;" valign="top">
+	<div class="rankMember">Newbie</div>
+	
+	<div class="itempad"><img src="http://www.getontracks.org/themes/forum_themes/blue/images/rank.gif" alt="Rank" class="rankImage" /></div>
+	<div class="userBlock">Total Posts:&nbsp; 4</div>
+	<div class="userBlock">Joined&nbsp; 2009-05-18</div>
+</td>
+<td class="tableCellOne" valign="top" colspan="2"><div class="post"><p>gem -v states that I am using 1.3.1</p>
+
+<p>(I don&#8217;t know if that means all gems are updated - not a Rails person).</p>
+
+<p>For now, I&#8217;ve installed it at home and moved the DB there. I&#8217;ll continue to use it locally until  this gets resolved.</p></div>
+	
+	
+	
+</td>
+
+</tr><tr>
+
+<td class="tableCellTwo"  style="width:130px;">
+	<table cellpadding="0" cellspacing="0" border="0" width="100%">
+	<tr>
+	<td align="center"><div class="button"><div class="buttonSmall" id="c1" onclick="navJump('http://www.getontracks.org/forums/member/1487/')" onmouseover="navHover(this);" onmouseout="navReset(this);">Profile</div></div></td>
+	
+	
+
+	</tr>
+	</table>
+</td>
+
+<td class="tableCellTwo" colspan="2">
+	<table cellpadding="0" cellspacing="0" border="0">
+	<tr>
+	
+	
+	
+	
+	
+	
+		
+	
+	
+	&nbsp;
+	
+	<td>&nbsp;</td>	
+	</tr>
+	</table>
+  </td>
+ </tr>
+</table>
+
+</td>
+</tr>
+
+<tr id="d9" >
+ <td colspan="3">
+
+
+ <table class="threadBorder" cellpadding="0" cellspacing="0" border="0" style="width:100%;">
+  <tr>
+   <td class="tableRowHeadingBold" style="width:130px;"><div class="largeLinks"><a href="http://www.getontracks.org/forums/member/100/">Reinier Balt</a></div></td>
+   <td class="tableRowHeading">
+
+	<table cellpadding="0" cellspacing="0" border="0" style="width:99%;">
+	<tr>
+	<td>Posted: 19 May 2009 02:47 PM</td>
+	<td align="right">
+	
+		
+	
+	
+
+	
+	
+	&nbsp;&nbsp;<span class="smallLinks">[ <a href="http://www.getontracks.org/forums/ignore_member/100/" title="Ignore">Ignore</a> ]</span>
+	
+	&nbsp;&nbsp;<span class="smallLinks">[ <a name="1385" href="http://www.getontracks.org/forums/viewreply/1385/" title="Permalink to this post"># 3</a> ]</span>
+
+	&nbsp;
+	</td>
+	</tr>
+	</table>
+
+   </td>
+  </tr>
+<tr>
+ <td class="tableCellOne" style="width:130px;" valign="top">
+	<div class="rankMember">Sr. Member</div>
+	
+	<div class="itempad"><img src="http://www.getontracks.org/themes/forum_themes/blue/images/rank.gif" alt="Rank" class="rankImage" /><img src="http://www.getontracks.org/themes/forum_themes/blue/images/rank.gif" alt="Rank" class="rankImage" /><img src="http://www.getontracks.org/themes/forum_themes/blue/images/rank.gif" alt="Rank" class="rankImage" /><img src="http://www.getontracks.org/themes/forum_themes/blue/images/rank.gif" alt="Rank" class="rankImage" /></div>
+	<div class="userBlock">Total Posts:&nbsp; 882</div>
+	<div class="userBlock">Joined&nbsp; 2006-10-05</div>
+</td>
+<td class="tableCellOne" valign="top" colspan="2"><div class="post"><p>I&#8217;m interested in the gem RubyGems.</p>
+
+<p>Try gem list&#8212;local. This will show you a list of installed gems. RubyGems should be listed there</p></div>
+	
+	
+	
+</td>
+
+</tr><tr>
+
+<td class="tableCellTwo"  style="width:130px;">
+	<table cellpadding="0" cellspacing="0" border="0" width="100%">
+	<tr>
+	<td align="center"><div class="button"><div class="buttonSmall" id="d1" onclick="navJump('http://www.getontracks.org/forums/member/100/')" onmouseover="navHover(this);" onmouseout="navReset(this);">Profile</div></div></td>
+	
+	
+
+	</tr>
+	</table>
+</td>
+
+<td class="tableCellTwo" colspan="2">
+	<table cellpadding="0" cellspacing="0" border="0">
+	<tr>
+	
+	
+	
+	
+	
+	
+		
+	
+	
+	&nbsp;
+	
+	<td>&nbsp;</td>	
+	</tr>
+	</table>
+  </td>
+ </tr>
+</table>
+
+</td>
+</tr>
+
+<tr id="e9" >
+ <td colspan="3">
+
+
+ <table class="threadBorder" cellpadding="0" cellspacing="0" border="0" style="width:100%;">
+  <tr>
+   <td class="tableRowHeadingBold" style="width:130px;"><div class="largeLinks"><a href="http://www.getontracks.org/forums/member/1487/">Beetle B.</a></div></td>
+   <td class="tableRowHeading">
+
+	<table cellpadding="0" cellspacing="0" border="0" style="width:99%;">
+	<tr>
+	<td>Posted: 19 May 2009 02:55 PM</td>
+	<td align="right">
+	
+		
+	
+	
+
+	
+	
+	&nbsp;&nbsp;<span class="smallLinks">[ <a href="http://www.getontracks.org/forums/ignore_member/1487/" title="Ignore">Ignore</a> ]</span>
+	
+	&nbsp;&nbsp;<span class="smallLinks">[ <a name="1386" href="http://www.getontracks.org/forums/viewreply/1386/" title="Permalink to this post"># 4</a> ]</span>
+
+	&nbsp;
+	</td>
+	</tr>
+	</table>
+
+   </td>
+  </tr>
+<tr>
+ <td class="tableCellOne" style="width:130px;" valign="top">
+	<div class="rankMember">Newbie</div>
+	
+	<div class="itempad"><img src="http://www.getontracks.org/themes/forum_themes/blue/images/rank.gif" alt="Rank" class="rankImage" /></div>
+	<div class="userBlock">Total Posts:&nbsp; 4</div>
+	<div class="userBlock">Joined&nbsp; 2009-05-18</div>
+</td>
+<td class="tableCellOne" valign="top" colspan="2"><div class="post"><p>Isn&#8217;t Ruby Gems a package that has lots of gems? As such, it shows:</p>
+
+<div class="codeblock"><code><span style="color: #000000">
+<span style="color: #007700">***&nbsp;</span><span style="color: #0000BB">LOCAL&nbsp;GEMS&nbsp;</span><span style="color: #007700">***<br /><br /></span><span style="color: #0000BB">actionmailer&nbsp;</span><span style="color: #007700">(</span><span style="color: #0000BB">2.2.2</span><span style="color: #007700">,&nbsp;</span><span style="color: #0000BB">2.1.1</span><span style="color: #007700">,&nbsp;</span><span style="color: #0000BB">2.1.0</span><span style="color: #007700">)<br /></span><span style="color: #0000BB">actionpack&nbsp;</span><span style="color: #007700">(</span><span style="color: #0000BB">2.2.2</span><span style="color: #007700">,&nbsp;</span><span style="color: #0000BB">2.1.1</span><span style="color: #007700">,&nbsp;</span><span style="color: #0000BB">2.1.0</span><span style="color: #007700">)<br /></span><span style="color: #0000BB">actionwebservice&nbsp;</span><span style="color: #007700">(</span><span style="color: #0000BB">1.2.6</span><span style="color: #007700">,&nbsp;</span><span style="color: #0000BB">1.2.3</span><span style="color: #007700">)<br /></span><span style="color: #0000BB">activerecord&nbsp;</span><span style="color: #007700">(</span><span style="color: #0000BB">2.2.2</span><span style="color: #007700">,&nbsp;</span><span style="color: #0000BB">2.1.1</span><span style="color: #007700">,&nbsp;</span><span style="color: #0000BB">2.1.0</span><span style="color: #007700">)<br /></span><span style="color: #0000BB">activeresource&nbsp;</span><span style="color: #007700">(</span><span style="color: #0000BB">2.2.2</span><span style="color: #007700">,&nbsp;</span><span style="color: #0000BB">2.1.1</span><span style="color: #007700">,&nbsp;</span><span style="color: #0000BB">2.1.0</span><span style="color: #007700">)<br /></span><span style="color: #0000BB">activesupport&nbsp;</span><span style="color: #007700">(</span><span style="color: #0000BB">2.2.2</span><span style="color: #007700">,&nbsp;</span><span style="color: #0000BB">2.1.1</span><span style="color: #007700">,&nbsp;</span><span style="color: #0000BB">2.1.0</span><span style="color: #007700">)<br /></span><span style="color: #0000BB">acts_as_taggable&nbsp;</span><span style="color: #007700">(</span><span style="color: #0000BB">2.0.2</span><span style="color: #007700">,&nbsp;</span><span style="color: #0000BB">1.0.4</span><span style="color: #007700">)<br /></span><span style="color: #0000BB">ajax_scaffold_generator&nbsp;</span><span style="color: #007700">(</span><span style="color: #0000BB">2.2.1</span><span style="color: #007700">)<br /></span><span style="color: #0000BB">archive</span><span style="color: #007700">-</span><span style="color: #0000BB">tar</span><span style="color: #007700">-</span><span style="color: #0000BB">minitar&nbsp;</span><span style="color: #007700">(</span><span style="color: #0000BB">0.5.1</span><span style="color: #007700">)<br /></span><span style="color: #0000BB">auth_generator&nbsp;</span><span style="color: #007700">(</span><span style="color: #0000BB">2.0.1</span><span style="color: #007700">,&nbsp;</span><span style="color: #0000BB">1.5.3</span><span style="color: #007700">,&nbsp;</span><span style="color: #0000BB">1.1.0</span><span style="color: #007700">)<br /></span><span style="color: #0000BB">Bloglines4R&nbsp;</span><span style="color: #007700">(</span><span style="color: #0000BB">0.1.0</span><span style="color: #007700">)<br /></span><span style="color: #0000BB">BlueCloth&nbsp;</span><span style="color: #007700">(</span><span style="color: #0000BB">1.0.0</span><span style="color: #007700">)<br /></span><span style="color: #0000BB">builder&nbsp;</span><span style="color: #007700">(</span><span style="color: #0000BB">2.0.0</span><span style="color: #007700">,&nbsp;</span><span style="color: #0000BB">1.2.4</span><span style="color: #007700">)<br /></span><span style="color: #0000BB">camping&nbsp;</span><span style="color: #007700">(</span><span style="color: #0000BB">1.5</span><span style="color: #007700">)<br /></span><span style="color: #0000BB">capistrano&nbsp;</span><span style="color: #007700">(</span><span style="color: #0000BB">2.5.1</span><span style="color: #007700">,&nbsp;</span><span style="color: #0000BB">1.4.1</span><span style="color: #007700">,&nbsp;</span><span style="color: #0000BB">1.4.0</span><span style="color: #007700">)<br /></span><span style="color: #0000BB">classifier&nbsp;</span><span style="color: #007700">(</span><span style="color: #0000BB">1.3.1</span><span style="color: #007700">)<br /></span><span style="color: #0000BB">cmdparse&nbsp;</span><span style="color: #007700">(</span><span style="color: #0000BB">2.0.2</span><span style="color: #007700">,&nbsp;</span><span style="color: #0000BB">2.0.0</span><span style="color: #007700">)<br /></span><span style="color: #0000BB">curb&nbsp;</span><span style="color: #007700">(</span><span style="color: #0000BB">0.1.4</span><span style="color: #007700">)<br /></span><span style="color: #0000BB">daemons&nbsp;</span><span style="color: #007700">(</span><span style="color: #0000BB">1.0.9</span><span style="color: #007700">,&nbsp;</span><span style="color: #0000BB">1.0.7</span><span style="color: #007700">,&nbsp;</span><span style="color: #0000BB">1.0.6</span><span style="color: #007700">)<br /></span><span style="color: #0000BB">diff</span><span style="color: #007700">-</span><span style="color: #0000BB">lcs&nbsp;</span><span style="color: #007700">(</span><span style="color: #0000BB">1.1.2</span><span style="color: #007700">)<br /></span><span style="color: #0000BB">facets&nbsp;</span><span style="color: #007700">(</span><span style="color: #0000BB">2005.10.30</span><span style="color: #007700">,&nbsp;</span><span style="color: #0000BB">1.8.54</span><span style="color: #007700">,&nbsp;</span><span style="color: #0000BB">1.8.51</span><span style="color: #007700">,&nbsp;</span><span style="color: #0000BB">1.8.49</span><span style="color: #007700">,&nbsp;</span><span style="color: #0000BB">1.0.3</span><span style="color: #007700">)<br /></span><span style="color: #0000BB">fastthread&nbsp;</span><span style="color: #007700">(</span><span style="color: #0000BB">1.0.1</span><span style="color: #007700">)<br /></span><span style="color: #0000BB">feedtools&nbsp;</span><span style="color: #007700">(</span><span style="color: #0000BB">0.2.29</span><span style="color: #007700">,&nbsp;</span><span style="color: #0000BB">0.2.26</span><span style="color: #007700">)<br /></span><span style="color: #0000BB">ferret&nbsp;</span><span style="color: #007700">(</span><span style="color: #0000BB">0.11.4</span><span style="color: #007700">,&nbsp;</span><span style="color: #0000BB">0.10.13</span><span style="color: #007700">,&nbsp;</span><span style="color: #0000BB">0.10.11</span><span style="color: #007700">)<br /></span><span style="color: #0000BB">flickr&nbsp;</span><span style="color: #007700">(</span><span style="color: #0000BB">1.0.2</span><span style="color: #007700">)<br /></span><span style="color: #0000BB">gd2&nbsp;</span><span style="color: #007700">(</span><span style="color: #0000BB">1.1.1</span><span style="color: #007700">,&nbsp;</span><span style="color: #0000BB">1.1</span><span style="color: #007700">,&nbsp;</span><span style="color: #0000BB">1.0</span><span style="color: #007700">)<br /></span><span style="color: #0000BB">gen&nbsp;</span><span style="color: #007700">(</span><span style="color: #0000BB">0.41.0</span><span style="color: #007700">,&nbsp;</span><span style="color: #0000BB">0.29.0</span><span style="color: #007700">)<br /></span><span style="color: #0000BB">geoip&nbsp;</span><span style="color: #007700">(</span><span style="color: #0000BB">0.3.0</span><span style="color: #007700">,&nbsp;</span><span style="color: #0000BB">0.2.0</span><span style="color: #007700">)<br /></span><span style="color: #0000BB">gettext&nbsp;</span><span style="color: #007700">(</span><span style="color: #0000BB">1.10.0</span><span style="color: #007700">,&nbsp;</span><span style="color: #0000BB">1.8.0</span><span style="color: #007700">,&nbsp;</span><span style="color: #0000BB">1.3.0</span><span style="color: #007700">)<br /></span><span style="color: #0000BB">glue&nbsp;</span><span style="color: #007700">(</span><span style="color: #0000BB">0.41.0</span><span style="color: #007700">,&nbsp;</span><span style="color: #0000BB">0.29.0</span><span style="color: #007700">)<br /></span><span style="color: #0000BB">gnuplot&nbsp;</span><span style="color: #007700">(</span><span style="color: #0000BB">2.2</span><span style="color: #007700">,&nbsp;</span><span style="color: #0000BB">2.1</span><span style="color: #007700">)<br /></span><span style="color: #0000BB">gravtastic&nbsp;</span><span style="color: #007700">(</span><span style="color: #0000BB">2.0.0</span><span style="color: #007700">)<br /></span><span style="color: #0000BB">gruff&nbsp;</span><span style="color: #007700">(</span><span style="color: #0000BB">0.2.8</span><span style="color: #007700">)<br /></span><span style="color: #0000BB">haml&nbsp;</span><span style="color: #007700">(</span><span style="color: #0000BB">2.0.3</span><span style="color: #007700">)<br /></span><span style="color: #0000BB">hoe&nbsp;</span><span style="color: #007700">(</span><span style="color: #0000BB">1.2.1</span><span style="color: #007700">,&nbsp;</span><span style="color: #0000BB">1.1.7</span><span style="color: #007700">)<br /></span><span style="color: #0000BB">hpricot&nbsp;</span><span style="color: #007700">(</span><span style="color: #0000BB">0.6</span><span style="color: #007700">)<br /></span><span style="color: #0000BB">htmltools&nbsp;</span><span style="color: #007700">(</span><span style="color: #0000BB">1.10</span><span style="color: #007700">,&nbsp;</span><span style="color: #0000BB">1.09</span><span style="color: #007700">)<br /></span><span style="color: #0000BB">localization_generator&nbsp;</span><span style="color: #007700">(</span><span style="color: #0000BB">1.0.8</span><span style="color: #007700">,&nbsp;</span><span style="color: #0000BB">1.0.7</span><span style="color: #007700">)<br /></span><span style="color: #0000BB">login_generator&nbsp;</span><span style="color: #007700">(</span><span style="color: #0000BB">1.2.2</span><span style="color: #007700">)<br /></span><span style="color: #0000BB">madeleine&nbsp;</span><span style="color: #007700">(</span><span style="color: #0000BB">0.7.3</span><span style="color: #007700">,&nbsp;</span><span style="color: #0000BB">0.7.1</span><span style="color: #007700">)<br /></span><span style="color: #0000BB">mechanize&nbsp;</span><span style="color: #007700">(</span><span style="color: #0000BB">0.7.6</span><span style="color: #007700">)<br /></span><span style="color: #0000BB">mini_magick&nbsp;</span><span style="color: #007700">(</span><span style="color: #0000BB">1.2.3</span><span style="color: #007700">)<br /></span><span style="color: #0000BB">mysql&nbsp;</span><span style="color: #007700">(</span><span style="color: #0000BB">2.7</span><span style="color: #007700">,&nbsp;</span><span style="color: #0000BB">2.6</span><span style="color: #007700">)<br /></span><span style="color: #0000BB">needle&nbsp;</span><span style="color: #007700">(</span><span style="color: #0000BB">1.3.0</span><span style="color: #007700">,&nbsp;</span><span style="color: #0000BB">1.2.1</span><span style="color: #007700">)<br /></span><span style="color: #0000BB">net</span><span style="color: #007700">-</span><span style="color: #0000BB">sftp&nbsp;</span><span style="color: #007700">(</span><span style="color: #0000BB">1.1.0</span><span style="color: #007700">)<br /></span><span style="color: #0000BB">net</span><span style="color: #007700">-</span><span style="color: #0000BB">ssh&nbsp;</span><span style="color: #007700">(</span><span style="color: #0000BB">1.1.2</span><span style="color: #007700">,&nbsp;</span><span style="color: #0000BB">1.0.10</span><span style="color: #007700">,&nbsp;</span><span style="color: #0000BB">1.0.8</span><span style="color: #007700">)<br /></span><span style="color: #0000BB">nitro&nbsp;</span><span style="color: #007700">(</span><span style="color: #0000BB">0.41.0</span><span style="color: #007700">,&nbsp;</span><span style="color: #0000BB">0.29.0</span><span style="color: #007700">)<br /></span><span style="color: #0000BB">og&nbsp;</span><span style="color: #007700">(</span><span style="color: #0000BB">0.41.0</span><span style="color: #007700">,&nbsp;</span><span style="color: #0000BB">0.29.0</span><span style="color: #007700">)<br /></span><span style="color: #0000BB">packet&nbsp;</span><span style="color: #007700">(</span><span style="color: #0000BB">0.1.13</span><span style="color: #007700">)<br /></span><span style="color: #0000BB">PageTemplate&nbsp;</span><span style="color: #007700">(</span><span style="color: #0000BB">2.2.0</span><span style="color: #007700">,&nbsp;</span><span style="color: #0000BB">2.1.3</span><span style="color: #007700">)<br /></span><span style="color: #0000BB">ParseTree&nbsp;</span><span style="color: #007700">(</span><span style="color: #0000BB">1.7.1</span><span style="color: #007700">,&nbsp;</span><span style="color: #0000BB">1.6.3</span><span style="color: #007700">,&nbsp;</span><span style="color: #0000BB">1.3.7</span><span style="color: #007700">)<br /></span><span style="color: #0000BB">payment&nbsp;</span><span style="color: #007700">(</span><span style="color: #0000BB">1.0.1</span><span style="color: #007700">,&nbsp;</span><span style="color: #0000BB">0.9</span><span style="color: #007700">)<br /></span><span style="color: #0000BB">pdf</span><span style="color: #007700">-</span><span style="color: #0000BB">writer&nbsp;</span><span style="color: #007700">(</span><span style="color: #0000BB">1.1.8</span><span style="color: #007700">)<br /></span><span style="color: #0000BB">podcast&nbsp;</span><span style="color: #007700">(</span><span style="color: #0000BB">0.0.4</span><span style="color: #007700">,&nbsp;</span><span style="color: #0000BB">0.0.3</span><span style="color: #007700">)<br /></span><span style="color: #0000BB">rack&nbsp;</span><span style="color: #007700">(</span><span style="color: #0000BB">0.4.0</span><span style="color: #007700">,&nbsp;</span><span style="color: #0000BB">0.3.0</span><span style="color: #007700">)<br /></span><span style="color: #0000BB">radiant&nbsp;</span><span style="color: #007700">(</span><span style="color: #0000BB">0.6.9</span><span style="color: #007700">)<br /></span><span style="color: #0000BB">rails&nbsp;</span><span style="color: #007700">(</span><span style="color: #0000BB">2.2.2</span><span style="color: #007700">,&nbsp;</span><span style="color: #0000BB">2.1.1</span><span style="color: #007700">,&nbsp;</span><span style="color: #0000BB">2.1.0</span><span style="color: #007700">)<br /></span><span style="color: #0000BB">rake&nbsp;</span><span style="color: #007700">(</span><span style="color: #0000BB">0.8.3</span><span style="color: #007700">,&nbsp;</span><span style="color: #0000BB">0.8.2</span><span style="color: #007700">)<br /></span><span style="color: #0000BB">RedCloth&nbsp;</span><span style="color: #007700">(</span><span style="color: #0000BB">3.0.4</span><span style="color: #007700">,&nbsp;</span><span style="color: #0000BB">3.0.3</span><span style="color: #007700">)<br /></span><span style="color: #0000BB">rfacebook&nbsp;</span><span style="color: #007700">(</span><span style="color: #0000BB">0.9.8</span><span style="color: #007700">,&nbsp;</span><span style="color: #0000BB">0.8.3</span><span style="color: #007700">)<br /></span><span style="color: #0000BB">rmagick&nbsp;</span><span style="color: #007700">(</span><span style="color: #0000BB">1.15.12</span><span style="color: #007700">,&nbsp;</span><span style="color: #0000BB">1.15.10</span><span style="color: #007700">)<br /></span><span style="color: #0000BB">rspec&nbsp;</span><span style="color: #007700">(</span><span style="color: #0000BB">1.1.3</span><span style="color: #007700">)<br /></span><span style="color: #0000BB">ruby</span><span style="color: #007700">-</span><span style="color: #0000BB">breakpoint&nbsp;</span><span style="color: #007700">(</span><span style="color: #0000BB">0.5.1</span><span style="color: #007700">,&nbsp;</span><span style="color: #0000BB">0.5.0</span><span style="color: #007700">)<br /></span><span style="color: #0000BB">ruby</span><span style="color: #007700">-</span><span style="color: #0000BB">debug&nbsp;</span><span style="color: #007700">(</span><span style="color: #0000BB">0.9.3</span><span style="color: #007700">,&nbsp;</span><span style="color: #0000BB">0.9.2</span><span style="color: #007700">)<br /></span><span style="color: #0000BB">ruby</span><span style="color: #007700">-</span><span style="color: #0000BB">openid&nbsp;</span><span style="color: #007700">(</span><span style="color: #0000BB">2.0.3</span><span style="color: #007700">)<br /></span><span style="color: #0000BB">ruby</span><span style="color: #007700">-</span><span style="color: #0000BB">yadis&nbsp;</span><span style="color: #007700">(</span><span style="color: #0000BB">0.3.4</span><span style="color: #007700">)<br /></span><span style="color: #0000BB">ruby_odeum&nbsp;</span><span style="color: #007700">(</span><span style="color: #0000BB">0.4.1</span><span style="color: #007700">)<br /></span><span style="color: #0000BB">rubyforge&nbsp;</span><span style="color: #007700">(</span><span style="color: #0000BB">0.4.2</span><span style="color: #007700">,&nbsp;</span><span style="color: #0000BB">0.4.0</span><span style="color: #007700">)<br /></span><span style="color: #0000BB">RubyInline&nbsp;</span><span style="color: #007700">(</span><span style="color: #0000BB">3.6.3</span><span style="color: #007700">,&nbsp;</span><span style="color: #0000BB">3.6.2</span><span style="color: #007700">,&nbsp;</span><span style="color: #0000BB">3.4.0</span><span style="color: #007700">)<br /></span><span style="color: #0000BB">rubypants&nbsp;</span><span style="color: #007700">(</span><span style="color: #0000BB">0.2.0</span><span style="color: #007700">)<br /></span><span style="color: #0000BB">rubyzip&nbsp;</span><span style="color: #007700">(</span><span style="color: #0000BB">0.9.1</span><span style="color: #007700">,&nbsp;</span><span style="color: #0000BB">0.5.12</span><span style="color: #007700">,&nbsp;</span><span style="color: #0000BB">0.5.9</span><span style="color: #007700">)<br /></span><span style="color: #0000BB">ruport&nbsp;</span><span style="color: #007700">(</span><span style="color: #0000BB">1.4.0</span><span style="color: #007700">)<br /></span><span style="color: #0000BB">ruport</span><span style="color: #007700">-</span><span style="color: #0000BB">util&nbsp;</span><span style="color: #007700">(</span><span style="color: #0000BB">0.13.0</span><span style="color: #007700">)<br /></span><span style="color: #0000BB">ruwiki&nbsp;</span><span style="color: #007700">(</span><span style="color: #0000BB">0.9.3</span><span style="color: #007700">)<br /></span><span style="color: #0000BB">salted_login_generator&nbsp;</span><span style="color: #007700">(</span><span style="color: #0000BB">1.1.1</span><span style="color: #007700">,&nbsp;</span><span style="color: #0000BB">1.1.0</span><span style="color: #007700">)<br /></span><span style="color: #0000BB">shipping&nbsp;</span><span style="color: #007700">(</span><span style="color: #0000BB">1.5.1</span><span style="color: #007700">,&nbsp;</span><span style="color: #0000BB">1.3.0</span><span style="color: #007700">,&nbsp;</span><span style="color: #0000BB">1.2.1</span><span style="color: #007700">)<br /></span><span style="color: #0000BB">SimpleSearch&nbsp;</span><span style="color: #007700">(</span><span style="color: #0000BB">0.5.0</span><span style="color: #007700">)<br /></span><span style="color: #0000BB">sqlite3</span><span style="color: #007700">-</span><span style="color: #0000BB">ruby&nbsp;</span><span style="color: #007700">(</span><span style="color: #0000BB">1.2.1</span><span style="color: #007700">,&nbsp;</span><span style="color: #0000BB">1.1.0</span><span style="color: #007700">)<br /></span><span style="color: #0000BB">stemmer&nbsp;</span><span style="color: #007700">(</span><span style="color: #0000BB">1.0.1</span><span style="color: #007700">)<br /></span><span style="color: #0000BB">switchtower&nbsp;</span><span style="color: #007700">(</span><span style="color: #0000BB">1.0.1</span><span style="color: #007700">)<br /></span><span style="color: #0000BB">syntax&nbsp;</span><span style="color: #007700">(</span><span style="color: #0000BB">1.0.0</span><span style="color: #007700">,&nbsp;</span><span style="color: #0000BB">0.7.0</span><span style="color: #007700">)<br /></span><span style="color: #0000BB">tagtools&nbsp;</span><span style="color: #007700">(</span><span style="color: #0000BB">0.0.3</span><span style="color: #007700">)<br /></span><span style="color: #0000BB">tidy&nbsp;</span><span style="color: #007700">(</span><span style="color: #0000BB">1.1.2</span><span style="color: #007700">)<br /></span><span style="color: #0000BB">tzinfo&nbsp;</span><span style="color: #007700">(</span><span style="color: #0000BB">0.3.3</span><span style="color: #007700">)<br /></span><span style="color: #0000BB">unicode&nbsp;</span><span style="color: #007700">(</span><span style="color: #0000BB">0.1</span><span style="color: #007700">)<br /></span><span style="color: #0000BB">uuidtools&nbsp;</span><span style="color: #007700">(</span><span style="color: #0000BB">1.0.1</span><span style="color: #007700">,&nbsp;</span><span style="color: #0000BB">1.0.0</span><span style="color: #007700">,&nbsp;</span><span style="color: #0000BB">0.1.4</span><span style="color: #007700">)<br /></span><span style="color: #0000BB">webgen&nbsp;</span><span style="color: #007700">(</span><span style="color: #0000BB">0.4.5</span><span style="color: #007700">,&nbsp;</span><span style="color: #0000BB">0.3.8</span><span style="color: #007700">,&nbsp;</span><span style="color: #0000BB">0.3.6</span><span style="color: #007700">)<br /></span><span style="color: #0000BB">wee&nbsp;</span><span style="color: #007700">(</span><span style="color: #0000BB">0.10.0</span><span style="color: #007700">,&nbsp;</span><span style="color: #0000BB">0.9.1</span><span style="color: #007700">)<br /></span><span style="color: #0000BB">xhtmldiff&nbsp;</span><span style="color: #007700">(</span><span style="color: #0000BB">1.0.0</span><span style="color: #007700">)<br /></span><span style="color: #0000BB">xml</span><span style="color: #007700">-</span><span style="color: #0000BB">simple&nbsp;</span><span style="color: #007700">(</span><span style="color: #0000BB">1.0.11</span><span style="color: #007700">)<br /></span><span style="color: #0000BB">ym4r&nbsp;</span><span style="color: #007700">(</span><span style="color: #0000BB">0.6.1</span><span style="color: #007700">)<br /></span><span style="color: #0000BB">youtube</span><span style="color: #007700">-</span><span style="color: #0000BB">g&nbsp;</span><span style="color: #007700">(</span><span style="color: #0000BB">0.4.9.9</span><span style="color: #007700">)&nbsp;</span>
+</span>
+</code></div>
+
+<p>At my home computer (where it all works), it shows:</p>
+
+<div class="codeblock"><code><span style="color: #000000">
+<span style="color: #007700">***&nbsp;</span><span style="color: #0000BB">LOCAL&nbsp;GEMS&nbsp;</span><span style="color: #007700">***<br /><br /></span><span style="color: #0000BB">actionmailer&nbsp;</span><span style="color: #007700">(</span><span style="color: #0000BB">2.2.2</span><span style="color: #007700">,&nbsp;</span><span style="color: #0000BB">2.1.2</span><span style="color: #007700">,&nbsp;</span><span style="color: #0000BB">2.0.2</span><span style="color: #007700">)<br /></span><span style="color: #0000BB">actionpack&nbsp;</span><span style="color: #007700">(</span><span style="color: #0000BB">2.2.2</span><span style="color: #007700">,&nbsp;</span><span style="color: #0000BB">2.1.2</span><span style="color: #007700">,&nbsp;</span><span style="color: #0000BB">2.0.2</span><span style="color: #007700">)<br /></span><span style="color: #0000BB">activerecord&nbsp;</span><span style="color: #007700">(</span><span style="color: #0000BB">2.2.2</span><span style="color: #007700">,&nbsp;</span><span style="color: #0000BB">2.1.2</span><span style="color: #007700">,&nbsp;</span><span style="color: #0000BB">2.0.2</span><span style="color: #007700">)<br /></span><span style="color: #0000BB">activeresource&nbsp;</span><span style="color: #007700">(</span><span style="color: #0000BB">2.2.2</span><span style="color: #007700">,&nbsp;</span><span style="color: #0000BB">2.1.2</span><span style="color: #007700">,&nbsp;</span><span style="color: #0000BB">2.0.2</span><span style="color: #007700">)<br /></span><span style="color: #0000BB">activesupport&nbsp;</span><span style="color: #007700">(</span><span style="color: #0000BB">2.2.2</span><span style="color: #007700">,&nbsp;</span><span style="color: #0000BB">2.1.2</span><span style="color: #007700">,&nbsp;</span><span style="color: #0000BB">2.0.2</span><span style="color: #007700">)<br /></span><span style="color: #0000BB">rails&nbsp;</span><span style="color: #007700">(</span><span style="color: #0000BB">2.2.2</span><span style="color: #007700">,&nbsp;</span><span style="color: #0000BB">2.1.2</span><span style="color: #007700">,&nbsp;</span><span style="color: #0000BB">2.0.2</span><span style="color: #007700">)<br /></span><span style="color: #0000BB">rake&nbsp;</span><span style="color: #007700">(</span><span style="color: #0000BB">0.8.3</span><span style="color: #007700">)&nbsp;</span>
+</span>
+</code></div></div>
+	
+	
+	
+</td>
+
+</tr><tr>
+
+<td class="tableCellTwo"  style="width:130px;">
+	<table cellpadding="0" cellspacing="0" border="0" width="100%">
+	<tr>
+	<td align="center"><div class="button"><div class="buttonSmall" id="e1" onclick="navJump('http://www.getontracks.org/forums/member/1487/')" onmouseover="navHover(this);" onmouseout="navReset(this);">Profile</div></div></td>
+	
+	
+
+	</tr>
+	</table>
+</td>
+
+<td class="tableCellTwo" colspan="2">
+	<table cellpadding="0" cellspacing="0" border="0">
+	<tr>
+	
+	
+	
+	
+	
+	
+		
+	
+	
+	&nbsp;
+	
+	<td>&nbsp;</td>	
+	</tr>
+	</table>
+  </td>
+ </tr>
+</table>
+
+</td>
+</tr>
+
+<tr id="f9" >
+ <td colspan="3">
+
+
+ <table class="threadBorder" cellpadding="0" cellspacing="0" border="0" style="width:100%;">
+  <tr>
+   <td class="tableRowHeadingBold" style="width:130px;"><div class="largeLinks"><a href="http://www.getontracks.org/forums/member/100/">Reinier Balt</a></div></td>
+   <td class="tableRowHeading">
+
+	<table cellpadding="0" cellspacing="0" border="0" style="width:99%;">
+	<tr>
+	<td>Posted: 19 May 2009 06:15 PM</td>
+	<td align="right">
+	
+		
+	
+	
+
+	
+	
+	&nbsp;&nbsp;<span class="smallLinks">[ <a href="http://www.getontracks.org/forums/ignore_member/100/" title="Ignore">Ignore</a> ]</span>
+	
+	&nbsp;&nbsp;<span class="smallLinks">[ <a name="1387" href="http://www.getontracks.org/forums/viewreply/1387/" title="Permalink to this post"># 5</a> ]</span>
+
+	&nbsp;
+	</td>
+	</tr>
+	</table>
+
+   </td>
+  </tr>
+<tr>
+ <td class="tableCellOne" style="width:130px;" valign="top">
+	<div class="rankMember">Sr. Member</div>
+	
+	<div class="itempad"><img src="http://www.getontracks.org/themes/forum_themes/blue/images/rank.gif" alt="Rank" class="rankImage" /><img src="http://www.getontracks.org/themes/forum_themes/blue/images/rank.gif" alt="Rank" class="rankImage" /><img src="http://www.getontracks.org/themes/forum_themes/blue/images/rank.gif" alt="Rank" class="rankImage" /><img src="http://www.getontracks.org/themes/forum_themes/blue/images/rank.gif" alt="Rank" class="rankImage" /></div>
+	<div class="userBlock">Total Posts:&nbsp; 882</div>
+	<div class="userBlock">Joined&nbsp; 2006-10-05</div>
+</td>
+<td class="tableCellOne" valign="top" colspan="2"><div class="post"><p>I think you are right, so you are using rubygems 1.3.1 (you can get more info with <code>gem environment</code>)</p>
+
+<p>How did you do the upgrade? Did you use the complete contents of the zip? did you migrate from the 1.6-environment.rb to the 1.7-environment.rb/site.yml ?</p></div>
+	
+	
+	
+</td>
+
+</tr><tr>
+
+<td class="tableCellTwo"  style="width:130px;">
+	<table cellpadding="0" cellspacing="0" border="0" width="100%">
+	<tr>
+	<td align="center"><div class="button"><div class="buttonSmall" id="f1" onclick="navJump('http://www.getontracks.org/forums/member/100/')" onmouseover="navHover(this);" onmouseout="navReset(this);">Profile</div></div></td>
+	
+	
+
+	</tr>
+	</table>
+</td>
+
+<td class="tableCellTwo" colspan="2">
+	<table cellpadding="0" cellspacing="0" border="0">
+	<tr>
+	
+	
+	
+	
+	
+	
+		
+	
+	
+	&nbsp;
+	
+	<td>&nbsp;</td>	
+	</tr>
+	</table>
+  </td>
+ </tr>
+</table>
+
+</td>
+</tr>
+
+<tr id="g9" >
+ <td colspan="3">
+
+
+ <table class="threadBorder" cellpadding="0" cellspacing="0" border="0" style="width:100%;">
+  <tr>
+   <td class="tableRowHeadingBold" style="width:130px;"><div class="largeLinks"><a href="http://www.getontracks.org/forums/member/1487/">Beetle B.</a></div></td>
+   <td class="tableRowHeading">
+
+	<table cellpadding="0" cellspacing="0" border="0" style="width:99%;">
+	<tr>
+	<td>Posted: 19 May 2009 08:22 PM</td>
+	<td align="right">
+	
+		
+	
+	
+
+	
+	
+	&nbsp;&nbsp;<span class="smallLinks">[ <a href="http://www.getontracks.org/forums/ignore_member/1487/" title="Ignore">Ignore</a> ]</span>
+	
+	&nbsp;&nbsp;<span class="smallLinks">[ <a name="1388" href="http://www.getontracks.org/forums/viewreply/1388/" title="Permalink to this post"># 6</a> ]</span>
+
+	&nbsp;
+	</td>
+	</tr>
+	</table>
+
+   </td>
+  </tr>
+<tr>
+ <td class="tableCellOne" style="width:130px;" valign="top">
+	<div class="rankMember">Newbie</div>
+	
+	<div class="itempad"><img src="http://www.getontracks.org/themes/forum_themes/blue/images/rank.gif" alt="Rank" class="rankImage" /></div>
+	<div class="userBlock">Total Posts:&nbsp; 4</div>
+	<div class="userBlock">Joined&nbsp; 2009-05-18</div>
+</td>
+<td class="tableCellOne" valign="top" colspan="2"><div class="post"><p>I merely followed the instructions.</p>
+
+<p>I backed up the DB.</p>
+
+<p>I backed up and renamed the tracks directory.</p>
+
+<p>I unzipped the new tracks in the same location as the old one. </p>
+
+<p>I edited site.yml and put the salt key from the environment.rb of the old one. </p>
+
+<p>Then I went to the main tracks directory and tried updating the database. </p>
+
+<p>This is just from memory&#8230;</p></div>
+	
+	
+	
+</td>
+
+</tr><tr>
+
+<td class="tableCellTwo"  style="width:130px;">
+	<table cellpadding="0" cellspacing="0" border="0" width="100%">
+	<tr>
+	<td align="center"><div class="button"><div class="buttonSmall" id="g1" onclick="navJump('http://www.getontracks.org/forums/member/1487/')" onmouseover="navHover(this);" onmouseout="navReset(this);">Profile</div></div></td>
+	
+	
+
+	</tr>
+	</table>
+</td>
+
+<td class="tableCellTwo" colspan="2">
+	<table cellpadding="0" cellspacing="0" border="0">
+	<tr>
+	
+	
+	
+	
+	
+	
+		
+	
+	
+	&nbsp;
+	
+	<td>&nbsp;</td>	
+	</tr>
+	</table>
+  </td>
+ </tr>
+</table>
+
+</td>
+</tr>
+
+<tr id="h9" >
+ <td colspan="3">
+
+
+ <table class="threadBorder" cellpadding="0" cellspacing="0" border="0" style="width:100%;">
+  <tr>
+   <td class="tableRowHeadingBold" style="width:130px;"><div class="largeLinks"><a href="http://www.getontracks.org/forums/member/100/">Reinier Balt</a></div></td>
+   <td class="tableRowHeading">
+
+	<table cellpadding="0" cellspacing="0" border="0" style="width:99%;">
+	<tr>
+	<td>Posted: 22 May 2009 12:13 PM</td>
+	<td align="right">
+	
+		
+	
+	
+
+	
+	
+	&nbsp;&nbsp;<span class="smallLinks">[ <a href="http://www.getontracks.org/forums/ignore_member/100/" title="Ignore">Ignore</a> ]</span>
+	
+	&nbsp;&nbsp;<span class="smallLinks">[ <a name="1390" href="http://www.getontracks.org/forums/viewreply/1390/" title="Permalink to this post"># 7</a> ]</span>
+
+	&nbsp;
+	</td>
+	</tr>
+	</table>
+
+   </td>
+  </tr>
+<tr>
+ <td class="tableCellOne" style="width:130px;" valign="top">
+	<div class="rankMember">Sr. Member</div>
+	
+	<div class="itempad"><img src="http://www.getontracks.org/themes/forum_themes/blue/images/rank.gif" alt="Rank" class="rankImage" /><img src="http://www.getontracks.org/themes/forum_themes/blue/images/rank.gif" alt="Rank" class="rankImage" /><img src="http://www.getontracks.org/themes/forum_themes/blue/images/rank.gif" alt="Rank" class="rankImage" /><img src="http://www.getontracks.org/themes/forum_themes/blue/images/rank.gif" alt="Rank" class="rankImage" /></div>
+	<div class="userBlock">Total Posts:&nbsp; 882</div>
+	<div class="userBlock">Joined&nbsp; 2006-10-05</div>
+</td>
+<td class="tableCellOne" valign="top" colspan="2"><div class="post"><p>strange though that its using rails2.2.2 from /usr/lib/ruby/gems in stead of /path/to/tracks/vendor/rails. Perhaps it would be wise to ask for support from dreamhost&#8230;</p></div>
+	
+	
+	
+</td>
+
+</tr><tr>
+
+<td class="tableCellTwo"  style="width:130px;">
+	<table cellpadding="0" cellspacing="0" border="0" width="100%">
+	<tr>
+	<td align="center"><div class="button"><div class="buttonSmall" id="h1" onclick="navJump('http://www.getontracks.org/forums/member/100/')" onmouseover="navHover(this);" onmouseout="navReset(this);">Profile</div></div></td>
+	
+	
+
+	</tr>
+	</table>
+</td>
+
+<td class="tableCellTwo" colspan="2">
+	<table cellpadding="0" cellspacing="0" border="0">
+	<tr>
+	
+	
+	
+	
+	
+	
+		
+	
+	
+	&nbsp;
+	
+	<td>&nbsp;</td>	
+	</tr>
+	</table>
+  </td>
+ </tr>
+</table>
+
+</td>
+</tr>
+
+</table>
+
+<table cellpadding="0" cellspacing="0" border="0" style="width:100%;">
+<tr>
+<td valign="middle" style="width:70%;">
+
+&nbsp;
+
+</td>
+&nbsp;
+
+&nbsp;
+
+</tr>
+</table>
+
+&nbsp;
+
+
+<div class="defaultCenter">
+<div class="marginpad">
+
+
+&lsaquo;&lsaquo; <a href="http://www.getontracks.org/forums/viewthread/401/">Server keeps stopping on bluehost (unix using cPanel)</a> 
+
+
+
+&nbsp;&nbsp;&nbsp;&nbsp; <a href="http://www.getontracks.org/forums/viewthread/419/">Assistance Needed installing Tracks on Hostgator</a> &rsaquo;&rsaquo;
+
+
+</div>
+</div>
+</div>
+<div id="footer">
+
+	
+	<div id="switcher">Select A Theme 
+		<select name="theme_switcher" class="select" onchange="if (this.value != '') location.href=this.value">
+			<option value="http://www.getontracks.org/?ACT=42&amp;board_id=1&amp;theme=grey">Grey</option>
+<option value="http://www.getontracks.org/?ACT=42&amp;board_id=1&amp;theme=developer">Developer</option>
+<option value="http://www.getontracks.org/?ACT=42&amp;board_id=1&amp;theme=shares">Shares</option>
+<option value="http://www.getontracks.org/?ACT=42&amp;board_id=1&amp;theme=blue" selected="selected">Blue</option>
+<option value="http://www.getontracks.org/?ACT=42&amp;board_id=1&amp;theme=default">Default</option>
+
+		</select>
+	</div><!--switcher-->
+	
+
+	<ul class="credits">
+		<li>Powered By <a href="http://expressionengine.com/">ExpressionEngine</a></li>
+		<li>Template Design By <a href="http://artificialmemory.com/" title="Nathaniel Davis">Artificial Memory</a></li>
+        </ul>
+        <ul class="stats">
+		<li>ExpressionEngine Discussion Forum - version 3.1.5 (20110630)</li>
+		<li>Script Executed in 0.1477 seconds</li>
+	</ul>
+	
+	
+	<ul class="feeds">
+		<li><a href="http://www.getontracks.org/forums/rss/9/"><img src="http://www.getontracks.org/themes/forum_themes/blue/images/feed_rss.jpg" alt="RSS 2.0" title="RSS 2.0" /></a></li>
+		<li><a href="http://www.getontracks.org/forums/atom/9/"><img src="http://www.getontracks.org/themes/forum_themes/blue/images/feed_atom.jpg" alt="Atom Feed" title="Atom Feed" /></a></li>
+	</ul>
+	
+
+</div><!--footer-->
+</div><!--wrapper-->
+</body>
+</html>
