@@ -3,6 +3,7 @@
 .sass-cache
 .gist-cache
 .pygments-cache
+.redcar/
 _deploy
 public
 sass.old
