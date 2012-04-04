@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 
   <title><![CDATA[Tracks]]></title>
-  <link href="http://www.getontracks.org/tracks/atom.xml" rel="self"/>
-  <link href="http://www.getontracks.org/"/>
-  <updated>2012-04-04T15:04:54+02:00</updated>
-  <id>http://www.getontracks.org/</id>
+  <link href="http://TracksApp.github.com/tracks/atom.xml" rel="self"/>
+  <link href="http://TracksApp.github.com/"/>
+  <updated>2012-04-04T17:20:50+02:00</updated>
+  <id>http://TracksApp.github.com/</id>
   <author>
     <name><![CDATA[TracksApp]]></name>
     <email><![CDATA[tracks@getontracks.org]]></email>
@@ -15,9 +15,9 @@
   
   <entry>
     <title type="html"><![CDATA[Release Candidate 1 of Tracks 2.1 released]]></title>
-    <link href="http://www.getontracks.org/news/comments/release-2.1.rc1/"/>
+    <link href="http://TracksApp.github.com/news/comments/release-2.1.rc1/"/>
     <updated>2012-04-04T14:45:00+02:00</updated>
-    <id>http://www.getontracks.org/news/comments/release-2.1.rc1</id>
+    <id>http://TracksApp.github.com/news/comments/release-2.1.rc1</id>
     <content type="html"><![CDATA[<p>Hi all,</p>
 
 <p>It is finally release candidate time! You can now <a href="https://github.com/TracksApp/tracks/zipball/v2.1RC1">download</a> Tracks version 2.1 RC1 from github. Please try it out to see if you think it is ready for public release. Any problems you have can be posted to <a href="www.assembla.com/spaces/tracks-tickets/">Assembla</a>. Improvements for translations are welcome too.</p>
@@ -73,9 +73,9 @@
   
   <entry>
     <title type="html"><![CDATA[Handing Over the Keys]]></title>
-    <link href="http://www.getontracks.org/news/comments/handing-over-the-keys/"/>
+    <link href="http://TracksApp.github.com/news/comments/handing-over-the-keys/"/>
     <updated>2012-01-04T16:54:00+01:00</updated>
-    <id>http://www.getontracks.org/news/comments/handing-over-the-keys</id>
+    <id>http://TracksApp.github.com/news/comments/handing-over-the-keys</id>
     <content type="html"><![CDATA[<p>If you have been following posts on the mailing list and on this site, you&#8217;ll know that I&#8217;ve been in the process of handing the Tracks project on for others in the community to take over. That day has come much closer now because I have finally finished the process of adapting the old site to be published on GitHub (using the excellent <a href="http://octopress.org/">Octopress</a>). It has taken a bit of time to get right, and there may be a few glitches here and there while the DNS propagates, but things should be working. Most of the site is how it was, except that the forum is now read only, as an archive of useful information. Some of the links in the forum may be broken (for example the search facility and member profiles) in the process of generating a static version, but the basic information should still be available.</p>
 
 <p>In due course I&#8217;ll transfer the domain name to someone else in the Tracks community, transfer the balance of the Pledgie donations, and I&#8217;ll have handed all the keys over.</p>
@@ -86,9 +86,9 @@
   
   <entry>
     <title type="html"><![CDATA[The wiki has moved]]></title>
-    <link href="http://www.getontracks.org/news/comments/the-wiki-has-moved/"/>
+    <link href="http://TracksApp.github.com/news/comments/the-wiki-has-moved/"/>
     <updated>2011-07-16T00:00:00+02:00</updated>
-    <id>http://www.getontracks.org/news/comments/the-wiki-has-moved</id>
+    <id>http://TracksApp.github.com/news/comments/the-wiki-has-moved</id>
     <content type="html"><![CDATA[<p>As you may know, we are in the process of moving the project and all the related web resources over to GitHub. As a first step, I have set up the <a href="https://github.com/TracksApp">Tracks project</a> as a GitHub Organisation, which makes it easier for people to administer and collaborate on the project. I have also moved the content of the entire wiki over to a GitHub wiki, <a href="https://github.com/TracksApp/tracks/wiki">here</a>. I&#8217;ve removed the old wiki to avoid confusion, and redirected the <span class="caps">URL</span> to the new wiki.</p>
 <p>You can still contribute to the new wiki: if you have a GitHub account, you can edit and add pages. I hope you like the new wiki &#8211; I think it is a big improvement, and a lot more flexible.</p>
 
@@ -97,18 +97,18 @@
   
   <entry>
     <title type="html"><![CDATA[Tracks 2.0 is out now!]]></title>
-    <link href="http://www.getontracks.org/news/comments/tracks-2.0-is-out-now/"/>
+    <link href="http://TracksApp.github.com/news/comments/tracks-2.0-is-out-now/"/>
     <updated>2011-06-04T00:00:00+02:00</updated>
-    <id>http://www.getontracks.org/news/comments/tracks-2.0-is-out-now</id>
+    <id>http://TracksApp.github.com/news/comments/tracks-2.0-is-out-now</id>
     <content type="html"><![CDATA[<p>Tracks 2.0 is out now, and is a big release with a lot of great new features. Check out the full release notes <a href="http://www.getontracks.org/downloads/comments/tracks-20">here</a>.</p>
 ]]></content>
   </entry>
   
   <entry>
     <title type="html"><![CDATA[Tracks 2.0]]></title>
-    <link href="http://www.getontracks.org/downloads/comments/tracks-20/"/>
+    <link href="http://TracksApp.github.com/downloads/comments/tracks-20/"/>
     <updated>2011-05-13T00:00:00+02:00</updated>
-    <id>http://www.getontracks.org/downloads/comments/tracks-20</id>
+    <id>http://TracksApp.github.com/downloads/comments/tracks-20</id>
     <content type="html"><![CDATA[<p>Version: 2.0</p>
 <p><a href="https://github.com/TracksApp/tracks/zipball/v2.0">Git <span class="caps">URL</span></a></p>
 <p>A message from Reinier Balt, who has worked incredibly hard on this release. Congratulations to him and to all the other contributors!</p>
@@ -144,9 +144,9 @@
   
   <entry>
     <title type="html"><![CDATA[Tracks 1.7.3]]></title>
-    <link href="http://www.getontracks.org/downloads/comments/tracks-173/"/>
+    <link href="http://TracksApp.github.com/downloads/comments/tracks-173/"/>
     <updated>2011-03-15T00:00:00+01:00</updated>
-    <id>http://www.getontracks.org/downloads/comments/tracks-173</id>
+    <id>http://TracksApp.github.com/downloads/comments/tracks-173</id>
     <content type="html"><![CDATA[<p>Version: 1.7.3</p>
 <p><a href="https://github.com/TracksApp/tracks/zipball/v1.7.3">Git <span class="caps">URL</span></a></p>
 <p>An <span class="caps">XSS</span> vulnerability has been reported and is present in 1.7.2, which is also present in the development 2.0 branches (2.0RC2 and 2.0devel).</p>
@@ -156,9 +156,9 @@
   
   <entry>
     <title type="html"><![CDATA[Tracks 2.0 RC2]]></title>
-    <link href="http://www.getontracks.org/news/comments/tracks-20-release-candidate-2/"/>
+    <link href="http://TracksApp.github.com/news/comments/tracks-20-release-candidate-2/"/>
     <updated>2011-03-12T00:00:00+01:00</updated>
-    <id>http://www.getontracks.org/news/comments/tracks-20-release-candidate-2</id>
+    <id>http://TracksApp.github.com/news/comments/tracks-20-release-candidate-2</id>
     <content type="html"><![CDATA[<p>Those of you who do not regularly read the forum may be unaware that Tracks 2.0 Release Candidate 2 has now been prepared by Reinier Balt. You can read all the <a href="http://www.getontracks.org/forums/viewthread/839/">details</a> on the forum, or just head straight over to Github to download the 2.0RC2 branch <a href="https://github.com/bsag/tracks/zipball/v2.0RC2">here</a>.</p>
 <p>We need your help in testing it out, so please give it a try and let us know of any bugs or problems on <a href="http://www.getontracks.org/forums/viewthread/839/">this forum thread</a>. Many thanks!</p>
 ]]></content>
@@ -166,9 +166,9 @@
   
   <entry>
     <title type="html"><![CDATA[Security update for users of 1.7.x and 2.0 branch of Tracks]]></title>
-    <link href="http://www.getontracks.org/news/comments/security-update-for-users-of-17x-and-20-branch-of-tracks/"/>
+    <link href="http://TracksApp.github.com/news/comments/security-update-for-users-of-17x-and-20-branch-of-tracks/"/>
     <updated>2011-03-12T00:00:00+01:00</updated>
-    <id>http://www.getontracks.org/news/comments/security-update-for-users-of-17x-and-20-branch-of-tracks</id>
+    <id>http://TracksApp.github.com/news/comments/security-update-for-users-of-17x-and-20-branch-of-tracks</id>
     <content type="html"><![CDATA[<p>An important message from Reinier Balt:</p>
 <p>I was informed by private email that a <span class="caps">XSS</span> vulnerability is present in 1.7.2. It turned out to also exist in the upcoming 2.0.</p>
 <p>A new release of 1.7.3 is made available <a href="https://github.com/bsag/tracks/zipball/v1.7.3">here</a>. Users of 1.7x are strongly advised to upgrade to 1.7.3. If you are running 2.0RC2 or 2.0devel for production, please upgrade to the latest 2.0 tree found <a href="https://github.com/bsag/tracks/zipball/master">here</a></p>
@@ -178,9 +178,9 @@
   
   <entry>
     <title type="html"><![CDATA[Tracks 1.7.2]]></title>
-    <link href="http://www.getontracks.org/downloads/comments/tracks-1.7.2/"/>
+    <link href="http://TracksApp.github.com/downloads/comments/tracks-1.7.2/"/>
     <updated>2010-09-26T00:00:00+02:00</updated>
-    <id>http://www.getontracks.org/downloads/comments/tracks-1.7.2</id>
+    <id>http://TracksApp.github.com/downloads/comments/tracks-1.7.2</id>
     <content type="html"><![CDATA[<p>Version: 1.7.2</p>
 <p><a href="https://github.com/TracksApp/tracks/tree/v1.7.2">Git <span class="caps">URL</span></a></p>
 <p>I&#8217;m pleased to announce that Tracks 1.7.2 has been released. This is a bug fix release. This will hopefully be the last release for 1.7. We are working towards the release of Tracks 2.0 which will include new functionality.</p>
@@ -194,9 +194,9 @@
   
   <entry>
     <title type="html"><![CDATA[Tracks 1.7.1]]></title>
-    <link href="http://www.getontracks.org/downloads/comments/tracks-1.7.1/"/>
+    <link href="http://TracksApp.github.com/downloads/comments/tracks-1.7.1/"/>
     <updated>2010-04-13T00:00:00+02:00</updated>
-    <id>http://www.getontracks.org/downloads/comments/tracks-1.7.1</id>
+    <id>http://TracksApp.github.com/downloads/comments/tracks-1.7.1</id>
     <content type="html"><![CDATA[<p>Version: 1.7.1</p>
 <p><a href="https://github.com/TracksApp/tracks/tree/1.7.1">Git <span class="caps">URL</span></a></p>
 <p>A message from Reinier Balt:</p>
@@ -221,18 +221,18 @@
   
   <entry>
     <title type="html"><![CDATA[New affiliate links]]></title>
-    <link href="http://www.getontracks.org/news/comments/new-affiliate-links/"/>
+    <link href="http://TracksApp.github.com/news/comments/new-affiliate-links/"/>
     <updated>2009-08-30T00:00:00+02:00</updated>
-    <id>http://www.getontracks.org/news/comments/new-affiliate-links</id>
+    <id>http://TracksApp.github.com/news/comments/new-affiliate-links</id>
     <content type="html"><![CDATA[<p>You might have noticed that I have changed the affiliate box at the top left of these pages, as well as adding some affiliate links elsewhere. The Joyent affiliate programme appears to have ended, and when an opportunity came up to join the <a href="http://www.shareasale.com/r.cfm?u=188858&amp;b=179734&amp;m=22742&amp;afftrack=&amp;urllink=www%2Ejumpbox%2Ecom">JumpBox</a> affiliate program, I jumped (no pun intended) at the chance. I&#8217;ve also updated the links to JumpBox elsewhere on the site and on the manual, so if you are thinking of signing up for a JumpBox plan, please use the affiliate links and you will be helping to support the Tracks development programme.</p>
 ]]></content>
   </entry>
   
   <entry>
     <title type="html"><![CDATA[Jumpbox for Tracks]]></title>
-    <link href="http://www.getontracks.org/news/comments/jumpbox-for-tracks/"/>
+    <link href="http://TracksApp.github.com/news/comments/jumpbox-for-tracks/"/>
     <updated>2009-04-02T00:00:00+02:00</updated>
-    <id>http://www.getontracks.org/news/comments/jumpbox-for-tracks</id>
+    <id>http://TracksApp.github.com/news/comments/jumpbox-for-tracks</id>
     <content type="html"><![CDATA[<p>The nice people at <a href="http://www.jumpbox.com/">JumpBox</a> have just released a <a href="http://jumpbox.com/app/tracks">JumpBox for Tracks 1.7</a>. JumpBoxes are pre-built, pre-configured virtual applications which run in a range of <a href="http://www.jumpbox.com/supported-virtualization-software">Virtualization software applications</a>. You just download the JumpBox (free), then open the file with your Virtualization software. Once the JumpBox has booted, it will give you a <span class="caps">URL</span> which you can visit in a browser. The software will then guide you through setting up an account. If you&#8217;d like to try out the JumpBox without installing it, you can use the &#8220;Trial This JumpBox&#8221; button on the web site, which will let you play around with it to test it out. It&#8217;s great to have another method of using Tracks for those of you who don&#8217;t want to go to the trouble of installing Tracks and its dependencies on your computer, or installing Tracks on a web host. Try it out! You can download it directly <a href="http://download.jumpbox.com/download/tracks">here</a>. I&#8217;ll add links and instructions to the manual in due course.</p>
 <p>[edited 17 Dec 2010 to update URLs]</p>
 ]]></content>
@@ -240,9 +240,9 @@
   
   <entry>
     <title type="html"><![CDATA[Tracks 1.7]]></title>
-    <link href="http://www.getontracks.org/downloads/comments/tracks-1.7/"/>
+    <link href="http://TracksApp.github.com/downloads/comments/tracks-1.7/"/>
     <updated>2009-02-28T00:00:00+01:00</updated>
-    <id>http://www.getontracks.org/downloads/comments/tracks-1.7</id>
+    <id>http://TracksApp.github.com/downloads/comments/tracks-1.7</id>
     <content type="html"><![CDATA[<p>Version: 1.7</p>
 <p><a href="https://github.com/TracksApp/tracks/tree/1.7_branch">Git <span class="caps">URL</span></a></p>
 <p>I&#8217;m pleased to announce that Tracks 1.7 has been released.</p>
@@ -271,9 +271,9 @@
   
   <entry>
     <title type="html"><![CDATA[Tracks 1.7RC2]]></title>
-    <link href="http://www.getontracks.org/downloads/comments/tracks-1.7rc2/"/>
+    <link href="http://TracksApp.github.com/downloads/comments/tracks-1.7rc2/"/>
     <updated>2009-02-15T00:00:00+01:00</updated>
-    <id>http://www.getontracks.org/downloads/comments/tracks-1.7rc2</id>
+    <id>http://TracksApp.github.com/downloads/comments/tracks-1.7rc2</id>
     <content type="html"><![CDATA[<p>Version: 1.7RC2</p>
 <p><a href="https://github.com/TracksApp/tracks/tree/1.7_branch">Git <span class="caps">URL</span></a></p>
 <p>Reinier Balt has already announced the release of Tracks 1.7RC2, but I&#8217;ve finally (and belatedly!) found time to upload the zipped file and update the manual.</p>
@@ -306,9 +306,9 @@
   
   <entry>
     <title type="html"><![CDATA[Making yourself comfortable with git in the terminal]]></title>
-    <link href="http://www.getontracks.org/articles/comments/making-yourself-comfortable-with-git-in-the-terminal/"/>
+    <link href="http://TracksApp.github.com/articles/comments/making-yourself-comfortable-with-git-in-the-terminal/"/>
     <updated>2009-01-15T00:00:00+01:00</updated>
-    <id>http://www.getontracks.org/articles/comments/making-yourself-comfortable-with-git-in-the-terminal</id>
+    <id>http://TracksApp.github.com/articles/comments/making-yourself-comfortable-with-git-in-the-terminal</id>
     <content type="html"><![CDATA[<p>If you&#8217;re cloning or forking Tracks from <a href="http://github.com/bsag/tracks/">GitHub</a>, you might be interested in some changes you can make to your .bashrc to make using git a bit more comfortable. Henrik over at The Pug Automatic posted <a href="http://henrik.nyh.se/2008/12/git-dirty-prompt">this tip</a> for putting both your current branch name on the command line, and also indicating whether you have any uncommitted changes in the branch. If your branch has uncommitted changes, it prints an asterisk after the branch name. This is incredibly helpful for seeing at a glance what state you are in, without having to issue the commands &#8216;git branch&#8217; or &#8216;git status&#8217;. If you flit about between branches a lot, having the branch name at the command prompt can save you from a great deal of trouble.</p>
 <p>You can grab Henrik&#8217;s code <a href="http://gist.github.com/31631">here</a>, or use mine below. I just foraged around among the forks and the comments on <a href="http://www.simplisticcomplexity.com/2008/03/13/show-your-git-branch-name-in-your-prompt/">this related post</a> to get a version combining the best bits of them all, then I substituted in my existing command prompt. Enjoy!</p>
 <script src="http://gist.github.com/47541.js"></script>
@@ -317,9 +317,9 @@
   
   <entry>
     <title type="html"><![CDATA[Tracks gets its own domain name]]></title>
-    <link href="http://www.getontracks.org/news/comments/tracks-gets-its-own-domain-name/"/>
+    <link href="http://TracksApp.github.com/news/comments/tracks-gets-its-own-domain-name/"/>
     <updated>2008-12-30T00:00:00+01:00</updated>
-    <id>http://www.getontracks.org/news/comments/tracks-gets-its-own-domain-name</id>
+    <id>http://TracksApp.github.com/news/comments/tracks-gets-its-own-domain-name</id>
     <content type="html"><![CDATA[<p>&#8230;and a new home! I have now completed the migration to the new Shared Accelerator at <a href="http://joyent.com/">Joyent.com</a>, and in the process, gave Tracks its own domain name: getontracks.org. You may find that the new server feels a bit more snappy than the old one, and it should be more stable and reliable. The migration process was fairly complex, and it&#8217;s possible that some links may be broken, so do please email me if you find anything amiss. I&#8217;ve redirected the old domain to the new one, so feed readers should pick up the redirection. If they do not, you might want to enter the new feed <span class="caps">URL</span> manually for the <a href="http://www.getontracks.org/tracks/rss_2.0/">RSS2 feed</a> or <a href="http://www.getontracks.org/tracks/atom/">Atom feed</a>.</p>
 <p>I was hoping to replace our Trac bug tracker with a custom solution run with ExpressionEngine (which runs this site), but importing existing tickets proved too much for my pre-Christmas brain! Instead, I imported all the old tickets into an <a href="http://www.assembla.com/spaces/tracks-tickets/tickets">Assembla space</a>. Assembla offers a number of rather cool features, and will be easier for me to administer. You can find out how to use the site to submit tickets <a href="http://getontracks.org/development/">here</a>.</p>
 ]]></content>
@@ -327,9 +327,9 @@
   
   <entry>
     <title type="html"><![CDATA[Tracks 1.7RC]]></title>
-    <link href="http://www.getontracks.org/downloads/comments/tracks-1.7rc/"/>
+    <link href="http://TracksApp.github.com/downloads/comments/tracks-1.7rc/"/>
     <updated>2008-12-14T00:00:00+01:00</updated>
-    <id>http://www.getontracks.org/downloads/comments/tracks-1.7rc</id>
+    <id>http://TracksApp.github.com/downloads/comments/tracks-1.7rc</id>
     <content type="html"><![CDATA[<p>Version: Tracks 1.7RC</p>
 <p><a href="https://github.com/TracksApp/tracks/tree/1.7_branch">Git <span class="caps">URL</span></a></p>
 <p>I&#8217;m pleased to announce that Tracks 1.7RC has been released. This is a pre-release of version 1.7. Please help out to test this pre-release to find any bugs before we release 1.7 in a few weeks</p>
@@ -357,9 +357,9 @@ provider in your webbrowser (tested on FF3 and IE7)</li>
   
   <entry>
     <title type="html"><![CDATA[Absent for August]]></title>
-    <link href="http://www.getontracks.org/news/comments/absent-for-august/"/>
+    <link href="http://TracksApp.github.com/news/comments/absent-for-august/"/>
     <updated>2008-08-02T00:00:00+02:00</updated>
-    <id>http://www.getontracks.org/news/comments/absent-for-august</id>
+    <id>http://TracksApp.github.com/news/comments/absent-for-august</id>
     <content type="html"><![CDATA[<p>I&#8217;m off to Brazil for a work course again on Monday, and I&#8217;ll be away for 3 weeks. I won&#8217;t have email or web access during that time, so can I ask that you direct any questions to the forum or mailing list where other Tracks users will be able to help you. If you want to make a pull request on GitHub, or if you&#8217;ve got a patch, <a href="https://github.com/lukemelia">lukemelia</a>, <a href="https://github.com/lrbalt">lrbalt</a> and <a href="https://github.com/epall">epall</a> all have commit rights to the main repository, so you can send your request to them.</p>
 <p>Have a great summer everyone, and I&#8217;ll post again when I get back!</p>
 ]]></content>
@@ -367,18 +367,18 @@ provider in your webbrowser (tested on FF3 and IE7)</li>
   
   <entry>
     <title type="html"><![CDATA[Pledgie button]]></title>
-    <link href="http://www.getontracks.org/news/comments/pledgie-button/"/>
+    <link href="http://TracksApp.github.com/news/comments/pledgie-button/"/>
     <updated>2008-06-28T00:00:00+02:00</updated>
-    <id>http://www.getontracks.org/news/comments/pledgie-button</id>
+    <id>http://TracksApp.github.com/news/comments/pledgie-button</id>
     <content type="html"><![CDATA[<p>GitHub provides a handy shortcut for creating a <a href="http://pledgie.org/">Pledgie</a> campaign, and shows the button on the repository page. We were previously accepting donations using a Paypal button, which meant I then had to do some mental arithmetic and manually update the MacBook-O-Meter to show the additional donations. Pledgie is much easier to use, so I&#8217;ve now embedded the Pledgie button on the <a href="http://www.rousette.org.uk/projects/tracks/contribute">Contribute</a> page, and also in the sidebar of the site. Click the button if you feel like making a donation! Pledgie donations can be anonymous or you can display your name proudly in the donors list, and you can use PayPal or a credit card for payment.</p>
 ]]></content>
   </entry>
   
   <entry>
     <title type="html"><![CDATA[BitNami screencasts in Spanish]]></title>
-    <link href="http://www.getontracks.org/news/comments/bitnami-screencasts-in-spanish/"/>
+    <link href="http://TracksApp.github.com/news/comments/bitnami-screencasts-in-spanish/"/>
     <updated>2008-06-28T00:00:00+02:00</updated>
-    <id>http://www.getontracks.org/news/comments/bitnami-screencasts-in-spanish</id>
+    <id>http://TracksApp.github.com/news/comments/bitnami-screencasts-in-spanish</id>
     <content type="html"><![CDATA[<p>Spanish-speaking Tracks users will be interested to know that <a href="http://www.bitnami.org/">BitNami</a> have a couple of <a href="http://www.bitnami.org/article/tracks-aprende-a-manejar-tus-tareas">screencasts</a> in Spanish, showing the installation process with BitNami (which was produced by <a href="http://www.screencasts.es/">Javier Mart&#237;nez</a>) and an introduction to using Tracks. Many thanks to Antonio Santos at BitNami for pointing me to the screencasts, and for telling me that Tracks was the third most downloaded Stack on BitNami last month!</p>
 ]]></content>
   </entry>

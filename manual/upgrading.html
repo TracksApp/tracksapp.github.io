@@ -9,7 +9,7 @@
   <meta name="author" content="TracksApp">
 
   
-  <meta name="description" content="        Manual - Upgrading      &laquo; InstallationUpgrading TracksUpgrading from Tracks 2.0RC2 to 2.0The upgrade to the latest stable 2.0 release...">
+  <meta name="description" content="        Manual - Upgrading      &laquo; InstallationUpgrading TracksUpgrading from Tracks 2.0 to 2.1RC1For the upgrade, please note that with versi...">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -18,7 +18,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   
-  <link rel="canonical" href="http://www.getontracks.org/manual/upgrading.html">
+  <link rel="canonical" href="http://TracksApp.github.com/manual/upgrading.html">
   <link href="/favicon.png" rel="icon">
   <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
   <script src="/javascripts/modernizr-2.0.js"></script>
@@ -43,7 +43,7 @@
 </ul>
 <form action="http://google.com/search" method="get">
   <fieldset role="search">
-    <input type="hidden" name="q" value="site:www.getontracks.org" />
+    <input type="hidden" name="q" value="site:TracksApp.github.com" />
     <input class="search" type="text" name="q" results="0" placeholder="Search"/>
   </fieldset>
 </form>
@@ -69,6 +69,33 @@
   
   <p><a href="/manual/installation.html">&laquo; Installation</a></p>
 <h2>Upgrading Tracks</h2>
+<h3>Upgrading from Tracks 2.0 to 2.1RC1</h3>
+<p>For the upgrade, please note that with version 2.1 Tracks started to use <code>bundler</code>. This means you need to have to install bundler using <code>gem install bundler</code>.</p>
+<p>To upgrade:</p>
+<ol>
+	<li>Back up your existing database and installation of Tracks</li>
+	<li>Install Tracks 2.1RC in a new directory</li>
+	<li>Copy over the configuration from your previous Tracks installation. If using SQLite3, copy the old database into the new Tracks 2.1RC directory.</li>
+	<li>Check that you have all dependencies installed: <code>bundle install</code></li>
+	<li>Run <code>bundle exec rake db:migrate RAILS_ENV=production</code> to update your old database to the new schema &#8212; you did back up your database didn&#8217;t you?</li>
+	<li>Run <code>bundle exec script/server</code> inside your Tracks 2.1RC directory to start up Tracks 2.1RC2.</li>
+	<li>Once you are happy that everything is working well, delete your old Tracks directory.</li>
+</ol>
+<p>If you did not start with a new copy of Tracks as described above, but installed over an older version (or used git to pull in a newer version), you need to remove the cached version of the javascript and stylesheets of Tracks.</p>
+<ol>
+	<li>jquery-cached.js from public/javascripts</li>
+	<li>tracks-cached.js from public/javascripts</li>
+	<li>tracks-cached.css from public/stylesheets</li>
+</ol>
+<p>If you are running an older version of Tracks (1.8devel), they could also be called jquery-all.js, tracks.js and all.css</p>
+<p>If you have problems with Passenger not finding the gems bundler installed, you might want to let bundler put all gems in the Tracks directory so that Passenger can find them (and probably have sufficient permissions). Create a directory <code>.bundle</code> in your Tracks root directory. Add the following config in <code>/path/to/tracks/.bundle/config</code>:</p>
+<p><div class='bogus-wrapper'><notextile><figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="o">---</span>
+</span><span class='line'><span class="no">BUNDLE_DISABLE_SHARED_GEMS</span><span class="p">:</span> <span class="s2">&quot;1&quot;</span>
+</span><span class='line'><span class="no">BUNDLE_PATH</span><span class="p">:</span><span class="sr"> /path/</span><span class="n">to</span><span class="o">/</span><span class="n">tracks</span><span class="o">/.</span><span class="n">bundle</span>
+</span></code></pre></td></tr></table></div></figure></div></notextile></p>
 <h3>Upgrading from Tracks 2.0RC2 to 2.0</h3>
 <p>The upgrade to the latest stable 2.0 release consists of the same steps as upgrading from 1.7.x in the following paragraph, just replace 2.0RC with 2.0 where appropriate</p>
 <p><span class="caps">PLEASE</span> <span class="caps">NOTE</span> that the requirements for Tracks have changes:</p>
@@ -203,6 +230,8 @@ It is also possible to follow the instructions below and copy your existing site
   <p><a href="/downloads/comments/tracks-20">Tracks 2.0 release notes</a></p>
   
   <p><a href="http://www.assembla.com/spaces/tracks-tickets/">Report a bug</a></p>
+  
+  <p><a href="/news/comments/release-2.1.rc1/">Want to help test upcoming Tracks 2.1?</a></p>
 </section>
 
 <section>

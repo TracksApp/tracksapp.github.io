@@ -1,399 +1,407 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <urlset xmlns='http://www.sitemaps.org/schemas/sitemap/0.9'>
     <url>
-        <loc>http://www.getontracks.org/downloads/comments/downloads/</loc>
+        <loc>http://TracksApp.github.com/downloads/comments/downloads/</loc>
         <lastmod>2012-04-04T13:14:54+02:00</lastmod>
     </url>
     <url>
-        <loc>http://www.getontracks.org/news/comments/new-wiki/</loc>
+        <loc>http://TracksApp.github.com/news/comments/new-wiki/</loc>
         <lastmod>2012-04-04T13:15:11+02:00</lastmod>
     </url>
     <url>
-        <loc>http://www.getontracks.org/news/comments/version-using-rails-091/</loc>
+        <loc>http://TracksApp.github.com/news/comments/version-using-rails-091/</loc>
         <lastmod>2012-04-04T13:15:11+02:00</lastmod>
     </url>
     <url>
-        <loc>http://www.getontracks.org/news/comments/new-version-10-of-tracks-released/</loc>
+        <loc>http://TracksApp.github.com/news/comments/new-version-10-of-tracks-released/</loc>
         <lastmod>2012-04-04T13:15:11+02:00</lastmod>
     </url>
     <url>
-        <loc>http://www.getontracks.org/downloads/comments/version-10/</loc>
+        <loc>http://TracksApp.github.com/downloads/comments/version-10/</loc>
         <lastmod>2012-04-04T13:14:54+02:00</lastmod>
     </url>
     <url>
-        <loc>http://www.getontracks.org/downloads/comments/minor-update-tracks-101/</loc>
+        <loc>http://TracksApp.github.com/downloads/comments/minor-update-tracks-101/</loc>
         <lastmod>2012-04-04T13:14:54+02:00</lastmod>
     </url>
     <url>
-        <loc>http://www.getontracks.org/news/comments/subversion-access-available/</loc>
+        <loc>http://TracksApp.github.com/news/comments/subversion-access-available/</loc>
         <lastmod>2012-04-04T13:15:11+02:00</lastmod>
     </url>
     <url>
-        <loc>http://www.getontracks.org/articles/comments/the-road-to-tracks-11/</loc>
-        <lastmod>2012-04-04T13:14:49+02:00</lastmod>
-    </url>
-    <url>
-        <loc>http://www.getontracks.org/articles/comments/making-tracks-publicly-accessible/</loc>
-        <lastmod>2012-04-04T13:14:49+02:00</lastmod>
-    </url>
-    <url>
-        <loc>http://www.getontracks.org/articles/comments/lighttpd-rails-and-tracks/</loc>
-        <lastmod>2012-04-04T13:14:49+02:00</lastmod>
-    </url>
-    <url>
-        <loc>http://www.getontracks.org/articles/comments/installing-tracks-on-dreamhost/</loc>
+        <loc>http://TracksApp.github.com/articles/comments/the-road-to-tracks-11/</loc>
         <lastmod>2012-04-04T13:14:49+02:00</lastmod>
     </url>
     <url>
         <loc>
-            http://www.getontracks.org/articles/comments/fix-for-running-tracks-101-under-rails-0100/
+            http://TracksApp.github.com/articles/comments/making-tracks-publicly-accessible/
         </loc>
         <lastmod>2012-04-04T13:14:49+02:00</lastmod>
     </url>
     <url>
-        <loc>http://www.getontracks.org/downloads/comments/tracks-102a/</loc>
-        <lastmod>2012-04-04T13:14:54+02:00</lastmod>
-    </url>
-    <url>
-        <loc>http://www.getontracks.org/news/comments/tracks-102a-is-out/</loc>
-        <lastmod>2012-04-04T13:15:11+02:00</lastmod>
-    </url>
-    <url>
-        <loc>http://www.getontracks.org/news/comments/off-to-japan/</loc>
-        <lastmod>2012-04-04T13:15:11+02:00</lastmod>
-    </url>
-    <url>
-        <loc>http://www.getontracks.org/news/comments/tracks-on-trac/</loc>
-        <lastmod>2012-04-04T13:15:11+02:00</lastmod>
-    </url>
-    <url>
-        <loc>http://www.getontracks.org/articles/comments/movies-of-new-ajax-features/</loc>
+        <loc>http://TracksApp.github.com/articles/comments/lighttpd-rails-and-tracks/</loc>
         <lastmod>2012-04-04T13:14:49+02:00</lastmod>
     </url>
     <url>
-        <loc>http://www.getontracks.org/articles/comments/tracks-on-windows-xp-tutorial/</loc>
-        <lastmod>2012-04-04T13:14:49+02:00</lastmod>
-    </url>
-    <url>
-        <loc>http://www.getontracks.org/downloads/comments/tracks-103-beta/</loc>
-        <lastmod>2012-04-04T13:14:54+02:00</lastmod>
-    </url>
-    <url>
-        <loc>http://www.getontracks.org/downloads/comments/tracks-103-final/</loc>
-        <lastmod>2012-04-04T13:14:54+02:00</lastmod>
-    </url>
-    <url>
-        <loc>
-            http://www.getontracks.org/articles/comments/starting-tracks-at-login-with-mac-os-x-tiger/
-        </loc>
-        <lastmod>2012-04-04T13:14:49+02:00</lastmod>
-    </url>
-    <url>
-        <loc>http://www.getontracks.org/downloads/comments/startup-items-for-mac-os-x-tiger/</loc>
-        <lastmod>2012-04-04T13:14:54+02:00</lastmod>
-    </url>
-    <url>
-        <loc>http://www.getontracks.org/news/comments/away-for-most-of-september/</loc>
-        <lastmod>2012-04-04T13:15:11+02:00</lastmod>
-    </url>
-    <url>
-        <loc>
-            http://www.getontracks.org/articles/comments/a-better-startup-item-for-mac-os-x-tiger/
-        </loc>
-        <lastmod>2012-04-04T13:14:49+02:00</lastmod>
-    </url>
-    <url>
-        <loc>http://www.getontracks.org/news/comments/development-news/</loc>
-        <lastmod>2012-04-04T13:15:11+02:00</lastmod>
-    </url>
-    <url>
-        <loc>http://www.getontracks.org/downloads/comments/tracks-104/</loc>
-        <lastmod>2012-04-04T13:14:54+02:00</lastmod>
-    </url>
-    <url>
-        <loc>http://www.getontracks.org/news/comments/tracks-104-is-here-at-last/</loc>
-        <lastmod>2012-04-04T13:15:11+02:00</lastmod>
-    </url>
-    <url>
-        <loc>http://www.getontracks.org/news/comments/tracks-discuss-mailing-list/</loc>
-        <lastmod>2012-04-04T13:15:11+02:00</lastmod>
-    </url>
-    <url>
-        <loc>http://www.getontracks.org/news/comments/moderating-comments/</loc>
-        <lastmod>2012-04-04T13:15:11+02:00</lastmod>
-    </url>
-    <url>
-        <loc>
-            http://www.getontracks.org/articles/comments/emailing-upcoming-actions-to-yourself/
-        </loc>
-        <lastmod>2012-04-04T13:14:49+02:00</lastmod>
-    </url>
-    <url>
-        <loc>http://www.getontracks.org/news/comments/new-website-design/</loc>
-        <lastmod>2012-04-04T13:15:11+02:00</lastmod>
-    </url>
-    <url>
-        <loc>http://www.getontracks.org/news/comments/tracks-featured-in-a-podcast/</loc>
-        <lastmod>2012-04-04T13:15:11+02:00</lastmod>
-    </url>
-    <url>
-        <loc>
-            http://www.getontracks.org/downloads/comments/adding-next-actions-via-scripts-the-tracks-api/
-        </loc>
-        <lastmod>2012-04-04T13:14:54+02:00</lastmod>
-    </url>
-    <url>
-        <loc>http://www.getontracks.org/downloads/comments/tracks-1041/</loc>
-        <lastmod>2012-04-04T13:14:54+02:00</lastmod>
-    </url>
-    <url>
-        <loc>http://www.getontracks.org/news/comments/listible/</loc>
-        <lastmod>2012-04-04T13:15:11+02:00</lastmod>
-    </url>
-    <url>
-        <loc>http://www.getontracks.org/downloads/comments/api-perl-script/</loc>
-        <lastmod>2012-04-04T13:14:54+02:00</lastmod>
-    </url>
-    <url>
-        <loc>http://www.getontracks.org/news/comments/updated-migrations-files/</loc>
-        <lastmod>2012-04-04T13:15:11+02:00</lastmod>
-    </url>
-    <url>
-        <loc>http://www.getontracks.org/articles/comments/installing-tracks-using-locomotiv/</loc>
+        <loc>http://TracksApp.github.com/articles/comments/installing-tracks-on-dreamhost/</loc>
         <lastmod>2012-04-04T13:14:49+02:00</lastmod>
     </url>
     <url>
         <loc>
-            http://www.getontracks.org/news/comments/new-installation-instructions-for-windows/
-        </loc>
-        <lastmod>2012-04-04T13:15:11+02:00</lastmod>
-    </url>
-    <url>
-        <loc>
-            http://www.getontracks.org/downloads/comments/script-to-allow-adding-of-next-actions-by-sms/
-        </loc>
-        <lastmod>2012-04-04T13:14:54+02:00</lastmod>
-    </url>
-    <url>
-        <loc>http://www.getontracks.org/articles/comments/mongrel-and-windows/</loc>
-        <lastmod>2012-04-04T13:14:49+02:00</lastmod>
-    </url>
-    <url>
-        <loc>
-            http://www.getontracks.org/news/comments/two-thumbs-up-for-tracks-from-labnotes/
-        </loc>
-        <lastmod>2012-04-04T13:15:11+02:00</lastmod>
-    </url>
-    <url>
-        <loc>http://www.getontracks.org/downloads/comments/ruby-command-line-api-script/</loc>
-        <lastmod>2012-04-04T13:14:54+02:00</lastmod>
-    </url>
-    <url>
-        <loc>http://www.getontracks.org/news/comments/expressionengine-discussion-forum/</loc>
-        <lastmod>2012-04-04T13:15:11+02:00</lastmod>
-    </url>
-    <url>
-        <loc>http://www.getontracks.org/news/comments/new-wiki1/</loc>
-        <lastmod>2012-04-04T13:15:11+02:00</lastmod>
-    </url>
-    <url>
-        <loc>
-            http://www.getontracks.org/articles/comments/all-in-one-installation-for-windows/
+            http://TracksApp.github.com/articles/comments/fix-for-running-tracks-101-under-rails-0100/
         </loc>
         <lastmod>2012-04-04T13:14:49+02:00</lastmod>
     </url>
     <url>
-        <loc>http://www.getontracks.org/news/comments/new-wiki-pages-for-hosting-solutions/</loc>
-        <lastmod>2012-04-04T13:15:11+02:00</lastmod>
-    </url>
-    <url>
-        <loc>http://www.getontracks.org/downloads/comments/tracks-1042/</loc>
+        <loc>http://TracksApp.github.com/downloads/comments/tracks-102a/</loc>
         <lastmod>2012-04-04T13:14:54+02:00</lastmod>
     </url>
     <url>
-        <loc>http://www.getontracks.org/downloads/comments/tracks-1043/</loc>
+        <loc>http://TracksApp.github.com/news/comments/tracks-102a-is-out/</loc>
+        <lastmod>2012-04-04T13:15:11+02:00</lastmod>
+    </url>
+    <url>
+        <loc>http://TracksApp.github.com/news/comments/off-to-japan/</loc>
+        <lastmod>2012-04-04T13:15:11+02:00</lastmod>
+    </url>
+    <url>
+        <loc>http://TracksApp.github.com/news/comments/tracks-on-trac/</loc>
+        <lastmod>2012-04-04T13:15:11+02:00</lastmod>
+    </url>
+    <url>
+        <loc>http://TracksApp.github.com/articles/comments/movies-of-new-ajax-features/</loc>
+        <lastmod>2012-04-04T13:14:49+02:00</lastmod>
+    </url>
+    <url>
+        <loc>http://TracksApp.github.com/articles/comments/tracks-on-windows-xp-tutorial/</loc>
+        <lastmod>2012-04-04T13:14:49+02:00</lastmod>
+    </url>
+    <url>
+        <loc>http://TracksApp.github.com/downloads/comments/tracks-103-beta/</loc>
         <lastmod>2012-04-04T13:14:54+02:00</lastmod>
     </url>
     <url>
-        <loc>http://www.getontracks.org/news/comments/going-to-brazil/</loc>
-        <lastmod>2012-04-04T13:15:11+02:00</lastmod>
-    </url>
-    <url>
-        <loc>http://www.getontracks.org/news/comments/unscheduled-break/</loc>
-        <lastmod>2012-04-04T13:15:11+02:00</lastmod>
+        <loc>http://TracksApp.github.com/downloads/comments/tracks-103-final/</loc>
+        <lastmod>2012-04-04T13:14:54+02:00</lastmod>
     </url>
     <url>
         <loc>
-            http://www.getontracks.org/news/comments/support-tracks-by-signing-up-for-joyent-products/
+            http://TracksApp.github.com/articles/comments/starting-tracks-at-login-with-mac-os-x-tiger/
         </loc>
-        <lastmod>2012-04-04T13:15:11+02:00</lastmod>
-    </url>
-    <url>
-        <loc>http://www.getontracks.org/articles/comments/linking-actions-and-yojimbo-items/</loc>
         <lastmod>2012-04-04T13:14:49+02:00</lastmod>
     </url>
     <url>
         <loc>
-            http://www.getontracks.org/news/comments/a-really-easy-installation-for-macos-x-users/
+            http://TracksApp.github.com/downloads/comments/startup-items-for-mac-os-x-tiger/
         </loc>
-        <lastmod>2012-04-04T13:15:11+02:00</lastmod>
-    </url>
-    <url>
-        <loc>http://www.getontracks.org/news/comments/more-ways-to-support-tracks/</loc>
-        <lastmod>2012-04-04T13:15:11+02:00</lastmod>
-    </url>
-    <url>
-        <loc>http://www.getontracks.org/downloads/comments/tracks-15rc1/</loc>
         <lastmod>2012-04-04T13:14:54+02:00</lastmod>
     </url>
     <url>
-        <loc>http://www.getontracks.org/news/comments/bitnami-tracks-stack/</loc>
-        <lastmod>2012-04-04T13:15:11+02:00</lastmod>
-    </url>
-    <url>
-        <loc>http://www.getontracks.org/downloads/comments/tracks-15/</loc>
-        <lastmod>2012-04-04T13:14:54+02:00</lastmod>
-    </url>
-    <url>
-        <loc>http://www.getontracks.org/news/comments/new-screencast/</loc>
+        <loc>http://TracksApp.github.com/news/comments/away-for-most-of-september/</loc>
         <lastmod>2012-04-04T13:15:11+02:00</lastmod>
     </url>
     <url>
         <loc>
-            http://www.getontracks.org/articles/comments/morphexchange-tracks-as-a-hosted-service/
+            http://TracksApp.github.com/articles/comments/a-better-startup-item-for-mac-os-x-tiger/
         </loc>
         <lastmod>2012-04-04T13:14:49+02:00</lastmod>
     </url>
     <url>
-        <loc>http://www.getontracks.org/news/comments/comment-moderation/</loc>
+        <loc>http://TracksApp.github.com/news/comments/development-news/</loc>
         <lastmod>2012-04-04T13:15:11+02:00</lastmod>
     </url>
     <url>
-        <loc>http://www.getontracks.org/downloads/comments/tracks-16/</loc>
+        <loc>http://TracksApp.github.com/downloads/comments/tracks-104/</loc>
         <lastmod>2012-04-04T13:14:54+02:00</lastmod>
     </url>
     <url>
-        <loc>http://www.getontracks.org/news/comments/tracks-moves-to-github/</loc>
+        <loc>http://TracksApp.github.com/news/comments/tracks-104-is-here-at-last/</loc>
         <lastmod>2012-04-04T13:15:11+02:00</lastmod>
     </url>
     <url>
-        <loc>http://www.getontracks.org/news/comments/bitnami-screencasts-in-spanish/</loc>
+        <loc>http://TracksApp.github.com/news/comments/tracks-discuss-mailing-list/</loc>
         <lastmod>2012-04-04T13:15:11+02:00</lastmod>
     </url>
     <url>
-        <loc>http://www.getontracks.org/news/comments/pledgie-button/</loc>
-        <lastmod>2012-04-04T13:15:11+02:00</lastmod>
-    </url>
-    <url>
-        <loc>http://www.getontracks.org/news/comments/absent-for-august/</loc>
-        <lastmod>2012-04-04T13:15:11+02:00</lastmod>
-    </url>
-    <url>
-        <loc>http://www.getontracks.org/downloads/comments/tracks-1.7rc/</loc>
-        <lastmod>2012-04-04T13:14:54+02:00</lastmod>
-    </url>
-    <url>
-        <loc>http://www.getontracks.org/news/comments/tracks-gets-its-own-domain-name/</loc>
+        <loc>http://TracksApp.github.com/news/comments/moderating-comments/</loc>
         <lastmod>2012-04-04T13:15:11+02:00</lastmod>
     </url>
     <url>
         <loc>
-            http://www.getontracks.org/articles/comments/making-yourself-comfortable-with-git-in-the-terminal/
+            http://TracksApp.github.com/articles/comments/emailing-upcoming-actions-to-yourself/
         </loc>
         <lastmod>2012-04-04T13:14:49+02:00</lastmod>
     </url>
     <url>
-        <loc>http://www.getontracks.org/downloads/comments/tracks-1.7rc2/</loc>
-        <lastmod>2012-04-04T13:14:54+02:00</lastmod>
-    </url>
-    <url>
-        <loc>http://www.getontracks.org/downloads/comments/tracks-1.7/</loc>
-        <lastmod>2012-04-04T13:14:54+02:00</lastmod>
-    </url>
-    <url>
-        <loc>http://www.getontracks.org/news/comments/jumpbox-for-tracks/</loc>
+        <loc>http://TracksApp.github.com/news/comments/new-website-design/</loc>
         <lastmod>2012-04-04T13:15:11+02:00</lastmod>
     </url>
     <url>
-        <loc>http://www.getontracks.org/news/comments/new-affiliate-links/</loc>
+        <loc>http://TracksApp.github.com/news/comments/tracks-featured-in-a-podcast/</loc>
         <lastmod>2012-04-04T13:15:11+02:00</lastmod>
-    </url>
-    <url>
-        <loc>http://www.getontracks.org/downloads/comments/tracks-1.7.1/</loc>
-        <lastmod>2012-04-04T13:14:54+02:00</lastmod>
-    </url>
-    <url>
-        <loc>http://www.getontracks.org/downloads/comments/tracks-1.7.2/</loc>
-        <lastmod>2012-04-04T13:14:54+02:00</lastmod>
     </url>
     <url>
         <loc>
-            http://www.getontracks.org/news/comments/security-update-for-users-of-17x-and-20-branch-of-tracks/
+            http://TracksApp.github.com/downloads/comments/adding-next-actions-via-scripts-the-tracks-api/
+        </loc>
+        <lastmod>2012-04-04T13:14:54+02:00</lastmod>
+    </url>
+    <url>
+        <loc>http://TracksApp.github.com/downloads/comments/tracks-1041/</loc>
+        <lastmod>2012-04-04T13:14:54+02:00</lastmod>
+    </url>
+    <url>
+        <loc>http://TracksApp.github.com/news/comments/listible/</loc>
+        <lastmod>2012-04-04T13:15:11+02:00</lastmod>
+    </url>
+    <url>
+        <loc>http://TracksApp.github.com/downloads/comments/api-perl-script/</loc>
+        <lastmod>2012-04-04T13:14:54+02:00</lastmod>
+    </url>
+    <url>
+        <loc>http://TracksApp.github.com/news/comments/updated-migrations-files/</loc>
+        <lastmod>2012-04-04T13:15:11+02:00</lastmod>
+    </url>
+    <url>
+        <loc>
+            http://TracksApp.github.com/articles/comments/installing-tracks-using-locomotiv/
+        </loc>
+        <lastmod>2012-04-04T13:14:49+02:00</lastmod>
+    </url>
+    <url>
+        <loc>
+            http://TracksApp.github.com/news/comments/new-installation-instructions-for-windows/
         </loc>
         <lastmod>2012-04-04T13:15:11+02:00</lastmod>
     </url>
     <url>
-        <loc>http://www.getontracks.org/news/comments/tracks-20-release-candidate-2/</loc>
-        <lastmod>2012-04-04T13:15:11+02:00</lastmod>
-    </url>
-    <url>
-        <loc>http://www.getontracks.org/downloads/comments/tracks-173/</loc>
+        <loc>
+            http://TracksApp.github.com/downloads/comments/script-to-allow-adding-of-next-actions-by-sms/
+        </loc>
         <lastmod>2012-04-04T13:14:54+02:00</lastmod>
     </url>
     <url>
-        <loc>http://www.getontracks.org/downloads/comments/tracks-20/</loc>
+        <loc>http://TracksApp.github.com/articles/comments/mongrel-and-windows/</loc>
+        <lastmod>2012-04-04T13:14:49+02:00</lastmod>
+    </url>
+    <url>
+        <loc>
+            http://TracksApp.github.com/news/comments/two-thumbs-up-for-tracks-from-labnotes/
+        </loc>
+        <lastmod>2012-04-04T13:15:11+02:00</lastmod>
+    </url>
+    <url>
+        <loc>http://TracksApp.github.com/downloads/comments/ruby-command-line-api-script/</loc>
         <lastmod>2012-04-04T13:14:54+02:00</lastmod>
     </url>
     <url>
-        <loc>http://www.getontracks.org/news/comments/tracks-2.0-is-out-now/</loc>
+        <loc>http://TracksApp.github.com/news/comments/expressionengine-discussion-forum/</loc>
         <lastmod>2012-04-04T13:15:11+02:00</lastmod>
     </url>
     <url>
-        <loc>http://www.getontracks.org/news/comments/the-wiki-has-moved/</loc>
+        <loc>http://TracksApp.github.com/news/comments/new-wiki1/</loc>
         <lastmod>2012-04-04T13:15:11+02:00</lastmod>
     </url>
     <url>
-        <loc>http://www.getontracks.org/news/comments/handing-over-the-keys/</loc>
+        <loc>
+            http://TracksApp.github.com/articles/comments/all-in-one-installation-for-windows/
+        </loc>
+        <lastmod>2012-04-04T13:14:49+02:00</lastmod>
+    </url>
+    <url>
+        <loc>http://TracksApp.github.com/news/comments/new-wiki-pages-for-hosting-solutions/</loc>
         <lastmod>2012-04-04T13:15:11+02:00</lastmod>
     </url>
     <url>
-        <loc>http://www.getontracks.org/news/comments/release-2.1.rc1/</loc>
+        <loc>http://TracksApp.github.com/downloads/comments/tracks-1042/</loc>
+        <lastmod>2012-04-04T13:14:54+02:00</lastmod>
+    </url>
+    <url>
+        <loc>http://TracksApp.github.com/downloads/comments/tracks-1043/</loc>
+        <lastmod>2012-04-04T13:14:54+02:00</lastmod>
+    </url>
+    <url>
+        <loc>http://TracksApp.github.com/news/comments/going-to-brazil/</loc>
+        <lastmod>2012-04-04T13:15:11+02:00</lastmod>
+    </url>
+    <url>
+        <loc>http://TracksApp.github.com/news/comments/unscheduled-break/</loc>
+        <lastmod>2012-04-04T13:15:11+02:00</lastmod>
+    </url>
+    <url>
+        <loc>
+            http://TracksApp.github.com/news/comments/support-tracks-by-signing-up-for-joyent-products/
+        </loc>
+        <lastmod>2012-04-04T13:15:11+02:00</lastmod>
+    </url>
+    <url>
+        <loc>
+            http://TracksApp.github.com/articles/comments/linking-actions-and-yojimbo-items/
+        </loc>
+        <lastmod>2012-04-04T13:14:49+02:00</lastmod>
+    </url>
+    <url>
+        <loc>
+            http://TracksApp.github.com/news/comments/a-really-easy-installation-for-macos-x-users/
+        </loc>
+        <lastmod>2012-04-04T13:15:11+02:00</lastmod>
+    </url>
+    <url>
+        <loc>http://TracksApp.github.com/news/comments/more-ways-to-support-tracks/</loc>
+        <lastmod>2012-04-04T13:15:11+02:00</lastmod>
+    </url>
+    <url>
+        <loc>http://TracksApp.github.com/downloads/comments/tracks-15rc1/</loc>
+        <lastmod>2012-04-04T13:14:54+02:00</lastmod>
+    </url>
+    <url>
+        <loc>http://TracksApp.github.com/news/comments/bitnami-tracks-stack/</loc>
+        <lastmod>2012-04-04T13:15:11+02:00</lastmod>
+    </url>
+    <url>
+        <loc>http://TracksApp.github.com/downloads/comments/tracks-15/</loc>
+        <lastmod>2012-04-04T13:14:54+02:00</lastmod>
+    </url>
+    <url>
+        <loc>http://TracksApp.github.com/news/comments/new-screencast/</loc>
+        <lastmod>2012-04-04T13:15:11+02:00</lastmod>
+    </url>
+    <url>
+        <loc>
+            http://TracksApp.github.com/articles/comments/morphexchange-tracks-as-a-hosted-service/
+        </loc>
+        <lastmod>2012-04-04T13:14:49+02:00</lastmod>
+    </url>
+    <url>
+        <loc>http://TracksApp.github.com/news/comments/comment-moderation/</loc>
+        <lastmod>2012-04-04T13:15:11+02:00</lastmod>
+    </url>
+    <url>
+        <loc>http://TracksApp.github.com/downloads/comments/tracks-16/</loc>
+        <lastmod>2012-04-04T13:14:54+02:00</lastmod>
+    </url>
+    <url>
+        <loc>http://TracksApp.github.com/news/comments/tracks-moves-to-github/</loc>
+        <lastmod>2012-04-04T13:15:11+02:00</lastmod>
+    </url>
+    <url>
+        <loc>http://TracksApp.github.com/news/comments/bitnami-screencasts-in-spanish/</loc>
+        <lastmod>2012-04-04T13:15:11+02:00</lastmod>
+    </url>
+    <url>
+        <loc>http://TracksApp.github.com/news/comments/pledgie-button/</loc>
+        <lastmod>2012-04-04T13:15:11+02:00</lastmod>
+    </url>
+    <url>
+        <loc>http://TracksApp.github.com/news/comments/absent-for-august/</loc>
+        <lastmod>2012-04-04T13:15:11+02:00</lastmod>
+    </url>
+    <url>
+        <loc>http://TracksApp.github.com/downloads/comments/tracks-1.7rc/</loc>
+        <lastmod>2012-04-04T13:14:54+02:00</lastmod>
+    </url>
+    <url>
+        <loc>http://TracksApp.github.com/news/comments/tracks-gets-its-own-domain-name/</loc>
+        <lastmod>2012-04-04T13:15:11+02:00</lastmod>
+    </url>
+    <url>
+        <loc>
+            http://TracksApp.github.com/articles/comments/making-yourself-comfortable-with-git-in-the-terminal/
+        </loc>
+        <lastmod>2012-04-04T13:14:49+02:00</lastmod>
+    </url>
+    <url>
+        <loc>http://TracksApp.github.com/downloads/comments/tracks-1.7rc2/</loc>
+        <lastmod>2012-04-04T13:14:54+02:00</lastmod>
+    </url>
+    <url>
+        <loc>http://TracksApp.github.com/downloads/comments/tracks-1.7/</loc>
+        <lastmod>2012-04-04T13:14:54+02:00</lastmod>
+    </url>
+    <url>
+        <loc>http://TracksApp.github.com/news/comments/jumpbox-for-tracks/</loc>
+        <lastmod>2012-04-04T13:15:11+02:00</lastmod>
+    </url>
+    <url>
+        <loc>http://TracksApp.github.com/news/comments/new-affiliate-links/</loc>
+        <lastmod>2012-04-04T13:15:11+02:00</lastmod>
+    </url>
+    <url>
+        <loc>http://TracksApp.github.com/downloads/comments/tracks-1.7.1/</loc>
+        <lastmod>2012-04-04T13:14:54+02:00</lastmod>
+    </url>
+    <url>
+        <loc>http://TracksApp.github.com/downloads/comments/tracks-1.7.2/</loc>
+        <lastmod>2012-04-04T13:14:54+02:00</lastmod>
+    </url>
+    <url>
+        <loc>
+            http://TracksApp.github.com/news/comments/security-update-for-users-of-17x-and-20-branch-of-tracks/
+        </loc>
+        <lastmod>2012-04-04T13:15:11+02:00</lastmod>
+    </url>
+    <url>
+        <loc>http://TracksApp.github.com/news/comments/tracks-20-release-candidate-2/</loc>
+        <lastmod>2012-04-04T13:15:11+02:00</lastmod>
+    </url>
+    <url>
+        <loc>http://TracksApp.github.com/downloads/comments/tracks-173/</loc>
+        <lastmod>2012-04-04T13:14:54+02:00</lastmod>
+    </url>
+    <url>
+        <loc>http://TracksApp.github.com/downloads/comments/tracks-20/</loc>
+        <lastmod>2012-04-04T13:14:54+02:00</lastmod>
+    </url>
+    <url>
+        <loc>http://TracksApp.github.com/news/comments/tracks-2.0-is-out-now/</loc>
+        <lastmod>2012-04-04T13:15:11+02:00</lastmod>
+    </url>
+    <url>
+        <loc>http://TracksApp.github.com/news/comments/the-wiki-has-moved/</loc>
+        <lastmod>2012-04-04T13:15:11+02:00</lastmod>
+    </url>
+    <url>
+        <loc>http://TracksApp.github.com/news/comments/handing-over-the-keys/</loc>
+        <lastmod>2012-04-04T13:15:11+02:00</lastmod>
+    </url>
+    <url>
+        <loc>http://TracksApp.github.com/news/comments/release-2.1.rc1/</loc>
         <lastmod>2012-04-04T14:57:38+02:00</lastmod>
     </url>
     <url>
-        <loc>http://www.getontracks.org/news/</loc>
+        <loc>http://TracksApp.github.com/news/</loc>
         <lastmod>2012-04-04T14:57:38+02:00</lastmod>
     </url>
     <url>
-        <loc>http://www.getontracks.org/screenshots/</loc>
+        <loc>http://TracksApp.github.com/screenshots/</loc>
         <lastmod>2012-04-04T13:15:11+02:00</lastmod>
     </url>
     <url>
-        <loc>http://www.getontracks.org/downloads/</loc>
+        <loc>http://TracksApp.github.com/downloads/</loc>
         <lastmod>2012-04-04T14:57:38+02:00</lastmod>
     </url>
     <url>
-        <loc>http://www.getontracks.org/</loc>
+        <loc>http://TracksApp.github.com/</loc>
         <lastmod>2012-04-04T14:41:27+02:00</lastmod>
     </url>
     <url>
-        <loc>http://www.getontracks.org/development/</loc>
+        <loc>http://TracksApp.github.com/development/</loc>
         <lastmod>2012-04-04T13:14:54+02:00</lastmod>
     </url>
     <url>
-        <loc>http://www.getontracks.org/articles/</loc>
+        <loc>http://TracksApp.github.com/articles/</loc>
         <lastmod>2012-04-04T14:57:38+02:00</lastmod>
     </url>
     <url>
-        <loc>http://www.getontracks.org/manual/</loc>
-        <lastmod>2012-04-04T13:15:11+02:00</lastmod>
+        <loc>http://TracksApp.github.com/manual/</loc>
+        <lastmod>2012-04-04T16:46:20+02:00</lastmod>
     </url>
     <url>
-        <loc>http://www.getontracks.org/manual/upgrading.html</loc>
-        <lastmod>2012-04-04T13:15:11+02:00</lastmod>
+        <loc>http://TracksApp.github.com/manual/upgrading.html</loc>
+        <lastmod>2012-04-04T17:18:45+02:00</lastmod>
     </url>
     <url>
-        <loc>http://www.getontracks.org/manual/installation.html</loc>
-        <lastmod>2012-04-04T13:15:11+02:00</lastmod>
+        <loc>http://TracksApp.github.com/manual/installation.html</loc>
+        <lastmod>2012-04-04T17:07:26+02:00</lastmod>
     </url>
 </urlset>
