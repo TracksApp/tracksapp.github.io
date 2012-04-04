@@ -16,7 +16,7 @@ h3. Getting Tracks
 
 There are two methods of downloading Tracks:
 
-# (Recommended for most people) Download the "zipped package":https://github.com/tracksapp/tracks/zipball/v2.0 for the latest stable release (2.0) and unzip in your preferred location (e.g. @~/Sites@ for Mac OS X users).
+# (Recommended for most people) Download the "zipped package":{{ site.download_link }} for the latest stable release ({{ site.version }}) and unzip in your preferred location (e.g. @~/Sites@ for Mac OS X users).
 # If you want to live on the edge, you can get the latest development version from GitHub using git (bear in mind that this may be less stable than the released versions):
 
 {% codeblock lang:bash %}
@@ -33,13 +33,13 @@ There are a few easy options if you are not confident about installing Tracks fr
 
 If you'd like an easy way to access Tracks from any internet-connected computer, sign up for a free account at "Morph eXchange":http://www.morphexchange.com/. Sign up for a free account, then click on "See all available subscriptions" and you'll see Tracks listed as an application. Just subscribe to Tracks and you can get started. This option is recommended for those with little technical know-how.
 
-There are also some other free hosted Tracks sites, like http://GTDify.com and http://Tracks.tra.in that you can use.
+There are also some other free hosted Tracks sites, like http://GTDify.com and http://Tracks.tra.in that you can use. Please note that they may run older versions of Tracks.
 
 
 h4.  Requirements
 
 
-The Tracks interface is accessed through a web browser, so you need to run a webserver to serve the Tracks pages up to you. This isn't as daunting as it sounds, however: Tracks ships with a built-in web server called Mongrel which you can run on your own computer to serve the Tracks application locally. If you want to be able to access Tracks from any computer connected to the Internet, then you need to install Tracks on a publicly accessible server, and you will probably be better off using a more robust server such as "Apache":http://www.apache.org/ (using "modrails":http://www.modrails.com/) or "Lighttpd":http://www.lighttpd.net/ to serve the pages, particularly if it will be used by many people.
+The Tracks interface is accessed through a web browser, so you need to run a webserver to serve the Tracks pages up to you. This isn't as daunting as it sounds, however: Tracks ships with a built-in web server called Mongrel which you can run on your own computer to serve the Tracks application locally. If you want to be able to access Tracks from any computer connected to the Internet, then you need to install Tracks on a publicly accessible server, and you will probably be better off using a more robust web server such as "Apache":http://www.apache.org/ (using "modrails":http://www.modrails.com/) or "Lighttpd":http://www.lighttpd.net/ to serve the pages, particularly if it will be used by many people.
 
 Tracks stores its data in a database, and you can either use SQLite3, MySQL or PostgreSQL. SQLite3 is the best choice for a single user (or a small number of users) on a local installation, while MySQL or PostgreSQL is better for multiple users on a remote installation.
 
@@ -47,7 +47,7 @@ Tracks stores its data in a database, and you can either use SQLite3, MySQL or P
 h4.  What is included with the Tracks package?
 
 # Tracks itself
-# Rails 2.3.11 (installed in the @/vendor/rails@ directory, so you do not need to install Rails yourself)
+# Rails 2.3.11 (installed in the @/vendor/rails@ directory, so you do not need to install Rails yourself). The upcoming version of Tracks will depend on Rails 2.3.12
 # An empty SQLite3 database, set up with the correct database schema
 
 
@@ -56,17 +56,17 @@ h4.  What you need to install
 If you don't want to (or can't) use one of the all in one installations, you'll need to install a few things, depending on your platform and your needs.
 
 # *Ruby*. Tracks requires Ruby Version 1.8.7. There are issues when running with Ruby 1.8.6. Also Tracks was not tested on Ruby 1.9.x.
-# *RubyGems*. Tracks was tested on version 1.3.7 and 1.5.0. You may upgrade using @gem update --system@. The gems needed by Rails to interact with the database have to be compiled on the platform on which they will be run, so we cannot include them with the Tracks package, unlike some other gems. So you will need to "download":http://rubyforge.org/frs/?group_id=126 and install RubyGems (run @ruby setup.rb@ after extracting the package). If you use Linux, rubygems may be available throught your packaging system. Note that once again, Mac OS X Leopard users get an easy life, because RubyGems and the SQLite3 gem is already installed. Once installed you can use RubyGems to install the gems you need for your database. If you are using SQLite3, run @sudo gem install sqlite3-ruby@, then select the appropriate package for your platform (version 1.2.1 recommended). You can use MySQL without installing a gem, but installing the gem can speed things up a bit: @sudo gem install mysql@. If you're using Leopard, there are a few work-arounds necessary, which are explained on "Mac OS Forge":http://trac.macosforge.org/projects/ruby/wiki/Troubleshooting#IcannotbuildrubymysqlonLeopardwithmysql.combinaries. The ruby-mysql bindings can sometimes be a bit troublesome to install, so to be honest, it's probably not worth the bother unless you are trying to wring maximum speed out of your system. If you are using PostgreSQL, then you can install a postgres gem: @gem install postgres@.
+# *RubyGems*. Tracks was tested on version 1.3.7 and 1.5.0 (The upcoming Tracks 2.1 was tested on 1.8.10). You may upgrade using @gem update --system@. The gems needed by Rails to interact with the database have to be compiled on the platform on which they will be run, so we cannot include them with the Tracks package, unlike some other gems. So you will need to "download":http://rubyforge.org/frs/?group_id=126 and install RubyGems (run @ruby setup.rb@ after extracting the package). If you use Linux, rubygems may be available throught your packaging system. Note that once again, Mac OS X Leopard users get an easy life, because RubyGems and the SQLite3 gem is already installed. Once installed you can use RubyGems to install the gems you need for your database. If you are using SQLite3, run @sudo gem install sqlite3-ruby@, then select the appropriate package for your platform (version 1.2.1 recommended). You can use MySQL without installing a gem, but installing the gem can speed things up a bit: @sudo gem install mysql@. If you're using Leopard, there are a few work-arounds necessary, which are explained on "Mac OS Forge":http://trac.macosforge.org/projects/ruby/wiki/Troubleshooting#IcannotbuildrubymysqlonLeopardwithmysql.combinaries. The ruby-mysql bindings can sometimes be a bit troublesome to install, so to be honest, it's probably not worth the bother unless you are trying to wring maximum speed out of your system. If you are using PostgreSQL, then you can install a postgres gem: @gem install postgres@.
 # *Database*. The easiest option is to use SQLite3, as the database is included in the package. All you need then is the @sqlite3-ruby@ gem, as described in step 2, and the SQLite3 libraries and binary (see "sqlite.org":http://sqlite.org/download.html for downloads and installation instructions). If you want to use MySQL, download and install a package for your platform from "MySQL.com":http://dev.mysql.com/downloads/mysql/5.0.html. The basic steps for Postgresql should be similar to those for MySQL, but they will not be discussed further here.
 # *Rake* You will need rake to install and upgrade Tracks. If it is not installed on your system, use @sudo gem install rake@ to install it.
 
 
-You can find several installation howtos for specific setups "here":http://www.getontracks.org/wiki/Installation-Index/. They were contributed by various Tracks users.
+You can find several installation howtos for specific setups "here":https://github.com/TracksApp/tracks/wiki/Installation-index. They were contributed by various Tracks users.
 
 
 h3.  Installation
 
-This description is intended for people installing Tracks from scratch. If you would like to upgrade an existing installation, please see Upgrading to Tracks 2.0.
+This description is intended for people installing Tracks from scratch. If you would like to upgrade an existing installation, please see Upgrading to Tracks {{ site.version }}.
 
 # Unzip tracks and install in a directory
 # Decide on a database to use
@@ -108,12 +108,35 @@ h4.  Configure variables
 # If you are using Windows, you may need to check the 'shebang' lines (@#!/usr/bin/env ruby@) of the @/public/dispatch.*@ files and all the files in the @/script@ directory. They are set to @#!/usr/bin/env ruby@ by default. This should work for all Unix based setups (Linux or Mac OS X), but Windows users will probably have to change it to something like @#c:/ruby/bin/ruby@ to point to the Ruby binary on your system.
 
 
+h4.  Checking you have all needed dependencies
+
+NOTE: this section only applies for the upcoming Tracks 2.1
+
+Tracks from version 2.1 uses @bundler@ to manage all dependencies on other libraries. To make sure you have all dependencies installed, run:
+
+{% codeblock lang:ruby %}
+bundle install
+{% endcodeblock %}
+
+if you do not have bundler installed, first run
+
+{% codeblock lang:ruby %}
+gem install bundler
+{% endcodeblock %}
+
+
 h4.  Populate your database with the Tracks schema
 
 Open a terminal and change into the root of your Tracks directory. Enter the following command:
 
 {% codeblock lang:ruby %}
 rake db:migrate RAILS_ENV=production
+{% endcodeblock %}
+
+For installing the upcoming Tracks 2.1, use:
+
+{% codeblock lang:ruby %}
+bundle exec rake db:migrate RAILS_ENV=production
 {% endcodeblock %}
 
 This will update your database with the required schema for Tracks. If you are using SQLite3, it is not strictly necessary, because the SQLite3 database included with Tracks already has the schema included in it, but it should not do any harm to run the command (nothing will happen if it is up to date).
@@ -125,6 +148,12 @@ While still in the Terminal inside the Tracks root directory, issue the followin
 
 {% codeblock lang:ruby %}
 script/server -e production
+{% endcodeblock %}
+
+For the upcoming Tracks 2.1, use:
+
+{% codeblock lang:ruby %}
+bundle exec script/server -e production
 {% endcodeblock %}
 
 If all goes well, you should see some text informing you that the Mongrel server is running: @** Mongrel available at 0.0.0.0:3000@. If you are already running other services on port 3000, you need to select a different port when running the server, using the @-p@ option. You can stop the server again by the key combination Ctrl-C.

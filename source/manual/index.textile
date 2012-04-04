@@ -19,7 +19,3 @@ Using the GTD method as a model, there are three main components to Tracks: Next
 * *Projects*: any goal which requires more than one next action to take it to completion is a Project. In Tracks, you can view your next actions by Project.
 
 Tracks has been thoroughly beta tested by a large number of people, and should be fully stable for everyday use. However, once set up, Tracks will contain the majority of your plans for your work and personal life, so it's only sensible to make sure that you have frequent, reliable backups of your data. Full changenotes on the release can be found in @doc/CHANGELOG@. Full API documentation can be found at @doc/app/index.html@, once you have run @rake appdoc@.
-
-h2. About this manual
-
-The source for this manual is kept in a branch of the main Tracks "GitHub repository":http://github.com/bsag/tracks/tree/gh-pages. The source is maintained using "Jekyll":http://github.com/mojombo/jekyll and "Pygments":http://pygments.org/ to create the HTML (which is automatically published as a GitHub page "here":http://bsag.github.com/tracks when the repository is pushed), and "Prince XML":http://www.princexml.com/ is used to convert the HTML to PDF using a rakefile. If you have cloned the source and make changes to the text, you can run delete the existing @manual.pdf@ file in the root, then run @rake manual.pdf@ to regenerate the PDF file.

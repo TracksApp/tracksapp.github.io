@@ -10,6 +10,34 @@ footer: false
 
 h2.  Upgrading Tracks
 
+h3. Upgrading from Tracks 2.0 to 2.1RC1
+
+For the upgrade, please note that with version 2.1 Tracks started to use @bundler@. This means you need to have to install bundler using @gem install bundler@.
+
+To upgrade:
+# Back up your existing database and installation of Tracks
+# Install Tracks 2.1RC in a new directory
+# Copy over the configuration from your previous Tracks installation. If using SQLite3, copy the old database into the new Tracks 2.1RC directory.
+# Check that you have all dependencies installed: @bundle install@
+# Run @bundle exec rake db:migrate RAILS_ENV=production@ to update your old database to the new schema -- you did back up your database didn't you?
+# Run @bundle exec script/server@ inside your Tracks 2.1RC directory to start up Tracks 2.1RC2.
+# Once you are happy that everything is working well, delete your old Tracks directory.
+
+If you did not start with a new copy of Tracks as described above, but installed over an older version (or used git to pull in a newer version), you need to remove the cached version of the javascript and stylesheets of Tracks.
+# jquery-cached.js from public/javascripts
+# tracks-cached.js from public/javascripts
+# tracks-cached.css from public/stylesheets
+
+If you are running an older version of Tracks (1.8devel), they could also be called jquery-all.js, tracks.js and all.css
+
+If you have problems with Passenger not finding the gems bundler installed, you might want to let bundler put all gems in the Tracks directory so that Passenger can find them (and probably have sufficient permissions). Create a directory @.bundle@ in your Tracks root directory. Add the following config in @/path/to/tracks/.bundle/config@:
+
+{% codeblock lang:ruby %}
+---
+BUNDLE_DISABLE_SHARED_GEMS: "1"
+BUNDLE_PATH: /path/to/tracks/.bundle
+{% endcodeblock %}
+
 h3. Upgrading from Tracks 2.0RC2 to 2.0
 
 The upgrade to the latest stable 2.0 release consists of the same steps as upgrading from 1.7.x in the following paragraph, just replace 2.0RC with 2.0 where appropriate
