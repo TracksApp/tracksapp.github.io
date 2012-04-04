@@ -1,0 +1,353 @@
+
+<!DOCTYPE html>
+<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
+<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
+<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <title>Tracks 2.0 - Tracks</title>
+  <meta name="author" content="TracksApp">
+
+  
+  <meta name="description" content="Version: 2.0Git URLA message from Reinier Balt, who has worked incredibly hard on this release. Congratulations to him and to all the other contrib...">
+  
+
+  <!-- http://t.co/dKP3o1e -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  
+  <link rel="canonical" href="http://www.getontracks.org/downloads/comments/tracks-20/">
+  <link href="/favicon.png" rel="icon">
+  <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+  <script src="/javascripts/modernizr-2.0.js"></script>
+  <script src="/javascripts/ender.js"></script>
+  <script src="/javascripts/octopress.js" type="text/javascript"></script>
+  <link href="/tracks/atom.xml" rel="alternate" title="Tracks" type="application/atom+xml">
+  <!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
+<link href="http://fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+<link href="http://fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+
+</head>
+
+<body   >
+  <header role="banner"><hgroup>
+<h1><a href="/"><img src="/images/tracks-logo-dark.png" /></a></h1>
+</hgroup>
+
+</header>
+  <nav role="navigation"><ul class="subscription" data-subscription="rss">
+  <li><a href="/tracks/atom.xml" rel="subscribe-rss" title="subscribe via RSS">RSS</a></li>
+  
+</ul>
+<form action="http://google.com/search" method="get">
+  <fieldset role="search">
+    <input type="hidden" name="q" value="site:www.getontracks.org" />
+    <input class="search" type="text" name="q" results="0" placeholder="Search"/>
+  </fieldset>
+</form>
+<ul class="main-navigation">
+  <li><a href="/">Home</a></li>
+  <li><a href="/news/">News</a></li>
+  <li><a href="/articles/">Articles</a></li>
+  <li><a href="/manual/">Manual</a></li>
+  <li><a href="/downloads/">Downloads</a></li>
+  <li><a href="/development/">Development</a></li>
+  <li><a href="/screenshots/">Screenshots</a></li>
+</ul>
+
+</nav>
+  <div id="main">
+    <div id="content">
+      <div>
+<article class="hentry" role="article">
+  
+  <header>
+    
+      <h1 class="entry-title">Tracks 2.0</h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+  
+
+
+
+<time datetime="2011-05-13T00:00:00+02:00" pubdate  data-updated="true" >May 13<span>th</span>, 2011</time>
+        
+         | <a href="#disqus_thread">Comments</a>
+        
+      </p>
+    
+  </header>
+
+
+<div class="entry-content"><p>Version: 2.0</p>
+<p><a href="https://github.com/TracksApp/tracks/zipball/v2.0">Git <span class="caps">URL</span></a></p>
+<p>A message from Reinier Balt, who has worked incredibly hard on this release. Congratulations to him and to all the other contributors!</p>
+<p>Hi all,</p>
+<p>After way too long time (1.7 was released on 28 feb 2009!) we are finally releasing Tracks 2.0. I&#8217;m hoping to shorten the release cycle in the future&#8230;</p>
+<p>You can download this new stable version of Tracks <a href="https://github.com/TracksApp/tracks/zipball/v2.0">here</a>.</p>
+<p>Important for upgrade is that the requirements for running Tracks have changed (ruby 1.8.7 / rubgems ~1.5.0). Also be aware when upgrading from a recent development version or RC version to delete the caches stylesheets and javascripts from your install. The updated installation manual can be found on github and on the Tracks website, also containing the details of the changed requirements and deleting the cached files from your previous install.</p>
+<p>Please note that xuinkrbin has started a <a href="http://www.getontracks.org/wiki/Users-Manual">user manual</a> on the wiki. Anyone like to help out and write some stuff about setting up and using Tracks? A user manual if often asked for.</p>
+<p>A lot of effort went into Tracks 2.0 and we have seen quite a few new (and old :-) ) contributors helping out with patches and github pull requests. Thanks to you all!</p>
+<p>Now, onto the details of this release.</p>
+<p>New features:</p>
+<p>1. Redesign of menus and introduction of a context menu per todo<br />
+2. You can now set the default tags for a project which are added automatically to a new action in that project if no tags are supplied<br />
+3. Tracks now includes support of dependencies. Making an action dependent on another action will hide it until the dependency is completed<br />
+4. you can now drag an action from one context to another<br />
+5. Support for entering multiple actions in one form<br />
+6. You can now promote an action to a project<br />
+7. It is easier to view notes on the mobile interface and other interface fixes<br />
+8. The project description supports markup<br />
+9. support for Mail.app (message://) and OneNote (onenote://) links in notes<br />
+10.The email receiver is now able to receive email from several email adresses.  In site.yml this could be set to the previous behavior (receive from one address per user)<br />
+11.You can enable open signup (like in tracks.tra.in) <br />
+12.Cleanup of context page<br />
+13.Support for <span class="caps">CAS</span> for login<br />
+14.Support for adding Tracks as a GMail Widget with instructions on the Integrations page<br />
+15.Tracks now support internationalization. First translations are German and Dutch. See http://www.getontracks.org/wiki/Translating-Tracks it you like to help translating Tracks to other languages. Please report any errors in translations to our bug tracker at Assembla!</p>
+<p>Under the hood</p>
+<p>1. All js is migrated to jQuery and most ui-widgets are migrated to jQuery-UI<br />
+2. Cucumber is added for integration testing. The RSpec stories are migrated to cucumber, so are most selenium scripts<br />
+3. Upgraded to rails 2.3.11 and upgraded most gems/plugins<br />
+3. Bugfixes (lots of them)</p></div>
+
+
+  <footer>
+    <p class="meta">
+      
+  
+
+<span class="byline author vcard">Posted by <span class="fn">bsag</span></span>
+
+      
+
+
+
+
+
+  
+
+
+
+<time datetime="2011-05-13T00:00:00+02:00" pubdate  data-updated="true" >May 13<span>th</span>, 2011</time>
+      
+
+<span class="categories">
+  
+    <a class='category' href='/archives/downloads/'>downloads</a>
+  
+</span>
+
+
+    </p>
+    
+      <div class="sharing">
+  
+  <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://www.getontracks.org/downloads/comments/tracks-20/" data-via="" data-counturl="http://www.getontracks.org/downloads/comments/tracks-20/" >Tweet</a>
+  
+  
+  <div class="g-plusone" data-size="medium"></div>
+  
+</div>
+
+    
+  </footer>
+</article>
+
+  <section>
+    <h1>Comments</h1>
+    <div id="disqus_thread" aria-live="polite"><noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>
+  </section>
+
+</div>
+
+<aside class="sidebar">
+  
+    <section>
+  <h1>Get Tracks</h1>
+  <p><a class="button" href="https://github.com/TracksApp/tracks/zipball/v2.0" title="Download Tracks 2.0 zipped package"><img src="/images/download_button.png" /></a></p>
+  
+  <p><a href="/downloads/comments/tracks-20">Tracks 2.0 release notes</a></p>
+  
+  <p><a href="http://www.assembla.com/spaces/tracks-tickets/">Report a bug</a></p>
+</section>
+
+<section>
+  <h1>Github Repos</h1>
+  <ul id="gh_repos">
+    <li class="loading">Status updating...</li>
+  </ul>
+  
+  <a href="https://github.com/TracksApp">@TracksApp</a> on Github
+  
+  <script type="text/javascript">
+    $.domReady(function(){
+        if (!window.jXHR){
+            var jxhr = document.createElement('script');
+            jxhr.type = 'text/javascript';
+            jxhr.src = '/javascripts/libs/jXHR.js';
+            var s = document.getElementsByTagName('script')[0];
+            s.parentNode.insertBefore(jxhr, s);
+        }
+
+        github.showRepos({
+            user: 'TracksApp',
+            count: 5,
+            skip_forks: false,
+            target: '#gh_repos'
+        });
+    });
+  </script>
+  <script src="/javascripts/github.js" type="text/javascript"> </script>
+</section>
+
+<section>
+  <p><a class="button" href='http://www.pledgie.com/campaigns/959'><img alt='Click here to lend your support to Tracks and make a donation at www.pledgie.com !' src='http://www.pledgie.com/campaigns/959.png?skin_name=chrome' border='0' /></a></p>
+  
+</section><section>
+  
+  <h1>Community</h1>
+  
+  <ul>
+  <li><a href="http://lists.rousette.org.uk/mailman/listinfo/tracks-discuss">Mailing list</a></li>
+  <li><a href="/forums/">Support forum (now read-only)</a></li>
+  <li><a href="https://github.com/TracksApp/tracks/wiki">Wiki</a></li>
+  </ul>
+  
+</section><section>
+  <h1>Latest News</h1>
+  <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/news/comments/release-2.1.rc1/">Release Candidate 1 of Tracks 2.1 released</a>
+      </li>
+    
+      <li class="post">
+        <a href="/news/comments/handing-over-the-keys/">Handing Over the Keys</a>
+      </li>
+    
+      <li class="post">
+        <a href="/news/comments/the-wiki-has-moved/">The wiki has moved</a>
+      </li>
+    
+      <li class="post">
+        <a href="/news/comments/tracks-2.0-is-out-now/">Tracks 2.0 is out now!</a>
+      </li>
+    
+      <li class="post">
+        <a href="/news/comments/tracks-20-release-candidate-2/">Tracks 2.0 RC2</a>
+      </li>
+    
+  </ul>
+</section>
+<section>
+  <h1>Recent Articles</h1>
+  <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/articles/comments/making-yourself-comfortable-with-git-in-the-terminal/">Making yourself comfortable with git in the terminal</a>
+      </li>
+    
+      <li class="post">
+        <a href="/articles/comments/morphexchange-tracks-as-a-hosted-service/">Morphexchange - Tracks as a hosted service</a>
+      </li>
+    
+      <li class="post">
+        <a href="/articles/comments/linking-actions-and-yojimbo-items/">Linking actions and Yojimbo items</a>
+      </li>
+    
+      <li class="post">
+        <a href="/articles/comments/all-in-one-installation-for-windows/">All-in-one installation for Windows</a>
+      </li>
+    
+      <li class="post">
+        <a href="/articles/comments/mongrel-and-windows/">Mongrel and Windows</a>
+      </li>
+    
+  </ul>
+</section>
+<section>
+  
+  <h1>Resources</h1>
+  
+  <ul>
+  <li><a href="http://www.rubyonrails.com/">Ruby on Rails</a></li>
+  <li><a href="http://ruby-lang.org/en/">Ruby</a></li>
+  </ul>
+
+</section><section>
+
+  <p><a class="button" href="http://creativecommons.org/licenses/GPL/2.0/"><img alt="CC-GNU GPL" src="http://creativecommons.org/images/public/cc-GPL-a.png" /></a></p>
+
+</section>
+  
+</aside>
+
+
+    </div>
+  </div>
+  <footer role="contentinfo"><p>
+  Copyright &copy; 2012 - TracksApp -
+  <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span>
+</p>
+
+</footer>
+  
+
+<script type="text/javascript">
+    (function () {
+      var disqus_shortname = 'tracks';
+      
+        
+        // var disqus_developer = 1;
+        var disqus_identifier = 'http://www.getontracks.org/downloads/comments/tracks-20/';
+        var disqus_url = 'http://www.getontracks.org/downloads/comments/tracks-20/';
+        var disqus_script = 'embed.js'
+      
+
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      dsq.src = 'http://' + disqus_shortname + '.disqus.com/' + disqus_script;
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    }());
+</script>
+
+
+
+  <script type="text/javascript">
+    (function() {
+      var script = document.createElement('script'); script.type = 'text/javascript'; script.async = true;
+      script.src = 'https://apis.google.com/js/plusone.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(script, s);
+    })();
+  </script>
+
+
+
+  <script type="text/javascript">
+    (function(){
+      var twitterWidgets = document.createElement('script');
+      twitterWidgets.type = 'text/javascript';
+      twitterWidgets.async = true;
+      twitterWidgets.src = 'http://platform.twitter.com/widgets.js';
+      document.getElementsByTagName('head')[0].appendChild(twitterWidgets);
+    })();
+  </script>
+
+
+
+
+
+
+
+</body>
+</html>

@@ -1,0 +1,668 @@
+
+<!DOCTYPE html>
+<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
+<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
+<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <title>News - Tracks</title>
+  <meta name="author" content="TracksApp">
+
+  
+  <meta name="description" content="Hi all,It is finally release candidate time! You can now download Tracks version 2.1 RC1 from github. Please try it out to see if you think it is r...">
+  
+
+  <!-- http://t.co/dKP3o1e -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  
+  <link rel="canonical" href="http://www.getontracks.org/news/">
+  <link href="/favicon.png" rel="icon">
+  <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+  <script src="/javascripts/modernizr-2.0.js"></script>
+  <script src="/javascripts/ender.js"></script>
+  <script src="/javascripts/octopress.js" type="text/javascript"></script>
+  <link href="/tracks/atom.xml" rel="alternate" title="Tracks" type="application/atom+xml">
+  <!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
+<link href="http://fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+<link href="http://fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+
+</head>
+
+<body   >
+  <header role="banner"><hgroup>
+<h1><a href="/"><img src="/images/tracks-logo-dark.png" /></a></h1>
+</hgroup>
+
+</header>
+  <nav role="navigation"><ul class="subscription" data-subscription="rss">
+  <li><a href="/tracks/atom.xml" rel="subscribe-rss" title="subscribe via RSS">RSS</a></li>
+  
+</ul>
+<form action="http://google.com/search" method="get">
+  <fieldset role="search">
+    <input type="hidden" name="q" value="site:www.getontracks.org" />
+    <input class="search" type="text" name="q" results="0" placeholder="Search"/>
+  </fieldset>
+</form>
+<ul class="main-navigation">
+  <li><a href="/">Home</a></li>
+  <li><a href="/news/">News</a></li>
+  <li><a href="/articles/">Articles</a></li>
+  <li><a href="/manual/">Manual</a></li>
+  <li><a href="/downloads/">Downloads</a></li>
+  <li><a href="/development/">Development</a></li>
+  <li><a href="/screenshots/">Screenshots</a></li>
+</ul>
+
+</nav>
+  <div id="main">
+    <div id="content">
+      <div id="archive-link">
+  <a href="/archives/news">See all posts in News</a>
+</div>
+
+<div class="blog-index">
+  
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/news/comments/release-2.1.rc1/">Release Candidate 1 of Tracks 2.1 Released</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+  
+
+
+
+<time datetime="2012-04-04T14:45:00+02:00" pubdate  data-updated="true" >Apr 4<span>th</span>, 2012</time>
+        
+         | <a href="/news/comments/release-2.1.rc1/#disqus_thread">Comments</a>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>Hi all,</p>
+
+<p>It is finally release candidate time! You can now <a href="https://github.com/TracksApp/tracks/zipball/v2.1RC1">download</a> Tracks version 2.1 RC1 from github. Please try it out to see if you think it is ready for public release. Any problems you have can be posted to <a href="www.assembla.com/spaces/tracks-tickets/">Assembla</a>. Improvements for translations are welcome too.</p>
+
+<p>I will update the installation and upgrade manual soon. I am talking to BSAG to find out how to do this on getontracks.org after the migration of the site to github. In general, you can follow the upgrade manual. Do not forget to migrate your database if you are coming from 2.0. And since we have migrated to bundler for managing dependencies, run &#8220;bundle install&#8221; (instead of rake gems:install). If you use passenger and the gems will not load using bundler, set the BUNDLER_PATH in .bundler/config.</p>
+
+<p>We have seen a lot of new contributions from several contributers: Ignacio Ihuerta, Christof Spies, Stefan Richter, Mickey Reiss, Demian Gemperli, Matt Rogers, Jan Stępień, Antonin Blanc, Christian Frank, Sebastian Fischmeister, Andreas Brandl, Craig Maloney, Pavel Zupa, Tim Madden, Jaime Hernandez</p>
+
+<p>Also we have two new committing developers (Hi Matt Rogers and Stefan Richter) to keep development of Tracks going. Thanks to all of you!!</p>
+
+<p>For developers: to get to the stable 2.1 release, I&#8217;ve branched master into 2.1_branch. Development can continue in the master branch.</p>
+
+<p>This release brings a lot of new goodies:</p>
+
+<p>New and changed features:</p>
+
+<ol>
+<li>Redesign of the completed todos: a new overview page. Also all context and project pages have a link to their completed actions</li>
+<li>New locales (es by Ignacio Ihuerta, fr by Antonin Blanc, cz by Pavel Zupa) and updated locales (de, nl)</li>
+<li>You can star an action right from the form for adding a new action</li>
+<li>Redesign of preferences page</li>
+<li>You can now mark an action complete from the tickler</li>
+<li>Project names can now contain comma (&#8216;,&#8217;) in it name</li>
+<li>Context view now shows hidden and pending actions</li>
+<li>Mobile improvements (we now require some javascript support on the mobile)</li>
+<li>Two extra defer periods in the context menu of an action
+10.There is a review page where you can see stalled or neglected projects. There is a reviewed button on the project edit page.
+11.You need to change your password: migrated to better BCrypt hash algoritm for storing passwords</li>
+</ol>
+
+
+<p>New features (technical)</p>
+
+<ol>
+<li>There are two example ruby scripts in /doc to use the REST API to add a todo or a project template with todos from the command line</li>
+<li>The tag page can now select actions from mulitple tags using AND and OR. There is no gui for this. Syntax is /todos/tag/tagA,tagB?and=tagC to select all todos with (tagA or tagB) AND tagC</li>
+</ol>
+
+
+<p>Under the hood:</p>
+
+<ol>
+<li>Upgraded rails to 2.3.12, jquery to 1.7.1 and jquery-ui to 1.8.17</li>
+<li>Fixed several issues with the REST API</li>
+<li>Upgraded the act_as_statemachine plugin. This change requires a migration. See note above!</li>
+<li>Migated to bundler for gem dependencies</li>
+<li>Migrated to cucumber and capybara for integration testing</li>
+<li>Development mode shows a work-in-progress banner on top of the screen</li>
+</ol>
+
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/news/comments/handing-over-the-keys/">Handing Over the Keys</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+  
+
+
+
+<time datetime="2012-01-04T16:54:00+01:00" pubdate  data-updated="true" >Jan 4<span>th</span>, 2012</time>
+        
+         | <a href="/news/comments/handing-over-the-keys/#disqus_thread">Comments</a>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>If you have been following posts on the mailing list and on this site, you&#8217;ll know that I&#8217;ve been in the process of handing the Tracks project on for others in the community to take over. That day has come much closer now because I have finally finished the process of adapting the old site to be published on GitHub (using the excellent <a href="http://octopress.org/">Octopress</a>). It has taken a bit of time to get right, and there may be a few glitches here and there while the DNS propagates, but things should be working. Most of the site is how it was, except that the forum is now read only, as an archive of useful information. Some of the links in the forum may be broken (for example the search facility and member profiles) in the process of generating a static version, but the basic information should still be available.</p>
+
+<p>In due course I&#8217;ll transfer the domain name to someone else in the Tracks community, transfer the balance of the Pledgie donations, and I&#8217;ll have handed all the keys over.</p>
+
+<p>I&#8217;d like to take this opportunity for thanking all the Tracks users for their support over the years. Tracks is in great hands, and I&#8217;m sure it will continue from strength to strength in the future.</p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/news/comments/the-wiki-has-moved/">The Wiki Has Moved</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+  
+
+
+
+<time datetime="2011-07-16T00:00:00+02:00" pubdate  data-updated="true" >Jul 16<span>th</span>, 2011</time>
+        
+         | <a href="/news/comments/the-wiki-has-moved/#disqus_thread">Comments</a>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>As you may know, we are in the process of moving the project and all the related web resources over to GitHub. As a first step, I have set up the <a href="https://github.com/TracksApp">Tracks project</a> as a GitHub Organisation, which makes it easier for people to administer and collaborate on the project. I have also moved the content of the entire wiki over to a GitHub wiki, <a href="https://github.com/TracksApp/tracks/wiki">here</a>. I&#8217;ve removed the old wiki to avoid confusion, and redirected the <span class="caps">URL</span> to the new wiki.</p>
+<p>You can still contribute to the new wiki: if you have a GitHub account, you can edit and add pages. I hope you like the new wiki &#8211; I think it is a big improvement, and a lot more flexible.</p>
+
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/news/comments/tracks-2.0-is-out-now/">Tracks 2.0 Is Out Now!</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+  
+
+
+
+<time datetime="2011-06-04T00:00:00+02:00" pubdate  data-updated="true" >Jun 4<span>th</span>, 2011</time>
+        
+         | <a href="/news/comments/tracks-2.0-is-out-now/#disqus_thread">Comments</a>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>Tracks 2.0 is out now, and is a big release with a lot of great new features. Check out the full release notes <a href="http://www.getontracks.org/downloads/comments/tracks-20">here</a>.</p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/news/comments/tracks-20-release-candidate-2/">Tracks 2.0 RC2</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+  
+
+
+
+<time datetime="2011-03-12T00:00:00+01:00" pubdate  data-updated="true" >Mar 12<span>th</span>, 2011</time>
+        
+         | <a href="/news/comments/tracks-20-release-candidate-2/#disqus_thread">Comments</a>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>Those of you who do not regularly read the forum may be unaware that Tracks 2.0 Release Candidate 2 has now been prepared by Reinier Balt. You can read all the <a href="http://www.getontracks.org/forums/viewthread/839/">details</a> on the forum, or just head straight over to Github to download the 2.0RC2 branch <a href="https://github.com/bsag/tracks/zipball/v2.0RC2">here</a>.</p>
+<p>We need your help in testing it out, so please give it a try and let us know of any bugs or problems on <a href="http://www.getontracks.org/forums/viewthread/839/">this forum thread</a>. Many thanks!</p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/news/comments/security-update-for-users-of-17x-and-20-branch-of-tracks/">Security Update for Users of 1.7.x and 2.0 Branch of Tracks</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+  
+
+
+
+<time datetime="2011-03-12T00:00:00+01:00" pubdate  data-updated="true" >Mar 12<span>th</span>, 2011</time>
+        
+         | <a href="/news/comments/security-update-for-users-of-17x-and-20-branch-of-tracks/#disqus_thread">Comments</a>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>An important message from Reinier Balt:</p>
+<p>I was informed by private email that a <span class="caps">XSS</span> vulnerability is present in 1.7.2. It turned out to also exist in the upcoming 2.0.</p>
+<p>A new release of 1.7.3 is made available <a href="https://github.com/bsag/tracks/zipball/v1.7.3">here</a>. Users of 1.7x are strongly advised to upgrade to 1.7.3. If you are running 2.0RC2 or 2.0devel for production, please upgrade to the latest 2.0 tree found <a href="https://github.com/bsag/tracks/zipball/master">here</a></p>
+<p>I have also updated the manual with upgrade instructions.</p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/news/comments/new-affiliate-links/">New Affiliate Links</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+  
+
+
+
+<time datetime="2009-08-30T00:00:00+02:00" pubdate  data-updated="true" >Aug 30<span>th</span>, 2009</time>
+        
+         | <a href="/news/comments/new-affiliate-links/#disqus_thread">Comments</a>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>You might have noticed that I have changed the affiliate box at the top left of these pages, as well as adding some affiliate links elsewhere. The Joyent affiliate programme appears to have ended, and when an opportunity came up to join the <a href="http://www.shareasale.com/r.cfm?u=188858&amp;b=179734&amp;m=22742&amp;afftrack=&amp;urllink=www%2Ejumpbox%2Ecom">JumpBox</a> affiliate program, I jumped (no pun intended) at the chance. I&#8217;ve also updated the links to JumpBox elsewhere on the site and on the manual, so if you are thinking of signing up for a JumpBox plan, please use the affiliate links and you will be helping to support the Tracks development programme.</p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/news/comments/jumpbox-for-tracks/">Jumpbox for Tracks</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+  
+
+
+
+<time datetime="2009-04-02T00:00:00+02:00" pubdate  data-updated="true" >Apr 2<span>nd</span>, 2009</time>
+        
+         | <a href="/news/comments/jumpbox-for-tracks/#disqus_thread">Comments</a>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>The nice people at <a href="http://www.jumpbox.com/">JumpBox</a> have just released a <a href="http://jumpbox.com/app/tracks">JumpBox for Tracks 1.7</a>. JumpBoxes are pre-built, pre-configured virtual applications which run in a range of <a href="http://www.jumpbox.com/supported-virtualization-software">Virtualization software applications</a>. You just download the JumpBox (free), then open the file with your Virtualization software. Once the JumpBox has booted, it will give you a <span class="caps">URL</span> which you can visit in a browser. The software will then guide you through setting up an account. If you&#8217;d like to try out the JumpBox without installing it, you can use the &#8220;Trial This JumpBox&#8221; button on the web site, which will let you play around with it to test it out. It&#8217;s great to have another method of using Tracks for those of you who don&#8217;t want to go to the trouble of installing Tracks and its dependencies on your computer, or installing Tracks on a web host. Try it out! You can download it directly <a href="http://download.jumpbox.com/download/tracks">here</a>. I&#8217;ll add links and instructions to the manual in due course.</p>
+<p>[edited 17 Dec 2010 to update URLs]</p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/news/comments/tracks-gets-its-own-domain-name/">Tracks Gets Its Own Domain Name</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+  
+
+
+
+<time datetime="2008-12-30T00:00:00+01:00" pubdate  data-updated="true" >Dec 30<span>th</span>, 2008</time>
+        
+         | <a href="/news/comments/tracks-gets-its-own-domain-name/#disqus_thread">Comments</a>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>&#8230;and a new home! I have now completed the migration to the new Shared Accelerator at <a href="http://joyent.com/">Joyent.com</a>, and in the process, gave Tracks its own domain name: getontracks.org. You may find that the new server feels a bit more snappy than the old one, and it should be more stable and reliable. The migration process was fairly complex, and it&#8217;s possible that some links may be broken, so do please email me if you find anything amiss. I&#8217;ve redirected the old domain to the new one, so feed readers should pick up the redirection. If they do not, you might want to enter the new feed <span class="caps">URL</span> manually for the <a href="http://www.getontracks.org/tracks/rss_2.0/">RSS2 feed</a> or <a href="http://www.getontracks.org/tracks/atom/">Atom feed</a>.</p>
+<p>I was hoping to replace our Trac bug tracker with a custom solution run with ExpressionEngine (which runs this site), but importing existing tickets proved too much for my pre-Christmas brain! Instead, I imported all the old tickets into an <a href="http://www.assembla.com/spaces/tracks-tickets/tickets">Assembla space</a>. Assembla offers a number of rather cool features, and will be easier for me to administer. You can find out how to use the site to submit tickets <a href="http://getontracks.org/development/">here</a>.</p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/news/comments/absent-for-august/">Absent for August</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+  
+
+
+
+<time datetime="2008-08-02T00:00:00+02:00" pubdate  data-updated="true" >Aug 2<span>nd</span>, 2008</time>
+        
+         | <a href="/news/comments/absent-for-august/#disqus_thread">Comments</a>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>I&#8217;m off to Brazil for a work course again on Monday, and I&#8217;ll be away for 3 weeks. I won&#8217;t have email or web access during that time, so can I ask that you direct any questions to the forum or mailing list where other Tracks users will be able to help you. If you want to make a pull request on GitHub, or if you&#8217;ve got a patch, <a href="https://github.com/lukemelia">lukemelia</a>, <a href="https://github.com/lrbalt">lrbalt</a> and <a href="https://github.com/epall">epall</a> all have commit rights to the main repository, so you can send your request to them.</p>
+<p>Have a great summer everyone, and I&#8217;ll post again when I get back!</p>
+</div>
+  
+  
+
+
+    </article>
+  
+</div>
+<aside class="sidebar">
+  
+    <section>
+  <h1>Get Tracks</h1>
+  <p><a class="button" href="https://github.com/TracksApp/tracks/zipball/v2.0" title="Download Tracks 2.0 zipped package"><img src="/images/download_button.png" /></a></p>
+  
+  <p><a href="/downloads/comments/tracks-20">Tracks 2.0 release notes</a></p>
+  
+  <p><a href="http://www.assembla.com/spaces/tracks-tickets/">Report a bug</a></p>
+</section>
+
+<section>
+  <h1>Github Repos</h1>
+  <ul id="gh_repos">
+    <li class="loading">Status updating&#8230;</li>
+  </ul>
+  
+  <a href="https://github.com/TracksApp">@TracksApp</a> on Github
+  
+  <script type="text/javascript">
+    $.domReady(function(){
+        if (!window.jXHR){
+            var jxhr = document.createElement('script');
+            jxhr.type = 'text/javascript';
+            jxhr.src = '/javascripts/libs/jXHR.js';
+            var s = document.getElementsByTagName('script')[0];
+            s.parentNode.insertBefore(jxhr, s);
+        }
+
+        github.showRepos({
+            user: 'TracksApp',
+            count: 5,
+            skip_forks: false,
+            target: '#gh_repos'
+        });
+    });
+  </script>
+  <script src="/javascripts/github.js" type="text/javascript"> </script>
+</section>
+
+<section>
+  <p><a class="button" href='http://www.pledgie.com/campaigns/959'><img alt='Click here to lend your support to Tracks and make a donation at www.pledgie.com !' src='http://www.pledgie.com/campaigns/959.png?skin_name=chrome' border='0' /></a></p>
+  
+</section><section>
+  
+  <h1>Community</h1>
+  
+  <ul>
+  <li><a href="http://lists.rousette.org.uk/mailman/listinfo/tracks-discuss">Mailing list</a></li>
+  <li><a href="/forums/">Support forum (now read-only)</a></li>
+  <li><a href="https://github.com/TracksApp/tracks/wiki">Wiki</a></li>
+  </ul>
+  
+</section><section>
+  <h1>Latest News</h1>
+  <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/news/comments/release-2.1.rc1/">Release Candidate 1 of Tracks 2.1 released</a>
+      </li>
+    
+      <li class="post">
+        <a href="/news/comments/handing-over-the-keys/">Handing Over the Keys</a>
+      </li>
+    
+      <li class="post">
+        <a href="/news/comments/the-wiki-has-moved/">The wiki has moved</a>
+      </li>
+    
+      <li class="post">
+        <a href="/news/comments/tracks-2.0-is-out-now/">Tracks 2.0 is out now!</a>
+      </li>
+    
+      <li class="post">
+        <a href="/news/comments/tracks-20-release-candidate-2/">Tracks 2.0 RC2</a>
+      </li>
+    
+  </ul>
+</section>
+<section>
+  <h1>Recent Articles</h1>
+  <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/articles/comments/making-yourself-comfortable-with-git-in-the-terminal/">Making yourself comfortable with git in the terminal</a>
+      </li>
+    
+      <li class="post">
+        <a href="/articles/comments/morphexchange-tracks-as-a-hosted-service/">Morphexchange - Tracks as a hosted service</a>
+      </li>
+    
+      <li class="post">
+        <a href="/articles/comments/linking-actions-and-yojimbo-items/">Linking actions and Yojimbo items</a>
+      </li>
+    
+      <li class="post">
+        <a href="/articles/comments/all-in-one-installation-for-windows/">All-in-one installation for Windows</a>
+      </li>
+    
+      <li class="post">
+        <a href="/articles/comments/mongrel-and-windows/">Mongrel and Windows</a>
+      </li>
+    
+  </ul>
+</section>
+<section>
+  
+  <h1>Resources</h1>
+  
+  <ul>
+  <li><a href="http://www.rubyonrails.com/">Ruby on Rails</a></li>
+  <li><a href="http://ruby-lang.org/en/">Ruby</a></li>
+  </ul>
+
+</section><section>
+
+  <p><a class="button" href="http://creativecommons.org/licenses/GPL/2.0/"><img alt="CC-GNU GPL" src="http://creativecommons.org/images/public/cc-GPL-a.png" /></a></p>
+
+</section>
+  
+</aside>
+
+    </div>
+  </div>
+  <footer role="contentinfo"><p>
+  Copyright &copy; 2012 - TracksApp -
+  <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span>
+</p>
+
+</footer>
+  
+
+<script type="text/javascript">
+    (function () {
+      var disqus_shortname = 'tracks';
+      
+        
+        var disqus_script = 'count.js'
+      
+
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      dsq.src = 'http://' + disqus_shortname + '.disqus.com/' + disqus_script;
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    }());
+</script>
+
+
+
+  <script type="text/javascript">
+    (function() {
+      var script = document.createElement('script'); script.type = 'text/javascript'; script.async = true;
+      script.src = 'https://apis.google.com/js/plusone.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(script, s);
+    })();
+  </script>
+
+
+
+  <script type="text/javascript">
+    (function(){
+      var twitterWidgets = document.createElement('script');
+      twitterWidgets.type = 'text/javascript';
+      twitterWidgets.async = true;
+      twitterWidgets.src = 'http://platform.twitter.com/widgets.js';
+      document.getElementsByTagName('head')[0].appendChild(twitterWidgets);
+    })();
+  </script>
+
+
+
+
+
+
+
+</body>
+</html>

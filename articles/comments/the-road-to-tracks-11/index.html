@@ -1,0 +1,340 @@
+
+<!DOCTYPE html>
+<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
+<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
+<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <title>The road to Tracks 1.1 - Tracks</title>
+  <meta name="author" content="TracksApp">
+
+  
+  <meta name="description" content="It&#8217;s funny, but there&#8217;s nothing quite like actually using your own application day-in, day-out to give you ideas for improvements and n...">
+  
+
+  <!-- http://t.co/dKP3o1e -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  
+  <link rel="canonical" href="http://www.getontracks.org/articles/comments/the-road-to-tracks-11/">
+  <link href="/favicon.png" rel="icon">
+  <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+  <script src="/javascripts/modernizr-2.0.js"></script>
+  <script src="/javascripts/ender.js"></script>
+  <script src="/javascripts/octopress.js" type="text/javascript"></script>
+  <link href="/tracks/atom.xml" rel="alternate" title="Tracks" type="application/atom+xml">
+  <!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
+<link href="http://fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+<link href="http://fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+
+</head>
+
+<body   >
+  <header role="banner"><hgroup>
+<h1><a href="/"><img src="/images/tracks-logo-dark.png" /></a></h1>
+</hgroup>
+
+</header>
+  <nav role="navigation"><ul class="subscription" data-subscription="rss">
+  <li><a href="/tracks/atom.xml" rel="subscribe-rss" title="subscribe via RSS">RSS</a></li>
+  
+</ul>
+<form action="http://google.com/search" method="get">
+  <fieldset role="search">
+    <input type="hidden" name="q" value="site:www.getontracks.org" />
+    <input class="search" type="text" name="q" results="0" placeholder="Search"/>
+  </fieldset>
+</form>
+<ul class="main-navigation">
+  <li><a href="/">Home</a></li>
+  <li><a href="/news/">News</a></li>
+  <li><a href="/articles/">Articles</a></li>
+  <li><a href="/manual/">Manual</a></li>
+  <li><a href="/downloads/">Downloads</a></li>
+  <li><a href="/development/">Development</a></li>
+  <li><a href="/screenshots/">Screenshots</a></li>
+</ul>
+
+</nav>
+  <div id="main">
+    <div id="content">
+      <div>
+<article class="hentry" role="article">
+  
+  <header>
+    
+      <h1 class="entry-title">The Road to Tracks 1.1</h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+  
+
+
+
+<time datetime="2005-01-15T00:00:00+01:00" pubdate  data-updated="true" >Jan 15<span>th</span>, 2005</time>
+        
+         | <a href="#disqus_thread">Comments</a>
+        
+      </p>
+    
+  </header>
+
+
+<div class="entry-content"><p>It&#8217;s funny, but there&#8217;s nothing quite like actually using your own application day-in, day-out to give you ideas for improvements and new features. I installed Tracks on a server (at <a href="http://www.textdrive.com">TextDrive</a>), and I&#8217;ve been using it every day as my only &#8216;to do&#8217; list. This experience has been surprisingly positive, but it has certainly highlighted the things which are missing or not done quite right. Other users have also been coming up with some great feature ideas and suggestions, so I thought I&#8217;d bring these together and discuss where I see Tracks going over the months ahead. This isn&#8217;t an exhaustive list by any means&#8230;</p>
+<h4>The big picture</h4>
+<p>I had two original reasons for developing Tracks. The first was that I wanted to learn <a href="http://ruby-lang.org/en/">Ruby</a> and <a href="http://www.rubyonrails.com/">Rails</a>, and I&#8217;ve always found it easier to learn programming with real-world examples. In many ways, I think it&#8217;s like learning any foreign language; you can read all the books you like, but you really start learning when your scooter breaks down on the way to Luca and you have to explain &#8212; in Italian &#8212; to the person who stops to help that you think the spark plugs are gunked up.</p>
+<p>The second reason was that I had just read David Allen&#8217;s <a href="http://www.amazon.co.uk/exec/obidos/ASIN/0749922648/butshesagirl-21">Getting Things Done</a>, and I was keen to put the theory into practice. I tried a number of todo-style applications, as well as hand-rolled text files and scripts, but nothing quite hit the spot for me. So when I started designing Tracks, I had the <span class="caps">GTD</span> method firmly in mind. That doesn&#8217;t mean that I&#8217;m slavishly attached to one way of doing things (in fact, <span class="caps">GTD</span> itself is quite flexible in this respect), but I do think that ease of use and speed are vital. If it takes more than a few clicks to add a next action, that&#8217;s too much effort. I can see that some improvements could be made here, but my experience so far is that it&#8217;s not bad. I keep the &#8216;home page&#8217; for tracks (todo/list) open in a tab in OmniWeb all the time, and when I want to add something, I just need to switch to the tab, type in a brief phrase for the description, choose a context from the list and hit return (few of my NAs have due dates). As a sidenote for other Quicksilver users, I&#8217;ve also taken to pasting the <span class="caps">URL</span> of any associated files into the notes field, using Redcloth to make it into a link &#8212; you just need to find the file in Quicksilver then type &#8216;GU&#8217; to select the action &#8216;Get file <span class="caps">URL</span>&#8217;, and you can then drag the link onto the notes field to form an <span class="caps">URL</span>. This makes it easy to locate files when you come to actually process the action.</p>
+<p>I&#8217;ve got lots of ideas for new features, but I don&#8217;t want to bloat the application or clutter the interface. That&#8217;s why I&#8217;m planning that any substantial new bits of functionality &#8212; particularly if they require a new chunk of user interface &#8212; can be enabled and disabled in the settings file. If you don&#8217;t need that feature, you don&#8217;t have to see it.</p>
+<h4>The boring bits</h4>
+<p>This will probably brand me forever as a &#8216;not a real programmer&#8217;, but I find writing error checking routines and bits of validation code boring. I know they are necessary, but I&#8217;m always wistfully thinking about all the new, exciting and shiny things I could be coding instead. Still &#8212; like eating spinach &#8212; it has to be done. So a big priority is going to be to do a lot more validation of the data that users enter, automatic checking of what database format they are using and so on, so that Tracks &#8216;just works&#8217; transparently. When a problem can&#8217;t be fixed automatically, I need to generate more informative error messages. A good example of this would be the settings.yml file. <span class="caps">YAML</span> (the language) is rather fussy about the format of the file. <a href="http://www.rousette.org.uk/projects/article/9/#c000025">Arnaud</a> ran into this problem, and it was tricky to diagnose. A method which automatically checked the format of the file before trying to load it and generated an message that there was a problem with the format of the file would save a lot of time.</p>
+<h4>More flexibility</h4>
+<p>There needs to be more flexibility in the way that data is displayed. I had a request to be able to sort the display of contexts. Currently, they are just sorted in the order in which you added them (for me, this happens to be alphabetical order!). I think it would be nice to be able to sort them in an arbitrary order, perhaps with the context you use most frequently at the top. So I&#8217;m planning to provide a &#8216;move up/move down&#8217; button to each item on context/list to allow arbitrary sorting, which will also be reflected on the main page. While I&#8217;m at it, I might as well do something similar for projects.</p>
+<p>I&#8217;d also like to prevent some contexts from being shown on the front page. For example, I&#8217;d like to have a &#8216;wish list&#8217; context, in which I could jot down books, CDs, DVDs or gifts I&#8217;d like to buy for other people. But I don&#8217;t want that cluttering up the main page; if I could add those items quickly on the main page, and then view them later using a bookmark, that would be perfect. I could do this with another field for each item which indicates whether or not you want to see it on the main page.</p>
+<h4>Dealing with the future</h4>
+<p><a href="http://www.rousette.org.uk/projects/wiki/doku.php?id=chat">Pedro</a> made a comment about sorting by due date that I found quite interesting. He said that he would like to be able to sort by due date, because he often enters NAs which have due dates months ahead and he doesn&#8217;t want to see them first on his list. At first, I resisted the idea because I feel strongly that due dates should only be one aspect of the importance of an item. I only use them myself when there would be no point at all in doing that action after that date. For example, if I&#8217;m going to give a talk at a conference on a certain date, then there&#8217;s no point in writing my talk <em>after</em> that date.</p>
+<p>However, when I thought about it more, I realised that he had a good point. One of the strengths of the <span class="caps">GTD</span> approach is that you can capture <em>everything</em> you have on your mind in a safe place, and thus stop sub-consciously worrying about it. Some of those things &#8212; whether they have a due date or not &#8212; might not come into play until some time later. You don&#8217;t really want them cluttering up your list now, but you do want to be reminded about them at the appropriate time. That made me think about the idea of a &#8216;tickler file&#8217;, in which you can put things to be reminded about in the future. You could add an action and ask to be reminded about it on 1st March 2005. The action would then be held in a &#8216;Tickler&#8217; context (not shown on the main page) until 1st March, at which point it would turn up in the appropriate context on the main page (and perhaps highlighted somehow, so that you notice its arrival).</p>
+<h4>Reporting</h4>
+<p>I find the growing list of completed items very satisfying. But it would be nice to be able to generate some kind of report &#8212; perhaps on a weekly basis &#8212; of what was completed, and what is still to do. From my own experience, I know that if the report also listed how long uncompleted actions had been sitting around unattended, it would be quite informative (or perhaps &#8216;shocking&#8217; is a better word), and might help give me the kick I sometimes need to move forward. If nothing else, identifying items which have been hanging arond gathering dust often tells you that you haven&#8217;t really identified what the very next action is. In the long term, I&#8217;d like to produce fancy graphs of performance, and archive monthly or yearly reports of activity, but this would be a nice first step.</p>
+<h4>Shiny new features</h4>
+<p>One thing I&#8217;m missing a lot at the moment is a view of my appointments today. I use iCal, and I can easily switch to see it, but it would be much slicker to be able to see the &#8216;hard landscape&#8217; of my appointments in a simple list on the main page. iCal (and some other calendar applications) use the text-based <span class="caps">VCARD</span> format, so it should be possible to suck that information in. If you could also <em>add</em> appointments, that would be super-cool, but I don&#8217;t want to get too carried away. I read an article about <a href="http://photodude.com/article/2606/webbin-up">Webbin&#8217; up</a> by Reid, and was inspired by the idea of having todos, email, calendar and notes all on (or linked to on) one page. Keeping it simple, fast and uncluttered would be the trick, though.</p>
+<p>I hope that gives you some idea of the directions I&#8217;m thinking about. As ever, if you&#8217;ve got any ideas or suggestions, feel free to comment here, on the <a href="http://www.rousette.org.uk/projects/wiki/">wiki</a> or by email (butshesagirl at this domain).</p></div>
+
+
+  <footer>
+    <p class="meta">
+      
+  
+
+<span class="byline author vcard">Posted by <span class="fn">bsag</span></span>
+
+      
+
+
+
+
+
+  
+
+
+
+<time datetime="2005-01-15T00:00:00+01:00" pubdate  data-updated="true" >Jan 15<span>th</span>, 2005</time>
+      
+
+<span class="categories">
+  
+    <a class='category' href='/archives/articles/'>articles</a>
+  
+</span>
+
+
+    </p>
+    
+      <div class="sharing">
+  
+  <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://www.getontracks.org/articles/comments/the-road-to-tracks-11/" data-via="" data-counturl="http://www.getontracks.org/articles/comments/the-road-to-tracks-11/" >Tweet</a>
+  
+  
+  <div class="g-plusone" data-size="medium"></div>
+  
+</div>
+
+    
+  </footer>
+</article>
+
+  <section>
+    <h1>Comments</h1>
+    <div id="disqus_thread" aria-live="polite"><noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>
+  </section>
+
+</div>
+
+<aside class="sidebar">
+  
+    <section>
+  <h1>Get Tracks</h1>
+  <p><a class="button" href="https://github.com/TracksApp/tracks/zipball/v2.0" title="Download Tracks 2.0 zipped package"><img src="/images/download_button.png" /></a></p>
+  
+  <p><a href="/downloads/comments/tracks-20">Tracks 2.0 release notes</a></p>
+  
+  <p><a href="http://www.assembla.com/spaces/tracks-tickets/">Report a bug</a></p>
+</section>
+
+<section>
+  <h1>Github Repos</h1>
+  <ul id="gh_repos">
+    <li class="loading">Status updating...</li>
+  </ul>
+  
+  <a href="https://github.com/TracksApp">@TracksApp</a> on Github
+  
+  <script type="text/javascript">
+    $.domReady(function(){
+        if (!window.jXHR){
+            var jxhr = document.createElement('script');
+            jxhr.type = 'text/javascript';
+            jxhr.src = '/javascripts/libs/jXHR.js';
+            var s = document.getElementsByTagName('script')[0];
+            s.parentNode.insertBefore(jxhr, s);
+        }
+
+        github.showRepos({
+            user: 'TracksApp',
+            count: 5,
+            skip_forks: false,
+            target: '#gh_repos'
+        });
+    });
+  </script>
+  <script src="/javascripts/github.js" type="text/javascript"> </script>
+</section>
+
+<section>
+  <p><a class="button" href='http://www.pledgie.com/campaigns/959'><img alt='Click here to lend your support to Tracks and make a donation at www.pledgie.com !' src='http://www.pledgie.com/campaigns/959.png?skin_name=chrome' border='0' /></a></p>
+  
+</section><section>
+  
+  <h1>Community</h1>
+  
+  <ul>
+  <li><a href="http://lists.rousette.org.uk/mailman/listinfo/tracks-discuss">Mailing list</a></li>
+  <li><a href="/forums/">Support forum (now read-only)</a></li>
+  <li><a href="https://github.com/TracksApp/tracks/wiki">Wiki</a></li>
+  </ul>
+  
+</section><section>
+  <h1>Latest News</h1>
+  <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/news/comments/release-2.1.rc1/">Release Candidate 1 of Tracks 2.1 released</a>
+      </li>
+    
+      <li class="post">
+        <a href="/news/comments/handing-over-the-keys/">Handing Over the Keys</a>
+      </li>
+    
+      <li class="post">
+        <a href="/news/comments/the-wiki-has-moved/">The wiki has moved</a>
+      </li>
+    
+      <li class="post">
+        <a href="/news/comments/tracks-2.0-is-out-now/">Tracks 2.0 is out now!</a>
+      </li>
+    
+      <li class="post">
+        <a href="/news/comments/tracks-20-release-candidate-2/">Tracks 2.0 RC2</a>
+      </li>
+    
+  </ul>
+</section>
+<section>
+  <h1>Recent Articles</h1>
+  <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/articles/comments/making-yourself-comfortable-with-git-in-the-terminal/">Making yourself comfortable with git in the terminal</a>
+      </li>
+    
+      <li class="post">
+        <a href="/articles/comments/morphexchange-tracks-as-a-hosted-service/">Morphexchange - Tracks as a hosted service</a>
+      </li>
+    
+      <li class="post">
+        <a href="/articles/comments/linking-actions-and-yojimbo-items/">Linking actions and Yojimbo items</a>
+      </li>
+    
+      <li class="post">
+        <a href="/articles/comments/all-in-one-installation-for-windows/">All-in-one installation for Windows</a>
+      </li>
+    
+      <li class="post">
+        <a href="/articles/comments/mongrel-and-windows/">Mongrel and Windows</a>
+      </li>
+    
+  </ul>
+</section>
+<section>
+  
+  <h1>Resources</h1>
+  
+  <ul>
+  <li><a href="http://www.rubyonrails.com/">Ruby on Rails</a></li>
+  <li><a href="http://ruby-lang.org/en/">Ruby</a></li>
+  </ul>
+
+</section><section>
+
+  <p><a class="button" href="http://creativecommons.org/licenses/GPL/2.0/"><img alt="CC-GNU GPL" src="http://creativecommons.org/images/public/cc-GPL-a.png" /></a></p>
+
+</section>
+  
+</aside>
+
+
+    </div>
+  </div>
+  <footer role="contentinfo"><p>
+  Copyright &copy; 2012 - TracksApp -
+  <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span>
+</p>
+
+</footer>
+  
+
+<script type="text/javascript">
+    (function () {
+      var disqus_shortname = 'tracks';
+      
+        
+        // var disqus_developer = 1;
+        var disqus_identifier = 'http://www.getontracks.org/articles/comments/the-road-to-tracks-11/';
+        var disqus_url = 'http://www.getontracks.org/articles/comments/the-road-to-tracks-11/';
+        var disqus_script = 'embed.js'
+      
+
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      dsq.src = 'http://' + disqus_shortname + '.disqus.com/' + disqus_script;
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    }());
+</script>
+
+
+
+  <script type="text/javascript">
+    (function() {
+      var script = document.createElement('script'); script.type = 'text/javascript'; script.async = true;
+      script.src = 'https://apis.google.com/js/plusone.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(script, s);
+    })();
+  </script>
+
+
+
+  <script type="text/javascript">
+    (function(){
+      var twitterWidgets = document.createElement('script');
+      twitterWidgets.type = 'text/javascript';
+      twitterWidgets.async = true;
+      twitterWidgets.src = 'http://platform.twitter.com/widgets.js';
+      document.getElementsByTagName('head')[0].appendChild(twitterWidgets);
+    })();
+  </script>
+
+
+
+
+
+
+
+</body>
+</html>

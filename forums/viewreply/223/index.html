@@ -1,0 +1,2439 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<title>Tracks | nesting projects&#63;</title>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<meta name='MSSmartTagsPreventParsing' content='TRUE' />
+<meta http-equiv='expires' content='-1' />
+<meta http-equiv= 'pragma' content='no-cache' />
+<meta name='robots' content='all' />
+
+<link rel="alternate" type="application/atom+xml" title="Atom Feed" href="http://www.getontracks.org/forums/atom/10/" />
+<link rel="alternate" type="application/rss+xml" title="RSS 2.0" href="http://www.getontracks.org/forums/rss/10/" />
+
+<script type="text/javascript"> 
+<!--
+
+function navHover(which)
+{					
+	if (document.getElementById(which.id))
+	{
+		cur = document.getElementById(which.id).className;
+		
+		if (cur == 'buttonLarge')
+		{
+			document.getElementById(which.id).className = 'buttonLargeHover'
+		}
+		else if (cur == 'buttonSmall')
+		{
+			document.getElementById(which.id).className = 'buttonSmallHover'
+		}
+	}
+}
+
+function navReset(which)
+{					
+	if (document.getElementById(which.id))
+	{
+		cur = document.getElementById(which.id).className;
+		
+		if (cur == 'buttonLargeHover')
+		{
+			document.getElementById(which.id).className = 'buttonLarge'
+		}
+		else if (cur == 'buttonSmallHover')
+		{
+			document.getElementById(which.id).className = 'buttonSmall'
+		}
+	}
+}
+
+
+function navJump(where)
+{
+	window.location=where;
+}
+-->
+</script>
+
+
+<style type='text/css'>
+
+
+* {
+	margin: 0;
+	padding: 0;
+	}
+body {
+	font: 78% Helvetica, Arial, sans-serif;
+	text-align: center;
+	color: #036;
+	background: #344;
+    line-height:1.4em;
+	}
+#wrapper {
+	text-align: left;
+	min-width: 760px;
+	margin: .5em 2em;
+	color: #fff;
+	background: #036 url(http://www.getontracks.org/themes/forum_themes/blue/images/background.gif) 50% 0% repeat-y;
+	border: 6px solid #233;
+	}
+#content {
+	padding: .5em 1.5% 0 1.5%;
+	border-right: 3px solid #047;
+	border-left: 3px solid #047;
+	}
+#content ul {
+	list-style: none;
+	line-height: 1.5em;
+	margin: .25em 0;
+}
+p {
+	margin: 0 10px;
+	line-height:1.4em;
+	}
+a:link {
+	color: #adf;
+	border: none;
+    }
+a:visited {
+	color: #ccc;
+	}
+a:hover, a:active {
+	text-decoration: none;
+	}
+#topbar a, #footer a, #subhead a {
+	text-decoration: none;
+	padding: .25em .5em;
+	}
+#topbar a:hover, #footer a:hover, #subhead a:hover {
+	background: #047;
+	}
+h1, h2, h3, h4, h5, h6 {
+	font-weight: bold;
+	}
+h2 {
+	font-size: 2em;
+	}
+hr.clear {
+	clear: both;
+	margin: 0;
+	padding: 0;
+	visibility: hidden;
+	border: none;
+	}
+img {
+	border: none;
+	}
+#address_book, #address_book td, #emoticons
+	{
+		background: #3cf;
+	}
+#emoticons a, #address_book a
+	{
+		color: #00f;
+		padding: 3px;
+	}
+div#topbar {
+	padding: .5em 1.5%;
+	border-top: 3px solid #047;
+	border-right: 3px solid #047;
+	border-left: 3px solid #047;
+	background: #025 url(http://www.getontracks.org/themes/forum_themes/blue/images/background-dk.gif) 50% 0% repeat-y;
+	}
+#topbar ul {
+	float: left;
+	display: inline;
+	text-align: left;
+	list-style: none;
+	line-height: 1em;
+	font-size: 1em;
+	display: inline;
+	}
+#topbar ul li {
+	display: inline;
+	margin-right: .5em;
+	}
+#topbar form {	
+	text-align: right;
+	}
+#topbar form fieldset {
+	padding-bottom: .5em;
+	}
+#topbar form input {
+	margin: 0 .25em;
+	}
+#topbar form div {
+	display: none;
+	}
+#header {  
+	clear: both;
+	padding: .5em 1.5% 0 1.5%;
+	border-right: 3px solid #047;
+	border-bottom: 1px solid #047;
+	border-left: 3px solid #047;
+	background: #025 url(http://www.getontracks.org/themes/forum_themes/blue/images/background-dk.gif) 50% 0% repeat-y;
+	}
+#header h1 {
+	float: left;
+ 	display: inline;
+ 	text-transform: uppercase;
+	font-weight: normal;
+	font-size: 2.5em;
+	line-height: 1em;
+	}
+#header h1 a {
+	color: #69c;
+	text-decoration: none;
+	}
+#header h1 a:hover {
+	color:#adf;			
+    }
+#header form {
+	text-align: right;
+	padding: .25em;
+	}
+#header form input {
+	width: 8em;
+	}
+#header form .submit {
+	width: 5em;
+	margin: 0 .5em;
+	}
+#header form div {
+	display: none;
+	}
+#subhead {  
+	clear: both;
+	padding: .5em 1.5%;
+	border-right: 3px solid #047;
+	border-left: 3px solid #047;	
+	background: #025 url(http://www.getontracks.org/themes/forum_themes/blue/images/background-dk.gif) 50% 0% repeat-y;
+	}
+div.breadcrumb {
+	display: inline;
+	}
+.currentcrumb {
+	font-weight: bold;
+	}
+ul.forumnav {
+	list-style: none;
+	margin-bottom: 1em;
+	}
+ul.forumnav li {
+	display: inline;
+	margin-right: 1em;
+	}
+ul.forumnav li a {
+	padding: .25em .5em;
+	text-decoration: none;
+	}
+ul.forumnav li a:hover {
+	background: #025;
+	}
+#footer {
+	clear: both;
+	padding: 1.5%;
+	text-align: center;
+	font-size: .9em;
+	color: #69c;
+	border-top: 1px solid #047;
+	border-right: 3px solid #047;
+	border-bottom: 3px solid #047;
+	border-left: 3px solid #047;
+	background: #025 url(http://www.getontracks.org/themes/forum_themes/blue/images/background-dk.gif) 50% 0% repeat-y;
+	}
+#footer a {
+	font-weight: bold;
+	}
+#footer ul {
+	list-style: none;
+	line-height: 1.5em;
+	margin: .25em 0;
+	}
+#footer ul li {
+	display: inline;
+	padding: .5em;
+	}
+#footer select {
+	margin: .5em;
+	}
+.forumName {
+	letter-spacing:    .1em;
+	}
+.forumDescription {
+	padding:           3px 0 0 0;
+	}
+.forumLightLinks {
+	padding:           4px 0 2px 0;
+	}
+.topicTitle {
+	letter-spacing:    .1em;
+	}
+.userBlock {
+	padding:	2px 0 2px 0;
+	}
+.spacer {
+	height: .5em;
+	margin-bottom: 1em;
+	}
+.itempad {
+	padding: 2px 0 2px 0;
+	}
+.itempadbig {
+	padding: 5px 0 5px 0;
+	}
+.bottompad {
+	padding: 0 0 2px 0;
+	}
+.marginpad {
+	margin: 12px 0 10px 3px;
+	}
+.leftpad {
+ 	padding: 0 0 0 4px;
+	}
+table {
+	border-collapse: collapse;
+	}
+.legend {
+	margin-top: 1em;
+	padding: .5em 0;
+	background: #036;
+	}
+.tableBorder {
+	padding: 0;
+	margin-top: 1px;
+	margin-bottom: 3px;
+	}
+.tablePad {
+	padding:  0 2px 4px 2px;
+	}
+.tableHeading {
+	letter-spacing: .1em;
+	font-size: 1.1em;
+	font-weight: bold;
+	text-transform: uppercase;
+	color: #69c;
+	white-space: nowrap;
+	margin: 1em 0 0 0;
+	}
+.tableHeadingSmall {
+	font-size: .9em;
+	color: #69c;
+	white-space: nowrap;
+	margin: 0 0 .5em 0;
+	}
+.tableHeadingBG {
+	background: #036;
+	border-top: 1px solid #025;
+	font-size: 1em;
+	padding: 1em .5em 0 .5em;
+	}
+.tableRowHeading, .tableRowHeadingBold {
+	padding: .25em .5em;
+	border-bottom: 1px solid #025;
+	background: #047;
+	color: #69c;
+	font-size: .8em;
+	text-transform: uppercase;
+	letter-spacing: .2em;
+	}
+.tableRowSpacer {
+	}
+.threadBorder {
+	border: 1px solid #025;
+	margin: 1em 0;
+	padding: .25em 0;
+	}
+.tableCellOne {
+	padding:           3px 6px 3px 6px;
+	}
+.tableCellTwo {
+	padding:           3px 6px 3px 6px;
+	}
+.tablePostInfo {
+	margin-bottom: .75em;
+	}
+.ignored {
+	border: 1px solid #69c;
+	padding: 0;
+	margin-top: 1px;
+	margin-bottom: 3px;
+	}
+.button {
+	width: 80px;
+	background-color: transparent;
+	}
+.button40 {
+	width: 40px;
+	background-color: transparent;
+	}
+.button80 {
+	width: 80px;
+	background-color: transparent;
+	}
+.button100 {
+	width: 100px;
+	background-color: transparent;
+	}
+.button150 {
+	width: 150px;
+	background-color: transparent;
+	}
+.button210 {
+	width: 210px;
+	background-color: transparent;
+	}
+.buttonSpacer{
+	margin:	0 0 0 6px;
+	}
+.buttonLarge {
+	background: #025 url(http://www.getontracks.org/themes/forum_themes/blue/images/background-dk.gif) 50% 50% repeat-y;
+	border: 1px solid #69c;
+	text-transform: uppercase;
+	text-align: center;
+	color: #fff;
+	font-weight: bold;
+	padding: 2px 4px 2px 4px;
+	margin: .25em 0 .25em 0;
+	white-space: nowrap;
+	cursor: pointer;
+	}
+.buttonLargeHover {
+	background: #047 url(http://www.getontracks.org/themes/forum_themes/blue/images/background-lt.gif) 50% 50% repeat-y;
+	border: 1px solid #69c;
+	text-transform: uppercase;
+	text-align: center;
+	color: #fff;
+	font-weight: bold;
+	padding: 2px 4px 2px 4px;
+	margin: .25em 0 .25em 0;
+	white-space: nowrap;
+	cursor: pointer;
+	}
+.buttonSmall {
+	border: 1px solid #69c;
+	font-size: .9em;
+	text-transform: uppercase;
+	text-align:	center;
+	color: #69c;
+	padding: 0px 1px 0px 1px;
+	margin: 0 2px 0 2px;
+	white-space: nowrap;
+	cursor: pointer;
+	}
+.buttonSmallHover {
+	background: #047 url(http://www.getontracks.org/themes/forum_themes/blue/images/background-lt.gif) 50% 50% repeat-y;
+	border: 1px solid #69c;
+	font-size: .9em;
+	text-transform: uppercase;
+	text-align:	center;
+	color: #fff;
+	padding: 0px 1px 0px 1px;
+	margin: 0 2px 0 2px;
+	white-space: nowrap;
+	cursor: pointer;
+	}
+.rankAdmin, .rankModerator, .rankMember {
+	font-weight: bold;
+	color: #69c;
+	padding: 2px 0 3px 0;
+	}
+.rankImage {
+	margin: 0;
+	padding: 0;
+	border:  0;
+	}
+.userBlock {
+	color: #69c;
+	}
+.post {
+	margin: 1em 0;
+	line-height: 1.5em;
+	}
+.edited {
+	font-size:		9px;
+	color:			#69c;
+}
+code {
+	white-space: normal;
+	}
+pre {
+	background: #def;
+	border: 1px solid #69c;
+	color: #69c;
+	margin: 8px 2px 10px 6px;
+	padding: 10px 10px 10px 6px;
+	white-space: normal;
+	}
+.codeblock {
+	background: #def;
+	border: 1px solid #69c;
+	color: #69c;
+	margin: 8px 4px 10px 3px;
+	padding: 10px 10px 10px 6px;
+	}
+blockquote {
+	background: #036;
+	border:	1px solid #69c;
+	color: #69c;
+	margin: 8px 2px 10px 6px;
+	padding: 5px 10px 10px 6px;
+	}
+.quote_author {
+	font-weight: bold;
+	color: #69c;
+	margin:	0 0 4px 0;
+	background-color: transparent;
+	}
+.signature {
+	margin: 1em .5em .5em .5em;
+	padding: .25em;
+	border: 1px solid #69c;
+	}
+.signatureTitle {
+	color: #69c;
+	}
+.buttonMode {
+	white-space: 		nowrap;
+	}
+.htmlButtonOuter, .htmlButtonOuterL {
+	padding:           0;
+	border-top:        #025 1px solid;
+	border-right:      #025 1px solid;
+	border-bottom:     #025 1px solid;
+	}
+.htmlButtonOuterL  {
+	border-left:       #025 1px solid;
+	}
+.htmlButtonInner {
+	background-color:  transparent; 
+	text-align:		center;
+	padding:			0 3px 0 3px;
+	}
+.htmlButtonOff {
+	padding:           1px 2px 2px 2px;
+	white-space:       nowrap;
+	}
+.htmlButtonOff a:link { 
+	color:             #69c;
+	text-decoration:   none;
+	white-space:       nowrap;
+	}
+.htmlButtonOff  a:visited { 
+	text-decoration:   none;
+	}
+.htmlButtonOff a:active { 
+	text-decoration:   none;
+	color:             #fff;
+	}
+.htmlButtonOff a:hover { 
+	text-decoration:   none;
+	background:        #047;
+	color:             #fff;
+	}
+.htmlButtonOn {
+	background:        #047;
+	padding:           1px 2px 2px 2px;
+	white-space:       nowrap;
+	}
+.htmlButtonOn a:link { 
+	color:             #990000;
+	text-decoration:   none;
+	white-space:       nowrap;
+	}
+.htmlButtonOn  a:visited { 
+	text-decoration:   none;
+	}
+.htmlButtonOn a:active { 
+	text-decoration:   none;
+	color:             #999;
+	}
+.htmlButtonOn a:hover { 
+	color:             #999;
+	text-decoration:   none;
+	}
+.attachTitle {
+	font-weight:		bold;
+	color:             #fff;
+	padding:           4px;
+	margin:			10px 0 1px 0;
+	}
+.attachBody {
+	padding:           4px;
+	margin-bottom:		10px;
+	}
+.attachThumb {
+	margin: 3px 6px 3px 3px;
+	border: 1px solid 	#025;
+	}
+.preview {
+	padding:           10px;
+	margin:			0 0 12px 0;
+	border:       		1px solid #025;
+	}
+.previewheading {
+	font-weight:		bold;
+	color: #69c;
+	text-transform: uppercase;
+	padding:           5px 0 5px 10px;
+	border-top:     	1px solid #025;
+	border-right:     	1px solid #025;
+	border-left:     	1px solid #025;
+	}
+.activeModerator {
+	font-weight: bold;
+	}
+form {
+	margin:            0;
+	padding:           0;
+	border:            0;
+	}
+fieldset {
+	border: none;
+	}
+.hidden {
+	margin:            0;
+	padding:           0;
+	border:            0;
+	}
+.input {
+	border:        1px solid #69c;
+	color:             #69c;
+	height:            1.5em;
+	padding:           0;
+	margin:        	0;
+	}
+.textarea {
+	border:        1px solid #69c;
+	color:             #333;
+	font-size:         11px;
+	padding:           0;
+	margin:        	0;
+	}
+.select {
+	background-color:  #fff;
+	font-weight:       normal;
+	letter-spacing:    .1em;
+	color:             #333;
+	margin-top:        2px;
+	margin-bottom:     2px;
+	}
+.multiselect {
+	border:        1px solid #69c;
+	background-color:  #fff;
+	color:             #333;
+	font-size:         11px;
+	margin-top:        2px;
+	margin-top:        2px;
+	}
+.radio {
+	background-color:  transparent;
+	margin-top:        4px;
+	margin-bottom:     4px;
+	padding:           0;
+	border:            0;
+	}
+.checkbox {
+	background-color:  transparent;
+	padding:           0;
+	border:            0;
+	}
+.buttons {
+	font-weight:       bold;
+	border:        1px solid #69c;
+	letter-spacing:    .1em;
+	margin:        	0;
+	padding:			1px 6px 3px 6px;
+	color:             #69c;
+	background: #025;
+	cursor: pointer;
+	}
+.submit {
+	font-weight:       normal;
+	border:        1px solid #69c;
+	letter-spacing:    .1em;
+	margin:        	0;
+	padding:			1px 4px 1px 4px;
+	color:             #69c;
+	background: #025;
+	cursor: pointer;
+	}
+.errorHeading {
+	background: 		#025;
+	color:             #fff;
+	padding:           6px 6px 6px 6px;
+	border-bottom:     1px solid #fff;
+	letter-spacing:    .1em;
+	font-weight:		bold;
+	}
+.errorMessage {
+	color:             #f00;
+	padding:           10px 0 10px 0;
+	}
+.errorBox {
+	color: #f00;
+	padding: 10px;
+	margin: 0 0 12px 0;
+	border: 1px solid #f00;
+	background: #fcc;
+	}
+.alert {
+	color:             #f00;
+	font-weight:		bold;
+	}
+.highlight {
+	color:             #f00;
+	}
+.profileTitle {
+	font-size: 1.5em;
+	font-weight: bold;
+	margin: .5em 0;
+	}
+.memberlistHead {
+	padding: .25em .5em;
+	border-bottom: 1px solid #025;
+ 	background: #047;
+	color: #69c;
+	font-size: .8em;
+	text-transform: uppercase;
+	}
+.memberlistRowOne {
+	padding: .5em;
+	background: #047;
+	}
+.memberlistRowTwo {
+	padding: .5em;
+	}
+.memberlistFooter {
+	padding: 1em .5em;
+	}
+.profileHeadingBG {
+	background: #036;
+	padding:           6px 6px 6px 6px;
+	border-bottom:     #025 1px solid;
+	}
+.profileTopBox {
+	margin:		0;
+	padding:		7px 5px 5px 5px;
+	}
+.profileTitle {
+	font-weight:		bold;
+	padding: 			3px 5px 3px 0;
+	margin:			0;
+	background-color: transparent;  
+	}
+.profileItem {
+	background:		transparent;
+	margin: 			2px 0 2px 0;
+	background-color: transparent;  
+	}
+.profilePhoto {
+	padding:			1px 1px 1px 20px;
+	margin-top:        1px;
+	margin-bottom:     3px;
+	}
+.avatar {
+	background:	transparent;
+	margin:		3px 14px 0 3px;
+	}
+.photo {
+	background:	transparent;
+	margin:		6px 14px 0 3px;
+	}
+.profileHead {
+	font-weight:		bold;
+	text-transform:	uppercase;
+	padding:			3px 4px 3px 10px;  
+	margin:			0 0 0 0;
+	}
+.menuHeadingBG {
+	background: #036;
+	padding:           6px 6px 6px 6px;
+	}
+.profileMenu {
+	background: 		#036;
+	border:            1px solid #025;
+	padding:			1px;
+	margin-top:        1px;
+	margin-bottom:     3px;
+	}
+.profileMenuInner {
+	padding-left:		10px;
+	padding-right:		8px;
+	margin-bottom:		4px;
+	margin-top:		4px;
+	}
+.menuItem {
+	padding:			3px 0 3px 0;
+	background-color:	transparent;  
+	}
+.borderTopBot {
+	border-top:	1px solid #025;
+	border-bottom:	1px solid #025;
+	}
+.borderBot {
+	border-bottom:	1px solid #025;
+	}
+.success {
+	font-weight:		bold;
+	padding:			3px 0 3px 0;
+	background-color:	transparent; 
+	}
+.innerShade {
+	background-color:	#036;
+	margin:			0;
+	padding:			10px;
+	}
+.searchBox {
+	background: transparent;
+	margin: 16px 0 0 0;
+	padding: 8px 5px 5px 5px;
+	}
+.searchBoxTitle {
+	font-weight: bold;
+	background-color: transparent;  
+	}
+.searchpad {
+	padding: 6px 0 8px 0;
+	}
+.searchspacer {
+	margin-bottom: 6px;
+	}
+.iframe {
+	border:1px solid #025;
+	background: #def;
+	color: #036;
+	}
+.wordSuggestion {
+	border: 1px solid #036; 
+	padding: 4px; 
+	background: #def;
+	color: #036;
+	}
+.wordSuggestion a, .wordSuggestion a:active {
+	color: #036;
+	cursor: pointer;
+	}
+.spellchecked_word {
+	cursor: pointer;
+	background-color: #def;
+	color:#036;
+	border-bottom: 1px dashed #036;
+	}
+.spellchecked_word_selected {
+	cursor: pointer;
+	background-color: #69c;
+	}
+</style>
+
+</head>
+
+<body >
+<div id="wrapper">
+<div id='topbar'>
+	<ul>
+		
+		<li class="welcome">Welcome Guest</li>
+		<li><a href="http://www.getontracks.org/forums/member/login/">Login</a></li>
+		<li>REGISTRATION CLOSED: please use <a href="http://lists.rousette.org.uk/mailman/listinfo/tracks-discuss">mailing list</a></li>
+		
+		
+	</ul>
+     
+     <form method="post" action="http://www.getontracks.org/"  >
+<div class='hiddenFields'>
+<input type="hidden" name="XID" value="90ac446a476122c2f73aed154a6ca53858fe78ed" />
+<input type="hidden" name="ACT" value="9" />
+<input type="hidden" name="FROM" value="forum" />
+<input type="hidden" name="mbase" value="http://www.getontracks.org/forums/member/" />
+<input type="hidden" name="board_id" value="1" />
+<input type="hidden" name="anon" value="1" />
+<input type="hidden" name="RET" value="http://www.getontracks.org/forums/viewthread/20/" />
+<input type="hidden" name="site_id" value="1" />
+</div>
+
+
+	<fieldset>	
+		<label class="field-username">Username<input type="text" class="textbox" name="username" value="" /></label>
+		<label class="field-password">Password<input type="password" class="textbox" name="password" /></label>
+		<input type="submit" class="submit" value="Login" />
+	</fieldset>	
+	<fieldset>
+		<label class="field-remember">Remember Me?<input type="checkbox" class="checkbox" name="auto_login" value="1" checked="checked" /></label>
+		<a href="http://www.getontracks.org/forums/member/forgot_password/">forgot password?</a>
+	</fieldset> 
+</form>
+     
+<hr class="clear" />
+</div><!--topbar-->
+<div id='header'>
+     <h1><a href="http://www.getontracks.org/forums/" title="Tracks">Tracks</a></h1>
+     <form method="post" action="http://www.getontracks.org/forums/do_search/"  >
+<div class='hiddenFields'>
+<input type="hidden" name="XID" value="a116a9d22439881c0498fe1b96ee0230b47edff8" />
+<input type="hidden" name="board_id" value="1" />
+<input type="hidden" name="site_id" value="1" />
+</div>
+
+
+
+<label class="searchbox"><input type="text" class="input" name="keywords" value="Search" maxlength="80" /></label>
+<input type="submit" class="submit" value="Search" />
+<a href="http://www.getontracks.org/forums/search/">Advanced Search</a>
+
+</form>
+    <hr class="clear" />
+</div><!--header-->
+<div id="subhead">
+		<div class="breadcrumb"><a href="http://www.getontracks.org/forums/">Forum Home</a><span class="breadcrumbspacer"> &gt; </span><a href="http://www.getontracks.org/forums/viewcategory/4/">Usage</a><span class="breadcrumbspacer"> &gt; </span><a href="http://www.getontracks.org/forums/viewforum/10/">Tips and Tricks</a><span class="breadcrumbspacer"> &gt; </span><span class="currentcrumb">Thread</span></div>
+<hr class="clear" />
+</div><!--subhead-->
+<div id="content">
+<script type="text/javascript">
+<!--
+
+function showimage(loc, width, height)
+{
+	window.open(loc,'Image','width='+width+',height='+height+',screenX=0,screenY=0,top=0,left=0,toolbar=0,status=0,scrollbars=0,location=0,menubar=1,resizable=1');
+	return false;
+}
+
+function showfastreply()
+{
+    if (document.getElementById('fastreply').style.display == "block")
+    {
+        document.getElementById('fastreply').style.display = "none";
+    }
+    else
+    {
+        document.getElementById('fastreply').style.display = "block";
+    }
+}
+
+function showHideRow(el)
+{
+    if (document.getElementById(el).style.display == "")
+    {
+        document.getElementById(el).style.display = "none";
+    }
+    else
+    {
+        document.getElementById(el).style.display = "";
+    }	
+}
+//-->
+</script>
+
+<table cellpadding="0" cellspacing="0" border="0" style="width:100%;">
+<tr>
+<td valign="middle" style="width:80%;">
+
+<table cellpadding="0" cellspacing="0" border="0" class="paginateBorder">
+<tr>
+<td><div class="paginateStat">1 of 2</div></td>
+<td><div class="paginateCur">1</div></td><td><div class="paginate"><a href="http://www.getontracks.org/forums/viewthread/20/P15">2</a></div></td><td><div class="paginate"><a href="http://www.getontracks.org/forums/viewthread/20/P15">Next</a></div></td>
+</tr>
+</table>
+
+</td>
+&nbsp;
+
+&nbsp;
+
+</tr>
+</table>
+
+
+
+<table cellpadding="0" cellspacing="0" border="0" style="width:100%;" >
+<tr>
+<td class="tableHeadingBG" colspan="2"><div class="tableHeading">nesting projects&#63;</div></td>
+<td class="tableHeadingBG" colspan="1" align="right"><div class="altLinks">&nbsp;</div></td>
+
+</tr>
+
+
+
+<tr id="a9" >
+ <td colspan="3">
+
+
+ <table class="threadBorder" cellpadding="0" cellspacing="0" border="0" style="width:100%;">
+  <tr>
+   <td class="tableRowHeadingBold" style="width:130px;"><div class="largeLinks"><a href="http://www.getontracks.org/forums/member/25/">latrippi</a></div></td>
+   <td class="tableRowHeading">
+
+	<table cellpadding="0" cellspacing="0" border="0" style="width:99%;">
+	<tr>
+	<td>Posted: 17 July 2006 11:19 PM</td>
+	<td align="right">
+	
+		
+	
+	    
+	
+	
+
+	
+	
+	&nbsp;&nbsp;<span class="smallLinks">[ <a href="http://www.getontracks.org/forums/ignore_member/25/" title="Ignore">Ignore</a> ]</span>
+	
+	
+
+	&nbsp;
+	</td>
+	</tr>
+	</table>
+
+   </td>
+  </tr>
+<tr>
+ <td class="tableCellOne" style="width:130px;" valign="top">
+	<div class="rankMember">Newbie</div>
+	
+	<div class="itempad"><img src="http://www.getontracks.org/themes/forum_themes/blue/images/rank.gif" alt="Rank" class="rankImage" /></div>
+	<div class="userBlock">Total Posts:&nbsp; 3</div>
+	<div class="userBlock">Joined&nbsp; 2006-07-17</div>
+</td>
+<td class="tableCellOne" valign="top" colspan="2"><div class="post"><p>Hi, congratulations on Tracks. I was happy to find it; I&#8217;ve just downloaded and installed Tracks (1.041 on OSX).</p>
+
+<p>Is it possible to <i>nest</i> projects in Tracks (i.e. create sub-projects)? Or, how does one go about organizing all the various, tiny actionable items that make up a real-world project? </p>
+
+<p>For example, I&#8217;m overhauling my website (project), which includes a weblog, wiki, and archives. Reworking each of those is a sub-project, a parallel track, which further breaks down into software tasks, design work, and more. In order to drill down to and navigate Next Actions, both in planning and deciding where to turn my attention next, I seem to see projects as a trees. Can I do something like that in Tracks?</p>
+
+<p>I&#8217;ve used kGTD quite  happily for a few months but I really like working through the browser and was intrigued by what I read about Tracks. Also, it&#8217;s <i>designed by a girl</i>&#8212;I couldn&#8217;t resist! </p>
+
+<p>Thanks much.</p></div>
+	
+	
+	
+</td>
+
+</tr><tr>
+
+<td class="tableCellTwo"  style="width:130px;">
+	<table cellpadding="0" cellspacing="0" border="0" width="100%">
+	<tr>
+	<td align="center"><div class="button"><div class="buttonSmall" id="a1" onclick="navJump('http://www.getontracks.org/forums/member/25/')" onmouseover="navHover(this);" onmouseout="navReset(this);">Profile</div></div></td>
+	
+	
+
+	</tr>
+	</table>
+</td>
+
+<td class="tableCellTwo" colspan="2">
+	<table cellpadding="0" cellspacing="0" border="0">
+	<tr>
+	
+	
+	
+	
+		
+		
+				
+	
+	
+	
+	
+	&nbsp;
+	
+	<td>&nbsp;</td>	
+	</tr>
+	</table>
+  </td>
+ </tr>
+</table>
+
+</td>
+</tr>
+
+<tr id="b9" >
+ <td colspan="3">
+
+
+ <table class="threadBorder" cellpadding="0" cellspacing="0" border="0" style="width:100%;">
+  <tr>
+   <td class="tableRowHeadingBold" style="width:130px;"><div class="largeLinks"><a href="http://www.getontracks.org/forums/member/21/">jpep</a></div></td>
+   <td class="tableRowHeading">
+
+	<table cellpadding="0" cellspacing="0" border="0" style="width:99%;">
+	<tr>
+	<td>Posted: 18 July 2006 02:05 PM</td>
+	<td align="right">
+	
+		
+	
+	
+
+	
+	
+	&nbsp;&nbsp;<span class="smallLinks">[ <a href="http://www.getontracks.org/forums/ignore_member/21/" title="Ignore">Ignore</a> ]</span>
+	
+	&nbsp;&nbsp;<span class="smallLinks">[ <a name="33" href="http://www.getontracks.org/forums/viewreply/33/" title="Permalink to this post"># 1</a> ]</span>
+
+	&nbsp;
+	</td>
+	</tr>
+	</table>
+
+   </td>
+  </tr>
+<tr>
+ <td class="tableCellOne" style="width:130px;" valign="top">
+	<div class="rankMember">Newbie</div>
+	
+	<div class="itempad"><img src="http://www.getontracks.org/themes/forum_themes/blue/images/rank.gif" alt="Rank" class="rankImage" /></div>
+	<div class="userBlock">Total Posts:&nbsp; 10</div>
+	<div class="userBlock">Joined&nbsp; 2006-07-11</div>
+</td>
+<td class="tableCellOne" valign="top" colspan="2"><div class="post"><p>In this example, I would create projects for each of your &#8216;subprojects&#8217;. I name my projects with a similar prefix and then drag to group them together. It&#8217;s not ideal, but it works.</p></div>
+	
+	
+	
+</td>
+
+</tr><tr>
+
+<td class="tableCellTwo"  style="width:130px;">
+	<table cellpadding="0" cellspacing="0" border="0" width="100%">
+	<tr>
+	<td align="center"><div class="button"><div class="buttonSmall" id="b1" onclick="navJump('http://www.getontracks.org/forums/member/21/')" onmouseover="navHover(this);" onmouseout="navReset(this);">Profile</div></div></td>
+	
+	
+
+	</tr>
+	</table>
+</td>
+
+<td class="tableCellTwo" colspan="2">
+	<table cellpadding="0" cellspacing="0" border="0">
+	<tr>
+	
+	
+	
+	
+	
+	
+		
+	
+	
+	&nbsp;
+	
+	<td>&nbsp;</td>	
+	</tr>
+	</table>
+  </td>
+ </tr>
+</table>
+
+</td>
+</tr>
+
+<tr id="c9" >
+ <td colspan="3">
+
+
+ <table class="threadBorder" cellpadding="0" cellspacing="0" border="0" style="width:100%;">
+  <tr>
+   <td class="tableRowHeadingBold" style="width:130px;"><div class="largeLinks"><a href="http://www.getontracks.org/forums/member/25/">latrippi</a></div></td>
+   <td class="tableRowHeading">
+
+	<table cellpadding="0" cellspacing="0" border="0" style="width:99%;">
+	<tr>
+	<td>Posted: 18 July 2006 05:18 PM</td>
+	<td align="right">
+	
+		
+	
+	
+
+	
+	
+	&nbsp;&nbsp;<span class="smallLinks">[ <a href="http://www.getontracks.org/forums/ignore_member/25/" title="Ignore">Ignore</a> ]</span>
+	
+	&nbsp;&nbsp;<span class="smallLinks">[ <a name="34" href="http://www.getontracks.org/forums/viewreply/34/" title="Permalink to this post"># 2</a> ]</span>
+
+	&nbsp;
+	</td>
+	</tr>
+	</table>
+
+   </td>
+  </tr>
+<tr>
+ <td class="tableCellOne" style="width:130px;" valign="top">
+	<div class="rankMember">Newbie</div>
+	
+	<div class="itempad"><img src="http://www.getontracks.org/themes/forum_themes/blue/images/rank.gif" alt="Rank" class="rankImage" /></div>
+	<div class="userBlock">Total Posts:&nbsp; 3</div>
+	<div class="userBlock">Joined&nbsp; 2006-07-17</div>
+</td>
+<td class="tableCellOne" valign="top" colspan="2"><div class="post"><p>Ah, thanks, jpep. I was afraid that would be the answer!</p>
+
+<blockquote><div class="quote_author">jpep - 18 July 2006 02:05 PM</div><p>I name my projects with a similar prefix and then drag to group them together.</p>
+</blockquote>
+
+<p>I used to do that in Outlook, years ago, including using prefixes for subprojects&#8212;resulting in some very long, baroque names for tasks! But I appreciate that. I&#8217;ll try it. Having contexts might help. </p>
+
+<p>But, I might need to go back to kGTD. At least, for now.</p></div>
+	
+	
+	
+</td>
+
+</tr><tr>
+
+<td class="tableCellTwo"  style="width:130px;">
+	<table cellpadding="0" cellspacing="0" border="0" width="100%">
+	<tr>
+	<td align="center"><div class="button"><div class="buttonSmall" id="c1" onclick="navJump('http://www.getontracks.org/forums/member/25/')" onmouseover="navHover(this);" onmouseout="navReset(this);">Profile</div></div></td>
+	
+	
+
+	</tr>
+	</table>
+</td>
+
+<td class="tableCellTwo" colspan="2">
+	<table cellpadding="0" cellspacing="0" border="0">
+	<tr>
+	
+	
+	
+	
+	
+	
+		
+	
+	
+	&nbsp;
+	
+	<td>&nbsp;</td>	
+	</tr>
+	</table>
+  </td>
+ </tr>
+</table>
+
+</td>
+</tr>
+
+<tr id="d9" >
+ <td colspan="3">
+
+
+ <table class="threadBorder" cellpadding="0" cellspacing="0" border="0" style="width:100%;">
+  <tr>
+   <td class="tableRowHeadingBold" style="width:130px;"><div class="largeLinks"><a href="http://www.getontracks.org/forums/member/1/">bsag</a></div></td>
+   <td class="tableRowHeading">
+
+	<table cellpadding="0" cellspacing="0" border="0" style="width:99%;">
+	<tr>
+	<td>Posted: 19 July 2006 07:36 AM</td>
+	<td align="right">
+	
+		
+	
+	
+
+	
+	
+	&nbsp;&nbsp;<span class="smallLinks">[ <a href="http://www.getontracks.org/forums/ignore_member/1/" title="Ignore">Ignore</a> ]</span>
+	
+	&nbsp;&nbsp;<span class="smallLinks">[ <a name="47" href="http://www.getontracks.org/forums/viewreply/47/" title="Permalink to this post"># 3</a> ]</span>
+
+	&nbsp;
+	</td>
+	</tr>
+	</table>
+
+   </td>
+  </tr>
+<tr>
+ <td class="tableCellOne" style="width:130px;" valign="top">
+	<div class="rankAdmin">Administrator</div>
+	<div class="itempad"><img src="http://www.getontracks.org/images/avatars/uploads/avatar_1.png" width="80" height="80" border="0" alt="Avatar" /></div>
+	<div class="itempad"><img src="http://www.getontracks.org/themes/forum_themes/blue/images/rank.gif" alt="Rank" class="rankImage" /><img src="http://www.getontracks.org/themes/forum_themes/blue/images/rank.gif" alt="Rank" class="rankImage" /><img src="http://www.getontracks.org/themes/forum_themes/blue/images/rank.gif" alt="Rank" class="rankImage" /><img src="http://www.getontracks.org/themes/forum_themes/blue/images/rank.gif" alt="Rank" class="rankImage" /></div>
+	<div class="userBlock">Total Posts:&nbsp; 223</div>
+	<div class="userBlock">Joined&nbsp; 2006-03-05</div>
+</td>
+<td class="tableCellOne" valign="top" colspan="2"><div class="post"><p>Project dependencies are coming (so that actions within a project that are dependent on a previous step would be displayed as such and not shown on the main page until the preceding step is completed), and possibly also sub-projects, that I&#8217;m finding it hard to think how both could be displayed without making it look like a big mess.</p>
+
+<p>Can I ask why you want subprojects? Is it because those steps (within a subproject) are dependent on one another?</p></div>
+	
+	
+	
+</td>
+
+</tr><tr>
+
+<td class="tableCellTwo"  style="width:130px;">
+	<table cellpadding="0" cellspacing="0" border="0" width="100%">
+	<tr>
+	<td align="center"><div class="button"><div class="buttonSmall" id="d1" onclick="navJump('http://www.getontracks.org/forums/member/1/')" onmouseover="navHover(this);" onmouseout="navReset(this);">Profile</div></div></td>
+	
+	
+
+	</tr>
+	</table>
+</td>
+
+<td class="tableCellTwo" colspan="2">
+	<table cellpadding="0" cellspacing="0" border="0">
+	<tr>
+	
+	
+	
+	
+	
+	
+		
+	
+	
+	&nbsp;
+	
+	<td>&nbsp;</td>	
+	</tr>
+	</table>
+  </td>
+ </tr>
+</table>
+
+</td>
+</tr>
+
+<tr id="e9" >
+ <td colspan="3">
+
+
+ <table class="threadBorder" cellpadding="0" cellspacing="0" border="0" style="width:100%;">
+  <tr>
+   <td class="tableRowHeadingBold" style="width:130px;"><div class="largeLinks"><a href="http://www.getontracks.org/forums/member/25/">latrippi</a></div></td>
+   <td class="tableRowHeading">
+
+	<table cellpadding="0" cellspacing="0" border="0" style="width:99%;">
+	<tr>
+	<td>Posted: 21 July 2006 02:16 AM</td>
+	<td align="right">
+	
+		
+	
+	
+
+	
+	
+	&nbsp;&nbsp;<span class="smallLinks">[ <a href="http://www.getontracks.org/forums/ignore_member/25/" title="Ignore">Ignore</a> ]</span>
+	
+	&nbsp;&nbsp;<span class="smallLinks">[ <a name="53" href="http://www.getontracks.org/forums/viewreply/53/" title="Permalink to this post"># 4</a> ]</span>
+
+	&nbsp;
+	</td>
+	</tr>
+	</table>
+
+   </td>
+  </tr>
+<tr>
+ <td class="tableCellOne" style="width:130px;" valign="top">
+	<div class="rankMember">Newbie</div>
+	
+	<div class="itempad"><img src="http://www.getontracks.org/themes/forum_themes/blue/images/rank.gif" alt="Rank" class="rankImage" /></div>
+	<div class="userBlock">Total Posts:&nbsp; 3</div>
+	<div class="userBlock">Joined&nbsp; 2006-07-17</div>
+</td>
+<td class="tableCellOne" valign="top" colspan="2"><div class="post"><p>Project dependencies will be great! I&#8217;m glad to hear that. </p>
+
+<p>Sub-projects, though (the way I use them, anyway) are quite different. They&#8217;re more like parallel, or branching, chains of dependencies.&nbsp; I need them when I&#8217;m looking at a list of NA&#8217;s choosing what to focus on next. The sub-project labels are like a map; they help me see the forests in the trees. They&#8217;re a navigation device, a filtering mechanism. </p>
+
+<p>I also need sub-projects&#8212;some nesting function&#8212;to support the planning process: drilling down from a truly project-sized project (overhaul my web site, manage my finances) to a GTD-size &#8220;project&#8221; (anything that takes longer than 10 minutes), sketching out the various steps and stages. The branching of sub-projects gives structure, helps me identify and clarify chains of dependencies, and so understand, <i>visualize</i>, relationships among them, so I grasp what it will really take to get the larger project done. </p>
+
+<p>I&#8217;m trying to maintain a more-or-less canonical implementation of GTD, which means: <i>everything</i> I&#8217;m tracking goes into my system. Between that, at the outside, and the &#8220;10-minutes = a project&#8221; rule, that&#8217;s a lot of &#8220;stuff&#8221; that needs to be organized, for me to find my way around! Actually, for what it&#8217;s worth, in kGTD, I&#8217;ve been  using meta-projects, or <i>activity streams</i>, such as PersAdmin, Recreation, WorkContent, WorkSystems, as a first cut. For example, I&#8217;m online but I&#8217;m working; do I really want to pay attention to Recreation tasks right now?</p>
+
+<p>This is similar to <a href="http://www.getontracks.org/?URL=http%3A%2F%2Fwww.rousette.org.uk%2Fprojects%2Fforums%2Fviewthread%2F3%2F">grouping contexts in iCal</a>, which Craig mentioned, but different. It&#8217;s providing filters <i>within</i> contexts. </p>
+
+<blockquote><div class="quote_author">bsag - 19 July 2006 07:36 AM</div><p>I&#8217;m finding it hard to think how both could be displayed without making it look like a big mess.</p>
+</blockquote>
+
+<p>On the home page, you mean? Well, &#8220;Active projects&#8221; could stay as it is except that when you click on one, you would see a hierarchal list of sub-projects, if any, followed by their NA&#8217;s. You might allow this to go 3 sub-projects deep. . . </p>
+
+<p>Is this helpful, does it make sense? I&#8217;d be glad to jump over to the wiki, or whatever, if I can help more. (Sadly, I don&#8217;t know Ruby on Rails, but could maybe help with the information design.) And, thanks much for asking.</p></div>
+	
+	
+	
+</td>
+
+</tr><tr>
+
+<td class="tableCellTwo"  style="width:130px;">
+	<table cellpadding="0" cellspacing="0" border="0" width="100%">
+	<tr>
+	<td align="center"><div class="button"><div class="buttonSmall" id="e1" onclick="navJump('http://www.getontracks.org/forums/member/25/')" onmouseover="navHover(this);" onmouseout="navReset(this);">Profile</div></div></td>
+	
+	
+
+	</tr>
+	</table>
+</td>
+
+<td class="tableCellTwo" colspan="2">
+	<table cellpadding="0" cellspacing="0" border="0">
+	<tr>
+	
+	
+	
+	
+	
+	
+		
+	
+	
+	&nbsp;
+	
+	<td>&nbsp;</td>	
+	</tr>
+	</table>
+  </td>
+ </tr>
+</table>
+
+</td>
+</tr>
+
+<tr id="f9" >
+ <td colspan="3">
+
+
+ <table class="threadBorder" cellpadding="0" cellspacing="0" border="0" style="width:100%;">
+  <tr>
+   <td class="tableRowHeadingBold" style="width:130px;"><div class="largeLinks"><a href="http://www.getontracks.org/forums/member/35/">Luhmann</a></div></td>
+   <td class="tableRowHeading">
+
+	<table cellpadding="0" cellspacing="0" border="0" style="width:99%;">
+	<tr>
+	<td>Posted: 02 August 2006 09:45 AM</td>
+	<td align="right">
+	
+		
+	
+	
+
+	
+	
+	&nbsp;&nbsp;<span class="smallLinks">[ <a href="http://www.getontracks.org/forums/ignore_member/35/" title="Ignore">Ignore</a> ]</span>
+	
+	&nbsp;&nbsp;<span class="smallLinks">[ <a name="87" href="http://www.getontracks.org/forums/viewreply/87/" title="Permalink to this post"># 5</a> ]</span>
+
+	&nbsp;
+	</td>
+	</tr>
+	</table>
+
+   </td>
+  </tr>
+<tr>
+ <td class="tableCellOne" style="width:130px;" valign="top">
+	<div class="rankMember">Newbie</div>
+	
+	<div class="itempad"><img src="http://www.getontracks.org/themes/forum_themes/blue/images/rank.gif" alt="Rank" class="rankImage" /></div>
+	<div class="userBlock">Total Posts:&nbsp; 4</div>
+	<div class="userBlock">Joined&nbsp; 2006-07-20</div>
+</td>
+<td class="tableCellOne" valign="top" colspan="2"><div class="post"><p>I agree: Sub-projects are crucial for me to see how things are related. It is the big thing holding me back from switching to Tracks right now. I would only need to go two levels deep, but I use &#8220;meta-project&#8221; labels to handle multi-faceted projects. For instance, I&#8217;m an academic and I often go to conferences, so I have a &#8220;Conference&#8221; meta-project. Under that I list the names of each conference as individual projects. Now, I could just list these separately, but having them all grouped together helps me a lot. I can&#8217;t use contexts for this because each conference requires many different contexts - phone calls, papers to be written, research, applications, funding, etc. all go in contexts such as &#8220;errands&#8221; or &#8220;phone calls.&#8221; </p>
+
+<p>One option might be to not have &#8220;nesting&#8221; at all, but simply create another element, such as &#8220;folders&#8221; or &#8220;labels&#8221; which allow projects to be grouped together. So, for instance:</p>
+
+<p>**Conference Folder**<br />
+[[Project 1]]<br />
+[[Project 3]]<br />
+**Second Folder**<br />
+[[Project 2]]<br />
+[[Project 5]]</p>
+
+<p>There could then be a default folder for &#8220;unfiled&#8221; projects.</p>
+
+<p>This would do it for me.</p></div>
+	
+	
+	
+</td>
+
+</tr><tr>
+
+<td class="tableCellTwo"  style="width:130px;">
+	<table cellpadding="0" cellspacing="0" border="0" width="100%">
+	<tr>
+	<td align="center"><div class="button"><div class="buttonSmall" id="f1" onclick="navJump('http://www.getontracks.org/forums/member/35/')" onmouseover="navHover(this);" onmouseout="navReset(this);">Profile</div></div></td>
+	
+	
+
+	</tr>
+	</table>
+</td>
+
+<td class="tableCellTwo" colspan="2">
+	<table cellpadding="0" cellspacing="0" border="0">
+	<tr>
+	
+	
+	
+	
+	
+	
+		
+	
+	
+	&nbsp;
+	
+	<td>&nbsp;</td>	
+	</tr>
+	</table>
+  </td>
+ </tr>
+</table>
+
+</td>
+</tr>
+
+<tr id="g9" >
+ <td colspan="3">
+
+
+ <table class="threadBorder" cellpadding="0" cellspacing="0" border="0" style="width:100%;">
+  <tr>
+   <td class="tableRowHeadingBold" style="width:130px;"><div class="largeLinks"><a href="http://www.getontracks.org/forums/member/67/">Berko</a></div></td>
+   <td class="tableRowHeading">
+
+	<table cellpadding="0" cellspacing="0" border="0" style="width:99%;">
+	<tr>
+	<td>Posted: 14 August 2006 08:10 PM</td>
+	<td align="right">
+	
+		
+	
+	
+
+	
+	
+	&nbsp;&nbsp;<span class="smallLinks">[ <a href="http://www.getontracks.org/forums/ignore_member/67/" title="Ignore">Ignore</a> ]</span>
+	
+	&nbsp;&nbsp;<span class="smallLinks">[ <a name="125" href="http://www.getontracks.org/forums/viewreply/125/" title="Permalink to this post"># 6</a> ]</span>
+
+	&nbsp;
+	</td>
+	</tr>
+	</table>
+
+   </td>
+  </tr>
+<tr>
+ <td class="tableCellOne" style="width:130px;" valign="top">
+	<div class="rankMember">Newbie</div>
+	
+	<div class="itempad"><img src="http://www.getontracks.org/themes/forum_themes/blue/images/rank.gif" alt="Rank" class="rankImage" /></div>
+	<div class="userBlock">Total Posts:&nbsp; 1</div>
+	<div class="userBlock">Joined&nbsp; 2006-08-14</div>
+</td>
+<td class="tableCellOne" valign="top" colspan="2"><div class="post"><p>My interest in subprojects is two-fold, and FWIW, my lofi hPDA setup can&#8217;t benefit from this the same way an electronic version can. I, too, am a web designer, and I am frequently designing similar sites. So, to use the example from above, having two or three &#8220;Set up blog&#8221; and &#8220;Set up wiki&#8221; projects just leads to more confusion. On my lofi setup, I have to reference the project name repeatedly. &#8220;Set up CLIENT X wiki&#8221; and then my NA&#8217;s get even more messy because they also have to include the project name. I admittedly haven&#8217;t thought this out very far, but unless someone can describe a better way to track these subprojects&#8230;</p></div>
+	
+	
+	
+</td>
+
+</tr><tr>
+
+<td class="tableCellTwo"  style="width:130px;">
+	<table cellpadding="0" cellspacing="0" border="0" width="100%">
+	<tr>
+	<td align="center"><div class="button"><div class="buttonSmall" id="g1" onclick="navJump('http://www.getontracks.org/forums/member/67/')" onmouseover="navHover(this);" onmouseout="navReset(this);">Profile</div></div></td>
+	
+	
+
+	</tr>
+	</table>
+</td>
+
+<td class="tableCellTwo" colspan="2">
+	<table cellpadding="0" cellspacing="0" border="0">
+	<tr>
+	
+	
+	
+	
+	
+	
+		
+	
+	
+	&nbsp;
+	
+	<td>&nbsp;</td>	
+	</tr>
+	</table>
+  </td>
+ </tr>
+</table>
+
+</td>
+</tr>
+
+<tr id="h9" >
+ <td colspan="3">
+
+
+ <table class="threadBorder" cellpadding="0" cellspacing="0" border="0" style="width:100%;">
+  <tr>
+   <td class="tableRowHeadingBold" style="width:130px;"><div class="largeLinks"><a href="http://www.getontracks.org/forums/member/72/">gui ambros</a></div></td>
+   <td class="tableRowHeading">
+
+	<table cellpadding="0" cellspacing="0" border="0" style="width:99%;">
+	<tr>
+	<td>Posted: 25 August 2006 04:50 AM</td>
+	<td align="right">
+	
+		
+	
+	
+
+	
+	
+	&nbsp;&nbsp;<span class="smallLinks">[ <a href="http://www.getontracks.org/forums/ignore_member/72/" title="Ignore">Ignore</a> ]</span>
+	
+	&nbsp;&nbsp;<span class="smallLinks">[ <a name="140" href="http://www.getontracks.org/forums/viewreply/140/" title="Permalink to this post"># 7</a> ]</span>
+
+	&nbsp;
+	</td>
+	</tr>
+	</table>
+
+   </td>
+  </tr>
+<tr>
+ <td class="tableCellOne" style="width:130px;" valign="top">
+	<div class="rankMember">Newbie</div>
+	
+	<div class="itempad"><img src="http://www.getontracks.org/themes/forum_themes/blue/images/rank.gif" alt="Rank" class="rankImage" /></div>
+	<div class="userBlock">Total Posts:&nbsp; 1</div>
+	<div class="userBlock">Joined&nbsp; 2006-08-25</div>
+</td>
+<td class="tableCellOne" valign="top" colspan="2"><div class="post"><p>i strongly recommend you check how MLO (www.mylifeorganized.net) implements predecessors, subtasks and grouping of actions. I have tested dozens and dozens of GTD tools, and can assure that none is more simple nor flexible than MLO.</p>
+
+<p>the main limitation is that it&#8217;s windows-only (with a beta version for pocketpc), but no web. I really hate having to sync two computers, so I&#8217;m desperatly looking for Tracks to support predecessor and task grouping.</p>
+
+<p>if you want any help specifying, testing and some coding, I&#8217;m eager to help.</p>
+
+<p>regards,</p>
+
+<p>guilherme ambros</p></div>
+	
+	
+	
+</td>
+
+</tr><tr>
+
+<td class="tableCellTwo"  style="width:130px;">
+	<table cellpadding="0" cellspacing="0" border="0" width="100%">
+	<tr>
+	<td align="center"><div class="button"><div class="buttonSmall" id="h1" onclick="navJump('http://www.getontracks.org/forums/member/72/')" onmouseover="navHover(this);" onmouseout="navReset(this);">Profile</div></div></td>
+	
+	
+
+	</tr>
+	</table>
+</td>
+
+<td class="tableCellTwo" colspan="2">
+	<table cellpadding="0" cellspacing="0" border="0">
+	<tr>
+	
+	
+	
+	
+	
+	
+		
+	
+	
+	&nbsp;
+	
+	<td>&nbsp;</td>	
+	</tr>
+	</table>
+  </td>
+ </tr>
+</table>
+
+</td>
+</tr>
+
+<tr id="i9" >
+ <td colspan="3">
+
+
+ <table class="threadBorder" cellpadding="0" cellspacing="0" border="0" style="width:100%;">
+  <tr>
+   <td class="tableRowHeadingBold" style="width:130px;"><div class="largeLinks"><a href="http://www.getontracks.org/forums/member/21/">jpep</a></div></td>
+   <td class="tableRowHeading">
+
+	<table cellpadding="0" cellspacing="0" border="0" style="width:99%;">
+	<tr>
+	<td>Posted: 25 August 2006 02:04 PM</td>
+	<td align="right">
+	
+		
+	
+	
+
+	
+	
+	&nbsp;&nbsp;<span class="smallLinks">[ <a href="http://www.getontracks.org/forums/ignore_member/21/" title="Ignore">Ignore</a> ]</span>
+	
+	&nbsp;&nbsp;<span class="smallLinks">[ <a name="141" href="http://www.getontracks.org/forums/viewreply/141/" title="Permalink to this post"># 8</a> ]</span>
+
+	&nbsp;
+	</td>
+	</tr>
+	</table>
+
+   </td>
+  </tr>
+<tr>
+ <td class="tableCellOne" style="width:130px;" valign="top">
+	<div class="rankMember">Newbie</div>
+	
+	<div class="itempad"><img src="http://www.getontracks.org/themes/forum_themes/blue/images/rank.gif" alt="Rank" class="rankImage" /></div>
+	<div class="userBlock">Total Posts:&nbsp; 10</div>
+	<div class="userBlock">Joined&nbsp; 2006-07-11</div>
+</td>
+<td class="tableCellOne" valign="top" colspan="2"><div class="post"><p>What about adding tags to projects and tasks. That would offer much flexibility. We would then need the ability to filter projects and tasks by tags.</p></div>
+	
+	
+	
+</td>
+
+</tr><tr>
+
+<td class="tableCellTwo"  style="width:130px;">
+	<table cellpadding="0" cellspacing="0" border="0" width="100%">
+	<tr>
+	<td align="center"><div class="button"><div class="buttonSmall" id="i1" onclick="navJump('http://www.getontracks.org/forums/member/21/')" onmouseover="navHover(this);" onmouseout="navReset(this);">Profile</div></div></td>
+	
+	
+
+	</tr>
+	</table>
+</td>
+
+<td class="tableCellTwo" colspan="2">
+	<table cellpadding="0" cellspacing="0" border="0">
+	<tr>
+	
+	
+	
+	
+	
+	
+		
+	
+	
+	&nbsp;
+	
+	<td>&nbsp;</td>	
+	</tr>
+	</table>
+  </td>
+ </tr>
+</table>
+
+</td>
+</tr>
+
+<tr id="j9" >
+ <td colspan="3">
+
+
+ <table class="threadBorder" cellpadding="0" cellspacing="0" border="0" style="width:100%;">
+  <tr>
+   <td class="tableRowHeadingBold" style="width:130px;"><div class="largeLinks"><a href="http://www.getontracks.org/forums/member/98/">tryingtracks</a></div></td>
+   <td class="tableRowHeading">
+
+	<table cellpadding="0" cellspacing="0" border="0" style="width:99%;">
+	<tr>
+	<td>Posted: 03 October 2006 10:14 PM</td>
+	<td align="right">
+	
+		
+	
+	
+
+	
+	
+	&nbsp;&nbsp;<span class="smallLinks">[ <a href="http://www.getontracks.org/forums/ignore_member/98/" title="Ignore">Ignore</a> ]</span>
+	
+	&nbsp;&nbsp;<span class="smallLinks">[ <a name="190" href="http://www.getontracks.org/forums/viewreply/190/" title="Permalink to this post"># 9</a> ]</span>
+
+	&nbsp;
+	</td>
+	</tr>
+	</table>
+
+   </td>
+  </tr>
+<tr>
+ <td class="tableCellOne" style="width:130px;" valign="top">
+	<div class="rankMember">Newbie</div>
+	
+	<div class="itempad"><img src="http://www.getontracks.org/themes/forum_themes/blue/images/rank.gif" alt="Rank" class="rankImage" /></div>
+	<div class="userBlock">Total Posts:&nbsp; 1</div>
+	<div class="userBlock">Joined&nbsp; 2006-10-03</div>
+</td>
+<td class="tableCellOne" valign="top" colspan="2"><div class="post"><p>I use subprojects as way to think about my project list horizontally.&nbsp; It&#8217;s great to be able to scan across a 20,000 foot list of areas of responsibility to think of any projects that might be missing:</p>
+
+<div class="codeblock"><code><span style="color: #000000">
+<span style="color: #007700">+&nbsp;</span><span style="color: #0000BB">Household<br />&nbsp;&nbsp;&nbsp;</span><span style="color: #007700">-&nbsp;</span><span style="color: #0000BB">Fix&nbsp;broken&nbsp;faucet&nbsp;in&nbsp;kitchen<br />&nbsp;&nbsp;&nbsp;</span><span style="color: #007700">-&nbsp;</span><span style="color: #0000BB">Repaint&nbsp;Living&nbsp;Room<br /><br /></span><span style="color: #007700">+&nbsp;</span><span style="color: #0000BB">Health<br />&nbsp;&nbsp;&nbsp;</span><span style="color: #007700">-&nbsp;</span><span style="color: #0000BB">Set&nbsp;up&nbsp;annual&nbsp;checkup&nbsp;appt&nbsp;<br />&nbsp;&nbsp;&nbsp;</span><span style="color: #007700">-&nbsp;</span><span style="color: #0000BB">Join&nbsp;gym&nbsp;closer&nbsp;to&nbsp;work<br /><br /></span><span style="color: #007700">+&nbsp;</span><span style="color: #0000BB">Work<br />&nbsp;&nbsp;&nbsp;</span><span style="color: #007700">-&nbsp;</span><span style="color: #0000BB">Finalize&nbsp;Acme&nbsp;RFQ<br />&nbsp;&nbsp;&nbsp;</span><span style="color: #007700">-&nbsp;</span><span style="color: #0000BB">Submit&nbsp;TE&nbsp;report<br />&nbsp;&nbsp;&nbsp;</span><span style="color: #007700">-&nbsp;...&nbsp;</span>
+</span>
+</code></div>
+
+<p>and so on&#8230;&nbsp; I could store all of this in another system, but it would be redundant.&nbsp; I would prefer to keep it all in the same place.</p>
+
+<p>Some form of folders or nesting would be a great feature to add&#8212;consider this one vote to add it!</p></div>
+	
+	
+	
+</td>
+
+</tr><tr>
+
+<td class="tableCellTwo"  style="width:130px;">
+	<table cellpadding="0" cellspacing="0" border="0" width="100%">
+	<tr>
+	<td align="center"><div class="button"><div class="buttonSmall" id="j1" onclick="navJump('http://www.getontracks.org/forums/member/98/')" onmouseover="navHover(this);" onmouseout="navReset(this);">Profile</div></div></td>
+	
+	
+
+	</tr>
+	</table>
+</td>
+
+<td class="tableCellTwo" colspan="2">
+	<table cellpadding="0" cellspacing="0" border="0">
+	<tr>
+	
+	
+	
+	
+	
+	
+		
+	
+	
+	&nbsp;
+	
+	<td>&nbsp;</td>	
+	</tr>
+	</table>
+  </td>
+ </tr>
+</table>
+
+</td>
+</tr>
+
+<tr id="k9" >
+ <td colspan="3">
+
+
+ <table class="threadBorder" cellpadding="0" cellspacing="0" border="0" style="width:100%;">
+  <tr>
+   <td class="tableRowHeadingBold" style="width:130px;"><div class="largeLinks"><a href="http://www.getontracks.org/forums/member/100/">Reinier Balt</a></div></td>
+   <td class="tableRowHeading">
+
+	<table cellpadding="0" cellspacing="0" border="0" style="width:99%;">
+	<tr>
+	<td>Posted: 05 October 2006 07:46 AM</td>
+	<td align="right">
+	
+		
+	
+	
+
+	
+	
+	&nbsp;&nbsp;<span class="smallLinks">[ <a href="http://www.getontracks.org/forums/ignore_member/100/" title="Ignore">Ignore</a> ]</span>
+	
+	&nbsp;&nbsp;<span class="smallLinks">[ <a name="192" href="http://www.getontracks.org/forums/viewreply/192/" title="Permalink to this post"># 10</a> ]</span>
+
+	&nbsp;
+	</td>
+	</tr>
+	</table>
+
+   </td>
+  </tr>
+<tr>
+ <td class="tableCellOne" style="width:130px;" valign="top">
+	<div class="rankMember">Sr. Member</div>
+	
+	<div class="itempad"><img src="http://www.getontracks.org/themes/forum_themes/blue/images/rank.gif" alt="Rank" class="rankImage" /><img src="http://www.getontracks.org/themes/forum_themes/blue/images/rank.gif" alt="Rank" class="rankImage" /><img src="http://www.getontracks.org/themes/forum_themes/blue/images/rank.gif" alt="Rank" class="rankImage" /><img src="http://www.getontracks.org/themes/forum_themes/blue/images/rank.gif" alt="Rank" class="rankImage" /></div>
+	<div class="userBlock">Total Posts:&nbsp; 882</div>
+	<div class="userBlock">Joined&nbsp; 2006-10-05</div>
+</td>
+<td class="tableCellOne" valign="top" colspan="2"><div class="post"><p>I have the same problem too. I&#8217;ve &#8216;solved&#8217; it by using a naming convention, for example</p>
+
+<p>&lt;client&gt;&#8212;&lt;subproject&gt;</p>
+
+<p>and for private projects: <br />
+Private - Clean Garage<br />
+Private - Fix website</p>
+
+<p>Using drag-and-drop you can group them together in the project list</p>
+
+<p>It works for me, but it would be nice to use some sort of grouping to be able to review all tasks within the grouping. For example, to see all next actions for a specific client (in my example). Like an aggragation view of all the (sub)projects.</p></div>
+	
+	
+	
+</td>
+
+</tr><tr>
+
+<td class="tableCellTwo"  style="width:130px;">
+	<table cellpadding="0" cellspacing="0" border="0" width="100%">
+	<tr>
+	<td align="center"><div class="button"><div class="buttonSmall" id="k1" onclick="navJump('http://www.getontracks.org/forums/member/100/')" onmouseover="navHover(this);" onmouseout="navReset(this);">Profile</div></div></td>
+	
+	
+
+	</tr>
+	</table>
+</td>
+
+<td class="tableCellTwo" colspan="2">
+	<table cellpadding="0" cellspacing="0" border="0">
+	<tr>
+	
+	
+	
+	
+	
+	
+		
+	
+	
+	&nbsp;
+	
+	<td>&nbsp;</td>	
+	</tr>
+	</table>
+  </td>
+ </tr>
+</table>
+
+</td>
+</tr>
+
+<tr id="l9" >
+ <td colspan="3">
+
+
+ <table class="threadBorder" cellpadding="0" cellspacing="0" border="0" style="width:100%;">
+  <tr>
+   <td class="tableRowHeadingBold" style="width:130px;"><div class="largeLinks"><a href="http://www.getontracks.org/forums/member/103/">mahalie</a></div></td>
+   <td class="tableRowHeading">
+
+	<table cellpadding="0" cellspacing="0" border="0" style="width:99%;">
+	<tr>
+	<td>Posted: 16 October 2006 10:31 PM</td>
+	<td align="right">
+	
+		
+	
+	
+
+	
+	
+	&nbsp;&nbsp;<span class="smallLinks">[ <a href="http://www.getontracks.org/forums/ignore_member/103/" title="Ignore">Ignore</a> ]</span>
+	
+	&nbsp;&nbsp;<span class="smallLinks">[ <a name="196" href="http://www.getontracks.org/forums/viewreply/196/" title="Permalink to this post"># 11</a> ]</span>
+
+	&nbsp;
+	</td>
+	</tr>
+	</table>
+
+   </td>
+  </tr>
+<tr>
+ <td class="tableCellOne" style="width:130px;" valign="top">
+	<div class="rankMember">Newbie</div>
+	
+	<div class="itempad"><img src="http://www.getontracks.org/themes/forum_themes/blue/images/rank.gif" alt="Rank" class="rankImage" /></div>
+	<div class="userBlock">Total Posts:&nbsp; 2</div>
+	<div class="userBlock">Joined&nbsp; 2006-10-16</div>
+</td>
+<td class="tableCellOne" valign="top" colspan="2"><div class="post"><p>Ditto Tags - that way people who need to relate a project to another have a very flexible mechanism. Another reason why I think tags could be great to have is the case where you have a task that actually affects two different projects. </p>
+
+<p>Add Tags AND task dependencies and I may pee my pants with joy. Oh yes, it&#8217;s all I&#8217;ve been looking for and not finding in a web based system. I wish I knew ruby&#8230;and didn&#8217;t have to learn .net for work. I&#8217;m good at visualization, db design and guis though so maybe I can whip up some mockups.</p></div>
+	
+	
+	
+</td>
+
+</tr><tr>
+
+<td class="tableCellTwo"  style="width:130px;">
+	<table cellpadding="0" cellspacing="0" border="0" width="100%">
+	<tr>
+	<td align="center"><div class="button"><div class="buttonSmall" id="l1" onclick="navJump('http://www.getontracks.org/forums/member/103/')" onmouseover="navHover(this);" onmouseout="navReset(this);">Profile</div></div></td>
+	
+	
+
+	</tr>
+	</table>
+</td>
+
+<td class="tableCellTwo" colspan="2">
+	<table cellpadding="0" cellspacing="0" border="0">
+	<tr>
+	
+	
+	
+	
+	
+	
+		
+	
+	
+	&nbsp;
+	
+	<td>&nbsp;</td>	
+	</tr>
+	</table>
+  </td>
+ </tr>
+</table>
+
+</td>
+</tr>
+
+<tr id="m9" >
+ <td colspan="3">
+
+
+ <table class="threadBorder" cellpadding="0" cellspacing="0" border="0" style="width:100%;">
+  <tr>
+   <td class="tableRowHeadingBold" style="width:130px;"><div class="largeLinks"><a href="http://www.getontracks.org/forums/member/1/">bsag</a></div></td>
+   <td class="tableRowHeading">
+
+	<table cellpadding="0" cellspacing="0" border="0" style="width:99%;">
+	<tr>
+	<td>Posted: 21 October 2006 10:45 AM</td>
+	<td align="right">
+	
+		
+	
+	
+
+	
+	
+	&nbsp;&nbsp;<span class="smallLinks">[ <a href="http://www.getontracks.org/forums/ignore_member/1/" title="Ignore">Ignore</a> ]</span>
+	
+	&nbsp;&nbsp;<span class="smallLinks">[ <a name="200" href="http://www.getontracks.org/forums/viewreply/200/" title="Permalink to this post"># 12</a> ]</span>
+
+	&nbsp;
+	</td>
+	</tr>
+	</table>
+
+   </td>
+  </tr>
+<tr>
+ <td class="tableCellOne" style="width:130px;" valign="top">
+	<div class="rankAdmin">Administrator</div>
+	<div class="itempad"><img src="http://www.getontracks.org/images/avatars/uploads/avatar_1.png" width="80" height="80" border="0" alt="Avatar" /></div>
+	<div class="itempad"><img src="http://www.getontracks.org/themes/forum_themes/blue/images/rank.gif" alt="Rank" class="rankImage" /><img src="http://www.getontracks.org/themes/forum_themes/blue/images/rank.gif" alt="Rank" class="rankImage" /><img src="http://www.getontracks.org/themes/forum_themes/blue/images/rank.gif" alt="Rank" class="rankImage" /><img src="http://www.getontracks.org/themes/forum_themes/blue/images/rank.gif" alt="Rank" class="rankImage" /></div>
+	<div class="userBlock">Total Posts:&nbsp; 223</div>
+	<div class="userBlock">Joined&nbsp; 2006-03-05</div>
+</td>
+<td class="tableCellOne" valign="top" colspan="2"><div class="post"><blockquote><div class="quote_author">jpep - 25 August 2006 02:04 PM</div><p>What about adding tags to projects and tasks. That would offer much flexibility. We would then need the ability to filter projects and tasks by tags.</p>
+</blockquote>
+
+<p>Yes, I quite like that idea if I could sort out a neat way to display and interact with it. It would be less cumbersome than a linear hierarchy, and if you didn&#8217;t want to add tags, you could just ignore it.</p></div>
+	
+	
+	
+</td>
+
+</tr><tr>
+
+<td class="tableCellTwo"  style="width:130px;">
+	<table cellpadding="0" cellspacing="0" border="0" width="100%">
+	<tr>
+	<td align="center"><div class="button"><div class="buttonSmall" id="m1" onclick="navJump('http://www.getontracks.org/forums/member/1/')" onmouseover="navHover(this);" onmouseout="navReset(this);">Profile</div></div></td>
+	
+	
+
+	</tr>
+	</table>
+</td>
+
+<td class="tableCellTwo" colspan="2">
+	<table cellpadding="0" cellspacing="0" border="0">
+	<tr>
+	
+	
+	
+	
+	
+	
+		
+	
+	
+	&nbsp;
+	
+	<td>&nbsp;</td>	
+	</tr>
+	</table>
+  </td>
+ </tr>
+</table>
+
+</td>
+</tr>
+
+<tr id="n9" >
+ <td colspan="3">
+
+
+ <table class="threadBorder" cellpadding="0" cellspacing="0" border="0" style="width:100%;">
+  <tr>
+   <td class="tableRowHeadingBold" style="width:130px;"><div class="largeLinks"><a href="http://www.getontracks.org/forums/member/107/">trackspete</a></div></td>
+   <td class="tableRowHeading">
+
+	<table cellpadding="0" cellspacing="0" border="0" style="width:99%;">
+	<tr>
+	<td>Posted: 25 October 2006 01:59 PM</td>
+	<td align="right">
+	
+		
+	
+	
+
+	
+	
+	&nbsp;&nbsp;<span class="smallLinks">[ <a href="http://www.getontracks.org/forums/ignore_member/107/" title="Ignore">Ignore</a> ]</span>
+	
+	&nbsp;&nbsp;<span class="smallLinks">[ <a name="214" href="http://www.getontracks.org/forums/viewreply/214/" title="Permalink to this post"># 13</a> ]</span>
+
+	&nbsp;
+	</td>
+	</tr>
+	</table>
+
+   </td>
+  </tr>
+<tr>
+ <td class="tableCellOne" style="width:130px;" valign="top">
+	<div class="rankMember">Newbie</div>
+	
+	<div class="itempad"><img src="http://www.getontracks.org/themes/forum_themes/blue/images/rank.gif" alt="Rank" class="rankImage" /></div>
+	<div class="userBlock">Total Posts:&nbsp; 1</div>
+	<div class="userBlock">Joined&nbsp; 2006-10-25</div>
+</td>
+<td class="tableCellOne" valign="top" colspan="2"><div class="post"><p>I have a great interest in Tracks for its web-server based approach AND the Ruby code behing it. </p>
+
+<p>One major request has come up though, which is the possibility to use sub-projects. <br />
+4 levels would do the job for us, the lowest level being deliverables (or tasks, or actions, you name it). </p>
+
+<p>This would allow to have a concise overview of a complete project, and zoom in to the lower levels. similar in presentation to the tree structure shown in a desktop explorer. <br />
+Others have explained it so well above, I cannot add any useful info here. </p>
+
+<p>So do you have any plans to make tracks manage sub-projects and if so, any idea when that would be forthcoming? <br />
+And, if it is useful at all, I may ask a few ruby developers to look at the code to see how it could be adapted. </p>
+
+<p>regards, </p>
+
+<p>peter</p></div>
+	
+	
+	
+</td>
+
+</tr><tr>
+
+<td class="tableCellTwo"  style="width:130px;">
+	<table cellpadding="0" cellspacing="0" border="0" width="100%">
+	<tr>
+	<td align="center"><div class="button"><div class="buttonSmall" id="n1" onclick="navJump('http://www.getontracks.org/forums/member/107/')" onmouseover="navHover(this);" onmouseout="navReset(this);">Profile</div></div></td>
+	
+	
+
+	</tr>
+	</table>
+</td>
+
+<td class="tableCellTwo" colspan="2">
+	<table cellpadding="0" cellspacing="0" border="0">
+	<tr>
+	
+	
+	
+	
+	
+	
+		
+	
+	
+	&nbsp;
+	
+	<td>&nbsp;</td>	
+	</tr>
+	</table>
+  </td>
+ </tr>
+</table>
+
+</td>
+</tr>
+
+<tr id="o9" >
+ <td colspan="3">
+
+
+ <table class="threadBorder" cellpadding="0" cellspacing="0" border="0" style="width:100%;">
+  <tr>
+   <td class="tableRowHeadingBold" style="width:130px;"><div class="largeLinks"><a href="http://www.getontracks.org/forums/member/1/">bsag</a></div></td>
+   <td class="tableRowHeading">
+
+	<table cellpadding="0" cellspacing="0" border="0" style="width:99%;">
+	<tr>
+	<td>Posted: 29 October 2006 11:01 AM</td>
+	<td align="right">
+	
+		
+	
+	
+
+	
+	
+	&nbsp;&nbsp;<span class="smallLinks">[ <a href="http://www.getontracks.org/forums/ignore_member/1/" title="Ignore">Ignore</a> ]</span>
+	
+	&nbsp;&nbsp;<span class="smallLinks">[ <a name="223" href="http://www.getontracks.org/forums/viewreply/223/" title="Permalink to this post"># 14</a> ]</span>
+
+	&nbsp;
+	</td>
+	</tr>
+	</table>
+
+   </td>
+  </tr>
+<tr>
+ <td class="tableCellOne" style="width:130px;" valign="top">
+	<div class="rankAdmin">Administrator</div>
+	<div class="itempad"><img src="http://www.getontracks.org/images/avatars/uploads/avatar_1.png" width="80" height="80" border="0" alt="Avatar" /></div>
+	<div class="itempad"><img src="http://www.getontracks.org/themes/forum_themes/blue/images/rank.gif" alt="Rank" class="rankImage" /><img src="http://www.getontracks.org/themes/forum_themes/blue/images/rank.gif" alt="Rank" class="rankImage" /><img src="http://www.getontracks.org/themes/forum_themes/blue/images/rank.gif" alt="Rank" class="rankImage" /><img src="http://www.getontracks.org/themes/forum_themes/blue/images/rank.gif" alt="Rank" class="rankImage" /></div>
+	<div class="userBlock">Total Posts:&nbsp; 223</div>
+	<div class="userBlock">Joined&nbsp; 2006-03-05</div>
+</td>
+<td class="tableCellOne" valign="top" colspan="2"><div class="post"><p>I think that&#8217;s answered above: I&#8217;ve been thinking about sub-projects, but might use tags instead for a more flexible approach. As for timescale, it will happen when it happens <img src="http://www.getontracks.org/images/smileys/grin.gif" width="19" height="19" alt="grin" style="border:0;" /></p></div>
+	
+	
+	
+</td>
+
+</tr><tr>
+
+<td class="tableCellTwo"  style="width:130px;">
+	<table cellpadding="0" cellspacing="0" border="0" width="100%">
+	<tr>
+	<td align="center"><div class="button"><div class="buttonSmall" id="o1" onclick="navJump('http://www.getontracks.org/forums/member/1/')" onmouseover="navHover(this);" onmouseout="navReset(this);">Profile</div></div></td>
+	
+	
+
+	</tr>
+	</table>
+</td>
+
+<td class="tableCellTwo" colspan="2">
+	<table cellpadding="0" cellspacing="0" border="0">
+	<tr>
+	
+	
+	
+	
+	
+	
+		
+	
+	
+	&nbsp;
+	
+	<td>&nbsp;</td>	
+	</tr>
+	</table>
+  </td>
+ </tr>
+</table>
+
+</td>
+</tr>
+
+<tr id="p9" >
+ <td colspan="3">
+
+
+ <table class="threadBorder" cellpadding="0" cellspacing="0" border="0" style="width:100%;">
+  <tr>
+   <td class="tableRowHeadingBold" style="width:130px;"><div class="largeLinks"><a href="http://www.getontracks.org/forums/member/106/">matt zollinhofer</a></div></td>
+   <td class="tableRowHeading">
+
+	<table cellpadding="0" cellspacing="0" border="0" style="width:99%;">
+	<tr>
+	<td>Posted: 07 November 2006 04:38 AM</td>
+	<td align="right">
+	
+		
+	
+	
+
+	
+	
+	&nbsp;&nbsp;<span class="smallLinks">[ <a href="http://www.getontracks.org/forums/ignore_member/106/" title="Ignore">Ignore</a> ]</span>
+	
+	&nbsp;&nbsp;<span class="smallLinks">[ <a name="241" href="http://www.getontracks.org/forums/viewreply/241/" title="Permalink to this post"># 15</a> ]</span>
+
+	&nbsp;
+	</td>
+	</tr>
+	</table>
+
+   </td>
+  </tr>
+<tr>
+ <td class="tableCellOne" style="width:130px;" valign="top">
+	<div class="rankMember">Newbie</div>
+	
+	<div class="itempad"><img src="http://www.getontracks.org/themes/forum_themes/blue/images/rank.gif" alt="Rank" class="rankImage" /></div>
+	<div class="userBlock">Total Posts:&nbsp; 2</div>
+	<div class="userBlock">Joined&nbsp; 2006-10-22</div>
+</td>
+<td class="tableCellOne" valign="top" colspan="2"><div class="post"><p>I just wanted to chip in with my support for some sort of subprojects implementation.&nbsp; I&#8217;m in the same position others have mentioned.&nbsp; I&#8217;ve got some development projects I&#8217;m working on and it&#8217;s helpful to be able to group the projects together (Main project: Develop WebApp, sub projects: develop look and feel, develop data structures, develop logic structure, etc).&nbsp;   I&#8217;m not sure if tagging would quite capture the desire to _not_ see certain things if they were hidden within another task.&nbsp; Then again, it is getting late and maybe I&#8217;m just not thinking about it right.</p></div>
+	
+	
+	
+</td>
+
+</tr><tr>
+
+<td class="tableCellTwo"  style="width:130px;">
+	<table cellpadding="0" cellspacing="0" border="0" width="100%">
+	<tr>
+	<td align="center"><div class="button"><div class="buttonSmall" id="p1" onclick="navJump('http://www.getontracks.org/forums/member/106/')" onmouseover="navHover(this);" onmouseout="navReset(this);">Profile</div></div></td>
+	
+	
+
+	</tr>
+	</table>
+</td>
+
+<td class="tableCellTwo" colspan="2">
+	<table cellpadding="0" cellspacing="0" border="0">
+	<tr>
+	
+	
+	
+	
+	
+	
+		
+	
+	
+	&nbsp;
+	
+	<td>&nbsp;</td>	
+	</tr>
+	</table>
+  </td>
+ </tr>
+</table>
+
+</td>
+</tr>
+
+</table>
+
+<table cellpadding="0" cellspacing="0" border="0" style="width:100%;">
+<tr>
+<td valign="middle" style="width:70%;">
+
+
+<table cellpadding="0" cellspacing="0" border="0" class="paginateBorder">
+<tr>
+<td><div class="paginateStat">1 of 2</div></td>
+<td><div class="paginateCur">1</div></td><td><div class="paginate"><a href="http://www.getontracks.org/forums/viewthread/20/P15">2</a></div></td><td><div class="paginate"><a href="http://www.getontracks.org/forums/viewthread/20/P15">Next</a></div></td>
+</tr>
+</table>
+
+
+</td>
+&nbsp;
+
+&nbsp;
+
+</tr>
+</table>
+
+&nbsp;
+
+
+<div class="defaultCenter">
+<div class="marginpad">
+
+
+&lsaquo;&lsaquo; <a href="http://www.getontracks.org/forums/viewthread/18/">Random Next Action</a> 
+
+
+
+&nbsp;&nbsp;&nbsp;&nbsp; <a href="http://www.getontracks.org/forums/viewthread/22/">Do you delete completed projects&#63;</a> &rsaquo;&rsaquo;
+
+
+</div>
+</div>
+</div>
+<div id="footer">
+
+	
+	<div id="switcher">Select A Theme 
+		<select name="theme_switcher" class="select" onchange="if (this.value != '') location.href=this.value">
+			<option value="http://www.getontracks.org/?ACT=42&amp;board_id=1&amp;theme=grey">Grey</option>
+<option value="http://www.getontracks.org/?ACT=42&amp;board_id=1&amp;theme=developer">Developer</option>
+<option value="http://www.getontracks.org/?ACT=42&amp;board_id=1&amp;theme=shares">Shares</option>
+<option value="http://www.getontracks.org/?ACT=42&amp;board_id=1&amp;theme=blue" selected="selected">Blue</option>
+<option value="http://www.getontracks.org/?ACT=42&amp;board_id=1&amp;theme=default">Default</option>
+
+		</select>
+	</div><!--switcher-->
+	
+
+	<ul class="credits">
+		<li>Powered By <a href="http://expressionengine.com/">ExpressionEngine</a></li>
+		<li>Template Design By <a href="http://artificialmemory.com/" title="Nathaniel Davis">Artificial Memory</a></li>
+        </ul>
+        <ul class="stats">
+		<li>ExpressionEngine Discussion Forum - version 3.1.5 (20110630)</li>
+		<li>Script Executed in 0.1631 seconds</li>
+	</ul>
+	
+	
+	<ul class="feeds">
+		<li><a href="http://www.getontracks.org/forums/rss/10/"><img src="http://www.getontracks.org/themes/forum_themes/blue/images/feed_rss.jpg" alt="RSS 2.0" title="RSS 2.0" /></a></li>
+		<li><a href="http://www.getontracks.org/forums/atom/10/"><img src="http://www.getontracks.org/themes/forum_themes/blue/images/feed_atom.jpg" alt="Atom Feed" title="Atom Feed" /></a></li>
+	</ul>
+	
+
+</div><!--footer-->
+</div><!--wrapper-->
+</body>
+</html>

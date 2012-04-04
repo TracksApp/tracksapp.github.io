@@ -1,1 +1,297 @@
-My Octopress Page is coming soon &hellip;
+
+<!DOCTYPE html>
+<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
+<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
+<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <title>Tracks</title>
+  <meta name="author" content="TracksApp">
+
+  
+  <meta name="description" content="    Tracks 2.0Tracks is a web-based application to help you implement David Allen&#8217;s Getting Things Done&#8482; methodology. It was built usin...">
+  
+
+  <!-- http://t.co/dKP3o1e -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  
+  <link rel="canonical" href="http://www.getontracks.org/">
+  <link href="/favicon.png" rel="icon">
+  <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+  <script src="/javascripts/modernizr-2.0.js"></script>
+  <script src="/javascripts/ender.js"></script>
+  <script src="/javascripts/octopress.js" type="text/javascript"></script>
+  <link href="/tracks/atom.xml" rel="alternate" title="Tracks" type="application/atom+xml">
+  <!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
+<link href="http://fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+<link href="http://fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+
+</head>
+
+<body   >
+  <header role="banner"><hgroup>
+<h1><a href="/"><img src="/images/tracks-logo-dark.png" /></a></h1>
+</hgroup>
+
+</header>
+  <nav role="navigation"><ul class="subscription" data-subscription="rss">
+  <li><a href="/tracks/atom.xml" rel="subscribe-rss" title="subscribe via RSS">RSS</a></li>
+  
+</ul>
+<form action="http://google.com/search" method="get">
+  <fieldset role="search">
+    <input type="hidden" name="q" value="site:www.getontracks.org" />
+    <input class="search" type="text" name="q" results="0" placeholder="Search"/>
+  </fieldset>
+</form>
+<ul class="main-navigation">
+  <li><a href="/">Home</a></li>
+  <li><a href="/news/">News</a></li>
+  <li><a href="/articles/">Articles</a></li>
+  <li><a href="/manual/">Manual</a></li>
+  <li><a href="/downloads/">Downloads</a></li>
+  <li><a href="/development/">Development</a></li>
+  <li><a href="/screenshots/">Screenshots</a></li>
+</ul>
+
+</nav>
+  <div id="main">
+    <div id="content">
+      <div>
+<article role="article">
+  
+  <h2>Tracks 2.0</h2>
+
+<p><img class="left" src="/images/screens/tracks_home_thumb.png" title="'Full screen screenshot of Tracks'" ></p>
+
+<p>Tracks is a web-based application to help you implement <a href="http://www.davidco.com/">David Allen&#8217;s</a> <a href="http://www.amazon.com/gp/product/0142000280/qid=1143370534/sr=2-1/ref=pd_bbs_b_2_1/103-9587420-9758203?s=books&amp;v=glance&amp;n=283155">Getting Things Done&#8482;</a> methodology. It was built using <a href="http://www.rubyonrails.com/">Ruby on Rails</a>, and comes with a built-in webserver (<span class="caps">WEB</span>rick), so that you can run it on your own computer if you like. It can be run on any platform on which Ruby can be installed, including Mac OS X, Windows and Linux. Tracks is Open Source, free and licensed under the <a href="http://creativecommons.org/licenses/GPL/2.0/"><span class="caps">GNU</span> <span class="caps">GPL</span></a>.</p>
+
+<h2>Current features</h2>
+
+<h3>Flexible views of your actions</h3>
+
+<p><img class="left" src="/images/screens/tracks_context_list.png" title="'Screenshot of context list'" ></p>
+
+<p>The main page shows all your actions sorted by context, but you can also view pages showing just the actions in one context (for when you want to focus on your office tasks, email or errands), or just the actions in one project. You can add as many contexts and projects as you like, and drag them around on the page to change the sort order, so that your more commonly used contexts and projects are at the top of the page. Projects can have attached notes, as can individual actions. You can also mark projects as active, hidden or completed. If you want to put a project on the back-burner for a while, but you haven&#8217;t completed it, marking it as hidden hides the project&#8217;s actions from your home page. Similarly, contexts can be hidden from the home page, which is handy for contexts such as &#8216;Someday/Maybe&#8217;: things you want to make a note of, but which you don&#8217;t want to deal with right now.</p>
+
+<h3>Tagging and starring</h3>
+
+<p><img class="left" src="/images/screens/tracks_tags.png" title="'Screenshot of tags'" ></p>
+
+<p>If you need alternative ways to slice your actions, you can now tag actions with free-form tags, and view all actions tagged with a particular tag on one page. This gives you another way to look at  your data which works in parallel with the more traditional contexts and projects. In addition, you can &#8216;star&#8217; actions very quickly by just clicking the star icon. Starred actions can also be viewed on their own page, and can be used in whatever way you find most helpful. A starred task might be a particularly urgent or important one, or something you&#8217;re aiming to do today.</p>
+
+<h3>Quick and easy adding of new actions</h3>
+
+<p><img class="left" src="/images/screens/tracks_home.png" title="'Screenshot of adding actions" ></p>
+
+<p>The main editing functions in Tracks use Ajax, which &#8212; if you&#8217;re not into the terminology &#8212; means that you see nearly instant changes to the page without having to refresh the page. A form on the main page lets you add actions to any context or project, whereas forms on context and project pages automatically assign the current context or project to the new next action. In Tracks 1.5, your existing context and project names are auto-completed as you type, saving you time and reducing input errors. Furthermore, you can set a default context for each of your projects, which saves you typing &#8216;Office&#8217; for every action in a particular project.</p>
+
+<h3>Getting yourself organised</h3>
+
+<p><img class="left" src="/images/screens/tracks_tickler.png" title="'Screenshot of tickler" ></p>
+
+<p>Actions can have due dates (which are optional), which are displayed in your preferred format. The due date is displayed with a coloured background, depending on how far away the date is. If it&#8217;s due today, or overdue, the background is red. If it&#8217;s due tomorrow it&#8217;s dark orange, if due in the next 7 days, it&#8217;s orange, otherwise it&#8217;s green. It&#8217;s basically a traffic light code. A new feature in Tracks 1.5 lets you schedule actions for the future. The &#8216;tickler&#8217; allows you to schedule actions to be shown on the home page after some future date. This allows you to get the action out of your head into a concrete, safe system (where it belongs), but you don&#8217;t need to be bothered by the action until the time comes when you can actually deal with it. You can show a configurable number of completed items at the bottom of the main page, but you can see all your completed items on the completed page.</p>
+
+<h3>Getting everyone organised</h3>
+
+<p><img class="left" src="/images/screens/tracks_preferences.png" title="'Screenshot of preferences" ></p>
+
+<p>Tracks is multi-user: each user has his or her own contexts, projects and next actions, and their own preferences for things like date formatting. As the admin user, you set your own account up and then you can add or delete additional users. Non-admin users can&#8217;t create new accounts, which prevents someone finding your page and signing themselves up. A login page keeps everyone&#8217;s actions private. Get your family, friends and co-workers sorted out!</p>
+
+<h3>Measure your progress</h3>
+
+<p><img class="left" src="/images/screens/tracks_stats.png" title="'Screenshot of statistics page" ></p>
+
+<p>New in Tracks 1.5 is a comprehensive statistics page, which shows you a wealth of information about your progress. You can view the average time you take to complete tasks, and see how many actions you&#8217;ve completed in the past month or year. Do you suspect that you are most productive on Mondays, but least productive on Fridays? Now you can find out if that&#8217;s true. The statistics page allows you to measure your progress and plan your time to exploit those periods when you are at your most dynamic and effective.</p>
+
+<h3>Getting informed</h3>
+
+<p><img class="left" src="/images/screens/tracks_feeds.png" title="'Screenshot of feeds'" ></p>
+
+<p>Tracks has numerous feeds (both text, iCal and <span class="caps">RSS</span>), so you can subscribe to your list of next actions to see all of your stuff, or just the urgent things due in the next seven days. Do you need to provide your employer or clients with a report of your work during the week? Then just subscribe to the completed actions in the past 7 days feed, and the job is nearly done. You can now also export your data in <span class="caps">YAML</span>, <span class="caps">CSV</span> or <span class="caps">XML</span> format, making it easy to use your data for other purposes, or just make a backup.</p>
+
+<h3>Other ways to interact with Tracks</h3>
+
+<p>Tracks now has a great <span class="caps">API</span>, so if you&#8217;re handy with a shell script, Ruby script or AppleScript, you can create other ways to get data into and out of your Tracks installation. If you have a browser on your mobile phone, you can access a clean, lightweight interface to Tracks by visiting http://yourtracks.url/mobile/ &#8211; a great way to get things done on the move!</p>
+
+<h2>Getting Tracks</h2>
+
+<p>You can download a zipped file containing the latest stable version of Tracks by using the &#8216;Get Tracks&#8217; button in the sidebar on the right of this page. If you&#8217;d like to get a development version, or contribute to the project, all the information you need is on the <a href="/development">Development page</a>.</p>
+
+<h2>History</h2>
+
+<p>The origins of this application are <a href="http://www.rousette.org.uk/blog/archives/rails-gtd-application/">here</a> and <a href="http://www.rousette.org.uk/blog/archives/2004/11/07/gtd-on-rails/">here</a>. The name Tracks was suggested by Timothy Martens, and the tag-line &#8216;Doing Things Properly&#8217; came from a comment by Pete <a href="http://www.rousette.org.uk/blog/archives/2004/12/07/do-it-now-by-steve-pavlina/#comment-2976">here</a>. I rather liked it.</p>
+
+<p>Tracks is now developed by maintained by a team of <a href="https://github.com/TracksApp/tracks/wiki/Contributors">contributors</a>. Why not <a href="/development">join us</a>?</p>
+
+  
+</article>
+
+</div>
+
+<aside class="sidebar">
+  
+    <section>
+  <h1>Get Tracks</h1>
+  <p><a class="button" href="https://github.com/TracksApp/tracks/zipball/v2.0" title="Download Tracks 2.0 zipped package"><img src="/images/download_button.png" /></a></p>
+  
+  <p><a href="/downloads/comments/tracks-20">Tracks 2.0 release notes</a></p>
+  
+  <p><a href="http://www.assembla.com/spaces/tracks-tickets/">Report a bug</a></p>
+</section>
+
+<section>
+  <h1>Github Repos</h1>
+  <ul id="gh_repos">
+    <li class="loading">Status updating...</li>
+  </ul>
+  
+  <a href="https://github.com/TracksApp">@TracksApp</a> on Github
+  
+  <script type="text/javascript">
+    $.domReady(function(){
+        if (!window.jXHR){
+            var jxhr = document.createElement('script');
+            jxhr.type = 'text/javascript';
+            jxhr.src = '/javascripts/libs/jXHR.js';
+            var s = document.getElementsByTagName('script')[0];
+            s.parentNode.insertBefore(jxhr, s);
+        }
+
+        github.showRepos({
+            user: 'TracksApp',
+            count: 5,
+            skip_forks: false,
+            target: '#gh_repos'
+        });
+    });
+  </script>
+  <script src="/javascripts/github.js" type="text/javascript"> </script>
+</section>
+
+<section>
+  <p><a class="button" href='http://www.pledgie.com/campaigns/959'><img alt='Click here to lend your support to Tracks and make a donation at www.pledgie.com !' src='http://www.pledgie.com/campaigns/959.png?skin_name=chrome' border='0' /></a></p>
+  
+</section><section>
+  
+  <h1>Community</h1>
+  
+  <ul>
+  <li><a href="http://lists.rousette.org.uk/mailman/listinfo/tracks-discuss">Mailing list</a></li>
+  <li><a href="/forums/">Support forum (now read-only)</a></li>
+  <li><a href="https://github.com/TracksApp/tracks/wiki">Wiki</a></li>
+  </ul>
+  
+</section><section>
+  <h1>Latest News</h1>
+  <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/news/comments/release-2.1.rc1/">Release Candidate 1 of Tracks 2.1 released</a>
+      </li>
+    
+      <li class="post">
+        <a href="/news/comments/handing-over-the-keys/">Handing Over the Keys</a>
+      </li>
+    
+      <li class="post">
+        <a href="/news/comments/the-wiki-has-moved/">The wiki has moved</a>
+      </li>
+    
+      <li class="post">
+        <a href="/news/comments/tracks-2.0-is-out-now/">Tracks 2.0 is out now!</a>
+      </li>
+    
+      <li class="post">
+        <a href="/news/comments/tracks-20-release-candidate-2/">Tracks 2.0 RC2</a>
+      </li>
+    
+  </ul>
+</section>
+<section>
+  <h1>Recent Articles</h1>
+  <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/articles/comments/making-yourself-comfortable-with-git-in-the-terminal/">Making yourself comfortable with git in the terminal</a>
+      </li>
+    
+      <li class="post">
+        <a href="/articles/comments/morphexchange-tracks-as-a-hosted-service/">Morphexchange - Tracks as a hosted service</a>
+      </li>
+    
+      <li class="post">
+        <a href="/articles/comments/linking-actions-and-yojimbo-items/">Linking actions and Yojimbo items</a>
+      </li>
+    
+      <li class="post">
+        <a href="/articles/comments/all-in-one-installation-for-windows/">All-in-one installation for Windows</a>
+      </li>
+    
+      <li class="post">
+        <a href="/articles/comments/mongrel-and-windows/">Mongrel and Windows</a>
+      </li>
+    
+  </ul>
+</section>
+<section>
+  
+  <h1>Resources</h1>
+  
+  <ul>
+  <li><a href="http://www.rubyonrails.com/">Ruby on Rails</a></li>
+  <li><a href="http://ruby-lang.org/en/">Ruby</a></li>
+  </ul>
+
+</section><section>
+
+  <p><a class="button" href="http://creativecommons.org/licenses/GPL/2.0/"><img alt="CC-GNU GPL" src="http://creativecommons.org/images/public/cc-GPL-a.png" /></a></p>
+
+</section>
+  
+</aside>
+
+
+    </div>
+  </div>
+  <footer role="contentinfo"><p>
+  Copyright &copy; 2012 - TracksApp -
+  <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span>
+</p>
+
+</footer>
+  
+
+
+
+  <script type="text/javascript">
+    (function() {
+      var script = document.createElement('script'); script.type = 'text/javascript'; script.async = true;
+      script.src = 'https://apis.google.com/js/plusone.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(script, s);
+    })();
+  </script>
+
+
+
+  <script type="text/javascript">
+    (function(){
+      var twitterWidgets = document.createElement('script');
+      twitterWidgets.type = 'text/javascript';
+      twitterWidgets.async = true;
+      twitterWidgets.src = 'http://platform.twitter.com/widgets.js';
+      document.getElementsByTagName('head')[0].appendChild(twitterWidgets);
+    })();
+  </script>
+
+
+
+
+
+
+
+</body>
+</html>

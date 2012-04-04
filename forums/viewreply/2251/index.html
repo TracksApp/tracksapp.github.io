@@ -1,0 +1,1637 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<title>Tracks | NoMethodError in Todos#index</title>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<meta name='MSSmartTagsPreventParsing' content='TRUE' />
+<meta http-equiv='expires' content='-1' />
+<meta http-equiv= 'pragma' content='no-cache' />
+<meta name='robots' content='all' />
+
+<link rel="alternate" type="application/atom+xml" title="Atom Feed" href="http://www.getontracks.org/forums/atom/11/" />
+<link rel="alternate" type="application/rss+xml" title="RSS 2.0" href="http://www.getontracks.org/forums/rss/11/" />
+
+<script type="text/javascript"> 
+<!--
+
+function navHover(which)
+{					
+	if (document.getElementById(which.id))
+	{
+		cur = document.getElementById(which.id).className;
+		
+		if (cur == 'buttonLarge')
+		{
+			document.getElementById(which.id).className = 'buttonLargeHover'
+		}
+		else if (cur == 'buttonSmall')
+		{
+			document.getElementById(which.id).className = 'buttonSmallHover'
+		}
+	}
+}
+
+function navReset(which)
+{					
+	if (document.getElementById(which.id))
+	{
+		cur = document.getElementById(which.id).className;
+		
+		if (cur == 'buttonLargeHover')
+		{
+			document.getElementById(which.id).className = 'buttonLarge'
+		}
+		else if (cur == 'buttonSmallHover')
+		{
+			document.getElementById(which.id).className = 'buttonSmall'
+		}
+	}
+}
+
+
+function navJump(where)
+{
+	window.location=where;
+}
+-->
+</script>
+
+
+<style type='text/css'>
+
+
+* {
+	margin: 0;
+	padding: 0;
+	}
+body {
+	font: 78% Helvetica, Arial, sans-serif;
+	text-align: center;
+	color: #036;
+	background: #344;
+    line-height:1.4em;
+	}
+#wrapper {
+	text-align: left;
+	min-width: 760px;
+	margin: .5em 2em;
+	color: #fff;
+	background: #036 url(http://www.getontracks.org/themes/forum_themes/blue/images/background.gif) 50% 0% repeat-y;
+	border: 6px solid #233;
+	}
+#content {
+	padding: .5em 1.5% 0 1.5%;
+	border-right: 3px solid #047;
+	border-left: 3px solid #047;
+	}
+#content ul {
+	list-style: none;
+	line-height: 1.5em;
+	margin: .25em 0;
+}
+p {
+	margin: 0 10px;
+	line-height:1.4em;
+	}
+a:link {
+	color: #adf;
+	border: none;
+    }
+a:visited {
+	color: #ccc;
+	}
+a:hover, a:active {
+	text-decoration: none;
+	}
+#topbar a, #footer a, #subhead a {
+	text-decoration: none;
+	padding: .25em .5em;
+	}
+#topbar a:hover, #footer a:hover, #subhead a:hover {
+	background: #047;
+	}
+h1, h2, h3, h4, h5, h6 {
+	font-weight: bold;
+	}
+h2 {
+	font-size: 2em;
+	}
+hr.clear {
+	clear: both;
+	margin: 0;
+	padding: 0;
+	visibility: hidden;
+	border: none;
+	}
+img {
+	border: none;
+	}
+#address_book, #address_book td, #emoticons
+	{
+		background: #3cf;
+	}
+#emoticons a, #address_book a
+	{
+		color: #00f;
+		padding: 3px;
+	}
+div#topbar {
+	padding: .5em 1.5%;
+	border-top: 3px solid #047;
+	border-right: 3px solid #047;
+	border-left: 3px solid #047;
+	background: #025 url(http://www.getontracks.org/themes/forum_themes/blue/images/background-dk.gif) 50% 0% repeat-y;
+	}
+#topbar ul {
+	float: left;
+	display: inline;
+	text-align: left;
+	list-style: none;
+	line-height: 1em;
+	font-size: 1em;
+	display: inline;
+	}
+#topbar ul li {
+	display: inline;
+	margin-right: .5em;
+	}
+#topbar form {	
+	text-align: right;
+	}
+#topbar form fieldset {
+	padding-bottom: .5em;
+	}
+#topbar form input {
+	margin: 0 .25em;
+	}
+#topbar form div {
+	display: none;
+	}
+#header {  
+	clear: both;
+	padding: .5em 1.5% 0 1.5%;
+	border-right: 3px solid #047;
+	border-bottom: 1px solid #047;
+	border-left: 3px solid #047;
+	background: #025 url(http://www.getontracks.org/themes/forum_themes/blue/images/background-dk.gif) 50% 0% repeat-y;
+	}
+#header h1 {
+	float: left;
+ 	display: inline;
+ 	text-transform: uppercase;
+	font-weight: normal;
+	font-size: 2.5em;
+	line-height: 1em;
+	}
+#header h1 a {
+	color: #69c;
+	text-decoration: none;
+	}
+#header h1 a:hover {
+	color:#adf;			
+    }
+#header form {
+	text-align: right;
+	padding: .25em;
+	}
+#header form input {
+	width: 8em;
+	}
+#header form .submit {
+	width: 5em;
+	margin: 0 .5em;
+	}
+#header form div {
+	display: none;
+	}
+#subhead {  
+	clear: both;
+	padding: .5em 1.5%;
+	border-right: 3px solid #047;
+	border-left: 3px solid #047;	
+	background: #025 url(http://www.getontracks.org/themes/forum_themes/blue/images/background-dk.gif) 50% 0% repeat-y;
+	}
+div.breadcrumb {
+	display: inline;
+	}
+.currentcrumb {
+	font-weight: bold;
+	}
+ul.forumnav {
+	list-style: none;
+	margin-bottom: 1em;
+	}
+ul.forumnav li {
+	display: inline;
+	margin-right: 1em;
+	}
+ul.forumnav li a {
+	padding: .25em .5em;
+	text-decoration: none;
+	}
+ul.forumnav li a:hover {
+	background: #025;
+	}
+#footer {
+	clear: both;
+	padding: 1.5%;
+	text-align: center;
+	font-size: .9em;
+	color: #69c;
+	border-top: 1px solid #047;
+	border-right: 3px solid #047;
+	border-bottom: 3px solid #047;
+	border-left: 3px solid #047;
+	background: #025 url(http://www.getontracks.org/themes/forum_themes/blue/images/background-dk.gif) 50% 0% repeat-y;
+	}
+#footer a {
+	font-weight: bold;
+	}
+#footer ul {
+	list-style: none;
+	line-height: 1.5em;
+	margin: .25em 0;
+	}
+#footer ul li {
+	display: inline;
+	padding: .5em;
+	}
+#footer select {
+	margin: .5em;
+	}
+.forumName {
+	letter-spacing:    .1em;
+	}
+.forumDescription {
+	padding:           3px 0 0 0;
+	}
+.forumLightLinks {
+	padding:           4px 0 2px 0;
+	}
+.topicTitle {
+	letter-spacing:    .1em;
+	}
+.userBlock {
+	padding:	2px 0 2px 0;
+	}
+.spacer {
+	height: .5em;
+	margin-bottom: 1em;
+	}
+.itempad {
+	padding: 2px 0 2px 0;
+	}
+.itempadbig {
+	padding: 5px 0 5px 0;
+	}
+.bottompad {
+	padding: 0 0 2px 0;
+	}
+.marginpad {
+	margin: 12px 0 10px 3px;
+	}
+.leftpad {
+ 	padding: 0 0 0 4px;
+	}
+table {
+	border-collapse: collapse;
+	}
+.legend {
+	margin-top: 1em;
+	padding: .5em 0;
+	background: #036;
+	}
+.tableBorder {
+	padding: 0;
+	margin-top: 1px;
+	margin-bottom: 3px;
+	}
+.tablePad {
+	padding:  0 2px 4px 2px;
+	}
+.tableHeading {
+	letter-spacing: .1em;
+	font-size: 1.1em;
+	font-weight: bold;
+	text-transform: uppercase;
+	color: #69c;
+	white-space: nowrap;
+	margin: 1em 0 0 0;
+	}
+.tableHeadingSmall {
+	font-size: .9em;
+	color: #69c;
+	white-space: nowrap;
+	margin: 0 0 .5em 0;
+	}
+.tableHeadingBG {
+	background: #036;
+	border-top: 1px solid #025;
+	font-size: 1em;
+	padding: 1em .5em 0 .5em;
+	}
+.tableRowHeading, .tableRowHeadingBold {
+	padding: .25em .5em;
+	border-bottom: 1px solid #025;
+	background: #047;
+	color: #69c;
+	font-size: .8em;
+	text-transform: uppercase;
+	letter-spacing: .2em;
+	}
+.tableRowSpacer {
+	}
+.threadBorder {
+	border: 1px solid #025;
+	margin: 1em 0;
+	padding: .25em 0;
+	}
+.tableCellOne {
+	padding:           3px 6px 3px 6px;
+	}
+.tableCellTwo {
+	padding:           3px 6px 3px 6px;
+	}
+.tablePostInfo {
+	margin-bottom: .75em;
+	}
+.ignored {
+	border: 1px solid #69c;
+	padding: 0;
+	margin-top: 1px;
+	margin-bottom: 3px;
+	}
+.button {
+	width: 80px;
+	background-color: transparent;
+	}
+.button40 {
+	width: 40px;
+	background-color: transparent;
+	}
+.button80 {
+	width: 80px;
+	background-color: transparent;
+	}
+.button100 {
+	width: 100px;
+	background-color: transparent;
+	}
+.button150 {
+	width: 150px;
+	background-color: transparent;
+	}
+.button210 {
+	width: 210px;
+	background-color: transparent;
+	}
+.buttonSpacer{
+	margin:	0 0 0 6px;
+	}
+.buttonLarge {
+	background: #025 url(http://www.getontracks.org/themes/forum_themes/blue/images/background-dk.gif) 50% 50% repeat-y;
+	border: 1px solid #69c;
+	text-transform: uppercase;
+	text-align: center;
+	color: #fff;
+	font-weight: bold;
+	padding: 2px 4px 2px 4px;
+	margin: .25em 0 .25em 0;
+	white-space: nowrap;
+	cursor: pointer;
+	}
+.buttonLargeHover {
+	background: #047 url(http://www.getontracks.org/themes/forum_themes/blue/images/background-lt.gif) 50% 50% repeat-y;
+	border: 1px solid #69c;
+	text-transform: uppercase;
+	text-align: center;
+	color: #fff;
+	font-weight: bold;
+	padding: 2px 4px 2px 4px;
+	margin: .25em 0 .25em 0;
+	white-space: nowrap;
+	cursor: pointer;
+	}
+.buttonSmall {
+	border: 1px solid #69c;
+	font-size: .9em;
+	text-transform: uppercase;
+	text-align:	center;
+	color: #69c;
+	padding: 0px 1px 0px 1px;
+	margin: 0 2px 0 2px;
+	white-space: nowrap;
+	cursor: pointer;
+	}
+.buttonSmallHover {
+	background: #047 url(http://www.getontracks.org/themes/forum_themes/blue/images/background-lt.gif) 50% 50% repeat-y;
+	border: 1px solid #69c;
+	font-size: .9em;
+	text-transform: uppercase;
+	text-align:	center;
+	color: #fff;
+	padding: 0px 1px 0px 1px;
+	margin: 0 2px 0 2px;
+	white-space: nowrap;
+	cursor: pointer;
+	}
+.rankAdmin, .rankModerator, .rankMember {
+	font-weight: bold;
+	color: #69c;
+	padding: 2px 0 3px 0;
+	}
+.rankImage {
+	margin: 0;
+	padding: 0;
+	border:  0;
+	}
+.userBlock {
+	color: #69c;
+	}
+.post {
+	margin: 1em 0;
+	line-height: 1.5em;
+	}
+.edited {
+	font-size:		9px;
+	color:			#69c;
+}
+code {
+	white-space: normal;
+	}
+pre {
+	background: #def;
+	border: 1px solid #69c;
+	color: #69c;
+	margin: 8px 2px 10px 6px;
+	padding: 10px 10px 10px 6px;
+	white-space: normal;
+	}
+.codeblock {
+	background: #def;
+	border: 1px solid #69c;
+	color: #69c;
+	margin: 8px 4px 10px 3px;
+	padding: 10px 10px 10px 6px;
+	}
+blockquote {
+	background: #036;
+	border:	1px solid #69c;
+	color: #69c;
+	margin: 8px 2px 10px 6px;
+	padding: 5px 10px 10px 6px;
+	}
+.quote_author {
+	font-weight: bold;
+	color: #69c;
+	margin:	0 0 4px 0;
+	background-color: transparent;
+	}
+.signature {
+	margin: 1em .5em .5em .5em;
+	padding: .25em;
+	border: 1px solid #69c;
+	}
+.signatureTitle {
+	color: #69c;
+	}
+.buttonMode {
+	white-space: 		nowrap;
+	}
+.htmlButtonOuter, .htmlButtonOuterL {
+	padding:           0;
+	border-top:        #025 1px solid;
+	border-right:      #025 1px solid;
+	border-bottom:     #025 1px solid;
+	}
+.htmlButtonOuterL  {
+	border-left:       #025 1px solid;
+	}
+.htmlButtonInner {
+	background-color:  transparent; 
+	text-align:		center;
+	padding:			0 3px 0 3px;
+	}
+.htmlButtonOff {
+	padding:           1px 2px 2px 2px;
+	white-space:       nowrap;
+	}
+.htmlButtonOff a:link { 
+	color:             #69c;
+	text-decoration:   none;
+	white-space:       nowrap;
+	}
+.htmlButtonOff  a:visited { 
+	text-decoration:   none;
+	}
+.htmlButtonOff a:active { 
+	text-decoration:   none;
+	color:             #fff;
+	}
+.htmlButtonOff a:hover { 
+	text-decoration:   none;
+	background:        #047;
+	color:             #fff;
+	}
+.htmlButtonOn {
+	background:        #047;
+	padding:           1px 2px 2px 2px;
+	white-space:       nowrap;
+	}
+.htmlButtonOn a:link { 
+	color:             #990000;
+	text-decoration:   none;
+	white-space:       nowrap;
+	}
+.htmlButtonOn  a:visited { 
+	text-decoration:   none;
+	}
+.htmlButtonOn a:active { 
+	text-decoration:   none;
+	color:             #999;
+	}
+.htmlButtonOn a:hover { 
+	color:             #999;
+	text-decoration:   none;
+	}
+.attachTitle {
+	font-weight:		bold;
+	color:             #fff;
+	padding:           4px;
+	margin:			10px 0 1px 0;
+	}
+.attachBody {
+	padding:           4px;
+	margin-bottom:		10px;
+	}
+.attachThumb {
+	margin: 3px 6px 3px 3px;
+	border: 1px solid 	#025;
+	}
+.preview {
+	padding:           10px;
+	margin:			0 0 12px 0;
+	border:       		1px solid #025;
+	}
+.previewheading {
+	font-weight:		bold;
+	color: #69c;
+	text-transform: uppercase;
+	padding:           5px 0 5px 10px;
+	border-top:     	1px solid #025;
+	border-right:     	1px solid #025;
+	border-left:     	1px solid #025;
+	}
+.activeModerator {
+	font-weight: bold;
+	}
+form {
+	margin:            0;
+	padding:           0;
+	border:            0;
+	}
+fieldset {
+	border: none;
+	}
+.hidden {
+	margin:            0;
+	padding:           0;
+	border:            0;
+	}
+.input {
+	border:        1px solid #69c;
+	color:             #69c;
+	height:            1.5em;
+	padding:           0;
+	margin:        	0;
+	}
+.textarea {
+	border:        1px solid #69c;
+	color:             #333;
+	font-size:         11px;
+	padding:           0;
+	margin:        	0;
+	}
+.select {
+	background-color:  #fff;
+	font-weight:       normal;
+	letter-spacing:    .1em;
+	color:             #333;
+	margin-top:        2px;
+	margin-bottom:     2px;
+	}
+.multiselect {
+	border:        1px solid #69c;
+	background-color:  #fff;
+	color:             #333;
+	font-size:         11px;
+	margin-top:        2px;
+	margin-top:        2px;
+	}
+.radio {
+	background-color:  transparent;
+	margin-top:        4px;
+	margin-bottom:     4px;
+	padding:           0;
+	border:            0;
+	}
+.checkbox {
+	background-color:  transparent;
+	padding:           0;
+	border:            0;
+	}
+.buttons {
+	font-weight:       bold;
+	border:        1px solid #69c;
+	letter-spacing:    .1em;
+	margin:        	0;
+	padding:			1px 6px 3px 6px;
+	color:             #69c;
+	background: #025;
+	cursor: pointer;
+	}
+.submit {
+	font-weight:       normal;
+	border:        1px solid #69c;
+	letter-spacing:    .1em;
+	margin:        	0;
+	padding:			1px 4px 1px 4px;
+	color:             #69c;
+	background: #025;
+	cursor: pointer;
+	}
+.errorHeading {
+	background: 		#025;
+	color:             #fff;
+	padding:           6px 6px 6px 6px;
+	border-bottom:     1px solid #fff;
+	letter-spacing:    .1em;
+	font-weight:		bold;
+	}
+.errorMessage {
+	color:             #f00;
+	padding:           10px 0 10px 0;
+	}
+.errorBox {
+	color: #f00;
+	padding: 10px;
+	margin: 0 0 12px 0;
+	border: 1px solid #f00;
+	background: #fcc;
+	}
+.alert {
+	color:             #f00;
+	font-weight:		bold;
+	}
+.highlight {
+	color:             #f00;
+	}
+.profileTitle {
+	font-size: 1.5em;
+	font-weight: bold;
+	margin: .5em 0;
+	}
+.memberlistHead {
+	padding: .25em .5em;
+	border-bottom: 1px solid #025;
+ 	background: #047;
+	color: #69c;
+	font-size: .8em;
+	text-transform: uppercase;
+	}
+.memberlistRowOne {
+	padding: .5em;
+	background: #047;
+	}
+.memberlistRowTwo {
+	padding: .5em;
+	}
+.memberlistFooter {
+	padding: 1em .5em;
+	}
+.profileHeadingBG {
+	background: #036;
+	padding:           6px 6px 6px 6px;
+	border-bottom:     #025 1px solid;
+	}
+.profileTopBox {
+	margin:		0;
+	padding:		7px 5px 5px 5px;
+	}
+.profileTitle {
+	font-weight:		bold;
+	padding: 			3px 5px 3px 0;
+	margin:			0;
+	background-color: transparent;  
+	}
+.profileItem {
+	background:		transparent;
+	margin: 			2px 0 2px 0;
+	background-color: transparent;  
+	}
+.profilePhoto {
+	padding:			1px 1px 1px 20px;
+	margin-top:        1px;
+	margin-bottom:     3px;
+	}
+.avatar {
+	background:	transparent;
+	margin:		3px 14px 0 3px;
+	}
+.photo {
+	background:	transparent;
+	margin:		6px 14px 0 3px;
+	}
+.profileHead {
+	font-weight:		bold;
+	text-transform:	uppercase;
+	padding:			3px 4px 3px 10px;  
+	margin:			0 0 0 0;
+	}
+.menuHeadingBG {
+	background: #036;
+	padding:           6px 6px 6px 6px;
+	}
+.profileMenu {
+	background: 		#036;
+	border:            1px solid #025;
+	padding:			1px;
+	margin-top:        1px;
+	margin-bottom:     3px;
+	}
+.profileMenuInner {
+	padding-left:		10px;
+	padding-right:		8px;
+	margin-bottom:		4px;
+	margin-top:		4px;
+	}
+.menuItem {
+	padding:			3px 0 3px 0;
+	background-color:	transparent;  
+	}
+.borderTopBot {
+	border-top:	1px solid #025;
+	border-bottom:	1px solid #025;
+	}
+.borderBot {
+	border-bottom:	1px solid #025;
+	}
+.success {
+	font-weight:		bold;
+	padding:			3px 0 3px 0;
+	background-color:	transparent; 
+	}
+.innerShade {
+	background-color:	#036;
+	margin:			0;
+	padding:			10px;
+	}
+.searchBox {
+	background: transparent;
+	margin: 16px 0 0 0;
+	padding: 8px 5px 5px 5px;
+	}
+.searchBoxTitle {
+	font-weight: bold;
+	background-color: transparent;  
+	}
+.searchpad {
+	padding: 6px 0 8px 0;
+	}
+.searchspacer {
+	margin-bottom: 6px;
+	}
+.iframe {
+	border:1px solid #025;
+	background: #def;
+	color: #036;
+	}
+.wordSuggestion {
+	border: 1px solid #036; 
+	padding: 4px; 
+	background: #def;
+	color: #036;
+	}
+.wordSuggestion a, .wordSuggestion a:active {
+	color: #036;
+	cursor: pointer;
+	}
+.spellchecked_word {
+	cursor: pointer;
+	background-color: #def;
+	color:#036;
+	border-bottom: 1px dashed #036;
+	}
+.spellchecked_word_selected {
+	cursor: pointer;
+	background-color: #69c;
+	}
+</style>
+
+</head>
+
+<body >
+<div id="wrapper">
+<div id='topbar'>
+	<ul>
+		
+		<li class="welcome">Welcome Guest</li>
+		<li><a href="http://www.getontracks.org/forums/member/login/">Login</a></li>
+		<li>REGISTRATION CLOSED: please use <a href="http://lists.rousette.org.uk/mailman/listinfo/tracks-discuss">mailing list</a></li>
+		
+		
+	</ul>
+     
+     <form method="post" action="http://www.getontracks.org/"  >
+<div class='hiddenFields'>
+<input type="hidden" name="XID" value="d876447f37418fadaaee0fedd57d46a81694cbbc" />
+<input type="hidden" name="ACT" value="9" />
+<input type="hidden" name="FROM" value="forum" />
+<input type="hidden" name="mbase" value="http://www.getontracks.org/forums/member/" />
+<input type="hidden" name="board_id" value="1" />
+<input type="hidden" name="anon" value="1" />
+<input type="hidden" name="RET" value="http://www.getontracks.org/forums/viewthread/611/" />
+<input type="hidden" name="site_id" value="1" />
+</div>
+
+
+	<fieldset>	
+		<label class="field-username">Username<input type="text" class="textbox" name="username" value="" /></label>
+		<label class="field-password">Password<input type="password" class="textbox" name="password" /></label>
+		<input type="submit" class="submit" value="Login" />
+	</fieldset>	
+	<fieldset>
+		<label class="field-remember">Remember Me?<input type="checkbox" class="checkbox" name="auto_login" value="1" checked="checked" /></label>
+		<a href="http://www.getontracks.org/forums/member/forgot_password/">forgot password?</a>
+	</fieldset> 
+</form>
+     
+<hr class="clear" />
+</div><!--topbar-->
+<div id='header'>
+     <h1><a href="http://www.getontracks.org/forums/" title="Tracks">Tracks</a></h1>
+     <form method="post" action="http://www.getontracks.org/forums/do_search/"  >
+<div class='hiddenFields'>
+<input type="hidden" name="XID" value="118c183d21e092ff76e3af6a11ff511c62e49d18" />
+<input type="hidden" name="board_id" value="1" />
+<input type="hidden" name="site_id" value="1" />
+</div>
+
+
+
+<label class="searchbox"><input type="text" class="input" name="keywords" value="Search" maxlength="80" /></label>
+<input type="submit" class="submit" value="Search" />
+<a href="http://www.getontracks.org/forums/search/">Advanced Search</a>
+
+</form>
+    <hr class="clear" />
+</div><!--header-->
+<div id="subhead">
+		<div class="breadcrumb"><a href="http://www.getontracks.org/forums/">Forum Home</a><span class="breadcrumbspacer"> &gt; </span><a href="http://www.getontracks.org/forums/viewcategory/4/">Usage</a><span class="breadcrumbspacer"> &gt; </span><a href="http://www.getontracks.org/forums/viewforum/11/">Troubleshooting</a><span class="breadcrumbspacer"> &gt; </span><span class="currentcrumb">Thread</span></div>
+<hr class="clear" />
+</div><!--subhead-->
+<div id="content">
+<script type="text/javascript">
+<!--
+
+function showimage(loc, width, height)
+{
+	window.open(loc,'Image','width='+width+',height='+height+',screenX=0,screenY=0,top=0,left=0,toolbar=0,status=0,scrollbars=0,location=0,menubar=1,resizable=1');
+	return false;
+}
+
+function showfastreply()
+{
+    if (document.getElementById('fastreply').style.display == "block")
+    {
+        document.getElementById('fastreply').style.display = "none";
+    }
+    else
+    {
+        document.getElementById('fastreply').style.display = "block";
+    }
+}
+
+function showHideRow(el)
+{
+    if (document.getElementById(el).style.display == "")
+    {
+        document.getElementById(el).style.display = "none";
+    }
+    else
+    {
+        document.getElementById(el).style.display = "";
+    }	
+}
+//-->
+</script>
+
+<table cellpadding="0" cellspacing="0" border="0" style="width:100%;">
+<tr>
+<td valign="middle" style="width:80%;">
+&nbsp;
+</td>
+&nbsp;
+
+&nbsp;
+
+</tr>
+</table>
+
+
+
+<table cellpadding="0" cellspacing="0" border="0" style="width:100%;" >
+<tr>
+<td class="tableHeadingBG" colspan="2"><div class="tableHeading">NoMethodError in Todos#index</div></td>
+<td class="tableHeadingBG" colspan="1" align="right"><div class="altLinks">&nbsp;</div></td>
+
+</tr>
+
+
+
+<tr id="a9" >
+ <td colspan="3">
+
+
+ <table class="threadBorder" cellpadding="0" cellspacing="0" border="0" style="width:100%;">
+  <tr>
+   <td class="tableRowHeadingBold" style="width:130px;"><div class="largeLinks"><a href="http://www.getontracks.org/forums/member/25687/">sokai</a></div></td>
+   <td class="tableRowHeading">
+
+	<table cellpadding="0" cellspacing="0" border="0" style="width:99%;">
+	<tr>
+	<td>Posted: 14 August 2010 01:42 PM</td>
+	<td align="right">
+	
+		
+	
+	    
+	
+	
+
+	
+	
+	&nbsp;&nbsp;<span class="smallLinks">[ <a href="http://www.getontracks.org/forums/ignore_member/25687/" title="Ignore">Ignore</a> ]</span>
+	
+	
+
+	&nbsp;
+	</td>
+	</tr>
+	</table>
+
+   </td>
+  </tr>
+<tr>
+ <td class="tableCellOne" style="width:130px;" valign="top">
+	<div class="rankMember">Newbie</div>
+	
+	<div class="itempad"><img src="http://www.getontracks.org/themes/forum_themes/blue/images/rank.gif" alt="Rank" class="rankImage" /></div>
+	<div class="userBlock">Total Posts:&nbsp; 6</div>
+	<div class="userBlock">Joined&nbsp; 2010-08-05</div>
+</td>
+<td class="tableCellOne" valign="top" colspan="2"><div class="post"><p>Hi there!</p>
+
+<p>Today I played a little bit with my Tracks 1.7.1 installation to understand the GTDish workflow.<br />
+After deleting a Context the &#8220;Home&#8221; screen shows me the folowing error message:</p>
+
+<div class="codeblock"><code><span style="color: #000000">
+<span style="color: #0000BB">NoMethodError&nbsp;in&nbsp;Todos</span><span style="color: #FF8000">#index<br /><br /></span><span style="color: #0000BB">Showing&nbsp;app</span><span style="color: #007700">/</span><span style="color: #0000BB">views</span><span style="color: #007700">/</span><span style="color: #0000BB">todos</span><span style="color: #007700">/</span><span style="color: #0000BB">_todo</span><span style="color: #007700">.</span><span style="color: #0000BB">html</span><span style="color: #007700">.</span><span style="color: #0000BB">erb&nbsp;where&nbsp;line&nbsp;</span><span style="color: #FF8000">#20&nbsp;raised:<br /><br /></span><span style="color: #0000BB">You&nbsp;have&nbsp;a&nbsp;nil&nbsp;object&nbsp;when&nbsp;you&nbsp;didn</span><span style="color: #DD0000">'t&nbsp;expect&nbsp;it!<br />The&nbsp;error&nbsp;occurred&nbsp;while&nbsp;evaluating&nbsp;nil.recurring_target_as_text<br />Extracted&nbsp;source&nbsp;(around&nbsp;line&nbsp;#20):<br /><br />17:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;%=&nbsp;link_to(<br />18:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;image_tag("recurring16x16.png"),<br />19:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#123;:controller&nbsp;=&gt;&nbsp;"recurring_todos",&nbsp;:action&nbsp;=&gt;&nbsp;"index"&#125;,<br />20:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:class&nbsp;=&gt;&nbsp;"recurring_icon",&nbsp;:title&nbsp;=&gt;&nbsp;recurrence_pattern_as_text(@todo.recurring_todo))&nbsp;if&nbsp;@todo.from_recurring_todo?&nbsp;%&gt;<br />21:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;%=&nbsp;tag_list&nbsp;%&gt;<br />22:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;%=&nbsp;deferred_due_date&nbsp;%&gt;<br />23:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;%=&nbsp;project_and_context_links(&nbsp;parent_container_type,&nbsp;:suppress_context&nbsp;=&gt;&nbsp;suppress_context,&nbsp;:suppress_project&nbsp;=&gt;&nbsp;suppress_project&nbsp;)&nbsp;%&gt;<br />Trace&nbsp;of&nbsp;template&nbsp;inclusion:&nbsp;app/views/contexts/_context.rhtml,&nbsp;app/views/todos/index.html.erb<br /><br />RAILS_ROOT:&nbsp;/var/www/user_xyz/chroot/htdocs/domain/tracks<br /><br />Application&nbsp;Trace&nbsp;|&nbsp;Framework&nbsp;Trace&nbsp;|&nbsp;Full&nbsp;Trace<br />app/helpers/application_helper.rb:163:in&nbsp;`recurrence_pattern_as_text'<br /></span><span style="color: #0000BB">app</span><span style="color: #007700">/</span><span style="color: #0000BB">views</span><span style="color: #007700">/</span><span style="color: #0000BB">todos</span><span style="color: #007700">/</span><span style="color: #0000BB">_todo</span><span style="color: #007700">.</span><span style="color: #0000BB">html</span><span style="color: #007700">.</span><span style="color: #0000BB">erb</span><span style="color: #007700">:</span><span style="color: #0000BB">20<br />app</span><span style="color: #007700">/</span><span style="color: #0000BB">views</span><span style="color: #007700">/</span><span style="color: #0000BB">contexts</span><span style="color: #007700">/</span><span style="color: #0000BB">_context</span><span style="color: #007700">.</span><span style="color: #0000BB">rhtml</span><span style="color: #007700">:</span><span style="color: #0000BB">39<br /></span><span style="color: #007700">(</span><span style="color: #0000BB">__DELEGATION__</span><span style="color: #007700">):</span><span style="color: #0000BB">2</span><span style="color: #007700">:</span><span style="color: #0000BB">in&nbsp;</span><span style="color: #007700">`</span><span style="color: #DD0000">map'<br />(__DELEGATION__):2:in&nbsp;</span><span style="color: #007700">`</span><span style="color: #0000BB">__send__</span><span style="color: #DD0000">'<br />(__DELEGATION__):2:in&nbsp;`map'<br /></span><span style="color: #0000BB">app</span><span style="color: #007700">/</span><span style="color: #0000BB">views</span><span style="color: #007700">/</span><span style="color: #0000BB">todos</span><span style="color: #007700">/</span><span style="color: #0000BB">index</span><span style="color: #007700">.</span><span style="color: #0000BB">html</span><span style="color: #007700">.</span><span style="color: #0000BB">erb</span><span style="color: #007700">:</span><span style="color: #0000BB">4<br />app</span><span style="color: #007700">/</span><span style="color: #0000BB">controllers</span><span style="color: #007700">/</span><span style="color: #0000BB">todos_controller</span><span style="color: #007700">.</span><span style="color: #0000BB">rb</span><span style="color: #007700">:</span><span style="color: #0000BB">772</span><span style="color: #007700">:</span><span style="color: #0000BB">in&nbsp;</span><span style="color: #007700">`</span><span style="color: #DD0000">render_todos_html'<br />app/controllers/todos_controller.rb:19:in&nbsp;</span><span style="color: #007700">`</span><span style="color: #0000BB">index</span><span style="color: #DD0000">'<br />Request<br /><br />Parameters:<br /><br />None<br />Show&nbsp;session&nbsp;dump<br /><br />Response<br /><br />Headers:<br /><br />&#123;"Content-Type"=&gt;"text/html",<br />&nbsp;"cookie"=&gt;&#91;&#93;,<br />&nbsp;"Cache-Control"=&gt;"no-cache"&#125;&nbsp;</span>
+</span>
+</code></div>
+<p>I think it has to do with a recurring (and no more shown in the &#8220;Recurring todos&#8221; section) todo that was binded to the deleted Context.<br />
+All screens/sections except &#8220;Home&#8221; don&#8217;t produce an error message and I can also edit and create new todos.</p>
+
+<p>Now I don&#8217;t know how I can fix this error (without editing the SQLite DB manually) and maybe it&#8217;s a bug.<br />
+Can someone help me, please!?</p>
+
+<p>Cheers,<br />
+Kai</p></div>
+	
+	
+	
+</td>
+
+</tr><tr>
+
+<td class="tableCellTwo"  style="width:130px;">
+	<table cellpadding="0" cellspacing="0" border="0" width="100%">
+	<tr>
+	<td align="center"><div class="button"><div class="buttonSmall" id="a1" onclick="navJump('http://www.getontracks.org/forums/member/25687/')" onmouseover="navHover(this);" onmouseout="navReset(this);">Profile</div></div></td>
+	
+	
+
+	</tr>
+	</table>
+</td>
+
+<td class="tableCellTwo" colspan="2">
+	<table cellpadding="0" cellspacing="0" border="0">
+	<tr>
+	
+	
+	
+	
+		
+		
+				
+	
+	
+	
+	
+	&nbsp;
+	
+	<td>&nbsp;</td>	
+	</tr>
+	</table>
+  </td>
+ </tr>
+</table>
+
+</td>
+</tr>
+
+<tr id="b9" >
+ <td colspan="3">
+
+
+ <table class="threadBorder" cellpadding="0" cellspacing="0" border="0" style="width:100%;">
+  <tr>
+   <td class="tableRowHeadingBold" style="width:130px;"><div class="largeLinks"><a href="http://www.getontracks.org/forums/member/25687/">sokai</a></div></td>
+   <td class="tableRowHeading">
+
+	<table cellpadding="0" cellspacing="0" border="0" style="width:99%;">
+	<tr>
+	<td>Posted: 14 August 2010 01:52 PM</td>
+	<td align="right">
+	
+		
+	
+	
+
+	
+	
+	&nbsp;&nbsp;<span class="smallLinks">[ <a href="http://www.getontracks.org/forums/ignore_member/25687/" title="Ignore">Ignore</a> ]</span>
+	
+	&nbsp;&nbsp;<span class="smallLinks">[ <a name="2225" href="http://www.getontracks.org/forums/viewreply/2225/" title="Permalink to this post"># 1</a> ]</span>
+
+	&nbsp;
+	</td>
+	</tr>
+	</table>
+
+   </td>
+  </tr>
+<tr>
+ <td class="tableCellOne" style="width:130px;" valign="top">
+	<div class="rankMember">Newbie</div>
+	
+	<div class="itempad"><img src="http://www.getontracks.org/themes/forum_themes/blue/images/rank.gif" alt="Rank" class="rankImage" /></div>
+	<div class="userBlock">Total Posts:&nbsp; 6</div>
+	<div class="userBlock">Joined&nbsp; 2010-08-05</div>
+</td>
+<td class="tableCellOne" valign="top" colspan="2"><div class="post"><p>This is the <b>first</b> part of the &#8220;Full trace&#8221; for the error above (FYI):</p><div class="codeblock"><code><span style="color: #000000">
+<span style="color: #0000BB">app</span><span style="color: #007700">/</span><span style="color: #0000BB">helpers</span><span style="color: #007700">/</span><span style="color: #0000BB">application_helper</span><span style="color: #007700">.</span><span style="color: #0000BB">rb</span><span style="color: #007700">:</span><span style="color: #0000BB">163</span><span style="color: #007700">:</span><span style="color: #0000BB">in&nbsp;</span><span style="color: #007700">`</span><span style="color: #DD0000">recurrence_pattern_as_text'<br />app/views/todos/_todo.html.erb:20<br />vendor/rails/actionpack/lib/action_view/renderable.rb:39:in&nbsp;</span><span style="color: #007700">`</span><span style="color: #0000BB">send</span><span style="color: #DD0000">'<br />vendor/rails/actionpack/lib/action_view/renderable.rb:39:in&nbsp;`render'<br /></span><span style="color: #0000BB">vendor</span><span style="color: #007700">/</span><span style="color: #0000BB">rails</span><span style="color: #007700">/</span><span style="color: #0000BB">actionpack</span><span style="color: #007700">/</span><span style="color: #0000BB">lib</span><span style="color: #007700">/</span><span style="color: #0000BB">action_view</span><span style="color: #007700">/</span><span style="color: #0000BB">renderable_partial</span><span style="color: #007700">.</span><span style="color: #0000BB">rb</span><span style="color: #007700">:</span><span style="color: #0000BB">20</span><span style="color: #007700">:</span><span style="color: #0000BB">in&nbsp;</span><span style="color: #007700">`</span><span style="color: #DD0000">render'<br />vendor/rails/actionpack/lib/action_controller/benchmarking.rb:26:in&nbsp;</span><span style="color: #007700">`</span><span style="color: #0000BB">benchmark</span><span style="color: #DD0000">'<br />vendor/rails/activesupport/lib/active_support/core_ext/benchmark.rb:8:in&nbsp;`realtime'<br /></span><span style="color: #0000BB">vendor</span><span style="color: #007700">/</span><span style="color: #0000BB">rails</span><span style="color: #007700">/</span><span style="color: #0000BB">actionpack</span><span style="color: #007700">/</span><span style="color: #0000BB">lib</span><span style="color: #007700">/</span><span style="color: #0000BB">action_controller</span><span style="color: #007700">/</span><span style="color: #0000BB">benchmarking</span><span style="color: #007700">.</span><span style="color: #0000BB">rb</span><span style="color: #007700">:</span><span style="color: #0000BB">26</span><span style="color: #007700">:</span><span style="color: #0000BB">in&nbsp;</span><span style="color: #007700">`</span><span style="color: #DD0000">benchmark'<br />vendor/rails/actionpack/lib/action_view/renderable_partial.rb:19:in&nbsp;</span><span style="color: #007700">`</span><span style="color: #0000BB">render</span><span style="color: #DD0000">'<br />vendor/rails/actionpack/lib/action_view/template.rb:73:in&nbsp;`render_template'<br /></span><span style="color: #0000BB">vendor</span><span style="color: #007700">/</span><span style="color: #0000BB">rails</span><span style="color: #007700">/</span><span style="color: #0000BB">actionpack</span><span style="color: #007700">/</span><span style="color: #0000BB">lib</span><span style="color: #007700">/</span><span style="color: #0000BB">action_view</span><span style="color: #007700">/</span><span style="color: #0000BB">renderable_partial</span><span style="color: #007700">.</span><span style="color: #0000BB">rb</span><span style="color: #007700">:</span><span style="color: #0000BB">45</span><span style="color: #007700">:</span><span style="color: #0000BB">in&nbsp;</span><span style="color: #007700">`</span><span style="color: #DD0000">render_partial'<br />vendor/rails/actionpack/lib/action_view/partials.rb:184:in&nbsp;</span><span style="color: #007700">`</span><span style="color: #0000BB">render_partial_collection</span><span style="color: #DD0000">'<br />vendor/rails/actionpack/lib/action_view/partials.rb:179:in&nbsp;`map'<br /></span><span style="color: #0000BB">vendor</span><span style="color: #007700">/</span><span style="color: #0000BB">rails</span><span style="color: #007700">/</span><span style="color: #0000BB">actionpack</span><span style="color: #007700">/</span><span style="color: #0000BB">lib</span><span style="color: #007700">/</span><span style="color: #0000BB">action_view</span><span style="color: #007700">/</span><span style="color: #0000BB">partials</span><span style="color: #007700">.</span><span style="color: #0000BB">rb</span><span style="color: #007700">:</span><span style="color: #0000BB">179</span><span style="color: #007700">:</span><span style="color: #0000BB">in&nbsp;</span><span style="color: #007700">`</span><span style="color: #DD0000">render_partial_collection'<br />vendor/rails/actionpack/lib/action_view/partials.rb:150:in&nbsp;</span><span style="color: #007700">`</span><span style="color: #0000BB">render_partial</span><span style="color: #DD0000">'<br />vendor/rails/actionpack/lib/action_view/base.rb:258:in&nbsp;`render'<br /></span><span style="color: #0000BB">app</span><span style="color: #007700">/</span><span style="color: #0000BB">views</span><span style="color: #007700">/</span><span style="color: #0000BB">contexts</span><span style="color: #007700">/</span><span style="color: #0000BB">_context</span><span style="color: #007700">.</span><span style="color: #0000BB">rhtml</span><span style="color: #007700">:</span><span style="color: #0000BB">39<br />vendor</span><span style="color: #007700">/</span><span style="color: #0000BB">rails</span><span style="color: #007700">/</span><span style="color: #0000BB">actionpack</span><span style="color: #007700">/</span><span style="color: #0000BB">lib</span><span style="color: #007700">/</span><span style="color: #0000BB">action_view</span><span style="color: #007700">/</span><span style="color: #0000BB">renderable</span><span style="color: #007700">.</span><span style="color: #0000BB">rb</span><span style="color: #007700">:</span><span style="color: #0000BB">39</span><span style="color: #007700">:</span><span style="color: #0000BB">in&nbsp;</span><span style="color: #007700">`</span><span style="color: #DD0000">send'<br />vendor/rails/actionpack/lib/action_view/renderable.rb:39:in&nbsp;</span><span style="color: #007700">`</span><span style="color: #0000BB">render</span><span style="color: #DD0000">'<br />vendor/rails/actionpack/lib/action_view/renderable_partial.rb:20:in&nbsp;`render'<br /></span><span style="color: #0000BB">vendor</span><span style="color: #007700">/</span><span style="color: #0000BB">rails</span><span style="color: #007700">/</span><span style="color: #0000BB">actionpack</span><span style="color: #007700">/</span><span style="color: #0000BB">lib</span><span style="color: #007700">/</span><span style="color: #0000BB">action_controller</span><span style="color: #007700">/</span><span style="color: #0000BB">benchmarking</span><span style="color: #007700">.</span><span style="color: #0000BB">rb</span><span style="color: #007700">:</span><span style="color: #0000BB">26</span><span style="color: #007700">:</span><span style="color: #0000BB">in&nbsp;</span><span style="color: #007700">`</span><span style="color: #DD0000">benchmark'<br />vendor/rails/activesupport/lib/active_support/core_ext/benchmark.rb:8:in&nbsp;</span><span style="color: #007700">`</span><span style="color: #0000BB">realtime</span><span style="color: #DD0000">'<br />vendor/rails/actionpack/lib/action_controller/benchmarking.rb:26:in&nbsp;`benchmark'<br /></span><span style="color: #0000BB">vendor</span><span style="color: #007700">/</span><span style="color: #0000BB">rails</span><span style="color: #007700">/</span><span style="color: #0000BB">actionpack</span><span style="color: #007700">/</span><span style="color: #0000BB">lib</span><span style="color: #007700">/</span><span style="color: #0000BB">action_view</span><span style="color: #007700">/</span><span style="color: #0000BB">renderable_partial</span><span style="color: #007700">.</span><span style="color: #0000BB">rb</span><span style="color: #007700">:</span><span style="color: #0000BB">19</span><span style="color: #007700">:</span><span style="color: #0000BB">in&nbsp;</span><span style="color: #007700">`</span><span style="color: #DD0000">render'<br />vendor/rails/actionpack/lib/action_view/template.rb:73:in&nbsp;</span><span style="color: #007700">`</span><span style="color: #0000BB">render_template</span><span style="color: #DD0000">'<br />vendor/rails/actionpack/lib/action_view/renderable_partial.rb:45:in&nbsp;`render_partial'<br /></span><span style="color: #0000BB">vendor</span><span style="color: #007700">/</span><span style="color: #0000BB">rails</span><span style="color: #007700">/</span><span style="color: #0000BB">actionpack</span><span style="color: #007700">/</span><span style="color: #0000BB">lib</span><span style="color: #007700">/</span><span style="color: #0000BB">action_view</span><span style="color: #007700">/</span><span style="color: #0000BB">partials</span><span style="color: #007700">.</span><span style="color: #0000BB">rb</span><span style="color: #007700">:</span><span style="color: #0000BB">184</span><span style="color: #007700">:</span><span style="color: #0000BB">in&nbsp;</span><span style="color: #007700">`</span><span style="color: #DD0000">render_partial_collection'<br />(__DELEGATION__):2:in&nbsp;</span><span style="color: #007700">`</span><span style="color: #0000BB">map</span><span style="color: #DD0000">'<br />(__DELEGATION__):2:in&nbsp;`__send__'<br /></span><span style="color: #007700">(</span><span style="color: #0000BB">__DELEGATION__</span><span style="color: #007700">):</span><span style="color: #0000BB">2</span><span style="color: #007700">:</span><span style="color: #0000BB">in&nbsp;</span><span style="color: #007700">`</span><span style="color: #DD0000">map'<br />vendor/rails/actionpack/lib/action_view/partials.rb:179:in&nbsp;</span><span style="color: #007700">`</span><span style="color: #0000BB">render_partial_collection</span><span style="color: #DD0000">'<br />vendor/rails/actionpack/lib/action_view/partials.rb:150:in&nbsp;`render_partial'<br /></span><span style="color: #0000BB">vendor</span><span style="color: #007700">/</span><span style="color: #0000BB">rails</span><span style="color: #007700">/</span><span style="color: #0000BB">actionpack</span><span style="color: #007700">/</span><span style="color: #0000BB">lib</span><span style="color: #007700">/</span><span style="color: #0000BB">action_view</span><span style="color: #007700">/</span><span style="color: #0000BB">base</span><span style="color: #007700">.</span><span style="color: #0000BB">rb</span><span style="color: #007700">:</span><span style="color: #0000BB">258</span><span style="color: #007700">:</span><span style="color: #0000BB">in&nbsp;</span><span style="color: #007700">`</span><span style="color: #DD0000">render'<br />app/views/todos/index.html.erb:4<br />vendor/rails/actionpack/lib/action_view/renderable.rb:39:in&nbsp;</span><span style="color: #007700">`</span><span style="color: #0000BB">send</span><span style="color: #DD0000">'<br />vendor/rails/actionpack/lib/action_view/renderable.rb:39:in&nbsp;`render'<br /></span><span style="color: #0000BB">vendor</span><span style="color: #007700">/</span><span style="color: #0000BB">rails</span><span style="color: #007700">/</span><span style="color: #0000BB">actionpack</span><span style="color: #007700">/</span><span style="color: #0000BB">lib</span><span style="color: #007700">/</span><span style="color: #0000BB">action_view</span><span style="color: #007700">/</span><span style="color: #0000BB">template</span><span style="color: #007700">.</span><span style="color: #0000BB">rb</span><span style="color: #007700">:</span><span style="color: #0000BB">73</span><span style="color: #007700">:</span><span style="color: #0000BB">in&nbsp;</span><span style="color: #007700">`</span><span style="color: #DD0000">render_template'<br />vendor/rails/actionpack/lib/action_view/base.rb:256:in&nbsp;</span><span style="color: #007700">`</span><span style="color: #0000BB">render</span><span style="color: #DD0000">'<br />vendor/rails/actionpack/lib/action_view/base.rb:367:in&nbsp;`_render_with_layout'<br /></span><span style="color: #0000BB">vendor</span><span style="color: #007700">/</span><span style="color: #0000BB">rails</span><span style="color: #007700">/</span><span style="color: #0000BB">actionpack</span><span style="color: #007700">/</span><span style="color: #0000BB">lib</span><span style="color: #007700">/</span><span style="color: #0000BB">action_view</span><span style="color: #007700">/</span><span style="color: #0000BB">base</span><span style="color: #007700">.</span><span style="color: #0000BB">rb</span><span style="color: #007700">:</span><span style="color: #0000BB">254</span><span style="color: #007700">:</span><span style="color: #0000BB">in&nbsp;</span><span style="color: #007700">`</span><span style="color: #DD0000">render'<br />vendor/rails/actionpack/lib/action_controller/base.rb:1174:in&nbsp;</span><span style="color: #007700">`</span><span style="color: #0000BB">render_for_file</span><span style="color: #DD0000">'<br />vendor/rails/actionpack/lib/action_controller/base.rb:896:in&nbsp;`render_without_benchmark'<br /></span><span style="color: #0000BB">vendor</span><span style="color: #007700">/</span><span style="color: #0000BB">rails</span><span style="color: #007700">/</span><span style="color: #0000BB">actionpack</span><span style="color: #007700">/</span><span style="color: #0000BB">lib</span><span style="color: #007700">/</span><span style="color: #0000BB">action_controller</span><span style="color: #007700">/</span><span style="color: #0000BB">benchmarking</span><span style="color: #007700">.</span><span style="color: #0000BB">rb</span><span style="color: #007700">:</span><span style="color: #0000BB">51</span><span style="color: #007700">:</span><span style="color: #0000BB">in&nbsp;</span><span style="color: #007700">`</span><span style="color: #DD0000">render'<br />vendor/rails/activesupport/lib/active_support/core_ext/benchmark.rb:8:in&nbsp;</span><span style="color: #007700">`</span><span style="color: #0000BB">realtime</span><span style="color: #DD0000">'<br />vendor/rails/actionpack/lib/action_controller/benchmarking.rb:51:in&nbsp;`render'<br /></span><span style="color: #0000BB">vendor</span><span style="color: #007700">/</span><span style="color: #0000BB">rails</span><span style="color: #007700">/</span><span style="color: #0000BB">actionpack</span><span style="color: #007700">/</span><span style="color: #0000BB">lib</span><span style="color: #007700">/</span><span style="color: #0000BB">action_controller</span><span style="color: #007700">/</span><span style="color: #0000BB">base</span><span style="color: #007700">.</span><span style="color: #0000BB">rb</span><span style="color: #007700">:</span><span style="color: #0000BB">868</span><span style="color: #007700">:</span><span style="color: #0000BB">in&nbsp;</span><span style="color: #007700">`</span><span style="color: #DD0000">render_without_benchmark'<br />vendor/rails/actionpack/lib/action_controller/benchmarking.rb:51:in&nbsp;</span><span style="color: #007700">`</span><span style="color: #0000BB">render</span><span style="color: #DD0000">'<br />vendor/rails/activesupport/lib/active_support/core_ext/benchmark.rb:8:in&nbsp;`realtime'<br /></span><span style="color: #0000BB">vendor</span><span style="color: #007700">/</span><span style="color: #0000BB">rails</span><span style="color: #007700">/</span><span style="color: #0000BB">actionpack</span><span style="color: #007700">/</span><span style="color: #0000BB">lib</span><span style="color: #007700">/</span><span style="color: #0000BB">action_controller</span><span style="color: #007700">/</span><span style="color: #0000BB">benchmarking</span><span style="color: #007700">.</span><span style="color: #0000BB">rb</span><span style="color: #007700">:</span><span style="color: #0000BB">51</span><span style="color: #007700">:</span><span style="color: #0000BB">in&nbsp;</span><span style="color: #007700">`</span><span style="color: #DD0000">render'<br />app/controllers/todos_controller.rb:772:in&nbsp;</span><span style="color: #007700">`</span><span style="color: #0000BB">render_todos_html</span><span style="color: #DD0000">'<br />vendor/rails/actionpack/lib/action_controller/mime_responds.rb:135:in&nbsp;`call'<br /></span><span style="color: #0000BB">vendor</span><span style="color: #007700">/</span><span style="color: #0000BB">rails</span><span style="color: #007700">/</span><span style="color: #0000BB">actionpack</span><span style="color: #007700">/</span><span style="color: #0000BB">lib</span><span style="color: #007700">/</span><span style="color: #0000BB">action_controller</span><span style="color: #007700">/</span><span style="color: #0000BB">mime_responds</span><span style="color: #007700">.</span><span style="color: #0000BB">rb</span><span style="color: #007700">:</span><span style="color: #0000BB">135</span><span style="color: #007700">:</span><span style="color: #0000BB">in&nbsp;</span><span style="color: #007700">`</span><span style="color: #DD0000">custom'<br />vendor/rails/actionpack/lib/action_controller/mime_responds.rb:164:in&nbsp;</span><span style="color: #007700">`</span><span style="color: #0000BB">call</span><span style="color: #DD0000">'<br />vendor/rails/actionpack/lib/action_controller/mime_responds.rb:164:in&nbsp;`respond'<br /></span><span style="color: #0000BB">vendor</span><span style="color: #007700">/</span><span style="color: #0000BB">rails</span><span style="color: #007700">/</span><span style="color: #0000BB">actionpack</span><span style="color: #007700">/</span><span style="color: #0000BB">lib</span><span style="color: #007700">/</span><span style="color: #0000BB">action_controller</span><span style="color: #007700">/</span><span style="color: #0000BB">mime_responds</span><span style="color: #007700">.</span><span style="color: #0000BB">rb</span><span style="color: #007700">:</span><span style="color: #0000BB">158</span><span style="color: #007700">:</span><span style="color: #0000BB">in&nbsp;</span><span style="color: #007700">`</span><span style="color: #DD0000">each'<br />vendor/rails/actionpack/lib/action_controller/mime_responds.rb:158:in&nbsp;</span><span style="color: #007700">`</span><span style="color: #0000BB">respond</span><span style="color: #DD0000">'<br />vendor/rails/actionpack/lib/action_controller/mime_responds.rb:107:in&nbsp;`respond_to'&nbsp;</span>
+</span>
+</code></div></div>
+	
+	
+	
+</td>
+
+</tr><tr>
+
+<td class="tableCellTwo"  style="width:130px;">
+	<table cellpadding="0" cellspacing="0" border="0" width="100%">
+	<tr>
+	<td align="center"><div class="button"><div class="buttonSmall" id="b1" onclick="navJump('http://www.getontracks.org/forums/member/25687/')" onmouseover="navHover(this);" onmouseout="navReset(this);">Profile</div></div></td>
+	
+	
+
+	</tr>
+	</table>
+</td>
+
+<td class="tableCellTwo" colspan="2">
+	<table cellpadding="0" cellspacing="0" border="0">
+	<tr>
+	
+	
+	
+	
+	
+	
+		
+	
+	
+	&nbsp;
+	
+	<td>&nbsp;</td>	
+	</tr>
+	</table>
+  </td>
+ </tr>
+</table>
+
+</td>
+</tr>
+
+<tr id="c9" >
+ <td colspan="3">
+
+
+ <table class="threadBorder" cellpadding="0" cellspacing="0" border="0" style="width:100%;">
+  <tr>
+   <td class="tableRowHeadingBold" style="width:130px;"><div class="largeLinks"><a href="http://www.getontracks.org/forums/member/25687/">sokai</a></div></td>
+   <td class="tableRowHeading">
+
+	<table cellpadding="0" cellspacing="0" border="0" style="width:99%;">
+	<tr>
+	<td>Posted: 14 August 2010 01:53 PM</td>
+	<td align="right">
+	
+		
+	
+	
+
+	
+	
+	&nbsp;&nbsp;<span class="smallLinks">[ <a href="http://www.getontracks.org/forums/ignore_member/25687/" title="Ignore">Ignore</a> ]</span>
+	
+	&nbsp;&nbsp;<span class="smallLinks">[ <a name="2226" href="http://www.getontracks.org/forums/viewreply/2226/" title="Permalink to this post"># 2</a> ]</span>
+
+	&nbsp;
+	</td>
+	</tr>
+	</table>
+
+   </td>
+  </tr>
+<tr>
+ <td class="tableCellOne" style="width:130px;" valign="top">
+	<div class="rankMember">Newbie</div>
+	
+	<div class="itempad"><img src="http://www.getontracks.org/themes/forum_themes/blue/images/rank.gif" alt="Rank" class="rankImage" /></div>
+	<div class="userBlock">Total Posts:&nbsp; 6</div>
+	<div class="userBlock">Joined&nbsp; 2010-08-05</div>
+</td>
+<td class="tableCellOne" valign="top" colspan="2"><div class="post"><p>This is the <b>second</b> part of the &#8220;Full trace&#8221; for the error above (FYI):</p><div class="codeblock"><code><span style="color: #000000">
+<span style="color: #0000BB">app</span><span style="color: #007700">/</span><span style="color: #0000BB">controllers</span><span style="color: #007700">/</span><span style="color: #0000BB">todos_controller</span><span style="color: #007700">.</span><span style="color: #0000BB">rb</span><span style="color: #007700">:</span><span style="color: #0000BB">19</span><span style="color: #007700">:</span><span style="color: #0000BB">in&nbsp;</span><span style="color: #007700">`</span><span style="color: #DD0000">index'<br />vendor/rails/actionpack/lib/action_controller/base.rb:1253:in&nbsp;</span><span style="color: #007700">`</span><span style="color: #0000BB">send</span><span style="color: #DD0000">'<br />vendor/rails/actionpack/lib/action_controller/base.rb:1253:in&nbsp;`perform_action_without_filters'<br /></span><span style="color: #0000BB">vendor</span><span style="color: #007700">/</span><span style="color: #0000BB">rails</span><span style="color: #007700">/</span><span style="color: #0000BB">actionpack</span><span style="color: #007700">/</span><span style="color: #0000BB">lib</span><span style="color: #007700">/</span><span style="color: #0000BB">action_controller</span><span style="color: #007700">/</span><span style="color: #0000BB">filters</span><span style="color: #007700">.</span><span style="color: #0000BB">rb</span><span style="color: #007700">:</span><span style="color: #0000BB">617</span><span style="color: #007700">:</span><span style="color: #0000BB">in&nbsp;</span><span style="color: #007700">`</span><span style="color: #DD0000">call_filters'<br />vendor/rails/actionpack/lib/action_controller/filters.rb:610:in&nbsp;</span><span style="color: #007700">`</span><span style="color: #0000BB">perform_action_without_benchmark</span><span style="color: #DD0000">'<br />vendor/rails/actionpack/lib/action_controller/benchmarking.rb:68:in&nbsp;`perform_action_without_rescue'<br /></span><span style="color: #007700">/</span><span style="color: #0000BB">usr</span><span style="color: #007700">/</span><span style="color: #0000BB">lib</span><span style="color: #007700">/</span><span style="color: #0000BB">ruby</span><span style="color: #007700">/</span><span style="color: #0000BB">1.8</span><span style="color: #007700">/</span><span style="color: #0000BB">benchmark</span><span style="color: #007700">.</span><span style="color: #0000BB">rb</span><span style="color: #007700">:</span><span style="color: #0000BB">293</span><span style="color: #007700">:</span><span style="color: #0000BB">in&nbsp;</span><span style="color: #007700">`</span><span style="color: #DD0000">measure'<br />vendor/rails/actionpack/lib/action_controller/benchmarking.rb:68:in&nbsp;</span><span style="color: #007700">`</span><span style="color: #0000BB">perform_action_without_rescue</span><span style="color: #DD0000">'<br />vendor/rails/actionpack/lib/action_controller/rescue.rb:136:in&nbsp;`perform_action_without_caching'<br /></span><span style="color: #0000BB">vendor</span><span style="color: #007700">/</span><span style="color: #0000BB">rails</span><span style="color: #007700">/</span><span style="color: #0000BB">actionpack</span><span style="color: #007700">/</span><span style="color: #0000BB">lib</span><span style="color: #007700">/</span><span style="color: #0000BB">action_controller</span><span style="color: #007700">/</span><span style="color: #0000BB">caching</span><span style="color: #007700">/</span><span style="color: #0000BB">sql_cache</span><span style="color: #007700">.</span><span style="color: #0000BB">rb</span><span style="color: #007700">:</span><span style="color: #0000BB">13</span><span style="color: #007700">:</span><span style="color: #0000BB">in&nbsp;</span><span style="color: #007700">`</span><span style="color: #DD0000">perform_action'<br />vendor/rails/activerecord/lib/active_record/connection_adapters/abstract/query_cache.rb:34:in&nbsp;</span><span style="color: #007700">`</span><span style="color: #0000BB">cache</span><span style="color: #DD0000">'<br />vendor/rails/activerecord/lib/active_record/query_cache.rb:8:in&nbsp;`cache'<br /></span><span style="color: #0000BB">vendor</span><span style="color: #007700">/</span><span style="color: #0000BB">rails</span><span style="color: #007700">/</span><span style="color: #0000BB">actionpack</span><span style="color: #007700">/</span><span style="color: #0000BB">lib</span><span style="color: #007700">/</span><span style="color: #0000BB">action_controller</span><span style="color: #007700">/</span><span style="color: #0000BB">caching</span><span style="color: #007700">/</span><span style="color: #0000BB">sql_cache</span><span style="color: #007700">.</span><span style="color: #0000BB">rb</span><span style="color: #007700">:</span><span style="color: #0000BB">12</span><span style="color: #007700">:</span><span style="color: #0000BB">in&nbsp;</span><span style="color: #007700">`</span><span style="color: #DD0000">perform_action'<br />vendor/rails/actionpack/lib/action_controller/base.rb:524:in&nbsp;</span><span style="color: #007700">`</span><span style="color: #0000BB">send</span><span style="color: #DD0000">'<br />vendor/rails/actionpack/lib/action_controller/base.rb:524:in&nbsp;`process_without_filters'<br /></span><span style="color: #0000BB">vendor</span><span style="color: #007700">/</span><span style="color: #0000BB">rails</span><span style="color: #007700">/</span><span style="color: #0000BB">actionpack</span><span style="color: #007700">/</span><span style="color: #0000BB">lib</span><span style="color: #007700">/</span><span style="color: #0000BB">action_controller</span><span style="color: #007700">/</span><span style="color: #0000BB">filters</span><span style="color: #007700">.</span><span style="color: #0000BB">rb</span><span style="color: #007700">:</span><span style="color: #0000BB">606</span><span style="color: #007700">:</span><span style="color: #0000BB">in&nbsp;</span><span style="color: #007700">`</span><span style="color: #DD0000">process_without_session_management_support'<br />vendor/rails/actionpack/lib/action_controller/session_management.rb:134:in&nbsp;</span><span style="color: #007700">`</span><span style="color: #0000BB">process</span><span style="color: #DD0000">'<br />vendor/rails/actionpack/lib/action_controller/base.rb:392:in&nbsp;`process'<br /></span><span style="color: #0000BB">vendor</span><span style="color: #007700">/</span><span style="color: #0000BB">rails</span><span style="color: #007700">/</span><span style="color: #0000BB">actionpack</span><span style="color: #007700">/</span><span style="color: #0000BB">lib</span><span style="color: #007700">/</span><span style="color: #0000BB">action_controller</span><span style="color: #007700">/</span><span style="color: #0000BB">dispatcher</span><span style="color: #007700">.</span><span style="color: #0000BB">rb</span><span style="color: #007700">:</span><span style="color: #0000BB">183</span><span style="color: #007700">:</span><span style="color: #0000BB">in&nbsp;</span><span style="color: #007700">`</span><span style="color: #DD0000">handle_request'<br />vendor/rails/actionpack/lib/action_controller/dispatcher.rb:110:in&nbsp;</span><span style="color: #007700">`</span><span style="color: #0000BB">dispatch_unlocked</span><span style="color: #DD0000">'<br />vendor/rails/actionpack/lib/action_controller/dispatcher.rb:123:in&nbsp;`dispatch'<br /></span><span style="color: #0000BB">vendor</span><span style="color: #007700">/</span><span style="color: #0000BB">rails</span><span style="color: #007700">/</span><span style="color: #0000BB">actionpack</span><span style="color: #007700">/</span><span style="color: #0000BB">lib</span><span style="color: #007700">/</span><span style="color: #0000BB">action_controller</span><span style="color: #007700">/</span><span style="color: #0000BB">dispatcher</span><span style="color: #007700">.</span><span style="color: #0000BB">rb</span><span style="color: #007700">:</span><span style="color: #0000BB">122</span><span style="color: #007700">:</span><span style="color: #0000BB">in&nbsp;</span><span style="color: #007700">`</span><span style="color: #DD0000">synchronize'<br />vendor/rails/actionpack/lib/action_controller/dispatcher.rb:122:in&nbsp;</span><span style="color: #007700">`</span><span style="color: #0000BB">dispatch</span><span style="color: #DD0000">'<br />vendor/rails/actionpack/lib/action_controller/dispatcher.rb:132:in&nbsp;`dispatch_cgi'<br /></span><span style="color: #0000BB">vendor</span><span style="color: #007700">/</span><span style="color: #0000BB">rails</span><span style="color: #007700">/</span><span style="color: #0000BB">actionpack</span><span style="color: #007700">/</span><span style="color: #0000BB">lib</span><span style="color: #007700">/</span><span style="color: #0000BB">action_controller</span><span style="color: #007700">/</span><span style="color: #0000BB">dispatcher</span><span style="color: #007700">.</span><span style="color: #0000BB">rb</span><span style="color: #007700">:</span><span style="color: #0000BB">39</span><span style="color: #007700">:</span><span style="color: #0000BB">in&nbsp;</span><span style="color: #007700">`</span><span style="color: #DD0000">dispatch'<br />vendor/rails/railties/lib/fcgi_handler.rb:101:in&nbsp;</span><span style="color: #007700">`</span><span style="color: #0000BB">process_request</span><span style="color: #DD0000">'<br />vendor/rails/railties/lib/fcgi_handler.rb:151:in&nbsp;`with_signal_handler'<br /></span><span style="color: #0000BB">vendor</span><span style="color: #007700">/</span><span style="color: #0000BB">rails</span><span style="color: #007700">/</span><span style="color: #0000BB">railties</span><span style="color: #007700">/</span><span style="color: #0000BB">lib</span><span style="color: #007700">/</span><span style="color: #0000BB">fcgi_handler</span><span style="color: #007700">.</span><span style="color: #0000BB">rb</span><span style="color: #007700">:</span><span style="color: #0000BB">99</span><span style="color: #007700">:</span><span style="color: #0000BB">in&nbsp;</span><span style="color: #007700">`</span><span style="color: #DD0000">process_request'<br />vendor/rails/railties/lib/fcgi_handler.rb:76:in&nbsp;</span><span style="color: #007700">`</span><span style="color: #0000BB">process_each_request</span><span style="color: #DD0000">'<br />/usr/lib/ruby/1.8/fcgi.rb:612:in&nbsp;`each_cgi'<br /></span><span style="color: #007700">/</span><span style="color: #0000BB">usr</span><span style="color: #007700">/</span><span style="color: #0000BB">lib</span><span style="color: #007700">/</span><span style="color: #0000BB">ruby</span><span style="color: #007700">/</span><span style="color: #0000BB">1.8</span><span style="color: #007700">/</span><span style="color: #0000BB">fcgi</span><span style="color: #007700">.</span><span style="color: #0000BB">rb</span><span style="color: #007700">:</span><span style="color: #0000BB">609</span><span style="color: #007700">:</span><span style="color: #0000BB">in&nbsp;</span><span style="color: #007700">`</span><span style="color: #DD0000">each'<br />/usr/lib/ruby/1.8/fcgi.rb:609:in&nbsp;</span><span style="color: #007700">`</span><span style="color: #0000BB">each_cgi</span><span style="color: #DD0000">'<br />vendor/rails/railties/lib/fcgi_handler.rb:75:in&nbsp;`process_each_request'<br /></span><span style="color: #0000BB">vendor</span><span style="color: #007700">/</span><span style="color: #0000BB">rails</span><span style="color: #007700">/</span><span style="color: #0000BB">railties</span><span style="color: #007700">/</span><span style="color: #0000BB">lib</span><span style="color: #007700">/</span><span style="color: #0000BB">fcgi_handler</span><span style="color: #007700">.</span><span style="color: #0000BB">rb</span><span style="color: #007700">:</span><span style="color: #0000BB">74</span><span style="color: #007700">:</span><span style="color: #0000BB">in&nbsp;</span><span style="color: #007700">`</span><span style="color: #DD0000">catch'<br />vendor/rails/railties/lib/fcgi_handler.rb:74:in&nbsp;</span><span style="color: #007700">`</span><span style="color: #0000BB">process_each_request</span><span style="color: #DD0000">'<br />vendor/rails/railties/lib/fcgi_handler.rb:49:in&nbsp;`process!'<br /></span><span style="color: #0000BB">vendor</span><span style="color: #007700">/</span><span style="color: #0000BB">rails</span><span style="color: #007700">/</span><span style="color: #0000BB">railties</span><span style="color: #007700">/</span><span style="color: #0000BB">lib</span><span style="color: #007700">/</span><span style="color: #0000BB">fcgi_handler</span><span style="color: #007700">.</span><span style="color: #0000BB">rb</span><span style="color: #007700">:</span><span style="color: #0000BB">23</span><span style="color: #007700">:</span><span style="color: #0000BB">in&nbsp;</span><span style="color: #007700">`</span><span style="color: #DD0000">process!'<br />dispatch.fcgi:24&nbsp;</span>
+</span>
+</code></div></div>
+	
+	
+	
+</td>
+
+</tr><tr>
+
+<td class="tableCellTwo"  style="width:130px;">
+	<table cellpadding="0" cellspacing="0" border="0" width="100%">
+	<tr>
+	<td align="center"><div class="button"><div class="buttonSmall" id="c1" onclick="navJump('http://www.getontracks.org/forums/member/25687/')" onmouseover="navHover(this);" onmouseout="navReset(this);">Profile</div></div></td>
+	
+	
+
+	</tr>
+	</table>
+</td>
+
+<td class="tableCellTwo" colspan="2">
+	<table cellpadding="0" cellspacing="0" border="0">
+	<tr>
+	
+	
+	
+	
+	
+	
+		
+	
+	
+	&nbsp;
+	
+	<td>&nbsp;</td>	
+	</tr>
+	</table>
+  </td>
+ </tr>
+</table>
+
+</td>
+</tr>
+
+<tr id="d9" >
+ <td colspan="3">
+
+
+ <table class="threadBorder" cellpadding="0" cellspacing="0" border="0" style="width:100%;">
+  <tr>
+   <td class="tableRowHeadingBold" style="width:130px;"><div class="largeLinks"><a href="http://www.getontracks.org/forums/member/100/">Reinier Balt</a></div></td>
+   <td class="tableRowHeading">
+
+	<table cellpadding="0" cellspacing="0" border="0" style="width:99%;">
+	<tr>
+	<td>Posted: 16 August 2010 02:55 PM</td>
+	<td align="right">
+	
+		
+	
+	
+
+	
+	
+	&nbsp;&nbsp;<span class="smallLinks">[ <a href="http://www.getontracks.org/forums/ignore_member/100/" title="Ignore">Ignore</a> ]</span>
+	
+	&nbsp;&nbsp;<span class="smallLinks">[ <a name="2229" href="http://www.getontracks.org/forums/viewreply/2229/" title="Permalink to this post"># 3</a> ]</span>
+
+	&nbsp;
+	</td>
+	</tr>
+	</table>
+
+   </td>
+  </tr>
+<tr>
+ <td class="tableCellOne" style="width:130px;" valign="top">
+	<div class="rankMember">Sr. Member</div>
+	
+	<div class="itempad"><img src="http://www.getontracks.org/themes/forum_themes/blue/images/rank.gif" alt="Rank" class="rankImage" /><img src="http://www.getontracks.org/themes/forum_themes/blue/images/rank.gif" alt="Rank" class="rankImage" /><img src="http://www.getontracks.org/themes/forum_themes/blue/images/rank.gif" alt="Rank" class="rankImage" /><img src="http://www.getontracks.org/themes/forum_themes/blue/images/rank.gif" alt="Rank" class="rankImage" /></div>
+	<div class="userBlock">Total Posts:&nbsp; 882</div>
+	<div class="userBlock">Joined&nbsp; 2006-10-05</div>
+</td>
+<td class="tableCellOne" valign="top" colspan="2"><div class="post"><p>This is definitely a bug. The repeat pattern is deleted when the context is deleted, but the todos that belong to the repeat pattern are not updated correctly. I think you have changed the context of the todo before deleting the context.</p>
+
+<p>I think if you browse your context, one will fail with this error too, besides the home page, i.e. all pages on which the corrupted todo is there, will fail.</p>
+
+<p>AFAICS, this can only be fixed if you manually update the todo in your database and remove the corrupted todo. Are you able to do that?</p></div>
+	
+	
+	
+</td>
+
+</tr><tr>
+
+<td class="tableCellTwo"  style="width:130px;">
+	<table cellpadding="0" cellspacing="0" border="0" width="100%">
+	<tr>
+	<td align="center"><div class="button"><div class="buttonSmall" id="d1" onclick="navJump('http://www.getontracks.org/forums/member/100/')" onmouseover="navHover(this);" onmouseout="navReset(this);">Profile</div></div></td>
+	
+	
+
+	</tr>
+	</table>
+</td>
+
+<td class="tableCellTwo" colspan="2">
+	<table cellpadding="0" cellspacing="0" border="0">
+	<tr>
+	
+	
+	
+	
+	
+	
+		
+	
+	
+	&nbsp;
+	
+	<td>&nbsp;</td>	
+	</tr>
+	</table>
+  </td>
+ </tr>
+</table>
+
+</td>
+</tr>
+
+<tr id="e9" >
+ <td colspan="3">
+
+
+ <table class="threadBorder" cellpadding="0" cellspacing="0" border="0" style="width:100%;">
+  <tr>
+   <td class="tableRowHeadingBold" style="width:130px;"><div class="largeLinks"><a href="http://www.getontracks.org/forums/member/100/">Reinier Balt</a></div></td>
+   <td class="tableRowHeading">
+
+	<table cellpadding="0" cellspacing="0" border="0" style="width:99%;">
+	<tr>
+	<td>Posted: 16 August 2010 03:08 PM</td>
+	<td align="right">
+	
+		
+	
+	
+
+	
+	
+	&nbsp;&nbsp;<span class="smallLinks">[ <a href="http://www.getontracks.org/forums/ignore_member/100/" title="Ignore">Ignore</a> ]</span>
+	
+	&nbsp;&nbsp;<span class="smallLinks">[ <a name="2231" href="http://www.getontracks.org/forums/viewreply/2231/" title="Permalink to this post"># 4</a> ]</span>
+
+	&nbsp;
+	</td>
+	</tr>
+	</table>
+
+   </td>
+  </tr>
+<tr>
+ <td class="tableCellOne" style="width:130px;" valign="top">
+	<div class="rankMember">Sr. Member</div>
+	
+	<div class="itempad"><img src="http://www.getontracks.org/themes/forum_themes/blue/images/rank.gif" alt="Rank" class="rankImage" /><img src="http://www.getontracks.org/themes/forum_themes/blue/images/rank.gif" alt="Rank" class="rankImage" /><img src="http://www.getontracks.org/themes/forum_themes/blue/images/rank.gif" alt="Rank" class="rankImage" /><img src="http://www.getontracks.org/themes/forum_themes/blue/images/rank.gif" alt="Rank" class="rankImage" /></div>
+	<div class="userBlock">Total Posts:&nbsp; 882</div>
+	<div class="userBlock">Joined&nbsp; 2006-10-05</div>
+</td>
+<td class="tableCellOne" valign="top" colspan="2"><div class="post"><p>reopened the ticket here: <a href="http://www.getontracks.org/?URL=http%3A%2F%2Fwww.assembla.com%2Fspaces%2Ftracks-tickets%2Ftickets%2F895">http://www.assembla.com/spaces/tracks-tickets/tickets/895</a></p></div>
+	
+	
+	
+</td>
+
+</tr><tr>
+
+<td class="tableCellTwo"  style="width:130px;">
+	<table cellpadding="0" cellspacing="0" border="0" width="100%">
+	<tr>
+	<td align="center"><div class="button"><div class="buttonSmall" id="e1" onclick="navJump('http://www.getontracks.org/forums/member/100/')" onmouseover="navHover(this);" onmouseout="navReset(this);">Profile</div></div></td>
+	
+	
+
+	</tr>
+	</table>
+</td>
+
+<td class="tableCellTwo" colspan="2">
+	<table cellpadding="0" cellspacing="0" border="0">
+	<tr>
+	
+	
+	
+	
+	
+	
+		
+	
+	
+	&nbsp;
+	
+	<td>&nbsp;</td>	
+	</tr>
+	</table>
+  </td>
+ </tr>
+</table>
+
+</td>
+</tr>
+
+<tr id="f9" >
+ <td colspan="3">
+
+
+ <table class="threadBorder" cellpadding="0" cellspacing="0" border="0" style="width:100%;">
+  <tr>
+   <td class="tableRowHeadingBold" style="width:130px;"><div class="largeLinks"><a href="http://www.getontracks.org/forums/member/25687/">sokai</a></div></td>
+   <td class="tableRowHeading">
+
+	<table cellpadding="0" cellspacing="0" border="0" style="width:99%;">
+	<tr>
+	<td>Posted: 17 August 2010 05:07 PM</td>
+	<td align="right">
+	
+		
+	
+	
+
+	
+	
+	&nbsp;&nbsp;<span class="smallLinks">[ <a href="http://www.getontracks.org/forums/ignore_member/25687/" title="Ignore">Ignore</a> ]</span>
+	
+	&nbsp;&nbsp;<span class="smallLinks">[ <a name="2250" href="http://www.getontracks.org/forums/viewreply/2250/" title="Permalink to this post"># 5</a> ]</span>
+
+	&nbsp;
+	</td>
+	</tr>
+	</table>
+
+   </td>
+  </tr>
+<tr>
+ <td class="tableCellOne" style="width:130px;" valign="top">
+	<div class="rankMember">Newbie</div>
+	
+	<div class="itempad"><img src="http://www.getontracks.org/themes/forum_themes/blue/images/rank.gif" alt="Rank" class="rankImage" /></div>
+	<div class="userBlock">Total Posts:&nbsp; 6</div>
+	<div class="userBlock">Joined&nbsp; 2010-08-05</div>
+</td>
+<td class="tableCellOne" valign="top" colspan="2"><div class="post"><p>Thanks Reinier!</p>
+
+<p>Unfortunately I could not repair the database, so I deletet it after some tinkering&#8230; :(</p>
+
+<p>But today I tried with a fresh db and could reproduce the case of the ticket 895. Deleting the context (where a recurring todo should appear) deletes the recurring todo.<br />
+I think that&#8217;s not the expected consequence of deleting a context. So the empty context is a problem&#8230; (I know you know. <img src="http://www.getontracks.org/images/smileys/wink.gif" width="19" height="19" alt="wink" style="border:0;" /></p>
+
+<p>So why we can&#8217;t just create a inbox (GTD like) where items are stored that have no context!?</p>
+
+<p>Sry I&#8217;m new to GTD and Tracks and I havn&#8217;t yet read the whole forum threads, so my simplicity in mind may be wrong. <img src="http://www.getontracks.org/images/smileys/smile.gif" width="19" height="19" alt="smile" style="border:0;" /></p>
+
+<p>Cheers,<br />
+Kai</p></div>
+	
+	
+	
+</td>
+
+</tr><tr>
+
+<td class="tableCellTwo"  style="width:130px;">
+	<table cellpadding="0" cellspacing="0" border="0" width="100%">
+	<tr>
+	<td align="center"><div class="button"><div class="buttonSmall" id="f1" onclick="navJump('http://www.getontracks.org/forums/member/25687/')" onmouseover="navHover(this);" onmouseout="navReset(this);">Profile</div></div></td>
+	
+	
+
+	</tr>
+	</table>
+</td>
+
+<td class="tableCellTwo" colspan="2">
+	<table cellpadding="0" cellspacing="0" border="0">
+	<tr>
+	
+	
+	
+	
+	
+	
+		
+	
+	
+	&nbsp;
+	
+	<td>&nbsp;</td>	
+	</tr>
+	</table>
+  </td>
+ </tr>
+</table>
+
+</td>
+</tr>
+
+<tr id="g9" >
+ <td colspan="3">
+
+
+ <table class="threadBorder" cellpadding="0" cellspacing="0" border="0" style="width:100%;">
+  <tr>
+   <td class="tableRowHeadingBold" style="width:130px;"><div class="largeLinks"><a href="http://www.getontracks.org/forums/member/100/">Reinier Balt</a></div></td>
+   <td class="tableRowHeading">
+
+	<table cellpadding="0" cellspacing="0" border="0" style="width:99%;">
+	<tr>
+	<td>Posted: 18 August 2010 06:14 AM</td>
+	<td align="right">
+	
+		
+	
+	
+
+	
+	
+	&nbsp;&nbsp;<span class="smallLinks">[ <a href="http://www.getontracks.org/forums/ignore_member/100/" title="Ignore">Ignore</a> ]</span>
+	
+	&nbsp;&nbsp;<span class="smallLinks">[ <a name="2251" href="http://www.getontracks.org/forums/viewreply/2251/" title="Permalink to this post"># 6</a> ]</span>
+
+	&nbsp;
+	</td>
+	</tr>
+	</table>
+
+   </td>
+  </tr>
+<tr>
+ <td class="tableCellOne" style="width:130px;" valign="top">
+	<div class="rankMember">Sr. Member</div>
+	
+	<div class="itempad"><img src="http://www.getontracks.org/themes/forum_themes/blue/images/rank.gif" alt="Rank" class="rankImage" /><img src="http://www.getontracks.org/themes/forum_themes/blue/images/rank.gif" alt="Rank" class="rankImage" /><img src="http://www.getontracks.org/themes/forum_themes/blue/images/rank.gif" alt="Rank" class="rankImage" /><img src="http://www.getontracks.org/themes/forum_themes/blue/images/rank.gif" alt="Rank" class="rankImage" /></div>
+	<div class="userBlock">Total Posts:&nbsp; 882</div>
+	<div class="userBlock">Joined&nbsp; 2006-10-05</div>
+</td>
+<td class="tableCellOne" valign="top" colspan="2"><div class="post"><p>I think that it is a good idea to use the inbox to drop the todos that loose their context!</p>
+
+<p>I actually started to work on an inbox, but did not manage to create a lot of progress&#8230;</p></div>
+	
+	
+	
+</td>
+
+</tr><tr>
+
+<td class="tableCellTwo"  style="width:130px;">
+	<table cellpadding="0" cellspacing="0" border="0" width="100%">
+	<tr>
+	<td align="center"><div class="button"><div class="buttonSmall" id="g1" onclick="navJump('http://www.getontracks.org/forums/member/100/')" onmouseover="navHover(this);" onmouseout="navReset(this);">Profile</div></div></td>
+	
+	
+
+	</tr>
+	</table>
+</td>
+
+<td class="tableCellTwo" colspan="2">
+	<table cellpadding="0" cellspacing="0" border="0">
+	<tr>
+	
+	
+	
+	
+	
+	
+		
+	
+	
+	&nbsp;
+	
+	<td>&nbsp;</td>	
+	</tr>
+	</table>
+  </td>
+ </tr>
+</table>
+
+</td>
+</tr>
+
+</table>
+
+<table cellpadding="0" cellspacing="0" border="0" style="width:100%;">
+<tr>
+<td valign="middle" style="width:70%;">
+
+&nbsp;
+
+</td>
+&nbsp;
+
+&nbsp;
+
+</tr>
+</table>
+
+&nbsp;
+
+
+<div class="defaultCenter">
+<div class="marginpad">
+
+
+&lsaquo;&lsaquo; <a href="http://www.getontracks.org/forums/viewthread/598/">When adding an action in projeect view tracks always gos to home screen</a> 
+
+
+
+&nbsp;&nbsp;&nbsp;&nbsp; <a href="http://www.getontracks.org/forums/viewthread/615/">NoMethodError for &quot;it_shouild_belong_to&quot;</a> &rsaquo;&rsaquo;
+
+
+</div>
+</div>
+</div>
+<div id="footer">
+
+	
+	<div id="switcher">Select A Theme 
+		<select name="theme_switcher" class="select" onchange="if (this.value != '') location.href=this.value">
+			<option value="http://www.getontracks.org/?ACT=42&amp;board_id=1&amp;theme=grey">Grey</option>
+<option value="http://www.getontracks.org/?ACT=42&amp;board_id=1&amp;theme=developer">Developer</option>
+<option value="http://www.getontracks.org/?ACT=42&amp;board_id=1&amp;theme=shares">Shares</option>
+<option value="http://www.getontracks.org/?ACT=42&amp;board_id=1&amp;theme=blue" selected="selected">Blue</option>
+<option value="http://www.getontracks.org/?ACT=42&amp;board_id=1&amp;theme=default">Default</option>
+
+		</select>
+	</div><!--switcher-->
+	
+
+	<ul class="credits">
+		<li>Powered By <a href="http://expressionengine.com/">ExpressionEngine</a></li>
+		<li>Template Design By <a href="http://artificialmemory.com/" title="Nathaniel Davis">Artificial Memory</a></li>
+        </ul>
+        <ul class="stats">
+		<li>ExpressionEngine Discussion Forum - version 3.1.5 (20110630)</li>
+		<li>Script Executed in 0.1286 seconds</li>
+	</ul>
+	
+	
+	<ul class="feeds">
+		<li><a href="http://www.getontracks.org/forums/rss/11/"><img src="http://www.getontracks.org/themes/forum_themes/blue/images/feed_rss.jpg" alt="RSS 2.0" title="RSS 2.0" /></a></li>
+		<li><a href="http://www.getontracks.org/forums/atom/11/"><img src="http://www.getontracks.org/themes/forum_themes/blue/images/feed_atom.jpg" alt="Atom Feed" title="Atom Feed" /></a></li>
+	</ul>
+	
+
+</div><!--footer-->
+</div><!--wrapper-->
+</body>
+</html>

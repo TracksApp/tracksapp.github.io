@@ -1,0 +1,2163 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<title>Tracks | Tips with Tracks; Geektool</title>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<meta name='MSSmartTagsPreventParsing' content='TRUE' />
+<meta http-equiv='expires' content='-1' />
+<meta http-equiv= 'pragma' content='no-cache' />
+<meta name='robots' content='all' />
+
+<link rel="alternate" type="application/atom+xml" title="Atom Feed" href="http://www.getontracks.org/forums/atom/10/" />
+<link rel="alternate" type="application/rss+xml" title="RSS 2.0" href="http://www.getontracks.org/forums/rss/10/" />
+
+<script type="text/javascript"> 
+<!--
+
+function navHover(which)
+{					
+	if (document.getElementById(which.id))
+	{
+		cur = document.getElementById(which.id).className;
+		
+		if (cur == 'buttonLarge')
+		{
+			document.getElementById(which.id).className = 'buttonLargeHover'
+		}
+		else if (cur == 'buttonSmall')
+		{
+			document.getElementById(which.id).className = 'buttonSmallHover'
+		}
+	}
+}
+
+function navReset(which)
+{					
+	if (document.getElementById(which.id))
+	{
+		cur = document.getElementById(which.id).className;
+		
+		if (cur == 'buttonLargeHover')
+		{
+			document.getElementById(which.id).className = 'buttonLarge'
+		}
+		else if (cur == 'buttonSmallHover')
+		{
+			document.getElementById(which.id).className = 'buttonSmall'
+		}
+	}
+}
+
+
+function navJump(where)
+{
+	window.location=where;
+}
+-->
+</script>
+
+
+<style type='text/css'>
+
+
+* {
+	margin: 0;
+	padding: 0;
+	}
+body {
+	font: 78% Helvetica, Arial, sans-serif;
+	text-align: center;
+	color: #036;
+	background: #344;
+    line-height:1.4em;
+	}
+#wrapper {
+	text-align: left;
+	min-width: 760px;
+	margin: .5em 2em;
+	color: #fff;
+	background: #036 url(http://www.getontracks.org/themes/forum_themes/blue/images/background.gif) 50% 0% repeat-y;
+	border: 6px solid #233;
+	}
+#content {
+	padding: .5em 1.5% 0 1.5%;
+	border-right: 3px solid #047;
+	border-left: 3px solid #047;
+	}
+#content ul {
+	list-style: none;
+	line-height: 1.5em;
+	margin: .25em 0;
+}
+p {
+	margin: 0 10px;
+	line-height:1.4em;
+	}
+a:link {
+	color: #adf;
+	border: none;
+    }
+a:visited {
+	color: #ccc;
+	}
+a:hover, a:active {
+	text-decoration: none;
+	}
+#topbar a, #footer a, #subhead a {
+	text-decoration: none;
+	padding: .25em .5em;
+	}
+#topbar a:hover, #footer a:hover, #subhead a:hover {
+	background: #047;
+	}
+h1, h2, h3, h4, h5, h6 {
+	font-weight: bold;
+	}
+h2 {
+	font-size: 2em;
+	}
+hr.clear {
+	clear: both;
+	margin: 0;
+	padding: 0;
+	visibility: hidden;
+	border: none;
+	}
+img {
+	border: none;
+	}
+#address_book, #address_book td, #emoticons
+	{
+		background: #3cf;
+	}
+#emoticons a, #address_book a
+	{
+		color: #00f;
+		padding: 3px;
+	}
+div#topbar {
+	padding: .5em 1.5%;
+	border-top: 3px solid #047;
+	border-right: 3px solid #047;
+	border-left: 3px solid #047;
+	background: #025 url(http://www.getontracks.org/themes/forum_themes/blue/images/background-dk.gif) 50% 0% repeat-y;
+	}
+#topbar ul {
+	float: left;
+	display: inline;
+	text-align: left;
+	list-style: none;
+	line-height: 1em;
+	font-size: 1em;
+	display: inline;
+	}
+#topbar ul li {
+	display: inline;
+	margin-right: .5em;
+	}
+#topbar form {	
+	text-align: right;
+	}
+#topbar form fieldset {
+	padding-bottom: .5em;
+	}
+#topbar form input {
+	margin: 0 .25em;
+	}
+#topbar form div {
+	display: none;
+	}
+#header {  
+	clear: both;
+	padding: .5em 1.5% 0 1.5%;
+	border-right: 3px solid #047;
+	border-bottom: 1px solid #047;
+	border-left: 3px solid #047;
+	background: #025 url(http://www.getontracks.org/themes/forum_themes/blue/images/background-dk.gif) 50% 0% repeat-y;
+	}
+#header h1 {
+	float: left;
+ 	display: inline;
+ 	text-transform: uppercase;
+	font-weight: normal;
+	font-size: 2.5em;
+	line-height: 1em;
+	}
+#header h1 a {
+	color: #69c;
+	text-decoration: none;
+	}
+#header h1 a:hover {
+	color:#adf;			
+    }
+#header form {
+	text-align: right;
+	padding: .25em;
+	}
+#header form input {
+	width: 8em;
+	}
+#header form .submit {
+	width: 5em;
+	margin: 0 .5em;
+	}
+#header form div {
+	display: none;
+	}
+#subhead {  
+	clear: both;
+	padding: .5em 1.5%;
+	border-right: 3px solid #047;
+	border-left: 3px solid #047;	
+	background: #025 url(http://www.getontracks.org/themes/forum_themes/blue/images/background-dk.gif) 50% 0% repeat-y;
+	}
+div.breadcrumb {
+	display: inline;
+	}
+.currentcrumb {
+	font-weight: bold;
+	}
+ul.forumnav {
+	list-style: none;
+	margin-bottom: 1em;
+	}
+ul.forumnav li {
+	display: inline;
+	margin-right: 1em;
+	}
+ul.forumnav li a {
+	padding: .25em .5em;
+	text-decoration: none;
+	}
+ul.forumnav li a:hover {
+	background: #025;
+	}
+#footer {
+	clear: both;
+	padding: 1.5%;
+	text-align: center;
+	font-size: .9em;
+	color: #69c;
+	border-top: 1px solid #047;
+	border-right: 3px solid #047;
+	border-bottom: 3px solid #047;
+	border-left: 3px solid #047;
+	background: #025 url(http://www.getontracks.org/themes/forum_themes/blue/images/background-dk.gif) 50% 0% repeat-y;
+	}
+#footer a {
+	font-weight: bold;
+	}
+#footer ul {
+	list-style: none;
+	line-height: 1.5em;
+	margin: .25em 0;
+	}
+#footer ul li {
+	display: inline;
+	padding: .5em;
+	}
+#footer select {
+	margin: .5em;
+	}
+.forumName {
+	letter-spacing:    .1em;
+	}
+.forumDescription {
+	padding:           3px 0 0 0;
+	}
+.forumLightLinks {
+	padding:           4px 0 2px 0;
+	}
+.topicTitle {
+	letter-spacing:    .1em;
+	}
+.userBlock {
+	padding:	2px 0 2px 0;
+	}
+.spacer {
+	height: .5em;
+	margin-bottom: 1em;
+	}
+.itempad {
+	padding: 2px 0 2px 0;
+	}
+.itempadbig {
+	padding: 5px 0 5px 0;
+	}
+.bottompad {
+	padding: 0 0 2px 0;
+	}
+.marginpad {
+	margin: 12px 0 10px 3px;
+	}
+.leftpad {
+ 	padding: 0 0 0 4px;
+	}
+table {
+	border-collapse: collapse;
+	}
+.legend {
+	margin-top: 1em;
+	padding: .5em 0;
+	background: #036;
+	}
+.tableBorder {
+	padding: 0;
+	margin-top: 1px;
+	margin-bottom: 3px;
+	}
+.tablePad {
+	padding:  0 2px 4px 2px;
+	}
+.tableHeading {
+	letter-spacing: .1em;
+	font-size: 1.1em;
+	font-weight: bold;
+	text-transform: uppercase;
+	color: #69c;
+	white-space: nowrap;
+	margin: 1em 0 0 0;
+	}
+.tableHeadingSmall {
+	font-size: .9em;
+	color: #69c;
+	white-space: nowrap;
+	margin: 0 0 .5em 0;
+	}
+.tableHeadingBG {
+	background: #036;
+	border-top: 1px solid #025;
+	font-size: 1em;
+	padding: 1em .5em 0 .5em;
+	}
+.tableRowHeading, .tableRowHeadingBold {
+	padding: .25em .5em;
+	border-bottom: 1px solid #025;
+	background: #047;
+	color: #69c;
+	font-size: .8em;
+	text-transform: uppercase;
+	letter-spacing: .2em;
+	}
+.tableRowSpacer {
+	}
+.threadBorder {
+	border: 1px solid #025;
+	margin: 1em 0;
+	padding: .25em 0;
+	}
+.tableCellOne {
+	padding:           3px 6px 3px 6px;
+	}
+.tableCellTwo {
+	padding:           3px 6px 3px 6px;
+	}
+.tablePostInfo {
+	margin-bottom: .75em;
+	}
+.ignored {
+	border: 1px solid #69c;
+	padding: 0;
+	margin-top: 1px;
+	margin-bottom: 3px;
+	}
+.button {
+	width: 80px;
+	background-color: transparent;
+	}
+.button40 {
+	width: 40px;
+	background-color: transparent;
+	}
+.button80 {
+	width: 80px;
+	background-color: transparent;
+	}
+.button100 {
+	width: 100px;
+	background-color: transparent;
+	}
+.button150 {
+	width: 150px;
+	background-color: transparent;
+	}
+.button210 {
+	width: 210px;
+	background-color: transparent;
+	}
+.buttonSpacer{
+	margin:	0 0 0 6px;
+	}
+.buttonLarge {
+	background: #025 url(http://www.getontracks.org/themes/forum_themes/blue/images/background-dk.gif) 50% 50% repeat-y;
+	border: 1px solid #69c;
+	text-transform: uppercase;
+	text-align: center;
+	color: #fff;
+	font-weight: bold;
+	padding: 2px 4px 2px 4px;
+	margin: .25em 0 .25em 0;
+	white-space: nowrap;
+	cursor: pointer;
+	}
+.buttonLargeHover {
+	background: #047 url(http://www.getontracks.org/themes/forum_themes/blue/images/background-lt.gif) 50% 50% repeat-y;
+	border: 1px solid #69c;
+	text-transform: uppercase;
+	text-align: center;
+	color: #fff;
+	font-weight: bold;
+	padding: 2px 4px 2px 4px;
+	margin: .25em 0 .25em 0;
+	white-space: nowrap;
+	cursor: pointer;
+	}
+.buttonSmall {
+	border: 1px solid #69c;
+	font-size: .9em;
+	text-transform: uppercase;
+	text-align:	center;
+	color: #69c;
+	padding: 0px 1px 0px 1px;
+	margin: 0 2px 0 2px;
+	white-space: nowrap;
+	cursor: pointer;
+	}
+.buttonSmallHover {
+	background: #047 url(http://www.getontracks.org/themes/forum_themes/blue/images/background-lt.gif) 50% 50% repeat-y;
+	border: 1px solid #69c;
+	font-size: .9em;
+	text-transform: uppercase;
+	text-align:	center;
+	color: #fff;
+	padding: 0px 1px 0px 1px;
+	margin: 0 2px 0 2px;
+	white-space: nowrap;
+	cursor: pointer;
+	}
+.rankAdmin, .rankModerator, .rankMember {
+	font-weight: bold;
+	color: #69c;
+	padding: 2px 0 3px 0;
+	}
+.rankImage {
+	margin: 0;
+	padding: 0;
+	border:  0;
+	}
+.userBlock {
+	color: #69c;
+	}
+.post {
+	margin: 1em 0;
+	line-height: 1.5em;
+	}
+.edited {
+	font-size:		9px;
+	color:			#69c;
+}
+code {
+	white-space: normal;
+	}
+pre {
+	background: #def;
+	border: 1px solid #69c;
+	color: #69c;
+	margin: 8px 2px 10px 6px;
+	padding: 10px 10px 10px 6px;
+	white-space: normal;
+	}
+.codeblock {
+	background: #def;
+	border: 1px solid #69c;
+	color: #69c;
+	margin: 8px 4px 10px 3px;
+	padding: 10px 10px 10px 6px;
+	}
+blockquote {
+	background: #036;
+	border:	1px solid #69c;
+	color: #69c;
+	margin: 8px 2px 10px 6px;
+	padding: 5px 10px 10px 6px;
+	}
+.quote_author {
+	font-weight: bold;
+	color: #69c;
+	margin:	0 0 4px 0;
+	background-color: transparent;
+	}
+.signature {
+	margin: 1em .5em .5em .5em;
+	padding: .25em;
+	border: 1px solid #69c;
+	}
+.signatureTitle {
+	color: #69c;
+	}
+.buttonMode {
+	white-space: 		nowrap;
+	}
+.htmlButtonOuter, .htmlButtonOuterL {
+	padding:           0;
+	border-top:        #025 1px solid;
+	border-right:      #025 1px solid;
+	border-bottom:     #025 1px solid;
+	}
+.htmlButtonOuterL  {
+	border-left:       #025 1px solid;
+	}
+.htmlButtonInner {
+	background-color:  transparent; 
+	text-align:		center;
+	padding:			0 3px 0 3px;
+	}
+.htmlButtonOff {
+	padding:           1px 2px 2px 2px;
+	white-space:       nowrap;
+	}
+.htmlButtonOff a:link { 
+	color:             #69c;
+	text-decoration:   none;
+	white-space:       nowrap;
+	}
+.htmlButtonOff  a:visited { 
+	text-decoration:   none;
+	}
+.htmlButtonOff a:active { 
+	text-decoration:   none;
+	color:             #fff;
+	}
+.htmlButtonOff a:hover { 
+	text-decoration:   none;
+	background:        #047;
+	color:             #fff;
+	}
+.htmlButtonOn {
+	background:        #047;
+	padding:           1px 2px 2px 2px;
+	white-space:       nowrap;
+	}
+.htmlButtonOn a:link { 
+	color:             #990000;
+	text-decoration:   none;
+	white-space:       nowrap;
+	}
+.htmlButtonOn  a:visited { 
+	text-decoration:   none;
+	}
+.htmlButtonOn a:active { 
+	text-decoration:   none;
+	color:             #999;
+	}
+.htmlButtonOn a:hover { 
+	color:             #999;
+	text-decoration:   none;
+	}
+.attachTitle {
+	font-weight:		bold;
+	color:             #fff;
+	padding:           4px;
+	margin:			10px 0 1px 0;
+	}
+.attachBody {
+	padding:           4px;
+	margin-bottom:		10px;
+	}
+.attachThumb {
+	margin: 3px 6px 3px 3px;
+	border: 1px solid 	#025;
+	}
+.preview {
+	padding:           10px;
+	margin:			0 0 12px 0;
+	border:       		1px solid #025;
+	}
+.previewheading {
+	font-weight:		bold;
+	color: #69c;
+	text-transform: uppercase;
+	padding:           5px 0 5px 10px;
+	border-top:     	1px solid #025;
+	border-right:     	1px solid #025;
+	border-left:     	1px solid #025;
+	}
+.activeModerator {
+	font-weight: bold;
+	}
+form {
+	margin:            0;
+	padding:           0;
+	border:            0;
+	}
+fieldset {
+	border: none;
+	}
+.hidden {
+	margin:            0;
+	padding:           0;
+	border:            0;
+	}
+.input {
+	border:        1px solid #69c;
+	color:             #69c;
+	height:            1.5em;
+	padding:           0;
+	margin:        	0;
+	}
+.textarea {
+	border:        1px solid #69c;
+	color:             #333;
+	font-size:         11px;
+	padding:           0;
+	margin:        	0;
+	}
+.select {
+	background-color:  #fff;
+	font-weight:       normal;
+	letter-spacing:    .1em;
+	color:             #333;
+	margin-top:        2px;
+	margin-bottom:     2px;
+	}
+.multiselect {
+	border:        1px solid #69c;
+	background-color:  #fff;
+	color:             #333;
+	font-size:         11px;
+	margin-top:        2px;
+	margin-top:        2px;
+	}
+.radio {
+	background-color:  transparent;
+	margin-top:        4px;
+	margin-bottom:     4px;
+	padding:           0;
+	border:            0;
+	}
+.checkbox {
+	background-color:  transparent;
+	padding:           0;
+	border:            0;
+	}
+.buttons {
+	font-weight:       bold;
+	border:        1px solid #69c;
+	letter-spacing:    .1em;
+	margin:        	0;
+	padding:			1px 6px 3px 6px;
+	color:             #69c;
+	background: #025;
+	cursor: pointer;
+	}
+.submit {
+	font-weight:       normal;
+	border:        1px solid #69c;
+	letter-spacing:    .1em;
+	margin:        	0;
+	padding:			1px 4px 1px 4px;
+	color:             #69c;
+	background: #025;
+	cursor: pointer;
+	}
+.errorHeading {
+	background: 		#025;
+	color:             #fff;
+	padding:           6px 6px 6px 6px;
+	border-bottom:     1px solid #fff;
+	letter-spacing:    .1em;
+	font-weight:		bold;
+	}
+.errorMessage {
+	color:             #f00;
+	padding:           10px 0 10px 0;
+	}
+.errorBox {
+	color: #f00;
+	padding: 10px;
+	margin: 0 0 12px 0;
+	border: 1px solid #f00;
+	background: #fcc;
+	}
+.alert {
+	color:             #f00;
+	font-weight:		bold;
+	}
+.highlight {
+	color:             #f00;
+	}
+.profileTitle {
+	font-size: 1.5em;
+	font-weight: bold;
+	margin: .5em 0;
+	}
+.memberlistHead {
+	padding: .25em .5em;
+	border-bottom: 1px solid #025;
+ 	background: #047;
+	color: #69c;
+	font-size: .8em;
+	text-transform: uppercase;
+	}
+.memberlistRowOne {
+	padding: .5em;
+	background: #047;
+	}
+.memberlistRowTwo {
+	padding: .5em;
+	}
+.memberlistFooter {
+	padding: 1em .5em;
+	}
+.profileHeadingBG {
+	background: #036;
+	padding:           6px 6px 6px 6px;
+	border-bottom:     #025 1px solid;
+	}
+.profileTopBox {
+	margin:		0;
+	padding:		7px 5px 5px 5px;
+	}
+.profileTitle {
+	font-weight:		bold;
+	padding: 			3px 5px 3px 0;
+	margin:			0;
+	background-color: transparent;  
+	}
+.profileItem {
+	background:		transparent;
+	margin: 			2px 0 2px 0;
+	background-color: transparent;  
+	}
+.profilePhoto {
+	padding:			1px 1px 1px 20px;
+	margin-top:        1px;
+	margin-bottom:     3px;
+	}
+.avatar {
+	background:	transparent;
+	margin:		3px 14px 0 3px;
+	}
+.photo {
+	background:	transparent;
+	margin:		6px 14px 0 3px;
+	}
+.profileHead {
+	font-weight:		bold;
+	text-transform:	uppercase;
+	padding:			3px 4px 3px 10px;  
+	margin:			0 0 0 0;
+	}
+.menuHeadingBG {
+	background: #036;
+	padding:           6px 6px 6px 6px;
+	}
+.profileMenu {
+	background: 		#036;
+	border:            1px solid #025;
+	padding:			1px;
+	margin-top:        1px;
+	margin-bottom:     3px;
+	}
+.profileMenuInner {
+	padding-left:		10px;
+	padding-right:		8px;
+	margin-bottom:		4px;
+	margin-top:		4px;
+	}
+.menuItem {
+	padding:			3px 0 3px 0;
+	background-color:	transparent;  
+	}
+.borderTopBot {
+	border-top:	1px solid #025;
+	border-bottom:	1px solid #025;
+	}
+.borderBot {
+	border-bottom:	1px solid #025;
+	}
+.success {
+	font-weight:		bold;
+	padding:			3px 0 3px 0;
+	background-color:	transparent; 
+	}
+.innerShade {
+	background-color:	#036;
+	margin:			0;
+	padding:			10px;
+	}
+.searchBox {
+	background: transparent;
+	margin: 16px 0 0 0;
+	padding: 8px 5px 5px 5px;
+	}
+.searchBoxTitle {
+	font-weight: bold;
+	background-color: transparent;  
+	}
+.searchpad {
+	padding: 6px 0 8px 0;
+	}
+.searchspacer {
+	margin-bottom: 6px;
+	}
+.iframe {
+	border:1px solid #025;
+	background: #def;
+	color: #036;
+	}
+.wordSuggestion {
+	border: 1px solid #036; 
+	padding: 4px; 
+	background: #def;
+	color: #036;
+	}
+.wordSuggestion a, .wordSuggestion a:active {
+	color: #036;
+	cursor: pointer;
+	}
+.spellchecked_word {
+	cursor: pointer;
+	background-color: #def;
+	color:#036;
+	border-bottom: 1px dashed #036;
+	}
+.spellchecked_word_selected {
+	cursor: pointer;
+	background-color: #69c;
+	}
+</style>
+
+</head>
+
+<body >
+<div id="wrapper">
+<div id='topbar'>
+	<ul>
+		
+		<li class="welcome">Welcome Guest</li>
+		<li><a href="http://www.getontracks.org/forums/member/login/">Login</a></li>
+		<li>REGISTRATION CLOSED: please use <a href="http://lists.rousette.org.uk/mailman/listinfo/tracks-discuss">mailing list</a></li>
+		
+		
+	</ul>
+     
+     <form method="post" action="http://www.getontracks.org/"  >
+<div class='hiddenFields'>
+<input type="hidden" name="XID" value="911af99e70eae04fd9884a5af5307a796e1a6176" />
+<input type="hidden" name="ACT" value="9" />
+<input type="hidden" name="FROM" value="forum" />
+<input type="hidden" name="mbase" value="http://www.getontracks.org/forums/member/" />
+<input type="hidden" name="board_id" value="1" />
+<input type="hidden" name="anon" value="1" />
+<input type="hidden" name="RET" value="http://www.getontracks.org/forums/viewthread/57/" />
+<input type="hidden" name="site_id" value="1" />
+</div>
+
+
+	<fieldset>	
+		<label class="field-username">Username<input type="text" class="textbox" name="username" value="" /></label>
+		<label class="field-password">Password<input type="password" class="textbox" name="password" /></label>
+		<input type="submit" class="submit" value="Login" />
+	</fieldset>	
+	<fieldset>
+		<label class="field-remember">Remember Me?<input type="checkbox" class="checkbox" name="auto_login" value="1" checked="checked" /></label>
+		<a href="http://www.getontracks.org/forums/member/forgot_password/">forgot password?</a>
+	</fieldset> 
+</form>
+     
+<hr class="clear" />
+</div><!--topbar-->
+<div id='header'>
+     <h1><a href="http://www.getontracks.org/forums/" title="Tracks">Tracks</a></h1>
+     <form method="post" action="http://www.getontracks.org/forums/do_search/"  >
+<div class='hiddenFields'>
+<input type="hidden" name="XID" value="1a9e0d0acb0153dba42c8aea07269737e6fc89b4" />
+<input type="hidden" name="board_id" value="1" />
+<input type="hidden" name="site_id" value="1" />
+</div>
+
+
+
+<label class="searchbox"><input type="text" class="input" name="keywords" value="Search" maxlength="80" /></label>
+<input type="submit" class="submit" value="Search" />
+<a href="http://www.getontracks.org/forums/search/">Advanced Search</a>
+
+</form>
+    <hr class="clear" />
+</div><!--header-->
+<div id="subhead">
+		<div class="breadcrumb"><a href="http://www.getontracks.org/forums/">Forum Home</a><span class="breadcrumbspacer"> &gt; </span><a href="http://www.getontracks.org/forums/viewcategory/4/">Usage</a><span class="breadcrumbspacer"> &gt; </span><a href="http://www.getontracks.org/forums/viewforum/10/">Tips and Tricks</a><span class="breadcrumbspacer"> &gt; </span><span class="currentcrumb">Thread</span></div>
+<hr class="clear" />
+</div><!--subhead-->
+<div id="content">
+<script type="text/javascript">
+<!--
+
+function showimage(loc, width, height)
+{
+	window.open(loc,'Image','width='+width+',height='+height+',screenX=0,screenY=0,top=0,left=0,toolbar=0,status=0,scrollbars=0,location=0,menubar=1,resizable=1');
+	return false;
+}
+
+function showfastreply()
+{
+    if (document.getElementById('fastreply').style.display == "block")
+    {
+        document.getElementById('fastreply').style.display = "none";
+    }
+    else
+    {
+        document.getElementById('fastreply').style.display = "block";
+    }
+}
+
+function showHideRow(el)
+{
+    if (document.getElementById(el).style.display == "")
+    {
+        document.getElementById(el).style.display = "none";
+    }
+    else
+    {
+        document.getElementById(el).style.display = "";
+    }	
+}
+//-->
+</script>
+
+<table cellpadding="0" cellspacing="0" border="0" style="width:100%;">
+<tr>
+<td valign="middle" style="width:80%;">
+&nbsp;
+</td>
+&nbsp;
+
+&nbsp;
+
+</tr>
+</table>
+
+
+
+<table cellpadding="0" cellspacing="0" border="0" style="width:100%;" >
+<tr>
+<td class="tableHeadingBG" colspan="2"><div class="tableHeading">Tips with Tracks; Geektool</div></td>
+<td class="tableHeadingBG" colspan="1" align="right"><div class="altLinks">&nbsp;</div></td>
+
+</tr>
+
+
+
+<tr id="a9" >
+ <td colspan="3">
+
+
+ <table class="threadBorder" cellpadding="0" cellspacing="0" border="0" style="width:100%;">
+  <tr>
+   <td class="tableRowHeadingBold" style="width:130px;"><div class="largeLinks"><a href="http://www.getontracks.org/forums/member/49/">emory</a></div></td>
+   <td class="tableRowHeading">
+
+	<table cellpadding="0" cellspacing="0" border="0" style="width:99%;">
+	<tr>
+	<td>Posted: 17 August 2006 10:06 PM</td>
+	<td align="right">
+	
+		
+	
+	    
+	
+	
+
+	
+	
+	&nbsp;&nbsp;<span class="smallLinks">[ <a href="http://www.getontracks.org/forums/ignore_member/49/" title="Ignore">Ignore</a> ]</span>
+	
+	
+
+	&nbsp;
+	</td>
+	</tr>
+	</table>
+
+   </td>
+  </tr>
+<tr>
+ <td class="tableCellOne" style="width:130px;" valign="top">
+	<div class="rankMember">Newbie</div>
+	
+	<div class="itempad"><img src="http://www.getontracks.org/themes/forum_themes/blue/images/rank.gif" alt="Rank" class="rankImage" /></div>
+	<div class="userBlock">Total Posts:&nbsp; 20</div>
+	<div class="userBlock">Joined&nbsp; 2006-07-26</div>
+</td>
+<td class="tableCellOne" valign="top" colspan="2"><div class="post"><p><a href="http://www.getontracks.org/?URL=http%3A%2F%2Fkvet.ch%2Farticles%2F2006%2F08%2F14%2Ftricks-with-tracks">http://kvet.ch/articles/2006/08/14/tricks-with-tracks</a></p>
+
+<p>I suspect you can do the same with ActiveDesktop.</p>
+
+<p>I thought I had posted this here but apparently I did not!</p></div>
+	
+	
+	
+</td>
+
+</tr><tr>
+
+<td class="tableCellTwo"  style="width:130px;">
+	<table cellpadding="0" cellspacing="0" border="0" width="100%">
+	<tr>
+	<td align="center"><div class="button"><div class="buttonSmall" id="a1" onclick="navJump('http://www.getontracks.org/forums/member/49/')" onmouseover="navHover(this);" onmouseout="navReset(this);">Profile</div></div></td>
+	
+	
+
+	</tr>
+	</table>
+</td>
+
+<td class="tableCellTwo" colspan="2">
+	<table cellpadding="0" cellspacing="0" border="0">
+	<tr>
+	
+	
+	
+	
+		
+		
+				
+	
+	
+	
+	
+	&nbsp;
+	
+	<td>&nbsp;</td>	
+	</tr>
+	</table>
+  </td>
+ </tr>
+</table>
+
+</td>
+</tr>
+
+<tr id="b9" >
+ <td colspan="3">
+
+
+ <table class="threadBorder" cellpadding="0" cellspacing="0" border="0" style="width:100%;">
+  <tr>
+   <td class="tableRowHeadingBold" style="width:130px;"><div class="largeLinks"><a href="http://www.getontracks.org/forums/member/136/">alex-and-r</a></div></td>
+   <td class="tableRowHeading">
+
+	<table cellpadding="0" cellspacing="0" border="0" style="width:99%;">
+	<tr>
+	<td>Posted: 20 December 2006 01:40 PM</td>
+	<td align="right">
+	
+		
+	
+	
+
+	
+	
+	&nbsp;&nbsp;<span class="smallLinks">[ <a href="http://www.getontracks.org/forums/ignore_member/136/" title="Ignore">Ignore</a> ]</span>
+	
+	&nbsp;&nbsp;<span class="smallLinks">[ <a name="286" href="http://www.getontracks.org/forums/viewreply/286/" title="Permalink to this post"># 1</a> ]</span>
+
+	&nbsp;
+	</td>
+	</tr>
+	</table>
+
+   </td>
+  </tr>
+<tr>
+ <td class="tableCellOne" style="width:130px;" valign="top">
+	<div class="rankMember">Newbie</div>
+	
+	<div class="itempad"><img src="http://www.getontracks.org/themes/forum_themes/blue/images/rank.gif" alt="Rank" class="rankImage" /></div>
+	<div class="userBlock">Total Posts:&nbsp; 2</div>
+	<div class="userBlock">Joined&nbsp; 2006-12-20</div>
+</td>
+<td class="tableCellOne" valign="top" colspan="2"><div class="post"><p>I tried to place the tracks on the desktop by the means of ActiveDesktop, but it requested to login. And when I login the browser is loaded and I’m now in its window instead of ActiveDesktop. And if I can stay in the ActiveDesktop it will be very useful, cuz I don’t need to browse through my tabs to get to tracks. I just hit the clear desktop button and here I am with the tracks before my eyes! Very useful! Is there a way to do it?</p></div>
+	
+	
+	
+
+
+	
+	
+</td>
+
+</tr><tr>
+
+<td class="tableCellTwo"  style="width:130px;">
+	<table cellpadding="0" cellspacing="0" border="0" width="100%">
+	<tr>
+	<td align="center"><div class="button"><div class="buttonSmall" id="b1" onclick="navJump('http://www.getontracks.org/forums/member/136/')" onmouseover="navHover(this);" onmouseout="navReset(this);">Profile</div></div></td>
+	
+	
+
+	</tr>
+	</table>
+</td>
+
+<td class="tableCellTwo" colspan="2">
+	<table cellpadding="0" cellspacing="0" border="0">
+	<tr>
+	
+	
+	
+	
+	
+	
+		
+	
+	
+	&nbsp;
+	
+	<td>&nbsp;</td>	
+	</tr>
+	</table>
+  </td>
+ </tr>
+</table>
+
+</td>
+</tr>
+
+<tr id="c9" >
+ <td colspan="3">
+
+
+ <table class="threadBorder" cellpadding="0" cellspacing="0" border="0" style="width:100%;">
+  <tr>
+   <td class="tableRowHeadingBold" style="width:130px;"><div class="largeLinks"><a href="http://www.getontracks.org/forums/member/49/">emory</a></div></td>
+   <td class="tableRowHeading">
+
+	<table cellpadding="0" cellspacing="0" border="0" style="width:99%;">
+	<tr>
+	<td>Posted: 20 December 2006 02:44 PM</td>
+	<td align="right">
+	
+		
+	
+	
+
+	
+	
+	&nbsp;&nbsp;<span class="smallLinks">[ <a href="http://www.getontracks.org/forums/ignore_member/49/" title="Ignore">Ignore</a> ]</span>
+	
+	&nbsp;&nbsp;<span class="smallLinks">[ <a name="287" href="http://www.getontracks.org/forums/viewreply/287/" title="Permalink to this post"># 2</a> ]</span>
+
+	&nbsp;
+	</td>
+	</tr>
+	</table>
+
+   </td>
+  </tr>
+<tr>
+ <td class="tableCellOne" style="width:130px;" valign="top">
+	<div class="rankMember">Newbie</div>
+	
+	<div class="itempad"><img src="http://www.getontracks.org/themes/forum_themes/blue/images/rank.gif" alt="Rank" class="rankImage" /></div>
+	<div class="userBlock">Total Posts:&nbsp; 20</div>
+	<div class="userBlock">Joined&nbsp; 2006-07-26</div>
+</td>
+<td class="tableCellOne" valign="top" colspan="2"><div class="post"><p>Pick the TXT feed url and put that on your desktop.</p></div>
+	
+	
+	
+
+
+	
+	
+</td>
+
+</tr><tr>
+
+<td class="tableCellTwo"  style="width:130px;">
+	<table cellpadding="0" cellspacing="0" border="0" width="100%">
+	<tr>
+	<td align="center"><div class="button"><div class="buttonSmall" id="c1" onclick="navJump('http://www.getontracks.org/forums/member/49/')" onmouseover="navHover(this);" onmouseout="navReset(this);">Profile</div></div></td>
+	
+	
+
+	</tr>
+	</table>
+</td>
+
+<td class="tableCellTwo" colspan="2">
+	<table cellpadding="0" cellspacing="0" border="0">
+	<tr>
+	
+	
+	
+	
+	
+	
+		
+	
+	
+	&nbsp;
+	
+	<td>&nbsp;</td>	
+	</tr>
+	</table>
+  </td>
+ </tr>
+</table>
+
+</td>
+</tr>
+
+<tr id="d9" >
+ <td colspan="3">
+
+
+ <table class="threadBorder" cellpadding="0" cellspacing="0" border="0" style="width:100%;">
+  <tr>
+   <td class="tableRowHeadingBold" style="width:130px;"><div class="largeLinks"><a href="http://www.getontracks.org/forums/member/136/">alex-and-r</a></div></td>
+   <td class="tableRowHeading">
+
+	<table cellpadding="0" cellspacing="0" border="0" style="width:99%;">
+	<tr>
+	<td>Posted: 20 December 2006 02:49 PM</td>
+	<td align="right">
+	
+		
+	
+	
+
+	
+	
+	&nbsp;&nbsp;<span class="smallLinks">[ <a href="http://www.getontracks.org/forums/ignore_member/136/" title="Ignore">Ignore</a> ]</span>
+	
+	&nbsp;&nbsp;<span class="smallLinks">[ <a name="288" href="http://www.getontracks.org/forums/viewreply/288/" title="Permalink to this post"># 3</a> ]</span>
+
+	&nbsp;
+	</td>
+	</tr>
+	</table>
+
+   </td>
+  </tr>
+<tr>
+ <td class="tableCellOne" style="width:130px;" valign="top">
+	<div class="rankMember">Newbie</div>
+	
+	<div class="itempad"><img src="http://www.getontracks.org/themes/forum_themes/blue/images/rank.gif" alt="Rank" class="rankImage" /></div>
+	<div class="userBlock">Total Posts:&nbsp; 2</div>
+	<div class="userBlock">Joined&nbsp; 2006-12-20</div>
+</td>
+<td class="tableCellOne" valign="top" colspan="2"><div class="post"><p>Thanks! But it&#8217;s just text. It&#8217;s not the tracks itself. In this case i only can monitor it and not work with it. I once again need to go to my browser window, browse through tabs and so on&#8230; :(</p></div>
+	
+	
+	
+
+
+	
+	
+</td>
+
+</tr><tr>
+
+<td class="tableCellTwo"  style="width:130px;">
+	<table cellpadding="0" cellspacing="0" border="0" width="100%">
+	<tr>
+	<td align="center"><div class="button"><div class="buttonSmall" id="d1" onclick="navJump('http://www.getontracks.org/forums/member/136/')" onmouseover="navHover(this);" onmouseout="navReset(this);">Profile</div></div></td>
+	
+	
+
+	</tr>
+	</table>
+</td>
+
+<td class="tableCellTwo" colspan="2">
+	<table cellpadding="0" cellspacing="0" border="0">
+	<tr>
+	
+	
+	
+	
+	
+	
+		
+	
+	
+	&nbsp;
+	
+	<td>&nbsp;</td>	
+	</tr>
+	</table>
+  </td>
+ </tr>
+</table>
+
+</td>
+</tr>
+
+<tr id="e9" >
+ <td colspan="3">
+
+
+ <table class="threadBorder" cellpadding="0" cellspacing="0" border="0" style="width:100%;">
+  <tr>
+   <td class="tableRowHeadingBold" style="width:130px;"><div class="largeLinks"><a href="http://www.getontracks.org/forums/member/49/">emory</a></div></td>
+   <td class="tableRowHeading">
+
+	<table cellpadding="0" cellspacing="0" border="0" style="width:99%;">
+	<tr>
+	<td>Posted: 20 December 2006 03:10 PM</td>
+	<td align="right">
+	
+		
+	
+	
+
+	
+	
+	&nbsp;&nbsp;<span class="smallLinks">[ <a href="http://www.getontracks.org/forums/ignore_member/49/" title="Ignore">Ignore</a> ]</span>
+	
+	&nbsp;&nbsp;<span class="smallLinks">[ <a name="289" href="http://www.getontracks.org/forums/viewreply/289/" title="Permalink to this post"># 4</a> ]</span>
+
+	&nbsp;
+	</td>
+	</tr>
+	</table>
+
+   </td>
+  </tr>
+<tr>
+ <td class="tableCellOne" style="width:130px;" valign="top">
+	<div class="rankMember">Newbie</div>
+	
+	<div class="itempad"><img src="http://www.getontracks.org/themes/forum_themes/blue/images/rank.gif" alt="Rank" class="rankImage" /></div>
+	<div class="userBlock">Total Posts:&nbsp; 20</div>
+	<div class="userBlock">Joined&nbsp; 2006-07-26</div>
+</td>
+<td class="tableCellOne" valign="top" colspan="2"><div class="post"><p>yeah, i like having just the list on the desktop.&nbsp; on the mac you could have a dashboard widget show the html version.</p>
+
+<p>you could always look at making a Konfabulator widget, or see if there is a pre-made one that can be pointed at a url.</p></div>
+	
+	
+	
+
+
+	
+	
+</td>
+
+</tr><tr>
+
+<td class="tableCellTwo"  style="width:130px;">
+	<table cellpadding="0" cellspacing="0" border="0" width="100%">
+	<tr>
+	<td align="center"><div class="button"><div class="buttonSmall" id="e1" onclick="navJump('http://www.getontracks.org/forums/member/49/')" onmouseover="navHover(this);" onmouseout="navReset(this);">Profile</div></div></td>
+	
+	
+
+	</tr>
+	</table>
+</td>
+
+<td class="tableCellTwo" colspan="2">
+	<table cellpadding="0" cellspacing="0" border="0">
+	<tr>
+	
+	
+	
+	
+	
+	
+		
+	
+	
+	&nbsp;
+	
+	<td>&nbsp;</td>	
+	</tr>
+	</table>
+  </td>
+ </tr>
+</table>
+
+</td>
+</tr>
+
+<tr id="f9" >
+ <td colspan="3">
+
+
+ <table class="threadBorder" cellpadding="0" cellspacing="0" border="0" style="width:100%;">
+  <tr>
+   <td class="tableRowHeadingBold" style="width:130px;"><div class="largeLinks"><a href="http://www.getontracks.org/forums/member/1/">bsag</a></div></td>
+   <td class="tableRowHeading">
+
+	<table cellpadding="0" cellspacing="0" border="0" style="width:99%;">
+	<tr>
+	<td>Posted: 20 December 2006 06:06 PM</td>
+	<td align="right">
+	
+		
+	
+	
+
+	
+	
+	&nbsp;&nbsp;<span class="smallLinks">[ <a href="http://www.getontracks.org/forums/ignore_member/1/" title="Ignore">Ignore</a> ]</span>
+	
+	&nbsp;&nbsp;<span class="smallLinks">[ <a name="290" href="http://www.getontracks.org/forums/viewreply/290/" title="Permalink to this post"># 5</a> ]</span>
+
+	&nbsp;
+	</td>
+	</tr>
+	</table>
+
+   </td>
+  </tr>
+<tr>
+ <td class="tableCellOne" style="width:130px;" valign="top">
+	<div class="rankAdmin">Administrator</div>
+	<div class="itempad"><img src="http://www.getontracks.org/images/avatars/uploads/avatar_1.png" width="80" height="80" border="0" alt="Avatar" /></div>
+	<div class="itempad"><img src="http://www.getontracks.org/themes/forum_themes/blue/images/rank.gif" alt="Rank" class="rankImage" /><img src="http://www.getontracks.org/themes/forum_themes/blue/images/rank.gif" alt="Rank" class="rankImage" /><img src="http://www.getontracks.org/themes/forum_themes/blue/images/rank.gif" alt="Rank" class="rankImage" /><img src="http://www.getontracks.org/themes/forum_themes/blue/images/rank.gif" alt="Rank" class="rankImage" /></div>
+	<div class="userBlock">Total Posts:&nbsp; 223</div>
+	<div class="userBlock">Joined&nbsp; 2006-03-05</div>
+</td>
+<td class="tableCellOne" valign="top" colspan="2"><div class="post"><p>alex-and-r: I&#8217;m not a Windows user, so I&#8217;m probably no help at all on this. What happens in ActiveDesktop usually when you click a link? Does it open that link in IE itself? If so, then it&#8217;s going to be tough, because the login page redirects you to the main page. If ActiveDesktop can store cookies, one hacky option might be to log in using IE, then copy the Tracks session cookie across to ActiveDesktop. Then it would think you were logged in and show you the main page.</p>
+
+<p>Anyone else got any ideas? I agree that a Konfabulator/Dashboard widget would be great. With the recent changes in Rails 1.2, we should be able to beef up the API quite a bit, which would make a widget quite capable.</p></div>
+	
+	
+	
+
+
+	
+	
+</td>
+
+</tr><tr>
+
+<td class="tableCellTwo"  style="width:130px;">
+	<table cellpadding="0" cellspacing="0" border="0" width="100%">
+	<tr>
+	<td align="center"><div class="button"><div class="buttonSmall" id="f1" onclick="navJump('http://www.getontracks.org/forums/member/1/')" onmouseover="navHover(this);" onmouseout="navReset(this);">Profile</div></div></td>
+	
+	
+
+	</tr>
+	</table>
+</td>
+
+<td class="tableCellTwo" colspan="2">
+	<table cellpadding="0" cellspacing="0" border="0">
+	<tr>
+	
+	
+	
+	
+	
+	
+		
+	
+	
+	&nbsp;
+	
+	<td>&nbsp;</td>	
+	</tr>
+	</table>
+  </td>
+ </tr>
+</table>
+
+</td>
+</tr>
+
+<tr id="g9" >
+ <td colspan="3">
+
+
+ <table class="threadBorder" cellpadding="0" cellspacing="0" border="0" style="width:100%;">
+  <tr>
+   <td class="tableRowHeadingBold" style="width:130px;"><div class="largeLinks"><a href="http://www.getontracks.org/forums/member/2/">Craig</a></div></td>
+   <td class="tableRowHeading">
+
+	<table cellpadding="0" cellspacing="0" border="0" style="width:99%;">
+	<tr>
+	<td>Posted: 20 December 2006 09:14 PM</td>
+	<td align="right">
+	
+		
+	
+	
+
+	
+	
+	&nbsp;&nbsp;<span class="smallLinks">[ <a href="http://www.getontracks.org/forums/ignore_member/2/" title="Ignore">Ignore</a> ]</span>
+	
+	&nbsp;&nbsp;<span class="smallLinks">[ <a name="291" href="http://www.getontracks.org/forums/viewreply/291/" title="Permalink to this post"># 6</a> ]</span>
+
+	&nbsp;
+	</td>
+	</tr>
+	</table>
+
+   </td>
+  </tr>
+<tr>
+ <td class="tableCellOne" style="width:130px;" valign="top">
+	<div class="rankMember">Newbie</div>
+	
+	<div class="itempad"><img src="http://www.getontracks.org/themes/forum_themes/blue/images/rank.gif" alt="Rank" class="rankImage" /></div>
+	<div class="userBlock">Total Posts:&nbsp; 28</div>
+	<div class="userBlock">Joined&nbsp; 2006-06-28</div>
+</td>
+<td class="tableCellOne" valign="top" colspan="2"><div class="post"><p>I&#8217;ve been using GeekTool to display my due today or tomorrow tasks on my Mac desktop and I love it. I use this:</p><div class="codeblock"><code><span style="color: #000000">
+<span style="color: #0000BB">curl&nbsp;http</span><span style="color: #007700">:</span><span style="color: #FF8000">//127.0.0.1:3000/feed/text/Craig/&#91;token&#93;?due=1&nbsp;</span>
+</span>
+</code></div>
+<p>What I&#8217;d like to do is have these same tasks listed, but color coded for those due today or previously (red) and those due tomorrow (yellow). I imagine there&#8217;s some fancy way to do this with shell commands (and having GeekTool add the color to the different outputs). For example, could you do the above curl with due=0 to get the red ones, then somehow do a kind of diff between the results of that curl and a curl with due=1 to get the others? I&#8217;m not experienced enough with command-line-fu to get this to work: would anyone else want to take up the challenge?</p></div>
+	
+	
+	
+
+
+	
+	
+	<fieldset class='signature'>
+					
+<legend class="signatureTitle">&nbsp;Signature&nbsp;</legend>
+
+
+
+<p>Tracks 1.042 on Locomotive / Camino 1.0.1</p>
+
+</fieldset>
+	
+</td>
+
+</tr><tr>
+
+<td class="tableCellTwo"  style="width:130px;">
+	<table cellpadding="0" cellspacing="0" border="0" width="100%">
+	<tr>
+	<td align="center"><div class="button"><div class="buttonSmall" id="g1" onclick="navJump('http://www.getontracks.org/forums/member/2/')" onmouseover="navHover(this);" onmouseout="navReset(this);">Profile</div></div></td>
+	
+	
+
+	</tr>
+	</table>
+</td>
+
+<td class="tableCellTwo" colspan="2">
+	<table cellpadding="0" cellspacing="0" border="0">
+	<tr>
+	
+	
+	
+	
+	
+	
+		
+	
+	
+	&nbsp;
+	
+	<td>&nbsp;</td>	
+	</tr>
+	</table>
+  </td>
+ </tr>
+</table>
+
+</td>
+</tr>
+
+<tr id="h9" >
+ <td colspan="3">
+
+
+ <table class="threadBorder" cellpadding="0" cellspacing="0" border="0" style="width:100%;">
+  <tr>
+   <td class="tableRowHeadingBold" style="width:130px;"><div class="largeLinks"><a href="http://www.getontracks.org/forums/member/1/">bsag</a></div></td>
+   <td class="tableRowHeading">
+
+	<table cellpadding="0" cellspacing="0" border="0" style="width:99%;">
+	<tr>
+	<td>Posted: 21 December 2006 05:28 PM</td>
+	<td align="right">
+	
+		
+	
+	
+
+	
+	
+	&nbsp;&nbsp;<span class="smallLinks">[ <a href="http://www.getontracks.org/forums/ignore_member/1/" title="Ignore">Ignore</a> ]</span>
+	
+	&nbsp;&nbsp;<span class="smallLinks">[ <a name="292" href="http://www.getontracks.org/forums/viewreply/292/" title="Permalink to this post"># 7</a> ]</span>
+
+	&nbsp;
+	</td>
+	</tr>
+	</table>
+
+   </td>
+  </tr>
+<tr>
+ <td class="tableCellOne" style="width:130px;" valign="top">
+	<div class="rankAdmin">Administrator</div>
+	<div class="itempad"><img src="http://www.getontracks.org/images/avatars/uploads/avatar_1.png" width="80" height="80" border="0" alt="Avatar" /></div>
+	<div class="itempad"><img src="http://www.getontracks.org/themes/forum_themes/blue/images/rank.gif" alt="Rank" class="rankImage" /><img src="http://www.getontracks.org/themes/forum_themes/blue/images/rank.gif" alt="Rank" class="rankImage" /><img src="http://www.getontracks.org/themes/forum_themes/blue/images/rank.gif" alt="Rank" class="rankImage" /><img src="http://www.getontracks.org/themes/forum_themes/blue/images/rank.gif" alt="Rank" class="rankImage" /></div>
+	<div class="userBlock">Total Posts:&nbsp; 223</div>
+	<div class="userBlock">Joined&nbsp; 2006-03-05</div>
+</td>
+<td class="tableCellOne" valign="top" colspan="2"><div class="post"><p>Craig: Hmm, that&#8217;s a fun little problem. I&#8217;m working on a solution now, and I think it will work. More later&#8230;</p></div>
+	
+	
+	
+
+
+	
+	
+</td>
+
+</tr><tr>
+
+<td class="tableCellTwo"  style="width:130px;">
+	<table cellpadding="0" cellspacing="0" border="0" width="100%">
+	<tr>
+	<td align="center"><div class="button"><div class="buttonSmall" id="h1" onclick="navJump('http://www.getontracks.org/forums/member/1/')" onmouseover="navHover(this);" onmouseout="navReset(this);">Profile</div></div></td>
+	
+	
+
+	</tr>
+	</table>
+</td>
+
+<td class="tableCellTwo" colspan="2">
+	<table cellpadding="0" cellspacing="0" border="0">
+	<tr>
+	
+	
+	
+	
+	
+	
+		
+	
+	
+	&nbsp;
+	
+	<td>&nbsp;</td>	
+	</tr>
+	</table>
+  </td>
+ </tr>
+</table>
+
+</td>
+</tr>
+
+<tr id="i9" >
+ <td colspan="3">
+
+
+ <table class="threadBorder" cellpadding="0" cellspacing="0" border="0" style="width:100%;">
+  <tr>
+   <td class="tableRowHeadingBold" style="width:130px;"><div class="largeLinks"><a href="http://www.getontracks.org/forums/member/1/">bsag</a></div></td>
+   <td class="tableRowHeading">
+
+	<table cellpadding="0" cellspacing="0" border="0" style="width:99%;">
+	<tr>
+	<td>Posted: 21 December 2006 08:51 PM</td>
+	<td align="right">
+	
+		
+	
+	
+
+	
+	
+	&nbsp;&nbsp;<span class="smallLinks">[ <a href="http://www.getontracks.org/forums/ignore_member/1/" title="Ignore">Ignore</a> ]</span>
+	
+	&nbsp;&nbsp;<span class="smallLinks">[ <a name="293" href="http://www.getontracks.org/forums/viewreply/293/" title="Permalink to this post"># 8</a> ]</span>
+
+	&nbsp;
+	</td>
+	</tr>
+	</table>
+
+   </td>
+  </tr>
+<tr>
+ <td class="tableCellOne" style="width:130px;" valign="top">
+	<div class="rankAdmin">Administrator</div>
+	<div class="itempad"><img src="http://www.getontracks.org/images/avatars/uploads/avatar_1.png" width="80" height="80" border="0" alt="Avatar" /></div>
+	<div class="itempad"><img src="http://www.getontracks.org/themes/forum_themes/blue/images/rank.gif" alt="Rank" class="rankImage" /><img src="http://www.getontracks.org/themes/forum_themes/blue/images/rank.gif" alt="Rank" class="rankImage" /><img src="http://www.getontracks.org/themes/forum_themes/blue/images/rank.gif" alt="Rank" class="rankImage" /><img src="http://www.getontracks.org/themes/forum_themes/blue/images/rank.gif" alt="Rank" class="rankImage" /></div>
+	<div class="userBlock">Total Posts:&nbsp; 223</div>
+	<div class="userBlock">Joined&nbsp; 2006-03-05</div>
+</td>
+<td class="tableCellOne" valign="top" colspan="2"><div class="post"><p>OK, I&#8217;ve got something working. What I decided to do was to use a Ruby script to fetch the feeds and process them into three separate text files (stored locally) which contain today/overdue actions, actions due tomorrow and actions due in the next week. You can then display each of the text files using GeekTool, placing and colouring each of the files as you wish (see attached screenshot).</p>
+
+<p>Put the following into a file called</p><div class="codeblock"><code><span style="color: #000000">
+<span style="color: #0000BB">coloured_actions</span><span style="color: #007700">.</span><span style="color: #0000BB">rb&nbsp;</span>
+</span>
+</code></div> somewhere in your home folder (~/bin is a good place) and make it executable with <div class="codeblock"><code><span style="color: #000000">
+<span style="color: #0000BB">chmod&nbsp;</span><span style="color: #007700">+</span><span style="color: #0000BB">x&nbsp;coloured_actions</span><span style="color: #007700">.</span><span style="color: #0000BB">rb&nbsp;</span>
+</span>
+</code></div><p> :</p>
+
+<div class="codeblock"><code><span style="color: #000000">
+<span style="color: #FF8000">#!/usr/bin/env&nbsp;ruby&nbsp;-wKU<br />#&nbsp;Generate&nbsp;3&nbsp;seperate&nbsp;text&nbsp;files&nbsp;from&nbsp;Tracks&nbsp;TXT&nbsp;feeds<br />#&nbsp;listing&nbsp;actions&nbsp;due&nbsp;today&nbsp;(or&nbsp;overdue),&nbsp;tomorrow&nbsp;or<br />#&nbsp;in&nbsp;the&nbsp;next&nbsp;7&nbsp;days.<br />#&nbsp;You&nbsp;can&nbsp;then&nbsp;pull&nbsp;these&nbsp;text&nbsp;files&nbsp;into&nbsp;GeekTool&nbsp;and&nbsp;colour<br />#&nbsp;them&nbsp;separately.<br /><br />#&nbsp;========&nbsp;Constants&nbsp;to&nbsp;set&nbsp;with&nbsp;your&nbsp;values&nbsp;===============<br />#<br />#&nbsp;URL&nbsp;for&nbsp;the&nbsp;base&nbsp;feed:&nbsp;http://yourdomain.tld/feed/text/&#91;token&#93;<br /></span><span style="color: #0000BB">URL&nbsp;</span><span style="color: #007700">=&nbsp;</span><span style="color: #DD0000">"http://0.0.0.0:3000/feed/text/admin/&#91;TOKEN&#93;"<br /></span><span style="color: #FF8000">#&nbsp;Path&nbsp;to&nbsp;temporary&nbsp;directory<br /></span><span style="color: #0000BB">TEMP_DIR&nbsp;</span><span style="color: #007700">=&nbsp;</span><span style="color: #DD0000">"/Users/YOURUSERNAME/tmp"<br /></span><span style="color: #FF8000">#<br />#&nbsp;=============================================<br />#&nbsp;Grab&nbsp;each&nbsp;feed,&nbsp;split&nbsp;into&nbsp;lines,&nbsp;then&nbsp;get&nbsp;rid&nbsp;of&nbsp;any&nbsp;non-action&nbsp;lines<br /></span><span style="color: #0000BB">today&nbsp;</span><span style="color: #007700">=&nbsp;`</span><span style="color: #DD0000">curl&nbsp;-s&nbsp;"#&#123;URL&#125;"?due=0</span><span style="color: #007700">`.</span><span style="color: #0000BB">split</span><span style="color: #007700">(</span><span style="color: #DD0000">"\n"</span><span style="color: #007700">).</span><span style="color: #0000BB">select&#123;</span><span style="color: #007700">|</span><span style="color: #0000BB">line</span><span style="color: #007700">|&nbsp;</span><span style="color: #0000BB">line&nbsp;</span><span style="color: #007700">=~&nbsp;/</span><span style="color: #0000BB">\s</span><span style="color: #007700">+</span><span style="color: #0000BB">\&#91;Due</span><span style="color: #007700">:/&nbsp;or&nbsp;</span><span style="color: #0000BB">line&nbsp;</span><span style="color: #007700">=~&nbsp;/^</span><span style="color: #0000BB">\w</span><span style="color: #007700">/</span><span style="color: #0000BB">&#125;<br />tomorrow&nbsp;</span><span style="color: #007700">=&nbsp;`</span><span style="color: #DD0000">curl&nbsp;-s&nbsp;"#&#123;URL&#125;"?due=1</span><span style="color: #007700">`.</span><span style="color: #0000BB">split</span><span style="color: #007700">(</span><span style="color: #DD0000">"\n"</span><span style="color: #007700">).</span><span style="color: #0000BB">select&#123;</span><span style="color: #007700">|</span><span style="color: #0000BB">line</span><span style="color: #007700">|&nbsp;</span><span style="color: #0000BB">line&nbsp;</span><span style="color: #007700">=~&nbsp;/</span><span style="color: #0000BB">\s</span><span style="color: #007700">+</span><span style="color: #0000BB">\&#91;Due</span><span style="color: #007700">:/&nbsp;or&nbsp;</span><span style="color: #0000BB">line&nbsp;</span><span style="color: #007700">=~&nbsp;/^</span><span style="color: #0000BB">\w</span><span style="color: #007700">/</span><span style="color: #0000BB">&#125;<br />this_week&nbsp;</span><span style="color: #007700">=&nbsp;`</span><span style="color: #DD0000">curl&nbsp;-s&nbsp;"#&#123;URL&#125;"?due=6</span><span style="color: #007700">`.</span><span style="color: #0000BB">split</span><span style="color: #007700">(</span><span style="color: #DD0000">"\n"</span><span style="color: #007700">).</span><span style="color: #0000BB">select&#123;</span><span style="color: #007700">|</span><span style="color: #0000BB">line</span><span style="color: #007700">|&nbsp;</span><span style="color: #0000BB">line&nbsp;</span><span style="color: #007700">=~&nbsp;/</span><span style="color: #0000BB">\s</span><span style="color: #007700">+</span><span style="color: #0000BB">\&#91;Due</span><span style="color: #007700">:/&nbsp;or&nbsp;</span><span style="color: #0000BB">line&nbsp;</span><span style="color: #007700">=~&nbsp;/^</span><span style="color: #0000BB">\w</span><span style="color: #007700">/</span><span style="color: #0000BB">&#125;<br /><br /></span><span style="color: #FF8000">#&nbsp;Get&nbsp;rid&nbsp;of&nbsp;repeated&nbsp;actions&nbsp;in&nbsp;tomorrow&nbsp;and&nbsp;this_week<br /></span><span style="color: #0000BB">tomorrow&nbsp;</span><span style="color: #007700">=&nbsp;</span><span style="color: #0000BB">tomorrow&nbsp;</span><span style="color: #007700">-&nbsp;</span><span style="color: #0000BB">today<br />today_or_tomorrow&nbsp;</span><span style="color: #007700">=&nbsp;</span><span style="color: #0000BB">today&nbsp;</span><span style="color: #007700">+&nbsp;</span><span style="color: #0000BB">tomorrow<br />this_week&nbsp;</span><span style="color: #007700">=&nbsp;</span><span style="color: #0000BB">this_week&nbsp;</span><span style="color: #007700">-&nbsp;</span><span style="color: #0000BB">today_or_tomorrow<br /><br /></span><span style="color: #FF8000">#&nbsp;Print&nbsp;the&nbsp;info&nbsp;to&nbsp;three&nbsp;files,&nbsp;stored&nbsp;in&nbsp;TEMP_DIR<br /></span><span style="color: #0000BB">file&nbsp;</span><span style="color: #007700">=&nbsp;</span><span style="color: #0000BB">File</span><span style="color: #007700">.new(</span><span style="color: #DD0000">"#&#123;TEMP_DIR&#125;/today.txt"</span><span style="color: #007700">,&nbsp;</span><span style="color: #DD0000">"w"</span><span style="color: #007700">)<br />&nbsp;&nbsp;</span><span style="color: #0000BB">file</span><span style="color: #007700">.print&nbsp;</span><span style="color: #DD0000">"\nToday:\n"&nbsp;</span><span style="color: #007700">+&nbsp;</span><span style="color: #0000BB">today</span><span style="color: #007700">.</span><span style="color: #0000BB">join</span><span style="color: #007700">(</span><span style="color: #DD0000">"\n"</span><span style="color: #007700">)<br /></span><span style="color: #0000BB">file</span><span style="color: #007700">.</span><span style="color: #0000BB">close<br /><br />file&nbsp;</span><span style="color: #007700">=&nbsp;</span><span style="color: #0000BB">File</span><span style="color: #007700">.new(</span><span style="color: #DD0000">"#&#123;TEMP_DIR&#125;/tomorrow.txt"</span><span style="color: #007700">,&nbsp;</span><span style="color: #DD0000">"w"</span><span style="color: #007700">)<br />&nbsp;&nbsp;</span><span style="color: #0000BB">file</span><span style="color: #007700">.print&nbsp;</span><span style="color: #DD0000">"\nTomorrow:\n"&nbsp;</span><span style="color: #007700">+&nbsp;</span><span style="color: #0000BB">tomorrow</span><span style="color: #007700">.</span><span style="color: #0000BB">join</span><span style="color: #007700">(</span><span style="color: #DD0000">"\n"</span><span style="color: #007700">)<br /></span><span style="color: #0000BB">file</span><span style="color: #007700">.</span><span style="color: #0000BB">close<br /><br />file&nbsp;</span><span style="color: #007700">=&nbsp;</span><span style="color: #0000BB">File</span><span style="color: #007700">.new(</span><span style="color: #DD0000">"#&#123;TEMP_DIR&#125;/later.txt"</span><span style="color: #007700">,&nbsp;</span><span style="color: #DD0000">"w"</span><span style="color: #007700">)<br />&nbsp;&nbsp;</span><span style="color: #0000BB">file</span><span style="color: #007700">.print&nbsp;</span><span style="color: #DD0000">"\nLater:\n"&nbsp;</span><span style="color: #007700">+&nbsp;</span><span style="color: #0000BB">this_week</span><span style="color: #007700">.</span><span style="color: #0000BB">join</span><span style="color: #007700">(</span><span style="color: #DD0000">"\n"</span><span style="color: #007700">)<br /></span><span style="color: #0000BB">file</span><span style="color: #007700">.</span><span style="color: #0000BB">close&nbsp;</span>
+</span>
+</code></div>
+
+<p>When you run this, you should get 3 text files in your TEMP_DIR, called today.txt, tomorrow.txt and later.txt.</p>
+
+<p>Set up display of those files in GeekTool, then you just need to arrange for the coloured_actions.rb script to be called periodically. You could either do this using cron, or set up a script in GeekTool, making the window tiny and transparent, then set it to refresh every 30 mins or whatever you choose.</p>
+
+<p>I&#8217;m sure the script could be made more elegant. One thing is that some of the context headers get removed from the later file, because they are often duplicated in the different periods.</p></div>
+	
+	
+	
+	<div class="attachTitle">Image Attachments</div>
+	<div class="attachBody">
+		<a href="javascript:showimage('http://www.getontracks.org/?ACT=37&amp;fid=10&amp;aid=5_sk3fRlbIBDvbst87xTXG&amp;board_id=1', '480', '360');void(0);"><img src="http://www.getontracks.org/?ACT=37&amp;fid=10&amp;aid=5_sk3fRlbIBDvbst87xTXG&amp;thumb=1&amp;board_id=1" class="attachThumb" width="134"  height="100" border="0" title="coloured_actions.png" alt="coloured_actions.png" /></a>
+		<div class="forumLightLinks">Click thumbnail to see full-size image</div>
+	</div>
+
+
+
+	
+	
+</td>
+
+</tr><tr>
+
+<td class="tableCellTwo"  style="width:130px;">
+	<table cellpadding="0" cellspacing="0" border="0" width="100%">
+	<tr>
+	<td align="center"><div class="button"><div class="buttonSmall" id="i1" onclick="navJump('http://www.getontracks.org/forums/member/1/')" onmouseover="navHover(this);" onmouseout="navReset(this);">Profile</div></div></td>
+	
+	
+
+	</tr>
+	</table>
+</td>
+
+<td class="tableCellTwo" colspan="2">
+	<table cellpadding="0" cellspacing="0" border="0">
+	<tr>
+	
+	
+	
+	
+	
+	
+		
+	
+	
+	&nbsp;
+	
+	<td>&nbsp;</td>	
+	</tr>
+	</table>
+  </td>
+ </tr>
+</table>
+
+</td>
+</tr>
+
+<tr id="j9" >
+ <td colspan="3">
+
+
+ <table class="threadBorder" cellpadding="0" cellspacing="0" border="0" style="width:100%;">
+  <tr>
+   <td class="tableRowHeadingBold" style="width:130px;"><div class="largeLinks"><a href="http://www.getontracks.org/forums/member/2/">Craig</a></div></td>
+   <td class="tableRowHeading">
+
+	<table cellpadding="0" cellspacing="0" border="0" style="width:99%;">
+	<tr>
+	<td>Posted: 22 December 2006 04:14 AM</td>
+	<td align="right">
+	
+		
+	
+	
+
+	
+	
+	&nbsp;&nbsp;<span class="smallLinks">[ <a href="http://www.getontracks.org/forums/ignore_member/2/" title="Ignore">Ignore</a> ]</span>
+	
+	&nbsp;&nbsp;<span class="smallLinks">[ <a name="294" href="http://www.getontracks.org/forums/viewreply/294/" title="Permalink to this post"># 9</a> ]</span>
+
+	&nbsp;
+	</td>
+	</tr>
+	</table>
+
+   </td>
+  </tr>
+<tr>
+ <td class="tableCellOne" style="width:130px;" valign="top">
+	<div class="rankMember">Newbie</div>
+	
+	<div class="itempad"><img src="http://www.getontracks.org/themes/forum_themes/blue/images/rank.gif" alt="Rank" class="rankImage" /></div>
+	<div class="userBlock">Total Posts:&nbsp; 28</div>
+	<div class="userBlock">Joined&nbsp; 2006-06-28</div>
+</td>
+<td class="tableCellOne" valign="top" colspan="2"><div class="post"><p>Thanks for taking up my challenge. </p>
+
+<p>I&#8217;m not getting it to work for me. I&#8217;m afraid I might need still clearer directions. When you say run the script, should that be accomplished by just typing its name in Terminal &#8220;bin/coloured_actions.rb&#8221;? That gets me &#8220;(-h will show valid options)&#8221; but no files in ~/tmp/. </p>
+
+<p>Or am I to type in &#8220;ruby bin/coloured_actions.rb&#8221;? That gets no error, but also no files in ~/tmp/.</p>
+
+<p>Does it matter than I run Locomotive for Tracks? That I didn&#8217;t have a pre-existing ~/bin directory?</p>
+
+<p>I imagine these sound like dumb questions. If you don&#8217;t have the patience or time to hand-hold me through this I&#8217;d certainly understand.</p>
+
+<p>Again, I appreciate your efforts to make my idea a reality.</p></div>
+	
+	
+	
+
+
+	
+	
+	<fieldset class='signature'>
+					
+<legend class="signatureTitle">&nbsp;Signature&nbsp;</legend>
+
+
+
+<p>Tracks 1.042 on Locomotive / Camino 1.0.1</p>
+
+</fieldset>
+	
+</td>
+
+</tr><tr>
+
+<td class="tableCellTwo"  style="width:130px;">
+	<table cellpadding="0" cellspacing="0" border="0" width="100%">
+	<tr>
+	<td align="center"><div class="button"><div class="buttonSmall" id="j1" onclick="navJump('http://www.getontracks.org/forums/member/2/')" onmouseover="navHover(this);" onmouseout="navReset(this);">Profile</div></div></td>
+	
+	
+
+	</tr>
+	</table>
+</td>
+
+<td class="tableCellTwo" colspan="2">
+	<table cellpadding="0" cellspacing="0" border="0">
+	<tr>
+	
+	
+	
+	
+	
+	
+		
+	
+	
+	&nbsp;
+	
+	<td>&nbsp;</td>	
+	</tr>
+	</table>
+  </td>
+ </tr>
+</table>
+
+</td>
+</tr>
+
+<tr id="k9" >
+ <td colspan="3">
+
+
+ <table class="threadBorder" cellpadding="0" cellspacing="0" border="0" style="width:100%;">
+  <tr>
+   <td class="tableRowHeadingBold" style="width:130px;"><div class="largeLinks"><a href="http://www.getontracks.org/forums/member/1/">bsag</a></div></td>
+   <td class="tableRowHeading">
+
+	<table cellpadding="0" cellspacing="0" border="0" style="width:99%;">
+	<tr>
+	<td>Posted: 22 December 2006 08:17 AM</td>
+	<td align="right">
+	
+		
+	
+	
+
+	
+	
+	&nbsp;&nbsp;<span class="smallLinks">[ <a href="http://www.getontracks.org/forums/ignore_member/1/" title="Ignore">Ignore</a> ]</span>
+	
+	&nbsp;&nbsp;<span class="smallLinks">[ <a name="295" href="http://www.getontracks.org/forums/viewreply/295/" title="Permalink to this post"># 10</a> ]</span>
+
+	&nbsp;
+	</td>
+	</tr>
+	</table>
+
+   </td>
+  </tr>
+<tr>
+ <td class="tableCellOne" style="width:130px;" valign="top">
+	<div class="rankAdmin">Administrator</div>
+	<div class="itempad"><img src="http://www.getontracks.org/images/avatars/uploads/avatar_1.png" width="80" height="80" border="0" alt="Avatar" /></div>
+	<div class="itempad"><img src="http://www.getontracks.org/themes/forum_themes/blue/images/rank.gif" alt="Rank" class="rankImage" /><img src="http://www.getontracks.org/themes/forum_themes/blue/images/rank.gif" alt="Rank" class="rankImage" /><img src="http://www.getontracks.org/themes/forum_themes/blue/images/rank.gif" alt="Rank" class="rankImage" /><img src="http://www.getontracks.org/themes/forum_themes/blue/images/rank.gif" alt="Rank" class="rankImage" /></div>
+	<div class="userBlock">Total Posts:&nbsp; 223</div>
+	<div class="userBlock">Joined&nbsp; 2006-03-05</div>
+</td>
+<td class="tableCellOne" valign="top" colspan="2"><div class="post"><p>OK, first things first.</p>
+
+<p>1. Make sure that you&#8217;ve changed the URL and the TEMP_DIR path at the top of the script to match your set up. The URL should be the plain TXT feed url, without the ?due=0 part (that gets added automatically). So it will be something like:</p>
+
+<div class="codeblock"><code><span style="color: #000000">
+<span style="color: #0000BB">http</span><span style="color: #007700">:</span><span style="color: #FF8000">//0.0.0.0:3000/feed/text/YOURTRACKSUSERNAME/YOURTOKEN&nbsp;</span>
+</span>
+</code></div>
+
+<p>If you&#8217;re using ~/tmp as your temp directory, make sure it actually works, and use the full path in the script. The &#8216;shebang&#8217; line (the first in the script) should find where you have Ruby on most systems, but just to check, type &#8216;which ruby&#8217; (without the quotes) in the Terminal and copy that path into the shebang, to replace /usr/bin/env ruby.</p>
+
+<p>If that&#8217;s all OK, copy the file to ~/bin if you haven&#8217;t already, and no, it doesn&#8217;t matter if you have to create the file. Check that it&#8217;s executable, and if necessary do </p>
+
+<div class="codeblock"><code><span style="color: #000000">
+<span style="color: #0000BB">cd&nbsp;</span><span style="color: #007700">~/</span><span style="color: #0000BB">bin<br />chmod&nbsp;</span><span style="color: #007700">+</span><span style="color: #0000BB">x&nbsp;coloured_actions</span><span style="color: #007700">.</span><span style="color: #0000BB">rb&nbsp;</span>
+</span>
+</code></div>
+
+<p>Now, while you&#8217;re still in the bin directory in Terminal, run the following:</p>
+
+<div class="codeblock"><code><span style="color: #000000">
+<span style="color: #0000BB">ruby&nbsp;</span><span style="color: #007700">./</span><span style="color: #0000BB">coloured_actions</span><span style="color: #007700">.</span><span style="color: #0000BB">rb&nbsp;</span>
+</span>
+</code></div>
+
+<p>That *should* work <img src="http://www.getontracks.org/images/smileys/wink.gif" width="19" height="19" alt="wink" style="border:0;" /></p>
+
+<p>Then you should be able to choose those files to view in GeekTool, as if you were viewing a Console file. I just remembered that GeekTool allows you to show an icon (different on success and failure) for a script, so that&#8217;s what I&#8217;ve got now to actually call the script periodically. I made a tiny transparent window which sits in the bottom right of my screen. When the script runs without error, it shows a little green spot, and if it fails, it shows a little red spot.</p></div>
+	
+	
+	
+
+
+	
+	
+</td>
+
+</tr><tr>
+
+<td class="tableCellTwo"  style="width:130px;">
+	<table cellpadding="0" cellspacing="0" border="0" width="100%">
+	<tr>
+	<td align="center"><div class="button"><div class="buttonSmall" id="k1" onclick="navJump('http://www.getontracks.org/forums/member/1/')" onmouseover="navHover(this);" onmouseout="navReset(this);">Profile</div></div></td>
+	
+	
+
+	</tr>
+	</table>
+</td>
+
+<td class="tableCellTwo" colspan="2">
+	<table cellpadding="0" cellspacing="0" border="0">
+	<tr>
+	
+	
+	
+	
+	
+	
+		
+	
+	
+	&nbsp;
+	
+	<td>&nbsp;</td>	
+	</tr>
+	</table>
+  </td>
+ </tr>
+</table>
+
+</td>
+</tr>
+
+<tr id="l9" >
+ <td colspan="3">
+
+
+ <table class="threadBorder" cellpadding="0" cellspacing="0" border="0" style="width:100%;">
+  <tr>
+   <td class="tableRowHeadingBold" style="width:130px;"><div class="largeLinks"><a href="http://www.getontracks.org/forums/member/2/">Craig</a></div></td>
+   <td class="tableRowHeading">
+
+	<table cellpadding="0" cellspacing="0" border="0" style="width:99%;">
+	<tr>
+	<td>Posted: 22 December 2006 04:25 PM</td>
+	<td align="right">
+	
+		
+	
+	
+
+	
+	
+	&nbsp;&nbsp;<span class="smallLinks">[ <a href="http://www.getontracks.org/forums/ignore_member/2/" title="Ignore">Ignore</a> ]</span>
+	
+	&nbsp;&nbsp;<span class="smallLinks">[ <a name="296" href="http://www.getontracks.org/forums/viewreply/296/" title="Permalink to this post"># 11</a> ]</span>
+
+	&nbsp;
+	</td>
+	</tr>
+	</table>
+
+   </td>
+  </tr>
+<tr>
+ <td class="tableCellOne" style="width:130px;" valign="top">
+	<div class="rankMember">Newbie</div>
+	
+	<div class="itempad"><img src="http://www.getontracks.org/themes/forum_themes/blue/images/rank.gif" alt="Rank" class="rankImage" /></div>
+	<div class="userBlock">Total Posts:&nbsp; 28</div>
+	<div class="userBlock">Joined&nbsp; 2006-06-28</div>
+</td>
+<td class="tableCellOne" valign="top" colspan="2"><div class="post"><p>No luck. </p>
+
+<p>When I enter &#8220;which ruby&#8221; in a regular Terminal window, I get &#8220;/usr/bin/ruby&#8221;<br />
+When I go into Locomotive and open a Terminal window associated with my Tracks, I get &#8220;/Applications/Locomotive2/Bundles/standardRailsSept2006.locobundle/powerpc/bin/ruby&#8221;<br />
+But neither of these seem to work when entered into the shebang line. Am I supposed to keep the -wKU switches, or are those for the env command only? (I think I tried both ways with no luck.)</p>
+
+<p>On permissions, my ~/bin directory is 755 and ~/bin/coloured_actions.rb is 755 too; my ~/tmp directory is 777. From my home directory I was able to &#8220;touch /tmp/testfile&#8221; and it appeared in the directory.</p>
+
+<p>curl works fine, so the problem doesn&#8217;t seem to be getting stuff from Tracks - it must be either working with the stuff or writing it to those txt files.</p></div>
+	
+	
+	
+
+
+	
+	
+	<fieldset class='signature'>
+					
+<legend class="signatureTitle">&nbsp;Signature&nbsp;</legend>
+
+
+
+<p>Tracks 1.042 on Locomotive / Camino 1.0.1</p>
+
+</fieldset>
+	
+</td>
+
+</tr><tr>
+
+<td class="tableCellTwo"  style="width:130px;">
+	<table cellpadding="0" cellspacing="0" border="0" width="100%">
+	<tr>
+	<td align="center"><div class="button"><div class="buttonSmall" id="l1" onclick="navJump('http://www.getontracks.org/forums/member/2/')" onmouseover="navHover(this);" onmouseout="navReset(this);">Profile</div></div></td>
+	
+	
+
+	</tr>
+	</table>
+</td>
+
+<td class="tableCellTwo" colspan="2">
+	<table cellpadding="0" cellspacing="0" border="0">
+	<tr>
+	
+	
+	
+	
+	
+	
+		
+	
+	
+	&nbsp;
+	
+	<td>&nbsp;</td>	
+	</tr>
+	</table>
+  </td>
+ </tr>
+</table>
+
+</td>
+</tr>
+
+</table>
+
+<table cellpadding="0" cellspacing="0" border="0" style="width:100%;">
+<tr>
+<td valign="middle" style="width:70%;">
+
+&nbsp;
+
+</td>
+&nbsp;
+
+&nbsp;
+
+</tr>
+</table>
+
+&nbsp;
+
+
+<div class="defaultCenter">
+<div class="marginpad">
+
+
+&lsaquo;&lsaquo; <a href="http://www.getontracks.org/forums/viewthread/46/">Sorting prioritised tasks&#63;</a> 
+
+
+
+&nbsp;&nbsp;&nbsp;&nbsp; <a href="http://www.getontracks.org/forums/viewthread/63/">We need a wishlist section in this forum</a> &rsaquo;&rsaquo;
+
+
+</div>
+</div>
+</div>
+<div id="footer">
+
+	
+	<div id="switcher">Select A Theme 
+		<select name="theme_switcher" class="select" onchange="if (this.value != '') location.href=this.value">
+			<option value="http://www.getontracks.org/?ACT=42&amp;board_id=1&amp;theme=grey">Grey</option>
+<option value="http://www.getontracks.org/?ACT=42&amp;board_id=1&amp;theme=developer">Developer</option>
+<option value="http://www.getontracks.org/?ACT=42&amp;board_id=1&amp;theme=shares">Shares</option>
+<option value="http://www.getontracks.org/?ACT=42&amp;board_id=1&amp;theme=blue" selected="selected">Blue</option>
+<option value="http://www.getontracks.org/?ACT=42&amp;board_id=1&amp;theme=default">Default</option>
+
+		</select>
+	</div><!--switcher-->
+	
+
+	<ul class="credits">
+		<li>Powered By <a href="http://expressionengine.com/">ExpressionEngine</a></li>
+		<li>Template Design By <a href="http://artificialmemory.com/" title="Nathaniel Davis">Artificial Memory</a></li>
+        </ul>
+        <ul class="stats">
+		<li>ExpressionEngine Discussion Forum - version 3.1.5 (20110630)</li>
+		<li>Script Executed in 0.1434 seconds</li>
+	</ul>
+	
+	
+	<ul class="feeds">
+		<li><a href="http://www.getontracks.org/forums/rss/10/"><img src="http://www.getontracks.org/themes/forum_themes/blue/images/feed_rss.jpg" alt="RSS 2.0" title="RSS 2.0" /></a></li>
+		<li><a href="http://www.getontracks.org/forums/atom/10/"><img src="http://www.getontracks.org/themes/forum_themes/blue/images/feed_atom.jpg" alt="Atom Feed" title="Atom Feed" /></a></li>
+	</ul>
+	
+
+</div><!--footer-->
+</div><!--wrapper-->
+</body>
+</html>

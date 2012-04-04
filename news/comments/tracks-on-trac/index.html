@@ -1,0 +1,340 @@
+
+<!DOCTYPE html>
+<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
+<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
+<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <title>Tracks on Trac - Tracks</title>
+  <meta name="author" content="TracksApp">
+
+  
+  <meta name="description" content="I&#8217;ve got some good news; the cool people at TextDrive have set up a Trac (yes, I know those names are going to get confusing) installation fo...">
+  
+
+  <!-- http://t.co/dKP3o1e -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  
+  <link rel="canonical" href="http://www.getontracks.org/news/comments/tracks-on-trac/">
+  <link href="/favicon.png" rel="icon">
+  <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+  <script src="/javascripts/modernizr-2.0.js"></script>
+  <script src="/javascripts/ender.js"></script>
+  <script src="/javascripts/octopress.js" type="text/javascript"></script>
+  <link href="/tracks/atom.xml" rel="alternate" title="Tracks" type="application/atom+xml">
+  <!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
+<link href="http://fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+<link href="http://fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+
+</head>
+
+<body   >
+  <header role="banner"><hgroup>
+<h1><a href="/"><img src="/images/tracks-logo-dark.png" /></a></h1>
+</hgroup>
+
+</header>
+  <nav role="navigation"><ul class="subscription" data-subscription="rss">
+  <li><a href="/tracks/atom.xml" rel="subscribe-rss" title="subscribe via RSS">RSS</a></li>
+  
+</ul>
+<form action="http://google.com/search" method="get">
+  <fieldset role="search">
+    <input type="hidden" name="q" value="site:www.getontracks.org" />
+    <input class="search" type="text" name="q" results="0" placeholder="Search"/>
+  </fieldset>
+</form>
+<ul class="main-navigation">
+  <li><a href="/">Home</a></li>
+  <li><a href="/news/">News</a></li>
+  <li><a href="/articles/">Articles</a></li>
+  <li><a href="/manual/">Manual</a></li>
+  <li><a href="/downloads/">Downloads</a></li>
+  <li><a href="/development/">Development</a></li>
+  <li><a href="/screenshots/">Screenshots</a></li>
+</ul>
+
+</nav>
+  <div id="main">
+    <div id="content">
+      <div>
+<article class="hentry" role="article">
+  
+  <header>
+    
+      <h1 class="entry-title">Tracks on Trac</h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+  
+
+
+
+<time datetime="2005-03-30T00:00:00+02:00" pubdate  data-updated="true" >Mar 30<span>th</span>, 2005</time>
+        
+         | <a href="#disqus_thread">Comments</a>
+        
+      </p>
+    
+  </header>
+
+
+<div class="entry-content"><p>I&#8217;ve got some good news; the cool people at <a href="http://textdrive.com/">TextDrive</a> have set up a <a href="http://projects.edgewall.com/trac/">Trac</a> (yes, I know those names are going to get confusing) installation for me <a href="http://dev.rousette.org.uk/wiki">here</a>. Trac is an Open Source project to help developers to share their work with others and accept contributions of bug reports, feature requests or patches.</p>
+<p>It&#8217;s a really nice system in which you can view already submitted tickets, submit your own tickets and browse the source files in development, which are versioned using Subversion. There&#8217;s also a wiki, in which I&#8217;ve started to write a guide to installing Tracks and all the dependencies, along with a few other snippets. Eventually, I&#8217;ll try to extract everything that&#8217;s still relevant from the old Dokuwiki <a href="http://www.rousette.org.uk/projects/wiki/">install</a> and include it. Until the dust has settled, only I can edit the Trac wiki, but I hope to open editing up to everyone in due course.</p>
+<p>In the meantime, please <a href="http://dev.rousette.org.uk/newticket">create tickets</a> for any bugs you&#8217;ve found, features you&#8217;d like to suggest and so on. Please add as much detail as possible, particularly with bug reports; &#8220;it doesn&#8217;t work&#8221; isn&#8217;t very helpful. You can submit anonymously if you like, but if you don&#8217;t mind providing it, an email address would be very helpful if I need to get in touch with you to find out more detail on your report. Also, please try to scan the previous tickets to see if your bug/feature has been suggested before submitting a duplicate request.</p>
+<p>I&#8217;m really excited about this. I&#8217;ve had three very helpful patches recently from (in no particular order) Lolindrath, Jim Ray and Nicholas Lee, so contributions to the project are really starting to take off. Using Trac will make it much easier for people to make a contribution, even if it is a contribution of ideas rather than code, and it will be much easier for me to keep track of (sorry) than the old wiki.</p>
+<p>One word of caution; while you can check out a copy of the version that I&#8217;m currently developing from the trunk using <code>svn</code>, please be aware that it is a very bleeding edge version. I frequently break stuff in there while fixing other things, and it&#8217;s not suitable for actual use. Anyway, if you&#8217;re curious or want to generate a patch to add a new feature against the latest version, the <span class="caps">URL</span> is:</p>
+<pre>
+<code>
+svn co --username=guest http://www.rousette.org.uk/svn/tracks-repos/trunk/tracks
+</code>
+</pre>
+<p>The username is &#8216;guest&#8217;. Once you&#8217;ve checked out the latest trunk, added your fix, <strong>tested it</strong> and found that it works, just issue the following command in the root of the tracks directory:</p>
+<pre>
+<code>
+svn diff &gt; /pathto/your_name_patch_description.patch
+</code>
+</pre>
+<p>Once you&#8217;ve submitted a ticket describing what your patch does, you should be able to view the ticket and use the &#8216;Attach file&#8217; button to attach your *.patch file (I&#8217;m not sure why that&#8217;s not possible when you create the ticket).</p>
+<p>Go mad with it!</p></div>
+
+
+  <footer>
+    <p class="meta">
+      
+  
+
+<span class="byline author vcard">Posted by <span class="fn">bsag</span></span>
+
+      
+
+
+
+
+
+  
+
+
+
+<time datetime="2005-03-30T00:00:00+02:00" pubdate  data-updated="true" >Mar 30<span>th</span>, 2005</time>
+      
+
+<span class="categories">
+  
+    <a class='category' href='/archives/news/'>news</a>
+  
+</span>
+
+
+    </p>
+    
+      <div class="sharing">
+  
+  <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://www.getontracks.org/news/comments/tracks-on-trac/" data-via="" data-counturl="http://www.getontracks.org/news/comments/tracks-on-trac/" >Tweet</a>
+  
+  
+  <div class="g-plusone" data-size="medium"></div>
+  
+</div>
+
+    
+  </footer>
+</article>
+
+  <section>
+    <h1>Comments</h1>
+    <div id="disqus_thread" aria-live="polite"><noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>
+  </section>
+
+</div>
+
+<aside class="sidebar">
+  
+    <section>
+  <h1>Get Tracks</h1>
+  <p><a class="button" href="https://github.com/TracksApp/tracks/zipball/v2.0" title="Download Tracks 2.0 zipped package"><img src="/images/download_button.png" /></a></p>
+  
+  <p><a href="/downloads/comments/tracks-20">Tracks 2.0 release notes</a></p>
+  
+  <p><a href="http://www.assembla.com/spaces/tracks-tickets/">Report a bug</a></p>
+</section>
+
+<section>
+  <h1>Github Repos</h1>
+  <ul id="gh_repos">
+    <li class="loading">Status updating...</li>
+  </ul>
+  
+  <a href="https://github.com/TracksApp">@TracksApp</a> on Github
+  
+  <script type="text/javascript">
+    $.domReady(function(){
+        if (!window.jXHR){
+            var jxhr = document.createElement('script');
+            jxhr.type = 'text/javascript';
+            jxhr.src = '/javascripts/libs/jXHR.js';
+            var s = document.getElementsByTagName('script')[0];
+            s.parentNode.insertBefore(jxhr, s);
+        }
+
+        github.showRepos({
+            user: 'TracksApp',
+            count: 5,
+            skip_forks: false,
+            target: '#gh_repos'
+        });
+    });
+  </script>
+  <script src="/javascripts/github.js" type="text/javascript"> </script>
+</section>
+
+<section>
+  <p><a class="button" href='http://www.pledgie.com/campaigns/959'><img alt='Click here to lend your support to Tracks and make a donation at www.pledgie.com !' src='http://www.pledgie.com/campaigns/959.png?skin_name=chrome' border='0' /></a></p>
+  
+</section><section>
+  
+  <h1>Community</h1>
+  
+  <ul>
+  <li><a href="http://lists.rousette.org.uk/mailman/listinfo/tracks-discuss">Mailing list</a></li>
+  <li><a href="/forums/">Support forum (now read-only)</a></li>
+  <li><a href="https://github.com/TracksApp/tracks/wiki">Wiki</a></li>
+  </ul>
+  
+</section><section>
+  <h1>Latest News</h1>
+  <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/news/comments/release-2.1.rc1/">Release Candidate 1 of Tracks 2.1 released</a>
+      </li>
+    
+      <li class="post">
+        <a href="/news/comments/handing-over-the-keys/">Handing Over the Keys</a>
+      </li>
+    
+      <li class="post">
+        <a href="/news/comments/the-wiki-has-moved/">The wiki has moved</a>
+      </li>
+    
+      <li class="post">
+        <a href="/news/comments/tracks-2.0-is-out-now/">Tracks 2.0 is out now!</a>
+      </li>
+    
+      <li class="post">
+        <a href="/news/comments/tracks-20-release-candidate-2/">Tracks 2.0 RC2</a>
+      </li>
+    
+  </ul>
+</section>
+<section>
+  <h1>Recent Articles</h1>
+  <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/articles/comments/making-yourself-comfortable-with-git-in-the-terminal/">Making yourself comfortable with git in the terminal</a>
+      </li>
+    
+      <li class="post">
+        <a href="/articles/comments/morphexchange-tracks-as-a-hosted-service/">Morphexchange - Tracks as a hosted service</a>
+      </li>
+    
+      <li class="post">
+        <a href="/articles/comments/linking-actions-and-yojimbo-items/">Linking actions and Yojimbo items</a>
+      </li>
+    
+      <li class="post">
+        <a href="/articles/comments/all-in-one-installation-for-windows/">All-in-one installation for Windows</a>
+      </li>
+    
+      <li class="post">
+        <a href="/articles/comments/mongrel-and-windows/">Mongrel and Windows</a>
+      </li>
+    
+  </ul>
+</section>
+<section>
+  
+  <h1>Resources</h1>
+  
+  <ul>
+  <li><a href="http://www.rubyonrails.com/">Ruby on Rails</a></li>
+  <li><a href="http://ruby-lang.org/en/">Ruby</a></li>
+  </ul>
+
+</section><section>
+
+  <p><a class="button" href="http://creativecommons.org/licenses/GPL/2.0/"><img alt="CC-GNU GPL" src="http://creativecommons.org/images/public/cc-GPL-a.png" /></a></p>
+
+</section>
+  
+</aside>
+
+
+    </div>
+  </div>
+  <footer role="contentinfo"><p>
+  Copyright &copy; 2012 - TracksApp -
+  <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span>
+</p>
+
+</footer>
+  
+
+<script type="text/javascript">
+    (function () {
+      var disqus_shortname = 'tracks';
+      
+        
+        // var disqus_developer = 1;
+        var disqus_identifier = 'http://www.getontracks.org/news/comments/tracks-on-trac/';
+        var disqus_url = 'http://www.getontracks.org/news/comments/tracks-on-trac/';
+        var disqus_script = 'embed.js'
+      
+
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      dsq.src = 'http://' + disqus_shortname + '.disqus.com/' + disqus_script;
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    }());
+</script>
+
+
+
+  <script type="text/javascript">
+    (function() {
+      var script = document.createElement('script'); script.type = 'text/javascript'; script.async = true;
+      script.src = 'https://apis.google.com/js/plusone.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(script, s);
+    })();
+  </script>
+
+
+
+  <script type="text/javascript">
+    (function(){
+      var twitterWidgets = document.createElement('script');
+      twitterWidgets.type = 'text/javascript';
+      twitterWidgets.async = true;
+      twitterWidgets.src = 'http://platform.twitter.com/widgets.js';
+      document.getElementsByTagName('head')[0].appendChild(twitterWidgets);
+    })();
+  </script>
+
+
+
+
+
+
+
+</body>
+</html>
