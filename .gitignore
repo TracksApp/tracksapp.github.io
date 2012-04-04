@@ -3,6 +3,7 @@
 .sass-cache
 .gist-cache
 .pygments-cache
+.rvmrc
 .redcar/
 _deploy
 public
