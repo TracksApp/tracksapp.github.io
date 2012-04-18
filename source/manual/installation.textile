@@ -47,7 +47,7 @@ Tracks stores its data in a database, and you can either use SQLite3, MySQL or P
 h4.  What is included with the Tracks package?
 
 # Tracks itself
-# Rails 2.3.11 (installed in the @/vendor/rails@ directory, so you do not need to install Rails yourself). The upcoming version of Tracks will depend on Rails 2.3.12
+# All dependencies preconfigured. One is Rails 2.3.12. The next version of Tracks will depend on Rails 3
 # An empty SQLite3 database, set up with the correct database schema
 
 
@@ -56,8 +56,8 @@ h4.  What you need to install
 If you don't want to (or can't) use one of the all in one installations, you'll need to install a few things, depending on your platform and your needs.
 
 # *Ruby*. Tracks requires Ruby Version 1.8.7. There are issues when running with Ruby 1.8.6. Also Tracks was not tested on Ruby 1.9.x.
-# *RubyGems*. Tracks was tested on version 1.3.7 and 1.5.0 (The upcoming Tracks 2.1 was tested on 1.8.10). You may upgrade using @gem update --system@. The gems needed by Rails to interact with the database have to be compiled on the platform on which they will be run, so we cannot include them with the Tracks package, unlike some other gems. So you will need to "download":http://rubyforge.org/frs/?group_id=126 and install RubyGems (run @ruby setup.rb@ after extracting the package). If you use Linux, rubygems may be available throught your packaging system. Note that once again, Mac OS X Leopard users get an easy life, because RubyGems and the SQLite3 gem is already installed. Once installed you can use RubyGems to install the gems you need for your database. If you are using SQLite3, run @sudo gem install sqlite3-ruby@, then select the appropriate package for your platform (version 1.2.1 recommended). You can use MySQL without installing a gem, but installing the gem can speed things up a bit: @sudo gem install mysql@. If you're using Leopard, there are a few work-arounds necessary, which are explained on "Mac OS Forge":http://trac.macosforge.org/projects/ruby/wiki/Troubleshooting#IcannotbuildrubymysqlonLeopardwithmysql.combinaries. The ruby-mysql bindings can sometimes be a bit troublesome to install, so to be honest, it's probably not worth the bother unless you are trying to wring maximum speed out of your system. If you are using PostgreSQL, then you can install a postgres gem: @gem install postgres@.
-# *Database*. The easiest option is to use SQLite3, as the database is included in the package. All you need then is the @sqlite3-ruby@ gem, as described in step 2, and the SQLite3 libraries and binary (see "sqlite.org":http://sqlite.org/download.html for downloads and installation instructions). If you want to use MySQL, download and install a package for your platform from "MySQL.com":http://dev.mysql.com/downloads/mysql/5.0.html. The basic steps for Postgresql should be similar to those for MySQL, but they will not be discussed further here.
+# *RubyGems*. Tracks was tested on version 1.8.10. You may upgrade using @gem update --system@. The gems needed by Rails to interact with the database have to be compiled on the platform on which they will be run, so we cannot include them with the Tracks package, unlike some other gems. So you will need to "download":http://rubyforge.org/frs/?group_id=126 and install RubyGems (run @ruby setup.rb@ after extracting the package). If you use Linux, rubygems may be available throught your packaging system. Note that once again, Mac OS X Leopard users get an easy life, because RubyGems and the SQLite3 gem is already installed. Once installed you can use RubyGems to install the gems you need for your database. Run @bundle install@ from the directory you installed Tracks in. This will install all needed gems, including those for MySQL and Sqlite3. If you do not want one of them, you can comment it out in your @Gemfile@ which can be found in the root of the Tracks installation.
+# *Database*. The easiest option is to use SQLite3, as the database is included in the package. You may need to install it first for your platform (see "sqlite.org":http://sqlite.org/download.html for downloads and installation instructions). If you want to use MySQL, download and install a package for your platform from "MySQL.com":http://dev.mysql.com/downloads/mysql/5.0.html. The basic steps for Postgresql should be similar to those for MySQL, but they will not be discussed further here.
 # *Rake* You will need rake to install and upgrade Tracks. If it is not installed on your system, use @sudo gem install rake@ to install it.
 
 
@@ -103,14 +103,12 @@ IDENTIFIED BY 'password-goes-here' WITH GRANT OPTION;
 h4.  Configure variables
 
 # If you downloaded Tracks via GitHub, you need to duplicate the files @database.yml.tmpl@ and @site.yml.tmpl@ and remove the @*.tmpl@ extension from the duplicates. Similarly, duplicate @/log.tmpl@ and remove the @*.tmpl@ extension, then edit the files as described in steps 2 and 3.
-# Open the file @/config/database.yml@ and edit the @production:@ section with the details of your database. If you are using MySQL the @adapter:@ line should read @adapter: mysql@, @host: localhost@ (in the majority of cases), and your username and password should match those you assigned when you created the database. If you are using SQLite3, you should have only two lines under the production section: @adapter: sqlite3@ and @database: db/tracks-20-blank.db@. If you downloaded the zipped file, the database.yml file is already configured to use the provided SQLite3 file.
-# Open the file @/config/site.yml@, and read through the settings to make sure that they suit your setup. In most cases, all you need to change is the @salt: "change-me"@ line (change the string "change-me" to some other string of your choice), and the time zone setting. For the time zone setting you can use the command @rake time:zones:local@ to see all available timezones on your machine
+# Open the file @/config/database.yml@ and edit the @production:@ section with the details of your database. If you are using MySQL the @adapter:@ line should read @adapter: mysql@, @host: localhost@ (in the majority of cases), and your username and password should match those you assigned when you created the database. If you are using SQLite3, you should have only two lines under the production section: @adapter: sqlite3@ and @database: db/tracks-blank.db@.
+# Open the file @/config/site.yml@, and read through the settings to make sure that they suit your setup. In most cases, all you need to change is the @salt: "change-me"@ line (change the string "change-me" to some other string of your choice), and the time zone setting. For the time zone setting you can use the command @bundle exec rake time:zones:local@ to see all available timezones on your machine
 # If you are using Windows, you may need to check the 'shebang' lines (@#!/usr/bin/env ruby@) of the @/public/dispatch.*@ files and all the files in the @/script@ directory. They are set to @#!/usr/bin/env ruby@ by default. This should work for all Unix based setups (Linux or Mac OS X), but Windows users will probably have to change it to something like @#c:/ruby/bin/ruby@ to point to the Ruby binary on your system.
 
 
 h4.  Checking you have all needed dependencies
-
-NOTE: this section only applies for the upcoming Tracks 2.1
 
 Tracks from version 2.1 uses @bundler@ to manage all dependencies on other libraries. To make sure you have all dependencies installed, run:
 
@@ -130,12 +128,6 @@ h4.  Populate your database with the Tracks schema
 Open a terminal and change into the root of your Tracks directory. Enter the following command:
 
 {% codeblock lang:ruby %}
-rake db:migrate RAILS_ENV=production
-{% endcodeblock %}
-
-For installing the upcoming Tracks 2.1, use:
-
-{% codeblock lang:ruby %}
 bundle exec rake db:migrate RAILS_ENV=production
 {% endcodeblock %}
 
@@ -145,12 +137,6 @@ This will update your database with the required schema for Tracks. If you are u
 h4.  Start the server
 
 While still in the Terminal inside the Tracks root directory, issue the following command:
-
-{% codeblock lang:ruby %}
-script/server -e production
-{% endcodeblock %}
-
-For the upcoming Tracks 2.1, use:
 
 {% codeblock lang:ruby %}
 bundle exec script/server -e production
