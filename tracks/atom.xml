@@ -4,7 +4,7 @@
   <title><![CDATA[Tracks]]></title>
   <link href="http://TracksApp.github.com/tracks/atom.xml" rel="self"/>
   <link href="http://TracksApp.github.com/"/>
-  <updated>2012-04-04T17:20:50+02:00</updated>
+  <updated>2012-04-19T11:08:40+02:00</updated>
   <id>http://TracksApp.github.com/</id>
   <author>
     <name><![CDATA[TracksApp]]></name>
@@ -12,6 +12,88 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Tracks 2.1 released]]></title>
+    <link href="http://TracksApp.github.com/news/comments/release-2.1/"/>
+    <updated>2012-04-19T11:00:00+02:00</updated>
+    <id>http://TracksApp.github.com/news/comments/release-2.1</id>
+    <content type="html"><![CDATA[<p>Hi all,</p>
+
+<p>It is finally done! You can now <a href="https://github.com/TracksApp/tracks/zipball/v2.1">download</a> Tracks version 2.1 from github.
+We did our best to test this new version well, but any problems you may have
+can be posted to <a href="www.assembla.com/spaces/tracks-tickets/">Assembla</a>. Improvements for translations are welcome
+too.</p>
+
+<p>Do not forget to migrate your database if you are coming from 2.0 or from
+2.1RC1. And since we have migrated to bundler for managing dependencies, run
+@bundle install@ (instead of @rake gems:install@). If you use passenger and
+the gems will not load using bundler, set the @BUNDLER_PATH@ in
+@.bundler/config@. See the installation and upgrade manual for more details.</p>
+
+<p>We have seen a lot of new contributions from several contributers: Ignacio
+Ihuerta, Christof Spies, Stefan Richter, Mickey Reiss, Demian Gemperli, Matt
+Rogers, Jan Stępień, Antonin Blanc, Christian Frank, Sebastian Fischmeister,
+Andreas Brandl, Craig Maloney, Pavel Zupa, Tim Madden, Jaime Hernandez,
+Damian Shalev. Also we have two new committing developers (Hi Matt Rogers
+and Stefan Richter) to keep development of Tracks going.</p>
+
+<p>Thanks to all of you!!</p>
+
+<p>The current release is based on rails 2.3 and only supports ruby 1.8.7. This
+infrastructure is getting outdated. For release 2.2 we will upgrade this to
+rails 3 and support ruby 1.8.7 and ruby 1.9.3.</p>
+
+<p>This release brings a lot of new goodies:</p>
+
+<p>New and changed features:</p>
+
+<ol>
+<li>Redesign of the completed todos: a new overview page. Also all context
+and  project pages have a link to their completed actions</li>
+<li>New locales (es by Ignacio Ihuerta, fr by Antonin Blanc, cz by Pavel Zupa
+and he by Damian Shalev) and updated locales (de, nl)</li>
+<li>You can star an action right from the form for adding a new action</li>
+<li>Redesign of preferences page</li>
+<li>You can now mark an action complete from the tickler</li>
+<li>Project names can now contain comma (&#8216;,&#8217;) in it name</li>
+<li>Context view now shows hidden and pending actions</li>
+<li>Mobile improvements (we now require some javascript support on the
+mobile)</li>
+<li>Two extra defer periods in the context menu of an action
+10.There is a review page where you can see stalled or neglected projects.
+There is a reviewed button on the project edit page to mark a project
+reviewed.
+11.You need to change your password: migrated to better BCrypt hash algoritm
+for storing passwords</li>
+</ol>
+
+
+<p>New features (technical)</p>
+
+<ol>
+<li>There are two example ruby scripts in /doc to use the REST API to add a
+todo or a project template with todos from the command line</li>
+<li>The tag page can now select actions from mulitple tags using AND and OR.
+There is no gui for this. Syntax is /todos/tag/tagA,tagB?and=tagC to select
+all todos with (tagA or tagB) AND tagC</li>
+</ol>
+
+
+<p>Under the hood:</p>
+
+<ol>
+<li>Upgraded rails to 2.3.12, jquery to 1.7.1 and jquery-ui to 1.8.17</li>
+<li>Fixed several issues with the REST API</li>
+<li>Upgraded the act_as_statemachine plugin. This change requires a
+migration. See note above!</li>
+<li>Migated to bundler for gem dependencies</li>
+<li>Migrated to cucumber and capybara for integration testing</li>
+<li>Development mode shows a work-in-progress banner on top of the screen</li>
+</ol>
+
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Release Candidate 1 of Tracks 2.1 released]]></title>
@@ -371,15 +453,6 @@ provider in your webbrowser (tested on FF3 and IE7)</li>
     <updated>2008-06-28T00:00:00+02:00</updated>
     <id>http://TracksApp.github.com/news/comments/pledgie-button</id>
     <content type="html"><![CDATA[<p>GitHub provides a handy shortcut for creating a <a href="http://pledgie.org/">Pledgie</a> campaign, and shows the button on the repository page. We were previously accepting donations using a Paypal button, which meant I then had to do some mental arithmetic and manually update the MacBook-O-Meter to show the additional donations. Pledgie is much easier to use, so I&#8217;ve now embedded the Pledgie button on the <a href="http://www.rousette.org.uk/projects/tracks/contribute">Contribute</a> page, and also in the sidebar of the site. Click the button if you feel like making a donation! Pledgie donations can be anonymous or you can display your name proudly in the donors list, and you can use PayPal or a credit card for payment.</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[BitNami screencasts in Spanish]]></title>
-    <link href="http://TracksApp.github.com/news/comments/bitnami-screencasts-in-spanish/"/>
-    <updated>2008-06-28T00:00:00+02:00</updated>
-    <id>http://TracksApp.github.com/news/comments/bitnami-screencasts-in-spanish</id>
-    <content type="html"><![CDATA[<p>Spanish-speaking Tracks users will be interested to know that <a href="http://www.bitnami.org/">BitNami</a> have a couple of <a href="http://www.bitnami.org/article/tracks-aprende-a-manejar-tus-tareas">screencasts</a> in Spanish, showing the installation process with BitNami (which was produced by <a href="http://www.screencasts.es/">Javier Mart&#237;nez</a>) and an introduction to using Tracks. Many thanks to Antonio Santos at BitNami for pointing me to the screencasts, and for telling me that Tracks was the third most downloaded Stack on BitNami last month!</p>
 ]]></content>
   </entry>
   

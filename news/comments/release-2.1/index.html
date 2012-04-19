@@ -5,11 +5,11 @@
 <!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
 <head>
   <meta charset="utf-8">
-  <title>Mongrel and Windows - Tracks</title>
+  <title>Tracks 2.1 released - Tracks</title>
   <meta name="author" content="TracksApp">
 
   
-  <meta name="description" content="mk sent me the following tip for people wanting to running Tracks on Windows using Mongrel as the webserver, rather than WEBrick, Apache or lighttp...">
+  <meta name="description" content="Hi all,It is finally done! You can now download Tracks version 2.1 from github.We did our best to test this new version well, but any problems you ...">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -18,7 +18,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   
-  <link rel="canonical" href="http://TracksApp.github.com/articles/comments/mongrel-and-windows/">
+  <link rel="canonical" href="http://TracksApp.github.com/news/comments/release-2.1/">
   <link href="/favicon.png" rel="icon">
   <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
   <script src="/javascripts/modernizr-2.0.js"></script>
@@ -65,7 +65,7 @@
   
   <header>
     
-      <h1 class="entry-title">Mongrel and Windows</h1>
+      <h1 class="entry-title">Tracks 2.1 Released</h1>
     
     
       <p class="meta">
@@ -79,7 +79,7 @@
 
 
 
-<time datetime="2006-06-03T00:00:00+02:00" pubdate  data-updated="true" >Jun 3<span>rd</span>, 2006</time>
+<time datetime="2012-04-19T11:00:00+02:00" pubdate  data-updated="true" >Apr 19<span>th</span>, 2012</time>
         
          | <a href="#disqus_thread">Comments</a>
         
@@ -88,29 +88,80 @@
   </header>
 
 
-<div class="entry-content"><p>mk sent me the following tip for people wanting to running Tracks on Windows using Mongrel as the webserver, rather than WEBrick, Apache or lighttpd:</p>
-<p>Installing mongrel (this would work for Linux and MacOS X users too):</p>
-<pre>
-<code>
-sudo gem install mongrel
-cd tracks_directory
-mongrel_rails start -d
-</code>
-</pre>
-<p>Running the service:</p>
-<pre>
-<code>
-mongrel_rails_service install -n tracks -r c:\path\to\tracks -p 4000 -e production
-mongrel_rails_service start -n tracks
-</code>
-</pre>
-<p>Now hit the port and poof, it works (or should). The application will stop if you use:</p>
-<pre>
-<code>
-mongrel_rails_service stop -n tracks
-</code>
-</pre>
-<p>Off course, you can control service at services in the control panel. I have it set to start on boot, and that&#8217;s it. Read more about <a href="http://mongrel.rubyforge.org/">Mongrel</a> or more about <a href="http://mongrel.rubyforge.org/docs/win32.html">Mongrel on Windows</a>.</p>
+<div class="entry-content"><p>Hi all,</p>
+
+<p>It is finally done! You can now <a href="https://github.com/TracksApp/tracks/zipball/v2.1">download</a> Tracks version 2.1 from github.
+We did our best to test this new version well, but any problems you may have
+can be posted to <a href="www.assembla.com/spaces/tracks-tickets/">Assembla</a>. Improvements for translations are welcome
+too.</p>
+
+<p>Do not forget to migrate your database if you are coming from 2.0 or from
+2.1RC1. And since we have migrated to bundler for managing dependencies, run
+@bundle install@ (instead of @rake gems:install@). If you use passenger and
+the gems will not load using bundler, set the @BUNDLER_PATH@ in
+@.bundler/config@. See the installation and upgrade manual for more details.</p>
+
+<p>We have seen a lot of new contributions from several contributers: Ignacio
+Ihuerta, Christof Spies, Stefan Richter, Mickey Reiss, Demian Gemperli, Matt
+Rogers, Jan Stępień, Antonin Blanc, Christian Frank, Sebastian Fischmeister,
+Andreas Brandl, Craig Maloney, Pavel Zupa, Tim Madden, Jaime Hernandez,
+Damian Shalev. Also we have two new committing developers (Hi Matt Rogers
+and Stefan Richter) to keep development of Tracks going.</p>
+
+<p>Thanks to all of you!!</p>
+
+<p>The current release is based on rails 2.3 and only supports ruby 1.8.7. This
+infrastructure is getting outdated. For release 2.2 we will upgrade this to
+rails 3 and support ruby 1.8.7 and ruby 1.9.3.</p>
+
+<p>This release brings a lot of new goodies:</p>
+
+<p>New and changed features:</p>
+
+<ol>
+<li>Redesign of the completed todos: a new overview page. Also all context
+and  project pages have a link to their completed actions</li>
+<li>New locales (es by Ignacio Ihuerta, fr by Antonin Blanc, cz by Pavel Zupa
+and he by Damian Shalev) and updated locales (de, nl)</li>
+<li>You can star an action right from the form for adding a new action</li>
+<li>Redesign of preferences page</li>
+<li>You can now mark an action complete from the tickler</li>
+<li>Project names can now contain comma (&#8216;,&#8217;) in it name</li>
+<li>Context view now shows hidden and pending actions</li>
+<li>Mobile improvements (we now require some javascript support on the
+mobile)</li>
+<li>Two extra defer periods in the context menu of an action
+10.There is a review page where you can see stalled or neglected projects.
+There is a reviewed button on the project edit page to mark a project
+reviewed.
+11.You need to change your password: migrated to better BCrypt hash algoritm
+for storing passwords</li>
+</ol>
+
+
+<p>New features (technical)</p>
+
+<ol>
+<li>There are two example ruby scripts in /doc to use the REST API to add a
+todo or a project template with todos from the command line</li>
+<li>The tag page can now select actions from mulitple tags using AND and OR.
+There is no gui for this. Syntax is /todos/tag/tagA,tagB?and=tagC to select
+all todos with (tagA or tagB) AND tagC</li>
+</ol>
+
+
+<p>Under the hood:</p>
+
+<ol>
+<li>Upgraded rails to 2.3.12, jquery to 1.7.1 and jquery-ui to 1.8.17</li>
+<li>Fixed several issues with the REST API</li>
+<li>Upgraded the act_as_statemachine plugin. This change requires a
+migration. See note above!</li>
+<li>Migated to bundler for gem dependencies</li>
+<li>Migrated to cucumber and capybara for integration testing</li>
+<li>Development mode shows a work-in-progress banner on top of the screen</li>
+</ol>
+
 </div>
 
 
@@ -119,7 +170,7 @@ mongrel_rails_service stop -n tracks
       
   
 
-<span class="byline author vcard">Posted by <span class="fn">bsag</span></span>
+<span class="byline author vcard">Posted by <span class="fn">lrbalt</span></span>
 
       
 
@@ -131,12 +182,12 @@ mongrel_rails_service stop -n tracks
 
 
 
-<time datetime="2006-06-03T00:00:00+02:00" pubdate  data-updated="true" >Jun 3<span>rd</span>, 2006</time>
+<time datetime="2012-04-19T11:00:00+02:00" pubdate  data-updated="true" >Apr 19<span>th</span>, 2012</time>
       
 
 <span class="categories">
   
-    <a class='category' href='/archives/articles/'>articles</a>
+    <a class='category' href='/archives/news/'>news</a>
   
 </span>
 
@@ -145,7 +196,7 @@ mongrel_rails_service stop -n tracks
     
       <div class="sharing">
   
-  <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://TracksApp.github.com/articles/comments/mongrel-and-windows/" data-via="" data-counturl="http://TracksApp.github.com/articles/comments/mongrel-and-windows/" >Tweet</a>
+  <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://TracksApp.github.com/news/comments/release-2.1/" data-via="" data-counturl="http://TracksApp.github.com/news/comments/release-2.1/" >Tweet</a>
   
   
   <div class="g-plusone" data-size="medium"></div>
@@ -305,8 +356,8 @@ mongrel_rails_service stop -n tracks
       
         
         // var disqus_developer = 1;
-        var disqus_identifier = 'http://TracksApp.github.com/articles/comments/mongrel-and-windows/';
-        var disqus_url = 'http://TracksApp.github.com/articles/comments/mongrel-and-windows/';
+        var disqus_identifier = 'http://TracksApp.github.com/news/comments/release-2.1/';
+        var disqus_url = 'http://TracksApp.github.com/news/comments/release-2.1/';
         var disqus_script = 'embed.js'
       
 
