@@ -4,7 +4,7 @@
   <title><![CDATA[Tracks]]></title>
   <link href="http://TracksApp.github.com/tracks/atom.xml" rel="self"/>
   <link href="http://TracksApp.github.com/"/>
-  <updated>2012-04-19T11:08:40+02:00</updated>
+  <updated>2012-04-19T11:17:40+02:00</updated>
   <id>http://TracksApp.github.com/</id>
   <author>
     <name><![CDATA[TracksApp]]></name>
@@ -12,6 +12,68 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Tracks 2.1]]></title>
+    <link href="http://TracksApp.github.com/downloads/comments/tracks-21/"/>
+    <updated>2012-04-19T11:00:00+02:00</updated>
+    <id>http://TracksApp.github.com/downloads/comments/tracks-21</id>
+    <content type="html"><![CDATA[<p>Hi all,</p>
+<p>It is finally done! You can now [download]<sup class="footnote" id="fnr1"><a href="#fn1">1</a></sup> Tracks version 2.1 from github.<br />
+We did our best to test this new version well, but any problems you may have<br />
+can be posted to [Assembla]<sup class="footnote" id="fnr2"><a href="#fn2">2</a></sup>. Improvements for translations are welcome<br />
+too.</p>
+<p>Do not forget to migrate your database if you are coming from 2.0 or from<br />
+2.1RC1. And since we have migrated to bundler for managing dependencies, run<br />
+<code>bundle install</code> (instead of <code>rake gems:install</code>). If you use passenger and<br />
+the gems will not load using bundler, set the <code>BUNDLER_PATH</code> in<br />
+<code>.bundler/config</code>. See the installation and upgrade manual for more details.</p>
+<p>We have seen a lot of new contributions from several contributers: Ignacio<br />
+Ihuerta, Christof Spies, Stefan Richter, Mickey Reiss, Demian Gemperli, Matt<br />
+Rogers, Jan Stępień, Antonin Blanc, Christian Frank, Sebastian Fischmeister,<br />
+Andreas Brandl, Craig Maloney, Pavel Zupa, Tim Madden, Jaime Hernandez,<br />
+Damian Shalev. Also we have two new committing developers (Hi Matt Rogers<br />
+and Stefan Richter) to keep development of Tracks going.</p>
+<p>Thanks to all of you!!</p>
+<p>The current release is based on rails 2.3 and only supports ruby 1.8.7. This<br />
+infrastructure is getting outdated. For release 2.2 we will upgrade this to<br />
+rails 3 and support ruby 1.8.7 and ruby 1.9.3.</p>
+<p>This release brings a lot of new goodies:</p>
+<p>New and changed features:</p>
+<p>1. Redesign of the completed todos: a new overview page. Also all context<br />
+and  project pages have a link to their completed actions<br />
+2. New locales (es by Ignacio Ihuerta, fr by Antonin Blanc, cz by Pavel Zupa<br />
+and he by Damian Shalev) and updated locales (de, nl)<br />
+3. You can star an action right from the form for adding a new action<br />
+4. Redesign of preferences page<br />
+5. You can now mark an action complete from the tickler<br />
+6. Project names can now contain comma (&#8216;,&#8217;) in it name<br />
+7. Context view now shows hidden and pending actions<br />
+8. Mobile improvements (we now require some javascript support on the<br />
+mobile)<br />
+9. Two extra defer periods in the context menu of an action<br />
+10.There is a review page where you can see stalled or neglected projects.<br />
+There is a reviewed button on the project edit page to mark a project<br />
+reviewed.<br />
+11.You need to change your password: migrated to better BCrypt hash algoritm<br />
+for storing passwords</p>
+<p>New features (technical)</p>
+<p>1. There are two example ruby scripts in /doc to use the <span class="caps">REST</span> <span class="caps">API</span> to add a<br />
+todo or a project template with todos from the command line<br />
+2. The tag page can now select actions from mulitple tags using <span class="caps">AND</span> and OR.<br />
+There is no gui for this. Syntax is /todos/tag/tagA,tagB?and=tagC to select<br />
+all todos with (tagA or tagB) <span class="caps">AND</span> tagC</p>
+<p>Under the hood:</p>
+<p>1. Upgraded rails to 2.3.12, jquery to 1.7.1 and jquery-ui to 1.8.17<br />
+2. Fixed several issues with the <span class="caps">REST</span> <span class="caps">API</span><br />
+3. Upgraded the act_as_statemachine plugin. This change requires a<br />
+migration. See note above!<br />
+4. Migated to bundler for gem dependencies<br />
+5. Migrated to cucumber and capybara for integration testing<br />
+6. Development mode shows a work-in-progress banner on top of the screen</p>
+<p><sup class="footnote" id="fnr1"><a href="#fn1">1</a></sup>: https://github.com/TracksApp/tracks/zipball/v2.1<br />
+<sup class="footnote" id="fnr2"><a href="#fn2">2</a></sup>: www.assembla.com/spaces/tracks-tickets/</p>]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Tracks 2.1 released]]></title>
@@ -444,15 +506,6 @@ provider in your webbrowser (tested on FF3 and IE7)</li>
     <id>http://TracksApp.github.com/news/comments/absent-for-august</id>
     <content type="html"><![CDATA[<p>I&#8217;m off to Brazil for a work course again on Monday, and I&#8217;ll be away for 3 weeks. I won&#8217;t have email or web access during that time, so can I ask that you direct any questions to the forum or mailing list where other Tracks users will be able to help you. If you want to make a pull request on GitHub, or if you&#8217;ve got a patch, <a href="https://github.com/lukemelia">lukemelia</a>, <a href="https://github.com/lrbalt">lrbalt</a> and <a href="https://github.com/epall">epall</a> all have commit rights to the main repository, so you can send your request to them.</p>
 <p>Have a great summer everyone, and I&#8217;ll post again when I get back!</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Pledgie button]]></title>
-    <link href="http://TracksApp.github.com/news/comments/pledgie-button/"/>
-    <updated>2008-06-28T00:00:00+02:00</updated>
-    <id>http://TracksApp.github.com/news/comments/pledgie-button</id>
-    <content type="html"><![CDATA[<p>GitHub provides a handy shortcut for creating a <a href="http://pledgie.org/">Pledgie</a> campaign, and shows the button on the repository page. We were previously accepting donations using a Paypal button, which meant I then had to do some mental arithmetic and manually update the MacBook-O-Meter to show the additional donations. Pledgie is much easier to use, so I&#8217;ve now embedded the Pledgie button on the <a href="http://www.rousette.org.uk/projects/tracks/contribute">Contribute</a> page, and also in the sidebar of the site. Click the button if you feel like making a donation! Pledgie donations can be anonymous or you can display your name proudly in the donors list, and you can use PayPal or a credit card for payment.</p>
 ]]></content>
   </entry>
   
