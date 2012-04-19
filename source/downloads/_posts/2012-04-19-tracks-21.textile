@@ -1,0 +1,80 @@
+---
+layout: post
+title: "Tracks 2.1"
+date: 2012-04-19 11:00
+comments: true
+categories: [downloads]
+author: lrbalt
+sharing: true
+footer: true
+---
+Hi all,
+
+It is finally done! You can now [download][1] Tracks version 2.1 from github.
+We did our best to test this new version well, but any problems you may have
+can be posted to [Assembla][2]. Improvements for translations are welcome
+too.
+
+Do not forget to migrate your database if you are coming from 2.0 or from
+2.1RC1. And since we have migrated to bundler for managing dependencies, run
+@bundle install@ (instead of @rake gems:install@). If you use passenger and
+the gems will not load using bundler, set the @BUNDLER_PATH@ in
+@.bundler/config@. See the installation and upgrade manual for more details.
+
+We have seen a lot of new contributions from several contributers: Ignacio
+Ihuerta, Christof Spies, Stefan Richter, Mickey Reiss, Demian Gemperli, Matt
+Rogers, Jan Stępień, Antonin Blanc, Christian Frank, Sebastian Fischmeister,
+Andreas Brandl, Craig Maloney, Pavel Zupa, Tim Madden, Jaime Hernandez,
+Damian Shalev. Also we have two new committing developers (Hi Matt Rogers
+and Stefan Richter) to keep development of Tracks going.
+
+Thanks to all of you!!
+
+The current release is based on rails 2.3 and only supports ruby 1.8.7. This
+infrastructure is getting outdated. For release 2.2 we will upgrade this to
+rails 3 and support ruby 1.8.7 and ruby 1.9.3.
+
+This release brings a lot of new goodies:
+
+New and changed features:
+
+1. Redesign of the completed todos: a new overview page. Also all context
+and  project pages have a link to their completed actions
+2. New locales (es by Ignacio Ihuerta, fr by Antonin Blanc, cz by Pavel Zupa
+and he by Damian Shalev) and updated locales (de, nl)
+3. You can star an action right from the form for adding a new action
+4. Redesign of preferences page
+5. You can now mark an action complete from the tickler
+6. Project names can now contain comma (',') in it name
+7. Context view now shows hidden and pending actions
+8. Mobile improvements (we now require some javascript support on the
+mobile)
+9. Two extra defer periods in the context menu of an action
+10.There is a review page where you can see stalled or neglected projects.
+There is a reviewed button on the project edit page to mark a project
+reviewed.
+11.You need to change your password: migrated to better BCrypt hash algoritm
+for storing passwords
+
+New features (technical)
+
+1. There are two example ruby scripts in /doc to use the REST API to add a
+todo or a project template with todos from the command line
+2. The tag page can now select actions from mulitple tags using AND and OR.
+There is no gui for this. Syntax is /todos/tag/tagA,tagB?and=tagC to select
+all todos with (tagA or tagB) AND tagC
+
+Under the hood:
+
+1. Upgraded rails to 2.3.12, jquery to 1.7.1 and jquery-ui to 1.8.17
+2. Fixed several issues with the REST API
+3. Upgraded the act_as_statemachine plugin. This change requires a
+migration. See note above!
+4. Migated to bundler for gem dependencies
+5. Migrated to cucumber and capybara for integration testing
+6. Development mode shows a work-in-progress banner on top of the screen
+
+[1]: https://github.com/TracksApp/tracks/zipball/v2.1
+[2]: www.assembla.com/spaces/tracks-tickets/
+
+
