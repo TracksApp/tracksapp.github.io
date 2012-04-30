@@ -4,7 +4,7 @@
   <title><![CDATA[Tracks]]></title>
   <link href="http://TracksApp.github.com/tracks/atom.xml" rel="self"/>
   <link href="http://TracksApp.github.com/"/>
-  <updated>2012-04-19T11:31:39+02:00</updated>
+  <updated>2012-04-30T17:40:37+02:00</updated>
   <id>http://TracksApp.github.com/</id>
   <author>
     <name><![CDATA[TracksApp]]></name>
@@ -12,6 +12,15 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Bitnami updates their Tracks installer to 2.1]]></title>
+    <link href="http://TracksApp.github.com/news/comments/bitnami-upgraded-2.1/"/>
+    <updated>2012-04-30T15:14:00+02:00</updated>
+    <id>http://TracksApp.github.com/news/comments/bitnami-upgraded-2.1</id>
+    <content type="html"><![CDATA[<p>Bitnami has updated their Tracks installer to version 2.1 of Tracks. If you&#8217;d like to install Tracks on a local machine, but do not like to do all the configuration yourself, this could be a good solution for you. try <a href="http://bitnami.org/stack/tracks">BitNami</a> &#8211; it runs on Windows, Mac OS X and Linux. But they also support preconfigured virtual machines, including Amazon machine images.</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Tracks 2.1]]></title>
@@ -497,16 +506,6 @@ provider in your webbrowser (tested on FF3 and IE7)</li>
 </ul>
 <p>There are changes to the database, and a few changes to config/environment.rb.tmpl, so please migrate your database and copy the template file and merge your personalisations with it. More upgrade instructions are in the manual in the /doc directory.</p>
 <p>This release of 1.7 will include enhancements made by a lot new contributers (Jakub, Hans, Piotr, MHarris and Simon). Thank you all for helping Tracks getting better every release. As ever particular thanks to Luke (for updating Tracks to 2.2.2) and to Reinier for masses of work on a lot of fronts, not least in making it extremely easy for me to announce and distribute this release!</p>]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Absent for August]]></title>
-    <link href="http://TracksApp.github.com/news/comments/absent-for-august/"/>
-    <updated>2008-08-02T00:00:00+02:00</updated>
-    <id>http://TracksApp.github.com/news/comments/absent-for-august</id>
-    <content type="html"><![CDATA[<p>I&#8217;m off to Brazil for a work course again on Monday, and I&#8217;ll be away for 3 weeks. I won&#8217;t have email or web access during that time, so can I ask that you direct any questions to the forum or mailing list where other Tracks users will be able to help you. If you want to make a pull request on GitHub, or if you&#8217;ve got a patch, <a href="https://github.com/lukemelia">lukemelia</a>, <a href="https://github.com/lrbalt">lrbalt</a> and <a href="https://github.com/epall">epall</a> all have commit rights to the main repository, so you can send your request to them.</p>
-<p>Have a great summer everyone, and I&#8217;ll post again when I get back!</p>
-]]></content>
   </entry>
   
 </feed>

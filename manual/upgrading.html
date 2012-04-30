@@ -92,13 +92,7 @@
 </ol>
 <p>If you are running an older version of Tracks (1.8devel), they could also be called jquery-all.js, tracks.js and all.css</p>
 <p>If you have problems with Passenger not finding the gems bundler installed, you might want to let bundler put all gems in the Tracks directory so that Passenger can find them (and probably have sufficient permissions). Create a directory <code>.bundle</code> in your Tracks root directory. Add the following config in <code>/path/to/tracks/.bundle/config</code>:</p>
-<p><div class='bogus-wrapper'><notextile><figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="o">---</span>
-</span><span class='line'><span class="no">BUNDLE_DISABLE_SHARED_GEMS</span><span class="p">:</span> <span class="s2">&quot;1&quot;</span>
-</span><span class='line'><span class="no">BUNDLE_PATH</span><span class="p">:</span><span class="sr"> /path/</span><span class="n">to</span><span class="o">/</span><span class="n">tracks</span><span class="o">/.</span><span class="n">bundle</span>
-</span></code></pre></td></tr></table></div></figure></div></notextile></p>
+<p>Liquid error: undefined method `join&#8217; for #<String:0xa2e584c></p>
 <h3>Upgrading from Tracks 2.0RC2 to 2.0</h3>
 <p>The upgrade to the latest stable 2.0 release consists of the same steps as upgrading from 1.7.x in the following paragraph, just replace 2.0RC with 2.0 where appropriate</p>
 <p><span class="caps">PLEASE</span> <span class="caps">NOTE</span> that the requirements for Tracks have changes:</p>
@@ -171,13 +165,7 @@ It is also possible to follow the instructions below and copy your existing site
 	<li>(Recommended for most people) Download the <a href="http://bsag.bingodisk.com/public/files/tracks_1.7.zip">zipped package</a>, and unzip in your preferred location (e.g. <code>~/Sites</code> for Mac OS X users).</li>
 	<li>If you want to live on the edge, you can get the latest development version from GitHub using git (bear in mind that this may be less stable than the released versions):</li>
 </ol>
-<p><div class='bogus-wrapper'><notextile><figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-</pre></td><td class='code'><pre><code class='bash'><span class='line'><span class="nb">cd</span> ~/Sites
-</span><span class='line'>git clone git://github.com/TracksApp/tracks.git
-</span><span class='line'><span class="nb">cd </span>tracks
-</span></code></pre></td></tr></table></div></figure></div></notextile></p>
+<p>Liquid error: undefined method `join&#8217; for #<String:0xa2e5568></p>
 <h4>Copy over old configuration</h4>
 <p>There are a few settings and configuration files you need to copy over from your old installation. If you copy them over rather than moving them, you can still run your old version of Tracks if anything goes awry with the installation process.</p>
 <ol>
@@ -189,15 +177,11 @@ It is also possible to follow the instructions below and copy your existing site
 </ol>
 <h4>Update your old database to the new format</h4>
 <p>In a terminal, change directories so that you are inside the Tracks 1.7 directory. Then issue the command to update your Tracks 1.6 database to the format required for Tracks 1.7:</p>
-<p><div class='bogus-wrapper'><notextile><figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="n">rake</span> <span class="n">db</span><span class="ss">:migrate</span> <span class="no">RAILS_ENV</span><span class="o">=</span><span class="n">production</span>
-</span></code></pre></td></tr></table></div></figure></div></notextile></p>
+<p>Liquid error: undefined method `join&#8217; for <a href="String">\nrake db:migrate RAILS_ENV=production\n</a></p>
 <p>Watch the output carefully for errors, but it should report at the end of the process that everything worked OK. If you do get errors, you&#8217;ll have to fix them before you proceed any further. Running rake with the <code>--trace</code> option can help to track down the problem.</p>
 <h4>Start the server</h4>
 <p>If you&#8217;re still in the Tracks 1.7 root directory in a terminal, enter the following command to start up Tracks in production mode:</p>
-<p><div class='bogus-wrapper'><notextile><figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="n">script</span><span class="o">/</span><span class="n">server</span> <span class="o">-</span><span class="n">e</span> <span class="n">production</span>
-</span></code></pre></td></tr></table></div></figure></div></notextile></p>
+<p>Liquid error: undefined method `join&#8217; for <a href="String">\nscript/server -e production\n</a></p>
 <p>Visit the <span class="caps">URL</span> indicated by the output (e.g. <code>** Mongrel available at 0.0.0.0:3000</code><br />
 ) in a browser, and with any luck, you should be able to log in and find all your actions as you left them! If you need to access Tracks from a mobile/cellular phone browser, visit <code>http://yourdomain.com/mobile/</code>. This mobile version is a special, lightweight version of Tracks, designed to use on a mobile browser.</p>
 <h4>Clean up your old installation</h4>
@@ -282,6 +266,10 @@ It is also possible to follow the instructions below and copy your existing site
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/news/comments/bitnami-upgraded-2.1/">Bitnami updates their Tracks installer to 2.1</a>
+      </li>
+    
+      <li class="post">
         <a href="/news/comments/release-2.1/">Tracks 2.1 released</a>
       </li>
     
@@ -295,10 +283,6 @@ It is also possible to follow the instructions below and copy your existing site
     
       <li class="post">
         <a href="/news/comments/the-wiki-has-moved/">The wiki has moved</a>
-      </li>
-    
-      <li class="post">
-        <a href="/news/comments/tracks-2.0-is-out-now/">Tracks 2.0 is out now!</a>
       </li>
     
   </ul>
