@@ -85,11 +85,19 @@
 
 <p>To clone Tracks, change to a directory in which you want to store Tracks (e.g. ~/Sites):</p>
 
-<p>Liquid error: undefined method `join&#8217; for &#8220;\ngit clone git://github.com/TracksApp/tracks.git\ncd tracks\n&#8221;:String</p>
+<figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'>git clone git://github.com/TracksApp/tracks.git
+</span><span class='line'><span class="nb">cd </span>tracks
+</span></code></pre></td></tr></table></div></figure>
+
 
 <p>If (when!) you produce a cool new feature or fix a bug, create a patch. If you develop in a branch called &#8216;experiment&#8217;:</p>
 
-<p>Liquid error: undefined method `join&#8217; for &#8220;\ngit diff master..experiment > my_feature.patch \n&#8221;:String</p>
+<figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'>git diff master..experiment &gt; my_feature.patch
+</span></code></pre></td></tr></table></div></figure>
+
 
 <p>Then attach my_feature.patch to a ticket.</p>
 
