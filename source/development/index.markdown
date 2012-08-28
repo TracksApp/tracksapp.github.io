@@ -40,8 +40,8 @@ Then attach my_feature.patch to a ticket.
 
 Or you can sign up for a free account on github and fork Tracks using the convenient button. You can then use the button to issue a pull request for your changes to be pulled into the main repository.
 
-[1]: http://lists.rousette.org.uk/mailman/listinfo/tracks-discuss
-[2]: http://www.assembla.com/spaces/tracks-tickets/
-[3]: http://git.or.cz/
-[4]: http://github.com/TracksApp/tracks/
+[1]: http://groups.google.com/group/TracksApp
+[2]: https://www.assembla.com/spaces/tracks-tickets/
+[3]: http://git-scm.com/
+[4]: https://github.com/TracksApp/tracks
 [5]: https://github.com/TracksApp/tracksapp.github.com
