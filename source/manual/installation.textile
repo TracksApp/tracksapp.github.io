@@ -33,9 +33,7 @@ There are a few easy options if you are not confident about installing Tracks fr
 
 Alternatively, you could try "JumpBox":http://jumpbox.com/app/tracks, who provide a JumpBox for Tracks. JumpBoxes are pre-built, pre-configured virtual applications which run in a range of "Virtualization software applications":http://www.jumpbox.com/supported-virtualization-software. You just download the JumpBox (free), then open the file with your Virtualization software. Once the JumpBox has booted, it will give you a URL which you can visit in a browser. The software will then guide you through setting up an account. If you'd like to try out the JumpBox without installing it, you can use the 'Trial This JumpBox' button on the web site, which will let you play around with it to test it out. Furthermore, there is a free public AMI available for Amazon EC2. Just use any EC2 client and search for Tracks. This works in exactly the same way as the downloaded JumpBox you can easily migrate from a downloaded installation to an EC2 instance or back using the backup system of the JumpBox.
 
-If you'd like an easy way to access Tracks from any internet-connected computer, sign up for a free account at "Morph eXchange":http://www.morphexchange.com/. Sign up for a free account, then click on "See all available subscriptions" and you'll see Tracks listed as an application. Just subscribe to Tracks and you can get started. This option is recommended for those with little technical know-how.
-
-There are also some other free hosted Tracks sites, like http://GTDify.com and http://Tracks.tra.in that you can use. Please note that they may run older versions of Tracks.
+Several third parties provide Tracks hosting as a service. A list of these providers can be found "on the wiki":https://github.com/TracksApp/tracks/wiki/Tracks-hosting. Please note that they may run older versions of Tracks.
 
 
 h4.  Requirements
@@ -104,7 +102,7 @@ IDENTIFIED BY 'password-goes-here' WITH GRANT OPTION;
 
 h4.  Configure variables
 
-# If you downloaded Tracks via GitHub, you need to duplicate the files @database.yml.tmpl@ and @site.yml.tmpl@ and remove the @*.tmpl@ extension from the duplicates. Similarly, duplicate @/log.tmpl@ and remove the @*.tmpl@ extension, then edit the files as described in steps 2 and 3.
+# If you downloaded Tracks via GitHub, you need to duplicate the files @database.yml.tmpl@ and @site.yml.tmpl@ and remove the @*.tmpl@ extension from the duplicates. Once you've made those copies, edit the files as described in steps 2 and 3.
 # Open the file @/config/database.yml@ and edit the @production:@ section with the details of your database. If you are using MySQL the @adapter:@ line should read @adapter: mysql@, @host: localhost@ (in the majority of cases), and your username and password should match those you assigned when you created the database. If you are using SQLite3, you should have only two lines under the production section: @adapter: sqlite3@ and @database: db/tracks-blank.db@.
 # Open the file @/config/site.yml@, and read through the settings to make sure that they suit your setup. In most cases, all you need to change is the @salt: "change-me"@ line (change the string "change-me" to some other string of your choice), and the time zone setting. For the time zone setting you can use the command @bundle exec rake time:zones:local@ to see all available timezones on your machine
 # If you are using Windows, you may need to check the 'shebang' lines (@#!/usr/bin/env ruby@) of the @/public/dispatch.*@ files and all the files in the @/script@ directory. They are set to @#!/usr/bin/env ruby@ by default. This should work for all Unix based setups (Linux or Mac OS X), but Windows users will probably have to change it to something like @#c:/ruby/bin/ruby@ to point to the Ruby binary on your system.
