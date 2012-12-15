@@ -9,7 +9,7 @@
   <meta name="author" content="TracksApp">
 
   
-  <meta name="description" content="        Manual - Upgrading      &laquo; InstallationUpgrading TracksUpgrading from Tracks 2.0 or 2.1RC1 to 2.1For the upgrade, please note that wit...">
+  <meta name="description" content="        Manual - Upgrading      &laquo; InstallationUpgrading TracksUpgrading from Tracks 2.1 to 2.1.1This release is a bugfix release. For details...">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -69,6 +69,17 @@
   
   <p><a href="/manual/installation.html">&laquo; Installation</a></p>
 <h2>Upgrading Tracks</h2>
+<h3>Upgrading from Tracks 2.1 to 2.1.1</h3>
+<p>This release is a bugfix release. For details about the fixes, see the <a href="https://github.com/TracksApp/tracks/compare/v2.1...v2.1.1">difference view</a> on Github.</p>
+<p>There are no changes done to the database, it is therefore not necessary to run the migrations. For upgrading:</p>
+<ol>
+	<li>Back up your existing database and installation of Tracks</li>
+	<li>Install Tracks 2.1.1 in a new directory</li>
+	<li>Copy over the configuration from your previous Tracks installation. If using SQLite3, copy the old database into the new Tracks 2.1 directory.</li>
+	<li>Check that you have all dependencies installed and up-to-date: <code>bundle install</code></li>
+	<li>Run <code>bundle exec script/server</code> inside your Tracks 2.1.1 directory to start up Tracks 2.1.1.</li>
+	<li>Once you are happy that everything is working well, delete your old Tracks directory.</li>
+</ol>
 <h3>Upgrading from Tracks 2.0 or 2.1RC1 to 2.1</h3>
 <p>For the upgrade, please note that with version 2.1 Tracks started to use <code>bundler</code>. This means you need to have to install bundler using <code>gem install bundler</code>.</p>
 <p>To upgrade:</p>
@@ -228,9 +239,9 @@ It is also possible to follow the instructions below and copy your existing site
   
     <section>
   <h1>Get Tracks</h1>
-  <p><a class="button" href="https://github.com/TracksApp/tracks/zipball/v2.1" title="Download Tracks 2.1 zipped package"><img src="/images/download_button.png" /></a></p>
+  <p><a class="button" href="https://github.com/TracksApp/tracks/zipball/v2.1.1" title="Download Tracks 2.1.1 zipped package"><img src="/images/download_button.png" /></a></p>
   
-  <p><a href="/downloads/comments/tracks-21">Tracks 2.1 release notes</a></p>
+  <p><a href="/downloads/comments/tracks-2.1.1">Tracks 2.1.1 release notes</a></p>
   
   <p><a href="http://www.assembla.com/spaces/tracks-tickets/">Report a bug</a></p>
 </section>
@@ -282,6 +293,10 @@ It is also possible to follow the instructions below and copy your existing site
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/news/comments/release-2.1.1/">Tracks 2.1.1 released</a>
+      </li>
+    
+      <li class="post">
         <a href="/news/comments/bitnami-upgraded-2.1/">Bitnami updates their Tracks installer to 2.1</a>
       </li>
     
@@ -295,10 +310,6 @@ It is also possible to follow the instructions below and copy your existing site
     
       <li class="post">
         <a href="/news/comments/handing-over-the-keys/">Handing Over the Keys</a>
-      </li>
-    
-      <li class="post">
-        <a href="/news/comments/the-wiki-has-moved/">The wiki has moved</a>
       </li>
     
   </ul>

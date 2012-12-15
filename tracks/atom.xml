@@ -4,7 +4,7 @@
   <title><![CDATA[Tracks]]></title>
   <link href="http://TracksApp.github.com/tracks/atom.xml" rel="self"/>
   <link href="http://TracksApp.github.com/"/>
-  <updated>2012-06-29T12:30:58+02:00</updated>
+  <updated>2012-12-15T20:36:28+01:00</updated>
   <id>http://TracksApp.github.com/</id>
   <author>
     <name><![CDATA[TracksApp]]></name>
@@ -12,6 +12,35 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Tracks 2.1.1 released]]></title>
+    <link href="http://TracksApp.github.com/downloads/comments/tracks-2.1.1/"/>
+    <updated>2012-12-15T20:01:00+01:00</updated>
+    <id>http://TracksApp.github.com/downloads/comments/tracks-2.1.1</id>
+    <content type="html"><![CDATA[<p>Hi all,</p>
+<p>Tracks 2.1.1 is released. This is a bugfix release which you can download <a href="https://github.com/TracksApp/tracks/archive/v2.1.1.zip">here</a>. All changes can be seen <a href="https://github.com/TracksApp/tracks/compare/v2.1...v2.1.1">here</a>. Upgrade instructions can be found in the manual.</p>
+<p>I hope this is the last 2.1.x release and that the next release will be Tracks 2.2 containing a lot of improvements. You are welcome to help test Tracks 2.2. In the mean time if you prefer the stable release, 2.1.1 is the best choice.</p>
+<p>Please note that Tracks 2.1.x does not support ruby 1.9 and it depends on ruby 1.8.7. Tracks 2.2 will support both ruby 1.8.7 and ruby 1.9. After 2.2 support for ruby 1.8.7 will be dropped.</p>
+<p>Enjoy!</p>]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Tracks 2.1.1 released]]></title>
+    <link href="http://TracksApp.github.com/news/comments/release-2.1.1/"/>
+    <updated>2012-12-15T20:01:00+01:00</updated>
+    <id>http://TracksApp.github.com/news/comments/release-2.1.1</id>
+    <content type="html"><![CDATA[<p>Hi all,</p>
+
+<p>Tracks 2.1.1 is released. This is a bugfix release which you can download <a href="https://github.com/TracksApp/tracks/archive/v2.1.1.zip">here</a>. All changes can be seen <a href="https://github.com/TracksApp/tracks/compare/v2.1...v2.1.1">here</a>. Upgrade instructions can be found in the manual.</p>
+
+<p>I hope this is the last 2.1.x release and that the next release will be Tracks 2.2 containing a lot of improvements. You are welcome to help test Tracks 2.2. In the mean time if you prefer the stable release, 2.1.1 is the best choice.</p>
+
+<p>Please note that Tracks 2.1.x does not support ruby 1.9 and it depends on ruby 1.8.7. Tracks 2.2 will support both ruby 1.8.7 and ruby 1.9. After 2.2 support for ruby 1.8.7 will be dropped.</p>
+
+<p>Enjoy!</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Bitnami updates their Tracks installer to 2.1]]></title>
@@ -466,46 +495,6 @@ migration. See note above!</li>
 <p>You can grab Henrik&#8217;s code <a href="http://gist.github.com/31631">here</a>, or use mine below. I just foraged around among the forks and the comments on <a href="http://www.simplisticcomplexity.com/2008/03/13/show-your-git-branch-name-in-your-prompt/">this related post</a> to get a version combining the best bits of them all, then I substituted in my existing command prompt. Enjoy!</p>
 <script src="http://gist.github.com/47541.js"></script>
 ]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Tracks gets its own domain name]]></title>
-    <link href="http://TracksApp.github.com/news/comments/tracks-gets-its-own-domain-name/"/>
-    <updated>2008-12-30T00:00:00+01:00</updated>
-    <id>http://TracksApp.github.com/news/comments/tracks-gets-its-own-domain-name</id>
-    <content type="html"><![CDATA[<p>&#8230;and a new home! I have now completed the migration to the new Shared Accelerator at <a href="http://joyent.com/">Joyent.com</a>, and in the process, gave Tracks its own domain name: getontracks.org. You may find that the new server feels a bit more snappy than the old one, and it should be more stable and reliable. The migration process was fairly complex, and it&#8217;s possible that some links may be broken, so do please email me if you find anything amiss. I&#8217;ve redirected the old domain to the new one, so feed readers should pick up the redirection. If they do not, you might want to enter the new feed <span class="caps">URL</span> manually for the <a href="http://www.getontracks.org/tracks/rss_2.0/">RSS2 feed</a> or <a href="http://www.getontracks.org/tracks/atom/">Atom feed</a>.</p>
-<p>I was hoping to replace our Trac bug tracker with a custom solution run with ExpressionEngine (which runs this site), but importing existing tickets proved too much for my pre-Christmas brain! Instead, I imported all the old tickets into an <a href="http://www.assembla.com/spaces/tracks-tickets/tickets">Assembla space</a>. Assembla offers a number of rather cool features, and will be easier for me to administer. You can find out how to use the site to submit tickets <a href="http://getontracks.org/development/">here</a>.</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Tracks 1.7RC]]></title>
-    <link href="http://TracksApp.github.com/downloads/comments/tracks-1.7rc/"/>
-    <updated>2008-12-14T00:00:00+01:00</updated>
-    <id>http://TracksApp.github.com/downloads/comments/tracks-1.7rc</id>
-    <content type="html"><![CDATA[<p>Version: Tracks 1.7RC</p>
-<p><a href="https://github.com/TracksApp/tracks/tree/1.7_branch">Git <span class="caps">URL</span></a></p>
-<p>I&#8217;m pleased to announce that Tracks 1.7RC has been released. This is a pre-release of version 1.7. Please help out to test this pre-release to find any bugs before we release 1.7 in a few weeks</p>
-<p>What&#8217;s new:</p>
-<ul>
-	<li>The included Rails version is updated to 2.2.2</li>
-	<li>Tracks now supports recurring/repeating todos</li>
-	<li>Cleanup of feed page and add feed for starred actions</li>
-	<li>Initial importer of yaml files (still very <span class="caps">EXPERIMENTAL</span>; please send<br />
-feedback on whether to include this; make backups while testing it)</li>
-	<li>New interface to import an email / sms messages into Tracks (needs an<br />
-email server on the same server as Tracks)</li>
-	<li>New buttons to quickly defer an action 1 or 7 days</li>
-	<li>Calendar view to review upcoming due actions, includes iCal feed to<br />
-use in your calendar app (tested with Google Calendar, Evolution, Outlook<br />
-2007)</li>
-	<li>You can now sort projects on number of active todos</li>
-	<li>Support for OpenSearch. This means you can add a Tracks as a search<br />
-provider in your webbrowser (tested on FF3 and IE7)</li>
-	<li>Bugfixes, including fixing OpenID</li>
-</ul>
-<p>There are changes to the database, and a few changes to config/environment.rb.tmpl, so please migrate your database and copy the template file and merge your personalisations with it. More upgrade instructions are in the manual in the /doc directory.</p>
-<p>This release of 1.7 will include enhancements made by a lot new contributers (Jakub, Hans, Piotr, MHarris and Simon). Thank you all for helping Tracks getting better every release. As ever particular thanks to Luke (for updating Tracks to 2.2.2) and to Reinier for masses of work on a lot of fronts, not least in making it extremely easy for me to announce and distribute this release!</p>]]></content>
   </entry>
   
 </feed>

@@ -9,7 +9,7 @@
   <meta name="author" content="TracksApp">
 
   
-  <meta name="description" content="Hi all,It is finally done! You can now [download]1 Tracks version 2.1 from github.We did our best to test this new version well, but any problems y...">
+  <meta name="description" content="Hi all,Tracks 2.1.1 is released. This is a bugfix release which you can download here. All changes can be seen here. Upgrade instructions can be fo...">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -66,6 +66,45 @@
 
 <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/downloads/comments/tracks-2.1.1/">Tracks 2.1.1 Released</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+  
+
+
+
+<time datetime="2012-12-15T20:01:00+01:00" pubdate  data-updated="true" >Dec 15<span>th</span>, 2012</time>
+        
+         | <a href="/downloads/comments/tracks-2.1.1/#disqus_thread">Comments</a>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>Hi all,</p>
+<p>Tracks 2.1.1 is released. This is a bugfix release which you can download <a href="https://github.com/TracksApp/tracks/archive/v2.1.1.zip">here</a>. All changes can be seen <a href="https://github.com/TracksApp/tracks/compare/v2.1...v2.1.1">here</a>. Upgrade instructions can be found in the manual.</p>
+<p>I hope this is the last 2.1.x release and that the next release will be Tracks 2.2 containing a lot of improvements. You are welcome to help test Tracks 2.2. In the mean time if you prefer the stable release, 2.1.1 is the best choice.</p>
+<p>Please note that Tracks 2.1.x does not support ruby 1.9 and it depends on ruby 1.8.7. Tracks 2.2 will support both ruby 1.8.7 and ruby 1.9. After 2.2 support for ruby 1.8.7 will be dropped.</p>
+<p>Enjoy!</p></div>
+  
+  
+
+
+    </article>
   
   
     <article>
@@ -580,88 +619,14 @@ provider in your webbrowser (tested on FF3 and IE7)</li>
 
     </article>
   
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/downloads/comments/tracks-15/">Tracks 1.5</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-  
-
-
-
-<time datetime="2008-03-27T00:00:00+01:00" pubdate  data-updated="true" >Mar 27<span>th</span>, 2008</time>
-        
-         | <a href="/downloads/comments/tracks-15/#disqus_thread">Comments</a>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>Version: Tracks 1.5</p>
-<p>I&#8217;m delighted to announce the release of Tracks 1.5 final!</p>
-<p>New features since Tracks 1.043:</p>
-<p>Some highlights of this release:</p>
-<ol>
-	<li>Show from date allows you to postpone the appearance of actions in the list until you can do something about them (like a &#8216;tickler&#8217;)</li>
-	<li>Tagging of actions</li>
-	<li>Simple management of users (deleting users through the web interface)</li>
-	<li>Import and export of data in various formats</li>
-	<li>Fantastic RESTful <span class="caps">API</span> to provide access to actions via scripts</li>
-	<li>Mobile interface designed for use on mobile phone browsers</li>
-	<li>Improved ease-of-use for installation and upgrading</li>
-	<li>Optional support for authentication via OpenID or <span class="caps">LDAP</span></li>
-	<li>Update to Rails 1.2.3</li>
-	<li>Per-user time zone preference</li>
-	<li>Use autocomplete fields for Project and Context specification to support on-the-fly adding of each</li>
-	<li>Add a &#8220;Hidden&#8221; status to projects</li>
-	<li>Add optional Default Context for a Project</li>
-	<li>Add ability to sort projects alphabetically</li>
-	<li>Add &#8220;starring&#8221; of actions</li>
-	<li>Statistics page with graphs</li>
-	<li>Rake task to set password. Usage: rake tracks:password <span class="caps">USER</span>=username</li>
-</ol>
-<p>There are also some bug fixes since 1.5rc1:</p>
-<ul>
-	<li>You can now use tags containing dots</li>
-	<li>Badge count on tag page works properly</li>
-	<li>Auto-complete drop down menu works properly</li>
-	<li>New todos that belong to hidden or completed projects are not added to the home page or context page</li>
-	<li>Now report revision number from TRACKS_ROOT instead of the current directory. To use this fix if you&#8217;re using 1.5 or trunk, you need to recreate your environment.rb from the template</li>
-	<li>When viewing a context, actions without projects are now shown</li>
-	<li>Various improvements to rendering time on home page when you have a lot of todos</li>
-	<li>Edit form now uses the correct default context after you have changed it</li>
-	<li>Clears completed_at field when you mark a completed task as incomplete again</li>
-	<li>New tests for new features and bug fixes</li>
-</ul>
-<p>As ever, many thanks are due to everyone who has helped on this release, particularly Reinier Balt.</p>
-<p><strong>Update 2008-04-01</strong>: Updated the zip package so that Tracks displays the correct version number (1.5).</p>
-<p><strong><span class="caps">NEW</span>! All-in-one installation!</strong></p>
-<p>If you want an easy, automated install which includes everything you need, download the <a href="http://bitnami.org/stack/tracks">BitNami Tracks Stack</a>. There are versions for Windows, Linux and Mac OS X (<span class="caps">PPC</span> and Intel). It includes Tracks 1.5, and now sets up an admin account for you as part of the installation process.</p></div>
-  
-  
-
-
-    </article>
-  
 </div>
 <aside class="sidebar">
   
     <section>
   <h1>Get Tracks</h1>
-  <p><a class="button" href="https://github.com/TracksApp/tracks/zipball/v2.1" title="Download Tracks 2.1 zipped package"><img src="/images/download_button.png" /></a></p>
+  <p><a class="button" href="https://github.com/TracksApp/tracks/zipball/v2.1.1" title="Download Tracks 2.1.1 zipped package"><img src="/images/download_button.png" /></a></p>
   
-  <p><a href="/downloads/comments/tracks-21">Tracks 2.1 release notes</a></p>
+  <p><a href="/downloads/comments/tracks-2.1.1">Tracks 2.1.1 release notes</a></p>
   
   <p><a href="http://www.assembla.com/spaces/tracks-tickets/">Report a bug</a></p>
 </section>
@@ -713,6 +678,10 @@ provider in your webbrowser (tested on FF3 and IE7)</li>
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/news/comments/release-2.1.1/">Tracks 2.1.1 released</a>
+      </li>
+    
+      <li class="post">
         <a href="/news/comments/bitnami-upgraded-2.1/">Bitnami updates their Tracks installer to 2.1</a>
       </li>
     
@@ -726,10 +695,6 @@ provider in your webbrowser (tested on FF3 and IE7)</li>
     
       <li class="post">
         <a href="/news/comments/handing-over-the-keys/">Handing Over the Keys</a>
-      </li>
-    
-      <li class="post">
-        <a href="/news/comments/the-wiki-has-moved/">The wiki has moved</a>
       </li>
     
   </ul>
