@@ -10,6 +10,19 @@ footer: false
 
 h2.  Upgrading Tracks
 
+h3. Upgrading from Tracks 2.1 to 2.1.1
+
+This release is a bugfix release. For details about the fixes, see the "difference view":https://github.com/TracksApp/tracks/compare/v2.1...v2.1.1 on Github.
+
+There are no changes done to the database, it is therefore not necessary to run the migrations. For upgrading:
+
+# Back up your existing database and installation of Tracks
+# Install Tracks 2.1.1 in a new directory
+# Copy over the configuration from your previous Tracks installation. If using SQLite3, copy the old database into the new Tracks 2.1 directory.
+# Check that you have all dependencies installed and up-to-date: @bundle install@
+# Run @bundle exec script/server@ inside your Tracks 2.1.1 directory to start up Tracks 2.1.1.
+# Once you are happy that everything is working well, delete your old Tracks directory.
+
 h3. Upgrading from Tracks 2.0 or 2.1RC1 to 2.1
 
 For the upgrade, please note that with version 2.1 Tracks started to use @bundler@. This means you need to have to install bundler using @gem install bundler@.
