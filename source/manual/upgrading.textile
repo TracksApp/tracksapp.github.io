@@ -10,6 +10,22 @@ footer: false
 
 h2.  Upgrading Tracks
 
+h3. Upgrading from Tracks 2.1.2 to 2.2
+
+This release adds a variety of new features and bugfixes to Tracks.
+
+The database will need to be migrated as part of the install. 
+
+To upgrade:
+# Back up your existing database and installation of Tracks
+# Install Tracks 2.2 in a new directory
+# Copy over the configuration from your previous Tracks installation. If using SQLite3, copy the old database into the new Tracks 2.2 directory.
+# Check that you have all dependencies installed: @bundle install@
+# Run @bundle exec rake db:migrate RAILS_ENV=production@ to update your old database to the new schema. This is the point of no return. Make sure you have backups!
+## This may take a while!
+# Run @bundle exec script/server@ inside your Tracks 2.2 directory to start up Tracks 2.2.
+# Once you are happy that everything is working well, delete your old Tracks directory.
+
 h3. Upgrading from Tracks 2.1.1 to 2.1.2
 
 The purpose of this release is to address several security vulnerabilities that were recently discovered in Rails. For details about the contents of the release, please see the "difference view":https://github.com/TracksApp/tracks/compare/v2.1.1...v2.1.2 on GitHub.
