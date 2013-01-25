@@ -47,7 +47,6 @@ Tracks stores its data in a database, and you can either use SQLite3, MySQL or P
 h4.  What is included with the Tracks package?
 
 # Tracks itself
-# All dependencies preconfigured. One is Rails 2.3.12. The next version of Tracks will depend on Rails 3
 # An empty SQLite3 database, set up with the correct database schema
 
 
@@ -55,13 +54,12 @@ h4.  What you need to install
 
 If you don't want to (or can't) use one of the all in one installations, you'll need to install a few things, depending on your platform and your needs.
 
-# *Ruby*. Tracks requires Ruby Version 1.8.7. There are issues when running with Ruby 1.8.6. Also Tracks was not tested on Ruby 1.9.x.
-# *RubyGems*. Tracks was tested on version 1.8.10. You may upgrade using @gem update --system@. The gems needed by Rails to interact with the database have to be compiled on the platform on which they will be run, so we cannot include them with the Tracks package, unlike some other gems. So you will need to "download":http://rubyforge.org/frs/?group_id=126 and install RubyGems (run @ruby setup.rb@ after extracting the package). If you use Linux, rubygems may be available throught your packaging system. Note that once again, Mac OS X Leopard users get an easy life, because RubyGems and the SQLite3 gem is already installed. Once installed you can use RubyGems to install the gems you need for your database. Run @bundle install@ from the directory you installed Tracks in. This will install all needed gems, including those for MySQL and Sqlite3. If you do not want one of them, you can comment it out in your @Gemfile@ which can be found in the root of the Tracks installation.
+# *Ruby*. Tracks requires either Ruby 1.8.7 or Ruby 1.9.x. Ruby 1.9.x is the recommended version.
+# *RubyGems*. Tracks was tested on version 1.8.24. You may upgrade using @gem update --system@. The gems needed by Rails to interact with the database have to be compiled on the platform on which they will be run, so we cannot include them with the Tracks package, unlike some other gems. So you will need to "download":http://rubyforge.org/frs/?group_id=126 and install RubyGems (run @ruby setup.rb@ after extracting the package). If you use Linux, rubygems may be available throught your packaging system. Mac OS X users already have RubyGems and the SQLite3 gem already installed on their systems. Once installed you can use RubyGems to install the gems you need for your database. Run @bundle install@ from the directory you installed Tracks in. This will install all needed gems, including those for MySQL and Sqlite3. If you do not want one of them, you can comment it out in your @Gemfile@ which can be found in the root of the Tracks installation.
 # *Database*. The easiest option is to use SQLite3, as the database is included in the package. You may need to install it first for your platform (see "sqlite.org":http://sqlite.org/download.html for downloads and installation instructions). If you want to use MySQL, download and install a package for your platform from "MySQL.com":http://dev.mysql.com/downloads/mysql/5.0.html. The basic steps for Postgresql should be similar to those for MySQL, but they will not be discussed further here.
-# *Rake* You will need rake to install and upgrade Tracks. If it is not installed on your system, use @sudo gem install rake@ to install it.
 
 
-You can find several installation howtos for specific setups "here":https://github.com/TracksApp/tracks/wiki/Installation-index. They were contributed by various Tracks users.
+Various Tracks users have contributed installation howtos for specific setups. They are "on the wiki":https://github.com/TracksApp/tracks/wiki/Installation-index. 
 
 
 h3.  Installation
@@ -70,8 +68,9 @@ This description is intended for people installing Tracks from scratch. If you w
 
 # Unzip tracks and install in a directory
 # Decide on a database to use
-##  SQLite3 - change database.yml to point to SQLite3 database. Make sure you add the complete path to the database
+##  SQLite3 - change database.yml to point to SQLite3 database. Make sure you add the complete path to the database. Remove the @mysql@ gem from the Gemfile
 ##  MySQL - create new MySQL db and grant all privileges
+# Install the necessary prerequisites using Bundler
 # Configure some variables
 # Populate the database with the Tracks schema
 # Start the server
@@ -98,7 +97,13 @@ mysql> GRANT ALL PRIVILEGES ON tracks.* TO yourmysqluser@localhost \
 IDENTIFIED BY 'password-goes-here' WITH GRANT OPTION;
 {% endcodeblock %}
 
+h4. Install the necessary prerequisites using Bundler
 
+Tracks makes use of several other Ruby libraries (known as 'gems') to provide additional functionality. The Bundler tool makes it easy for the gems that Tracks needs to be installed. 
+
+# Make sure you have bundler on your system already. It can be installed by running @gem install bundler@
+# Run the @bundle@ command in the directory that you unzipped your Tracks download to.
+# Wait for Bundler to finish installing the necessary gems that Tracks needs. This can take some time depending on the speed of your internet connection and the speed of the system you're installing Tracks on.
 
 h4.  Configure variables
 
@@ -106,21 +111,6 @@ h4.  Configure variables
 # Open the file @/config/database.yml@ and edit the @production:@ section with the details of your database. If you are using MySQL the @adapter:@ line should read @adapter: mysql@, @host: localhost@ (in the majority of cases), and your username and password should match those you assigned when you created the database. If you are using SQLite3, you should have only two lines under the production section: @adapter: sqlite3@ and @database: db/tracks-blank.db@.
 # Open the file @/config/site.yml@, and read through the settings to make sure that they suit your setup. In most cases, all you need to change is the @salt: "change-me"@ line (change the string "change-me" to some other string of your choice), and the time zone setting. For the time zone setting you can use the command @bundle exec rake time:zones:local@ to see all available timezones on your machine
 # If you are using Windows, you may need to check the 'shebang' lines (@#!/usr/bin/env ruby@) of the @/public/dispatch.*@ files and all the files in the @/script@ directory. They are set to @#!/usr/bin/env ruby@ by default. This should work for all Unix based setups (Linux or Mac OS X), but Windows users will probably have to change it to something like @#c:/ruby/bin/ruby@ to point to the Ruby binary on your system.
-
-
-h4.  Checking you have all needed dependencies
-
-Tracks from version 2.1 uses @bundler@ to manage all dependencies on other libraries. To make sure you have all dependencies installed, run:
-
-{% codeblock lang:ruby %}
-bundle install
-{% endcodeblock %}
-
-if you do not have bundler installed, first run
-
-{% codeblock lang:ruby %}
-gem install bundler
-{% endcodeblock %}
 
 
 h4.  Populate your database with the Tracks schema
