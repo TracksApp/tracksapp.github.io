@@ -129,10 +129,10 @@ h4.  Start the server
 While still in the Terminal inside the Tracks root directory, issue the following command:
 
 {% codeblock lang:ruby %}
-bundle exec script/server -e production
+bundle exec rails server -e production
 {% endcodeblock %}
 
-If all goes well, you should see some text informing you that the Mongrel server is running: @** Mongrel available at 0.0.0.0:3000@. If you are already running other services on port 3000, you need to select a different port when running the server, using the @-p@ option. You can stop the server again by the key combination Ctrl-C.
+If all goes well, you should see some text informing you that the WEBrick server is running: @=> Rails application starting in production on http://0.0.0.0:3000@. If you are already running other services on port 3000, you need to select a different port when running the server, using the @-p@ option. You can stop the server again by the key combination Ctrl-C.
 
 
 h4.  Visit Tracks in a browser
