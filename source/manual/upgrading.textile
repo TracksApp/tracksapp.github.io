@@ -22,7 +22,6 @@ To upgrade:
 # Copy over the configuration from your previous Tracks installation. If using SQLite3, copy the old database into the new Tracks 2.2 directory.
 # Check that you have all dependencies installed: @bundle install@
 # Run @bundle exec rake db:migrate RAILS_ENV=production@ to update your old database to the new schema. This is the point of no return. Make sure you have backups!
-## This may take a while!
 # The administrator email address shown on the signup page is now configured in @config/site.yml@. Edit your @config/site.yml@ and add an @admin_email@ option. See @config/site.yml.tmpl@ for an example.
 # Run @bundle exec rails server -e production@ inside your Tracks 2.2 directory to start up Tracks 2.2.
 # Once you are happy that everything is working well, delete your old Tracks directory.
