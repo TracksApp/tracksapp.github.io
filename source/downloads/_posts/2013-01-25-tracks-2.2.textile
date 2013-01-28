@@ -11,14 +11,22 @@ author: mattr
 
 Hi all,
 
-Tracks 2.2 is being released today with a variety of new features and bugfixes! You can download the release "here":https://github.com/TracksApp/tracks/archive/v2.2.zip. Upgrade instructions can be found in the manual.
+Tracks 2.2 is being released today with a variety of new features and bugfixes! You can download the release "here":https://github.com/TracksApp/tracks/archive/v2.2.zip. Upgrade instructions can be found "in the manual":/manual/upgrading.html.
 
 New in this release:
 * Added caching to various parts of Tracks to speed things up
 * Better support for running Tracks with PostgreSQL
-* Improvements to the mobile interface (Thanks to Tim Madden for his work on that!)
+* Improvements to the mobile interface, including working drag and drop
 * Support for running Tracks with Ruby 1.9.x
 * Tons of bugfixes and other improvements
+
+Changed in this release:
+* The administrator's email is no longer in the preferences and has been moved into site.yml
+
+Removed in this release:
+* Support for OpenID, CAS, and LDAP login. Support for these different login types will be added back in a future release.
+* Support for the SOAP API. The REST API should be used instead.
+
 
 This release also sees the addition of a new member to the Tracks team. Please welcome Dan Rice as a new committer! Dan has been instrumental in improving our support for PostgreSQL and making a ton of other small improvements to the Tracks codebase for this release.
 
