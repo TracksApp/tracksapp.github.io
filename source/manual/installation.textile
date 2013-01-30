@@ -68,7 +68,7 @@ This description is intended for people installing Tracks from scratch. If you w
 
 # Unzip tracks and install in a directory
 # Decide on a database to use
-##  SQLite3 - change database.yml to point to SQLite3 database. Make sure you add the complete path to the database. Remove the @mysql@ gem from the Gemfile
+##  SQLite3 - change database.yml to point to SQLite3 database. Make sure you add the complete path to the database. Remove the @mysql2@ gem from the Gemfile
 ##  MySQL - create new MySQL db and grant all privileges
 # Install the necessary prerequisites using Bundler
 # Configure some variables
@@ -108,7 +108,7 @@ Tracks makes use of several other Ruby libraries (known as 'gems') to provide ad
 h4.  Configure variables
 
 # If you downloaded Tracks via GitHub, you need to duplicate the files @database.yml.tmpl@ and @site.yml.tmpl@ and remove the @*.tmpl@ extension from the duplicates. Once you've made those copies, edit the files as described in steps 2 and 3.
-# Open the file @/config/database.yml@ and edit the @production:@ section with the details of your database. If you are using MySQL the @adapter:@ line should read @adapter: mysql@, @host: localhost@ (in the majority of cases), and your username and password should match those you assigned when you created the database. If you are using SQLite3, you should have only two lines under the production section: @adapter: sqlite3@ and @database: db/tracks-blank.db@.
+# Open the file @/config/database.yml@ and edit the @production:@ section with the details of your database. If you are using MySQL the @adapter:@ line should read @adapter: mysql2@, @host: localhost@ (in the majority of cases), and your username and password should match those you assigned when you created the database. If you are using SQLite3, you should have only two lines under the production section: @adapter: sqlite3@ and @database: db/tracks-blank.db@.
 # Open the file @/config/site.yml@, and read through the settings to make sure that they suit your setup. In most cases, all you need to change are the @salt: "change-me"@ line (change the string "change-me" to some other string of your choice), the administrator email address (@admin_email@), and the time zone setting. For the time zone setting you can use the command @bundle exec rake time:zones:local@ to see all available timezones on your machine
 # If you are using Windows, you may need to check the 'shebang' lines (@#!/usr/bin/env ruby@) of the @/public/dispatch.*@ files and all the files in the @/script@ directory. They are set to @#!/usr/bin/env ruby@ by default. This should work for all Unix based setups (Linux or Mac OS X), but Windows users will probably have to change it to something like @#c:/ruby/bin/ruby@ to point to the Ruby binary on your system.
 # If you intend to deploy Tracks with the built in webserver called WEBrick, you'll need to change @config.serve_static_assets@ to @true@ in @config/environments/production.rb@ in order for the images, stylesheets, and javascript files to be served correctly.
