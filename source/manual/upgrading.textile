@@ -10,7 +10,7 @@ footer: false
 
 h2.  Upgrading Tracks
 
-h3. Upgrading from Tracks 2.1.2 to 2.2
+h3. Upgrading from Tracks 2.1.x/2.2RC to 2.2
 
 This release adds a variety of new features and bugfixes to Tracks.
 
