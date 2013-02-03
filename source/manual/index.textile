@@ -6,7 +6,8 @@ sharing: false
 footer: false
 ---
 
-"Installation &raquo;":/manual/installation.html
+"Installation &raquo;":https://github.com/TracksApp/tracks/blob/v{{site.version}}/doc/installation.textile
+"Upgrading &raquo;":https://github.com/TracksApp/tracks/blob/v{{site.version}}/doc/upgrading.textile
 
 h2.  Introduction
 
