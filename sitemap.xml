@@ -365,6 +365,18 @@
         <lastmod>2012-04-04T19:47:49+02:00</lastmod>
     </url>
     <url>
+        <loc>http://TracksApp.github.com/downloads/comments/tracks-2.1.2/</loc>
+        <lastmod>2013-02-15T11:47:24+01:00</lastmod>
+    </url>
+    <url>
+        <loc>http://TracksApp.github.com/downloads/comments/tracks-2.1.3/</loc>
+        <lastmod>2013-02-15T11:47:24+01:00</lastmod>
+    </url>
+    <url>
+        <loc>http://TracksApp.github.com/downloads/comments/tracks-2.1.4/</loc>
+        <lastmod>2013-02-15T11:56:17+01:00</lastmod>
+    </url>
+    <url>
         <loc>http://TracksApp.github.com/news/comments/release-2.1.rc1/</loc>
         <lastmod>2012-04-04T19:47:49+02:00</lastmod>
     </url>
@@ -389,20 +401,40 @@
         <lastmod>2012-12-15T20:34:59+01:00</lastmod>
     </url>
     <url>
-        <loc>http://TracksApp.github.com/development/</loc>
-        <lastmod>2012-12-15T20:45:25+01:00</lastmod>
+        <loc>http://TracksApp.github.com/news/comments/release-2.1.2/</loc>
+        <lastmod>2013-02-15T11:47:24+01:00</lastmod>
+    </url>
+    <url>
+        <loc>http://TracksApp.github.com/news/comments/release-2.1.3/</loc>
+        <lastmod>2013-02-15T11:47:24+01:00</lastmod>
+    </url>
+    <url>
+        <loc>http://TracksApp.github.com/news/comments/release-2.1.4/</loc>
+        <lastmod>2013-02-15T11:56:47+01:00</lastmod>
+    </url>
+    <url>
+        <loc>http://TracksApp.github.com/screenshots/</loc>
+        <lastmod>2012-04-04T19:47:49+02:00</lastmod>
+    </url>
+    <url>
+        <loc>http://TracksApp.github.com/downloads/</loc>
+        <lastmod>2013-02-15T11:56:47+01:00</lastmod>
     </url>
     <url>
         <loc>http://TracksApp.github.com/</loc>
         <lastmod>2012-04-04T19:47:49+02:00</lastmod>
     </url>
     <url>
-        <loc>http://TracksApp.github.com/downloads/</loc>
-        <lastmod>2012-12-15T20:35:04+01:00</lastmod>
+        <loc>http://TracksApp.github.com/news/</loc>
+        <lastmod>2013-02-15T11:56:47+01:00</lastmod>
     </url>
     <url>
-        <loc>http://TracksApp.github.com/manual/upgrading.html</loc>
-        <lastmod>2012-12-15T19:59:15+01:00</lastmod>
+        <loc>http://TracksApp.github.com/articles/</loc>
+        <lastmod>2013-02-15T11:56:47+01:00</lastmod>
+    </url>
+    <url>
+        <loc>http://TracksApp.github.com/development/</loc>
+        <lastmod>2012-12-15T20:45:25+01:00</lastmod>
     </url>
     <url>
         <loc>http://TracksApp.github.com/manual/installation.html</loc>
@@ -413,15 +445,7 @@
         <lastmod>2012-04-19T11:34:48+02:00</lastmod>
     </url>
     <url>
-        <loc>http://TracksApp.github.com/news/</loc>
-        <lastmod>2012-12-15T20:35:04+01:00</lastmod>
-    </url>
-    <url>
-        <loc>http://TracksApp.github.com/screenshots/</loc>
-        <lastmod>2012-04-04T19:47:49+02:00</lastmod>
-    </url>
-    <url>
-        <loc>http://TracksApp.github.com/articles/</loc>
-        <lastmod>2012-12-15T20:35:04+01:00</lastmod>
+        <loc>http://TracksApp.github.com/manual/upgrading.html</loc>
+        <lastmod>2013-02-15T11:52:28+01:00</lastmod>
     </url>
 </urlset>
