@@ -4,7 +4,7 @@
   <title><![CDATA[Tracks]]></title>
   <link href="http://TracksApp.github.com/tracks/atom.xml" rel="self"/>
   <link href="http://TracksApp.github.com/"/>
-  <updated>2013-02-15T12:00:34+01:00</updated>
+  <updated>2013-02-18T20:35:55+01:00</updated>
   <id>http://TracksApp.github.com/</id>
   <author>
     <name><![CDATA[TracksApp]]></name>
@@ -12,6 +12,70 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Tracks 2.2 released]]></title>
+    <link href="http://TracksApp.github.com/downloads/comments/tracks-22/"/>
+    <updated>2013-02-18T12:00:00+01:00</updated>
+    <id>http://TracksApp.github.com/downloads/comments/tracks-22</id>
+    <content type="html"><![CDATA[<p>Hi all,</p>
+<p>Tracks 2.2 is being released today with a variety of new features and bugfixes! You can download the release <a href="https://github.com/TracksApp/tracks/archive/v2.2.zip">here</a>. Upgrade instructions can be found <a href="https://github.com/TracksApp/tracks/blob/v2.2/doc/upgrading.textile">in the manual</a></p>
+<p>New in this release:</p>
+<ul>
+	<li>Added caching to various parts of Tracks to speed things up</li>
+	<li>Better support for running Tracks with PostgreSQL</li>
+	<li>Improvements to the mobile interface.</li>
+	<li>Drag and drop should work on tablets</li>
+	<li>Upgrade to the latest stable version of Rails. This brings in some changes like new command to start Tracks and precompiling assets. Take a look at the <a href="https://github.com/TracksApp/tracks/blob/v2.2/doc/installation.textile">installation</a> or <a href="https://github.com/TracksApp/tracks/blob/v2.2/doc/upgrading.textile">upgrade manual</a> for details.</li>
+	<li>Tracks now includes support for Ruby 1.8.7 and Ruby 1.9. The next version of Tracks will only support Ruby 1.9. Support for<br />
+older versions of Ruby will then be dropped.</li>
+	<li>Tons of bugfixes, updated locales and other improvements</li>
+</ul>
+<p>Changed in this release:</p>
+<ul>
+	<li>The administrator&#8217;s email is no longer in the preferences and has been moved into site.yml</li>
+</ul>
+<p>Removed in this release:</p>
+<ul>
+	<li>Support for OpenID, <span class="caps">CAS</span>, and <span class="caps">LDAP</span> login. Support for these different login types will be added back in a future release.</li>
+	<li>Support for the <span class="caps">SOAP</span> <span class="caps">API</span>. The <span class="caps">REST</span> <span class="caps">API</span> should be used instead. This may impact your scripts or mobile apps that<br />
+integrate with Tracks using <span class="caps">SOAP</span> <span class="caps">XML</span> <span class="caps">API</span>.</li>
+</ul>
+<p>A lot of contributrions by various people from our community have found their way into this release. This release also sees the addition of a new member to the Tracks team. Please welcome Dan Rice as a new committer! Dan has been instrumental in improving our support for PostgreSQL and making a ton of other small improvements to the Tracks codebase for this release.</p>
+<p>Enjoy!</p>]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Tracks 2.2 released]]></title>
+    <link href="http://TracksApp.github.com/news/comments/release-2.2/"/>
+    <updated>2013-02-18T01:00:00+01:00</updated>
+    <id>http://TracksApp.github.com/news/comments/release-2.2</id>
+    <content type="html"><![CDATA[<p>Hi all,</p>
+<p>Tracks 2.2 is being released today with a variety of new features and bugfixes! You can download the release <a href="https://github.com/TracksApp/tracks/archive/v2.2.zip">here</a>. Upgrade instructions can be found <a href="https://github.com/TracksApp/tracks/blob/v2.2/doc/upgrading.textile">in the manual</a></p>
+<p>New in this release:</p>
+<ul>
+	<li>Added caching to various parts of Tracks to speed things up</li>
+	<li>Better support for running Tracks with PostgreSQL</li>
+	<li>Improvements to the mobile interface.</li>
+	<li>Drag and drop should work on tablets</li>
+	<li>Upgrade to the latest stable version of Rails. This brings in some changes like new command to start Tracks and precompiling assets. Take a look at the <a href="https://github.com/TracksApp/tracks/blob/v2.2/doc/installation.textile">installation</a> or <a href="https://github.com/TracksApp/tracks/blob/v2.2/doc/upgrading.textile">upgrade manual</a> for details.</li>
+	<li>Tracks now includes support for Ruby 1.8.7 and Ruby 1.9. The next version of Tracks will only support Ruby 1.9. Support for<br />
+older versions of Ruby will then be dropped.</li>
+	<li>Tons of bugfixes, updated locales and other improvements</li>
+</ul>
+<p>Changed in this release:</p>
+<ul>
+	<li>The administrator&#8217;s email is no longer in the preferences and has been moved into site.yml</li>
+</ul>
+<p>Removed in this release:</p>
+<ul>
+	<li>Support for OpenID, <span class="caps">CAS</span>, and <span class="caps">LDAP</span> login. Support for these different login types will be added back in a future release.</li>
+	<li>Support for the <span class="caps">SOAP</span> <span class="caps">API</span>. The <span class="caps">REST</span> <span class="caps">API</span> should be used instead. This may impact your scripts or mobile apps that<br />
+integrate with Tracks using <span class="caps">SOAP</span> <span class="caps">XML</span> <span class="caps">API</span>.</li>
+</ul>
+<p>A lot of contributrions by various people from our community have found their way into this release. This release also sees the addition of a new member to the Tracks team. Please welcome Dan Rice as a new committer! Dan has been instrumental in improving our support for PostgreSQL and making a ton of other small improvements to the Tracks codebase for this release.</p>
+<p>Enjoy!</p>]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Tracks 2.1.4 released]]></title>
@@ -431,34 +495,6 @@ migration. See note above!</li>
     <content type="html"><![CDATA[<p>Those of you who do not regularly read the forum may be unaware that Tracks 2.0 Release Candidate 2 has now been prepared by Reinier Balt. You can read all the <a href="http://www.getontracks.org/forums/viewthread/839/">details</a> on the forum, or just head straight over to Github to download the 2.0RC2 branch <a href="https://github.com/bsag/tracks/zipball/v2.0RC2">here</a>.</p>
 <p>We need your help in testing it out, so please give it a try and let us know of any bugs or problems on <a href="http://www.getontracks.org/forums/viewthread/839/">this forum thread</a>. Many thanks!</p>
 ]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Security update for users of 1.7.x and 2.0 branch of Tracks]]></title>
-    <link href="http://TracksApp.github.com/news/comments/security-update-for-users-of-17x-and-20-branch-of-tracks/"/>
-    <updated>2011-03-12T00:00:00+01:00</updated>
-    <id>http://TracksApp.github.com/news/comments/security-update-for-users-of-17x-and-20-branch-of-tracks</id>
-    <content type="html"><![CDATA[<p>An important message from Reinier Balt:</p>
-<p>I was informed by private email that a <span class="caps">XSS</span> vulnerability is present in 1.7.2. It turned out to also exist in the upcoming 2.0.</p>
-<p>A new release of 1.7.3 is made available <a href="https://github.com/bsag/tracks/zipball/v1.7.3">here</a>. Users of 1.7x are strongly advised to upgrade to 1.7.3. If you are running 2.0RC2 or 2.0devel for production, please upgrade to the latest 2.0 tree found <a href="https://github.com/bsag/tracks/zipball/master">here</a></p>
-<p>I have also updated the manual with upgrade instructions.</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Tracks 1.7.2]]></title>
-    <link href="http://TracksApp.github.com/downloads/comments/tracks-1.7.2/"/>
-    <updated>2010-09-26T00:00:00+02:00</updated>
-    <id>http://TracksApp.github.com/downloads/comments/tracks-1.7.2</id>
-    <content type="html"><![CDATA[<p>Version: 1.7.2</p>
-<p><a href="https://github.com/TracksApp/tracks/tree/v1.7.2">Git <span class="caps">URL</span></a></p>
-<p>I&#8217;m pleased to announce that Tracks 1.7.2 has been released. This is a bug fix release. This will hopefully be the last release for 1.7. We are working towards the release of Tracks 2.0 which will include new functionality.</p>
-<p>You can download this new stable version of Tracks directly from Github and a manual can be found also on Github as well as on the Tracks website.</p>
-<p>Fixes in this release</p>
-<ul>
-	<li>you can now set dates after 31-12-2010 with the date picker</li>
-	<li>better warning that if you delete a context, all (repeating) todos in it are deleted too</li>
-</ul>]]></content>
   </entry>
   
 </feed>

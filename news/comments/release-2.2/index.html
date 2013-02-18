@@ -5,11 +5,11 @@
 <!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
 <head>
   <meta charset="utf-8">
-  <title>Security update for users of 1.7.x and 2.0 branch of Tracks - Tracks</title>
+  <title>Tracks 2.2 released - Tracks</title>
   <meta name="author" content="TracksApp">
 
   
-  <meta name="description" content="An important message from Reinier Balt:I was informed by private email that a XSS vulnerability is present in 1.7.2. It turned out to also exist in...">
+  <meta name="description" content="Hi all,Tracks 2.2 is being released today with a variety of new features and bugfixes! You can download the release here. Upgrade instructions can ...">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -18,7 +18,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   
-  <link rel="canonical" href="http://TracksApp.github.com/news/comments/security-update-for-users-of-17x-and-20-branch-of-tracks/">
+  <link rel="canonical" href="http://TracksApp.github.com/news/comments/release-2.2/">
   <link href="/favicon.png" rel="icon">
   <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
   <script src="/javascripts/modernizr-2.0.js"></script>
@@ -65,7 +65,7 @@
   
   <header>
     
-      <h1 class="entry-title">Security Update for Users of 1.7.x and 2.0 Branch of Tracks</h1>
+      <h1 class="entry-title">Tracks 2.2 Released</h1>
     
     
       <p class="meta">
@@ -79,7 +79,7 @@
 
 
 
-<time datetime="2011-03-12T00:00:00+01:00" pubdate  data-updated="true" >Mar 12<span>th</span>, 2011</time>
+<time datetime="2013-02-18T01:00:00+01:00" pubdate  data-updated="true" >Feb 18<span>th</span>, 2013</time>
         
          | <a href="#disqus_thread">Comments</a>
         
@@ -88,11 +88,31 @@
   </header>
 
 
-<div class="entry-content"><p>An important message from Reinier Balt:</p>
-<p>I was informed by private email that a <span class="caps">XSS</span> vulnerability is present in 1.7.2. It turned out to also exist in the upcoming 2.0.</p>
-<p>A new release of 1.7.3 is made available <a href="https://github.com/bsag/tracks/zipball/v1.7.3">here</a>. Users of 1.7x are strongly advised to upgrade to 1.7.3. If you are running 2.0RC2 or 2.0devel for production, please upgrade to the latest 2.0 tree found <a href="https://github.com/bsag/tracks/zipball/master">here</a></p>
-<p>I have also updated the manual with upgrade instructions.</p>
-</div>
+<div class="entry-content"><p>Hi all,</p>
+<p>Tracks 2.2 is being released today with a variety of new features and bugfixes! You can download the release <a href="https://github.com/TracksApp/tracks/archive/v2.2.zip">here</a>. Upgrade instructions can be found <a href="https://github.com/TracksApp/tracks/blob/v2.2/doc/upgrading.textile">in the manual</a></p>
+<p>New in this release:</p>
+<ul>
+	<li>Added caching to various parts of Tracks to speed things up</li>
+	<li>Better support for running Tracks with PostgreSQL</li>
+	<li>Improvements to the mobile interface.</li>
+	<li>Drag and drop should work on tablets</li>
+	<li>Upgrade to the latest stable version of Rails. This brings in some changes like new command to start Tracks and precompiling assets. Take a look at the <a href="https://github.com/TracksApp/tracks/blob/v2.2/doc/installation.textile">installation</a> or <a href="https://github.com/TracksApp/tracks/blob/v2.2/doc/upgrading.textile">upgrade manual</a> for details.</li>
+	<li>Tracks now includes support for Ruby 1.8.7 and Ruby 1.9. The next version of Tracks will only support Ruby 1.9. Support for<br />
+older versions of Ruby will then be dropped.</li>
+	<li>Tons of bugfixes, updated locales and other improvements</li>
+</ul>
+<p>Changed in this release:</p>
+<ul>
+	<li>The administrator&#8217;s email is no longer in the preferences and has been moved into site.yml</li>
+</ul>
+<p>Removed in this release:</p>
+<ul>
+	<li>Support for OpenID, <span class="caps">CAS</span>, and <span class="caps">LDAP</span> login. Support for these different login types will be added back in a future release.</li>
+	<li>Support for the <span class="caps">SOAP</span> <span class="caps">API</span>. The <span class="caps">REST</span> <span class="caps">API</span> should be used instead. This may impact your scripts or mobile apps that<br />
+integrate with Tracks using <span class="caps">SOAP</span> <span class="caps">XML</span> <span class="caps">API</span>.</li>
+</ul>
+<p>A lot of contributrions by various people from our community have found their way into this release. This release also sees the addition of a new member to the Tracks team. Please welcome Dan Rice as a new committer! Dan has been instrumental in improving our support for PostgreSQL and making a ton of other small improvements to the Tracks codebase for this release.</p>
+<p>Enjoy!</p></div>
 
 
   <footer>
@@ -100,7 +120,7 @@
       
   
 
-<span class="byline author vcard">Posted by <span class="fn">bsag</span></span>
+<span class="byline author vcard">Posted by <span class="fn">lrbalt</span></span>
 
       
 
@@ -112,7 +132,7 @@
 
 
 
-<time datetime="2011-03-12T00:00:00+01:00" pubdate  data-updated="true" >Mar 12<span>th</span>, 2011</time>
+<time datetime="2013-02-18T01:00:00+01:00" pubdate  data-updated="true" >Feb 18<span>th</span>, 2013</time>
       
 
 <span class="categories">
@@ -126,7 +146,7 @@
     
       <div class="sharing">
   
-  <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://TracksApp.github.com/news/comments/security-update-for-users-of-17x-and-20-branch-of-tracks/" data-via="" data-counturl="http://TracksApp.github.com/news/comments/security-update-for-users-of-17x-and-20-branch-of-tracks/" >Tweet</a>
+  <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://TracksApp.github.com/news/comments/release-2.2/" data-via="" data-counturl="http://TracksApp.github.com/news/comments/release-2.2/" >Tweet</a>
   
   
   <div class="g-plusone" data-size="medium"></div>
@@ -284,8 +304,8 @@
       
         
         // var disqus_developer = 1;
-        var disqus_identifier = 'http://TracksApp.github.com/news/comments/security-update-for-users-of-17x-and-20-branch-of-tracks/';
-        var disqus_url = 'http://TracksApp.github.com/news/comments/security-update-for-users-of-17x-and-20-branch-of-tracks/';
+        var disqus_identifier = 'http://TracksApp.github.com/news/comments/release-2.2/';
+        var disqus_url = 'http://TracksApp.github.com/news/comments/release-2.2/';
         var disqus_script = 'embed.js'
       
 

@@ -9,7 +9,7 @@
   <meta name="author" content="TracksApp">
 
   
-  <meta name="description" content="Hi all,Tracks 2.1.1 is released. This is a bugfix release which you can download here. All changes can be seen here. Upgrade instructions can be fo...">
+  <meta name="description" content="Hi all,Tracks 2.2 is being released today with a variety of new features and bugfixes! You can download the release here. Upgrade instructions can ...">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -66,6 +66,65 @@
 
 <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/downloads/comments/tracks-22/">Tracks 2.2 Released</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+  
+
+
+
+<time datetime="2013-02-18T12:00:00+01:00" pubdate  data-updated="true" >Feb 18<span>th</span>, 2013</time>
+        
+         | <a href="/downloads/comments/tracks-22/#disqus_thread">Comments</a>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>Hi all,</p>
+<p>Tracks 2.2 is being released today with a variety of new features and bugfixes! You can download the release <a href="https://github.com/TracksApp/tracks/archive/v2.2.zip">here</a>. Upgrade instructions can be found <a href="https://github.com/TracksApp/tracks/blob/v2.2/doc/upgrading.textile">in the manual</a></p>
+<p>New in this release:</p>
+<ul>
+	<li>Added caching to various parts of Tracks to speed things up</li>
+	<li>Better support for running Tracks with PostgreSQL</li>
+	<li>Improvements to the mobile interface.</li>
+	<li>Drag and drop should work on tablets</li>
+	<li>Upgrade to the latest stable version of Rails. This brings in some changes like new command to start Tracks and precompiling assets. Take a look at the <a href="https://github.com/TracksApp/tracks/blob/v2.2/doc/installation.textile">installation</a> or <a href="https://github.com/TracksApp/tracks/blob/v2.2/doc/upgrading.textile">upgrade manual</a> for details.</li>
+	<li>Tracks now includes support for Ruby 1.8.7 and Ruby 1.9. The next version of Tracks will only support Ruby 1.9. Support for<br />
+older versions of Ruby will then be dropped.</li>
+	<li>Tons of bugfixes, updated locales and other improvements</li>
+</ul>
+<p>Changed in this release:</p>
+<ul>
+	<li>The administrator&#8217;s email is no longer in the preferences and has been moved into site.yml</li>
+</ul>
+<p>Removed in this release:</p>
+<ul>
+	<li>Support for OpenID, <span class="caps">CAS</span>, and <span class="caps">LDAP</span> login. Support for these different login types will be added back in a future release.</li>
+	<li>Support for the <span class="caps">SOAP</span> <span class="caps">API</span>. The <span class="caps">REST</span> <span class="caps">API</span> should be used instead. This may impact your scripts or mobile apps that<br />
+integrate with Tracks using <span class="caps">SOAP</span> <span class="caps">XML</span> <span class="caps">API</span>.</li>
+</ul>
+<p>A lot of contributrions by various people from our community have found their way into this release. This release also sees the addition of a new member to the Tracks team. Please welcome Dan Rice as a new committer! Dan has been instrumental in improving our support for PostgreSQL and making a ton of other small improvements to the Tracks codebase for this release.</p>
+<p>Enjoy!</p></div>
+  
+  
+
+
+    </article>
   
   
     <article>
@@ -513,72 +572,14 @@ migration. See note above!<br />
 
     </article>
   
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/downloads/comments/tracks-1.7/">Tracks 1.7</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-  
-
-
-
-<time datetime="2009-02-28T00:00:00+01:00" pubdate  data-updated="true" >Feb 28<span>th</span>, 2009</time>
-        
-         | <a href="/downloads/comments/tracks-1.7/#disqus_thread">Comments</a>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>Version: 1.7</p>
-<p><a href="https://github.com/TracksApp/tracks/tree/1.7_branch">Git <span class="caps">URL</span></a></p>
-<p>I&#8217;m pleased to announce that Tracks 1.7 has been released.</p>
-<p>You can download this new stable version of Tracks at <a href="http://bsag.bingodisk.com/public/files/tracks-current.zip">here</a> and an updated manual can be found on <a href="http://github.com/bsag/tracks_manual/tree/master">github</a> and on the <a href="http://getontracks.org/doc/index.html">Tracks website</a></p>
-<p>What is new in 1.7:</p>
-<ul>
-	<li>The included Rails version is updated to 2.2.2</li>
-	<li>Tracks now supports recurring/repeating todos</li>
-	<li>Cleanup of feed page and add feed for starred actions</li>
-	<li>New interface to import an email / sms messages into Tracks (needs an email server on the same server as Tracks)</li>
-	<li>New buttons to quickly defer an action 1 or 7 days</li>
-	<li>Calendar view to review upcoming due actions, includes iCal feed to use in your calendar app (tested with Google Calendar, Evolution, Outlook 2007)</li>
-	<li>You can now sort projects on number of active todos</li>
-	<li>Support for OpenSearch. This means you can add a Tracks as a search provider in your webbrowser (tested on FF3 and IE7)</li>
-	<li>We now allow users again to stay logged in on two devices at the same time</li>
-	<li>Move site specific configuration out of environment.rb into site.yml for easier updating</li>
-	<li>Bugfixes, including fixing OpenID</li>
-</ul>
-<p>(for those using 1.7RC1/1.7RC2 we dropped the initial importer of yaml files because of its experimental state)</p>
-<p>There are changes to the database in Tracks 1.7, and changes to the way you configure Tracks, so please migrate your database and redo your Tracks configuration.</p>
-<p>In Tracks 1.7 the site specific configuration is moved from environment.rb into the new site.yml. This makes updating environment.rb much easier without you needing to set your site specific settings after each update. After you install/upgrade to Tracks 1.7 there will be no environment.rb.tmpl anymore. You will find an environment.rb which you can leave untouched. Just fill in your settings from your old environment.rb in the new site.yml. If you have made any other customizations to environment.rb in the past, you can put them in your own configuration file (for example, in my-config.rb) in config/initializers. Please let us know if you think they should be in site.yml.tmpl.</p>
-<p><span class="caps">WARNING</span>: if you update to 1.7 using git, your environment.rb will be overwritten. SO <span class="caps">PLEASE</span> <span class="caps">MAKE</span> <span class="caps">BACKUPS</span></p>
-<p>This release of 1.7 will include enhancements made by a lot new contributers (Jakub, Hans, Piotr, MHarris, Piglop, Farzy, Vitaliel, McVeat and Simon; I hope I didn&#8217;t forget anyone&#8230;). Thank you all for helping Tracks getting better every release. As ever particular thanks to Luke (for updating Tracks to 2.2.2) and to Eric Allen for lots of work on a many fronts, including the site.yml improvements!</p>
-<p>Very many thanks to Reinier for his hard work yet again in getting this release together!</p></div>
-  
-  
-
-
-    </article>
-  
 </div>
 <aside class="sidebar">
   
     <section>
   <h1>Get Tracks</h1>
-  <p><a class="button" href="https://github.com/TracksApp/tracks/zipball/v2.1.4" title="Download Tracks 2.1.4 zipped package"><img src="/images/download_button.png" /></a></p>
+  <p><a class="button" href="https://github.com/TracksApp/tracks/zipball/v2.2" title="Download Tracks 2.2 zipped package"><img src="/images/download_button.png" /></a></p>
   
-  <p><a href="/downloads/comments/tracks-2.1.4">Tracks 2.1.4 release notes</a></p>
+  <p><a href="/downloads/comments/tracks-22">Tracks 2.2 release notes</a></p>
   
   <p><a href="http://www.assembla.com/spaces/tracks-tickets/">Report a bug</a></p>
 </section>
@@ -630,6 +631,10 @@ migration. See note above!<br />
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/news/comments/release-2.2/">Tracks 2.2 released</a>
+      </li>
+    
+      <li class="post">
         <a href="/news/comments/release-2.1.4/">Tracks 2.1.4 released</a>
       </li>
     
@@ -643,10 +648,6 @@ migration. See note above!<br />
     
       <li class="post">
         <a href="/news/comments/release-2.1.1/">Tracks 2.1.1 released</a>
-      </li>
-    
-      <li class="post">
-        <a href="/news/comments/bitnami-upgraded-2.1/">Bitnami updates their Tracks installer to 2.1</a>
       </li>
     
   </ul>
