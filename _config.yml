@@ -86,6 +86,6 @@ google_analytics_tracking_id:
 # Settings for get_tracks custom aside
 # Update this info when there is a new version
 # and the 'Get Tracks' links and text will automatically update
-version: "2.2" # Version of Tracks for labels etc.
+version: "2.2.1" # Version of Tracks for labels etc.
 download_link: https://github.com/TracksApp/tracks/zipball/v2.2
-release_notes_link: /downloads/comments/tracks-22
+release_notes_link: /downloads/comments/tracks-2.2.1
