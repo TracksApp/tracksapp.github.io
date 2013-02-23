@@ -1,0 +1,15 @@
+---
+layout: post
+title: "Tracks 2.2.1 released"
+date: 2013-02-23 12:00
+comments: true
+categories: [downloads]
+sharing: true
+footer: true
+author: lrbalt
+---
+Hi all,
+
+Tracks 2.2.1 is being released today with two bugfixes! One bug prevented Tracks to be used on ruby 1.8.7, this release fixes that.
+
+You can download the release "here":https://github.com/TracksApp/tracks/archive/v2.2.1.zip. Upgrade instructions can be found "in the manual":https://github.com/TracksApp/tracks/blob/v{{site.version}}/doc/upgrading.textile
