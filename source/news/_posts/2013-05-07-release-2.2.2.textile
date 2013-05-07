@@ -1,0 +1,16 @@
+---
+layout: post
+title: "Tracks 2.2.2 released"
+date: 2013-05-07 12:00
+comments: true
+categories: [news]
+sharing: true
+footer: true
+author: lrbalt
+---
+Hi all,
+
+Tracks 2.2.2 is being released today with several security fixes! It is recommended to upgrade your installation.
+
+You can download the release "here":https://github.com/TracksApp/tracks/archive/v2.2.2.zip. 
+Upgrade instructions can be found "in the manual":https://github.com/TracksApp/tracks/blob/v{{site.version}}/doc/upgrading.textile
