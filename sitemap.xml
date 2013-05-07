@@ -426,7 +426,15 @@
     </url>
     <url>
         <loc>http://TracksApp.github.com/downloads/comments/tracks-2.2.1/</loc>
-        <lastmod>2013-02-23T13:23:05+01:00</lastmod>
+        <lastmod>2013-05-07T10:05:12+02:00</lastmod>
+    </url>
+    <url>
+        <loc>http://TracksApp.github.com/news/comments/release-2.2.2/</loc>
+        <lastmod>2013-05-07T10:08:16+02:00</lastmod>
+    </url>
+    <url>
+        <loc>http://TracksApp.github.com/downloads/comments/tracks-2.2.2/</loc>
+        <lastmod>2013-05-07T10:07:02+02:00</lastmod>
     </url>
     <url>
         <loc>http://TracksApp.github.com/screenshots/</loc>
@@ -434,7 +442,7 @@
     </url>
     <url>
         <loc>http://TracksApp.github.com/downloads/</loc>
-        <lastmod>2013-02-23T13:23:05+01:00</lastmod>
+        <lastmod>2013-05-07T10:08:16+02:00</lastmod>
     </url>
     <url>
         <loc>http://TracksApp.github.com/</loc>
@@ -442,11 +450,11 @@
     </url>
     <url>
         <loc>http://TracksApp.github.com/news/</loc>
-        <lastmod>2013-02-23T13:23:05+01:00</lastmod>
+        <lastmod>2013-05-07T10:08:16+02:00</lastmod>
     </url>
     <url>
         <loc>http://TracksApp.github.com/articles/</loc>
-        <lastmod>2013-02-23T13:23:05+01:00</lastmod>
+        <lastmod>2013-05-07T10:08:16+02:00</lastmod>
     </url>
     <url>
         <loc>http://TracksApp.github.com/development/</loc>
