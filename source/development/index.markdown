@@ -9,7 +9,7 @@ footer: false
 
 ## Reporting bugs and requesting features
 
-If you find a bug or have a bright idea for a feature, you can report the bug on our [bug tracker][2]). You can search and browse the tickets and comments without being logged in, but if you want to create a new ticket or comment on an existing one, you'll need to register for an account (use the link at the top of the bug tracker page). Once you have an account, visit the [Tracks Space][2], click on the 'Team' tab, and you should see a link at the top right of the page marked "Public Space | Join this space". Click the "Join this space" link, and you'll be added as a Tracks team member. You may find that you need to log out and then log in again after your initial registration to get the join link to work and not return a blank page. If you still have trouble, please email me (butshesagirl [at] rousette [dot] org [dot] uk) with your username and I'll add you manually to the team.
+If you find a bug or have a bright idea for a feature, you can report the bug on our [issue tracker][2].
 
 ## Getting the latest cutting edge version
 
@@ -35,7 +35,7 @@ Then attach my_feature.patch to a ticket.
 Or you can sign up for a free account on github and fork Tracks using the convenient button. You can then use the button to issue a pull request for your changes to be pulled into the main repository.
 
 [1]: http://groups.google.com/group/TracksApp
-[2]: https://www.assembla.com/spaces/tracks-tickets/
+[2]: https://github.com/TracksApp/tracks/issues
 [3]: http://git-scm.com/
 [4]: https://github.com/TracksApp/tracks
 [5]: https://github.com/TracksApp/tracksapp.github.com
