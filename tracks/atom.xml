@@ -4,7 +4,7 @@
   <title><![CDATA[Tracks]]></title>
   <link href="http://TracksApp.github.com/tracks/atom.xml" rel="self"/>
   <link href="http://TracksApp.github.com/"/>
-  <updated>2014-06-04T20:14:29-01:00</updated>
+  <updated>2014-06-25T15:51:26-04:00</updated>
   <id>http://TracksApp.github.com/</id>
   <author>
     <name><![CDATA[TracksApp]]></name>
@@ -16,7 +16,7 @@
   <entry>
     <title type="html"><![CDATA[Tracks 2.2.2 released]]></title>
     <link href="http://TracksApp.github.com/downloads/comments/tracks-2.2.2/"/>
-    <updated>2013-05-07T12:00:00-01:00</updated>
+    <updated>2013-05-07T12:00:00-04:00</updated>
     <id>http://TracksApp.github.com/downloads/comments/tracks-2.2.2</id>
     <content type="html"><![CDATA[<p>Hi all,</p>
 <p>Tracks 2.2.2 is being released today with several security fixes! It is recommended to upgrade your installation.</p>
@@ -27,7 +27,7 @@ Upgrade instructions can be found <a href="https://github.com/TracksApp/tracks/b
   <entry>
     <title type="html"><![CDATA[Tracks 2.2.2 released]]></title>
     <link href="http://TracksApp.github.com/news/comments/release-2.2.2/"/>
-    <updated>2013-05-07T12:00:00-01:00</updated>
+    <updated>2013-05-07T12:00:00-04:00</updated>
     <id>http://TracksApp.github.com/news/comments/release-2.2.2</id>
     <content type="html"><![CDATA[<p>Hi all,</p>
 <p>Tracks 2.2.2 is being released today with several security fixes! It is recommended to upgrade your installation.</p>
@@ -38,7 +38,7 @@ Upgrade instructions can be found <a href="https://github.com/TracksApp/tracks/b
   <entry>
     <title type="html"><![CDATA[Tracks 2.2.1 released]]></title>
     <link href="http://TracksApp.github.com/downloads/comments/tracks-2.2.1/"/>
-    <updated>2013-02-23T12:00:00-01:00</updated>
+    <updated>2013-02-23T12:00:00-05:00</updated>
     <id>http://TracksApp.github.com/downloads/comments/tracks-2.2.1</id>
     <content type="html"><![CDATA[<p>Hi all,</p>
 <p>Tracks 2.2.1 is being released today with two bugfixes! One bug prevented Tracks to be used on ruby 1.8.7, this release fixes that.</p>
@@ -48,7 +48,7 @@ Upgrade instructions can be found <a href="https://github.com/TracksApp/tracks/b
   <entry>
     <title type="html"><![CDATA[Tracks 2.2.1 released]]></title>
     <link href="http://TracksApp.github.com/news/comments/release-2.2.1/"/>
-    <updated>2013-02-23T01:00:00-01:00</updated>
+    <updated>2013-02-23T01:00:00-05:00</updated>
     <id>http://TracksApp.github.com/news/comments/release-2.2.1</id>
     <content type="html"><![CDATA[<p>Hi all,</p>
 <p>Tracks 2.2 is being released today with two bugfixes! One bug prevented Tracks to be used on ruby 1.8.7, this release fixes that.</p>
@@ -58,7 +58,7 @@ Upgrade instructions can be found <a href="https://github.com/TracksApp/tracks/b
   <entry>
     <title type="html"><![CDATA[Tracks 2.2 released]]></title>
     <link href="http://TracksApp.github.com/downloads/comments/tracks-22/"/>
-    <updated>2013-02-18T12:00:00-01:00</updated>
+    <updated>2013-02-18T12:00:00-05:00</updated>
     <id>http://TracksApp.github.com/downloads/comments/tracks-22</id>
     <content type="html"><![CDATA[<p>Hi all,</p>
 <p>Tracks 2.2 is being released today with a variety of new features and bugfixes! You can download the release <a href="https://github.com/TracksApp/tracks/archive/v2.2.zip">here</a>. Upgrade instructions can be found <a href="https://github.com/TracksApp/tracks/blob/v2.2.2/doc/upgrading.textile">in the manual</a></p>
@@ -90,7 +90,7 @@ integrate with Tracks using <span class="caps">SOAP</span> <span class="caps">XM
   <entry>
     <title type="html"><![CDATA[Tracks 2.2 released]]></title>
     <link href="http://TracksApp.github.com/news/comments/release-2.2/"/>
-    <updated>2013-02-18T01:00:00-01:00</updated>
+    <updated>2013-02-18T01:00:00-05:00</updated>
     <id>http://TracksApp.github.com/news/comments/release-2.2</id>
     <content type="html"><![CDATA[<p>Hi all,</p>
 <p>Tracks 2.2 is being released today with a variety of new features and bugfixes! You can download the release <a href="https://github.com/TracksApp/tracks/archive/v2.2.zip">here</a>. Upgrade instructions can be found <a href="https://github.com/TracksApp/tracks/blob/v2.2.2/doc/upgrading.textile">in the manual</a></p>
@@ -122,7 +122,7 @@ integrate with Tracks using <span class="caps">SOAP</span> <span class="caps">XM
   <entry>
     <title type="html"><![CDATA[Tracks 2.1.4 released]]></title>
     <link href="http://TracksApp.github.com/news/comments/release-2.1.4/"/>
-    <updated>2013-02-15T01:00:00-01:00</updated>
+    <updated>2013-02-15T01:00:00-05:00</updated>
     <id>http://TracksApp.github.com/news/comments/release-2.1.4</id>
     <content type="html"><![CDATA[<p>Hi all,</p>
 
@@ -139,7 +139,7 @@ integrate with Tracks using <span class="caps">SOAP</span> <span class="caps">XM
   <entry>
     <title type="html"><![CDATA[Tracks 2.1.3 released]]></title>
     <link href="http://TracksApp.github.com/news/comments/release-2.1.3/"/>
-    <updated>2013-01-29T01:00:00-01:00</updated>
+    <updated>2013-01-29T01:00:00-05:00</updated>
     <id>http://TracksApp.github.com/news/comments/release-2.1.3</id>
     <content type="html"><![CDATA[<p>Hi all,</p>
 
@@ -156,7 +156,7 @@ integrate with Tracks using <span class="caps">SOAP</span> <span class="caps">XM
   <entry>
     <title type="html"><![CDATA[Tracks 2.1.2 released]]></title>
     <link href="http://TracksApp.github.com/news/comments/release-2.1.2/"/>
-    <updated>2013-01-11T23:00:00-01:00</updated>
+    <updated>2013-01-11T23:00:00-05:00</updated>
     <id>http://TracksApp.github.com/news/comments/release-2.1.2</id>
     <content type="html"><![CDATA[<p>Hi all,</p>
 
@@ -173,7 +173,7 @@ integrate with Tracks using <span class="caps">SOAP</span> <span class="caps">XM
   <entry>
     <title type="html"><![CDATA[Tracks 2.1.1 released]]></title>
     <link href="http://TracksApp.github.com/downloads/comments/tracks-2.1.1/"/>
-    <updated>2012-12-15T20:01:00-01:00</updated>
+    <updated>2012-12-15T20:01:00-05:00</updated>
     <id>http://TracksApp.github.com/downloads/comments/tracks-2.1.1</id>
     <content type="html"><![CDATA[<p>Hi all,</p>
 <p>Tracks 2.1.1 is released. This is a bugfix release which you can download <a href="https://github.com/TracksApp/tracks/archive/v2.1.1.zip">here</a>. All changes can be seen <a href="https://github.com/TracksApp/tracks/compare/v2.1...v2.1.1">here</a>. Upgrade instructions can be found in the manual.</p>
@@ -185,7 +185,7 @@ integrate with Tracks using <span class="caps">SOAP</span> <span class="caps">XM
   <entry>
     <title type="html"><![CDATA[Tracks 2.1.1 released]]></title>
     <link href="http://TracksApp.github.com/news/comments/release-2.1.1/"/>
-    <updated>2012-12-15T20:01:00-01:00</updated>
+    <updated>2012-12-15T20:01:00-05:00</updated>
     <id>http://TracksApp.github.com/news/comments/release-2.1.1</id>
     <content type="html"><![CDATA[<p>Hi all,</p>
 
@@ -202,7 +202,7 @@ integrate with Tracks using <span class="caps">SOAP</span> <span class="caps">XM
   <entry>
     <title type="html"><![CDATA[Bitnami updates their Tracks installer to 2.1]]></title>
     <link href="http://TracksApp.github.com/news/comments/bitnami-upgraded-2.1/"/>
-    <updated>2012-04-30T15:14:00-01:00</updated>
+    <updated>2012-04-30T15:14:00-04:00</updated>
     <id>http://TracksApp.github.com/news/comments/bitnami-upgraded-2.1</id>
     <content type="html"><![CDATA[<p>Bitnami has updated their Tracks installer to version 2.1 of Tracks. If you&#8217;d like to install Tracks on a local machine, but do not like to do all the configuration yourself, this could be a good solution for you. try <a href="http://bitnami.org/stack/tracks">BitNami</a> &#8211; it runs on Windows, Mac OS X and Linux. But they also support preconfigured virtual machines, including Amazon machine images.</p>
 ]]></content>
@@ -211,7 +211,7 @@ integrate with Tracks using <span class="caps">SOAP</span> <span class="caps">XM
   <entry>
     <title type="html"><![CDATA[Tracks 2.1]]></title>
     <link href="http://TracksApp.github.com/downloads/comments/tracks-21/"/>
-    <updated>2012-04-19T11:00:00-01:00</updated>
+    <updated>2012-04-19T11:00:00-04:00</updated>
     <id>http://TracksApp.github.com/downloads/comments/tracks-21</id>
     <content type="html"><![CDATA[<p>Hi all,</p>
 <p>It is finally done! You can now [download]<sup class="footnote" id="fnr1"><a href="#fn1">1</a></sup> Tracks version 2.1 from github.<br />
@@ -273,7 +273,7 @@ migration. See note above!<br />
   <entry>
     <title type="html"><![CDATA[Tracks 2.1 released]]></title>
     <link href="http://TracksApp.github.com/news/comments/release-2.1/"/>
-    <updated>2012-04-19T11:00:00-01:00</updated>
+    <updated>2012-04-19T11:00:00-04:00</updated>
     <id>http://TracksApp.github.com/news/comments/release-2.1</id>
     <content type="html"><![CDATA[<p>Hi all,</p>
 
@@ -355,7 +355,7 @@ migration. See note above!</li>
   <entry>
     <title type="html"><![CDATA[Release Candidate 1 of Tracks 2.1 released]]></title>
     <link href="http://TracksApp.github.com/news/comments/release-2.1.rc1/"/>
-    <updated>2012-04-04T14:45:00-01:00</updated>
+    <updated>2012-04-04T14:45:00-04:00</updated>
     <id>http://TracksApp.github.com/news/comments/release-2.1.rc1</id>
     <content type="html"><![CDATA[<p>Hi all,</p>
 
@@ -413,7 +413,7 @@ migration. See note above!</li>
   <entry>
     <title type="html"><![CDATA[Tracks 2.1.4 released]]></title>
     <link href="http://TracksApp.github.com/downloads/comments/tracks-2.1.4/"/>
-    <updated>2012-02-15T12:00:00-01:00</updated>
+    <updated>2012-02-15T12:00:00-05:00</updated>
     <id>http://TracksApp.github.com/downloads/comments/tracks-2.1.4</id>
     <content type="html"><![CDATA[<p>Hi all,</p>
 <p>Tracks 2.1.4 is being released today to address another security vulnerability in Rails. You can download the release <a href="https://github.com/TracksApp/tracks/archive/v2.1.4.zip">here</a>. All changes can be seen <a href="https://github.com/TracksApp/tracks/compare/v2.1.3...v2.1.4">here</a>.  Upgrade instructions can be found in the manual.</p>
@@ -425,7 +425,7 @@ migration. See note above!</li>
   <entry>
     <title type="html"><![CDATA[Tracks 2.1.3 released]]></title>
     <link href="http://TracksApp.github.com/downloads/comments/tracks-2.1.3/"/>
-    <updated>2012-01-29T19:00:00-01:00</updated>
+    <updated>2012-01-29T19:00:00-05:00</updated>
     <id>http://TracksApp.github.com/downloads/comments/tracks-2.1.3</id>
     <content type="html"><![CDATA[<p>Hi all,</p>
 <p>Tracks 2.1.3 is being released today to address another security vulnerability in Rails. You can download the release <a href="https://github.com/TracksApp/tracks/archive/v2.1.3.zip">here</a>. All changes can be seen <a href="https://github.com/TracksApp/tracks/compare/v2.1.2...v2.1.3">here</a>.  Upgrade instructions can be found in the manual.</p>
@@ -437,7 +437,7 @@ migration. See note above!</li>
   <entry>
     <title type="html"><![CDATA[Tracks 2.1.2 released]]></title>
     <link href="http://TracksApp.github.com/downloads/comments/tracks-2.1.2/"/>
-    <updated>2012-01-11T23:00:00-01:00</updated>
+    <updated>2012-01-11T23:00:00-05:00</updated>
     <id>http://TracksApp.github.com/downloads/comments/tracks-2.1.2</id>
     <content type="html"><![CDATA[<p>Hi all,</p>
 <p>Tracks 2.1.2 is being released today to address the recent security vulnerability in Rails. You can download the release <a href="https://github.com/TracksApp/tracks/archive/v2.1.2.zip">here</a>. All changes can be seen <a href="https://github.com/TracksApp/tracks/compare/v2.1.1...v2.1.2">here</a>.  Upgrade instructions can be found in the manual.</p>
@@ -449,7 +449,7 @@ migration. See note above!</li>
   <entry>
     <title type="html"><![CDATA[Handing Over the Keys]]></title>
     <link href="http://TracksApp.github.com/news/comments/handing-over-the-keys/"/>
-    <updated>2012-01-04T16:54:00-01:00</updated>
+    <updated>2012-01-04T16:54:00-05:00</updated>
     <id>http://TracksApp.github.com/news/comments/handing-over-the-keys</id>
     <content type="html"><![CDATA[<p>If you have been following posts on the mailing list and on this site, you&#8217;ll know that I&#8217;ve been in the process of handing the Tracks project on for others in the community to take over. That day has come much closer now because I have finally finished the process of adapting the old site to be published on GitHub (using the excellent <a href="http://octopress.org/">Octopress</a>). It has taken a bit of time to get right, and there may be a few glitches here and there while the DNS propagates, but things should be working. Most of the site is how it was, except that the forum is now read only, as an archive of useful information. Some of the links in the forum may be broken (for example the search facility and member profiles) in the process of generating a static version, but the basic information should still be available.</p>
 
@@ -462,7 +462,7 @@ migration. See note above!</li>
   <entry>
     <title type="html"><![CDATA[The wiki has moved]]></title>
     <link href="http://TracksApp.github.com/news/comments/the-wiki-has-moved/"/>
-    <updated>2011-07-16T00:00:00-01:00</updated>
+    <updated>2011-07-16T00:00:00-04:00</updated>
     <id>http://TracksApp.github.com/news/comments/the-wiki-has-moved</id>
     <content type="html"><![CDATA[<p>As you may know, we are in the process of moving the project and all the related web resources over to GitHub. As a first step, I have set up the <a href="https://github.com/TracksApp">Tracks project</a> as a GitHub Organisation, which makes it easier for people to administer and collaborate on the project. I have also moved the content of the entire wiki over to a GitHub wiki, <a href="https://github.com/TracksApp/tracks/wiki">here</a>. I&#8217;ve removed the old wiki to avoid confusion, and redirected the <span class="caps">URL</span> to the new wiki.</p>
 <p>You can still contribute to the new wiki: if you have a GitHub account, you can edit and add pages. I hope you like the new wiki &#8211; I think it is a big improvement, and a lot more flexible.</p>
