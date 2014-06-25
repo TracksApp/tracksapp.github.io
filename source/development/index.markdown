@@ -1,17 +1,11 @@
 ---
 layout: page
 title: "Development"
-date: 2012-01-03 10:15
+date: 2014-06-25 15:39
 comments: false
 sharing: false
 footer: false
 ---
-
-## Update September 2011
-
-The Tracks project is in the process of being handed over to new caretakers within the Tracks community, so we have closed memberships (required to comment, post on the wiki or on the forum) to new members. If you'd like to ask a question, the best way to do that would be to join the [mailing list][1].
-
-There are a number of different ways in which you can contribute to the development of Tracks.
 
 ## Reporting bugs and requesting features
 
