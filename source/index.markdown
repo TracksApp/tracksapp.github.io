@@ -10,7 +10,7 @@ footer: false
 
 {% img left /images/screens/tracks_home_thumb.png 'Full screen screenshot of Tracks' %}
 
-Tracks is a web-based application to help you implement [David Allen's](http://www.davidco.com/) [Getting Things Done&#8482;](http://www.amazon.com/gp/product/0142000280/qid=1143370534/sr=2-1/ref=pd_bbs_b_2_1/103-9587420-9758203?s=books&amp;v=glance&amp;n=283155) methodology. It was built using [Ruby on Rails](http://rubyonrails.org/), and comes with a built-in webserver (WEBrick), so that you can run it on your own computer if you like. It can be run on any platform on which Ruby can be installed, including Mac OS X, Windows and Linux. Tracks is Open Source, free and licensed under the [GNU GPL](http://creativecommons.org/licenses/GPL/2.0/).
+Tracks is a web-based application to help you implement [David Allen's](http://www.davidco.com/) [Getting Things Done&#8482;](http://wikipedia.org/wiki/Getting_Things_Done) methodology. It was built using [Ruby on Rails](http://rubyonrails.org/), and comes with a built-in webserver (WEBrick), so that you can run it on your own computer if you like. It can be run on any platform on which Ruby can be installed, including Mac OS X, Windows and Linux. Tracks is Open Source, free and licensed under the [GNU GPL](http://creativecommons.org/licenses/GPL/2.0/).
 
 ## Current features
 
