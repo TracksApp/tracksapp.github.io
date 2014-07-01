@@ -10,7 +10,7 @@ footer: false
 
 {% img left /images/screens/tracks_home_thumb.png 'Full screen screenshot of Tracks' %}
 
-Tracks is a web-based application to help you implement <a href="http://www.davidco.com/">David Allen's</a> <a href="http://www.amazon.com/gp/product/0142000280/qid=1143370534/sr=2-1/ref=pd_bbs_b_2_1/103-9587420-9758203?s=books&amp;v=glance&amp;n=283155">Getting Things Done&#8482;</a> methodology. It was built using <a href="http://www.rubyonrails.com/">Ruby on Rails</a>, and comes with a built-in webserver (<span class="caps">WEB</span>rick), so that you can run it on your own computer if you like. It can be run on any platform on which Ruby can be installed, including Mac OS X, Windows and Linux. Tracks is Open Source, free and licensed under the <a href="http://creativecommons.org/licenses/GPL/2.0/"><span class="caps">GNU</span> <span class="caps">GPL</span></a>.
+Tracks is a web-based application to help you implement [David Allen's](http://www.davidco.com/) [Getting Things Done&#8482;](http://www.amazon.com/gp/product/0142000280/qid=1143370534/sr=2-1/ref=pd_bbs_b_2_1/103-9587420-9758203?s=books&amp;v=glance&amp;n=283155) methodology. It was built using [Ruby on Rails](http://rubyonrails.org/), and comes with a built-in webserver (WEBrick), so that you can run it on your own computer if you like. It can be run on any platform on which Ruby can be installed, including Mac OS X, Windows and Linux. Tracks is Open Source, free and licensed under the [GNU GPL](http://creativecommons.org/licenses/GPL/2.0/).
 
 ## Current features
 
@@ -30,7 +30,7 @@ If you need alternative ways to slice your actions, you can now tag actions with
 
 {% img left /images/screens/tracks_home.png 'Screenshot of adding actions %}
 
-The main editing functions in Tracks use Ajax, which &#8212; if you're not into the terminology &#8212; means that you see nearly instant changes to the page without having to refresh the page. A form on the main page lets you add actions to any context or project, whereas forms on context and project pages automatically assign the current context or project to the new next action. In Tracks 1.5, your existing context and project names are auto-completed as you type, saving you time and reducing input errors. Furthermore, you can set a default context for each of your projects, which saves you typing 'Office' for every action in a particular project.
+The main editing functions in Tracks use Ajax, which -- if you're not into the terminology -- means that you see nearly instant changes to the page without having to refresh the page. A form on the main page lets you add actions to any context or project, whereas forms on context and project pages automatically assign the current context or project to the new next action. In Tracks 1.5, your existing context and project names are auto-completed as you type, saving you time and reducing input errors. Furthermore, you can set a default context for each of your projects, which saves you typing 'Office' for every action in a particular project.
 
 ### Getting yourself organised
 
@@ -54,19 +54,19 @@ New in Tracks 1.5 is a comprehensive statistics page, which shows you a wealth o
 
 {% img left /images/screens/tracks_feeds.png 'Screenshot of feeds' %}
 
-Tracks has numerous feeds (both text, iCal and <span class="caps">RSS</span>), so you can subscribe to your list of next actions to see all of your stuff, or just the urgent things due in the next seven days. Do you need to provide your employer or clients with a report of your work during the week? Then just subscribe to the completed actions in the past 7 days feed, and the job is nearly done. You can now also export your data in <span class="caps">YAML</span>, <span class="caps">CSV</span> or <span class="caps">XML</span> format, making it easy to use your data for other purposes, or just make a backup.
+Tracks has numerous feeds (both text, iCal and RSS), so you can subscribe to your list of next actions to see all of your stuff, or just the urgent things due in the next seven days. Do you need to provide your employer or clients with a report of your work during the week? Then just subscribe to the completed actions in the past 7 days feed, and the job is nearly done. You can now also export your data in YAML, CSV or XML format, making it easy to use your data for other purposes, or just make a backup.
 
 ### Other ways to interact with Tracks
 
-Tracks now has a great <span class="caps">API</span>, so if you're handy with a shell script, Ruby script or AppleScript, you can create other ways to get data into and out of your Tracks installation. If you have a browser on your mobile phone, you can access a clean, lightweight interface to Tracks by visiting http://yourtracks.url/mobile/ &#8211; a great way to get things done on the move!
+Tracks now has a great API, so if you're handy with a shell script, Ruby script or AppleScript, you can create other ways to get data into and out of your Tracks installation. If you have a browser on your mobile phone, you can access a clean, lightweight interface to Tracks by visiting http://yourtracks.url/mobile/ -- a great way to get things done on the move!
 
 
 ## Getting Tracks
 
-You can download a zipped file containing the latest stable version of Tracks by using the 'Get Tracks' button in the sidebar on the right of this page. If you'd like to get a development version, or contribute to the project, all the information you need is on the <a href="/development">Development page</a>.
+You can download a zipped file containing the latest stable version of Tracks by using the 'Get Tracks' button in the sidebar on the right of this page. If you'd like to get a development version, or contribute to the project, all the information you need is on the [Development page](/development).
 
 ## History
 
-The origins of this application are <a href="http://www.rousette.org.uk/blog/archives/rails-gtd-application/">here</a> and <a href="http://www.rousette.org.uk/blog/archives/2004/11/07/gtd-on-rails/">here</a>. The name Tracks was suggested by Timothy Martens, and the tag-line &#8216;Doing Things Properly' came from a comment by Pete <a href="http://www.rousette.org.uk/blog/archives/2004/12/07/do-it-now-by-steve-pavlina/#comment-2976">here</a>. I rather liked it.
+The origins of this application are [here](http://www.rousette.org.uk/blog/archives/rails-gtd-application/) and [here](http://www.rousette.org.uk/blog/archives/2004/11/07/gtd-on-rails/). The name Tracks was suggested by Timothy Martens, and the tag-line 'Doing Things Properly' came from a comment by Pete [here](http://www.rousette.org.uk/blog/archives/2004/12/07/do-it-now-by-steve-pavlina/#comment-2976). I rather liked it.
 
-Tracks is now developed by maintained by a team of <a href="https://github.com/TracksApp/tracks/wiki/Contributors">contributors</a>. Why not <a href="/development">join us</a>?
+Tracks is now developed by maintained by a team of [contributors](https://github.com/TracksApp/tracks/wiki/Contributors). Why not [join us](/development)?
