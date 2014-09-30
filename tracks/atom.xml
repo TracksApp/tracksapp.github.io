@@ -4,7 +4,7 @@
   <title><![CDATA[Tracks]]></title>
   <link href="http://TracksApp.github.com/tracks/atom.xml" rel="self"/>
   <link href="http://TracksApp.github.com/"/>
-  <updated>2014-08-31T12:52:47-04:00</updated>
+  <updated>2014-09-30T12:40:23-04:00</updated>
   <id>http://TracksApp.github.com/</id>
   <author>
     <name><![CDATA[TracksApp]]></name>
@@ -14,6 +14,30 @@
 
   
   <entry>
+    <title type="html"><![CDATA[Tracks 2.2.3 released]]></title>
+    <link href="http://TracksApp.github.com/downloads/comments/release-2.2.3/"/>
+    <updated>2014-09-30T12:01:00-04:00</updated>
+    <id>http://TracksApp.github.com/downloads/comments/release-2.2.3</id>
+    <content type="html"><![CDATA[<p>Hi all,</p>
+<p>Tracks 2.2.3 is being released today with several bug fixes.</p>
+<p>This is expected to be the last version of Tracks to support Ruby 1.8.7.</p>
+<p>You can download the release <a href="https://github.com/TracksApp/tracks/archive/v2.2.3.zip">here</a>. <br />
+Upgrade instructions can be found <a href="https://github.com/TracksApp/tracks/blob/v2.2.3/doc/upgrading.textile">in the manual</a></p>]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Tracks 2.2.3 released]]></title>
+    <link href="http://TracksApp.github.com/news/comments/release-2.2.3/"/>
+    <updated>2014-09-30T12:01:00-04:00</updated>
+    <id>http://TracksApp.github.com/news/comments/release-2.2.3</id>
+    <content type="html"><![CDATA[<p>Hi all,</p>
+<p>Tracks 2.2.3 is being released today with several bug fixes.</p>
+<p>This is expected to be the last version of Tracks to support Ruby 1.8.7.</p>
+<p>You can download the release <a href="https://github.com/TracksApp/tracks/archive/v2.2.3.zip">here</a>. <br />
+Upgrade instructions can be found <a href="https://github.com/TracksApp/tracks/blob/v2.2.3/doc/upgrading.textile">in the manual</a></p>]]></content>
+  </entry>
+  
+  <entry>
     <title type="html"><![CDATA[Tracks 2.2.2 released]]></title>
     <link href="http://TracksApp.github.com/downloads/comments/tracks-2.2.2/"/>
     <updated>2013-05-07T12:00:00-04:00</updated>
@@ -21,7 +45,7 @@
     <content type="html"><![CDATA[<p>Hi all,</p>
 <p>Tracks 2.2.2 is being released today with several security fixes! It is recommended to upgrade your installation.</p>
 <p>You can download the release <a href="https://github.com/TracksApp/tracks/archive/v2.2.2.zip">here</a>. <br />
-Upgrade instructions can be found <a href="https://github.com/TracksApp/tracks/blob/v2.2.2/doc/upgrading.textile">in the manual</a></p>]]></content>
+Upgrade instructions can be found <a href="https://github.com/TracksApp/tracks/blob/v2.2.3/doc/upgrading.textile">in the manual</a></p>]]></content>
   </entry>
   
   <entry>
@@ -32,7 +56,7 @@ Upgrade instructions can be found <a href="https://github.com/TracksApp/tracks/b
     <content type="html"><![CDATA[<p>Hi all,</p>
 <p>Tracks 2.2.2 is being released today with several security fixes! It is recommended to upgrade your installation.</p>
 <p>You can download the release <a href="https://github.com/TracksApp/tracks/archive/v2.2.2.zip">here</a>. <br />
-Upgrade instructions can be found <a href="https://github.com/TracksApp/tracks/blob/v2.2.2/doc/upgrading.textile">in the manual</a></p>]]></content>
+Upgrade instructions can be found <a href="https://github.com/TracksApp/tracks/blob/v2.2.3/doc/upgrading.textile">in the manual</a></p>]]></content>
   </entry>
   
   <entry>
@@ -42,7 +66,7 @@ Upgrade instructions can be found <a href="https://github.com/TracksApp/tracks/b
     <id>http://TracksApp.github.com/downloads/comments/tracks-2.2.1</id>
     <content type="html"><![CDATA[<p>Hi all,</p>
 <p>Tracks 2.2.1 is being released today with two bugfixes! One bug prevented Tracks to be used on ruby 1.8.7, this release fixes that.</p>
-<p>You can download the release <a href="https://github.com/TracksApp/tracks/archive/v2.2.1.zip">here</a>. Upgrade instructions can be found <a href="https://github.com/TracksApp/tracks/blob/v2.2.2/doc/upgrading.textile">in the manual</a></p>]]></content>
+<p>You can download the release <a href="https://github.com/TracksApp/tracks/archive/v2.2.1.zip">here</a>. Upgrade instructions can be found <a href="https://github.com/TracksApp/tracks/blob/v2.2.3/doc/upgrading.textile">in the manual</a></p>]]></content>
   </entry>
   
   <entry>
@@ -52,7 +76,7 @@ Upgrade instructions can be found <a href="https://github.com/TracksApp/tracks/b
     <id>http://TracksApp.github.com/news/comments/release-2.2.1</id>
     <content type="html"><![CDATA[<p>Hi all,</p>
 <p>Tracks 2.2 is being released today with two bugfixes! One bug prevented Tracks to be used on ruby 1.8.7, this release fixes that.</p>
-<p>You can download the release <a href="https://github.com/TracksApp/tracks/archive/v2.2.1.zip">here</a>. Upgrade instructions can be found <a href="https://github.com/TracksApp/tracks/blob/v2.2.2/doc/upgrading.textile">in the manual</a></p>]]></content>
+<p>You can download the release <a href="https://github.com/TracksApp/tracks/archive/v2.2.1.zip">here</a>. Upgrade instructions can be found <a href="https://github.com/TracksApp/tracks/blob/v2.2.3/doc/upgrading.textile">in the manual</a></p>]]></content>
   </entry>
   
   <entry>
@@ -61,14 +85,14 @@ Upgrade instructions can be found <a href="https://github.com/TracksApp/tracks/b
     <updated>2013-02-18T12:00:00-05:00</updated>
     <id>http://TracksApp.github.com/downloads/comments/tracks-22</id>
     <content type="html"><![CDATA[<p>Hi all,</p>
-<p>Tracks 2.2 is being released today with a variety of new features and bugfixes! You can download the release <a href="https://github.com/TracksApp/tracks/archive/v2.2.zip">here</a>. Upgrade instructions can be found <a href="https://github.com/TracksApp/tracks/blob/v2.2.2/doc/upgrading.textile">in the manual</a></p>
+<p>Tracks 2.2 is being released today with a variety of new features and bugfixes! You can download the release <a href="https://github.com/TracksApp/tracks/archive/v2.2.zip">here</a>. Upgrade instructions can be found <a href="https://github.com/TracksApp/tracks/blob/v2.2.3/doc/upgrading.textile">in the manual</a></p>
 <p>New in this release:</p>
 <ul>
 	<li>Added caching to various parts of Tracks to speed things up</li>
 	<li>Better support for running Tracks with PostgreSQL</li>
 	<li>Improvements to the mobile interface.</li>
 	<li>Drag and drop should work on tablets</li>
-	<li>Upgrade to the latest stable version of Rails. This brings in some changes like new command to start Tracks and precompiling assets. Take a look at the <a href="https://github.com/TracksApp/tracks/blob/v2.2.2/doc/installation.textile">installation</a> or <a href="https://github.com/TracksApp/tracks/blob/v2.2.2/doc/upgrading.textile">upgrade manual</a> for details.</li>
+	<li>Upgrade to the latest stable version of Rails. This brings in some changes like new command to start Tracks and precompiling assets. Take a look at the <a href="https://github.com/TracksApp/tracks/blob/v2.2.3/doc/installation.textile">installation</a> or <a href="https://github.com/TracksApp/tracks/blob/v2.2.3/doc/upgrading.textile">upgrade manual</a> for details.</li>
 	<li>Tracks now includes support for Ruby 1.8.7 and Ruby 1.9. The next version of Tracks will only support Ruby 1.9. Support for<br />
 older versions of Ruby will then be dropped.</li>
 	<li>Tons of bugfixes, updated locales and other improvements</li>
@@ -93,14 +117,14 @@ integrate with Tracks using <span class="caps">SOAP</span> <span class="caps">XM
     <updated>2013-02-18T01:00:00-05:00</updated>
     <id>http://TracksApp.github.com/news/comments/release-2.2</id>
     <content type="html"><![CDATA[<p>Hi all,</p>
-<p>Tracks 2.2 is being released today with a variety of new features and bugfixes! You can download the release <a href="https://github.com/TracksApp/tracks/archive/v2.2.zip">here</a>. Upgrade instructions can be found <a href="https://github.com/TracksApp/tracks/blob/v2.2.2/doc/upgrading.textile">in the manual</a></p>
+<p>Tracks 2.2 is being released today with a variety of new features and bugfixes! You can download the release <a href="https://github.com/TracksApp/tracks/archive/v2.2.zip">here</a>. Upgrade instructions can be found <a href="https://github.com/TracksApp/tracks/blob/v2.2.3/doc/upgrading.textile">in the manual</a></p>
 <p>New in this release:</p>
 <ul>
 	<li>Added caching to various parts of Tracks to speed things up</li>
 	<li>Better support for running Tracks with PostgreSQL</li>
 	<li>Improvements to the mobile interface.</li>
 	<li>Drag and drop should work on tablets</li>
-	<li>Upgrade to the latest stable version of Rails. This brings in some changes like new command to start Tracks and precompiling assets. Take a look at the <a href="https://github.com/TracksApp/tracks/blob/v2.2.2/doc/installation.textile">installation</a> or <a href="https://github.com/TracksApp/tracks/blob/v2.2.2/doc/upgrading.textile">upgrade manual</a> for details.</li>
+	<li>Upgrade to the latest stable version of Rails. This brings in some changes like new command to start Tracks and precompiling assets. Take a look at the <a href="https://github.com/TracksApp/tracks/blob/v2.2.3/doc/installation.textile">installation</a> or <a href="https://github.com/TracksApp/tracks/blob/v2.2.3/doc/upgrading.textile">upgrade manual</a> for details.</li>
 	<li>Tracks now includes support for Ruby 1.8.7 and Ruby 1.9. The next version of Tracks will only support Ruby 1.9. Support for<br />
 older versions of Ruby will then be dropped.</li>
 	<li>Tons of bugfixes, updated locales and other improvements</li>
@@ -444,30 +468,6 @@ migration. See note above!</li>
 <p>The next release should be Tracks 2.2, which will contain a lot of improvements. You are welcome to help test Tracks 2.2. In the mean time if you prefer the stable release, 2.1.2 is the best choice.</p>
 <p>Please note that Tracks 2.1.x does not support ruby 1.9 and it depends on ruby 1.8.7. Tracks 2.2 will support both ruby 1.8.7 and ruby 1.9. Once 2.2 is released, support for ruby 1.8.7 will be dropped.</p>
 <p>Enjoy!</p>]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Handing Over the Keys]]></title>
-    <link href="http://TracksApp.github.com/news/comments/handing-over-the-keys/"/>
-    <updated>2012-01-04T16:54:00-05:00</updated>
-    <id>http://TracksApp.github.com/news/comments/handing-over-the-keys</id>
-    <content type="html"><![CDATA[<p>If you have been following posts on the mailing list and on this site, you&#8217;ll know that I&#8217;ve been in the process of handing the Tracks project on for others in the community to take over. That day has come much closer now because I have finally finished the process of adapting the old site to be published on GitHub (using the excellent <a href="http://octopress.org/">Octopress</a>). It has taken a bit of time to get right, and there may be a few glitches here and there while the DNS propagates, but things should be working. Most of the site is how it was, except that the forum is now read only, as an archive of useful information. Some of the links in the forum may be broken (for example the search facility and member profiles) in the process of generating a static version, but the basic information should still be available.</p>
-
-<p>In due course I&#8217;ll transfer the domain name to someone else in the Tracks community, transfer the balance of the Pledgie donations, and I&#8217;ll have handed all the keys over.</p>
-
-<p>I&#8217;d like to take this opportunity for thanking all the Tracks users for their support over the years. Tracks is in great hands, and I&#8217;m sure it will continue from strength to strength in the future.</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[The wiki has moved]]></title>
-    <link href="http://TracksApp.github.com/news/comments/the-wiki-has-moved/"/>
-    <updated>2011-07-16T00:00:00-04:00</updated>
-    <id>http://TracksApp.github.com/news/comments/the-wiki-has-moved</id>
-    <content type="html"><![CDATA[<p>As you may know, we are in the process of moving the project and all the related web resources over to GitHub. As a first step, I have set up the <a href="https://github.com/TracksApp">Tracks project</a> as a GitHub Organisation, which makes it easier for people to administer and collaborate on the project. I have also moved the content of the entire wiki over to a GitHub wiki, <a href="https://github.com/TracksApp/tracks/wiki">here</a>. I&#8217;ve removed the old wiki to avoid confusion, and redirected the <span class="caps">URL</span> to the new wiki.</p>
-<p>You can still contribute to the new wiki: if you have a GitHub account, you can edit and add pages. I hope you like the new wiki &#8211; I think it is a big improvement, and a lot more flexible.</p>
-
-]]></content>
   </entry>
   
 </feed>
