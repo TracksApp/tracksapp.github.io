@@ -4,7 +4,7 @@
   <title><![CDATA[Tracks]]></title>
   <link href="http://TracksApp.github.com/tracks/atom.xml" rel="self"/>
   <link href="http://TracksApp.github.com/"/>
-  <updated>2014-09-30T12:40:23-04:00</updated>
+  <updated>2014-09-30T12:49:44-04:00</updated>
   <id>http://TracksApp.github.com/</id>
   <author>
     <name><![CDATA[TracksApp]]></name>
@@ -15,9 +15,9 @@
   
   <entry>
     <title type="html"><![CDATA[Tracks 2.2.3 released]]></title>
-    <link href="http://TracksApp.github.com/downloads/comments/release-2.2.3/"/>
+    <link href="http://TracksApp.github.com/downloads/comments/tracks-2.2.3/"/>
     <updated>2014-09-30T12:01:00-04:00</updated>
-    <id>http://TracksApp.github.com/downloads/comments/release-2.2.3</id>
+    <id>http://TracksApp.github.com/downloads/comments/tracks-2.2.3</id>
     <content type="html"><![CDATA[<p>Hi all,</p>
 <p>Tracks 2.2.3 is being released today with several bug fixes.</p>
 <p>This is expected to be the last version of Tracks to support Ruby 1.8.7.</p>
