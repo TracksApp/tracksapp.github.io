@@ -1,0 +1,11 @@
+---
+layout: post
+title: "Tracks 2.3.0"
+date: 2014-06-17 20:27
+comments: true
+categories: [downloads]
+sharing: true
+footer: true
+---
+Tracks 2.3.0 can be downloaded "here":https://github.com/TracksApp/tracks/archive/v2.3.0.zip.
+Upgrade instructions can be found "in the manual":https://github.com/TracksApp/tracks/blob/v2.3.0/doc/upgrading.md.
