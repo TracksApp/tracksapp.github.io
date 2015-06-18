@@ -4,7 +4,7 @@
   <title><![CDATA[Tracks]]></title>
   <link href="http://TracksApp.github.com/tracks/atom.xml" rel="self"/>
   <link href="http://TracksApp.github.com/"/>
-  <updated>2014-09-30T12:49:44-04:00</updated>
+  <updated>2015-06-17T21:53:17-04:00</updated>
   <id>http://TracksApp.github.com/</id>
   <author>
     <name><![CDATA[TracksApp]]></name>
@@ -38,6 +38,38 @@ Upgrade instructions can be found <a href="https://github.com/TracksApp/tracks/b
   </entry>
   
   <entry>
+    <title type="html"><![CDATA[Tracks 2.3.0 released]]></title>
+    <link href="http://TracksApp.github.com/news/comments/release-2.3.0/"/>
+    <updated>2014-06-17T21:41:00-04:00</updated>
+    <id>http://TracksApp.github.com/news/comments/release-2.3.0</id>
+    <content type="html"><![CDATA[<p>Tracks 2.3.0 has been released! This version brings a few small changes to the UI, many bug fixes, and some major under-the-hood upgrades and refactors.</p>
+<p>Tracks is now running on Rails 4.1. Ruby 1.8.7 is no longer supported, but this release of Tracks is fully tested on Ruby 1.9.3, 2.0.0, and 2.1.</p>
+<p>Other changes:</p>
+<ul>
+	<li>You can select to group todos on the home page by context or by <br />
+  project (using the view menu). This also works for tag page, the<br />
+  project page, the tickler and the context page</li>
+	<li>You can now change the state of a context to closed</li>
+	<li>Czech locale has been renamed from cz to cs to follow <span class="caps">ISO</span> standards</li>
+	<li>Added Russian locale (@AlexStein)</li>
+	<li>The toggle-notes and toggle-collapsed-containers have been moved into<br />
+  the view menu.</li>
+	<li>Numerous bug fixes</li>
+</ul>
+<p>You can download the release <a href="https://github.com/TracksApp/tracks/archive/v2.3.0.zip">here</a>.<br />
+Upgrade instructions can be found <a href="https://github.com/TracksApp/tracks/blob/v2.3.0/doc/upgrading.md">in the manual</a>.</p>]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Tracks 2.3.0]]></title>
+    <link href="http://TracksApp.github.com/downloads/comments/tracks-2.3.0/"/>
+    <updated>2014-06-17T20:27:00-04:00</updated>
+    <id>http://TracksApp.github.com/downloads/comments/tracks-2.3.0</id>
+    <content type="html"><![CDATA[<p>Tracks 2.3.0 can be downloaded <a href="https://github.com/TracksApp/tracks/archive/v2.3.0.zip">here</a>.<br />
+Upgrade instructions can be found <a href="https://github.com/TracksApp/tracks/blob/v2.3.0/doc/upgrading.md">in the manual</a>.</p>]]></content>
+  </entry>
+  
+  <entry>
     <title type="html"><![CDATA[Tracks 2.2.2 released]]></title>
     <link href="http://TracksApp.github.com/downloads/comments/tracks-2.2.2/"/>
     <updated>2013-05-07T12:00:00-04:00</updated>
@@ -45,7 +77,7 @@ Upgrade instructions can be found <a href="https://github.com/TracksApp/tracks/b
     <content type="html"><![CDATA[<p>Hi all,</p>
 <p>Tracks 2.2.2 is being released today with several security fixes! It is recommended to upgrade your installation.</p>
 <p>You can download the release <a href="https://github.com/TracksApp/tracks/archive/v2.2.2.zip">here</a>. <br />
-Upgrade instructions can be found <a href="https://github.com/TracksApp/tracks/blob/v2.2.3/doc/upgrading.textile">in the manual</a></p>]]></content>
+Upgrade instructions can be found <a href="https://github.com/TracksApp/tracks/blob/v2.3.0/doc/upgrading.textile">in the manual</a></p>]]></content>
   </entry>
   
   <entry>
@@ -56,7 +88,7 @@ Upgrade instructions can be found <a href="https://github.com/TracksApp/tracks/b
     <content type="html"><![CDATA[<p>Hi all,</p>
 <p>Tracks 2.2.2 is being released today with several security fixes! It is recommended to upgrade your installation.</p>
 <p>You can download the release <a href="https://github.com/TracksApp/tracks/archive/v2.2.2.zip">here</a>. <br />
-Upgrade instructions can be found <a href="https://github.com/TracksApp/tracks/blob/v2.2.3/doc/upgrading.textile">in the manual</a></p>]]></content>
+Upgrade instructions can be found <a href="https://github.com/TracksApp/tracks/blob/v2.3.0/doc/upgrading.textile">in the manual</a></p>]]></content>
   </entry>
   
   <entry>
@@ -66,7 +98,7 @@ Upgrade instructions can be found <a href="https://github.com/TracksApp/tracks/b
     <id>http://TracksApp.github.com/downloads/comments/tracks-2.2.1</id>
     <content type="html"><![CDATA[<p>Hi all,</p>
 <p>Tracks 2.2.1 is being released today with two bugfixes! One bug prevented Tracks to be used on ruby 1.8.7, this release fixes that.</p>
-<p>You can download the release <a href="https://github.com/TracksApp/tracks/archive/v2.2.1.zip">here</a>. Upgrade instructions can be found <a href="https://github.com/TracksApp/tracks/blob/v2.2.3/doc/upgrading.textile">in the manual</a></p>]]></content>
+<p>You can download the release <a href="https://github.com/TracksApp/tracks/archive/v2.2.1.zip">here</a>. Upgrade instructions can be found <a href="https://github.com/TracksApp/tracks/blob/v2.3.0/doc/upgrading.textile">in the manual</a></p>]]></content>
   </entry>
   
   <entry>
@@ -76,7 +108,7 @@ Upgrade instructions can be found <a href="https://github.com/TracksApp/tracks/b
     <id>http://TracksApp.github.com/news/comments/release-2.2.1</id>
     <content type="html"><![CDATA[<p>Hi all,</p>
 <p>Tracks 2.2 is being released today with two bugfixes! One bug prevented Tracks to be used on ruby 1.8.7, this release fixes that.</p>
-<p>You can download the release <a href="https://github.com/TracksApp/tracks/archive/v2.2.1.zip">here</a>. Upgrade instructions can be found <a href="https://github.com/TracksApp/tracks/blob/v2.2.3/doc/upgrading.textile">in the manual</a></p>]]></content>
+<p>You can download the release <a href="https://github.com/TracksApp/tracks/archive/v2.2.1.zip">here</a>. Upgrade instructions can be found <a href="https://github.com/TracksApp/tracks/blob/v2.3.0/doc/upgrading.textile">in the manual</a></p>]]></content>
   </entry>
   
   <entry>
@@ -85,14 +117,14 @@ Upgrade instructions can be found <a href="https://github.com/TracksApp/tracks/b
     <updated>2013-02-18T12:00:00-05:00</updated>
     <id>http://TracksApp.github.com/downloads/comments/tracks-22</id>
     <content type="html"><![CDATA[<p>Hi all,</p>
-<p>Tracks 2.2 is being released today with a variety of new features and bugfixes! You can download the release <a href="https://github.com/TracksApp/tracks/archive/v2.2.zip">here</a>. Upgrade instructions can be found <a href="https://github.com/TracksApp/tracks/blob/v2.2.3/doc/upgrading.textile">in the manual</a></p>
+<p>Tracks 2.2 is being released today with a variety of new features and bugfixes! You can download the release <a href="https://github.com/TracksApp/tracks/archive/v2.2.zip">here</a>. Upgrade instructions can be found <a href="https://github.com/TracksApp/tracks/blob/v2.3.0/doc/upgrading.textile">in the manual</a></p>
 <p>New in this release:</p>
 <ul>
 	<li>Added caching to various parts of Tracks to speed things up</li>
 	<li>Better support for running Tracks with PostgreSQL</li>
 	<li>Improvements to the mobile interface.</li>
 	<li>Drag and drop should work on tablets</li>
-	<li>Upgrade to the latest stable version of Rails. This brings in some changes like new command to start Tracks and precompiling assets. Take a look at the <a href="https://github.com/TracksApp/tracks/blob/v2.2.3/doc/installation.textile">installation</a> or <a href="https://github.com/TracksApp/tracks/blob/v2.2.3/doc/upgrading.textile">upgrade manual</a> for details.</li>
+	<li>Upgrade to the latest stable version of Rails. This brings in some changes like new command to start Tracks and precompiling assets. Take a look at the <a href="https://github.com/TracksApp/tracks/blob/v2.3.0/doc/installation.textile">installation</a> or <a href="https://github.com/TracksApp/tracks/blob/v2.3.0/doc/upgrading.textile">upgrade manual</a> for details.</li>
 	<li>Tracks now includes support for Ruby 1.8.7 and Ruby 1.9. The next version of Tracks will only support Ruby 1.9. Support for<br />
 older versions of Ruby will then be dropped.</li>
 	<li>Tons of bugfixes, updated locales and other improvements</li>
@@ -117,14 +149,14 @@ integrate with Tracks using <span class="caps">SOAP</span> <span class="caps">XM
     <updated>2013-02-18T01:00:00-05:00</updated>
     <id>http://TracksApp.github.com/news/comments/release-2.2</id>
     <content type="html"><![CDATA[<p>Hi all,</p>
-<p>Tracks 2.2 is being released today with a variety of new features and bugfixes! You can download the release <a href="https://github.com/TracksApp/tracks/archive/v2.2.zip">here</a>. Upgrade instructions can be found <a href="https://github.com/TracksApp/tracks/blob/v2.2.3/doc/upgrading.textile">in the manual</a></p>
+<p>Tracks 2.2 is being released today with a variety of new features and bugfixes! You can download the release <a href="https://github.com/TracksApp/tracks/archive/v2.2.zip">here</a>. Upgrade instructions can be found <a href="https://github.com/TracksApp/tracks/blob/v2.3.0/doc/upgrading.textile">in the manual</a></p>
 <p>New in this release:</p>
 <ul>
 	<li>Added caching to various parts of Tracks to speed things up</li>
 	<li>Better support for running Tracks with PostgreSQL</li>
 	<li>Improvements to the mobile interface.</li>
 	<li>Drag and drop should work on tablets</li>
-	<li>Upgrade to the latest stable version of Rails. This brings in some changes like new command to start Tracks and precompiling assets. Take a look at the <a href="https://github.com/TracksApp/tracks/blob/v2.2.3/doc/installation.textile">installation</a> or <a href="https://github.com/TracksApp/tracks/blob/v2.2.3/doc/upgrading.textile">upgrade manual</a> for details.</li>
+	<li>Upgrade to the latest stable version of Rails. This brings in some changes like new command to start Tracks and precompiling assets. Take a look at the <a href="https://github.com/TracksApp/tracks/blob/v2.3.0/doc/installation.textile">installation</a> or <a href="https://github.com/TracksApp/tracks/blob/v2.3.0/doc/upgrading.textile">upgrade manual</a> for details.</li>
 	<li>Tracks now includes support for Ruby 1.8.7 and Ruby 1.9. The next version of Tracks will only support Ruby 1.9. Support for<br />
 older versions of Ruby will then be dropped.</li>
 	<li>Tons of bugfixes, updated locales and other improvements</li>
@@ -442,30 +474,6 @@ migration. See note above!</li>
     <content type="html"><![CDATA[<p>Hi all,</p>
 <p>Tracks 2.1.4 is being released today to address another security vulnerability in Rails. You can download the release <a href="https://github.com/TracksApp/tracks/archive/v2.1.4.zip">here</a>. All changes can be seen <a href="https://github.com/TracksApp/tracks/compare/v2.1.3...v2.1.4">here</a>.  Upgrade instructions can be found in the manual.</p>
 <p>The next release should be Tracks 2.2, which will contain a lot of improvements. You are welcome to help test Tracks 2.2. In the mean time if you prefer the stable release, 2.1.4 is the best choice.</p>
-<p>Please note that Tracks 2.1.x does not support ruby 1.9 and it depends on ruby 1.8.7. Tracks 2.2 will support both ruby 1.8.7 and ruby 1.9. Once 2.2 is released, support for ruby 1.8.7 will be dropped.</p>
-<p>Enjoy!</p>]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Tracks 2.1.3 released]]></title>
-    <link href="http://TracksApp.github.com/downloads/comments/tracks-2.1.3/"/>
-    <updated>2012-01-29T19:00:00-05:00</updated>
-    <id>http://TracksApp.github.com/downloads/comments/tracks-2.1.3</id>
-    <content type="html"><![CDATA[<p>Hi all,</p>
-<p>Tracks 2.1.3 is being released today to address another security vulnerability in Rails. You can download the release <a href="https://github.com/TracksApp/tracks/archive/v2.1.3.zip">here</a>. All changes can be seen <a href="https://github.com/TracksApp/tracks/compare/v2.1.2...v2.1.3">here</a>.  Upgrade instructions can be found in the manual.</p>
-<p>The next release should be Tracks 2.2, which will contain a lot of improvements. You are welcome to help test Tracks 2.2. In the mean time if you prefer the stable release, 2.1.3 is the best choice.</p>
-<p>Please note that Tracks 2.1.x does not support ruby 1.9 and it depends on ruby 1.8.7. Tracks 2.2 will support both ruby 1.8.7 and ruby 1.9. Once 2.2 is released, support for ruby 1.8.7 will be dropped.</p>
-<p>Enjoy!</p>]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Tracks 2.1.2 released]]></title>
-    <link href="http://TracksApp.github.com/downloads/comments/tracks-2.1.2/"/>
-    <updated>2012-01-11T23:00:00-05:00</updated>
-    <id>http://TracksApp.github.com/downloads/comments/tracks-2.1.2</id>
-    <content type="html"><![CDATA[<p>Hi all,</p>
-<p>Tracks 2.1.2 is being released today to address the recent security vulnerability in Rails. You can download the release <a href="https://github.com/TracksApp/tracks/archive/v2.1.2.zip">here</a>. All changes can be seen <a href="https://github.com/TracksApp/tracks/compare/v2.1.1...v2.1.2">here</a>.  Upgrade instructions can be found in the manual.</p>
-<p>The next release should be Tracks 2.2, which will contain a lot of improvements. You are welcome to help test Tracks 2.2. In the mean time if you prefer the stable release, 2.1.2 is the best choice.</p>
 <p>Please note that Tracks 2.1.x does not support ruby 1.9 and it depends on ruby 1.8.7. Tracks 2.2 will support both ruby 1.8.7 and ruby 1.9. Once 2.2 is released, support for ruby 1.8.7 will be dropped.</p>
 <p>Enjoy!</p>]]></content>
   </entry>
