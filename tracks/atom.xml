@@ -4,7 +4,7 @@
   <title><![CDATA[Tracks]]></title>
   <link href="http://TracksApp.github.com/tracks/atom.xml" rel="self"/>
   <link href="http://TracksApp.github.com/"/>
-  <updated>2015-06-17T21:53:17-04:00</updated>
+  <updated>2015-06-20T12:20:35-04:00</updated>
   <id>http://TracksApp.github.com/</id>
   <author>
     <name><![CDATA[TracksApp]]></name>
@@ -12,6 +12,38 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Tracks 2.3.0 released]]></title>
+    <link href="http://TracksApp.github.com/news/comments/release-2.3.0/"/>
+    <updated>2015-06-17T21:41:00-04:00</updated>
+    <id>http://TracksApp.github.com/news/comments/release-2.3.0</id>
+    <content type="html"><![CDATA[<p>Tracks 2.3.0 has been released! This version brings a few small changes to the UI, many bug fixes, and some major under-the-hood upgrades and refactors.</p>
+<p>Tracks is now running on Rails 4.1. Ruby 1.8.7 is no longer supported, but this release of Tracks is fully tested on Ruby 1.9.3, 2.0.0, and 2.1.</p>
+<p>Other changes:</p>
+<ul>
+	<li>You can select to group todos on the home page by context or by <br />
+  project (using the view menu). This also works for tag page, the<br />
+  project page, the tickler and the context page</li>
+	<li>You can now change the state of a context to closed</li>
+	<li>Czech locale has been renamed from cz to cs to follow <span class="caps">ISO</span> standards</li>
+	<li>Added Russian locale (@AlexStein)</li>
+	<li>The toggle-notes and toggle-collapsed-containers have been moved into<br />
+  the view menu.</li>
+	<li>Numerous bug fixes</li>
+</ul>
+<p>You can download the release <a href="https://github.com/TracksApp/tracks/archive/v2.3.0.zip">here</a>.<br />
+Upgrade instructions can be found <a href="https://github.com/TracksApp/tracks/blob/v2.3.0/doc/upgrading.md">in the manual</a>.</p>]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Tracks 2.3.0]]></title>
+    <link href="http://TracksApp.github.com/downloads/comments/tracks-2.3.0/"/>
+    <updated>2015-06-17T20:27:00-04:00</updated>
+    <id>http://TracksApp.github.com/downloads/comments/tracks-2.3.0</id>
+    <content type="html"><![CDATA[<p>Tracks 2.3.0 can be downloaded <a href="https://github.com/TracksApp/tracks/archive/v2.3.0.zip">here</a>.<br />
+Upgrade instructions can be found <a href="https://github.com/TracksApp/tracks/blob/v2.3.0/doc/upgrading.md">in the manual</a>.</p>]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Tracks 2.2.3 released]]></title>
@@ -35,38 +67,6 @@ Upgrade instructions can be found <a href="https://github.com/TracksApp/tracks/b
 <p>This is expected to be the last version of Tracks to support Ruby 1.8.7.</p>
 <p>You can download the release <a href="https://github.com/TracksApp/tracks/archive/v2.2.3.zip">here</a>. <br />
 Upgrade instructions can be found <a href="https://github.com/TracksApp/tracks/blob/v2.2.3/doc/upgrading.textile">in the manual</a></p>]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Tracks 2.3.0 released]]></title>
-    <link href="http://TracksApp.github.com/news/comments/release-2.3.0/"/>
-    <updated>2014-06-17T21:41:00-04:00</updated>
-    <id>http://TracksApp.github.com/news/comments/release-2.3.0</id>
-    <content type="html"><![CDATA[<p>Tracks 2.3.0 has been released! This version brings a few small changes to the UI, many bug fixes, and some major under-the-hood upgrades and refactors.</p>
-<p>Tracks is now running on Rails 4.1. Ruby 1.8.7 is no longer supported, but this release of Tracks is fully tested on Ruby 1.9.3, 2.0.0, and 2.1.</p>
-<p>Other changes:</p>
-<ul>
-	<li>You can select to group todos on the home page by context or by <br />
-  project (using the view menu). This also works for tag page, the<br />
-  project page, the tickler and the context page</li>
-	<li>You can now change the state of a context to closed</li>
-	<li>Czech locale has been renamed from cz to cs to follow <span class="caps">ISO</span> standards</li>
-	<li>Added Russian locale (@AlexStein)</li>
-	<li>The toggle-notes and toggle-collapsed-containers have been moved into<br />
-  the view menu.</li>
-	<li>Numerous bug fixes</li>
-</ul>
-<p>You can download the release <a href="https://github.com/TracksApp/tracks/archive/v2.3.0.zip">here</a>.<br />
-Upgrade instructions can be found <a href="https://github.com/TracksApp/tracks/blob/v2.3.0/doc/upgrading.md">in the manual</a>.</p>]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Tracks 2.3.0]]></title>
-    <link href="http://TracksApp.github.com/downloads/comments/tracks-2.3.0/"/>
-    <updated>2014-06-17T20:27:00-04:00</updated>
-    <id>http://TracksApp.github.com/downloads/comments/tracks-2.3.0</id>
-    <content type="html"><![CDATA[<p>Tracks 2.3.0 can be downloaded <a href="https://github.com/TracksApp/tracks/archive/v2.3.0.zip">here</a>.<br />
-Upgrade instructions can be found <a href="https://github.com/TracksApp/tracks/blob/v2.3.0/doc/upgrading.md">in the manual</a>.</p>]]></content>
   </entry>
   
   <entry>
