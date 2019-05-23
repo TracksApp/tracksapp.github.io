@@ -1,0 +1,36 @@
+---
+layout: default
+single: true
+---
+
+<div>
+<article class="hentry" role="article">
+  {% include article.html %}
+  <footer>
+    <p class="meta">
+      {% include post/author.html %}
+      {% include post/date.html %}{% if updated %}{{ updated }}{% else %}{{ time }}{% endif %}
+      {% include post/categories.html %}
+    </p>
+    {% unless page.sharing == false %}
+      {% include post/sharing.html %}
+    {% endunless %}
+  </footer>
+</article>
+{% if site.disqus_short_name and page.comments == true %}
+  <section>
+    <h1>Comments</h1>
+    <div id="disqus_thread" aria-live="polite">{% include post/disqus_thread.html %}</div>
+  </section>
+{% endif %}
+</div>
+{% unless page.sidebar == false %}
+<aside class="sidebar">
+  {% include custom/asides/get_tracks.html %}
+  {% include asides/github.html %}
+  {% include custom/asides/community.html %}
+  {% include custom/asides/recent_news.html %}
+  {% include custom/asides/resources.html %}
+  {% include custom/asides/gpl.html %}
+</aside>
+{% endunless %}

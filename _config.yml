@@ -1,0 +1,80 @@
+# ----------------------- #
+#      Main Configs       #
+# ----------------------- #
+
+url: http://TracksApp.github.com
+title: Tracks
+subtitle: Doing Things Properly
+author: TracksApp
+simple_search: http://google.com/search
+
+# RSS / Email (optional) subscription links (change if using something like Feedburner)
+subscribe_rss: /tracks/atom.xml
+subscribe_email:
+# RSS feeds can list your email address if you like
+email: "tracks@getontracks.org"
+
+# ----------------------- #
+#    Jekyll & Plugins     #
+# ----------------------- #
+
+# If publishing to a subdirectory as in http://site.com/project set 'root: /project'
+root: /
+permalink: /:categories/comments/:title/
+code_dir: downloads/code
+category_dir: archives
+category_title_prefix: "All posts in: "
+markdown: rdiscount
+pygments: false # default python pygments have been replaced by pygments.rb
+
+# paginate: 10          # Posts per page on the blog index
+# pagination_dir: blog  # Directory base for pagination URLs eg. /blog/page/2/
+index_posts: 10       # Custom setting to limit posts on news and articles index pages
+recent_posts: 5       # Posts in the sidebar Recent Posts section
+excerpt_link: "Read on &rarr;"  # "Continue reading" link text at the bottom of excerpted articles
+titles_from_headings:
+  enabled: false
+
+# ----------------------- #
+#   3rd Party Settings    #
+# ----------------------- #
+
+# Github repositories
+github_user: TracksApp
+github_repo_count: 5
+github_show_profile_link: true
+github_skip_forks: false
+
+# Twitter
+twitter_user:
+twitter_tweet_count: 4
+twitter_show_replies: false
+twitter_follow_button: true
+twitter_show_follower_count: false
+twitter_tweet_button: true
+
+# Google Plus
+google_plus_one: true
+google_plus_one_size: medium
+
+# Pinboard
+pinboard_user:
+pinboard_count: 3
+
+# Delicious
+delicious_user:
+delicious_count: 3
+
+# Disqus Comments
+disqus_short_name: "tracks"
+disqus_show_comment_count: true
+
+# Google Analytics
+google_analytics_tracking_id:
+  
+# Settings for get_tracks custom aside
+# Update this info when there is a new version
+# and the 'Get Tracks' links and text will automatically update
+version: "2.3.0" # Version of Tracks for labels etc.
+download_link: https://github.com/TracksApp/tracks/archive/v2.3.0.zip
+release_notes_link: /downloads/comments/tracks-2.3.0
