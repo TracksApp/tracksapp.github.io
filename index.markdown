@@ -22,7 +22,7 @@ The main page shows all your actions sorted by context, but you can also view pa
 
 ### Tagging and starring
 
-<img class="left" src="/images/screens/tracks_tags.png" title='Screenshot of tags' />
+<img src="/images/screens/tracks_tags.png" title='Screenshot of tags' />
 
 If you need alternative ways to slice your actions, you can now tag actions with free-form tags, and view all actions tagged with a particular tag on one page. This gives you another way to look at  your data which works in parallel with the more traditional contexts and projects. In addition, you can 'star' actions very quickly by just clicking the star icon. Starred actions can also be viewed on their own page, and can be used in whatever way you find most helpful. A starred task might be a particularly urgent or important one, or something you're aiming to do today.
 
