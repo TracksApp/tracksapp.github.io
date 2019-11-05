@@ -6,7 +6,7 @@ url: https://www.getontracks.org
 title: Tracks
 subtitle: Doing Things Properly
 author: TracksApp
-simple_search: http://google.com/search
+simple_search: https://google.com/search
 
 # RSS / Email (optional) subscription links (change if using something like Feedburner)
 subscribe_rss: /tracks/atom.xml
