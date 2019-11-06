@@ -10,7 +10,7 @@ footer: false
 
 <img class="left" src="/images/screens/tracks_home_thumb.png" title='Full screen screenshot of Tracks' />
 
-Tracks is a web-based application to help you implement [David Allen's](http://www.davidco.com/) [Getting Things Done&#8482;](http://wikipedia.org/wiki/Getting_Things_Done) methodology. It was built using [Ruby on Rails](http://rubyonrails.org/), and comes with a built-in webserver (WEBrick), so that you can run it on your own computer if you like. It can be run on any platform on which Ruby can be installed, including Mac OS X, Windows and Linux. Tracks is Open Source, free and licensed under the [GNU GPL](http://creativecommons.org/licenses/GPL/2.0/).
+Tracks is a web-based application to help you implement [David Allen's](http://www.davidco.com/) [Getting Things Done&#8482;](http://wikipedia.org/wiki/Getting_Things_Done) methodology. It was built using [Ruby on Rails](http://rubyonrails.org/), and comes with a built-in webserver, so that you can run it on your own computer if you like. It can be run on any platform on which Ruby can be installed, including Mac OS X, Windows and Linux. Tracks is Open Source, free and licensed under the [GNU GPL](http://creativecommons.org/licenses/GPL/2.0/).
 
 ## Current features
 
@@ -30,13 +30,13 @@ If you need alternative ways to slice your actions, you can now tag actions with
 
 <img class="left" src="/images/screens/tracks_home.png" title='Screenshot of adding actions' />
 
-The main editing functions in Tracks use Ajax, which -- if you're not into the terminology -- means that you see nearly instant changes to the page without having to refresh the page. A form on the main page lets you add actions to any context or project, whereas forms on context and project pages automatically assign the current context or project to the new next action. In Tracks 1.5, your existing context and project names are auto-completed as you type, saving you time and reducing input errors. Furthermore, you can set a default context for each of your projects, which saves you typing 'Office' for every action in a particular project.
+The main editing functions in Tracks use Ajax, which -- if you're not into the terminology -- means that you see nearly instant changes to the page without having to refresh the page. A form on the main page lets you add actions to any context or project, whereas forms on context and project pages automatically assign the current context or project to the new next action. Your existing context and project names are auto-completed as you type, saving you time and reducing input errors. Furthermore, you can set a default context for each of your projects, which saves you typing 'Office' for every action in a particular project.
 
 ### Getting yourself organised
 
 <img class="left" src="/images/screens/tracks_tickler.png" title='Screenshot of tickler' />
 
-Actions can have due dates (which are optional), which are displayed in your preferred format. The due date is displayed with a coloured background, depending on how far away the date is. If it's due today, or overdue, the background is red. If it's due tomorrow it's dark orange, if due in the next 7 days, it's orange, otherwise it's green. It's basically a traffic light code. A new feature in Tracks 1.5 lets you schedule actions for the future. The 'tickler' allows you to schedule actions to be shown on the home page after some future date. This allows you to get the action out of your head into a concrete, safe system (where it belongs), but you don't need to be bothered by the action until the time comes when you can actually deal with it. You can show a configurable number of completed items at the bottom of the main page, but you can see all your completed items on the completed page.
+Actions can have due dates (which are optional), which are displayed in your preferred format. The due date is displayed with a coloured background, depending on how far away the date is. If it's due today, or overdue, the background is red. If it's due tomorrow it's dark orange, if due in the next 7 days, it's orange, otherwise it's green. It's basically a traffic light code. You can also schedule actions for the future. The 'tickler' allows you to schedule actions to be shown on the home page after some future date. This allows you to get the action out of your head into a concrete, safe system (where it belongs), but you don't need to be bothered by the action until the time comes when you can actually deal with it. You can show a configurable number of completed items at the bottom of the main page, but you can see all your completed items on the completed page.
 
 ### Getting everyone organised
 
@@ -48,7 +48,7 @@ Tracks is multi-user: each user has his or her own contexts, projects and next a
 
 <img class="left" src="/images/screens/tracks_stats.png" title='Screenshot of statistics page' />
 
-New in Tracks 1.5 is a comprehensive statistics page, which shows you a wealth of information about your progress. You can view the average time you take to complete tasks, and see how many actions you've completed in the past month or year. Do you suspect that you are most productive on Mondays, but least productive on Fridays? Now you can find out if that's true. The statistics page allows you to measure your progress and plan your time to exploit those periods when you are at your most dynamic and effective.
+Tracks also has a comprehensive statistics page, which shows you a wealth of information about your progress. You can view the average time you take to complete tasks, and see how many actions you've completed in the past month or year. Do you suspect that you are most productive on Mondays, but least productive on Fridays? Now you can find out if that's true. The statistics page allows you to measure your progress and plan your time to exploit those periods when you are at your most dynamic and effective.
 
 ### Getting informed
 
@@ -59,7 +59,6 @@ Tracks has numerous feeds (both text, iCal and RSS), so you can subscribe to you
 ### Other ways to interact with Tracks
 
 Tracks now has a great API, so if you're handy with a shell script, Ruby script or AppleScript, you can create other ways to get data into and out of your Tracks installation. If you have a browser on your mobile phone, you can access a clean, lightweight interface to Tracks by visiting http://yourtracks.url/mobile/ -- a great way to get things done on the move!
-
 
 ## Getting Tracks
 
