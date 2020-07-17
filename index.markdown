@@ -62,10 +62,12 @@ Tracks now has a great API, so if you're handy with a shell script, Ruby script 
 
 ## Getting Tracks
 
-You can download a zipped file containing the latest stable version of Tracks by using the 'Get Tracks' button in the sidebar on the right of this page. If you'd like to get a development version, or contribute to the project, all the information you need is on the [Contribute page](/contribute).
+You can download the source code of the latest stable version by using the 'Get Tracks' button in the sidebar on the right of this page. The easiest way to run Tracks, however, is using Docker. More information on the installation is available in <a href="https://github.com/TracksApp/tracks/wiki/Installation">the wiki</a>.
+
+If you'd like to get a development version, or contribute to the project, all the information you need is on the [Contribute page](/contribute).
 
 ## History
 
 The origins of this application are [here](http://www.rousette.org.uk/blog/archives/rails-gtd-application/) and [here](http://www.rousette.org.uk/blog/archives/2004/11/07/gtd-on-rails/). The name Tracks was suggested by Timothy Martens, and the tag-line 'Doing Things Properly' came from a comment by Pete [here](http://www.rousette.org.uk/blog/archives/2004/12/07/do-it-now-by-steve-pavlina/#comment-2976). I rather liked it.
 
-Tracks is now developed by maintained by a team of [contributors](https://github.com/TracksApp/tracks/wiki/Contributors). Why not [join us](/contribute)?
+Tracks is now developed and maintained by a team of [contributors](https://github.com/TracksApp/tracks/wiki/Contributors). Why not [join us](/contribute)?
