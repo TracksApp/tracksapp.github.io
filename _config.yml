@@ -52,10 +52,6 @@ twitter_follow_button: true
 twitter_show_follower_count: false
 twitter_tweet_button: true
 
-# Google Plus
-google_plus_one: true
-google_plus_one_size: medium
-
 # Pinboard
 pinboard_user:
 pinboard_count: 3
