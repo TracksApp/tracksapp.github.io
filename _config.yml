@@ -69,7 +69,7 @@ disqus_short_name: "tracks"
 disqus_show_comment_count: true
 
 # Google Analytics
-google_analytics_tracking_id:
+google_analytics_tracking_id: UA-172919290-1
 
 # Settings for get_tracks custom aside
 # Update this info when there is a new version
