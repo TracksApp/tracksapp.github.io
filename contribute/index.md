@@ -8,7 +8,7 @@ footer: false
 
 We gladly welcome all contributions! There are many ways you can help.
 If you need help to get started, check out the resources below and drop
-in on [Gitter](https://gitter.im/TracksApp/tracks) for a chat!
+in on [Matrix](https://matrix.to/#/#tracks:matrix.org) for a chat!
 
 * [Report a bug or a feature request](https://github.com/TracksApp/tracks/issues)
 * [Contribute code or localisations](https://github.com/TracksApp/tracks/blob/master/CONTRIBUTING.md)
