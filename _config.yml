@@ -70,6 +70,6 @@ google_analytics_tracking_id: UA-172919290-1
 # Settings for get_tracks custom aside
 # Update this info when there is a new version
 # and the 'Get Tracks' links and text will automatically update
-version: "2.5.0" # Version of Tracks for labels etc.
-download_link: https://github.com/TracksApp/tracks/archive/v2.5.0.zip
-release_notes_link: /downloads/comments/tracks-2.5.0
+version: "2.5.1" # Version of Tracks for labels etc.
+download_link: https://github.com/TracksApp/tracks/archive/v2.5.1.zip
+release_notes_link: /downloads/comments/tracks-2.5.1
