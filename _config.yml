@@ -24,7 +24,7 @@ permalink: /:categories/comments/:title/
 code_dir: downloads/code
 category_dir: archives
 category_title_prefix: "All posts in: "
-pygments: false # default python pygments have been replaced by pygments.rb
+highlighter: false # default python pygments have been replaced by pygments.rb
 
 # paginate: 10          # Posts per page on the blog index
 # pagination_dir: blog  # Directory base for pagination URLs eg. /blog/page/2/
