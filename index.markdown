@@ -68,6 +68,6 @@ If you'd like to get a development version, or contribute to the project, all th
 
 ## History
 
-The origins of this application are [here](http://www.rousette.org.uk/blog/archives/rails-gtd-application/) and [here](http://www.rousette.org.uk/blog/archives/2004/11/07/gtd-on-rails/). The name Tracks was suggested by Timothy Martens, and the tag-line 'Doing Things Properly' came from a comment by Pete [here](http://www.rousette.org.uk/blog/archives/2004/12/07/do-it-now-by-steve-pavlina/#comment-2976). I rather liked it.
+The origins of this application are [here](https://www.rousette.org.uk/archives/rails-gtd-application/) and [here](https://www.rousette.org.uk/archives/gtd-on-rails/). The name Tracks was suggested by Timothy Martens, and the tag-line 'Doing Things Properly' came from a comment by Pete [here](https://web.archive.org/web/20061012235035/http://www.rousette.org.uk/blog/archives/2004/12/07/do-it-now-by-steve-pavlina/#comment-2976). I rather liked it.
 
 Tracks is now developed and maintained by a team of [contributors](https://github.com/TracksApp/tracks/wiki/Contributors). Why not [join us](/contribute)?
